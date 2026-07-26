@@ -43,3 +43,4 @@ from .dsp_dc_kayma import DCKaymaGiderici, DCKaymaSonucu, dc_kaymayi_gider
 from .dsp_bant_geciren import BantGecirenAyar, BantGecirenSonucu, BantGecirenSuzgec, bant_gecir
 
 from .dsp_frekans_cozumleme import PencereTuru, SpektrumTepesi, FrekansCozumlemeSonucu, FrekansCozumleyici, pencere_katsayilari, frekans_cozumle
+from .dsp_pipeline import DSPPipeline, DSPPipelineSonucu
