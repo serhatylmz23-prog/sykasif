@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "syk-simulasyon-veri-modeli"
+version = "1.7.0"
+description = "SyKaşif SPR-002 DSP-0003 Frekans Çözümleme"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
