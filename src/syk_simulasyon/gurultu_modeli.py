@@ -28,6 +28,19 @@ class GurultuProfili:
     rastgele_tohum: int = 0
 
     def dogrula(self, ornekleme_hz: float) -> None:
+        sayisal_degerler = (
+            ornekleme_hz,
+            self.beyaz_std,
+            self.sapma_genligi,
+            self.sapma_frekansi_hz,
+            self.titresim_genligi,
+            self.titresim_frekansi_hz,
+            self.darbe_olasiligi,
+            self.darbe_genligi,
+            self.kayip_olasiligi,
+        )
+        if any(not math.isfinite(deger) for deger in sayisal_degerler):
+            raise ValueError("profil degerleri sonlu sayilar olmalidir")
         if ornekleme_hz <= 0:
             raise ValueError("ornekleme_hz pozitif olmalıdır")
         if self.beyaz_std < 0:

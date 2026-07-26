@@ -123,3 +123,25 @@ def test_dalga_motoruna_moduler_gurultu_entegredir():
     ))
     assert temiz.genlik != gurultulu.genlik
     assert len(temiz.genlik) == len(gurultulu.genlik)
+
+    
+@pytest.mark.parametrize(
+    "alan,deger",
+    [
+        ("beyaz_std", math.nan),
+        ("sapma_genligi", math.inf),
+        ("sapma_frekansi_hz", math.nan),
+        ("titresim_genligi", math.inf),
+        ("titresim_frekansi_hz", math.nan),
+        ("darbe_olasiligi", math.nan),
+        ("darbe_genligi", math.inf),
+        ("kayip_olasiligi", math.nan),
+    ],
+)
+def test_sonlu_olmayan_profil_degerleri_reddedilir(alan, deger):
+    with pytest.raises(ValueError):
+        GurultuModeli().uygula(
+            (0.0,),
+            ornekleme_hz=10.0,
+            profil=GurultuProfili(**{alan: deger}),
+        )
