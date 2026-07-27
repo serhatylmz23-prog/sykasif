@@ -100,3 +100,29 @@ def test_olay_gecmisi_temizlenebilir():
 
     assert servis.olay_gecmisi() == ()
     assert servis.son_olay() is None
+def test_servis_urettigi_olayi_abonelere_yayinlar():
+    servis = RuntimeServisi()
+    alinan = []
+
+    servis.bildirim_merkezi.abone_ekle(alinan.append)
+
+    olay = servis.olay_uret(
+        arastirma_kimligi="SPR002",
+        deney_numarasi="DSP0015",
+    )
+
+    assert alinan == [olay]
+def test_abone_hatasi_olay_uretimini_engellemez():
+    servis = RuntimeServisi()
+
+    def hatali_abone(_olay):
+        raise RuntimeError("abone hatası")
+
+    servis.bildirim_merkezi.abone_ekle(hatali_abone)
+
+    olay = servis.olay_uret(
+        arastirma_kimligi="SPR002",
+        deney_numarasi="DSP0015",
+    )
+
+    assert servis.son_olay() is olay

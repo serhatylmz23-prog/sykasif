@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from .runtime_bildirim import RuntimeBildirimMerkezi
+
 from collections import deque
 from typing import Deque
 
@@ -18,10 +20,13 @@ class RuntimeServisi:
         self._olay_gecmisi: Deque[Olay] = deque(
             maxlen=self.OLAY_GECMISI_KAPASITESI
         )
-
+        self._bildirim_merkezi = RuntimeBildirimMerkezi()
     @property
     def durum(self) -> RuntimeDurumu:
         return self._durum
+    @property
+    def bildirim_merkezi(self) -> RuntimeBildirimMerkezi:
+        return self._bildirim_merkezi
 
     def gorunum(self) -> dict[str, object]:
         return self._durum.gorunum()
@@ -38,6 +43,7 @@ class RuntimeServisi:
             deney_numarasi=deney_numarasi,
         )
         self._olay_gecmisi.append(olay)
+        self._bildirim_merkezi.yayinla(olay)
         return olay
 
     def olay_gecmisi(self) -> tuple[Olay, ...]:
