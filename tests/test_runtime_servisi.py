@@ -47,3 +47,56 @@ def test_servis_runtime_durumundan_olay_uretir():
     assert olay.ortak_veri["durum"] == "çalışıyor"
     assert olay.ortak_veri["aktif_modul"] == "DSP"
     assert olay.ortak_veri["ilerleme_yuzdesi"] == 60.0
+def test_uretilen_olay_gecmise_eklenir():
+    servis = RuntimeServisi()
+
+    olay = servis.olay_uret(
+        arastirma_kimligi="SPR002",
+        deney_numarasi="DSP0012",
+    )
+
+    assert servis.olay_gecmisi() == (olay,)
+    assert servis.son_olay() is olay
+
+
+def test_olay_gecmisi_disaridan_degistirilemez():
+    servis = RuntimeServisi()
+
+    servis.olay_uret(
+        arastirma_kimligi="SPR002",
+        deney_numarasi="DSP0012",
+    )
+
+    gecmis = servis.olay_gecmisi()
+
+    assert isinstance(gecmis, tuple)
+
+
+def test_olay_gecmisi_en_faz_yuz_kayit_tutar():
+    servis = RuntimeServisi()
+
+    for sira in range(105):
+        servis.olay_uret(
+            arastirma_kimligi="SPR002",
+            deney_numarasi=f"DSP0012-{sira}",
+        )
+
+    gecmis = servis.olay_gecmisi()
+
+    assert len(gecmis) == 100
+    assert gecmis[0].deney_numarasi == "DSP0012-5"
+    assert gecmis[-1].deney_numarasi == "DSP0012-104"
+
+
+def test_olay_gecmisi_temizlenebilir():
+    servis = RuntimeServisi()
+
+    servis.olay_uret(
+        arastirma_kimligi="SPR002",
+        deney_numarasi="DSP0012",
+    )
+
+    servis.olay_gecmisini_temizle()
+
+    assert servis.olay_gecmisi() == ()
+    assert servis.son_olay() is None
