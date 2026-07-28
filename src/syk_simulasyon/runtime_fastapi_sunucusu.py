@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from fastapi import FastAPI, Response
+from fastapi import FastAPI, Response, WebSocket, WebSocketDisconnect
 
 from .runtime_anlik_gorunum import RuntimeAnlikGorunumSaglayicisi
 from .runtime_csv import RuntimeCsvSaglayicisi
@@ -11,21 +11,51 @@ from .runtime_izleme import RuntimeIzlemeSaglayicisi
 from .runtime_json import RuntimeJsonSaglayicisi
 from .runtime_markdown import RuntimeMarkdownSaglayicisi
 from .runtime_servisi import RuntimeServisi
+from .runtime_websocket import RuntimeWebSocketYayincisi
 from .runtime_xml import RuntimeXmlSaglayicisi
 from .runtime_yaml import RuntimeYamlSaglayicisi
 
 
 class RuntimeFastApiSunucusu:
-    """Runtime için FastAPI uygulaması oluşturur."""
+    """
+    SyKaşif Runtime FastAPI sunucusu.
+    HTTP + WebSocket katmanı.
+    """
 
-    def __init__(self, disa_aktarim: RuntimeDisaAktarim) -> None:
+    def __init__(
+        self,
+        disa_aktarim: RuntimeDisaAktarim,
+        websocket_yayinci: RuntimeWebSocketYayincisi | None = None,
+    ) -> None:
         self._api = RuntimeHttpApi(disa_aktarim)
+
+        if websocket_yayinci is None:
+            self._websocket = None
+        else:
+            self._websocket = websocket_yayinci
 
     def olustur(self) -> FastAPI:
         uygulama = FastAPI(
             title="SyKaşif Runtime API",
-            version="1.0",
+            version="1.1",
         )
+
+        @uygulama.get("/terminal")
+        def terminal() -> str:
+            return """
+            <!doctype html>
+            <html lang="tr">
+            <head>
+                <meta charset="utf-8">
+                <title>SyOtağı</title>
+            </head>
+            <body>
+                <h1>SyOtağı</h1>
+                <p>SYK-FIELD-01 Canlı Runtime Terminali</p>
+                <p>Bağlantı hazır.</p>
+            </body>
+            </html>
+            """
 
         @uygulama.get("/runtime/json")
         def runtime_json() -> Response:
@@ -81,6 +111,47 @@ class RuntimeFastApiSunucusu:
                 media_type="application/yaml",
             )
 
+        @uygulama.websocket("/ws/runtime")
+        async def runtime_websocket(
+            websocket: WebSocket,
+        ) -> None:
+            await websocket.accept()
+
+            if self._websocket is None:
+                await websocket.send_json(
+                    {
+                        "durum": "hazır",
+                        "mesaj": "WebSocket yayıncısı bağlı değil",
+                    }
+                )
+                return
+
+            await websocket.send_json(
+                self._websocket.baglanti_mesaji()
+            )
+
+            try:
+                while True:
+                    komut = await websocket.receive_text()
+
+                    if komut.lower() in {
+                        "güncelle",
+                        "guncelle",
+                        "yenile",
+                    }:
+                        await websocket.send_json(
+                            self._websocket.guncelleme_mesaji()
+                        )
+                    else:
+                        await websocket.send_json(
+                            self._websocket.bilinmeyen_komut(
+                                komut
+                            )
+                        )
+
+            except WebSocketDisconnect:
+                pass
+
         return uygulama
 
 
@@ -100,7 +171,14 @@ def uygulama_olustur() -> FastAPI:
         RuntimeYamlSaglayicisi(gorunum),
     )
 
-    return RuntimeFastApiSunucusu(disa_aktarim).olustur()
+    websocket_yayinci = RuntimeWebSocketYayincisi(
+        gorunum
+    )
+
+    return RuntimeFastApiSunucusu(
+        disa_aktarim,
+        websocket_yayinci,
+    ).olustur()
 
 
 if __name__ == "__main__":
