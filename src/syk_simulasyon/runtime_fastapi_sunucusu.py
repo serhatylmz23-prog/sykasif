@@ -11,6 +11,7 @@ from .runtime_izleme import RuntimeIzlemeSaglayicisi
 from .runtime_json import RuntimeJsonSaglayicisi
 from .runtime_markdown import RuntimeMarkdownSaglayicisi
 from .runtime_servisi import RuntimeServisi
+from .runtime_terminal import RuntimeTerminal
 from .runtime_websocket import RuntimeWebSocketYayincisi
 from .runtime_xml import RuntimeXmlSaglayicisi
 from .runtime_yaml import RuntimeYamlSaglayicisi
@@ -19,7 +20,7 @@ from .runtime_yaml import RuntimeYamlSaglayicisi
 class RuntimeFastApiSunucusu:
     """
     SyKaşif Runtime FastAPI sunucusu.
-    HTTP + WebSocket katmanı.
+    HTTP + WebSocket + SyOtağı terminal katmanı.
     """
 
     def __init__(
@@ -28,11 +29,8 @@ class RuntimeFastApiSunucusu:
         websocket_yayinci: RuntimeWebSocketYayincisi | None = None,
     ) -> None:
         self._api = RuntimeHttpApi(disa_aktarim)
-
-        if websocket_yayinci is None:
-            self._websocket = None
-        else:
-            self._websocket = websocket_yayinci
+        self._terminal = RuntimeTerminal()
+        self._websocket = websocket_yayinci
 
     def olustur(self) -> FastAPI:
         uygulama = FastAPI(
@@ -42,20 +40,7 @@ class RuntimeFastApiSunucusu:
 
         @uygulama.get("/terminal")
         def terminal() -> str:
-            return """
-            <!doctype html>
-            <html lang="tr">
-            <head>
-                <meta charset="utf-8">
-                <title>SyOtağı</title>
-            </head>
-            <body>
-                <h1>SyOtağı</h1>
-                <p>SYK-FIELD-01 Canlı Runtime Terminali</p>
-                <p>Bağlantı hazır.</p>
-            </body>
-            </html>
-            """
+            return self._terminal.html()
 
         @uygulama.get("/runtime/json")
         def runtime_json() -> Response:
@@ -120,7 +105,7 @@ class RuntimeFastApiSunucusu:
             if self._websocket is None:
                 await websocket.send_json(
                     {
-                        "durum": "hazır",
+                        "durum": "HAZIR",
                         "mesaj": "WebSocket yayıncısı bağlı değil",
                     }
                 )
