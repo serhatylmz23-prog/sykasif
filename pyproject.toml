@@ -7,7 +7,19 @@ name = "syk-simulasyon-veri-modeli"
 version = "1.7.0"
 description = "SyKaşif SPR-002 DSP-0003 Frekans Çözümleme"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "fastapi>=0.140,<1",
+    "uvicorn>=0.51,<1",
+    "websockets>=17,<18",
+]
+
+[project.optional-dependencies]
+test = [
+    "httpx>=0.28,<1",
+    "pytest>=9,<10",
+    "playwright>=1.61,<2",
+    "pytest-playwright>=0.8,<1",
+]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
