@@ -46,6 +46,10 @@ class RuntimeServisi:
     def bildirim_merkezi(self) -> RuntimeBildirimMerkezi:
         return self._bildirim_merkezi
 
+    @property
+    def olay_gunlugu(self) -> RuntimeOlayGunlugu | None:
+        return self._olay_gunlugu
+
     def gorunum(self) -> dict[str, object]:
         return self._durum.gorunum()
 

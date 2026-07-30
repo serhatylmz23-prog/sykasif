@@ -4,6 +4,7 @@ import asyncio
 import os
 
 from fastapi import FastAPI, Response, WebSocket, WebSocketDisconnect
+from fastapi.responses import JSONResponse
 
 from .runtime_anlik_gorunum import RuntimeAnlikGorunumSaglayicisi
 from .runtime_csv import RuntimeCsvSaglayicisi
@@ -13,6 +14,9 @@ from .runtime_http_api import RuntimeHttpApi
 from .runtime_izleme import RuntimeIzlemeSaglayicisi
 from .runtime_json import RuntimeJsonSaglayicisi
 from .runtime_markdown import RuntimeMarkdownSaglayicisi
+from .runtime_olay_gunlugu import (
+    RuntimeOlayGunluguButunlukHatasi,
+)
 from .runtime_servisi import RuntimeServisi
 from .runtime_secure_export import (
     ExportRole,
@@ -47,6 +51,77 @@ class RuntimeFastApiSunucusu:
             title="SyKaşif Runtime API",
             version="1.1",
         )
+
+        @uygulama.get("/runtime/health")
+        def runtime_sagligi() -> JSONResponse:
+            servis = self._runtime_servisi
+
+            if servis is None:
+                return JSONResponse(
+                    status_code=200,
+                    content={
+                        "durum": "?al???yor",
+                        "hazir": True,
+                        "kalici_gunluk": {
+                            "etkin": False,
+                            "butunluk": "kullan?lm?yor",
+                            "yol": None,
+                            "kayit_sayisi": 0,
+                        },
+                    },
+                )
+
+            gunluk = servis.olay_gunlugu
+
+            if gunluk is None:
+                return JSONResponse(
+                    status_code=200,
+                    content={
+                        "durum": "?al???yor",
+                        "hazir": True,
+                        "kalici_gunluk": {
+                            "etkin": False,
+                            "butunluk": "kullan?lm?yor",
+                            "yol": None,
+                            "kayit_sayisi": len(
+                                servis.olay_gecmisi()
+                            ),
+                        },
+                    },
+                )
+
+            try:
+                olaylar = gunluk.olaylari_oku()
+                gunluk.butunlugu_dogrula()
+            except RuntimeOlayGunluguButunlukHatasi as hata:
+                return JSONResponse(
+                    status_code=503,
+                    content={
+                        "durum": "hatal?",
+                        "hazir": False,
+                        "kalici_gunluk": {
+                            "etkin": True,
+                            "butunluk": "bozuk",
+                            "yol": str(gunluk.yol),
+                            "kayit_sayisi": None,
+                        },
+                        "hata": str(hata),
+                    },
+                )
+
+            return JSONResponse(
+                status_code=200,
+                content={
+                    "durum": "?al???yor",
+                    "hazir": True,
+                    "kalici_gunluk": {
+                        "etkin": True,
+                        "butunluk": "sa?lam",
+                        "yol": str(gunluk.yol),
+                        "kayit_sayisi": len(olaylar),
+                    },
+                },
+            )
 
         @uygulama.get("/terminal")
         def terminal() -> Response:
