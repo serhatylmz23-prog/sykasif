@@ -11,6 +11,11 @@ from .runtime_izleme import RuntimeIzlemeSaglayicisi
 from .runtime_json import RuntimeJsonSaglayicisi
 from .runtime_markdown import RuntimeMarkdownSaglayicisi
 from .runtime_servisi import RuntimeServisi
+from .runtime_secure_export import (
+    ExportRole,
+    ExportSecurityProfile,
+    SecureExportViewProvider,
+)
 from .runtime_terminal import RuntimeTerminal
 from .runtime_websocket import RuntimeWebSocketYayincisi
 from .runtime_xml import RuntimeXmlSaglayicisi
@@ -18,33 +23,37 @@ from .runtime_yaml import RuntimeYamlSaglayicisi
 
 
 class RuntimeFastApiSunucusu:
-    """
-    SyKaşif Runtime FastAPI sunucusu.
-    HTTP + WebSocket + SyOtağı terminal katmanı.
-    """
 
     def __init__(
         self,
         disa_aktarim: RuntimeDisaAktarim,
         websocket_yayinci: RuntimeWebSocketYayincisi | None = None,
     ) -> None:
+
         self._api = RuntimeHttpApi(disa_aktarim)
-        self._terminal = RuntimeTerminal()
         self._websocket = websocket_yayinci
+        self._terminal = RuntimeTerminal()
 
     def olustur(self) -> FastAPI:
+
         uygulama = FastAPI(
             title="SyKaşif Runtime API",
             version="1.1",
         )
 
         @uygulama.get("/terminal")
-        def terminal() -> str:
-            return self._terminal.html()
+        def terminal() -> Response:
+
+            return Response(
+                content=self._terminal.html(),
+                media_type="text/html; charset=utf-8",
+            )
 
         @uygulama.get("/runtime/json")
         def runtime_json() -> Response:
+
             durum, govde = self._api.json()
+
             return Response(
                 content=govde,
                 status_code=durum,
@@ -53,7 +62,9 @@ class RuntimeFastApiSunucusu:
 
         @uygulama.get("/runtime/html")
         def runtime_html() -> Response:
+
             durum, govde = self._api.html()
+
             return Response(
                 content=govde,
                 status_code=durum,
@@ -62,7 +73,9 @@ class RuntimeFastApiSunucusu:
 
         @uygulama.get("/runtime/csv")
         def runtime_csv() -> Response:
+
             durum, govde = self._api.csv()
+
             return Response(
                 content=govde,
                 status_code=durum,
@@ -71,7 +84,9 @@ class RuntimeFastApiSunucusu:
 
         @uygulama.get("/runtime/markdown")
         def runtime_markdown() -> Response:
+
             durum, govde = self._api.markdown()
+
             return Response(
                 content=govde,
                 status_code=durum,
@@ -80,7 +95,9 @@ class RuntimeFastApiSunucusu:
 
         @uygulama.get("/runtime/xml")
         def runtime_xml() -> Response:
+
             durum, govde = self._api.xml()
+
             return Response(
                 content=govde,
                 status_code=durum,
@@ -89,7 +106,9 @@ class RuntimeFastApiSunucusu:
 
         @uygulama.get("/runtime/yaml")
         def runtime_yaml() -> Response:
+
             durum, govde = self._api.yaml()
+
             return Response(
                 content=govde,
                 status_code=durum,
@@ -100,15 +119,19 @@ class RuntimeFastApiSunucusu:
         async def runtime_websocket(
             websocket: WebSocket,
         ) -> None:
+
             await websocket.accept()
 
             if self._websocket is None:
                 await websocket.send_json(
                     {
-                        "durum": "HAZIR",
-                        "mesaj": "WebSocket yayıncısı bağlı değil",
+                        "durum": "kullanılamıyor",
+                        "mesaj": (
+                            "WebSocket yayıncısı yapılandırılmadı."
+                        ),
                     }
                 )
+                await websocket.close(code=1011)
                 return
 
             await websocket.send_json(
@@ -116,7 +139,9 @@ class RuntimeFastApiSunucusu:
             )
 
             try:
+
                 while True:
+
                     komut = await websocket.receive_text()
 
                     if komut.lower() in {
@@ -124,10 +149,13 @@ class RuntimeFastApiSunucusu:
                         "guncelle",
                         "yenile",
                     }:
+
                         await websocket.send_json(
                             self._websocket.guncelleme_mesaji()
                         )
+
                     else:
+
                         await websocket.send_json(
                             self._websocket.bilinmeyen_komut(
                                 komut
@@ -141,19 +169,27 @@ class RuntimeFastApiSunucusu:
 
 
 def uygulama_olustur() -> FastAPI:
+
     servis = RuntimeServisi()
 
     gorunum = RuntimeAnlikGorunumSaglayicisi(
         RuntimeIzlemeSaglayicisi(servis)
     )
 
+    guvenli_gorunum = SecureExportViewProvider(
+        gorunum,
+        ExportSecurityProfile.from_environment(
+            role=ExportRole.PUBLIC,
+        ),
+    )
+
     disa_aktarim = RuntimeDisaAktarim(
-        RuntimeJsonSaglayicisi(gorunum),
-        RuntimeCsvSaglayicisi(gorunum),
-        RuntimeHtmlSaglayicisi(gorunum),
-        RuntimeMarkdownSaglayicisi(gorunum),
-        RuntimeXmlSaglayicisi(gorunum),
-        RuntimeYamlSaglayicisi(gorunum),
+        RuntimeJsonSaglayicisi(guvenli_gorunum),
+        RuntimeCsvSaglayicisi(guvenli_gorunum),
+        RuntimeHtmlSaglayicisi(guvenli_gorunum),
+        RuntimeMarkdownSaglayicisi(guvenli_gorunum),
+        RuntimeXmlSaglayicisi(guvenli_gorunum),
+        RuntimeYamlSaglayicisi(guvenli_gorunum),
     )
 
     websocket_yayinci = RuntimeWebSocketYayincisi(
@@ -167,6 +203,7 @@ def uygulama_olustur() -> FastAPI:
 
 
 if __name__ == "__main__":
+
     import uvicorn
 
     uvicorn.run(

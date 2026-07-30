@@ -1,0 +1,285 @@
+{
+  "report_type": "SVDM_CODE_COVERAGE_SCAN",
+  "scope": {
+    "source": "src\\syk_simulasyon",
+    "tests": "tests"
+  },
+  "summary": {
+    "varlik_modeli": {
+      "progress_percent": 0,
+      "status": "BELIRGIN_UYGULAMA_BULUNAMADI",
+      "source_files": [],
+      "test_files": [],
+      "named_objects": []
+    },
+    "kanit_kaynak": {
+      "progress_percent": 100,
+      "status": "UYGULANMIS_VE_TESTLI",
+      "source_files": [
+        "src\\syk_simulasyon\\deney_matrisi.py",
+        "src\\syk_simulasyon\\dsp_iletisi.py",
+        "src\\syk_simulasyon\\dsp_olay_adaptoru.py",
+        "src\\syk_simulasyon\\hedef_sicili.py",
+        "src\\syk_simulasyon\\model.py",
+        "src\\syk_simulasyon\\olay_omurgasi.py",
+        "src\\syk_simulasyon\\oncelik_motoru.py",
+        "src\\syk_simulasyon\\ortak_dil.py",
+        "src\\syk_simulasyon\\ortam_hafizasi.py",
+        "src\\syk_simulasyon\\runtime_anlik_gorunum.py",
+        "src\\syk_simulasyon\\runtime_durumu.py",
+        "src\\syk_simulasyon\\runtime_fastapi_adaptoru.py",
+        "src\\syk_simulasyon\\runtime_olay_adaptoru.py",
+        "src\\syk_simulasyon\\runtime_secure_export.py",
+        "src\\syk_simulasyon\\yansima_katsayilari.py"
+      ],
+      "test_files": [
+        "tests\\test_dsp_iletisi.py",
+        "tests\\test_dsp_olay_adaptoru.py",
+        "tests\\test_hedef_sicili.py",
+        "tests\\test_model.py",
+        "tests\\test_olay_omurgasi.py",
+        "tests\\test_ortak_dil.py",
+        "tests\\test_ortam_hafizasi.py",
+        "tests\\test_runtime_bildirim.py",
+        "tests\\test_runtime_durumu.py",
+        "tests\\test_runtime_fastapi_adaptoru.py",
+        "tests\\test_runtime_olay_adaptoru.py",
+        "tests\\test_yansima_modeli.py"
+      ],
+      "named_objects": [
+        {
+          "file": "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+          "name": "GuvenKaydi"
+        },
+        {
+          "file": "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+          "name": "guncel_guven"
+        },
+        {
+          "file": "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+          "name": "guven_ekle"
+        },
+        {
+          "file": "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+          "name": "guven_zinciri_puani"
+        },
+        {
+          "file": "src\\syk_simulasyon\\deney_matrisi.py",
+          "name": "KanitTuru"
+        },
+        {
+          "file": "src\\syk_simulasyon\\hedef_sicili.py",
+          "name": "KaynakNiteligi"
+        },
+        {
+          "file": "src\\syk_simulasyon\\hedef_sicili.py",
+          "name": "BilimselKaynak"
+        },
+        {
+          "file": "src\\syk_simulasyon\\hedef_sicili.py",
+          "name": "guven_puani"
+        },
+        {
+          "file": "src\\syk_simulasyon\\hedef_sicili.py",
+          "name": "kaynak_kimlikleri"
+        },
+        {
+          "file": "src\\syk_simulasyon\\hedef_sicili.py",
+          "name": "kaynak_ekle"
+        },
+        {
+          "file": "src\\syk_simulasyon\\hedef_sicili.py",
+          "name": "hedef_guven_puani"
+        },
+        {
+          "file": "src\\syk_simulasyon\\model.py",
+          "name": "KanitSeviyesi"
+        },
+        {
+          "file": "src\\syk_simulasyon\\model.py",
+          "name": "KaynakReferansi"
+        },
+        {
+          "file": "src\\syk_simulasyon\\model.py",
+          "name": "guven_puani"
+        },
+        {
+          "file": "src\\syk_simulasyon\\model.py",
+          "name": "kanit_ozeti"
+        },
+        {
+          "file": "src\\syk_simulasyon\\ortam_hafizasi.py",
+          "name": "guven_puani"
+        }
+      ]
+    },
+    "karar_onay": {
+      "progress_percent": 100,
+      "status": "UYGULANMIS_VE_TESTLI",
+      "source_files": [
+        "src\\syk_simulasyon\\arastirma_veri_bankasi.py",
+        "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+        "src\\syk_simulasyon\\deney_matrisi.py",
+        "src\\syk_simulasyon\\dsp_olay_adaptoru.py",
+        "src\\syk_simulasyon\\eylem_katmani.py",
+        "src\\syk_simulasyon\\kurucu_politika_motoru.py",
+        "src\\syk_simulasyon\\olay_omurgasi.py",
+        "src\\syk_simulasyon\\oncelik_motoru.py",
+        "src\\syk_simulasyon\\ortak_dil.py",
+        "src\\syk_simulasyon\\otonomi.py",
+        "src\\syk_simulasyon\\runtime_olay_adaptoru.py"
+      ],
+      "test_files": [
+        "tests\\test_arastirma_veri_bankasi.py",
+        "tests\\test_bilgi_yasam_dongusu.py",
+        "tests\\test_deney_matrisi.py",
+        "tests\\test_dsp_olay_adaptoru.py",
+        "tests\\test_eylem_katmani.py",
+        "tests\\test_kurucu_politika_motoru.py",
+        "tests\\test_olay_omurgasi.py",
+        "tests\\test_oncelik_motoru.py",
+        "tests\\test_ortak_dil.py",
+        "tests\\test_otonomi.py",
+        "tests\\test_runtime_bildirim.py",
+        "tests\\test_runtime_durumu.py",
+        "tests\\test_runtime_olay_adaptoru.py",
+        "tests\\test_teknik_onay.py"
+      ],
+      "named_objects": [
+        {
+          "file": "src\\syk_simulasyon\\arastirma_veri_bankasi.py",
+          "name": "karar_ekle"
+        },
+        {
+          "file": "src\\syk_simulasyon\\arastirma_veri_bankasi.py",
+          "name": "karar_zincirini_dogrula"
+        },
+        {
+          "file": "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+          "name": "YasamDongusuKarari"
+        },
+        {
+          "file": "src\\syk_simulasyon\\deney_matrisi.py",
+          "name": "bilge_kaan_onayli"
+        },
+        {
+          "file": "src\\syk_simulasyon\\eylem_katmani.py",
+          "name": "KararSinifi"
+        },
+        {
+          "file": "src\\syk_simulasyon\\kurucu_politika_motoru.py",
+          "name": "bilge_kaan_onayla"
+        },
+        {
+          "file": "src\\syk_simulasyon\\kurucu_politika_motoru.py",
+          "name": "kurucu_kaan_onayla"
+        },
+        {
+          "file": "src\\syk_simulasyon\\otonomi.py",
+          "name": "Karar"
+        },
+        {
+          "file": "src\\syk_simulasyon\\otonomi.py",
+          "name": "BilgeKaanTeknikOnayi"
+        },
+        {
+          "file": "src\\syk_simulasyon\\otonomi.py",
+          "name": "kalici_terfi_karari"
+        }
+      ]
+    },
+    "muhur_butunluk": {
+      "progress_percent": 65,
+      "status": "KISMI_UYGULAMA",
+      "source_files": [
+        "src\\syk_simulasyon\\arastirma_veri_bankasi.py",
+        "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+        "src\\syk_simulasyon\\dalga_yayilimi.py",
+        "src\\syk_simulasyon\\ham_sinyal_birlesimi.py",
+        "src\\syk_simulasyon\\hedef_sicili.py",
+        "src\\syk_simulasyon\\kurucu_politika_motoru.py",
+        "src\\syk_simulasyon\\model.py",
+        "src\\syk_simulasyon\\olay_omurgasi.py",
+        "src\\syk_simulasyon\\oncelik_motoru.py",
+        "src\\syk_simulasyon\\ortak_dil.py",
+        "src\\syk_simulasyon\\ortam_hafizasi.py",
+        "src\\syk_simulasyon\\runtime_secure_export.py"
+      ],
+      "test_files": [],
+      "named_objects": [
+        {
+          "file": "src\\syk_simulasyon\\arastirma_veri_bankasi.py",
+          "name": "karar_zincirini_dogrula"
+        },
+        {
+          "file": "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+          "name": "guven_zinciri_puani"
+        },
+        {
+          "file": "src\\syk_simulasyon\\hedef_sicili.py",
+          "name": "icerik_sha256"
+        },
+        {
+          "file": "src\\syk_simulasyon\\model.py",
+          "name": "icerik_ozeti_sha256"
+        }
+      ]
+    },
+    "soy_agi_izlenebilirlik": {
+      "progress_percent": 100,
+      "status": "UYGULANMIS_VE_TESTLI",
+      "source_files": [
+        "src\\syk_simulasyon\\olay_omurgasi.py",
+        "src\\syk_simulasyon\\ortam_hafizasi.py"
+      ],
+      "test_files": [
+        "tests\\test_arastirma_veri_bankasi.py",
+        "tests\\test_ortam_hafizasi.py",
+        "tests\\test_runtime_servisi.py"
+      ],
+      "named_objects": [
+        {
+          "file": "src\\syk_simulasyon\\arastirma_veri_bankasi.py",
+          "name": "geri_alma_gecmisi"
+        },
+        {
+          "file": "src\\syk_simulasyon\\ortam_hafizasi.py",
+          "name": "gecmis"
+        },
+        {
+          "file": "src\\syk_simulasyon\\runtime_servisi.py",
+          "name": "olay_gecmisi"
+        },
+        {
+          "file": "src\\syk_simulasyon\\runtime_servisi.py",
+          "name": "olay_gecmisini_temizle"
+        }
+      ]
+    },
+    "celiski_karsi_kanit": {
+      "progress_percent": 100,
+      "status": "UYGULANMIS_VE_TESTLI",
+      "source_files": [
+        "src\\syk_simulasyon\\model.py"
+      ],
+      "test_files": [
+        "tests\\test_bilgi_yasam_dongusu.py",
+        "tests\\test_model.py"
+      ],
+      "named_objects": [
+        {
+          "file": "src\\syk_simulasyon\\model.py",
+          "name": "Celiski"
+        }
+      ]
+    }
+  },
+  "important_existing_modules": [
+    "src/syk_simulasyon/arastirma_veri_bankasi.py",
+    "src/syk_simulasyon/bilgi_yasam_dongusu.py",
+    "src/syk_simulasyon/kurucu_politika_motoru.py",
+    "src/syk_simulasyon/teknik_onay.py",
+    "src/syk_simulasyon/hedef_sicili.py"
+  ],
+  "note": "Bu tarama isim, s?n?f, i?lev ve test izlerini ?l?er. ?? kurallar?n?n tam do?rulu?u bir sonraki hedefli test a?amas?nda do?rulanacakt?r."
+}
