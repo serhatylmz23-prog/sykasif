@@ -26,22 +26,79 @@ class RuntimeTerminal:
 <html lang="tr">
 <head>
 <meta charset="utf-8">
+
 <title>SyOtağı</title>
+
+<style>
+body {{
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #eee;
+    padding: 30px;
+}}
+
+.panel {{
+    max-width: 600px;
+    margin: auto;
+}}
+
+.kart {{
+    border: 1px solid #555;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+}}
+
+.baslik {{
+    text-align: center;
+}}
+</style>
+
 </head>
 
 <body>
 
-<h1>SYKAŞİF - SyOtağı</h1>
+<div class="panel">
 
-<p>Runtime: {durum.runtime_durumu}</p>
-<p>WebSocket: {durum.websocket_durumu}</p>
-<p>Sistem: {durum.sistem_durumu}</p>
+<h1 class="baslik">
+SYKAŞİF
+</h1>
 
-<hr>
+<h2 class="baslik">
+SyOtağı
+</h2>
 
-<p>Başlangıç: {durum.baslangic}</p>
-<p>Hedef: {durum.hedef}</p>
-<p>Rota: {durum.rota}</p>
+<div class="kart">
+<b>Runtime:</b>
+{durum.runtime_durumu}
+</div>
+
+<div class="kart">
+<b>WebSocket:</b>
+{durum.websocket_durumu}
+</div>
+
+<div class="kart">
+<b>Sistem:</b>
+{durum.sistem_durumu}
+</div>
+
+<div class="kart">
+<b>Başlangıç:</b>
+{durum.baslangic}
+</div>
+
+<div class="kart">
+<b>Rota:</b>
+{durum.rota}
+</div>
+
+<div class="kart">
+<b>Hedef:</b>
+{durum.hedef}
+</div>
+
+</div>
 
 </body>
 </html>
