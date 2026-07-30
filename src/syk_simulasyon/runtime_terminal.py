@@ -159,9 +159,252 @@ class RuntimeTerminal:
 </section>
 """
 
+    def _canli_betik_html(self) -> str:
+        return r"""
+<script>
+(() => {
+    "use strict";
+
+    const tanimDegeriniBul = (etiket) => {
+        const basliklar = document.querySelectorAll(
+            "#syk-cift-panel dt"
+        );
+
+        for (const baslik of basliklar) {
+            if (baslik.textContent.trim() === etiket) {
+                return baslik.nextElementSibling;
+            }
+        }
+
+        return null;
+    };
+
+    const kartDegeriniBul = (etiket) => {
+        const kartlar = document.querySelectorAll(".kart");
+
+        for (const kart of kartlar) {
+            const baslik = kart.querySelector("b");
+
+            if (
+                baslik &&
+                baslik.textContent.trim() === etiket
+            ) {
+                const metinDugumleri = Array.from(
+                    kart.childNodes
+                ).filter(
+                    (dugum) => dugum.nodeType === Node.TEXT_NODE
+                );
+
+                if (metinDugumleri.length > 0) {
+                    const alan = document.createElement("span");
+                    alan.textContent = kart.textContent
+                        .replace(baslik.textContent, "")
+                        .trim();
+
+                    for (const dugum of metinDugumleri) {
+                        dugum.remove();
+                    }
+
+                    kart.appendChild(document.createTextNode(" "));
+                    kart.appendChild(alan);
+                    return alan;
+                }
+            }
+        }
+
+        return null;
+    };
+
+    const alanlar = {
+        aktifAdim: tanimDegeriniBul("Aktif Adım"),
+        calismaDurumu: tanimDegeriniBul("Çalışma Durumu"),
+        genelIlerleme: tanimDegeriniBul("Genel İlerleme"),
+        websocketDurumu: kartDegeriniBul("WebSocket:"),
+    };
+
+    let soket = null;
+    let yenilemeZamanlayicisi = null;
+    let yenidenBaglanmaZamanlayicisi = null;
+
+    const metinAta = (alan, deger, varsayilan) => {
+        if (!alan) {
+            return;
+        }
+
+        if (
+            deger === null ||
+            deger === undefined ||
+            deger === ""
+        ) {
+            alan.textContent = varsayilan;
+            return;
+        }
+
+        alan.textContent = String(deger);
+    };
+
+    const yuzdeMetni = (deger) => {
+        const sayi = Number(deger);
+
+        if (!Number.isFinite(sayi)) {
+            return "%0";
+        }
+
+        const sinirli = Math.min(
+            100,
+            Math.max(0, sayi)
+        );
+
+        const yuvarlanmis = (
+            Math.round(sinirli * 100) / 100
+        );
+
+        return `%${yuvarlanmis}`;
+    };
+
+    const gorunumuUygula = (gorunum) => {
+        if (
+            !gorunum ||
+            typeof gorunum !== "object"
+        ) {
+            return;
+        }
+
+        metinAta(
+            alanlar.aktifAdim,
+            gorunum.aktif_modul,
+            "Beklemede"
+        );
+
+        metinAta(
+            alanlar.calismaDurumu,
+            gorunum.durum,
+            "Belirlenmedi"
+        );
+
+        if (alanlar.genelIlerleme) {
+            alanlar.genelIlerleme.textContent = (
+                yuzdeMetni(
+                    gorunum.ilerleme_yuzdesi
+                )
+            );
+        }
+    };
+
+    const yenilemeDurdur = () => {
+        if (yenilemeZamanlayicisi !== null) {
+            window.clearInterval(
+                yenilemeZamanlayicisi
+            );
+            yenilemeZamanlayicisi = null;
+        }
+    };
+
+    const yenidenBaglanmayiPlanla = () => {
+        if (
+            yenidenBaglanmaZamanlayicisi !== null
+        ) {
+            return;
+        }
+
+        yenidenBaglanmaZamanlayicisi = (
+            window.setTimeout(
+                () => {
+                    yenidenBaglanmaZamanlayicisi = null;
+                    baglan();
+                },
+                3000
+            )
+        );
+    };
+
+    const baglan = () => {
+        const protokol = (
+            window.location.protocol === "https:"
+            ? "wss:"
+            : "ws:"
+        );
+
+        const adres = (
+            `${protokol}//${window.location.host}/ws/runtime`
+        );
+
+        metinAta(
+            alanlar.websocketDurumu,
+            "BAĞLANIYOR",
+            "BAĞLANIYOR"
+        );
+
+        soket = new WebSocket(adres);
+
+        soket.addEventListener("open", () => {
+            metinAta(
+                alanlar.websocketDurumu,
+                "BAĞLI",
+                "BAĞLI"
+            );
+
+            yenilemeDurdur();
+
+            yenilemeZamanlayicisi = (
+                window.setInterval(
+                    () => {
+                        if (
+                            soket &&
+                            soket.readyState === WebSocket.OPEN
+                        ) {
+                            soket.send("yenile");
+                        }
+                    },
+                    2000
+                )
+            );
+        });
+
+        soket.addEventListener(
+            "message",
+            (olay) => {
+                try {
+                    const mesaj = JSON.parse(olay.data);
+                    gorunumuUygula(mesaj.gorunum);
+                } catch (hata) {
+                    console.warn(
+                        "SyKaşif canlı görünüm mesajı "
+                        + "işlenemedi.",
+                        hata
+                    );
+                }
+            }
+        );
+
+        soket.addEventListener("close", () => {
+            yenilemeDurdur();
+
+            metinAta(
+                alanlar.websocketDurumu,
+                "BAĞLANTI KESİLDİ",
+                "BAĞLANTI KESİLDİ"
+            );
+
+            yenidenBaglanmayiPlanla();
+        });
+
+        soket.addEventListener("error", () => {
+            if (soket) {
+                soket.close();
+            }
+        });
+    };
+
+    baglan();
+})();
+</script>
+"""
+
     def html(self) -> str:
         durum = self.durum()
         panel = self._cift_panel_html()
+        canli_betik = self._canli_betik_html()
 
         return f"""
 <!doctype html>
@@ -252,6 +495,8 @@ SyOtağı
 </div>
 
 {panel}
+
+{canli_betik}
 
 </body>
 </html>
