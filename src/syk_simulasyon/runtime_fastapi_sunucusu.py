@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import asyncio
+
 from fastapi import FastAPI, Response, WebSocket, WebSocketDisconnect
 
 from .runtime_anlik_gorunum import RuntimeAnlikGorunumSaglayicisi
@@ -30,11 +32,13 @@ class RuntimeFastApiSunucusu:
         disa_aktarim: RuntimeDisaAktarim,
         websocket_yayinci: RuntimeWebSocketYayincisi | None = None,
         runtime_durumu: RuntimeDurumu | None = None,
+        runtime_servisi: RuntimeServisi | None = None,
     ) -> None:
 
         self._api = RuntimeHttpApi(disa_aktarim)
         self._websocket = websocket_yayinci
         self._terminal = RuntimeTerminal(runtime_durumu)
+        self._runtime_servisi = runtime_servisi
 
     def olustur(self) -> FastAPI:
 
@@ -136,14 +140,53 @@ class RuntimeFastApiSunucusu:
                 await websocket.close(code=1011)
                 return
 
-            await websocket.send_json(
-                self._websocket.baglanti_mesaji()
+            olay_kuyrugu: asyncio.Queue[None] = asyncio.Queue()
+            olay_dongusu = asyncio.get_running_loop()
+
+            def runtime_olayi_geldi(_olay: object) -> None:
+                olay_dongusu.call_soon_threadsafe(
+                    olay_kuyrugu.put_nowait,
+                    None,
+                )
+
+            bildirim_merkezi = (
+                self._runtime_servisi.bildirim_merkezi
+                if self._runtime_servisi is not None
+                else None
             )
 
+            if bildirim_merkezi is not None:
+                bildirim_merkezi.abone_ekle(
+                    runtime_olayi_geldi
+                )
+
+            olay_yayin_gorevi: asyncio.Task[None] | None = None
+
+            async def olaylari_yayinla() -> None:
+                while True:
+                    await olay_kuyrugu.get()
+
+                    try:
+                        await websocket.send_json(
+                            self._websocket.guncelleme_mesaji()
+                        )
+                    except (
+                        WebSocketDisconnect,
+                        RuntimeError,
+                    ):
+                        return
+
             try:
+                await websocket.send_json(
+                    self._websocket.baglanti_mesaji()
+                )
+
+                if bildirim_merkezi is not None:
+                    olay_yayin_gorevi = asyncio.create_task(
+                        olaylari_yayinla()
+                    )
 
                 while True:
-
                     komut = await websocket.receive_text()
 
                     if komut.lower() in {
@@ -151,13 +194,10 @@ class RuntimeFastApiSunucusu:
                         "guncelle",
                         "yenile",
                     }:
-
                         await websocket.send_json(
                             self._websocket.guncelleme_mesaji()
                         )
-
                     else:
-
                         await websocket.send_json(
                             self._websocket.bilinmeyen_komut(
                                 komut
@@ -166,6 +206,20 @@ class RuntimeFastApiSunucusu:
 
             except WebSocketDisconnect:
                 pass
+            finally:
+                if bildirim_merkezi is not None:
+                    bildirim_merkezi.abone_sil(
+                        runtime_olayi_geldi
+                    )
+
+                if olay_yayin_gorevi is not None:
+                    if not olay_yayin_gorevi.done():
+                        olay_yayin_gorevi.cancel()
+
+                    await asyncio.gather(
+                        olay_yayin_gorevi,
+                        return_exceptions=True,
+                    )
 
         return uygulama
 
@@ -203,6 +257,7 @@ def uygulama_olustur() -> FastAPI:
         disa_aktarim,
         websocket_yayinci,
         servis.durum,
+        runtime_servisi=servis,
     ).olustur()
 
 
