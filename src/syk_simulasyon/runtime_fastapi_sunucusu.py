@@ -55,6 +55,16 @@ class RuntimeFastApiSunucusu:
         @uygulama.get("/runtime/health")
         def runtime_sagligi() -> JSONResponse:
             servis = self._runtime_servisi
+            tanilama_etkin = os.getenv(
+                "SYK_RUNTIME_TANILAMA",
+                "",
+            ).strip().lower() in {
+                "1",
+                "true",
+                "evet",
+                "acik",
+                "a??k",
+            }
 
             if servis is None:
                 return JSONResponse(
@@ -94,19 +104,38 @@ class RuntimeFastApiSunucusu:
                 olaylar = gunluk.olaylari_oku()
                 gunluk.butunlugu_dogrula()
             except RuntimeOlayGunluguButunlukHatasi as hata:
+                gunluk_bilgisi = {
+                    "etkin": True,
+                    "butunluk": "bozuk",
+                    "kayit_sayisi": None,
+                }
+
+                yanit = {
+                    "durum": "hatal?",
+                    "hazir": False,
+                    "kalici_gunluk": gunluk_bilgisi,
+                }
+
+                if tanilama_etkin:
+                    gunluk_bilgisi["yol"] = str(
+                        gunluk.yol
+                    )
+                    yanit["hata"] = str(hata)
+
                 return JSONResponse(
                     status_code=503,
-                    content={
-                        "durum": "hatal?",
-                        "hazir": False,
-                        "kalici_gunluk": {
-                            "etkin": True,
-                            "butunluk": "bozuk",
-                            "yol": str(gunluk.yol),
-                            "kayit_sayisi": None,
-                        },
-                        "hata": str(hata),
-                    },
+                    content=yanit,
+                )
+
+            gunluk_bilgisi = {
+                "etkin": True,
+                "butunluk": "sa?lam",
+                "kayit_sayisi": len(olaylar),
+            }
+
+            if tanilama_etkin:
+                gunluk_bilgisi["yol"] = str(
+                    gunluk.yol
                 )
 
             return JSONResponse(
@@ -114,12 +143,7 @@ class RuntimeFastApiSunucusu:
                 content={
                     "durum": "?al???yor",
                     "hazir": True,
-                    "kalici_gunluk": {
-                        "etkin": True,
-                        "butunluk": "sa?lam",
-                        "yol": str(gunluk.yol),
-                        "kayit_sayisi": len(olaylar),
-                    },
+                    "kalici_gunluk": gunluk_bilgisi,
                 },
             )
 
