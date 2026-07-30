@@ -1,0 +1,246 @@
+[
+  {
+    "file": "src\\syk_simulasyon\\arastirma_veri_bankasi.py",
+    "type": "function",
+    "name": "arastirma_kimligi_uret",
+    "line": 17,
+    "arguments": []
+  },
+  {
+    "file": "src\\syk_simulasyon\\arastirma_veri_bankasi.py",
+    "type": "class",
+    "name": "ArastirmaVeriBankasi",
+    "line": 39
+  },
+  {
+    "file": "src\\syk_simulasyon\\arastirma_veri_bankasi.py",
+    "type": "function",
+    "name": "arastirma_ac",
+    "line": 105,
+    "arguments": [
+      "self",
+      "kod_adi",
+      "amac_kodu"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\arastirma_veri_bankasi.py",
+    "type": "function",
+    "name": "karar_ekle",
+    "line": 118,
+    "arguments": [
+      "self",
+      "arastirma_kimligi",
+      "karar_kodu",
+      "gerekce",
+      "bilge_kaan_onayi",
+      "kurucu_kaan_onayi"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\arastirma_veri_bankasi.py",
+    "type": "function",
+    "name": "karar_zincirini_dogrula",
+    "line": 131,
+    "arguments": [
+      "self"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+    "type": "class",
+    "name": "GuvenKaydi",
+    "line": 33
+  },
+  {
+    "file": "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+    "type": "class",
+    "name": "YasamDongusuKarari",
+    "line": 176
+  },
+  {
+    "file": "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+    "type": "function",
+    "name": "guncel_guven",
+    "line": 69,
+    "arguments": [
+      "self"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+    "type": "function",
+    "name": "guven_ekle",
+    "line": 72,
+    "arguments": [
+      "self",
+      "puan",
+      "gerekce",
+      "zaman"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\bilgi_yasam_dongusu.py",
+    "type": "function",
+    "name": "guven_zinciri_puani",
+    "line": 85,
+    "arguments": [
+      "self"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\deney_matrisi.py",
+    "type": "class",
+    "name": "KanitTuru",
+    "line": 19
+  },
+  {
+    "file": "src\\syk_simulasyon\\deney_matrisi.py",
+    "type": "class",
+    "name": "FrekansOnerisi",
+    "line": 62
+  },
+  {
+    "file": "src\\syk_simulasyon\\eylem_katmani.py",
+    "type": "class",
+    "name": "KararSinifi",
+    "line": 42
+  },
+  {
+    "file": "src\\syk_simulasyon\\eylem_katmani.py",
+    "type": "class",
+    "name": "OneriVeEylemKatmani",
+    "line": 79
+  },
+  {
+    "file": "src\\syk_simulasyon\\hedef_sicili.py",
+    "type": "class",
+    "name": "KaynakNiteligi",
+    "line": 18
+  },
+  {
+    "file": "src\\syk_simulasyon\\hedef_sicili.py",
+    "type": "class",
+    "name": "BilimselKaynak",
+    "line": 38
+  },
+  {
+    "file": "src\\syk_simulasyon\\hedef_sicili.py",
+    "type": "function",
+    "name": "guven_puani",
+    "line": 57,
+    "arguments": [
+      "self"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\hedef_sicili.py",
+    "type": "function",
+    "name": "kaynak_kimlikleri",
+    "line": 97,
+    "arguments": [
+      "self"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\hedef_sicili.py",
+    "type": "function",
+    "name": "kaynak_ekle",
+    "line": 120,
+    "arguments": [
+      "self",
+      "kaynak"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\hedef_sicili.py",
+    "type": "function",
+    "name": "hedef_guven_puani",
+    "line": 138,
+    "arguments": [
+      "self",
+      "hedef_id"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\model.py",
+    "type": "class",
+    "name": "KanitSeviyesi",
+    "line": 27
+  },
+  {
+    "file": "src\\syk_simulasyon\\model.py",
+    "type": "class",
+    "name": "KaynakReferansi",
+    "line": 36
+  },
+  {
+    "file": "src\\syk_simulasyon\\model.py",
+    "type": "class",
+    "name": "ArastirmaOnerisi",
+    "line": 63
+  },
+  {
+    "file": "src\\syk_simulasyon\\model.py",
+    "type": "function",
+    "name": "guven_puani",
+    "line": 98,
+    "arguments": [
+      "self"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\model.py",
+    "type": "function",
+    "name": "kanit_ozeti",
+    "line": 103,
+    "arguments": [
+      "self"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\oncelik_motoru.py",
+    "type": "class",
+    "name": "OneriDurumu",
+    "line": 8
+  },
+  {
+    "file": "src\\syk_simulasyon\\oncelik_motoru.py",
+    "type": "class",
+    "name": "DeneyOnerisi",
+    "line": 17
+  },
+  {
+    "file": "src\\syk_simulasyon\\oncelik_motoru.py",
+    "type": "class",
+    "name": "ArastirmaOncelikMotoru",
+    "line": 57
+  },
+  {
+    "file": "src\\syk_simulasyon\\ortam_hafizasi.py",
+    "type": "function",
+    "name": "guven_puani",
+    "line": 73,
+    "arguments": [
+      "self"
+    ]
+  },
+  {
+    "file": "src\\syk_simulasyon\\otonomi.py",
+    "type": "class",
+    "name": "Karar",
+    "line": 6
+  },
+  {
+    "file": "src\\syk_simulasyon\\otonomi.py",
+    "type": "function",
+    "name": "kalici_terfi_karari",
+    "line": 51,
+    "arguments": [
+      "self",
+      "bilge_karari",
+      "kanit_puani",
+      "geri_alma_plani_var"
+    ]
+  }
+]
