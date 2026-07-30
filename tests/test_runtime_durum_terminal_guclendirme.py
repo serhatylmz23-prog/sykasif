@@ -50,7 +50,7 @@ def test_terminal_arayuzu_turkcedir():
     html = RuntimeTerminal().html()
 
     assert 'lang="tr"' in html
-    assert "SYKA??F" in html
-    assert "Ba?lang??" in html
+    assert "SYKA\u015e\u0130F" in html
+    assert "Ba\u015flang\u0131\u00e7" in html
     assert "Hedef" in html
     assert "Rota" in html

@@ -273,3 +273,69 @@ class RuntimeDurumu:
         if metin is None:
             return None
         return cls._zorunlu_metni_temizle(metin, alan_adi=alan_adi)
+
+# SYK_CIFT_PANEL_HAZIRLIK_V1
+def _syk_hazirlik_degerlerini_getir(nesne):
+    alan_adi = "_syk_sistem_hazirlik"
+
+    if not hasattr(nesne, alan_adi):
+        setattr(
+            nesne,
+            alan_adi,
+            {
+                "terminal_arayuzu": 0.0,
+                "veri_akisi": 0.0,
+                "kayit_zinciri": 0.0,
+                "test_durumu": 0.0,
+                "disa_aktarim_hazirligi": 0.0,
+            },
+        )
+
+    return getattr(nesne, alan_adi)
+
+
+def _syk_sistem_hazirlik_guncelle(self, alan, yuzde):
+    izinli_alanlar = {
+        "terminal_arayuzu",
+        "veri_akisi",
+        "kayit_zinciri",
+        "test_durumu",
+        "disa_aktarim_hazirligi",
+    }
+
+    if alan not in izinli_alanlar:
+        raise ValueError(f"Bilinmeyen sistem haz?rl?k alan?: {alan}")
+
+    try:
+        sayisal_yuzde = float(yuzde)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("Haz?rl?k y?zdesi say?sal olmal?d?r.") from exc
+
+    if not 0 <= sayisal_yuzde <= 100:
+        raise ValueError("Haz?rl?k y?zdesi 0 ile 100 aras?nda olmal?d?r.")
+
+    degerler = _syk_hazirlik_degerlerini_getir(self)
+    degerler[alan] = sayisal_yuzde
+
+    return self.sistem_hazirlik_ozeti()
+
+
+def _syk_sistem_hazirlik_ozeti(self):
+    degerler = dict(_syk_hazirlik_degerlerini_getir(self))
+
+    genel = round(
+        sum(float(deger) for deger in degerler.values())
+        / len(degerler),
+        2,
+    )
+
+    sonuc = dict(degerler)
+    sonuc["genel_uretime_hazirlik"] = genel
+    return sonuc
+
+
+if not hasattr(RuntimeDurumu, "sistem_hazirlik_guncelle"):
+    RuntimeDurumu.sistem_hazirlik_guncelle = _syk_sistem_hazirlik_guncelle
+
+if not hasattr(RuntimeDurumu, "sistem_hazirlik_ozeti"):
+    RuntimeDurumu.sistem_hazirlik_ozeti = _syk_sistem_hazirlik_ozeti
