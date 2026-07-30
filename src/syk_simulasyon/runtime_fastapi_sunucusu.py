@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+import os
 
 from fastapi import FastAPI, Response, WebSocket, WebSocketDisconnect
 
@@ -226,7 +227,13 @@ class RuntimeFastApiSunucusu:
 
 def uygulama_olustur() -> FastAPI:
 
-    servis = RuntimeServisi()
+    olay_gunlugu_yolu = os.getenv(
+        "SYK_RUNTIME_OLAY_GUNLUGU"
+    )
+
+    servis = RuntimeServisi(
+        olay_gunlugu_yolu or None
+    )
 
     gorunum = RuntimeAnlikGorunumSaglayicisi(
         RuntimeIzlemeSaglayicisi(servis)
@@ -253,12 +260,19 @@ def uygulama_olustur() -> FastAPI:
         servis.durum.sistem_hazirlik_ozeti,
     )
 
-    return RuntimeFastApiSunucusu(
+    uygulama = RuntimeFastApiSunucusu(
         disa_aktarim,
         websocket_yayinci,
         servis.durum,
         runtime_servisi=servis,
     ).olustur()
+
+    uygulama.state.runtime_servisi = servis
+    uygulama.state.runtime_olay_gunlugu_yolu = (
+        olay_gunlugu_yolu
+    )
+
+    return uygulama
 
 
 if __name__ == "__main__":
