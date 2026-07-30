@@ -195,7 +195,8 @@ def uygulama_olustur() -> FastAPI:
     )
 
     websocket_yayinci = RuntimeWebSocketYayincisi(
-        gorunum
+        gorunum,
+        servis.durum.sistem_hazirlik_ozeti,
     )
 
     return RuntimeFastApiSunucusu(

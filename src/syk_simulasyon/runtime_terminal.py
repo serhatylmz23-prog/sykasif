@@ -219,6 +219,18 @@ class RuntimeTerminal:
         aktifAdim: tanimDegeriniBul("Aktif Adım"),
         calismaDurumu: tanimDegeriniBul("Çalışma Durumu"),
         genelIlerleme: tanimDegeriniBul("Genel İlerleme"),
+        terminalArayuzu: tanimDegeriniBul(
+            "Terminal Arayüzü"
+        ),
+        veriAkisi: tanimDegeriniBul("Veri Akışı"),
+        kayitZinciri: tanimDegeriniBul("Kayıt Zinciri"),
+        testDurumu: tanimDegeriniBul("Test Durumu"),
+        disaAktarimHazirligi: tanimDegeriniBul(
+            "Dışa Aktarım Hazırlığı"
+        ),
+        uretimeHazirlik: tanimDegeriniBul(
+            "Üretime Hazırlık"
+        ),
         websocketDurumu: kartDegeriniBul("WebSocket:"),
     };
 
@@ -289,6 +301,48 @@ class RuntimeTerminal:
                 )
             );
         }
+    };
+
+    const sistemHazirliginiUygula = (hazirlik) => {
+        if (
+            !hazirlik ||
+            typeof hazirlik !== "object"
+        ) {
+            return;
+        }
+
+        const yuzdeAta = (alan, anahtar) => {
+            if (alan) {
+                alan.textContent = yuzdeMetni(
+                    hazirlik[anahtar]
+                );
+            }
+        };
+
+        yuzdeAta(
+            alanlar.terminalArayuzu,
+            "terminal_arayuzu"
+        );
+        yuzdeAta(
+            alanlar.veriAkisi,
+            "veri_akisi"
+        );
+        yuzdeAta(
+            alanlar.kayitZinciri,
+            "kayit_zinciri"
+        );
+        yuzdeAta(
+            alanlar.testDurumu,
+            "test_durumu"
+        );
+        yuzdeAta(
+            alanlar.disaAktarimHazirligi,
+            "disa_aktarim_hazirligi"
+        );
+        yuzdeAta(
+            alanlar.uretimeHazirlik,
+            "genel_uretime_hazirlik"
+        );
     };
 
     const yenilemeDurdur = () => {
@@ -367,6 +421,9 @@ class RuntimeTerminal:
                 try {
                     const mesaj = JSON.parse(olay.data);
                     gorunumuUygula(mesaj.gorunum);
+                    sistemHazirliginiUygula(
+                        mesaj.sistem_hazirlik
+                    );
                 } catch (hata) {
                     console.warn(
                         "SyKaşif canlı görünüm mesajı "

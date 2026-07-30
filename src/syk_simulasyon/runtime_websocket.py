@@ -9,14 +9,22 @@ class RuntimeWebSocketYayincisi:
     Runtime verisini WebSocket istemcilerine hazırlayan katman.
     """
 
-    def __init__(self, gorunum_saglayici: Any) -> None:
+    def __init__(
+        self,
+        gorunum_saglayici: Any,
+        sistem_hazirlik_saglayici: Any | None = None,
+    ) -> None:
         self._gorunum_saglayici = gorunum_saglayici
+        self._sistem_hazirlik_saglayici = (
+            sistem_hazirlik_saglayici
+        )
 
     def baglanti_mesaji(self) -> dict[str, Any]:
         return {
             "mesaj": "SyOtağı bağlantısı kuruldu",
             "terminal": "SYK-FIELD-01",
             "gorunum": self._gorunum(),
+            "sistem_hazirlik": self._sistem_hazirlik(),
         }
 
     def guncelleme_mesaji(self) -> dict[str, Any]:
@@ -24,6 +32,7 @@ class RuntimeWebSocketYayincisi:
             "mesaj": "Canlı görünüm güncellendi",
             "terminal": "SYK-FIELD-01",
             "gorunum": self._gorunum(),
+            "sistem_hazirlik": self._sistem_hazirlik(),
         }
 
     def bilinmeyen_komut(self, komut: str) -> dict[str, Any]:
@@ -31,6 +40,31 @@ class RuntimeWebSocketYayincisi:
             "mesaj": "Bilinmeyen komut",
             "komut": komut,
         }
+
+    def _sistem_hazirlik(self) -> dict[str, Any]:
+        saglayici = self._sistem_hazirlik_saglayici
+
+        if saglayici is None:
+            return {}
+
+        if callable(saglayici):
+            sonuc = saglayici()
+        elif hasattr(saglayici, "sistem_hazirlik_ozeti"):
+            sonuc = saglayici.sistem_hazirlik_ozeti()
+        else:
+            raise TypeError(
+                "Sistem hazırlık sağlayıcısı çağrılabilir "
+                "olmalı veya sistem_hazirlik_ozeti "
+                "yöntemini sunmalıdır."
+            )
+
+        if not isinstance(sonuc, dict):
+            raise TypeError(
+                "Sistem hazırlık sağlayıcısı sözlük "
+                "üretmelidir."
+            )
+
+        return dict(sonuc)
 
     def _gorunum(self) -> dict[str, Any]:
         saglayici = self._gorunum_saglayici

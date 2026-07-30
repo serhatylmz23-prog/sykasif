@@ -74,3 +74,33 @@ def test_websocket_gecersiz_gorunumu_reddeder():
         match="sözlüğe dönüştürülebilir",
     ):
         yayinci.guncelleme_mesaji()
+
+def test_websocket_sistem_hazirligini_ayri_alanda_yayinlar():
+    hazirlik = {
+        "terminal_arayuzu": 100,
+        "veri_akisi": 90,
+        "kayit_zinciri": 80,
+        "test_durumu": 70,
+        "disa_aktarim_hazirligi": 60,
+        "genel_uretime_hazirlik": 80,
+    }
+
+    yayinci = RuntimeWebSocketYayincisi(
+        _GorunumSaglayici(),
+        lambda: hazirlik,
+    )
+
+    mesaj = yayinci.guncelleme_mesaji()
+
+    assert mesaj["gorunum"]["aktif_modul"] == "Canlı Modül"
+    assert mesaj["sistem_hazirlik"] == hazirlik
+
+
+def test_websocket_hazirlik_kaynagi_yokken_bos_sozluk_yayinlar():
+    yayinci = RuntimeWebSocketYayincisi(
+        _GorunumSaglayici()
+    )
+
+    mesaj = yayinci.baglanti_mesaji()
+
+    assert mesaj["sistem_hazirlik"] == {}
