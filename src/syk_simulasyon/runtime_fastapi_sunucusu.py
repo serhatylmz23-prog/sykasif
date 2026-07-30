@@ -16,6 +16,7 @@ from .runtime_secure_export import (
     ExportSecurityProfile,
     SecureExportViewProvider,
 )
+from .runtime_durumu import RuntimeDurumu
 from .runtime_terminal import RuntimeTerminal
 from .runtime_websocket import RuntimeWebSocketYayincisi
 from .runtime_xml import RuntimeXmlSaglayicisi
@@ -28,11 +29,12 @@ class RuntimeFastApiSunucusu:
         self,
         disa_aktarim: RuntimeDisaAktarim,
         websocket_yayinci: RuntimeWebSocketYayincisi | None = None,
+        runtime_durumu: RuntimeDurumu | None = None,
     ) -> None:
 
         self._api = RuntimeHttpApi(disa_aktarim)
         self._websocket = websocket_yayinci
-        self._terminal = RuntimeTerminal()
+        self._terminal = RuntimeTerminal(runtime_durumu)
 
     def olustur(self) -> FastAPI:
 
@@ -199,6 +201,7 @@ def uygulama_olustur() -> FastAPI:
     return RuntimeFastApiSunucusu(
         disa_aktarim,
         websocket_yayinci,
+        servis.durum,
     ).olustur()
 
 
