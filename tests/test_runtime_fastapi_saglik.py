@@ -25,11 +25,11 @@ def test_saglik_rotasi_gunluk_yokken_hazir_doner(
     veri = yanit.json()
 
     assert yanit.status_code == 200
-    assert veri["durum"] == "?al???yor"
+    assert veri["durum"] == "çalışıyor"
     assert veri["hazir"] is True
     assert veri["kalici_gunluk"] == {
         "etkin": False,
-        "butunluk": "kullan?lm?yor",
+        "butunluk": "kullanılmıyor",
         "yol": None,
         "kayit_sayisi": 0,
     }
@@ -63,7 +63,7 @@ def test_saglik_rotasi_saglam_gunlugu_bildirir(
     assert veri["kalici_gunluk"]["etkin"] is True
     assert (
         veri["kalici_gunluk"]["butunluk"]
-        == "sa?lam"
+        == "sağlam"
     )
     assert veri["kalici_gunluk"]["kayit_sayisi"] == 1
     assert "yol" not in veri["kalici_gunluk"]
@@ -112,7 +112,7 @@ def test_saglik_rotasi_sonradan_bozulan_gunlukte_503_doner(
     veri = yanit.json()
 
     assert yanit.status_code == 503
-    assert veri["durum"] == "hatal?"
+    assert veri["durum"] == "hatalı"
     assert veri["hazir"] is False
     assert (
         veri["kalici_gunluk"]["butunluk"]

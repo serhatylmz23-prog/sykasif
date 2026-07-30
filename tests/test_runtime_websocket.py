@@ -4,7 +4,11 @@ from syk_simulasyon.runtime_fastapi_sunucusu import uygulama_olustur
 
 
 def test_websocket_baglanti_mesaji():
-    istemci = TestClient(uygulama_olustur())
+    istemci = TestClient(
+        uygulama_olustur(
+            hesap_deposu_etkin=False,
+        )
+    )
 
     with istemci.websocket_connect("/ws/runtime") as websocket:
         veri = websocket.receive_json()
@@ -14,7 +18,11 @@ def test_websocket_baglanti_mesaji():
 
 
 def test_websocket_guncelleme_mesaji():
-    istemci = TestClient(uygulama_olustur())
+    istemci = TestClient(
+        uygulama_olustur(
+            hesap_deposu_etkin=False,
+        )
+    )
 
     with istemci.websocket_connect("/ws/runtime") as websocket:
         websocket.receive_json()
@@ -27,7 +35,11 @@ def test_websocket_guncelleme_mesaji():
 
 
 def test_websocket_bilinmeyen_komut():
-    istemci = TestClient(uygulama_olustur())
+    istemci = TestClient(
+        uygulama_olustur(
+            hesap_deposu_etkin=False,
+        )
+    )
 
     with istemci.websocket_connect("/ws/runtime") as websocket:
         websocket.receive_json()
@@ -41,7 +53,11 @@ def test_websocket_bilinmeyen_komut():
 
 
 def test_terminal_turkce_kontrol():
-    istemci = TestClient(uygulama_olustur())
+    istemci = TestClient(
+        uygulama_olustur(
+            hesap_deposu_etkin=False,
+        )
+    )
 
     yanit = istemci.get("/terminal")
 

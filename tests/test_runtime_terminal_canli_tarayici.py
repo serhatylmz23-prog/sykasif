@@ -71,7 +71,11 @@ def test_terminal_baglanti_kopunca_yeniden_baglanir():
 
 
 def test_terminal_endpointi_canli_betigi_doner():
-    istemci = TestClient(uygulama_olustur())
+    istemci = TestClient(
+        uygulama_olustur(
+            hesap_deposu_etkin=False,
+        )
+    )
 
     yanit = istemci.get("/terminal")
 
