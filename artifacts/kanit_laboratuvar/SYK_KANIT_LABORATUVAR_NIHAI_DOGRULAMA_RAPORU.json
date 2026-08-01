@@ -1,0 +1,42 @@
+{
+  "dogrulanan_kapsam": [
+    "guven_puani_hesaplama",
+    "celiski_etkisi",
+    "celiski_kaydi",
+    "kanit_arsivleme",
+    "uzman_inceleme_kaydi",
+    "gereksiz_veri_ayirma",
+    "kaynak_kaydi",
+    "kaynak_guven_guncelleme",
+    "kaynak_celiski_uzman_notu",
+    "kaynak_tarama",
+    "ogrenme_havuzu",
+    "kaynak_analizi",
+    "kaynak_turleri",
+    "alt_kaynaklar",
+    "aktif_kaynaklar",
+    "materyal_derin_analiz",
+    "fizik_kimya_verisi",
+    "sensor_frekans_kaydi",
+    "materyal_kaydi",
+    "laboratuvar_verileri",
+    "alasim_verisi",
+    "manifest_butunluk_dogrulamasi"
+  ],
+  "durum": "DOGRULANDI",
+  "kanit_laboratuvar_manifesti": {
+    "dosya": "artifacts/kanit_laboratuvar/SYK_KANIT_LABORATUVAR_MANIFESTI.json",
+    "dosya_sha256": "c9739b4dd2bffd6a66e915fe2d81b5e2ddee6025a0f40957b5c3647f6439424a",
+    "kaynak_sayisi": 7,
+    "manifest_sha256": "c8992c23c4756feebb335e948ac6256ce347a6de03b9ac0bfc3d3505f82d278f",
+    "test_dosyasi_sayisi": 7
+  },
+  "olusturma_zamani": "2026-08-01T23:14:09.487214+00:00",
+  "rapor_surumu": "1.0",
+  "test_sonucu": {
+    "basarili": 684,
+    "basarisiz": 0,
+    "pytest_ciktisi": "........................................................................ [ 10%]\n........................................................................ [ 21%]\n........................................................................ [ 31%]\n........................................................................ [ 42%]\n........................................................................ [ 52%]\n........................................................................ [ 63%]\n........................................................................ [ 73%]\n........................................................................ [ 84%]\n........................................................................ [ 94%]\n....................................                                     [100%]\n684 passed in 16.68s",
+    "toplam": 684
+  }
+}

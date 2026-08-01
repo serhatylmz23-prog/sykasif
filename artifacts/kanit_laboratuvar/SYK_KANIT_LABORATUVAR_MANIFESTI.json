@@ -1,0 +1,65 @@
+{
+  "dosyalar": {
+    "src/syk_core/kanit/guven_motoru.py": {
+      "boyut": 1195,
+      "sha256": "86724a555bb1e0f05f2cfe27f0d7ef80813beefd44c153ef473c8250e45df780"
+    },
+    "src/syk_core/kanit/kanit_arsiv_modeli.py": {
+      "boyut": 1591,
+      "sha256": "a2a0d49d9abe1c0d57130ec209fe271d3ded9b34b6b985d42f25b89166f2ac63"
+    },
+    "src/syk_core/kanit/kaynak_modeli.py": {
+      "boyut": 1877,
+      "sha256": "fd7f0f1d6ad8d3f079a745f7ecdff8f86fac4ba743b1aa2f8921eacf33f9cba0"
+    },
+    "src/syk_core/kanit/kaynak_tarama_modeli.py": {
+      "boyut": 1545,
+      "sha256": "8e334c3bf51db9d931126b9b523e3316c8b1a96dca008e563fbd1d7bb6472d04"
+    },
+    "src/syk_core/kanit/kaynak_turleri.py": {
+      "boyut": 803,
+      "sha256": "228c8561af74029a49c4e08b5e49362d28c4dda6f013cf8b07bafe325d4c5cf8"
+    },
+    "src/syk_core/laboratuvar/materyal_derin_analiz.py": {
+      "boyut": 1667,
+      "sha256": "93350b1407d22fa8422106dbc8257c11f2bb5b4c6657c0c4fefdfdc6dfd5b55e"
+    },
+    "src/syk_core/laboratuvar/materyal_modeli.py": {
+      "boyut": 1343,
+      "sha256": "5f16ec65b5ac74eee1f5a76b110657ede9b78a40da3ceab0b529ac35482d6488"
+    },
+    "tests/test_guven_motoru.py": {
+      "boyut": 934,
+      "sha256": "c92500f283ce97db423ad3a103a11b51395f1f4721223d6cf4b2044f31969a7f"
+    },
+    "tests/test_kanit_arsiv_modeli.py": {
+      "boyut": 1177,
+      "sha256": "1ebc0fc86b70f9c6acbc33f1b3a4ef8318c15954a70cbf09eb7ea608eb271441"
+    },
+    "tests/test_kaynak_modeli.py": {
+      "boyut": 1398,
+      "sha256": "3bcdf6cb616e12898099888d33246c323d70242bd834cd5b101a7fcfa75476d8"
+    },
+    "tests/test_kaynak_tarama_modeli.py": {
+      "boyut": 1179,
+      "sha256": "e2f8f731ad40f10ab3810ffb9a68938b10434e29ef26eb86792372afd5e71c87"
+    },
+    "tests/test_kaynak_turleri.py": {
+      "boyut": 1062,
+      "sha256": "22e5ec216830bf98942986c6e222b30f53f28409553f1d6b2c3e34227806fee9"
+    },
+    "tests/test_materyal_derin_analiz.py": {
+      "boyut": 1340,
+      "sha256": "2de9004fd8dda298de649f16eae2ee030f3b0cd7ab72aabe9768c8834d017c65"
+    },
+    "tests/test_materyal_modeli.py": {
+      "boyut": 1466,
+      "sha256": "23ef113bb0896edd37d8afae9486d2e58a932869e929db6af10d57f2a32ff432"
+    }
+  },
+  "kaynak_sayisi": 7,
+  "manifest_sha256": "c8992c23c4756feebb335e948ac6256ce347a6de03b9ac0bfc3d3505f82d278f",
+  "olusturma_zamani": "2026-08-01T23:11:41.612405+00:00",
+  "surum": "1.0",
+  "test_dosyasi_sayisi": 7
+}
