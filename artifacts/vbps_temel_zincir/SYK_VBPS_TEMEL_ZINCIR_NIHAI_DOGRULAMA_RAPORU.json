@@ -1,0 +1,32 @@
+{
+  "dogrulanan_kapsam": [
+    "goruntu_sensor_veri",
+    "karar_kayit",
+    "konum_harita_saha",
+    "operasyon_komuta",
+    "rapor_kanit_paketi",
+    "saha_hafiza_karsilastirma",
+    "syk_cekirdek_entegrasyon",
+    "teslim_arsiv_baglanti",
+    "veri_akis_sensor_yonetimi",
+    "veri_yetersizligi_talebi",
+    "prototip_saha_senaryosu",
+    "manifest_butunluk_dogrulamasi"
+  ],
+  "durum": "DOGRULANDI",
+  "olusturma_zamani": "2026-08-01T22:41:23.289417+00:00",
+  "rapor_surumu": "1.0",
+  "test_sonucu": {
+    "basarili": 676,
+    "basarisiz": 0,
+    "pytest_ciktisi": "........................................................................ [ 10%]\n........................................................................ [ 21%]\n........................................................................ [ 31%]\n........................................................................ [ 42%]\n........................................................................ [ 53%]\n........................................................................ [ 63%]\n........................................................................ [ 74%]\n........................................................................ [ 85%]\n........................................................................ [ 95%]\n............................                                             [100%]\n676 passed in 16.88s",
+    "toplam": 676
+  },
+  "vbps_manifesti": {
+    "dosya": "artifacts/vbps_temel_zincir/SYK_VBPS_TEMEL_ZINCIR_MANIFESTI.json",
+    "dosya_sha256": "0807f897987d9d4e0bbac44f87e8ac932c8bb061ae7286dac591b7be307a44da",
+    "kaynak_sayisi": 10,
+    "manifest_sha256": "a759ae4b2b9d11b6d780358296b57195636f4bbac38ecd968640445f5414a1ce",
+    "test_dosyasi_sayisi": 10
+  }
+}
