@@ -1,0 +1,30 @@
+{
+  "cekirdek_kanit_birlestirme_manifesti": {
+    "dosya": "artifacts/cekirdek_kanit_birlestirme/SYK_CEKIRDEK_KANIT_BIRLESTIRME_MANIFESTI.json",
+    "dosya_sha256": "be540a4c4b27896b0d5d485230a1c0e052547b557e8ec6c7ae9fe05688e1d2d4",
+    "kaynak_sayisi": 5,
+    "manifest_sha256": "ba626dff07f0185c551502c49c72adef5e2acfe03ab28912621eacdd3b1578da",
+    "test_dosyasi_sayisi": 5
+  },
+  "dogrulanan_kapsam": [
+    "cekirdek_kanit_zinciri_birlestirme",
+    "onayli_sonuc_raporu",
+    "inceleme_sonucu",
+    "kanit_guven_konsensusu",
+    "agirlikli_uzman_degerlendirmesi",
+    "uzman_sonuc_agi",
+    "manifest_butunluk_dogrulamasi",
+    "degistirilmis_manifest_reddi",
+    "degistirilmis_kaynak_reddi",
+    "eksik_dosya_reddi"
+  ],
+  "durum": "DOGRULANDI",
+  "olusturma_zamani": "2026-08-01T23:46:25.065456+00:00",
+  "rapor_surumu": "1.0",
+  "test_sonucu": {
+    "basarili": 696,
+    "basarisiz": 0,
+    "pytest_ciktisi": "........................................................................ [ 10%]\n........................................................................ [ 20%]\n........................................................................ [ 31%]\n........................................................................ [ 41%]\n........................................................................ [ 51%]\n........................................................................ [ 62%]\n........................................................................ [ 72%]\n........................................................................ [ 82%]\n........................................................................ [ 93%]\n................................................                         [100%]\n696 passed in 16.97s",
+    "toplam": 696
+  }
+}

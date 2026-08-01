@@ -1,0 +1,49 @@
+{
+  "dosyalar": {
+    "src/syk_core/entegrasyon/agirlikli_uzman_motoru.py": {
+      "boyut": 2018,
+      "sha256": "c4aa35f62fe24c638d3551f9ebb1d95d82cc56593538baa932e6853c3dbe9d8b"
+    },
+    "src/syk_core/entegrasyon/cekirdek_kanit_zinciri_birlestirme.py": {
+      "boyut": 2403,
+      "sha256": "ed56c7033cd9f4e77bce4eead785ee6abf3524fee19cc5b0518e23cc6403c90a"
+    },
+    "src/syk_core/entegrasyon/cekirdek_kanit_zinciri_sonuc_raporu.py": {
+      "boyut": 2655,
+      "sha256": "d652bf435a21533ecc52936e5d9febd291fee621fd174c34783a06f09d7f5f45"
+    },
+    "src/syk_core/entegrasyon/kanit_guven_konsensus.py": {
+      "boyut": 1749,
+      "sha256": "ba213635fabf22da7a4b4506bb4fc885b4dac7ffa197069500dccdcc4bb5a686"
+    },
+    "src/syk_core/entegrasyon/uzman_sonuc_agi.py": {
+      "boyut": 1762,
+      "sha256": "8843613dc9f3b76e19842fe6c51b023c08f9c8dadba895f4dacf442d4887b0ff"
+    },
+    "tests/test_agirlikli_uzman_motoru.py": {
+      "boyut": 891,
+      "sha256": "8db4c7b14111d3f04111da7807d4cafbd4761a589dd5624b26ff82a328c9a685"
+    },
+    "tests/test_cekirdek_kanit_zinciri_birlestirme.py": {
+      "boyut": 716,
+      "sha256": "b355accb7128bb6afb5abead6f288f939d38b689a909b9cb3c4144b029ba8fea"
+    },
+    "tests/test_cekirdek_kanit_zinciri_sonuc_raporu.py": {
+      "boyut": 1018,
+      "sha256": "5b9f39ae8536f06369444bf4cff274fe3ac61fb065249b9e0ec0732b35386700"
+    },
+    "tests/test_kanit_guven_konsensus.py": {
+      "boyut": 643,
+      "sha256": "989e31ad9205e432e5d2fd95f0e1de96a400fed300cf90d15cf38d37664d4d44"
+    },
+    "tests/test_uzman_sonuc_agi.py": {
+      "boyut": 771,
+      "sha256": "5b7df85593321fe6cf630bbaa40daf3a393810a89a6b9c3e208d337c6e634b29"
+    }
+  },
+  "kaynak_sayisi": 5,
+  "manifest_sha256": "ba626dff07f0185c551502c49c72adef5e2acfe03ab28912621eacdd3b1578da",
+  "olusturma_zamani": "2026-08-01T23:44:05.111520+00:00",
+  "surum": "1.0",
+  "test_dosyasi_sayisi": 5
+}
