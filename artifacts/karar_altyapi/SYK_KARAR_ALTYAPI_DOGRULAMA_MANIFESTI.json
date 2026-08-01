@@ -1,0 +1,31 @@
+{
+  "dosyalar": {
+    "src/syk_core/entegrasyon/syk_otonom_gelisim_dongusu.py": {
+      "boyut": 13130,
+      "sha256": "fab8cba6edcadc89cf621237350a3d39c68d01827765346c50314346c630c559"
+    },
+    "src/syk_core/entegrasyon/syk_otonom_guvenli_islem_motoru.py": {
+      "boyut": 7674,
+      "sha256": "2015b9cab8ed38c26676d5859f444483caf8c0d5eafac8b62bbfce59f794d14f"
+    },
+    "src/syk_core/entegrasyon/syk_otonom_islem_jurnali.py": {
+      "boyut": 6970,
+      "sha256": "5db399cbd25ebe1c3107eeeaa1a87fee0353cf56571226879bb528868885b967"
+    },
+    "src/syk_core/entegrasyon/syk_otonom_karar_defteri.py": {
+      "boyut": 4074,
+      "sha256": "f9374ff7fef409ef540440a9d9698ed676fc70eb8980b2eb144acf730bcab659"
+    },
+    "src/syk_core/entegrasyon/syk_otonom_karar_durum_deposu.py": {
+      "boyut": 3641,
+      "sha256": "8465c663bc837c10bebeeaffc88d4abe207930628901eb356a286991581949ec"
+    },
+    "src/syk_core/entegrasyon/syk_otonom_karar_tutarlilik_dogrulayici.py": {
+      "boyut": 4585,
+      "sha256": "a91edb37f16785212ffef4e098298cba749bb60b69a08759bd8d77c1523ed954"
+    }
+  },
+  "manifest_sha256": "a42e6b6303d9738f6ca01dbc6ae66bb0cfdc61908a8f84f55c65216827700c0d",
+  "olusturma_zamani": "2026-08-01T22:10:44.603765+00:00",
+  "surum": "1.0"
+}

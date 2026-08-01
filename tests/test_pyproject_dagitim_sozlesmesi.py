@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 from pathlib import Path
 import tomllib
@@ -33,7 +33,8 @@ def test_paket_kesfi_yalniz_src_dizinine_bagli() -> None:
 
     assert paket_kesfi["where"] == ["src"]
     assert paket_kesfi["include"] == [
-        "syk_simulasyon*"
+        "syk_simulasyon*",
+        "syk_core*",
     ]
     assert paket_kesfi["exclude"] == ["tests*"]
 
@@ -47,7 +48,10 @@ def test_src_altinda_tek_urun_paketi_var() -> None:
         if "__pycache__" not in yol.parts
     )
 
-    assert paketler == ["syk_simulasyon"]
+    assert paketler == [
+        "syk_core/entegrasyon",
+        "syk_simulasyon",
+    ]
 
 
 def test_build_ve_dist_git_disinda() -> None:
@@ -69,10 +73,18 @@ def test_build_ve_dist_git_disinda() -> None:
 def test_paket_disinda_python_kaynagi_yok() -> None:
     src = PROJE_KOKU / "src"
 
+    izinli_urunler = {
+        "syk_simulasyon",
+        "syk_core",
+    }
+
     paket_disindakiler = [
         yol.relative_to(src).as_posix()
         for yol in src.rglob("*.py")
-        if "syk_simulasyon" not in yol.parts
+        if not (
+            set(yol.relative_to(src).parts)
+            & izinli_urunler
+        )
     ]
 
     assert paket_disindakiler == []

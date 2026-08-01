@@ -30,5 +30,5 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["syk_simulasyon*"]
+include = ["syk_simulasyon*", "syk_core*"]
 exclude = ["tests*"]

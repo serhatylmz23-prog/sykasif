@@ -1,0 +1,29 @@
+{
+  "dogrulanan_kapsam": [
+    "otonom_gelisim_dongusu",
+    "kurucu_yetki_koruma",
+    "karar_defteri_hash_zinciri",
+    "karar_durum_deposu",
+    "defter_depo_tutarliligi",
+    "islem_jurnali",
+    "yarim_islem_kurtarma",
+    "hata_sonrasi_geri_alma",
+    "dagitim_paket_sozlesmesi",
+    "vbps_prototip_saha_senaryosu"
+  ],
+  "durum": "DOGRULANDI",
+  "karar_altyapi_manifesti": {
+    "dosya": "artifacts/karar_altyapi/SYK_KARAR_ALTYAPI_DOGRULAMA_MANIFESTI.json",
+    "dosya_sha256": "6818396d46922ca309d8b35a83aff92f397223049b6bda2511bfff5bda5ff20b",
+    "kaynak_dosya_sayisi": 6,
+    "manifest_sha256": "a42e6b6303d9738f6ca01dbc6ae66bb0cfdc61908a8f84f55c65216827700c0d"
+  },
+  "olusturma_zamani": "2026-08-01T22:12:27.847335+00:00",
+  "rapor_surumu": "1.0",
+  "test_sonucu": {
+    "basarili": 672,
+    "basarisiz": 0,
+    "pytest_ciktisi": "........................................................................ [ 10%]\n........................................................................ [ 21%]\n........................................................................ [ 32%]\n........................................................................ [ 42%]\n........................................................................ [ 53%]\n........................................................................ [ 64%]\n........................................................................ [ 75%]\n........................................................................ [ 85%]\n........................................................................ [ 96%]\n........................                                                 [100%]\n672 passed in 16.72s",
+    "toplam": 672
+  }
+}
