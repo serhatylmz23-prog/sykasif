@@ -1,0 +1,180 @@
+from datetime import datetime, timezone
+from pathlib import Path
+import hashlib
+import json
+
+
+class SYKUzmanDegerlendirmeManifesti:
+    SURUM = "1.0"
+
+    KAYNAKLAR = (
+        "src/syk_core/degerlendirme/birlesik_degerlendirme.py",
+        "src/syk_core/degerlendirme/konsensus_motoru.py",
+        "src/syk_core/uzmanlar/onay_zinciri.py",
+        "src/syk_core/uzmanlar/uzman_enstitu.py",
+        "src/syk_core/uzmanlar/uzman_modeli.py",
+        "src/syk_core/uzmanlar/uzman_yasam_dongusu.py",
+        "src/syk_core/uzmanlar/uzman_yetki_modeli.py",
+    )
+
+    TESTLER = (
+        "tests/test_birlesik_degerlendirme.py",
+        "tests/test_konsensus_motoru.py",
+        "tests/test_uzman_enstitu.py",
+        "tests/test_uzman_modeli.py",
+        "tests/test_uzman_onay_zinciri.py",
+        "tests/test_uzman_yasam_dongusu.py",
+    )
+
+    def __init__(self, kok_dizin):
+        self.kok_dizin = Path(kok_dizin)
+
+    @staticmethod
+    def _sha256(yol: Path) -> str:
+        hesap = hashlib.sha256()
+
+        with yol.open("rb") as akis:
+            for parca in iter(lambda: akis.read(65536), b""):
+                hesap.update(parca)
+
+        return hesap.hexdigest()
+
+    @staticmethod
+    def _belge_hashi(veri: dict) -> str:
+        ham = json.dumps(
+            veri,
+            ensure_ascii=True,
+            sort_keys=True,
+            separators=(",", ":"),
+        ).encode("utf-8")
+
+        return hashlib.sha256(ham).hexdigest()
+
+    @property
+    def tum_dosyalar(self):
+        return self.KAYNAKLAR + self.TESTLER
+
+    def olustur(self) -> dict:
+        dosyalar = {}
+
+        for goreli in self.tum_dosyalar:
+            tam_yol = self.kok_dizin / goreli
+
+            if not tam_yol.is_file():
+                raise FileNotFoundError(
+                    f"Uzman degerlendirme dosyasi bulunamadi: {goreli}"
+                )
+
+            dosyalar[goreli] = {
+                "sha256": self._sha256(tam_yol),
+                "boyut": tam_yol.stat().st_size,
+            }
+
+        veri = {
+            "surum": self.SURUM,
+            "olusturma_zamani": datetime.now(
+                timezone.utc
+            ).isoformat(),
+            "kaynak_sayisi": len(self.KAYNAKLAR),
+            "test_dosyasi_sayisi": len(self.TESTLER),
+            "dosyalar": dosyalar,
+        }
+
+        return {
+            **veri,
+            "manifest_sha256": self._belge_hashi(veri),
+        }
+
+    def kaydet(self, cikti_yolu) -> dict:
+        cikti_yolu = Path(cikti_yolu)
+        cikti_yolu.parent.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
+
+        belge = self.olustur()
+
+        cikti_yolu.write_text(
+            json.dumps(
+                belge,
+                ensure_ascii=True,
+                sort_keys=True,
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+
+        return belge
+
+    def dogrula(self, manifest_yolu) -> bool:
+        try:
+            belge = json.loads(
+                Path(manifest_yolu).read_text(
+                    encoding="utf-8"
+                )
+            )
+        except (
+            FileNotFoundError,
+            UnicodeDecodeError,
+            json.JSONDecodeError,
+        ):
+            return False
+
+        alanlar = {
+            "surum",
+            "olusturma_zamani",
+            "kaynak_sayisi",
+            "test_dosyasi_sayisi",
+            "dosyalar",
+            "manifest_sha256",
+        }
+
+        if set(belge) != alanlar:
+            return False
+
+        if belge["surum"] != self.SURUM:
+            return False
+
+        if belge["kaynak_sayisi"] != len(self.KAYNAKLAR):
+            return False
+
+        if belge["test_dosyasi_sayisi"] != len(self.TESTLER):
+            return False
+
+        if set(belge["dosyalar"]) != set(self.tum_dosyalar):
+            return False
+
+        veri = {
+            anahtar: belge[anahtar]
+            for anahtar in (
+                "surum",
+                "olusturma_zamani",
+                "kaynak_sayisi",
+                "test_dosyasi_sayisi",
+                "dosyalar",
+            )
+        }
+
+        if (
+            belge["manifest_sha256"]
+            != self._belge_hashi(veri)
+        ):
+            return False
+
+        for goreli, kayit in belge["dosyalar"].items():
+            tam_yol = self.kok_dizin / goreli
+
+            if not tam_yol.is_file():
+                return False
+
+            if set(kayit) != {"sha256", "boyut"}:
+                return False
+
+            if kayit["boyut"] != tam_yol.stat().st_size:
+                return False
+
+            if kayit["sha256"] != self._sha256(tam_yol):
+                return False
+
+        return True

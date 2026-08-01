@@ -1,0 +1,32 @@
+{
+  "dogrulanan_kapsam": [
+    "birlesik_degerlendirme",
+    "goruntu_materyal_baglantisi",
+    "guven_celiski_degerlendirmesi",
+    "uzman_konsensusu",
+    "uzman_aile_erisimi",
+    "uzman_oneri_yetkisi",
+    "uzman_karar_yetkisi_engeli",
+    "bilge_kaan_onay_zinciri",
+    "uzman_egitim_deneyim_kaydi",
+    "uzman_bilgi_aktarimi",
+    "uzman_emeklilik_yasam_dongusu",
+    "manifest_butunluk_dogrulamasi"
+  ],
+  "durum": "DOGRULANDI",
+  "olusturma_zamani": "2026-08-01T23:05:13.104321+00:00",
+  "rapor_surumu": "1.0",
+  "test_sonucu": {
+    "basarili": 680,
+    "basarisiz": 0,
+    "pytest_ciktisi": "........................................................................ [ 10%]\n........................................................................ [ 21%]\n........................................................................ [ 31%]\n........................................................................ [ 42%]\n........................................................................ [ 52%]\n........................................................................ [ 63%]\n........................................................................ [ 74%]\n........................................................................ [ 84%]\n........................................................................ [ 95%]\n................................                                         [100%]\n680 passed in 16.77s",
+    "toplam": 680
+  },
+  "uzman_degerlendirme_manifesti": {
+    "dosya": "artifacts/uzman_degerlendirme/SYK_UZMAN_DEGERLENDIRME_MANIFESTI.json",
+    "dosya_sha256": "99569e8543cdc4ba6c19db88ddc2d689a15176df59bb67d0739ebf1caf494680",
+    "kaynak_sayisi": 7,
+    "manifest_sha256": "5ba97449e8bfe16a17c477445a543ba574a9087ee0195fc7cb84c5ebc7bf9729",
+    "test_dosyasi_sayisi": 6
+  }
+}
