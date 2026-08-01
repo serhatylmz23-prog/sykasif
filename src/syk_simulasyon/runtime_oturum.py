@@ -280,15 +280,37 @@ class RuntimeOturumYoneticisi:
                 1,
             )
 
+            if (
+                not kodlu_govde
+                or not kodlu_imza
+                or "." in kodlu_imza
+            ):
+                return None
+
+            cozulmus_govde = _base64url_coz(
+                kodlu_govde
+            )
+            gelen_imza = _base64url_coz(
+                kodlu_imza
+            )
+
+            if (
+                _base64url_kodla(cozulmus_govde)
+                != kodlu_govde
+            ):
+                return None
+
+            if (
+                _base64url_kodla(gelen_imza)
+                != kodlu_imza
+            ):
+                return None
+
             beklenen_imza = hmac.new(
                 self.oturum_anahtari,
                 kodlu_govde.encode("ascii"),
                 hashlib.sha256,
             ).digest()
-
-            gelen_imza = _base64url_coz(
-                kodlu_imza
-            )
 
             if not hmac.compare_digest(
                 beklenen_imza,
@@ -297,9 +319,7 @@ class RuntimeOturumYoneticisi:
                 return None
 
             govde = json.loads(
-                _base64url_coz(
-                    kodlu_govde
-                ).decode("utf-8")
+                cozulmus_govde.decode("utf-8")
             )
 
             kullanici = str(
