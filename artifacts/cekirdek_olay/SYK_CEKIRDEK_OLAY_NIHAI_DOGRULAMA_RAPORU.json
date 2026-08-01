@@ -1,0 +1,32 @@
+{
+  "cekirdek_olay_manifesti": {
+    "dosya": "artifacts/cekirdek_olay/SYK_CEKIRDEK_OLAY_MANIFESTI.json",
+    "dosya_sha256": "a6c5f89203769bf0963b1063529fa6ff8e65f5b95b0ba5f0dc815fc9d324ed0b",
+    "kaynak_sayisi": 6,
+    "manifest_sha256": "451fbe28910e6a8377a104baebc0257a8b0388ffa491aa5ea1f1a965ab173fd7",
+    "test_dosyasi_sayisi": 6
+  },
+  "dogrulanan_kapsam": [
+    "cekirdek_durum_gecisleri",
+    "gecersiz_durum_gecisi_engeli",
+    "tam_cekirdek_akisi",
+    "olay_koprusu_baslatma",
+    "core_katmanlarini_baglama",
+    "olay_tamamlama",
+    "tek_olay_akisi",
+    "tek_olay_core_motoru",
+    "uc_uca_core_dogrulama",
+    "manifest_butunluk_dogrulamasi",
+    "degistirilmis_kaynak_reddi",
+    "eksik_dosya_reddi"
+  ],
+  "durum": "DOGRULANDI",
+  "olusturma_zamani": "2026-08-01T23:39:34.778712+00:00",
+  "rapor_surumu": "1.0",
+  "test_sonucu": {
+    "basarili": 692,
+    "basarisiz": 0,
+    "pytest_ciktisi": "........................................................................ [ 10%]\n........................................................................ [ 20%]\n........................................................................ [ 31%]\n........................................................................ [ 41%]\n........................................................................ [ 52%]\n........................................................................ [ 62%]\n........................................................................ [ 72%]\n........................................................................ [ 83%]\n........................................................................ [ 93%]\n............................................                             [100%]\n692 passed in 16.87s",
+    "toplam": 692
+  }
+}

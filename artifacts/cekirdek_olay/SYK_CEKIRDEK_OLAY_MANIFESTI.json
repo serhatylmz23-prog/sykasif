@@ -1,0 +1,57 @@
+{
+  "dosyalar": {
+    "src/syk_core/entegrasyon/cekirdek_durum_makinesi.py": {
+      "boyut": 1865,
+      "sha256": "223c5c5aaeb409e364cf6fa70380a8ba4a21be8f279eae7034498eb31345a114"
+    },
+    "src/syk_core/entegrasyon/cekirdek_orchestrator.py": {
+      "boyut": 2253,
+      "sha256": "797d2135128c7c5b0e3f1fd8544636a1438b9297e9b361c7c834c8cb7894448b"
+    },
+    "src/syk_core/entegrasyon/core_olay_koprusu.py": {
+      "boyut": 1812,
+      "sha256": "f726dc1bee30661732d2e242fbd71a6811d1b87ae4297cdaa36127371bcbd5de"
+    },
+    "src/syk_core/entegrasyon/tek_olay_akis.py": {
+      "boyut": 1814,
+      "sha256": "3c8a9896101f00a464bc4319c9616182c257b761d07b4bd4456638091a7cfe90"
+    },
+    "src/syk_core/entegrasyon/tek_olay_core_motoru.py": {
+      "boyut": 1263,
+      "sha256": "5d487ac2e934426137697b854c31871cfe422cd4e75993c81fdad7249729c539"
+    },
+    "src/syk_core/entegrasyon/uc_uca_core_dogrulama.py": {
+      "boyut": 975,
+      "sha256": "78abc5538bdea7c3b4ae1923af1596575ca7c988f7e4942d571fc5f2717ba466"
+    },
+    "tests/test_cekirdek_durum_makinesi.py": {
+      "boyut": 802,
+      "sha256": "acfecb292add3bb5100f10e335695721a8c43362bb6639092329a6cedcd08453"
+    },
+    "tests/test_cekirdek_orchestrator.py": {
+      "boyut": 849,
+      "sha256": "3667979c38a36bf6717d6cb2acefcdfc5af5ec5d6ec15f2f5ba779bf4a151e5f"
+    },
+    "tests/test_core_olay_koprusu.py": {
+      "boyut": 1223,
+      "sha256": "832bdb71a805182190d3b8195c30a5865b1576cd061e65d6f2819d02d2e07cde"
+    },
+    "tests/test_tek_olay_akis.py": {
+      "boyut": 999,
+      "sha256": "21b2a3019acc41e695083d840ac3c7f452fd213f3efb1d86a797307869b48048"
+    },
+    "tests/test_tek_olay_core_motoru.py": {
+      "boyut": 1117,
+      "sha256": "b55b7d516fe6a439010430da15279196d8d3c5ab88f485c3ebb42bd6eff69b28"
+    },
+    "tests/test_uc_uca_core_dogrulama.py": {
+      "boyut": 1237,
+      "sha256": "9a04175c31c4813aed65f8706e58514396e85f6c53c76915d63e09cf74420fed"
+    }
+  },
+  "kaynak_sayisi": 6,
+  "manifest_sha256": "451fbe28910e6a8377a104baebc0257a8b0388ffa491aa5ea1f1a965ab173fd7",
+  "olusturma_zamani": "2026-08-01T23:37:43.348520+00:00",
+  "surum": "1.0",
+  "test_dosyasi_sayisi": 6
+}
