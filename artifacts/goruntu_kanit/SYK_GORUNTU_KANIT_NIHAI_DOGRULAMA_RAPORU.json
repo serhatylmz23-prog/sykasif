@@ -1,0 +1,31 @@
+{
+  "dogrulanan_kapsam": [
+    "canli_akis_baslatma",
+    "anlik_kare_kaydi",
+    "supheli_alan_aktarimi",
+    "canli_akis_durdurma",
+    "goruntu_kanit_kaydi",
+    "manipulasyon_suphesi",
+    "goruntu_kanit_baglantisi",
+    "goruntu_uzmani_kaydi",
+    "supheli_bolge_isaretleme",
+    "konumsuz_goruntu_analiz_talebi",
+    "manifest_butunluk_dogrulamasi"
+  ],
+  "durum": "DOGRULANDI",
+  "goruntu_kanit_manifesti": {
+    "dosya": "artifacts/goruntu_kanit/SYK_GORUNTU_KANIT_MANIFESTI.json",
+    "dosya_sha256": "3569fe572c2f823e761e37908c59a022e227a1a02246e504eda161b9962fc14e",
+    "kaynak_sayisi": 3,
+    "manifest_sha256": "ab79db8ef60457c7be984aafa445b5c8d7a36ebbadbc1a8b32b5626f1d1f954c",
+    "test_dosyasi_sayisi": 3
+  },
+  "olusturma_zamani": "2026-08-01T23:21:09.645406+00:00",
+  "rapor_surumu": "1.0",
+  "test_sonucu": {
+    "basarili": 688,
+    "basarisiz": 0,
+    "pytest_ciktisi": "........................................................................ [ 10%]\n........................................................................ [ 20%]\n........................................................................ [ 31%]\n........................................................................ [ 41%]\n........................................................................ [ 52%]\n........................................................................ [ 62%]\n........................................................................ [ 73%]\n........................................................................ [ 83%]\n........................................................................ [ 94%]\n........................................                                 [100%]\n688 passed in 16.83s",
+    "toplam": 688
+  }
+}

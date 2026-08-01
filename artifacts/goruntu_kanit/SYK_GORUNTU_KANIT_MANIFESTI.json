@@ -1,0 +1,33 @@
+{
+  "dosyalar": {
+    "src/syk_core/goruntu/canli_analiz_paneli.py": {
+      "boyut": 2076,
+      "sha256": "252a678492dbcdbf3c6f590547e87d697bf945033350e441b13ca05c138cc271"
+    },
+    "src/syk_core/goruntu/goruntu_kanit_baglanti.py": {
+      "boyut": 2095,
+      "sha256": "935c89fc1af47da3cbe6a5e896c348cc224bb247dae5cc4e67768c3fff87bf43"
+    },
+    "src/syk_core/goruntu/goruntu_uzmani_modeli.py": {
+      "boyut": 1891,
+      "sha256": "e70ea90352928577f59c44f4fba76c678aee83caa9d694634e1a48b8b61960a6"
+    },
+    "tests/test_canli_analiz_paneli.py": {
+      "boyut": 1335,
+      "sha256": "9bd976bf90e3bd013abe5f0130a30e38171b97722b8f8e2d565294192bdfcfcc"
+    },
+    "tests/test_goruntu_kanit_baglanti.py": {
+      "boyut": 1291,
+      "sha256": "c2a4ebc772759448f367290e81e4eb4c6cd454f6a7516d26757ce77bb691b449"
+    },
+    "tests/test_goruntu_uzmani_modeli.py": {
+      "boyut": 1064,
+      "sha256": "0b7c7e66d7c9b7981b6b4192043479c1f8bd4f25d259304b0396fe93410f7c8f"
+    }
+  },
+  "kaynak_sayisi": 3,
+  "manifest_sha256": "ab79db8ef60457c7be984aafa445b5c8d7a36ebbadbc1a8b32b5626f1d1f954c",
+  "olusturma_zamani": "2026-08-01T23:19:14.186782+00:00",
+  "surum": "1.0",
+  "test_dosyasi_sayisi": 3
+}
