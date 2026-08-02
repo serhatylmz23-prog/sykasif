@@ -6,6 +6,7 @@ from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 from pydantic import BaseModel
 
 from .module_registry import enabled_modules
+from .scientific_adapter import ScientificAdapterRegistry
 from .scientific_runtime import ScientificRuntime
 from .ui_runtime_state import UIRuntimeState
 
@@ -17,6 +18,9 @@ router = APIRouter(
 
 runtime_state = UIRuntimeState()
 scientific_runtime = ScientificRuntime()
+scientific_adapters = ScientificAdapterRegistry(
+    scientific_runtime
+)
 
 
 @router.get("/runtime-state")
@@ -125,3 +129,56 @@ async def scientific_module_live(
 
     except WebSocketDisconnect:
         return
+
+class ScientificAdapterIngestRequest(BaseModel):
+    live_value: float | int | str
+    confidence: float = 50.0
+    status: str = "preview"
+    source: str | None = None
+    metadata: dict = {}
+
+
+@router.get("/scientific-adapters")
+def get_scientific_adapters() -> list[dict]:
+    return scientific_adapters.inventory()
+
+
+@router.post(
+    "/scientific-adapters/"
+    "{adapter_id}/modules/{module_id}/ingest"
+)
+def ingest_scientific_adapter_data(
+    adapter_id: str,
+    module_id: str,
+    request: ScientificAdapterIngestRequest,
+) -> dict:
+    try:
+        payload = request.model_dump()
+
+        if payload["source"] is None:
+            payload["source"] = (
+                f"{adapter_id}_adapter"
+            )
+
+        return scientific_adapters.ingest(
+            adapter_id,
+            module_id,
+            payload,
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Adapter veya modül bulunamadı: "
+            f"{error.args[0]}",
+        ) from error
+
+    except ValueError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=422,
+            detail=str(error),
+        ) from error
