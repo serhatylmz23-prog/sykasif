@@ -9,15 +9,17 @@ AUDIO_ROOT = Path(__file__).resolve().parent / "static" / "audio"
 class AudioProfile:
     id: str
     filename: str
+    category: str
+    required: bool = True
 
 
 PROFILES = {
-    "system": AudioProfile("system", "system.wav"),
-    "notification": AudioProfile("notification", "notification.wav"),
-    "analysis": AudioProfile("analysis", "analysis.wav"),
-    "evidence": AudioProfile("evidence", "evidence.wav"),
-    "finance": AudioProfile("finance", "finance.wav"),
-    "jarmin": AudioProfile("jarmin", "jarmin.wav"),
+    "system": AudioProfile("system", "system.wav", "system"),
+    "notification": AudioProfile("notification", "notification.wav", "notification"),
+    "analysis": AudioProfile("analysis", "analysis.wav", "analysis"),
+    "evidence": AudioProfile("evidence", "evidence.wav", "evidence"),
+    "finance": AudioProfile("finance", "finance.wav", "finance"),
+    "jarmin": AudioProfile("jarmin", "jarmin.wav", "voice"),
 }
 
 
@@ -38,3 +40,13 @@ class AudioManager:
 
     def available(self) -> list[AudioProfile]:
         return list(PROFILES.values())
+
+    def missing_files(self) -> list[Path]:
+        return [
+            AUDIO_ROOT / profile.filename
+            for profile in PROFILES.values()
+            if profile.required and not (AUDIO_ROOT / profile.filename).is_file()
+        ]
+
+    def is_ready(self) -> bool:
+        return not self.missing_files()
