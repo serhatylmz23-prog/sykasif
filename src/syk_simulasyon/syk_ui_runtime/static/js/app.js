@@ -67,6 +67,11 @@ function renderModules(modules, activeId) {
 
             button.classList.add("active");
 
+            window.SyKModuleViews?.render(
+                module.id,
+                module.title,
+            );
+
             appendEvent(`${module.title} modülü açıldı`);
             playAudio("notification.wav");
         });
@@ -128,6 +133,13 @@ function applySnapshot(snapshot) {
         `%${frameState.confidence}`;
 
     renderModules(snapshot.modules, active.id);
+
+    if (!state.selectedModuleId) {
+        window.SyKModuleViews?.render(
+            active.id,
+            active.title,
+        );
+    }
 }
 
 async function loadRuntime() {
