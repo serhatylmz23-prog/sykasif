@@ -221,6 +221,11 @@
             return;
         }
 
+        if (moduleId === "measurement") {
+            window.SyKDeviceHub?.mount(container);
+            return;
+        }
+
         if (window.SyKScientificApiViews?.has(moduleId)) {
             window.SyKScientificApiViews.mount(
                 moduleId,

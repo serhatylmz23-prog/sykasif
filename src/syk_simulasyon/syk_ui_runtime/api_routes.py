@@ -16,6 +16,7 @@ from .scientific_transport import (
     SerialScientificTransport,
     TcpScientificTransport,
 )
+from .scientific_device_hub import ScientificDeviceHub
 from .scientific_device_manager import ScientificDeviceManager
 from .scientific_runtime import ScientificRuntime
 from .ui_runtime_state import UIRuntimeState
@@ -41,6 +42,10 @@ scientific_device_manager = ScientificDeviceManager(
     serial_transport=serial_transport,
     tcp_transport=tcp_transport,
     ble_transport=ble_transport,
+)
+
+scientific_device_hub = ScientificDeviceHub(
+    scientific_device_manager
 )
 
 
@@ -377,3 +382,131 @@ async def discover_all_scientific_devices(
     return await scientific_device_manager.discover_all(
         ble_timeout=request.timeout
     )
+
+class DeviceHubRegisterRequest(BaseModel):
+    device_id: str
+    title: str
+    transport: str
+    address: str
+    module_id: str | None = None
+    metadata: dict = {}
+
+
+class DeviceHubConnectionRequest(BaseModel):
+    connected: bool
+
+
+class DeviceHubTelemetryRequest(BaseModel):
+    battery: float | None = None
+    signal_quality: float | None = None
+    firmware: str | None = None
+    module_id: str | None = None
+
+
+@router.get("/device-hub")
+def get_device_hub() -> dict:
+    return {
+        "devices": scientific_device_hub.inventory(),
+        "transports": (
+            scientific_device_hub.transports()
+        ),
+    }
+
+
+@router.post("/device-hub/refresh")
+async def refresh_device_hub(
+    request: BleDiscoveryRequest,
+) -> dict:
+    return await scientific_device_hub.refresh(
+        ble_timeout=request.timeout
+    )
+
+
+@router.post("/device-hub/register")
+def register_device_hub_device(
+    request: DeviceHubRegisterRequest,
+) -> dict:
+    try:
+        return scientific_device_hub.register_manual(
+            device_id=request.device_id,
+            title=request.title,
+            transport=request.transport,
+            address=request.address,
+            module_id=request.module_id,
+            metadata=request.metadata,
+        )
+
+    except ValueError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=422,
+            detail=str(error),
+        ) from error
+
+
+@router.get("/device-hub/{device_id}")
+def get_device_hub_device(
+    device_id: str,
+) -> dict:
+    try:
+        return scientific_device_hub.get(
+            device_id
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Cihaz bulunamadı: {device_id}",
+        ) from error
+
+
+@router.patch(
+    "/device-hub/{device_id}/connection"
+)
+def update_device_hub_connection(
+    device_id: str,
+    request: DeviceHubConnectionRequest,
+) -> dict:
+    try:
+        return scientific_device_hub.set_connection(
+            device_id,
+            connected=request.connected,
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Cihaz bulunamadı: {device_id}",
+        ) from error
+
+
+@router.patch(
+    "/device-hub/{device_id}/telemetry"
+)
+def update_device_hub_telemetry(
+    device_id: str,
+    request: DeviceHubTelemetryRequest,
+) -> dict:
+    try:
+        return scientific_device_hub.update_telemetry(
+            device_id,
+            battery=request.battery,
+            signal_quality=(
+                request.signal_quality
+            ),
+            firmware=request.firmware,
+            module_id=request.module_id,
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Cihaz bulunamadı: {device_id}",
+        ) from error
