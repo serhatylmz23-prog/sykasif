@@ -6,6 +6,7 @@ from .image_manager import ImageAsset, ImageManager
 from .module_registry import Module, enabled_modules
 from .runtime_manager import RuntimeManager
 from .static_routes import mount_static
+from .syframe_manager import SyFrameManager, SyFrameState
 from .theme_manager import Theme, ThemeManager
 from .typography import Font, TypographyManager
 
@@ -23,6 +24,8 @@ __all__ = [
     "ImageManager",
     "Module",
     "RuntimeManager",
+    "SyFrameManager",
+    "SyFrameState",
     "Theme",
     "ThemeManager",
     "TypographyManager",
