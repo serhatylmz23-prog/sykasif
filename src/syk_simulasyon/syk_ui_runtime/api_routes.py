@@ -5,6 +5,7 @@ import asyncio
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 
 from .module_registry import enabled_modules
+from .scientific_runtime import ScientificRuntime
 from .ui_runtime_state import UIRuntimeState
 
 
@@ -14,6 +15,7 @@ router = APIRouter(
 )
 
 runtime_state = UIRuntimeState()
+scientific_runtime = ScientificRuntime()
 
 
 @router.get("/runtime-state")
@@ -44,3 +46,20 @@ async def live_runtime(websocket: WebSocket) -> None:
 
     except WebSocketDisconnect:
         return
+
+@router.get("/scientific-modules")
+def get_scientific_modules() -> list[dict]:
+    return scientific_runtime.inventory()
+
+
+@router.get("/scientific-modules/{module_id}")
+def get_scientific_module(module_id: str) -> dict:
+    try:
+        return scientific_runtime.get(module_id)
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Unknown scientific module: {module_id}",
+        ) from error
