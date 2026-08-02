@@ -221,6 +221,12 @@
             return;
         }
 
+        if (window.SyKScientificViews?.has(moduleId)) {
+            container.innerHTML =
+                window.SyKScientificViews.render(moduleId);
+            return;
+        }
+
         container.innerHTML = genericView(title);
     }
 
