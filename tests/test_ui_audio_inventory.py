@@ -1,18 +1,22 @@
-﻿from syk_ui import AudioManager
+﻿import wave
+
+from syk_ui import AudioManager
 
 
-def test_ui_audio_inventory_reports_missing_real_files():
+def test_ui_audio_inventory_is_ready():
     manager = AudioManager()
 
-    missing = manager.missing_files()
+    assert manager.missing_files() == []
+    assert manager.is_ready()
 
-    assert len(missing) == 6
-    assert not manager.is_ready()
-    assert {path.name for path in missing} == {
-        "system.wav",
-        "notification.wav",
-        "analysis.wav",
-        "evidence.wav",
-        "finance.wav",
-        "jarmin.wav",
-    }
+    for profile in manager.available():
+        path = manager.select(profile.id)
+
+        assert path.is_file()
+        assert path.stat().st_size > 44
+
+        with wave.open(str(path), "rb") as wav_file:
+            assert wav_file.getnchannels() == 1
+            assert wav_file.getsampwidth() == 2
+            assert wav_file.getframerate() == 44_100
+            assert wav_file.getnframes() > 0
