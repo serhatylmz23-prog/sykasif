@@ -5,6 +5,7 @@ from threading import RLock
 from typing import Any, Protocol
 
 from .scientific_runtime import ScientificRuntime
+from .scientific_transport import ScientificTransportPacket
 
 
 @dataclass(frozen=True)
@@ -181,3 +182,21 @@ class ScientificAdapterRegistry:
         }
 
         return updated
+
+def ingest_transport_packet(
+    registry: ScientificAdapterRegistry,
+    packet: ScientificTransportPacket,
+) -> dict[str, Any]:
+    payload = {
+        "live_value": packet.live_value,
+        "confidence": packet.confidence,
+        "status": packet.status,
+        "source": packet.source,
+        "metadata": packet.metadata,
+    }
+
+    return registry.ingest(
+        "simulated",
+        packet.module_id,
+        payload,
+    )

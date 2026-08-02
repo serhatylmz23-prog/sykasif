@@ -6,7 +6,14 @@ from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 from pydantic import BaseModel
 
 from .module_registry import enabled_modules
-from .scientific_adapter import ScientificAdapterRegistry
+from .scientific_adapter import (
+    ScientificAdapterRegistry,
+    ingest_transport_packet,
+)
+from .scientific_transport import (
+    ScientificTransportError,
+    SerialScientificTransport,
+)
 from .scientific_runtime import ScientificRuntime
 from .ui_runtime_state import UIRuntimeState
 
@@ -18,6 +25,8 @@ router = APIRouter(
 
 runtime_state = UIRuntimeState()
 scientific_runtime = ScientificRuntime()
+serial_transport = SerialScientificTransport()
+
 scientific_adapters = ScientificAdapterRegistry(
     scientific_runtime
 )
@@ -176,6 +185,61 @@ def ingest_scientific_adapter_data(
         ) from error
 
     except ValueError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=422,
+            detail=str(error),
+        ) from error
+
+class SerialReadRequest(BaseModel):
+    port: str
+    baud_rate: int = 115200
+    timeout: float = 2.0
+
+
+@router.get("/scientific-devices/serial")
+def discover_serial_devices() -> list[dict]:
+    try:
+        return serial_transport.inventory()
+
+    except ScientificTransportError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=503,
+            detail=str(error),
+        ) from error
+
+
+@router.post("/scientific-devices/serial/read")
+def read_serial_device(
+    request: SerialReadRequest,
+) -> dict:
+    try:
+        packet = serial_transport.read_packet(
+            port=request.port,
+            baud_rate=request.baud_rate,
+            timeout=request.timeout,
+        )
+
+        return ingest_transport_packet(
+            scientific_adapters,
+            packet,
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                "Seri cihaz bilinmeyen bilimsel "
+                f"modül gönderdi: {error.args[0]}"
+            ),
+        ) from error
+
+    except ScientificTransportError as error:
         from fastapi import HTTPException
 
         raise HTTPException(
