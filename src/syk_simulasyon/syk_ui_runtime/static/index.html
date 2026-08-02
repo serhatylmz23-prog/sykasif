@@ -9,24 +9,63 @@
 <body>
     <main id="syk-app" class="syk-app">
         <header class="syk-header">
-            <section>
+            <section class="brand-area">
                 <div id="brand-title" class="syk-brand">SyKaşif</div>
                 <div id="system-state" class="syk-system-state">
                     Sistem hazırlanıyor
                 </div>
             </section>
 
-            <button id="sound-toggle" type="button">
-                Ses
-            </button>
+            <section class="top-status">
+                <div class="status-item">
+                    <span>Bağlantı</span>
+                    <strong id="connection-state">Bekleniyor</strong>
+                </div>
+
+                <div class="status-item">
+                    <span>Tema</span>
+                    <strong id="theme-state">—</strong>
+                </div>
+
+                <div class="status-item">
+                    <span>Hava</span>
+                    <strong id="weather-state">—</strong>
+                </div>
+
+                <button id="sound-toggle" type="button">
+                    Ses Kapalı
+                </button>
+            </section>
         </header>
 
         <section class="syk-layout">
-            <nav id="module-list" class="syk-modules"></nav>
+            <nav class="left-panel">
+                <div class="panel-title">MODÜLLER</div>
+                <div id="module-list" class="syk-modules"></div>
+            </nav>
 
             <section class="syk-workspace">
-                <div id="active-module" class="syk-active-module">
-                    Ana Terminal
+                <div class="workspace-header">
+                    <div id="active-module" class="syk-active-module">
+                        Ana Terminal
+                    </div>
+
+                    <div id="runtime-clock" class="runtime-clock">--:--:--</div>
+                </div>
+
+                <div id="map-stage" class="map-stage">
+                    <div class="grid-lines"></div>
+
+                    <div class="map-marker marker-one"></div>
+                    <div class="map-marker marker-two"></div>
+                    <div class="map-marker marker-three"></div>
+
+                    <div class="map-center">
+                        <span class="pulse-ring ring-one"></span>
+                        <span class="pulse-ring ring-two"></span>
+                        <span class="pulse-ring ring-three"></span>
+                        <span class="map-core"></span>
+                    </div>
                 </div>
 
                 <div id="syframe" class="syframe" data-state="analyzing">
@@ -45,7 +84,63 @@
                         </span>
                     </div>
                 </div>
+
+                <footer class="evidence-strip">
+                    <article class="evidence-card">
+                        <span>GÖRÜNTÜ</span>
+                        <strong>Hazır</strong>
+                    </article>
+
+                    <article class="evidence-card">
+                        <span>SES</span>
+                        <strong id="audio-state">Hazır</strong>
+                    </article>
+
+                    <article class="evidence-card">
+                        <span>HARİTA</span>
+                        <strong>Aktif</strong>
+                    </article>
+
+                    <article class="evidence-card">
+                        <span>KANIT</span>
+                        <strong>Bekleniyor</strong>
+                    </article>
+                </footer>
             </section>
+
+            <aside class="right-panel">
+                <div class="panel-title">CANLI DURUM</div>
+
+                <section class="detail-card">
+                    <span>Aktif Modül</span>
+                    <strong id="detail-module">Ana Terminal</strong>
+                </section>
+
+                <section class="detail-card">
+                    <span>SyFrame Durumu</span>
+                    <strong id="detail-frame">Analiz Ediliyor</strong>
+                </section>
+
+                <section class="detail-card">
+                    <span>Güven</span>
+                    <strong id="detail-confidence">%0</strong>
+                </section>
+
+                <section class="detail-card">
+                    <span>Mevsim</span>
+                    <strong id="detail-season">—</strong>
+                </section>
+
+                <section class="detail-card">
+                    <span>Rüzgâr</span>
+                    <strong id="detail-wind">0</strong>
+                </section>
+
+                <section class="event-panel">
+                    <div class="panel-title">OLAY AKIŞI</div>
+                    <div id="event-stream" class="event-stream"></div>
+                </section>
+            </aside>
         </section>
 
         <audio id="runtime-audio" preload="auto"></audio>
