@@ -1,30 +1,23 @@
-﻿"""
-SPR-003-UI-0004
-SyKaşif Runtime Manager
-"""
-
-from .module_registry import MODULES
+﻿from .module_registry import MODULES, Module
 
 
 class RuntimeManager:
-
     def __init__(self):
-        self._modules = {m.id: m for m in MODULES}
+        self._modules = {module.id: module for module in MODULES}
         self._active = "dashboard"
 
     @property
-    def active(self):
+    def active(self) -> Module:
         return self._modules[self._active]
 
-    def activate(self, module_id: str):
-
+    def activate(self, module_id: str) -> Module:
         if module_id not in self._modules:
             raise KeyError(f"Module not found: {module_id}")
 
         self._active = module_id
         return self.active
 
-    def modules(self):
+    def modules(self) -> list[Module]:
         return list(self._modules.values())
 
     def exists(self, module_id: str) -> bool:

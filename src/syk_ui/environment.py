@@ -1,14 +1,8 @@
-﻿"""
-SPR-003-UI-0006
-SyKaşif Environment Manager
-"""
-
-from dataclasses import dataclass
+﻿from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
 class EnvironmentState:
-
     season: str = "summer"
     weather: str = "clear"
     daytime: str = "day"
@@ -16,14 +10,11 @@ class EnvironmentState:
 
 
 class EnvironmentManager:
-
     def __init__(self):
-
         self._state = EnvironmentState()
 
     @property
-    def current(self):
-
+    def current(self) -> EnvironmentState:
         return self._state
 
     def update(
@@ -33,8 +24,7 @@ class EnvironmentManager:
         weather=None,
         daytime=None,
         wind=None,
-    ):
-
+    ) -> EnvironmentState:
         self._state = EnvironmentState(
             season=season or self._state.season,
             weather=weather or self._state.weather,
