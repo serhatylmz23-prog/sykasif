@@ -1,0 +1,46 @@
+{
+  "dal": "spr-002-dsp-0004",
+  "dogrulama_siniri": {
+    "aciklama": "Bu rapor dijital kod, test ve artefakt dogrulamasini kapsar. Gercek donanim ve saha sonuclari prototip asamasinda dogrulanacaktir.",
+    "dijital_dogrulama": true,
+    "saha_dogrulamasi": false
+  },
+  "dogrulanan_kapsam": [
+    "cekirdek_muhur_adayi",
+    "zincir_saglik_denetimi",
+    "zincir_risk_tespiti",
+    "muhur_oncesi_denetim",
+    "teslim_hazir_kontrol",
+    "teslim_inceleme",
+    "nihai_muhur_adayi_ozeti",
+    "manifest_butunluk_dogrulamasi",
+    "degistirilmis_manifest_reddi",
+    "degistirilmis_kaynak_reddi",
+    "eksik_dosya_reddi",
+    "playwright_e2e_kapanis_kararliligi"
+  ],
+  "durum": "DOGRULANDI",
+  "e2e_kapanis_duzeltmesi": {
+    "commit": "71f01a3ce554286c9ca786cec1d6abbb894e0a91",
+    "durum": "DOGRULANDI",
+    "tam_test_kararlilik": "3/3 PASS",
+    "tekil_kararlilik": "5/5 PASS"
+  },
+  "head_commit": "71f01a3ce554286c9ca786cec1d6abbb894e0a91",
+  "head_commit_mesaji": "fix: playwright e2e sunucu kapanisini kararli hale getir",
+  "muhur_teslim_oncesi_manifesti": {
+    "dosya": "artifacts/muhur_teslim_oncesi/SYK_MUHUR_TESLIM_ONCESI_MANIFESTI.json",
+    "dosya_sha256": "9a4d599ee9eb7fb27d6db392f3e66422c4c057d3b8f2aef8c26044c661f6e05b",
+    "kaynak_sayisi": 5,
+    "manifest_sha256": "9c2c08f2bf47be038b2c5ea2b8c5ce6f4ceeb270e425bfd983c2b296e048a7db",
+    "test_dosyasi_sayisi": 5
+  },
+  "olusturma_zamani": "2026-08-02T00:26:43.614984+00:00",
+  "rapor_surumu": "1.1",
+  "test_sonucu": {
+    "basarili": 700,
+    "basarisiz": 0,
+    "pytest_ciktisi": "........................................................................ [ 10%]\n........................................................................ [ 20%]\n........................................................................ [ 30%]\n........................................................................ [ 41%]\n........................................................................ [ 51%]\n........................................................................ [ 61%]\n........................................................................ [ 72%]\n........................................................................ [ 82%]\n........................................................................ [ 92%]\n....................................................                     [100%]\n700 passed in 17.34s",
+    "toplam": 700
+  }
+}

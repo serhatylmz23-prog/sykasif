@@ -1,0 +1,28 @@
+{
+  "dal": "spr-002-dsp-0004",
+  "dijital_test_durumu": "700/700 PASS",
+  "gecis_durumu": "PROTOTIP_ASAMASINA_HAZIR",
+  "kesinlik_kurali": "Dijital ortamda dogrulanmis kosullarda hedef en fazla yuzde 99.9 dogrulamadir. Saha sonucu olmadan gercek dunya kesinligi iddia edilmez.",
+  "olusturma_zamani": "2026-08-02T00:26:43.614984+00:00",
+  "proje": "SyKasif",
+  "prototip_ilk_hedefleri": [
+    "gercek_donanim_baglanti_dogrulamasi",
+    "garmin_9sv_ve_gt23_veri_alimi",
+    "ham_kayit_butunluk_kontrolu",
+    "bos_su_kolonu_referans_kaydi",
+    "sam_1_0_gercek_veri_uretimi",
+    "saha_ve_laboratuvar_kanit_eslestirmesi"
+  ],
+  "rapor_surumu": "1.0",
+  "referans_commit": "71f01a3ce554286c9ca786cec1d6abbb894e0a91",
+  "tamamlanan_zincirler": [
+    "karar_kayit_altyapisi",
+    "vbps_temel_zinciri",
+    "uzman_degerlendirme_ve_onay_zinciri",
+    "kanit_kaynak_ve_laboratuvar_zinciri",
+    "goruntu_analiz_ve_kanit_zinciri",
+    "cekirdek_olay_ve_orkestrasyon_zinciri",
+    "cekirdek_kanit_birlestirme_ve_sonuc_zinciri",
+    "e2e_terminal_kapanis_kararliligi"
+  ]
+}
