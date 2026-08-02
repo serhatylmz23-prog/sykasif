@@ -226,3 +226,150 @@ class SerialScientificTransport:
             asdict(device)
             for device in self.discover()
         ]
+
+class TcpBackend(Protocol):
+    def receive(
+        self,
+        host: str,
+        port: int,
+        timeout: float,
+    ) -> str:
+        ...
+
+
+class SocketTcpBackend:
+    def receive(
+        self,
+        host: str,
+        port: int,
+        timeout: float,
+    ) -> str:
+        import socket
+
+        try:
+            with socket.create_connection(
+                (host, port),
+                timeout=timeout,
+            ) as connection:
+                connection.settimeout(timeout)
+
+                chunks = bytearray()
+
+                while True:
+                    block = connection.recv(4096)
+
+                    if not block:
+                        break
+
+                    chunks.extend(block)
+
+                    if b"\n" in block:
+                        break
+
+        except OSError as error:
+            raise ScientificTransportError(
+                f"TCP cihazına bağlanılamadı: "
+                f"{host}:{port}"
+            ) from error
+
+        try:
+            return bytes(chunks).decode(
+                "utf-8",
+                errors="strict",
+            ).strip()
+
+        except UnicodeDecodeError as error:
+            raise ScientificTransportError(
+                "TCP cihaz verisi UTF-8 değil."
+            ) from error
+
+
+class TcpScientificTransport:
+    id = "tcp"
+    title = "TCP/IP Bilimsel Cihaz Taşıma"
+
+    def __init__(
+        self,
+        backend: TcpBackend | None = None,
+    ) -> None:
+        self._backend = backend or SocketTcpBackend()
+
+    def read_packet(
+        self,
+        *,
+        host: str,
+        port: int,
+        timeout: float = 3.0,
+    ) -> ScientificTransportPacket:
+        if not host.strip():
+            raise ScientificTransportError(
+                "TCP cihaz adresi boş olamaz."
+            )
+
+        if not 1 <= port <= 65535:
+            raise ScientificTransportError(
+                "TCP portu 1-65535 aralığında olmalıdır."
+            )
+
+        raw_line = self._backend.receive(
+            host=host,
+            port=port,
+            timeout=timeout,
+        )
+
+        if not raw_line:
+            raise ScientificTransportError(
+                "TCP cihazından boş veri geldi."
+            )
+
+        try:
+            payload = json.loads(raw_line)
+
+        except json.JSONDecodeError as error:
+            raise ScientificTransportError(
+                "TCP cihaz verisi geçerli JSON değil."
+            ) from error
+
+        required = {
+            "module_id",
+            "live_value",
+        }
+
+        missing = required - payload.keys()
+
+        if missing:
+            names = ", ".join(sorted(missing))
+
+            raise ScientificTransportError(
+                f"Eksik TCP veri alanları: {names}"
+            )
+
+        metadata = dict(
+            payload.get("metadata", {})
+        )
+
+        metadata.update(
+            {
+                "host": host,
+                "port": port,
+                "transport": self.id,
+            }
+        )
+
+        return ScientificTransportPacket(
+            module_id=str(payload["module_id"]),
+            live_value=payload["live_value"],
+            confidence=float(
+                payload.get("confidence", 50.0)
+            ),
+            status=str(
+                payload.get("status", "preview")
+            ),
+            source=str(
+                payload.get(
+                    "source",
+                    f"tcp:{host}:{port}",
+                )
+            ),
+            metadata=metadata,
+        )

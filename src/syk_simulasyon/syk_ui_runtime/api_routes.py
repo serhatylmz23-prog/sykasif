@@ -13,6 +13,7 @@ from .scientific_adapter import (
 from .scientific_transport import (
     ScientificTransportError,
     SerialScientificTransport,
+    TcpScientificTransport,
 )
 from .scientific_runtime import ScientificRuntime
 from .ui_runtime_state import UIRuntimeState
@@ -26,6 +27,7 @@ router = APIRouter(
 runtime_state = UIRuntimeState()
 scientific_runtime = ScientificRuntime()
 serial_transport = SerialScientificTransport()
+tcp_transport = TcpScientificTransport()
 
 scientific_adapters = ScientificAdapterRegistry(
     scientific_runtime
@@ -235,6 +237,47 @@ def read_serial_device(
             status_code=404,
             detail=(
                 "Seri cihaz bilinmeyen bilimsel "
+                f"modül gönderdi: {error.args[0]}"
+            ),
+        ) from error
+
+    except ScientificTransportError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=422,
+            detail=str(error),
+        ) from error
+
+class TcpReadRequest(BaseModel):
+    host: str
+    port: int
+    timeout: float = 3.0
+
+
+@router.post("/scientific-devices/tcp/read")
+def read_tcp_device(
+    request: TcpReadRequest,
+) -> dict:
+    try:
+        packet = tcp_transport.read_packet(
+            host=request.host,
+            port=request.port,
+            timeout=request.timeout,
+        )
+
+        return ingest_transport_packet(
+            scientific_adapters,
+            packet,
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                "TCP cihazı bilinmeyen bilimsel "
                 f"modül gönderdi: {error.args[0]}"
             ),
         ) from error
