@@ -110,9 +110,10 @@ def _canli_sunucu() -> Iterator[
         uygulama,
         host="127.0.0.1",
         port=baglanti_noktasi,
-        log_level="error",
-        access_log=False,
+        log_level="error",        access_log=False,
         lifespan="off",
+        timeout_keep_alive=1,
+        timeout_graceful_shutdown=2,
     )
 
     sunucu = uvicorn.Server(ayar)
@@ -181,8 +182,8 @@ def test_terminal_paneli_gercek_tarayıcıda_canli_guncellenir():
             tarayici = playwright.chromium.launch(
                 headless=True
             )
-
-            sayfa = tarayici.new_page()
+            baglam = tarayici.new_context()
+            sayfa = baglam.new_page()
 
             sayfa.on(
                 "pageerror",
@@ -383,4 +384,8 @@ def test_terminal_paneli_gercek_tarayıcıda_canli_guncellenir():
                 assert sayfa_hatalari == []
                 assert konsol_hatalari == []
             finally:
+                if not sayfa.is_closed():
+                    sayfa.close()
+
+                baglam.close()
                 tarayici.close()
