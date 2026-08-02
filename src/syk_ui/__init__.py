@@ -9,6 +9,7 @@ from .static_routes import mount_static
 from .syframe_manager import SyFrameManager, SyFrameState
 from .theme_manager import Theme, ThemeManager
 from .typography import Font, TypographyManager
+from .ui_runtime_state import UIRuntimeState
 
 __all__ = [
     "AudioManager",
@@ -29,6 +30,7 @@ __all__ = [
     "Theme",
     "ThemeManager",
     "TypographyManager",
+    "UIRuntimeState",
     "enabled_modules",
     "mount_static",
 ]
