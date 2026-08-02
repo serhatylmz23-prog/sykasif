@@ -1,5 +1,5 @@
 ﻿"""
-SPR-003-UI-0012
+SPR-003-UI-0013
 SyKaşif Static Routes
 """
 
@@ -19,7 +19,7 @@ def mount_static(app):
 
     app.mount(
         "/syk-ui",
-        StaticFiles(directory=STATIC),
+        StaticFiles(directory=str(STATIC)),
         name="syk-ui",
     )
 
