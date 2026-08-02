@@ -538,6 +538,55 @@ class RuntimeHesapDeposu:
             cihaz_anahtari,
         )
 
+    def cihazla_hesap_dogrula(
+        self,
+        *,
+        cihaz_kimligi: str,
+        cihaz_anahtari: bytes,
+    ) -> RuntimeHesabi | None:
+        with self._baglan() as db:
+            satir = db.execute(
+                """
+                SELECT
+                    h.hesap_kimligi,
+                    h.kullanici_adi,
+                    h.eposta,
+                    h.telefon,
+                    h.rol,
+                    h.hizli_giris_etkin,
+                    h.etkin,
+                    c.korumali_anahtar
+                FROM taninmis_cihazlar AS c
+                INNER JOIN hesaplar AS h
+                    ON h.hesap_kimligi = c.hesap_kimligi
+                WHERE c.cihaz_kimligi = ?
+                  AND c.etkin = 1
+                  AND h.etkin = 1
+                  AND h.hizli_giris_etkin = 1
+                """,
+                (cihaz_kimligi,),
+            ).fetchone()
+
+        if satir is None:
+            return None
+
+        try:
+            kayitli_anahtar = self._koruyucu.ac(
+                bytes(satir["korumali_anahtar"])
+            )
+        except Exception:
+            return None
+
+        if not secrets.compare_digest(
+            kayitli_anahtar,
+            cihaz_anahtari,
+        ):
+            return None
+
+        return self._satirdan_hesap(
+            satir
+        )
+
     def cihaz_iptal_et(
         self,
         cihaz_kimligi: str,

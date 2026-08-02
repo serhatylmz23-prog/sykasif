@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import asyncio
+import base64
+import binascii
 import os
 import secrets
 
@@ -47,6 +49,11 @@ from .runtime_xml import RuntimeXmlSaglayicisi
 from .runtime_yaml import RuntimeYamlSaglayicisi
 
 
+CIHAZ_KIMLIGI_CEREZI_ADI = "syk_taninmis_cihaz"
+CIHAZ_ANAHTARI_CEREZI_ADI = "syk_cihaz_anahtari"
+CIHAZ_CEREZI_SURESI_SANIYE = 30 * 24 * 60 * 60
+
+
 class RuntimeFastApiSunucusu:
 
     def __init__(
@@ -90,6 +97,110 @@ class RuntimeFastApiSunucusu:
                     OTURUM_CEREZI_ADI
                 )
             )
+
+        def _cihaz_anahtari_kodla(
+            anahtar: bytes,
+        ) -> str:
+            return (
+                base64.urlsafe_b64encode(
+                    anahtar
+                )
+                .decode("ascii")
+                .rstrip("=")
+            )
+
+        def _cihaz_anahtari_coz(
+            kodlu: str,
+        ) -> bytes | None:
+            temiz = kodlu.strip()
+
+            if not temiz:
+                return None
+
+            dolgu = "=" * (
+                (-len(temiz)) % 4
+            )
+
+            try:
+                anahtar = base64.b64decode(
+                    temiz + dolgu,
+                    altchars=b"-_",
+                    validate=True,
+                )
+            except (
+                ValueError,
+                binascii.Error,
+            ):
+                return None
+
+            if len(anahtar) != 32:
+                return None
+
+            return anahtar
+
+        def _oturum_cerezi_ayarla(
+            yanit: Response,
+            *,
+            belirtec: str,
+        ) -> None:
+            yonetici = self._oturum_yoneticisi
+
+            if yonetici is None:
+                raise RuntimeError(
+                    "Oturum yoneticisi hazir degil."
+                )
+
+            yanit.set_cookie(
+                key=OTURUM_CEREZI_ADI,
+                value=belirtec,
+                max_age=yonetici.oturum_suresi_saniye,
+                httponly=True,
+                secure=_guvenli_cerez_etkin_mi(),
+                samesite="strict",
+                path="/",
+            )
+
+        def _cihaz_cerezlerini_ayarla(
+            yanit: Response,
+            *,
+            cihaz_kimligi: str,
+            cihaz_anahtari: bytes,
+        ) -> None:
+            yanit.set_cookie(
+                key=CIHAZ_KIMLIGI_CEREZI_ADI,
+                value=cihaz_kimligi,
+                max_age=CIHAZ_CEREZI_SURESI_SANIYE,
+                httponly=True,
+                secure=_guvenli_cerez_etkin_mi(),
+                samesite="strict",
+                path="/",
+            )
+
+            yanit.set_cookie(
+                key=CIHAZ_ANAHTARI_CEREZI_ADI,
+                value=_cihaz_anahtari_kodla(
+                    cihaz_anahtari
+                ),
+                max_age=CIHAZ_CEREZI_SURESI_SANIYE,
+                httponly=True,
+                secure=_guvenli_cerez_etkin_mi(),
+                samesite="strict",
+                path="/",
+            )
+
+        def _cihaz_cerezlerini_sil(
+            yanit: Response,
+        ) -> None:
+            for ad in (
+                CIHAZ_KIMLIGI_CEREZI_ADI,
+                CIHAZ_ANAHTARI_CEREZI_ADI,
+            ):
+                yanit.delete_cookie(
+                    key=ad,
+                    path="/",
+                    httponly=True,
+                    samesite="strict",
+                )
 
         def _guvenli_cerez_etkin_mi() -> bool:
             return (
@@ -145,9 +256,17 @@ class RuntimeFastApiSunucusu:
                 form_kimligi = "giris-formu"
                 yol = "/runtime/oturum"
                 dugme = "Giri\u015f yap"
-                ek_alanlar = ""
+                ek_alanlar = """
+<label class="secenek" for="beni_tani">
+<input id="beni_tani" type="checkbox">
+<span>Bu cihaz\u0131 tan\u0131 ve h\u0131zl\u0131 giri\u015fi etkinle\u015ftir</span>
+</label>
+"""
                 parola_tamamlama = "current-password"
-                veri_ekleri = ""
+                veri_ekleri = """
+                beni_tani:
+                    document.getElementById("beni_tani").checked,
+"""
 
             return f"""<!doctype html>
 <html lang="tr">
@@ -197,6 +316,15 @@ button {{
 #mesaj {{
     min-height: 24px;
     color: #fca5a5;
+}}
+.secenek {{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}}
+.secenek input {{
+    width: auto;
+    padding: 0;
 }}
 </style>
 </head>
@@ -265,6 +393,52 @@ document.getElementById("{form_kimligi}").addEventListener(
                 )
 
             depo = self._hesap_deposu
+            yonetici = self._oturum_yoneticisi
+
+            if (
+                depo is not None
+                and yonetici is not None
+                and depo.hesap_var_mi()
+            ):
+                cihaz_kimligi = istek.cookies.get(
+                    CIHAZ_KIMLIGI_CEREZI_ADI,
+                    "",
+                ).strip()
+
+                cihaz_anahtari = _cihaz_anahtari_coz(
+                    istek.cookies.get(
+                        CIHAZ_ANAHTARI_CEREZI_ADI,
+                        "",
+                    )
+                )
+
+                if cihaz_kimligi and cihaz_anahtari:
+                    hesap = depo.cihazla_hesap_dogrula(
+                        cihaz_kimligi=cihaz_kimligi,
+                        cihaz_anahtari=cihaz_anahtari,
+                    )
+
+                    if hesap is not None:
+                        yanit = RedirectResponse(
+                            url="/terminal",
+                            status_code=303,
+                        )
+
+                        _oturum_cerezi_ayarla(
+                            yanit,
+                            belirtec=yonetici.oturum_uret(
+                                kullanici_adi=(
+                                    hesap.kullanici_adi
+                                ),
+                                hesap_kimligi=(
+                                    hesap.hesap_kimligi
+                                ),
+                                rol=hesap.rol,
+                            ),
+                        )
+
+                        return yanit
+
             ilk_kurulum = (
                 depo is not None
                 and not depo.hesap_var_mi()
@@ -429,6 +603,10 @@ document.getElementById("{form_kimligi}").addEventListener(
                 parola = str(
                     veri.get("parola", "")
                 )
+                beni_tani = (
+                    veri.get("beni_tani", False)
+                    is True
+                )
             except (
                 AttributeError,
                 TypeError,
@@ -492,14 +670,107 @@ document.getElementById("{form_kimligi}").addEventListener(
                 },
             )
 
-            yanit.set_cookie(
+            _oturum_cerezi_ayarla(
+                yanit,
+                belirtec=belirtec,
+            )
+
+            if (
+                hesap is not None
+                and depo is not None
+                and beni_tani
+            ):
+                depo.hizli_giris_ayarla(
+                    hesap.hesap_kimligi,
+                    True,
+                )
+
+                cihaz = depo.cihaz_tanit(
+                    hesap_kimligi=hesap.hesap_kimligi,
+                )
+
+                _cihaz_cerezlerini_ayarla(
+                    yanit,
+                    cihaz_kimligi=cihaz.cihaz_kimligi,
+                    cihaz_anahtari=cihaz.cihaz_anahtari,
+                )
+
+            return yanit
+
+        @uygulama.post("/runtime/cihaz-iptal")
+        def taninmis_cihazi_iptal_et(
+            istek: Request,
+        ) -> JSONResponse:
+            depo = self._hesap_deposu
+            yonetici = self._oturum_yoneticisi
+
+            if (
+                depo is None
+                or yonetici is None
+                or not oturum_gecerli_mi(istek)
+            ):
+                return JSONResponse(
+                    status_code=401,
+                    content={
+                        "durum": "yetkisiz"
+                    },
+                )
+
+            oturum_bilgisi = yonetici.oturum_bilgisi(
+                istek.cookies.get(
+                    OTURUM_CEREZI_ADI
+                )
+            )
+
+            cihaz_kimligi = istek.cookies.get(
+                CIHAZ_KIMLIGI_CEREZI_ADI,
+                "",
+            ).strip()
+
+            cihaz_anahtari = _cihaz_anahtari_coz(
+                istek.cookies.get(
+                    CIHAZ_ANAHTARI_CEREZI_ADI,
+                    "",
+                )
+            )
+
+            if (
+                oturum_bilgisi is not None
+                and cihaz_kimligi
+                and cihaz_anahtari
+            ):
+                hesap = depo.cihazla_hesap_dogrula(
+                    cihaz_kimligi=cihaz_kimligi,
+                    cihaz_anahtari=cihaz_anahtari,
+                )
+
+                if (
+                    hesap is not None
+                    and oturum_bilgisi.get(
+                        "hesap_kimligi"
+                    )
+                    == hesap.hesap_kimligi
+                ):
+                    depo.cihaz_iptal_et(
+                        cihaz_kimligi
+                    )
+
+            yanit = JSONResponse(
+                status_code=200,
+                content={
+                    "durum": "cihaz_iptal_edildi"
+                },
+            )
+
+            _cihaz_cerezlerini_sil(
+                yanit
+            )
+
+            yanit.delete_cookie(
                 key=OTURUM_CEREZI_ADI,
-                value=belirtec,
-                max_age=yonetici.oturum_suresi_saniye,
-                httponly=True,
-                secure=_guvenli_cerez_etkin_mi(),
-                samesite="strict",
                 path="/",
+                httponly=True,
+                samesite="strict",
             )
 
             return yanit

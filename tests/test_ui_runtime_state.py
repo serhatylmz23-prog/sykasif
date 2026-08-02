@@ -1,4 +1,4 @@
-﻿from syk_ui import UIRuntimeState
+from syk_simulasyon.syk_ui import UIRuntimeState
 
 
 def test_ui_runtime_state_snapshot():
@@ -26,7 +26,7 @@ def test_ui_runtime_state_snapshot():
     assert snapshot["theme"]["id"] == "night"
     assert snapshot["environment"]["weather"] == "snow"
     assert snapshot["audio"]["id"] == "analysis"
-    assert snapshot["brand"]["title"]["text"] == "SyOtağı"
+    assert snapshot["brand"]["title"]["text"] == "SyOta\u011f\u0131"
     assert snapshot["brand"]["visible"]
     assert snapshot["syframe"]["state"]["id"] == "verified"
     assert snapshot["syframe"]["mode"] == "evidence"

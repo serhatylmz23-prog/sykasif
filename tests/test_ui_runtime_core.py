@@ -1,9 +1,9 @@
-﻿from syk_ui.audio_manager import AudioManager
-from syk_ui.environment import EnvironmentManager
-from syk_ui.module_registry import enabled_modules
-from syk_ui.runtime_manager import RuntimeManager
-from syk_ui.theme_manager import ThemeManager
-from syk_ui.typography import TypographyManager
+from syk_simulasyon.syk_ui_runtime.audio_manager import AudioManager
+from syk_simulasyon.syk_ui_runtime.environment import EnvironmentManager
+from syk_simulasyon.syk_ui_runtime.module_registry import enabled_modules
+from syk_simulasyon.syk_ui_runtime.runtime_manager import RuntimeManager
+from syk_simulasyon.syk_ui_runtime.theme_manager import ThemeManager
+from syk_simulasyon.syk_ui_runtime.typography import TypographyManager
 
 
 def test_ui_runtime_core():

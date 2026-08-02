@@ -1,6 +1,6 @@
-﻿from pathlib import Path
+from pathlib import Path
 
-from syk_ui import AudioManager
+from syk_simulasyon.syk_ui import AudioManager
 
 
 def test_ui_audio_profiles_resolve_inside_static_audio():

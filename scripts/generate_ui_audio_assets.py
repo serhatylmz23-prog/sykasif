@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-AUDIO_ROOT = ROOT / "src" / "syk_ui" / "static" / "audio"
+AUDIO_ROOT = ROOT / "src" / "syk_simulasyon" / "syk_ui_runtime" / "static" / "audio"
 
 SAMPLE_RATE = 44_100
 AMPLITUDE = 0.28
@@ -65,3 +65,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

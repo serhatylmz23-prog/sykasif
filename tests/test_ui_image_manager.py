@@ -1,4 +1,4 @@
-﻿from syk_ui import ImageManager
+from syk_simulasyon.syk_ui import ImageManager
 
 
 def test_ui_image_manager_inventory():

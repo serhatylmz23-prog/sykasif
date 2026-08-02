@@ -1,6 +1,6 @@
-﻿import pytest
+import pytest
 
-from syk_ui import SyFrameManager
+from syk_simulasyon.syk_ui import SyFrameManager
 
 
 def test_ui_syframe_manager():

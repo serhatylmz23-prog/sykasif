@@ -1,6 +1,6 @@
-﻿import wave
+import wave
 
-from syk_ui import AudioManager
+from syk_simulasyon.syk_ui import AudioManager
 
 
 def test_ui_audio_inventory_is_ready():

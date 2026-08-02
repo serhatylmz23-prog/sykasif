@@ -1,4 +1,4 @@
-﻿from syk_ui import (
+from syk_simulasyon.syk_ui import (
     AudioManager,
     EnvironmentManager,
     IconManager,
