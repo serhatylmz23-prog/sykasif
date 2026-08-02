@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SyKaşif</title>
+    <link rel="stylesheet" href="/syk-ui/css/app.css">
+</head>
+<body>
+    <main id="syk-app" class="syk-app">
+        <header class="syk-header">
+            <section>
+                <div id="brand-title" class="syk-brand">SyKaşif</div>
+                <div id="system-state" class="syk-system-state">
+                    Sistem hazırlanıyor
+                </div>
+            </section>
+
+            <button id="sound-toggle" type="button">
+                Ses
+            </button>
+        </header>
+
+        <section class="syk-layout">
+            <nav id="module-list" class="syk-modules"></nav>
+
+            <section class="syk-workspace">
+                <div id="active-module" class="syk-active-module">
+                    Ana Terminal
+                </div>
+
+                <div id="syframe" class="syframe" data-state="analyzing">
+                    <span class="corner top-left"></span>
+                    <span class="corner top-right"></span>
+                    <span class="corner bottom-left"></span>
+                    <span class="corner bottom-right"></span>
+
+                    <div class="syframe-content">
+                        <strong id="syframe-title">
+                            Analiz Ediliyor
+                        </strong>
+
+                        <span id="syframe-confidence">
+                            Güven: %0
+                        </span>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <audio id="runtime-audio" preload="auto"></audio>
+    </main>
+
+    <script src="/syk-ui/js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+:root {
+    color-scheme: dark;
+    font-family: Arial, sans-serif;
+    background: #071018;
+    color: #edf4f7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at center, #163346 0%, #071018 58%);
+}
+
+button {
+    color: inherit;
+    background: #142a38;
+    border: 1px solid #4d748a;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.syk-app {
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.syk-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 18px 22px;
+    border: 1px solid #365b70;
+    border-radius: 16px;
+    background: rgba(4, 15, 23, 0.82);
+}
+
+.syk-brand {
+    font-size: clamp(30px, 5vw, 64px);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.syk-system-state {
+    margin-top: 6px;
+    color: #9fc1d2;
+}
+
+.syk-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.syk-modules {
+    display: grid;
+    align-content: start;
+    gap: 8px;
+    max-height: calc(100vh - 170px);
+    overflow: auto;
+    padding: 14px;
+    border: 1px solid #365b70;
+    border-radius: 16px;
+    background: rgba(4, 15, 23, 0.76);
+}
+
+.syk-module-button {
+    width: 100%;
+    text-align: left;
+}
+
+.syk-module-button.active {
+    border-color: #37dfff;
+    box-shadow: 0 0 16px rgba(55, 223, 255, 0.28);
+}
+
+.syk-workspace {
+    position: relative;
+    min-height: 620px;
+    overflow: hidden;
+    border: 1px solid #365b70;
+    border-radius: 16px;
+    background:
+        linear-gradient(rgba(6, 18, 27, 0.42), rgba(6, 18, 27, 0.78)),
+        radial-gradient(circle at center, #17465e, #071018 68%);
+}
+
+.syk-active-module {
+    position: absolute;
+    top: 22px;
+    left: 24px;
+    font-size: clamp(24px, 3vw, 44px);
+    font-weight: 700;
+}
+
+.syframe {
+    --frame-color: #37dfff;
+
+    position: absolute;
+    inset: 18% 13%;
+    border: 1px dashed color-mix(
+        in srgb,
+        var(--frame-color) 70%,
+        transparent
+    );
+}
+
+.syframe[data-state="verified"] {
+    --frame-color: #6dff41;
+}
+
+.syframe[data-state="review"] {
+    --frame-color: #ffd640;
+}
+
+.syframe[data-state="low_confidence"] {
+    --frame-color: #ff9d1a;
+}
+
+.syframe[data-state="inconsistent"] {
+    --frame-color: #ff4d3f;
+}
+
+.syframe[data-state="rare_anomaly"] {
+    --frame-color: #b86cff;
+}
+
+.corner {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border-color: var(--frame-color);
+    filter: drop-shadow(0 0 8px var(--frame-color));
+}
+
+.top-left {
+    top: -2px;
+    left: -2px;
+    border-top: 3px solid;
+    border-left: 3px solid;
+}
+
+.top-right {
+    top: -2px;
+    right: -2px;
+    border-top: 3px solid;
+    border-right: 3px solid;
+}
+
+.bottom-left {
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+}
+
+.bottom-right {
+    right: -2px;
+    bottom: -2px;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+}
+
+.syframe-content {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: grid;
+    gap: 6px;
+    min-width: 220px;
+    padding: 16px;
+    border: 1px solid var(--frame-color);
+    border-radius: 10px;
+    background: rgba(3, 12, 18, 0.88);
+}
+
+@media (max-width: 800px) {
+    .syk-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .syk-modules {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-height: 240px;
+    }
+
+    .syk-workspace {
+        min-height: 500px;
+    }
+}
