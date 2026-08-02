@@ -1,4 +1,5 @@
 ﻿from .audio_manager import AudioManager, AudioProfile
+from .brand_title_manager import BrandTitle, BrandTitleManager
 from .environment import EnvironmentManager, EnvironmentState
 from .icon_manager import Icon, IconManager
 from .image_manager import ImageAsset, ImageManager
@@ -11,6 +12,8 @@ from .typography import Font, TypographyManager
 __all__ = [
     "AudioManager",
     "AudioProfile",
+    "BrandTitle",
+    "BrandTitleManager",
     "EnvironmentManager",
     "EnvironmentState",
     "Font",
