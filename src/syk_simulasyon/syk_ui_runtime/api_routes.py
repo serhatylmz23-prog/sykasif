@@ -12,6 +12,7 @@ from .scientific_adapter import (
 )
 from .scientific_transport import (
     ScientificTransportError,
+    BleScientificTransport,
     SerialScientificTransport,
     TcpScientificTransport,
 )
@@ -26,6 +27,7 @@ router = APIRouter(
 
 runtime_state = UIRuntimeState()
 scientific_runtime = ScientificRuntime()
+ble_transport = BleScientificTransport()
 serial_transport = SerialScientificTransport()
 tcp_transport = TcpScientificTransport()
 
@@ -278,6 +280,71 @@ def read_tcp_device(
             status_code=404,
             detail=(
                 "TCP cihazı bilinmeyen bilimsel "
+                f"modül gönderdi: {error.args[0]}"
+            ),
+        ) from error
+
+    except ScientificTransportError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=422,
+            detail=str(error),
+        ) from error
+
+class BleDiscoveryRequest(BaseModel):
+    timeout: float = 5.0
+
+
+class BleReadRequest(BaseModel):
+    address: str
+    characteristic_uuid: str
+    timeout: float = 5.0
+
+
+@router.post("/scientific-devices/ble/discover")
+async def discover_ble_devices(
+    request: BleDiscoveryRequest,
+) -> list[dict]:
+    try:
+        return await ble_transport.inventory(
+            timeout=request.timeout
+        )
+
+    except ScientificTransportError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=503,
+            detail=str(error),
+        ) from error
+
+
+@router.post("/scientific-devices/ble/read")
+async def read_ble_device(
+    request: BleReadRequest,
+) -> dict:
+    try:
+        packet = await ble_transport.read_packet(
+            address=request.address,
+            characteristic_uuid=(
+                request.characteristic_uuid
+            ),
+            timeout=request.timeout,
+        )
+
+        return ingest_transport_packet(
+            scientific_adapters,
+            packet,
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                "BLE cihazı bilinmeyen bilimsel "
                 f"modül gönderdi: {error.args[0]}"
             ),
         ) from error
