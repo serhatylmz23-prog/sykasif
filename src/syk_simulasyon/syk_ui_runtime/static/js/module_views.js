@@ -2,7 +2,7 @@
     const fish = [
         ["SAZAN", "Cyprinus carpio", "40 - 120 cm", "Göl, Baraj, Nehir, Gölet", "Omnivor", "verified", "deep"],
         ["YAYIN BALIĞI", "Silurus glanis", "60 - 300 cm", "Nehir, Baraj, Göl, Geniş Akarsu", "Etçil", "analysis", "long"],
-        ["ALABALK", "Salmo trutta", "20 - 80 cm", "Soğuk Sular, Akarsu, Göl", "Etçil", "analysis", ""],
+        ["ALABALIK", "Salmo trutta", "20 - 80 cm", "Soğuk Sular, Akarsu, Göl", "Etçil", "analysis", ""],
         ["TURNA", "Esox lucius", "40 - 100 cm", "Göl, Baraj, Sazlık Alanlar", "Etçil", "analysis", "long"],
         ["KEFAL", "Mugil cephalus", "30 - 70 cm", "Nehir, Acı Göl, Hafif Tuzlu Alanlar", "Omnivor", "verified", ""],
         ["HAVUZ BALIĞI", "Carassius gibelio", "15 - 40 cm", "Göl, Gölet, Durgun Sular", "Omnivor", "verified", "deep"],
