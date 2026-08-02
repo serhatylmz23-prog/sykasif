@@ -16,6 +16,7 @@ from .scientific_transport import (
     SerialScientificTransport,
     TcpScientificTransport,
 )
+from .scientific_device_manager import ScientificDeviceManager
 from .scientific_runtime import ScientificRuntime
 from .ui_runtime_state import UIRuntimeState
 
@@ -33,6 +34,13 @@ tcp_transport = TcpScientificTransport()
 
 scientific_adapters = ScientificAdapterRegistry(
     scientific_runtime
+)
+
+scientific_device_manager = ScientificDeviceManager(
+    adapters=scientific_adapters,
+    serial_transport=serial_transport,
+    tcp_transport=tcp_transport,
+    ble_transport=ble_transport,
 )
 
 
@@ -356,3 +364,16 @@ async def read_ble_device(
             status_code=422,
             detail=str(error),
         ) from error
+
+@router.get("/scientific-devices/transports")
+def get_scientific_device_transports() -> list[dict]:
+    return scientific_device_manager.transports()
+
+
+@router.post("/scientific-devices/discover")
+async def discover_all_scientific_devices(
+    request: BleDiscoveryRequest,
+) -> dict:
+    return await scientific_device_manager.discover_all(
+        ble_timeout=request.timeout
+    )
