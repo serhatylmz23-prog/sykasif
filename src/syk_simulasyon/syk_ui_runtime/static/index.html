@@ -36,6 +36,26 @@
     rel="stylesheet"
     href="/syk-ui/css/theme_runtime.css"
 >
+<link
+    rel="stylesheet"
+    href="/syk-ui/css/mobile_device_runtime.css"
+>
+<link
+    rel="stylesheet"
+    href="/syk-ui/css/mobile_sensor_runtime.css"
+>
+<link
+    rel="stylesheet"
+    href="/syk-ui/css/mobile_offline_runtime.css"
+>
+<link
+    rel="stylesheet"
+    href="/syk-ui/css/mobile_control_panel.css"
+>
+<link
+    rel="stylesheet"
+    href="/syk-ui/css/kasif_icon_runtime.css"
+>
 </head>
 <body>
     <main id="syk-app" class="syk-app">
@@ -205,5 +225,77 @@
 <script
     src="/syk-ui/js/theme_runtime.js"
 ></script>
+<script
+    src="/syk-ui/js/jarmin_integration.js"
+></script>
+<script
+    src="/syk-ui/js/mobile_device_runtime.js"
+></script>
+<script
+    src="/syk-ui/js/mobile_sensor_runtime.js"
+></script>
+<script
+    src="/syk-ui/js/mobile_offline_runtime.js"
+></script>
+<script
+    src="/syk-ui/js/mobile_control_panel.js"
+></script>
+<script
+    src="/syk-ui/js/kasif_icon_runtime.js"
+></script>
+
+<script>
+(() => {
+    "use strict";
+
+    const duzelt = () => {
+        const dugmeler = document.querySelectorAll(
+            "#module-list button.syk-module-button"
+        );
+
+        for (const dugme of dugmeler) {
+            if (
+                dugme.textContent.trim()
+                === "GPS"
+            ) {
+                dugme.setAttribute(
+                    "aria-label",
+                    "Konum bölümü"
+                );
+            }
+        }
+    };
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        duzelt,
+        {
+            once: true,
+        }
+    );
+
+    const gozlemci = new MutationObserver(
+        duzelt
+    );
+
+    gozlemci.observe(
+        document.documentElement,
+        {
+            childList: true,
+            subtree: true,
+        }
+    );
+
+    window.setTimeout(
+        () => {
+            duzelt();
+            gozlemci.disconnect();
+        },
+        5000
+    );
+})();
+// SYK_GPS_ERISILEBILIR_AD_DUZELTMESI
+</script>
+
 </body>
 </html>

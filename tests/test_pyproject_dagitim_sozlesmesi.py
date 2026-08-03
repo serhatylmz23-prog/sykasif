@@ -50,6 +50,7 @@ def test_src_altinda_tek_urun_paketi_var() -> None:
 
     assert paketler == [
         "syk_core/entegrasyon",
+        "syk_jarmin",
         "syk_simulasyon",
     ]
 
@@ -76,6 +77,7 @@ def test_paket_disinda_python_kaynagi_yok() -> None:
     izinli_urunler = {
         "syk_simulasyon",
         "syk_core",
+        "syk_jarmin",
     }
 
     paket_disindakiler = [
