@@ -1,0 +1,17 @@
+{
+    "id":  "print",
+    "assets":  {
+                   "background":  "background.jpg",
+                   "logo":  "logo.png"
+               },
+    "maximum_digital_confidence":  99.9,
+    "schema":  "sykasif-theme/v1",
+    "colors":  {
+                   "surface":  "#ffffff",
+                   "secondary":  "#303030",
+                   "accent":  "#7f2520",
+                   "text":  "#111111"
+               },
+    "mode":  "print",
+    "title":  "SyKaşif Baskı"
+}

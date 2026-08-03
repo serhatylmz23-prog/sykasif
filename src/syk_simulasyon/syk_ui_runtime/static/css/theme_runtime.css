@@ -1,0 +1,76 @@
+:root {
+    --syk-theme-accent: #d7a942;
+    --syk-theme-secondary: #f0cf7a;
+    --syk-theme-surface: #080b0d;
+    --syk-theme-text: #eef4f7;
+    --syk-theme-logo: none;
+    --syk-theme-background: none;
+}
+
+body {
+    color: var(--syk-theme-text);
+    background-color:
+        var(--syk-theme-surface);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.22),
+            rgba(0, 0, 0, 0.52)
+        ),
+        var(--syk-theme-background);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition:
+        opacity 900ms ease,
+        filter 900ms ease;
+}
+
+[data-syk-theme-logo] {
+    background-image:
+        var(--syk-theme-logo);
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body[data-syk-theme="gold"] {
+    --syk-panel-border:
+        rgba(215, 169, 66, 0.42);
+}
+
+body[data-syk-theme="silver"] {
+    --syk-panel-border:
+        rgba(190, 204, 214, 0.38);
+}
+
+body[data-syk-theme="dark"] {
+    --syk-panel-border:
+        rgba(105, 140, 150, 0.28);
+}
+
+button,
+a,
+input,
+select,
+textarea {
+    accent-color:
+        var(--syk-theme-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        transition: none;
+    }
+}

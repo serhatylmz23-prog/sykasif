@@ -1,0 +1,17 @@
+{
+    "id":  "dark",
+    "assets":  {
+                   "background":  "background.jpg",
+                   "logo":  "logo.png"
+               },
+    "maximum_digital_confidence":  99.9,
+    "schema":  "sykasif-theme/v1",
+    "colors":  {
+                   "surface":  "#080b0d",
+                   "secondary":  "#bdc8ce",
+                   "accent":  "#7c8a91",
+                   "text":  "#e5edf0"
+               },
+    "mode":  "dark",
+    "title":  "SyKaşif Koyu"
+}

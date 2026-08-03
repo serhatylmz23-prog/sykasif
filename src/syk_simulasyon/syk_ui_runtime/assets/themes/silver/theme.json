@@ -1,0 +1,17 @@
+{
+    "id":  "silver",
+    "assets":  {
+                   "background":  "background.jpg",
+                   "logo":  "logo.png"
+               },
+    "maximum_digital_confidence":  99.9,
+    "schema":  "sykasif-theme/v1",
+    "colors":  {
+                   "surface":  "#111417",
+                   "secondary":  "#e5ebef",
+                   "accent":  "#aeb7bf",
+                   "text":  "#eef4f7"
+               },
+    "mode":  "silver",
+    "title":  "SyKaşif Gümüş"
+}

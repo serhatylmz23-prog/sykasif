@@ -1093,3 +1093,10 @@ from .adaptive_environment_routes import (
 router.include_router(
     adaptive_environment_router,
 )
+from .theme_api import (
+    router as theme_router,
+)
+
+router.include_router(
+    theme_router,
+)
