@@ -121,10 +121,11 @@
 
                     <button
                         type="button"
-                        data-device-action="detail"
+                        data-device-action="record"
                         data-device-id="${escapeHtml(device.id)}"
+                        ${device.connected ? "" : "disabled"}
                     >
-                        Ayrıntı
+                        Kayıt Başlat
                     </button>
                 </div>
             </article>
@@ -274,6 +275,58 @@
         await load(container);
     }
 
+    async function startRecording(
+        container,
+        deviceId,
+    ) {
+        const response = await fetch(
+            "/api/syk-ui/device-sessions/start",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    device_id: deviceId,
+                    metadata: {
+                        origin: "device_hub",
+                    },
+                }),
+            },
+        );
+
+        if (!response.ok) {
+            const payload = await response.json();
+
+            throw new Error(
+                payload.detail
+                || `Kayıt başlatılamadı: ${response.status}`
+            );
+        }
+
+        const session = await response.json();
+
+        const card = container.querySelector(
+            `[data-device-id="${CSS.escape(deviceId)}"]`
+        );
+
+        if (!card) {
+            return;
+        }
+
+        const button = card.querySelector(
+            '[data-device-action="record"]'
+        );
+
+        if (button) {
+            button.textContent = "Kayıt Aktif";
+            button.disabled = true;
+            button.dataset.sessionId = session.id;
+        }
+
+        card.dataset.recording = "true";
+    }
+
     function bindActions(container) {
         container
             .querySelector("#device-hub-refresh")
@@ -299,6 +352,24 @@
                                 === "true"
                             ),
                         );
+                    },
+                );
+            });
+
+        container
+            .querySelectorAll(
+                '[data-device-action="record"]'
+            )
+            .forEach((button) => {
+                button.addEventListener(
+                    "click",
+                    () => {
+                        startRecording(
+                            container,
+                            button.dataset.deviceId,
+                        ).catch((error) => {
+                            window.alert(error.message);
+                        });
                     },
                 );
             });

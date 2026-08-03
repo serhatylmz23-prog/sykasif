@@ -18,6 +18,9 @@ from .scientific_transport import (
 )
 from .scientific_device_hub import ScientificDeviceHub
 from .scientific_device_manager import ScientificDeviceManager
+from .scientific_device_session import (
+    ScientificDeviceSessionManager,
+)
 from .scientific_runtime import ScientificRuntime
 from .ui_runtime_state import UIRuntimeState
 
@@ -46,6 +49,12 @@ scientific_device_manager = ScientificDeviceManager(
 
 scientific_device_hub = ScientificDeviceHub(
     scientific_device_manager
+)
+
+scientific_device_sessions = (
+    ScientificDeviceSessionManager(
+        scientific_device_hub
+    )
 )
 
 
@@ -509,4 +518,122 @@ def update_device_hub_telemetry(
         raise HTTPException(
             status_code=404,
             detail=f"Cihaz bulunamadı: {device_id}",
+        ) from error
+
+class DeviceSessionStartRequest(BaseModel):
+    device_id: str
+    module_id: str | None = None
+    metadata: dict = {}
+
+
+class DeviceSessionSampleRequest(BaseModel):
+    count: int = 1
+
+
+@router.get("/device-sessions")
+def get_device_sessions() -> list[dict]:
+    return scientific_device_sessions.inventory()
+
+
+@router.post("/device-sessions/start")
+def start_device_session(
+    request: DeviceSessionStartRequest,
+) -> dict:
+    try:
+        return scientific_device_sessions.start(
+            device_id=request.device_id,
+            module_id=request.module_id,
+            metadata=request.metadata,
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Cihaz bulunamadı: {error.args[0]}",
+        ) from error
+
+    except ValueError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=409,
+            detail=str(error),
+        ) from error
+
+
+@router.get("/device-sessions/{session_id}")
+def get_device_session(
+    session_id: str,
+) -> dict:
+    try:
+        return scientific_device_sessions.get(
+            session_id
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Oturum bulunamadı: {session_id}",
+        ) from error
+
+
+@router.post(
+    "/device-sessions/{session_id}/samples"
+)
+def append_device_session_samples(
+    session_id: str,
+    request: DeviceSessionSampleRequest,
+) -> dict:
+    try:
+        return scientific_device_sessions.append_sample(
+            session_id,
+            count=request.count,
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Oturum bulunamadı: {session_id}",
+        ) from error
+
+    except ValueError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=409,
+            detail=str(error),
+        ) from error
+
+
+@router.post(
+    "/device-sessions/{session_id}/stop"
+)
+def stop_device_session(
+    session_id: str,
+) -> dict:
+    try:
+        return scientific_device_sessions.stop(
+            session_id
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Oturum bulunamadı: {session_id}",
+        ) from error
+
+    except ValueError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=409,
+            detail=str(error),
         ) from error
