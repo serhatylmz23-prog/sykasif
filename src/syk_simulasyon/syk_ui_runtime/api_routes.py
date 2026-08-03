@@ -1071,3 +1071,11 @@ from .dtse_attention_routes import (
 router.include_router(
     dtse_attention_router
 )
+
+from .goruntu_dtse_routes import (
+    router as goruntu_dtse_router,
+)
+
+router.include_router(
+    goruntu_dtse_router
+)
