@@ -123,6 +123,9 @@ def get_runtime_state() -> dict:
         }
         for module in enabled_modules()
     ]
+    snapshot["syframe"] = (
+        scientific_analysis_syframe.snapshot()
+    )
     return snapshot
 
 
