@@ -239,6 +239,22 @@
                     payload.analysis_id
                 )}"
             >
+                <figure
+                    class="syk-media-annotated-preview"
+                >
+                    <img
+                        src="${escapeHtml(
+                            payload.preview_url
+                        )}"
+                        alt="SyKaşif işaretli görüntü analizi"
+                        loading="eager"
+                    >
+
+                    <figcaption>
+                        DTSE dikkat bölgeleri
+                    </figcaption>
+                </figure>
+
                 <header>
                     <strong>
                         Analiz Tamamlandı
@@ -284,6 +300,16 @@
                 </dl>
 
                 <div class="syk-media-result-actions">
+                    <a
+                        href="${escapeHtml(
+                            payload.preview_url
+                        )}"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        İşaretli Görsel
+                    </a>
+
                     <a
                         href="${escapeHtml(
                             payload.download_url

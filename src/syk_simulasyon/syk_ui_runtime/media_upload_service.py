@@ -15,6 +15,10 @@ from syk_core.goruntu.frame.media_analysis_pipeline import (
     MediaAnalysisPipeline,
 )
 
+from .media_annotation import (
+    MediaAnnotationEngine,
+)
+
 from .sealed_report import (
     ReportEvidence,
     SealedReportEngine,
@@ -40,6 +44,8 @@ class StoredMediaAnalysis:
     source_sha256: str
     source_path: str
     result_path: str
+    preview_path: str
+    preview_sha256: str
     pdf_path: str
     manifest_path: str
     report_sha256: str
@@ -56,6 +62,10 @@ class StoredMediaAnalysis:
             "source_sha256": self.source_sha256,
             "source_path": self.source_path,
             "result_path": self.result_path,
+            "preview_path": self.preview_path,
+            "preview_sha256": (
+                self.preview_sha256
+            ),
             "pdf_path": self.pdf_path,
             "manifest_path": self.manifest_path,
             "report_sha256": self.report_sha256,
@@ -274,6 +284,9 @@ class MediaUploadService:
         pipeline: MediaAnalysisPipeline | None = None,
         report_engine: SealedReportEngine | None = None,
         dtse_bridge: DTSEEngineBridge | None = None,
+        annotation_engine: (
+            MediaAnnotationEngine | None
+        ) = None,
     ) -> None:
         configured_root = (
             artifact_root
@@ -305,6 +318,11 @@ class MediaUploadService:
         self.dtse_bridge = (
             dtse_bridge
             or DTSEEngineBridge()
+        )
+
+        self.annotation_engine = (
+            annotation_engine
+            or MediaAnnotationEngine()
         )
 
         self._records: dict[
@@ -380,6 +398,24 @@ class MediaUploadService:
             )
         )
 
+        preview_path = (
+            analysis_root
+            / "annotated_preview.png"
+        )
+
+        annotation_result = (
+            self.annotation_engine.render(
+                source_content=content,
+                candidates=(
+                    pipeline_result
+                    .report_payload[
+                        "evidences"
+                    ]
+                ),
+                output_path=preview_path,
+            )
+        )
+
         evidence_items = tuple(
             ReportEvidence(
                 evidence_id=item[
@@ -437,6 +473,14 @@ class MediaUploadService:
                     pipeline_result
                     .motion
                     .as_dict()
+                ),
+                "annotation": (
+                    annotation_result
+                    .as_dict()
+                ),
+                "annotated_preview_path": (
+                    annotation_result
+                    .output_path
                 ),
                 "dtse": dtse_result,
             },
@@ -501,6 +545,14 @@ class MediaUploadService:
             ).hexdigest(),
             source_path=str(source_path),
             result_path=str(result_path),
+            preview_path=(
+                annotation_result
+                .output_path
+            ),
+            preview_sha256=(
+                annotation_result
+                .output_sha256
+            ),
             pdf_path=report_result[
                 "output_path"
             ],
@@ -541,6 +593,10 @@ class MediaUploadService:
                     "connected",
                     False,
                 )
+            ),
+            "preview_url": (
+                "/api/syk-ui/media-analysis/"
+                f"{analysis_id}/preview"
             ),
             "download_url": (
                 "/api/syk-ui/media-analysis/"

@@ -158,3 +158,42 @@ def download_media_manifest(
             )
         )
     )
+
+@router.get("/{analysis_id}/preview")
+def get_annotated_media_preview(
+    analysis_id: str,
+):
+    try:
+        record = (
+            media_upload_service.get(
+                analysis_id
+            )
+        )
+
+    except KeyError as error:
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                "İşaretli görüntü bulunamadı."
+            ),
+        ) from error
+
+    path = Path(record.preview_path)
+
+    if not path.is_file():
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                "İşaretli görüntü dosyası "
+                "bulunamadı."
+            ),
+        )
+
+    return FileResponse(
+        path=path,
+        media_type="image/png",
+        filename=(
+            f"{record.media_id}_"
+            "isaretli_goruntu.png"
+        ),
+    )
