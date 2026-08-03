@@ -16,6 +16,10 @@ from .scientific_transport import (
     SerialScientificTransport,
     TcpScientificTransport,
 )
+from .scientific_analysis_syframe import (
+    ScientificAnalysisSyFrameBridge,
+)
+from .syframe_manager import SyFrameManager
 from .scientific_device_analysis import (
     ScientificDeviceAnalysisEngine,
 )
@@ -95,6 +99,15 @@ scientific_device_analysis = (
     ScientificDeviceAnalysisEngine(
         sessions=scientific_device_sessions,
         evidence=scientific_device_evidence,
+    )
+)
+
+scientific_analysis_syframe_manager = SyFrameManager()
+
+scientific_analysis_syframe = (
+    ScientificAnalysisSyFrameBridge(
+        analysis=scientific_device_analysis,
+        syframe=scientific_analysis_syframe_manager,
     )
 )
 
@@ -1012,3 +1025,38 @@ def verify_device_session_analysis(
     return scientific_device_analysis.verify(
         session_id
     )
+
+@router.post(
+    "/device-sessions/{session_id}/syframe"
+)
+def apply_device_analysis_to_syframe(
+    session_id: str,
+) -> dict:
+    try:
+        return scientific_analysis_syframe.apply(
+            session_id
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                f"Analiz bulunamadı: "
+                f"{session_id}"
+            ),
+        ) from error
+
+    except ValueError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=422,
+            detail=str(error),
+        ) from error
+
+
+@router.get("/syframe/analysis-state")
+def get_analysis_syframe_state() -> dict:
+    return scientific_analysis_syframe.snapshot()
