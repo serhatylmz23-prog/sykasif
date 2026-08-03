@@ -1086,3 +1086,10 @@ from .media_upload_routes import (
 router.include_router(
     media_upload_router,
 )
+from .adaptive_environment_routes import (
+    router as adaptive_environment_router,
+)
+
+router.include_router(
+    adaptive_environment_router,
+)
