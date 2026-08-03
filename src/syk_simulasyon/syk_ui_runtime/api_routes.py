@@ -16,6 +16,7 @@ from .scientific_transport import (
     SerialScientificTransport,
     TcpScientificTransport,
 )
+from .scientific_device_evidence import DeviceEvidenceStore
 from .scientific_device_hub import ScientificDeviceHub
 from .scientific_device_manager import ScientificDeviceManager
 from .scientific_device_session import (
@@ -50,6 +51,8 @@ scientific_device_manager = ScientificDeviceManager(
 scientific_device_hub = ScientificDeviceHub(
     scientific_device_manager
 )
+
+scientific_device_evidence = DeviceEvidenceStore()
 
 scientific_device_sessions = (
     ScientificDeviceSessionManager(
@@ -636,4 +639,101 @@ def stop_device_session(
         raise HTTPException(
             status_code=409,
             detail=str(error),
+        ) from error
+
+class DeviceEvidenceAppendRequest(BaseModel):
+    payload: dict
+
+
+@router.post(
+    "/device-sessions/{session_id}/evidence"
+)
+def append_device_session_evidence(
+    session_id: str,
+    request: DeviceEvidenceAppendRequest,
+) -> dict:
+    try:
+        session = scientific_device_sessions.get(
+            session_id
+        )
+
+        if session["state"] != "recording":
+            from fastapi import HTTPException
+
+            raise HTTPException(
+                status_code=409,
+                detail=(
+                    "Durdurulmuş oturuma "
+                    "kanıt paketi eklenemez."
+                ),
+            )
+
+        record = scientific_device_evidence.append(
+            session_id=session_id,
+            device_id=session["device_id"],
+            module_id=session["module_id"],
+            payload=request.payload,
+        )
+
+        scientific_device_sessions.append_sample(
+            session_id,
+            count=1,
+        )
+
+        return record
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Oturum bulunamadı: {session_id}",
+        ) from error
+
+
+@router.get(
+    "/device-sessions/{session_id}/evidence"
+)
+def get_device_session_evidence(
+    session_id: str,
+) -> list[dict]:
+    try:
+        scientific_device_sessions.get(
+            session_id
+        )
+
+        return scientific_device_evidence.records(
+            session_id
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Oturum bulunamadı: {session_id}",
+        ) from error
+
+
+@router.get(
+    "/device-sessions/{session_id}/evidence/verify"
+)
+def verify_device_session_evidence(
+    session_id: str,
+) -> dict:
+    try:
+        scientific_device_sessions.get(
+            session_id
+        )
+
+        return scientific_device_evidence.verify(
+            session_id
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Oturum bulunamadı: {session_id}",
         ) from error
