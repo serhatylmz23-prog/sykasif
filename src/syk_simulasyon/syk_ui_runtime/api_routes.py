@@ -16,6 +16,9 @@ from .scientific_transport import (
     SerialScientificTransport,
     TcpScientificTransport,
 )
+from .scientific_device_analysis import (
+    ScientificDeviceAnalysisEngine,
+)
 from .scientific_device_evidence import DeviceEvidenceStore
 from .scientific_device_package_seal import (
     DeviceEvidencePackageSeal,
@@ -83,6 +86,13 @@ scientific_device_sessions = (
 
 scientific_device_recording_pipeline = (
     ScientificDeviceRecordingPipeline(
+        sessions=scientific_device_sessions,
+        evidence=scientific_device_evidence,
+    )
+)
+
+scientific_device_analysis = (
+    ScientificDeviceAnalysisEngine(
         sessions=scientific_device_sessions,
         evidence=scientific_device_evidence,
     )
@@ -944,3 +954,61 @@ def verify_device_session_seal(
                 f"{session_id}"
             ),
         ) from error
+
+@router.post(
+    "/device-sessions/{session_id}/analysis"
+)
+def analyze_device_session(
+    session_id: str,
+) -> dict:
+    try:
+        return scientific_device_analysis.analyze(
+            session_id
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Oturum bulunamadı: {session_id}",
+        ) from error
+
+    except ValueError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=422,
+            detail=str(error),
+        ) from error
+
+
+@router.get(
+    "/device-sessions/{session_id}/analysis"
+)
+def get_device_session_analysis(
+    session_id: str,
+) -> dict:
+    try:
+        return scientific_device_analysis.get(
+            session_id
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Analiz bulunamadı: {session_id}",
+        ) from error
+
+
+@router.get(
+    "/device-sessions/{session_id}/analysis/verify"
+)
+def verify_device_session_analysis(
+    session_id: str,
+) -> dict:
+    return scientific_device_analysis.verify(
+        session_id
+    )
