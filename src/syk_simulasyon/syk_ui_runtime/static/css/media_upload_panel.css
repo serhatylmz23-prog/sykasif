@@ -1,0 +1,174 @@
+.syk-media-upload-panel {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 12000;
+
+    width: min(390px, calc(100vw - 36px));
+
+    color: #e8fbff;
+    border: 1px solid
+        rgba(66, 211, 235, 0.48);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(3, 20, 27, 0.98),
+            rgba(4, 37, 45, 0.96)
+        );
+
+    box-shadow:
+        0 18px 60px
+        rgba(0, 0, 0, 0.48);
+
+    backdrop-filter: blur(14px);
+}
+
+.syk-media-upload-panel > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px;
+}
+
+.syk-media-upload-panel > header div {
+    display: grid;
+    gap: 3px;
+}
+
+.syk-media-upload-panel > header span {
+    color: #55c7dc;
+    font-size: 8px;
+    letter-spacing: 0.16em;
+}
+
+.syk-media-upload-panel > header strong {
+    font-size: 13px;
+}
+
+#syk-media-upload-toggle,
+#syk-media-upload-submit {
+    padding: 9px 13px;
+    color: #e8fbff;
+    border: 1px solid
+        rgba(55, 223, 255, 0.48);
+    background:
+        rgba(5, 48, 58, 0.82);
+    cursor: pointer;
+}
+
+#syk-media-upload-form {
+    display: grid;
+    gap: 10px;
+    padding: 0 12px 12px;
+}
+
+#syk-media-upload-form[hidden] {
+    display: none;
+}
+
+#syk-media-upload-form label {
+    display: grid;
+    gap: 5px;
+}
+
+#syk-media-upload-form label span {
+    color: #82bdc8;
+    font-size: 8px;
+    text-transform: uppercase;
+}
+
+#syk-media-upload-form input {
+    min-width: 0;
+    padding: 9px;
+    color: #e8fbff;
+    border: 1px solid
+        rgba(93, 190, 208, 0.27);
+    background:
+        rgba(3, 22, 28, 0.72);
+}
+
+#syk-media-upload-status {
+    min-height: 16px;
+    color: #72d9eb;
+    font-size: 9px;
+}
+
+.syk-media-analysis-result {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+
+    border: 1px solid
+        rgba(109, 255, 177, 0.35);
+
+    background:
+        rgba(3, 27, 33, 0.76);
+}
+
+.syk-media-analysis-result > header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.syk-media-analysis-result b {
+    color: #6dffb1;
+    font-size: 9px;
+}
+
+.syk-media-analysis-result dl {
+    display: grid;
+    gap: 6px;
+    margin: 0;
+}
+
+.syk-media-analysis-result dl div {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 8px;
+}
+
+.syk-media-analysis-result dt {
+    color: #759aa3;
+    font-size: 8px;
+}
+
+.syk-media-analysis-result dd {
+    min-width: 0;
+    margin: 0;
+    font-size: 9px;
+}
+
+.syk-media-analysis-result code {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.syk-media-result-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.syk-media-result-actions a {
+    flex: 1;
+    padding: 8px;
+    color: #dffaff;
+    border: 1px solid
+        rgba(55, 223, 255, 0.34);
+    text-align: center;
+    text-decoration: none;
+    font-size: 9px;
+}
+
+@media (max-width: 700px) {
+    .syk-media-upload-panel {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        width: auto;
+    }
+}

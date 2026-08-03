@@ -1079,3 +1079,10 @@ from .goruntu_dtse_routes import (
 router.include_router(
     goruntu_dtse_router
 )
+from .media_upload_routes import (
+    router as media_upload_router,
+)
+
+router.include_router(
+    media_upload_router,
+)
