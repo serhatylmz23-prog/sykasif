@@ -17,6 +17,9 @@ from .scientific_transport import (
     TcpScientificTransport,
 )
 from .scientific_device_evidence import DeviceEvidenceStore
+from .scientific_device_evidence_package import (
+    DeviceEvidencePackageBuilder,
+)
 from .scientific_device_hub import ScientificDeviceHub
 from .scientific_device_manager import ScientificDeviceManager
 from .scientific_device_recording_pipeline import (
@@ -56,6 +59,12 @@ scientific_device_hub = ScientificDeviceHub(
 )
 
 scientific_device_evidence = DeviceEvidenceStore()
+
+scientific_device_package_builder = (
+    DeviceEvidencePackageBuilder(
+        evidence=scientific_device_evidence
+    )
+)
 
 scientific_device_sessions = (
     ScientificDeviceSessionManager(
@@ -763,3 +772,79 @@ def ingest_device_recording_packet(
         device_id=device_id,
         payload=request.payload,
     )
+
+@router.post(
+    "/device-sessions/{session_id}/package"
+)
+def build_device_session_package(
+    session_id: str,
+) -> dict:
+    try:
+        session = scientific_device_sessions.get(
+            session_id
+        )
+
+        if session["state"] == "recording":
+            from fastapi import HTTPException
+
+            raise HTTPException(
+                status_code=409,
+                detail=(
+                    "Paket üretmeden önce kayıt "
+                    "oturumu durdurulmalıdır."
+                ),
+            )
+
+        return (
+            scientific_device_package_builder.build(
+                session=session
+            )
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                f"Oturum bulunamadı: "
+                f"{session_id}"
+            ),
+        ) from error
+
+    except ValueError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=422,
+            detail=str(error),
+        ) from error
+
+
+@router.get(
+    "/device-sessions/{session_id}/package/verify"
+)
+def verify_device_session_package(
+    session_id: str,
+) -> dict:
+    try:
+        scientific_device_sessions.get(
+            session_id
+        )
+
+        return (
+            scientific_device_package_builder.verify(
+                session_id
+            )
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                f"Oturum bulunamadı: "
+                f"{session_id}"
+            ),
+        ) from error
