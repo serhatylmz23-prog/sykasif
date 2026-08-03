@@ -9,6 +9,11 @@ from pydantic import (
     Field,
 )
 
+from .live_environment_provider import (
+    LiveEnvironmentProvider,
+    LiveEnvironmentRequest,
+)
+
 from .adaptive_environment import (
     AdaptiveEnvironmentEngine,
 )
@@ -69,3 +74,38 @@ def update_current_environment(
 @router.delete("/current")
 def clear_current_environment() -> dict:
     return adaptive_environment.clear_manual()
+
+live_environment_provider = (
+    LiveEnvironmentProvider()
+)
+
+@router.get("/live")
+def get_live_environment(
+    latitude: float,
+    longitude: float,
+) -> dict:
+    try:
+        return (
+            live_environment_provider
+            .fetch(
+                LiveEnvironmentRequest(
+                    latitude=latitude,
+                    longitude=longitude,
+                )
+            )
+        )
+
+    except ValueError as error:
+        raise HTTPException(
+            status_code=422,
+            detail=str(error),
+        ) from error
+
+    except Exception as error:
+        raise HTTPException(
+            status_code=503,
+            detail=(
+                "Canlı meteoroloji sağlayıcısına "
+                "ulaşılamadı."
+            ),
+        ) from error

@@ -129,6 +129,33 @@
             .sykWeatherSource =
                 environment.source;
 
+        body.dataset.sykMoonPhase =
+            environment.moon_phase
+            || "unknown";
+
+        root.style.setProperty(
+            "--syk-moon-illumination",
+            Number(
+                environment
+                    .moon_illumination
+                || 0
+            ).toFixed(3)
+        );
+
+        if (environment.sunrise) {
+            root.style.setProperty(
+                "--syk-sunrise",
+                `"${environment.sunrise}"`
+            );
+        }
+
+        if (environment.sunset) {
+            root.style.setProperty(
+                "--syk-sunset",
+                `"${environment.sunset}"`
+            );
+        }
+
         root.style.setProperty(
             "--syk-daylight-factor",
             environment.daylight_factor
@@ -179,7 +206,121 @@
         );
     }
 
+    async function refreshWithLocation(
+        latitude,
+        longitude
+    ) {
+        const query =
+            new URLSearchParams({
+                latitude:
+                    String(latitude),
+                longitude:
+                    String(longitude),
+            });
+
+        const response = await fetch(
+            `/api/syk-ui/environment/live?${query}`,
+            {
+                headers: {
+                    Accept:
+                        "application/json",
+                },
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(
+                `${response.status}`
+            );
+        }
+
+        const payload =
+            await response.json();
+
+        applyEnvironment(payload);
+
+        document.body.dataset
+            .sykLocationMode =
+                "device";
+
+        return payload;
+    }
+
+    function requestLocation() {
+        return new Promise(
+            (
+                resolve,
+                reject
+            ) => {
+                if (
+                    !navigator.geolocation
+                ) {
+                    reject(
+                        new Error(
+                            "geolocation_unavailable"
+                        )
+                    );
+                    return;
+                }
+
+                navigator.geolocation
+                    .getCurrentPosition(
+                        position => {
+                            resolve({
+                                latitude:
+                                    position
+                                        .coords
+                                        .latitude,
+                                longitude:
+                                    position
+                                        .coords
+                                        .longitude,
+                                accuracy:
+                                    position
+                                        .coords
+                                        .accuracy,
+                            });
+                        },
+                        reject,
+                        {
+                            enableHighAccuracy:
+                                false,
+                            timeout: 8000,
+                            maximumAge:
+                                15 * 60 * 1000,
+                        }
+                    );
+            }
+        );
+    }
+
     async function refresh() {
+        try {
+            const location =
+                await requestLocation();
+
+            document.documentElement
+                .style
+                .setProperty(
+                    "--syk-location-accuracy",
+                    String(
+                        location.accuracy
+                    )
+                );
+
+            await refreshWithLocation(
+                location.latitude,
+                location.longitude
+            );
+
+            return;
+        }
+        catch {
+            document.body.dataset
+                .sykLocationMode =
+                    "fallback";
+        }
+
         try {
             const response = await fetch(
                 "/api/syk-ui/environment/current",
