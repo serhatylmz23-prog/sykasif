@@ -1,0 +1,93 @@
+[data-dtse-media-stage] {
+    position: relative;
+    overflow: hidden;
+}
+
+.dtse-attention-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 40;
+}
+
+.dtse-attention-svg,
+.dtse-attention-labels {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dtse-attention-card {
+    position: absolute;
+    min-width: 150px;
+    max-width: 230px;
+    padding: 10px 12px;
+    border: 1px solid #37dfff;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(2, 15, 22, 0.96),
+            rgba(4, 25, 33, 0.91)
+        );
+    box-shadow:
+        0 0 18px rgba(55, 223, 255, 0.24);
+    transform: translate(12px, -50%);
+    display: grid;
+    gap: 3px;
+    font-family: inherit;
+    backdrop-filter: blur(8px);
+}
+
+.dtse-attention-card strong {
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    color: #f4fbff;
+}
+
+.dtse-attention-card span,
+.dtse-attention-card small,
+.dtse-attention-card em {
+    font-size: 10px;
+    font-style: normal;
+    color: #9fd8e2;
+}
+
+.dtse-attention-card[data-state="verified"] {
+    border-color: #6dff41;
+}
+
+.dtse-attention-card[data-state="review"] {
+    border-color: #ffd640;
+}
+
+.dtse-attention-card[data-state="low_confidence"] {
+    border-color: #ff9d1a;
+}
+
+.dtse-attention-card[data-state="rare_anomaly"] {
+    border-color: #b86cff;
+    box-shadow:
+        0 0 22px rgba(184, 108, 255, 0.38);
+}
+
+.dtse-overlay-pulse {
+    animation:
+        dtse-attention-pulse
+        1.4s ease-in-out infinite;
+}
+
+@keyframes dtse-attention-pulse {
+    0%,
+    100% {
+        opacity: 0.72;
+    }
+
+    50% {
+        opacity: 1;
+        filter:
+            drop-shadow(
+                0 0 7px currentColor
+            );
+    }
+}

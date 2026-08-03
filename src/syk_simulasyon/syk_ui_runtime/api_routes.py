@@ -1063,3 +1063,11 @@ def apply_device_analysis_to_syframe(
 @router.get("/syframe/analysis-state")
 def get_analysis_syframe_state() -> dict:
     return scientific_analysis_syframe.snapshot()
+
+from .dtse_attention_routes import (
+    router as dtse_attention_router,
+)
+
+router.include_router(
+    dtse_attention_router
+)
