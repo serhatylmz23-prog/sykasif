@@ -19,6 +19,9 @@ from .scientific_transport import (
 from .scientific_device_evidence import DeviceEvidenceStore
 from .scientific_device_hub import ScientificDeviceHub
 from .scientific_device_manager import ScientificDeviceManager
+from .scientific_device_recording_pipeline import (
+    ScientificDeviceRecordingPipeline,
+)
 from .scientific_device_session import (
     ScientificDeviceSessionManager,
 )
@@ -57,6 +60,13 @@ scientific_device_evidence = DeviceEvidenceStore()
 scientific_device_sessions = (
     ScientificDeviceSessionManager(
         scientific_device_hub
+    )
+)
+
+scientific_device_recording_pipeline = (
+    ScientificDeviceRecordingPipeline(
+        sessions=scientific_device_sessions,
+        evidence=scientific_device_evidence,
     )
 )
 
@@ -737,3 +747,19 @@ def verify_device_session_evidence(
             status_code=404,
             detail=f"Oturum bulunamadı: {session_id}",
         ) from error
+
+class DevicePipelineIngestRequest(BaseModel):
+    payload: dict
+
+
+@router.post(
+    "/device-hub/{device_id}/recording-ingest"
+)
+def ingest_device_recording_packet(
+    device_id: str,
+    request: DevicePipelineIngestRequest,
+) -> dict:
+    return scientific_device_recording_pipeline.ingest(
+        device_id=device_id,
+        payload=request.payload,
+    )
