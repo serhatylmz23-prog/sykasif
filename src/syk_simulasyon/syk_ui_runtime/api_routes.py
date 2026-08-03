@@ -17,6 +17,9 @@ from .scientific_transport import (
     TcpScientificTransport,
 )
 from .scientific_device_evidence import DeviceEvidenceStore
+from .scientific_device_package_seal import (
+    DeviceEvidencePackageSeal,
+)
 from .scientific_device_evidence_package import (
     DeviceEvidencePackageBuilder,
 )
@@ -63,6 +66,12 @@ scientific_device_evidence = DeviceEvidenceStore()
 scientific_device_package_builder = (
     DeviceEvidencePackageBuilder(
         evidence=scientific_device_evidence
+    )
+)
+
+scientific_device_package_seal = (
+    DeviceEvidencePackageSeal(
+        packages=scientific_device_package_builder
     )
 )
 
@@ -834,6 +843,93 @@ def verify_device_session_package(
 
         return (
             scientific_device_package_builder.verify(
+                session_id
+            )
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                f"Oturum bulunamadı: "
+                f"{session_id}"
+            ),
+        ) from error
+
+@router.post(
+    "/device-sessions/{session_id}/seal"
+)
+def seal_device_session_package(
+    session_id: str,
+) -> dict:
+    try:
+        session = scientific_device_sessions.get(
+            session_id
+        )
+
+        if session["state"] == "recording":
+            from fastapi import HTTPException
+
+            raise HTTPException(
+                status_code=409,
+                detail=(
+                    "Mühürleme öncesinde kayıt "
+                    "oturumu durdurulmalıdır."
+                ),
+            )
+
+        package_verification = (
+            scientific_device_package_builder.verify(
+                session_id
+            )
+        )
+
+        if not package_verification["valid"]:
+            scientific_device_package_builder.build(
+                session=session
+            )
+
+        return (
+            scientific_device_package_seal.create(
+                session=session
+            )
+        )
+
+    except KeyError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                f"Oturum bulunamadı: "
+                f"{session_id}"
+            ),
+        ) from error
+
+    except ValueError as error:
+        from fastapi import HTTPException
+
+        raise HTTPException(
+            status_code=422,
+            detail=str(error),
+        ) from error
+
+
+@router.get(
+    "/device-sessions/{session_id}/seal/verify"
+)
+def verify_device_session_seal(
+    session_id: str,
+) -> dict:
+    try:
+        scientific_device_sessions.get(
+            session_id
+        )
+
+        return (
+            scientific_device_package_seal.verify(
                 session_id
             )
         )
