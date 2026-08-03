@@ -12,6 +12,9 @@ from .dtse_attention_engine import (
     DTSEAttentionEngine,
     NormalizedBox,
 )
+from .goruntu_dtse_kanit_zinciri import (
+    GoruntuDTSEKanitZinciri,
+)
 
 
 class GoruntuDTSEAdapter:
@@ -20,9 +23,14 @@ class GoruntuDTSEAdapter:
         *,
         uzman: GoruntuUzmani,
         dtse: DTSEAttentionEngine,
+        evidence_chain: (
+            GoruntuDTSEKanitZinciri
+            | None
+        ) = None,
     ) -> None:
         self._uzman = uzman
         self._dtse = dtse
+        self._evidence_chain = evidence_chain
         self._son_sonuc: dict[str, Any] | None = None
         self._son_hata: dict[str, Any] | None = None
 
@@ -73,6 +81,22 @@ class GoruntuDTSEAdapter:
                     bolge=bolge,
                 )
             )
+
+            if self._evidence_chain is not None:
+                evidence_results = []
+
+                for event in self._son_sonuc.get(
+                    "events",
+                    [],
+                ):
+                    evidence_results.append(
+                        self._evidence_chain
+                        .append_event(event)
+                    )
+
+                self._son_sonuc[
+                    "evidence"
+                ] = evidence_results
 
             self._son_hata = None
 

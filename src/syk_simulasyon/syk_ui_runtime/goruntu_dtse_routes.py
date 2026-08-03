@@ -8,6 +8,9 @@ from fastapi import (
 )
 from pydantic import BaseModel, Field
 
+from syk_core.goruntu.goruntu_kanit_baglanti import (
+    GoruntuKanitYoneticisi,
+)
 from syk_core.goruntu.goruntu_uzmani_modeli import (
     GoruntuKaydi,
     GoruntuUzmani,
@@ -19,6 +22,9 @@ from .dtse_attention_routes import (
 from .goruntu_dtse_adapter import (
     GoruntuDTSEAdapter,
 )
+from .goruntu_dtse_kanit_zinciri import (
+    GoruntuDTSEKanitZinciri,
+)
 
 
 router = APIRouter(
@@ -28,9 +34,24 @@ router = APIRouter(
 
 goruntu_uzmani = GoruntuUzmani()
 
+goruntu_kanit_yoneticisi = (
+    GoruntuKanitYoneticisi()
+)
+
+goruntu_dtse_kanit_zinciri = (
+    GoruntuDTSEKanitZinciri(
+        kanit_yoneticisi=(
+            goruntu_kanit_yoneticisi
+        ),
+    )
+)
+
 goruntu_dtse_adapter = GoruntuDTSEAdapter(
     uzman=goruntu_uzmani,
     dtse=dtse_attention_engine,
+    evidence_chain=(
+        goruntu_dtse_kanit_zinciri
+    ),
 )
 
 
@@ -204,3 +225,66 @@ def goruntu_kaydi_getir(
 @router.get("/dtse-adapter-state")
 def goruntu_dtse_durumu() -> dict:
     return goruntu_dtse_adapter.durum()
+
+@router.get(
+    "/kayitlar/{veri_kimligi}/kanit-zinciri"
+)
+def goruntu_dtse_kanit_zinciri_getir(
+    veri_kimligi: str,
+) -> dict:
+    records = (
+        goruntu_dtse_kanit_zinciri
+        .records(veri_kimligi)
+    )
+
+    if not records:
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                "Görüntü DTSE kanıt "
+                "zinciri bulunamadı."
+            ),
+        )
+
+    return {
+        "media_id": veri_kimligi,
+        "records": records,
+        "verification": (
+            goruntu_dtse_kanit_zinciri
+            .verify(veri_kimligi)
+        ),
+    }
+
+
+@router.get(
+    "/kayitlar/{veri_kimligi}/kanit-manifesti"
+)
+def goruntu_dtse_kanit_manifesti_getir(
+    veri_kimligi: str,
+) -> dict:
+    try:
+        return (
+            goruntu_dtse_kanit_zinciri
+            .manifest(veri_kimligi)
+        )
+
+    except KeyError as error:
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                "Görüntü DTSE kanıt "
+                "manifesti bulunamadı."
+            ),
+        ) from error
+
+
+@router.get(
+    "/kayitlar/{veri_kimligi}/kanit-dogrula"
+)
+def goruntu_dtse_kanit_dogrula(
+    veri_kimligi: str,
+) -> dict:
+    return (
+        goruntu_dtse_kanit_zinciri
+        .verify(veri_kimligi)
+    )
