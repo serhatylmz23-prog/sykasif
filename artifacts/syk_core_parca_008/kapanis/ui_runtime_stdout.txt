@@ -1,0 +1,1565 @@
+INFO:     127.0.0.1:60923 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61501 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61505 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61501 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61506 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61502 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61503 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61504 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61501 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61505 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61502 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61503 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61504 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61506 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61501 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61503 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61506 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61504 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61502 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61505 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61501 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61506 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61503 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61505 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61504 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61501 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61503 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61505 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61506 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61502 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61503 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61504 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61506 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61502 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61505 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61501 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61501 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61505 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61506 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61503 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61504 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61501 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61505 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61506 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61504 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61501 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-a00c68a6e75e47058eb3 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61504 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61502 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61509 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61509 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61510 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61513 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61512 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61511 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61514 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61510 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61509 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61512 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61514 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61513 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61511 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61509 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61510 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61512 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61514 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61513 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61511 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61509 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61510 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61509 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61512 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61513 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61511 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61514 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61510 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61509 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61512 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61513 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61514 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61511 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61510 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61509 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61512 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61512 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61510 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61513 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61514 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61509 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61509 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61509 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61514 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61513 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61513 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61514 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61509 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61514 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-7fffa167ea79421088b4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61517 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61517 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61518 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61520 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61519 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61521 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61522 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61517 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61518 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61521 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61522 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61519 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61520 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61517 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61518 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61521 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61522 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61520 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61519 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61517 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61518 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61521 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61522 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61520 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61519 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61517 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61518 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61521 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61522 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61519 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61520 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61518 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61517 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61521 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61522 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61521 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61518 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61517 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61520 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61522 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61522 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61520 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61520 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61522 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61522 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61520 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61522 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-8072b1fa6d67436a9209 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61520 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61520 - "GET /api/syk-ui/scientific-modules/geology HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61526 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61526 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61527 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61529 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61531 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61528 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61530 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61526 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61527 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61529 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61528 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61531 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61530 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61526 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61527 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61529 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61526 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61528 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61530 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61531 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61527 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61529 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61526 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61529 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61528 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61527 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61530 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61531 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61529 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61528 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61527 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61526 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61531 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61530 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61529 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61530 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61531 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61530 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61528 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61529 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61529 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61528 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61528 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61529 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61530 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61528 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61531 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61531 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-00f0ba2486ea4c8aaac9 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61531 - "GET /syk-ui/audio/system.wav HTTP/1.1" 206 Partial Content
+INFO:     127.0.0.1:61531 - "GET /syk-ui/audio/notification.wav HTTP/1.1" 206 Partial Content
+INFO:     127.0.0.1:61534 - "POST /api/syk-ui/device-hub/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61534 - "GET /api/syk-ui/device-sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61534 - "PATCH /api/syk-ui/device-hub/tcp%3Atest-device/connection HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61535 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61535 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61537 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61538 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61539 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61540 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61536 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61535 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61540 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61537 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61539 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61536 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61538 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61535 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61540 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61539 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61537 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61538 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61536 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61535 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61540 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61538 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61536 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61537 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61539 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61535 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61540 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61538 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61537 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61536 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61539 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61536 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61540 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61535 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61537 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61535 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61540 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61535 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61536 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61537 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61537 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61536 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61536 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61537 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61535 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61540 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61536 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-751a34a5f21a444dac59 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61537 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61537 - "GET /api/syk-ui/device-hub HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61537 - "POST /api/syk-ui/device-sessions/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61534 - "GET /api/syk-ui/device-sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61534 - "POST /api/syk-ui/device-sessions/session-49d30636c6684ea79d510f34061552e0/stop HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61543 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61543 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61544 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61547 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61545 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61548 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61546 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61543 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61544 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61548 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61545 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61547 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61546 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61543 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61544 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61547 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61548 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61545 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61546 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61543 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61544 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61546 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61547 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61548 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61543 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61545 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61546 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61547 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61544 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61548 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61543 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61545 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61544 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61547 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61546 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61546 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61544 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61545 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61543 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61547 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61547 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61547 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61543 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61543 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61547 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61546 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61546 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-bdbc32a7ff1d4c0b86cf HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61547 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61551 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61551 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61555 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61552 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61554 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61553 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61556 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61551 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61552 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61556 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61553 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61555 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61554 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61552 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61551 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61556 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61555 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61554 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61553 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61554 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61552 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61553 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61555 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61551 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61556 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61551 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61554 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61553 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61552 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61556 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61555 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61551 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61554 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61555 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61553 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61554 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61551 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61554 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61553 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61555 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61555 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61555 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61555 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61553 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61554 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61555 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61555 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61554 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-67f90a34d24a427ab0dd HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61554 - "GET /api/syk-ui/scientific-modules HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61555 - "GET /api/syk-ui/scientific-modules/soil HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61554 - "GET /api/syk-ui/scientific-modules/geology HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61551 - "GET /api/syk-ui/scientific-modules/hydro HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61553 - "GET /api/syk-ui/scientific-modules/lidar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61553 - "GET /api/syk-ui/scientific-modules/thermal HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61564 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61564 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61565 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61566 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61567 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61568 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61569 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61564 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61565 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61567 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61566 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61569 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61568 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61564 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61567 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61565 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61564 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61566 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61569 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61568 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61567 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61565 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61564 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61568 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61569 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61566 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61567 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61565 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61568 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61564 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61569 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61567 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61566 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61568 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61565 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61568 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61564 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61569 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61566 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61565 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61565 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61565 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61566 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61566 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61566 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61565 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61569 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-ed90d422c40945e59c22 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61569 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61574 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61574 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61576 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61579 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61575 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61577 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61578 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61576 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61574 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61575 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61579 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61578 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61577 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61576 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61574 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61577 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61575 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61579 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61576 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61578 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61574 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61575 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61579 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61577 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61576 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61578 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61574 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61577 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61576 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61579 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61575 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61578 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61574 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61577 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61576 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61577 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61574 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61575 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61576 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61576 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61575 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61575 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61575 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61576 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61576 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61575 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-2709e6cde6ac4b25ab24 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61576 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61582 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61582 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61586 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61583 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61585 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61587 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61584 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61582 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61586 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61582 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61587 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61585 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61584 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61583 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61585 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61582 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61587 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61586 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61584 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61583 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61585 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61587 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61586 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61584 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61583 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61582 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61585 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61583 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61582 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61586 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61584 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61587 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61585 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61583 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61584 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61585 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61583 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61586 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61587 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61584 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61584 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61584 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61584 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61584 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61584 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61587 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61586 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-500470e396e14433a2f9 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61590 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61590 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61591 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61593 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61594 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61592 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61595 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61590 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61591 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61594 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61593 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61592 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61595 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61590 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61591 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61594 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61593 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61590 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61595 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61592 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61594 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61593 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61590 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61591 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61592 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61595 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61592 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61593 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61594 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61591 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61595 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61590 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61593 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61592 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61594 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61593 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61592 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61590 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61595 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61592 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61594 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61594 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61594 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61592 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61595 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61590 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61590 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61595 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-1e4e76125d4a4cf88764 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61595 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61598 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61598 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61599 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61603 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61602 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61600 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61598 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61599 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61600 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61603 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61602 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61598 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61599 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61600 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61603 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61602 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61598 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61602 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61603 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61599 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61600 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61598 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61599 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61603 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61600 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61602 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61598 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61599 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61603 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61599 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61598 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61602 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61603 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61603 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61603 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61602 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61602 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61602 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61603 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61598 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-bc5391dcef49418a94b6 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61598 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61598 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61606 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61606 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61607 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61606 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61608 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61609 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61611 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61610 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61607 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61606 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61608 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61611 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61609 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61610 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61607 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61610 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61606 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61608 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61611 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61609 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61607 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61609 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61608 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61606 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61610 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61611 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61607 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61606 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61609 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61608 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61610 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61611 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61608 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61607 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61609 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61607 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61611 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61608 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61609 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61609 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61609 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61608 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61611 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61607 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61609 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61609 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61614 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61614 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61615 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61618 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61616 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61619 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61617 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61614 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61615 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61618 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61619 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61617 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61616 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61615 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61614 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61618 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61617 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61616 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61619 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61615 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61614 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61618 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61616 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61617 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61619 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61615 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61614 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61618 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61619 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61616 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61615 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61617 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61614 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61618 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61619 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61618 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61615 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61614 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61619 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61619 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61619 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61619 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61614 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61615 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61618 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61618 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-33967b01dbe245d7befa HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61614 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61622 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61622 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61623 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61624 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61627 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61625 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61622 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61626 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61623 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61625 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61626 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61627 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61624 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61622 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61623 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61626 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61627 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61625 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61624 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61622 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61623 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61626 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61625 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61627 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61622 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61624 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61627 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61623 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61625 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61626 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61622 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61625 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61627 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61624 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61623 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61627 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61622 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61625 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61624 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61627 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61626 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61623 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61623 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61627 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61627 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61623 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-d75a996c234e48598c21 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61623 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61623 - "PUT /api/syk-ui/mobile-offline/cache HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61627 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-d75a996c234e48598c21 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61631 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61631 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61632 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61632 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61631 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61636 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61635 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61634 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61632 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61634 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61631 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61636 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61635 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61634 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61632 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61631 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61635 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61636 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61631 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61635 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61634 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61632 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61636 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61634 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61631 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61636 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61632 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61635 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61634 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61633 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61632 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61631 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61635 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61634 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61634 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61631 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61631 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61631 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61634 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-e604c6a8c1c343fdb3fe HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61639 - "PATCH /api/syk-ui/scientific-modules/thermal HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61640 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61640 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61643 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61645 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61642 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61644 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61640 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61641 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61643 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61645 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61644 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61642 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61640 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61641 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61643 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61642 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61644 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61641 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61640 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61645 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61643 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61642 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61644 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61641 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61640 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61645 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61643 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61642 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61644 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61641 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61643 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61640 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61645 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61642 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61643 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61642 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61640 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61642 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61645 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61643 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61643 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61645 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61645 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61643 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61643 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61645 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61643 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61643 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-affce5324ec543d29519 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61643 - "GET /api/syk-ui/scientific-modules/thermal HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61639 - "PATCH /api/syk-ui/scientific-modules/thermal HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61658 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61658 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61659 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61663 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61661 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61662 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61660 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61659 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61658 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61661 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61663 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61660 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61662 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61659 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61658 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61661 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61663 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61660 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61659 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61662 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61658 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61663 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61660 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61661 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61659 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61662 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61658 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61662 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61663 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61660 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61659 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61661 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61658 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61662 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61661 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61658 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61662 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61658 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61661 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61662 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61662 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61661 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61661 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61662 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61658 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61661 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61659 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61659 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-13b88d98465f434ea087 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61659 - "GET /api/syk-ui/scientific-modules/frequency HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61667 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61667 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61668 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61672 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61669 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61671 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61670 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61667 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61669 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61672 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61671 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61670 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61668 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61667 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61672 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61669 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61671 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61670 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61668 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61667 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61672 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61669 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61667 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61670 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61671 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61668 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61672 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61667 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61669 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61670 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61671 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61668 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61672 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61669 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61667 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61672 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61669 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61672 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61667 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61669 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61669 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61669 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61667 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61672 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61672 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61667 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61672 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61667 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-05204da9b4b64193a5a7 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61667 - "GET /api/syk-ui/scientific-modules/lidar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61676 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61676 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61677 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61681 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61679 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61680 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61678 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61676 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61677 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61681 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61679 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61680 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61678 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61676 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61677 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61680 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61679 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61681 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61678 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61676 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61677 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61681 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61680 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61679 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61678 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61676 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61677 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61681 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61679 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61680 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61678 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61676 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61679 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61681 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61677 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61677 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61679 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61681 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61677 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61676 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61676 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61677 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61677 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61677 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61677 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61676 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61677 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61676 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-d4b184dbd0eb45d59684 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61676 - "GET /api/syk-ui/scientific-modules/astronomy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61685 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61685 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61686 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61688 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61687 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61690 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61689 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61685 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61687 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61689 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61690 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61686 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61688 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61685 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61687 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61690 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61689 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61688 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61686 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61685 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61687 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61689 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61686 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61690 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61688 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61689 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61685 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61688 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61690 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61689 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61687 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61686 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61685 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61689 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61687 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61689 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61685 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61689 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61686 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61687 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61687 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61686 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61686 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61687 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61689 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61685 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61685 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61689 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-28504f6183944558a646 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61689 - "GET /api/syk-ui/scientific-modules/chemistry HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61694 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61694 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61698 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61695 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61699 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61696 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61697 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61694 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61695 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61698 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61699 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61696 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61697 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61694 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61695 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61699 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61696 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61698 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61697 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61694 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61695 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61696 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61699 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61698 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61694 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61695 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61697 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61699 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61698 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61696 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61697 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61694 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61699 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61695 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61696 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61695 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61699 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61695 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61694 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61696 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61696 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61694 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61696 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61694 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61696 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61694 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61696 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61696 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-4ecf833615da42f499ca HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61696 - "GET /api/syk-ui/scientific-modules/spectral HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61703 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61703 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61706 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61708 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61704 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61707 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61705 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61703 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61705 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61703 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61706 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61704 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61707 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61708 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61705 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61708 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61704 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61707 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61706 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61703 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61706 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61703 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61705 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61707 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61704 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61708 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61706 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61707 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61704 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61705 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61708 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61703 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61706 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61707 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61704 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61706 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61707 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61706 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61703 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61704 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61704 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61703 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61703 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61704 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61703 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61704 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61703 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-4e9294b58ca244e891e8 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61704 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61704 - "GET /api/syk-ui/scientific-modules/thermal HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61712 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61712 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61713 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61714 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61715 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61717 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61716 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61714 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61713 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61715 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61712 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61717 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61716 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61714 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61713 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61715 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61716 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61717 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61712 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61714 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61715 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61713 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61716 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61714 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61712 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61717 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61713 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61716 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61715 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61717 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61714 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61712 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61713 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61715 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61716 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61715 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61712 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61715 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61716 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61713 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61713 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61716 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61716 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61713 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61715 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61713 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61715 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61713 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-0316397ca08e4264ac99 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61713 - "GET /api/syk-ui/scientific-modules/magnetometer HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61721 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61721 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61725 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61726 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61721 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61724 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61722 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61723 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61722 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61721 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61726 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61723 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61725 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61724 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61722 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61725 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61726 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61721 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61724 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61723 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61722 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61723 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61724 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61725 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61722 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61721 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61726 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61723 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61722 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61721 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61726 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61725 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61724 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61723 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61722 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61723 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61726 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61724 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61723 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61722 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61722 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61723 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61723 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61722 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61724 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61726 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61724 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61726 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-4ed4f12f4ca346799bce HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61726 - "GET /api/syk-ui/scientific-modules/gravimeter HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61730 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61730 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61731 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61733 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61734 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61735 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61732 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61730 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61731 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61734 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61733 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61732 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61735 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61730 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61732 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61733 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61731 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61734 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61735 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61732 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61733 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61730 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61734 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61731 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61735 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61732 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61733 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61731 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61730 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61735 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61734 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61731 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61732 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61733 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61730 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61732 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61730 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61733 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61732 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61731 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61731 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61732 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61732 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61731 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61733 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61730 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61732 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61732 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-ffac9951c6a74e1a9eab HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61732 - "GET /api/syk-ui/scientific-modules/ert HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61739 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61739 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61744 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61741 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61740 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61742 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61743 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61744 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61739 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61740 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61742 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61743 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61741 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61744 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61743 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61741 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61740 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61742 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61739 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61741 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61740 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61744 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61742 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61739 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61743 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61741 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61739 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61740 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61743 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61742 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61744 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61741 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61740 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61744 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61739 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61744 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61740 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61744 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61741 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61739 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61739 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61741 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61741 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61739 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61744 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61740 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61744 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61740 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-020bd20ffca34f42a37d HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61740 - "GET /api/syk-ui/scientific-modules/gpr HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61748 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61753 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61749 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61748 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61752 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61751 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61750 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61749 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61748 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61752 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61751 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61750 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61753 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61753 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61748 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61749 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61750 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61752 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61751 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61748 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61751 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61753 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61752 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61749 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61750 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61751 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61750 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61753 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61749 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61752 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61748 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61749 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61753 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61750 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61751 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61750 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61751 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61750 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61753 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61749 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61749 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61753 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61753 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61749 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61750 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61753 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61750 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61753 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-75bb76f48e0a4bf38ef5 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61753 - "GET /api/syk-ui/scientific-modules/seismic HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61757 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61757 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61758 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61762 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61760 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61761 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61759 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61757 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61758 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61762 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61759 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61760 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61761 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61757 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61758 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61759 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61762 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61761 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61760 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61757 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61758 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61759 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61760 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61762 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61761 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61757 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61758 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61760 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61759 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61761 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61757 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61762 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61758 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61760 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61761 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61760 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61757 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61760 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61762 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61761 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61761 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61761 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61762 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61761 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61760 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61757 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61760 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61757 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-34bb410045dc4e4697fd HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61757 - "GET /api/syk-ui/scientific-modules/hydro HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61766 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61766 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61767 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61770 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61769 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61771 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61768 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61766 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61767 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61769 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61770 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61768 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61771 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61766 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61767 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61771 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61769 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61766 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61770 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61768 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61767 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61769 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61771 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61766 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61768 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61770 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61767 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61768 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61770 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61766 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61771 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61769 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61767 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61767 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61769 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61769 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61771 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61767 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61769 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61766 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61766 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61767 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61767 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61766 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61769 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61771 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61769 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61771 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-618356140114493ab41a HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61771 - "GET /api/syk-ui/scientific-modules/botany HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61775 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61775 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61777 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61778 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61780 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61776 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61779 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61777 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61775 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61778 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61780 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61776 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61779 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61777 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61775 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61778 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61780 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61779 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61777 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61776 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61775 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61780 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61778 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61779 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61777 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61776 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61775 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61780 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61778 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61777 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61779 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61776 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61780 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61775 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61779 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61775 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61780 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61775 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61779 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61780 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61780 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61779 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61779 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61780 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61779 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61780 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61779 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61780 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-261e3ed0c2f74dc093b9 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61780 - "GET /api/syk-ui/scientific-modules/soil HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61784 - "GET /syk-ui-screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61784 - "GET /syk-ui/css/app.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61788 - "GET /syk-ui/css/dtse_attention_overlay.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61789 - "GET /syk-ui/css/dtse_evidence_card.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61786 - "GET /syk-ui/css/scientific_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61785 - "GET /syk-ui/css/module_views.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61784 - "GET /syk-ui/css/dtse_evidence_focus.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61787 - "GET /syk-ui/css/device_hub.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61785 - "GET /syk-ui/css/media_upload_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61788 - "GET /syk-ui/css/dtse_evidence_scientific_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61789 - "GET /syk-ui/css/adaptive_environment.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61784 - "GET /syk-ui/css/theme_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61786 - "GET /syk-ui/css/mobile_sensor_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61787 - "GET /syk-ui/css/mobile_device_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61784 - "GET /syk-ui/css/mobile_offline_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61787 - "GET /syk-ui/js/dtse_attention_overlay.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61789 - "GET /syk-ui/js/dtse_evidence_card.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61785 - "GET /syk-ui/css/mobile_control_panel.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61786 - "GET /syk-ui/css/kasif_icon_runtime.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61788 - "GET /syk-ui/js/dtse_evidence_focus.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61784 - "GET /syk-ui/js/dtse_evidence_scientific_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61787 - "GET /syk-ui/js/media_upload_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61786 - "GET /syk-ui/js/adaptive_environment.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61785 - "GET /syk-ui/js/theme_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61789 - "GET /syk-ui/js/mobile_device_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61788 - "GET /syk-ui/js/jarmin_integration.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61787 - "GET /syk-ui/js/mobile_sensor_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61786 - "GET /syk-ui/js/mobile_control_panel.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61784 - "GET /syk-ui/js/mobile_offline_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61789 - "GET /syk-ui/js/scientific_api_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61788 - "GET /syk-ui/js/scientific_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61785 - "GET /syk-ui/js/kasif_icon_runtime.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61786 - "GET /syk-ui/js/module_views.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61787 - "GET /syk-ui/js/device_hub.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61784 - "GET /syk-ui/js/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61787 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61786 - "POST /api/syk-ui/mobile-runtime/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61784 - "GET /api/syk-ui/runtime-state HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61787 - "POST /api/syk-ui/mobile-control/devices HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61786 - "GET /api/syk-ui/kasif-icons/manifest HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61786 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61786 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61787 - "GET /api/syk-ui/environment/current HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61784 - "PATCH /api/syk-ui/mobile-offline/online HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61784 - "POST /api/syk-ui/themes/automatic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61787 - "POST /api/syk-ui/jarmin/integration/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61786 - "PATCH /api/syk-ui/mobile-sensors/permissions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61784 - "PATCH /api/syk-ui/mobile-control/devices/SYK-WEB-d43bfa0d11a2496380dd HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61784 - "GET /api/syk-ui/scientific-modules/water HTTP/1.1" 200 OK
