@@ -1,0 +1,37 @@
+SYK GERÇEK APP KURULUM ZİNCİRİ
+
+TESTLERİN KULLANDIĞI APP MODÜLLERİ
+tests/test_jarmin_integration_api.py:3 | from syk_simulasyon.runtime_ui_sunucusu import app
+tests/test_spr_006_mobile_runtime_closure.py:5 | from syk_simulasyon.runtime_ui_sunucusu import app
+tests/test_ui_kasif_icon_api.py:3 | from syk_simulasyon.runtime_ui_sunucusu import app
+tests/test_ui_mobile_control_api.py:3 | from syk_simulasyon.runtime_ui_sunucusu import app
+tests/test_ui_mobile_device_runtime_api.py:3 | from syk_simulasyon.runtime_ui_sunucusu import app
+tests/test_ui_mobile_offline_runtime_api.py:3 | from syk_simulasyon.runtime_ui_sunucusu import app
+tests/test_ui_mobile_sensor_runtime_api.py:5 | from syk_simulasyon.runtime_ui_sunucusu import app
+
+RUNTIME APP NESNELERİ
+{"app_id": 2152490864992, "app_turu": "fastapi.applications.FastAPI", "basarili": true, "modul": "syk_simulasyon.runtime_ui_sunucusu", "yol_sayisi": 19, "yollar": ["/cikis", "/docs", "/docs/oauth2-redirect", "/giris", "/openapi.json", "/redoc", "/runtime/cihaz-iptal", "/runtime/csv", "/runtime/health", "/runtime/html", "/runtime/ilk-kurulum", "/runtime/json", "/runtime/markdown", "/runtime/oturum", "/runtime/xml", "/runtime/yaml", "/syk-ui", "/terminal", "/ws/runtime"]}
+
+RUNTIME_UI_SUNUCUSU APP ATAMALARI
+{"cagri": "_mevcut_uygulamayi_bul", "hedefler": ["app"], "satir": 43}
+
+RUNTIME_UI_SUNUCUSU ROUTER/MOUNT ÇAĞRILARI
+{"anahtarlar": {}, "argumanlar": ["finans_router"], "cagri": "app.include_router", "satir": 48}
+
+API_ROUTES ROUTER ATAMALARI
+{"cagri": "APIRouter", "hedefler": ["router"], "satir": 51}
+
+API_ROUTES INCLUDE ROUTER ÇAĞRILARI
+{"anahtarlar": {}, "argumanlar": ["dtse_attention_router"], "cagri": "router.include_router", "satir": 1077}
+{"anahtarlar": {}, "argumanlar": ["goruntu_dtse_router"], "cagri": "router.include_router", "satir": 1085}
+{"anahtarlar": {}, "argumanlar": ["media_upload_router"], "cagri": "router.include_router", "satir": 1092}
+{"anahtarlar": {}, "argumanlar": ["adaptive_environment_router"], "cagri": "router.include_router", "satir": 1099}
+{"anahtarlar": {}, "argumanlar": ["theme_router"], "cagri": "router.include_router", "satir": 1106}
+{"anahtarlar": {}, "argumanlar": ["kasif_icon_router"], "cagri": "router.include_router", "satir": 1110}
+{"anahtarlar": {}, "argumanlar": ["mobile_control_router"], "cagri": "router.include_router", "satir": 1114}
+{"anahtarlar": {}, "argumanlar": ["mobile_device_router"], "cagri": "router.include_router", "satir": 1118}
+{"anahtarlar": {}, "argumanlar": ["mobile_offline_router"], "cagri": "router.include_router", "satir": 1122}
+{"anahtarlar": {}, "argumanlar": ["mobile_sensor_router"], "cagri": "router.include_router", "satir": 1126}
+{"anahtarlar": {}, "argumanlar": ["jarmin_integration_router"], "cagri": "router.include_router", "satir": 1130}
+
+RAPOR SHA-256: 377a9fa36412dbb79f792be52d031507f35e8110f9fe6e924a19386c7245d68b

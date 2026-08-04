@@ -1,0 +1,62 @@
+{
+  "dogrudan_erisim_acik_sayfa_sayisi": 0,
+  "inceleme_zamani": "2026-08-03T21:11:15.909218+00:00",
+  "karar": "Belgelendirilmiş ve izinli veri adresi doğrulanmadan üretim bağlantısı etkinleştirilmeyecektir.",
+  "kaynak": "Takasbank TEFAS resmî sitesi",
+  "olasi_veri_adresleri": [],
+  "schema": "syfinans-tefas-resmi-kaynak-inceleme/v1",
+  "sonuc": "resmi_sayfa_incelendi",
+  "sonuclar": [
+    {
+      "ad": "fon_analiz",
+      "baglanti_sayisi": 0,
+      "baslangic_zamani": "2026-08-03T21:11:15.491992+00:00",
+      "betik_sayisi": 2,
+      "betikler": [
+        "https://www.tefas.gov.tr/TSPD/08ce165641ab2000bd4bc43d4f96bed24e2d85cf817667f9d2e98660d15838b08a004dbc8a9b4a4b?type=11",
+        "https://www.tefas.gov.tr/TSPD/08ce165641ab2000bd4bc43d4f96bed24e2d85cf817667f9d2e98660d15838b08a004dbc8a9b4a4b?type=12"
+      ],
+      "bitis_zamani": "2026-08-03T21:11:15.703998+00:00",
+      "durum": "yanit_alindi",
+      "erisim_reddi_algilandi": true,
+      "form_sayisi": 0,
+      "formlar": [],
+      "gecen_saniye": 0.212,
+      "ham_yanit_dosyasi": "artifacts\\tefas_resmi_yanitlar\\fon_analiz.html",
+      "http_durum_kodu": 200,
+      "icerik_turu": "text/html",
+      "istenen_adres": "https://www.tefas.gov.tr/FonAnaliz.aspx",
+      "javascript_gerekli": true,
+      "olasi_veri_adresleri": [],
+      "son_adres": "https://www.tefas.gov.tr/FonAnaliz.aspx",
+      "yanit_boyutu": 5719,
+      "yanit_sha256": "afe95b1e238a031a11b21d61a379b04f14053895b53d9fce7a14f890a192c8ca"
+    },
+    {
+      "ad": "fon_karsilastirma",
+      "baglanti_sayisi": 0,
+      "baslangic_zamani": "2026-08-03T21:11:15.704288+00:00",
+      "betik_sayisi": 2,
+      "betikler": [
+        "https://www.tefas.gov.tr/TSPD/08ce165641ab2000bd4bc43d4f96bed24e2d85cf817667f9d2e98660d15838b08a004dbc8a9b4a4b?type=11",
+        "https://www.tefas.gov.tr/TSPD/08ce165641ab2000bd4bc43d4f96bed24e2d85cf817667f9d2e98660d15838b08a004dbc8a9b4a4b?type=12"
+      ],
+      "bitis_zamani": "2026-08-03T21:11:15.908888+00:00",
+      "durum": "yanit_alindi",
+      "erisim_reddi_algilandi": true,
+      "form_sayisi": 0,
+      "formlar": [],
+      "gecen_saniye": 0.205,
+      "ham_yanit_dosyasi": "artifacts\\tefas_resmi_yanitlar\\fon_karsilastirma.html",
+      "http_durum_kodu": 200,
+      "icerik_turu": "text/html",
+      "istenen_adres": "https://www.tefas.gov.tr/FonKarsilastirma.aspx",
+      "javascript_gerekli": true,
+      "olasi_veri_adresleri": [],
+      "son_adres": "https://www.tefas.gov.tr/FonKarsilastirma.aspx",
+      "yanit_boyutu": 5719,
+      "yanit_sha256": "915b8e211add37f6c6377513d6455799f0abfa5e7d11baae01819e835f05ff4e"
+    }
+  ],
+  "yanit_alinan_sayfa_sayisi": 2
+}

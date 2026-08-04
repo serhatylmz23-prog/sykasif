@@ -1,0 +1,13 @@
+﻿{
+    "representative_test":  "D:\\sykasif_repo\\sykasif\\tests\\test_ui_canli_tarayici.py",
+    "ports":  [
+                  "8013"
+              ],
+    "urls":  [
+                 "http://127.0.0.1:8013/syk-ui-screen",
+                 "https://`",
+                 "https://bugs.chromium.org/p/chromium/issues/detail?id=761295",
+                 "https://developer.mozilla.org/en-US/docs/Web/API/URL/URL"
+             ],
+    "exit_code":  1
+}

@@ -1,0 +1,157 @@
+{
+  "kaynak_sayisi": 7,
+  "kaynaklar": [
+    {
+      "boyut": 1195,
+      "dosya": "src/syk_core/kanit/guven_motoru.py",
+      "fonksiyonlar": [],
+      "sha256": "86724a555bb1e0f05f2cfe27f0d7ef80813beefd44c153ef473c8250e45df780",
+      "siniflar": [
+        "DegerlendirmeKaydi",
+        "GuvenHesapMotoru"
+      ]
+    },
+    {
+      "boyut": 1591,
+      "dosya": "src/syk_core/kanit/kanit_arsiv_modeli.py",
+      "fonksiyonlar": [],
+      "sha256": "a2a0d49d9abe1c0d57130ec209fe271d3ded9b34b6b985d42f25b89166f2ac63",
+      "siniflar": [
+        "KanitArsivYoneticisi",
+        "KanitKaydi"
+      ]
+    },
+    {
+      "boyut": 1877,
+      "dosya": "src/syk_core/kanit/kaynak_modeli.py",
+      "fonksiyonlar": [],
+      "sha256": "fd7f0f1d6ad8d3f079a745f7ecdff8f86fac4ba743b1aa2f8921eacf33f9cba0",
+      "siniflar": [
+        "KanitHatasi",
+        "KanitKaynakYoneticisi",
+        "KaynakKaydi"
+      ]
+    },
+    {
+      "boyut": 1545,
+      "dosya": "src/syk_core/kanit/kaynak_tarama_modeli.py",
+      "fonksiyonlar": [],
+      "sha256": "8e334c3bf51db9d931126b9b523e3316c8b1a96dca008e563fbd1d7bb6472d04",
+      "siniflar": [
+        "KaynakTarama",
+        "KaynakTaramaYoneticisi"
+      ]
+    },
+    {
+      "boyut": 803,
+      "dosya": "src/syk_core/kanit/kaynak_turleri.py",
+      "fonksiyonlar": [],
+      "sha256": "228c8561af74029a49c4e08b5e49362d28c4dda6f013cf8b07bafe325d4c5cf8",
+      "siniflar": [
+        "KaynakTurYonetici",
+        "KaynakTuru"
+      ]
+    },
+    {
+      "boyut": 1667,
+      "dosya": "src/syk_core/laboratuvar/materyal_derin_analiz.py",
+      "fonksiyonlar": [],
+      "sha256": "93350b1407d22fa8422106dbc8257c11f2bb5b4c6657c0c4fefdfdc6dfd5b55e",
+      "siniflar": [
+        "DerinlikAnalizi",
+        "MateryalDerinAnaliz",
+        "MateryalDerinAnalizYoneticisi"
+      ]
+    },
+    {
+      "boyut": 1343,
+      "dosya": "src/syk_core/laboratuvar/materyal_modeli.py",
+      "fonksiyonlar": [],
+      "sha256": "5f16ec65b5ac74eee1f5a76b110657ede9b78a40da3ceab0b529ac35482d6488",
+      "siniflar": [
+        "MateryalKaydi",
+        "MateryalLaboratuvarYoneticisi"
+      ]
+    }
+  ],
+  "test_dosyasi_sayisi": 7,
+  "testler": [
+    {
+      "boyut": 934,
+      "dosya": "tests/test_guven_motoru.py",
+      "fonksiyonlar": [
+        "test_celiski_kaydi_isaretlenir",
+        "test_celiski_puani_dusurur",
+        "test_guven_puani_hesaplanir"
+      ],
+      "sha256": "c92500f283ce97db423ad3a103a11b51395f1f4721223d6cf4b2044f31969a7f",
+      "siniflar": []
+    },
+    {
+      "boyut": 1177,
+      "dosya": "tests/test_kanit_arsiv_modeli.py",
+      "fonksiyonlar": [
+        "test_gereksiz_veri_arsiv_disina_alinir",
+        "test_kanit_kaydedilir",
+        "test_uzman_incelemesi_tutulur"
+      ],
+      "sha256": "1ebc0fc86b70f9c6acbc33f1b3a4ef8318c15954a70cbf09eb7ea608eb271441",
+      "siniflar": []
+    },
+    {
+      "boyut": 1398,
+      "dosya": "tests/test_kaynak_modeli.py",
+      "fonksiyonlar": [
+        "test_celiski_ve_uzman_notu_kaydedilir",
+        "test_guven_puani_guncellenir",
+        "test_kaynak_eklenir"
+      ],
+      "sha256": "3bcdf6cb616e12898099888d33246c323d70242bd834cd5b101a7fcfa75476d8",
+      "siniflar": []
+    },
+    {
+      "boyut": 1179,
+      "dosya": "tests/test_kaynak_tarama_modeli.py",
+      "fonksiyonlar": [
+        "test_kaynak_analizi_tamamlanir",
+        "test_kaynak_tarama_eklenir",
+        "test_ogrenme_havuzu_veri_tutar"
+      ],
+      "sha256": "e2f8f731ad40f10ab3810ffb9a68938b10434e29ef26eb86792372afd5e71c87",
+      "siniflar": []
+    },
+    {
+      "boyut": 1062,
+      "dosya": "tests/test_kaynak_turleri.py",
+      "fonksiyonlar": [
+        "test_aktif_kaynaklar_getirilir",
+        "test_alt_kaynaklar_tutulur",
+        "test_kaynak_turu_eklenir"
+      ],
+      "sha256": "22e5ec216830bf98942986c6e222b30f53f28409553f1d6b2c3e34227806fee9",
+      "siniflar": []
+    },
+    {
+      "boyut": 1340,
+      "dosya": "tests/test_materyal_derin_analiz.py",
+      "fonksiyonlar": [
+        "test_derin_analiz_kaydi",
+        "test_fizik_kimya_verisi",
+        "test_sensor_ve_frekans_kaydi"
+      ],
+      "sha256": "2de9004fd8dda298de649f16eae2ee030f3b0cd7ab72aabe9768c8834d017c65",
+      "siniflar": []
+    },
+    {
+      "boyut": 1466,
+      "dosya": "tests/test_materyal_modeli.py",
+      "fonksiyonlar": [
+        "test_alasim_verisi_tutulur",
+        "test_laboratuvar_verileri_eklenir",
+        "test_materyal_kaydedilir"
+      ],
+      "sha256": "23ef113bb0896edd37d8afae9486d2e58a932869e929db6af10d57f2a32ff432",
+      "siniflar": []
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+INFO:     Started server process [10144]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8013 (Press CTRL+C to quit)
+INFO:     127.0.0.1:62094 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62095 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62263 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62264 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62271 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62272 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Varolan bir baðlantý uzaktaki bir ana bilgisayar tarafýndan zorla kapatýldý
+INFO:     127.0.0.1:62279 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62280 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62281 - "WebSocket /api/syk-ui/scientific-modules/geology/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62288 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62289 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62297 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62298 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62305 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62306 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62314 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62315 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62316 - "WebSocket /api/syk-ui/scientific-modules/geology/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62317 - "WebSocket /api/syk-ui/scientific-modules/soil/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62318 - "WebSocket /api/syk-ui/scientific-modules/lidar/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62319 - "WebSocket /api/syk-ui/scientific-modules/hydro/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62320 - "WebSocket /api/syk-ui/scientific-modules/thermal/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62327 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62328 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62329 - "WebSocket /api/syk-ui/scientific-modules/thermal/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62330 - "WebSocket /api/syk-ui/scientific-modules/spectral/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62337 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62338 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62345 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62346 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62353 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62354 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62355 - "WebSocket /api/syk-ui/scientific-modules/thermal/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62370 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62371 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62372 - "WebSocket /api/syk-ui/scientific-modules/frequency/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62379 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62380 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62381 - "WebSocket /api/syk-ui/scientific-modules/lidar/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62388 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62389 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62390 - "WebSocket /api/syk-ui/scientific-modules/astronomy/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62397 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62398 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62399 - "WebSocket /api/syk-ui/scientific-modules/chemistry/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62406 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62407 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62408 - "WebSocket /api/syk-ui/scientific-modules/spectral/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62415 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62416 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62417 - "WebSocket /api/syk-ui/scientific-modules/thermal/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62424 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62425 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62427 - "WebSocket /api/syk-ui/scientific-modules/magnetometer/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62435 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62436 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62437 - "WebSocket /api/syk-ui/scientific-modules/gravimeter/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62444 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62445 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62447 - "WebSocket /api/syk-ui/scientific-modules/ert/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62454 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62455 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62457 - "WebSocket /api/syk-ui/scientific-modules/gpr/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62464 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62465 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62466 - "WebSocket /api/syk-ui/scientific-modules/seismic/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62473 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62474 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62475 - "WebSocket /api/syk-ui/scientific-modules/hydro/live" [accepted]
+INFO:     connection open
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Varolan bir baðlantý uzaktaki bir ana bilgisayar tarafýndan zorla kapatýldý
+INFO:     127.0.0.1:62482 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62483 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62484 - "WebSocket /api/syk-ui/scientific-modules/botany/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62491 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62492 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62493 - "WebSocket /api/syk-ui/scientific-modules/soil/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62500 - "WebSocket /api/syk-ui/dtse/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62501 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:62502 - "WebSocket /api/syk-ui/scientific-modules/water/live" [accepted]
+INFO:     connection open

@@ -1,0 +1,528 @@
+[
+  {
+    "assignments": [
+      "aday",
+      "app",
+      "fabrika",
+      "yollar"
+    ],
+    "decorators": [],
+    "functions": [
+      "_mevcut_uygulamayi_bul",
+      "_syk_uygulama_yolu_var",
+      "_ui_kurulu_mu"
+    ],
+    "imports": [
+      "__future__.annotations",
+      "fastapi.FastAPI",
+      "runtime_fastapi_sunucusu",
+      "syk_simulasyon.syk_ui_runtime.api_routes.router",
+      "syk_simulasyon.syk_ui_runtime.syfinans_runtime_routes.finans_router",
+      "syk_ui.install_ui"
+    ],
+    "module": "syk_simulasyon.runtime_ui_sunucusu",
+    "path": "src\\syk_simulasyon\\runtime_ui_sunucusu.py"
+  },
+  {
+    "assignments": [
+      "INDEX",
+      "ROOT",
+      "router"
+    ],
+    "decorators": [
+      "router.get('/syk-ui-screen', include_in_schema=False)"
+    ],
+    "functions": [
+      "get_ui_screen"
+    ],
+    "imports": [
+      "fastapi.APIRouter",
+      "fastapi.responses.FileResponse",
+      "pathlib.Path"
+    ],
+    "module": "syk_simulasyon.syk_ui_runtime.screen_routes",
+    "path": "src\\syk_simulasyon\\syk_ui_runtime\\screen_routes.py"
+  },
+  {
+    "assignments": [
+      "client",
+      "css",
+      "durum",
+      "ekran",
+      "ikinci_durum",
+      "ikinci_ekran",
+      "ilk_durum",
+      "ilk_ekran",
+      "javascript"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_ui_mevcut_fastapi_sunucusuna_baglanir",
+      "test_ui_rotalari_ardisik_cagrilarda_kararlidir"
+    ],
+    "imports": [
+      "fastapi.testclient.TestClient",
+      "syk_simulasyon.runtime_ui_sunucusu.app"
+    ],
+    "module": null,
+    "path": "tests\\test_runtime_ui_sunucusu.py"
+  },
+  {
+    "assignments": [
+      "brightness",
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_meteoroloji_ekrana_uygulanir"
+    ],
+    "imports": [
+      "json",
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_adaptive_environment_tarayici.py"
+  },
+  {
+    "assignments": [
+      "app",
+      "app_js",
+      "client",
+      "css",
+      "ekran",
+      "javascript"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_balik_rehberi_ve_syframe_modulleri"
+    ],
+    "imports": [
+      "fastapi.FastAPI",
+      "fastapi.testclient.TestClient",
+      "syk_simulasyon.syk_ui.install_ui"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_balik_syframe_modulleri.py"
+  },
+  {
+    "assignments": [
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_balik_rehberi_ve_syframe_canli"
+    ],
+    "imports": [
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_balik_syframe_tarayici.py"
+  },
+  {
+    "assignments": [
+      "MODULE_BUTTONS",
+      "module_view",
+      "url"
+    ],
+    "decorators": [
+      "pytest.mark.parametrize(('button_name', 'screen_title'), MODULE_BUTTONS)"
+    ],
+    "functions": [
+      "test_bilimsel_modul_canli_tarayıcı"
+    ],
+    "imports": [
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect",
+      "pytest"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_bilimsel_moduller_tarayici.py"
+  },
+  {
+    "assignments": [
+      "SCIENTIFIC_MODULES",
+      "app",
+      "client",
+      "css",
+      "javascript",
+      "module_views",
+      "screen"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_bilimsel_modul_ekranlari_toplu_kodlandi"
+    ],
+    "imports": [
+      "fastapi.FastAPI",
+      "fastapi.testclient.TestClient",
+      "syk_simulasyon.syk_ui.install_ui"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_bilimsel_moduller_toplu.py"
+  },
+  {
+    "assignments": [
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_syk_ui_canli_tarayıcı_dogrulamasi"
+    ],
+    "imports": [
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_canli_tarayici.py"
+  },
+  {
+    "assignments": [
+      "app",
+      "client",
+      "javascript",
+      "live",
+      "payload",
+      "runtime",
+      "screen"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_ui_dashboard_ve_canli_websocket"
+    ],
+    "imports": [
+      "fastapi.FastAPI",
+      "fastapi.testclient.TestClient",
+      "syk_simulasyon.syk_ui.install_ui"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_dashboard_canli.py"
+  },
+  {
+    "assignments": [
+      "app",
+      "client",
+      "css",
+      "javascript",
+      "module_views",
+      "screen"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_device_hub_tarayıcı_dosyalari"
+    ],
+    "imports": [
+      "fastapi.FastAPI",
+      "fastapi.testclient.TestClient",
+      "syk_simulasyon.syk_ui.install_ui"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_device_hub_assets.py"
+  },
+  {
+    "assignments": [
+      "DEVICE_ID",
+      "active",
+      "base_url",
+      "card",
+      "connection",
+      "module_view",
+      "record_button",
+      "register",
+      "response",
+      "screen_url",
+      "sessions",
+      "stopped"
+    ],
+    "decorators": [],
+    "functions": [
+      "_aktif_test_oturumlarini_durdur",
+      "test_device_hub_canli_tarayıcı"
+    ],
+    "imports": [
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_device_hub_tarayici.py"
+  },
+  {
+    "assignments": [
+      "base_url",
+      "card",
+      "media_id",
+      "screen_url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_dtse_kanit_karti_canli_tarayıcı"
+    ],
+    "imports": [
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_dtse_evidence_card_tarayici.py"
+  },
+  {
+    "assignments": [
+      "panel",
+      "stage",
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_kanit_karti_bolgeye_odaklanir_ve_sekmeleri_acar"
+    ],
+    "imports": [
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_dtse_evidence_focus_tarayici.py"
+  },
+  {
+    "assignments": [
+      "inventory",
+      "module_id",
+      "runtime_view",
+      "spectral_view",
+      "state",
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_dtse_odak_paneli_bilimsel_runtime_verisi_gosterir"
+    ],
+    "imports": [
+      "json",
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_dtse_evidence_scientific_runtime_tarayici.py"
+  },
+  {
+    "assignments": [
+      "icons",
+      "kasif_icon",
+      "manifest",
+      "map_icon",
+      "snapshot",
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_kasif_ikonlari_dinamik_uretilir"
+    ],
+    "imports": [
+      "json",
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_kasif_icon_tarayici.py"
+  },
+  {
+    "assignments": [
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_konum_canli_hava_ve_ay_uygulanir"
+    ],
+    "imports": [
+      "json",
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_live_environment_tarayici.py"
+  },
+  {
+    "assignments": [
+      "preview",
+      "result",
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_isaretli_goruntu_ana_panelde_gosterilir"
+    ],
+    "imports": [
+      "json",
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_media_upload_preview_tarayici.py"
+  },
+  {
+    "assignments": [
+      "file_input",
+      "panel",
+      "result",
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_goruntu_yukleme_paneli_rapor_linki_uretir"
+    ],
+    "imports": [
+      "json",
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_media_upload_tarayici.py"
+  },
+  {
+    "assignments": [
+      "panel",
+      "snapshot",
+      "toggle",
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_telefon_kontrol_paneli_tarayıcıda_calısır"
+    ],
+    "imports": [
+      "json",
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_mobile_control_tarayici.py"
+  },
+  {
+    "assignments": [
+      "body",
+      "columns",
+      "snapshot",
+      "target",
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_telefon_yerlesimi_tarayıcıda_uygulanir"
+    ],
+    "imports": [
+      "json",
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_mobile_device_runtime_tarayici.py"
+  },
+  {
+    "assignments": [
+      "result",
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_cevrimdisi_runtime_tarayıcıda_yuklenir"
+    ],
+    "imports": [
+      "json",
+      "os",
+      "playwright.sync_api.Page"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_mobile_offline_runtime_tarayici.py"
+  },
+  {
+    "assignments": [
+      "result",
+      "url"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_mobil_sensor_runtime_tarayıcıda_yuklenir"
+    ],
+    "imports": [
+      "json",
+      "os",
+      "playwright.sync_api.Page"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_mobile_sensor_runtime_tarayici.py"
+  },
+  {
+    "assignments": [
+      "base_url",
+      "module_view",
+      "reset_response",
+      "screen_url",
+      "update_response"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_bilimsel_ekran_api_ve_websocket_canli"
+    ],
+    "imports": [
+      "os",
+      "playwright.sync_api.Page",
+      "playwright.sync_api.expect"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_scientific_api_tarayici.py"
+  },
+  {
+    "assignments": [
+      "app",
+      "client",
+      "javascript",
+      "module_views",
+      "screen"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_bilimsel_api_tabanli_tarayıcı_dosyaları"
+    ],
+    "imports": [
+      "fastapi.FastAPI",
+      "fastapi.testclient.TestClient",
+      "syk_simulasyon.syk_ui.install_ui"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_scientific_api_views.py"
+  },
+  {
+    "assignments": [
+      "app",
+      "client",
+      "css",
+      "javascript",
+      "runtime",
+      "screen"
+    ],
+    "decorators": [],
+    "functions": [
+      "test_ui_toplu_entegrasyon"
+    ],
+    "imports": [
+      "fastapi.FastAPI",
+      "fastapi.testclient.TestClient",
+      "syk_simulasyon.syk_ui.install_ui"
+    ],
+    "module": null,
+    "path": "tests\\test_ui_toplu_entegrasyon.py"
+  }
+]

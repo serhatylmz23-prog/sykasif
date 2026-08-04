@@ -1,0 +1,97 @@
+SYK ALT ROUTER ENDPOINT EŞLEŞTİRME
+
+ROUTER: mobile_control
+MODÜL: syk_simulasyon.syk_ui_runtime.mobile_control_routes
+PREFIX: /mobile-control
+ROUTE SAYISI: 6
+  GET /mobile-control | get_mobile_control_runtime
+  GET /mobile-control/devices | list_mobile_controls
+  POST /mobile-control/devices | register_mobile_control
+  GET /mobile-control/devices/{device_id} | get_mobile_control
+  PATCH /mobile-control/devices/{device_id} | update_mobile_control
+  POST /mobile-control/devices/{device_id}/reset | reset_mobile_control
+
+ROUTER: mobile_device
+MODÜL: syk_simulasyon.syk_ui_runtime.mobile_device_routes
+PREFIX: /mobile-runtime
+ROUTE SAYISI: 8
+  GET /mobile-runtime | get_mobile_runtime
+  GET /mobile-runtime/devices | list_mobile_devices
+  POST /mobile-runtime/devices | register_mobile_device
+  DELETE /mobile-runtime/devices/{device_id} | deactivate_mobile_device
+  GET /mobile-runtime/devices/{device_id} | get_mobile_device
+  PATCH /mobile-runtime/devices/{device_id} | update_mobile_device
+  PATCH /mobile-runtime/devices/{device_id}/trust | trust_mobile_device
+  POST /mobile-runtime/layout | resolve_mobile_layout
+
+ROUTER: mobile_offline
+MODÜL: syk_simulasyon.syk_ui_runtime.mobile_offline_routes
+PREFIX: /mobile-offline
+ROUTE SAYISI: 18
+  GET /mobile-offline | get_offline_runtime
+  GET /mobile-offline/cache | list_cache
+  PUT /mobile-offline/cache | put_cache
+  DELETE /mobile-offline/cache/{cache_key} | delete_cache
+  GET /mobile-offline/cache/{cache_key} | get_cache
+  PATCH /mobile-offline/online | set_online_state
+  GET /mobile-offline/pairings | list_pairings
+  POST /mobile-offline/pairings | create_pairing
+  POST /mobile-offline/pairings/confirm | confirm_pairing
+  POST /mobile-offline/pairings/verify | verify_pairing
+  DELETE /mobile-offline/pairings/{pairing_id} | revoke_pairing
+  DELETE /mobile-offline/queue | remove_completed_items
+  GET /mobile-offline/queue | list_offline_queue
+  POST /mobile-offline/queue | enqueue_offline_item
+  DELETE /mobile-offline/queue/{item_id} | cancel_offline_item
+  POST /mobile-offline/queue/{item_id}/begin | begin_offline_item
+  POST /mobile-offline/queue/{item_id}/complete | complete_offline_item
+  POST /mobile-offline/queue/{item_id}/fail | fail_offline_item
+
+ROUTER: mobile_sensor
+MODÜL: syk_simulasyon.syk_ui_runtime.mobile_sensor_routes
+PREFIX: /mobile-sensors
+ROUTE SAYISI: 11
+  GET /mobile-sensors | get_sensor_runtime
+  POST /mobile-sensors/camera/start | start_camera
+  POST /mobile-sensors/camera/stop | stop_camera
+  GET /mobile-sensors/frames | list_frames
+  POST /mobile-sensors/frames | capture_frame
+  GET /mobile-sensors/frames/{frame_id} | get_frame
+  POST /mobile-sensors/location | add_location
+  GET /mobile-sensors/locations | list_locations
+  POST /mobile-sensors/microphone/start | start_microphone
+  POST /mobile-sensors/microphone/stop | stop_microphone
+  PATCH /mobile-sensors/permissions | update_sensor_permission
+
+ROUTER: kasif_icon
+MODÜL: syk_simulasyon.syk_ui_runtime.kasif_icon_routes
+PREFIX: /kasif-icons
+ROUTE SAYISI: 7
+  GET /kasif-icons | list_kasif_icons
+  GET /kasif-icons/assistant | get_kasif_assistant_profile
+  GET /kasif-icons/groups | get_kasif_icon_groups
+  GET /kasif-icons/manifest | get_kasif_icon_manifest
+  POST /kasif-icons/reload | reload_kasif_icons
+  GET /kasif-icons/search | search_kasif_icons
+  GET /kasif-icons/{icon_id} | get_kasif_icon
+
+ROUTER: jarmin
+MODÜL: syk_jarmin.jarmin_integration_api
+PREFIX: /jarmin/integration
+ROUTE SAYISI: 6
+  GET /jarmin/integration | get_integration_state
+  GET /jarmin/integration/events | list_jarmin_events
+  POST /jarmin/integration/events | ingest_jarmin_event
+  DELETE /jarmin/integration/settings | reset_jarmin_settings
+  GET /jarmin/integration/settings | get_jarmin_settings
+  PATCH /jarmin/integration/settings | update_jarmin_settings
+
+SYK UI ROUTER GERÇEK YOLLARI
+PREFIX: /api/syk-ui
+ROUTE SAYISI: 39
+
+GERÇEK APP İLGİLİ YOLLARI
+ROUTE SAYISI: 19
+   /syk-ui
+
+RAPOR SHA-256: de154da26a0e5882cca84dae99a6b5bde4e7cd760a98c666a62a62b4a1db6ced

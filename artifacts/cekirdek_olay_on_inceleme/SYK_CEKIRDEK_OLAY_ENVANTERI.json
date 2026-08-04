@@ -1,0 +1,131 @@
+{
+  "kaynak_sayisi": 6,
+  "kaynaklar": [
+    {
+      "boyut": 1865,
+      "dosya": "src/syk_core/entegrasyon/cekirdek_durum_makinesi.py",
+      "fonksiyonlar": [],
+      "sha256": "223c5c5aaeb409e364cf6fa70380a8ba4a21be8f279eae7034498eb31345a114",
+      "siniflar": [
+        "CekirdekDurumMakinesi",
+        "DurumGecisKaydi"
+      ]
+    },
+    {
+      "boyut": 2253,
+      "dosya": "src/syk_core/entegrasyon/cekirdek_orchestrator.py",
+      "fonksiyonlar": [],
+      "sha256": "797d2135128c7c5b0e3f1fd8544636a1438b9297e9b361c7c834c8cb7894448b",
+      "siniflar": [
+        "CekirdekDegerlendirmeOrkestratoru",
+        "CekirdekDegerlendirmeSonucu"
+      ]
+    },
+    {
+      "boyut": 1812,
+      "dosya": "src/syk_core/entegrasyon/core_olay_koprusu.py",
+      "fonksiyonlar": [],
+      "sha256": "f726dc1bee30661732d2e242fbd71a6811d1b87ae4297cdaa36127371bcbd5de",
+      "siniflar": [
+        "CoreOlayKoprusu",
+        "CoreOlaySonucu"
+      ]
+    },
+    {
+      "boyut": 1814,
+      "dosya": "src/syk_core/entegrasyon/tek_olay_akis.py",
+      "fonksiyonlar": [],
+      "sha256": "3c8a9896101f00a464bc4319c9616182c257b761d07b4bd4456638091a7cfe90",
+      "siniflar": [
+        "TekOlayAkisYoneticisi",
+        "TekOlayDegerlendirme"
+      ]
+    },
+    {
+      "boyut": 1263,
+      "dosya": "src/syk_core/entegrasyon/tek_olay_core_motoru.py",
+      "fonksiyonlar": [],
+      "sha256": "5d487ac2e934426137697b854c31871cfe422cd4e75993c81fdad7249729c539",
+      "siniflar": [
+        "TekOlayCoreMotoru"
+      ]
+    },
+    {
+      "boyut": 975,
+      "dosya": "src/syk_core/entegrasyon/uc_uca_core_dogrulama.py",
+      "fonksiyonlar": [],
+      "sha256": "78abc5538bdea7c3b4ae1923af1596575ca7c988f7e4942d571fc5f2717ba466",
+      "siniflar": [
+        "UcUcaCoreDogrulama"
+      ]
+    }
+  ],
+  "test_dosyasi_sayisi": 6,
+  "testler": [
+    {
+      "boyut": 802,
+      "dosya": "tests/test_cekirdek_durum_makinesi.py",
+      "fonksiyonlar": [
+        "test_durum_zinciri",
+        "test_gecersiz_gecis_engeli"
+      ],
+      "sha256": "acfecb292add3bb5100f10e335695721a8c43362bb6639092329a6cedcd08453",
+      "siniflar": []
+    },
+    {
+      "boyut": 849,
+      "dosya": "tests/test_cekirdek_orchestrator.py",
+      "fonksiyonlar": [
+        "test_tam_cekirdek_akisi"
+      ],
+      "sha256": "3667979c38a36bf6717d6cb2acefcdfc5af5ec5d6ec15f2f5ba779bf4a151e5f",
+      "siniflar": []
+    },
+    {
+      "boyut": 1223,
+      "dosya": "tests/test_core_olay_koprusu.py",
+      "fonksiyonlar": [
+        "test_core_katmanlari_baglanir",
+        "test_olay_koprusu_baslatilir",
+        "test_olay_tamamlanir"
+      ],
+      "sha256": "832bdb71a805182190d3b8195c30a5865b1576cd061e65d6f2819d02d2e07cde",
+      "siniflar": []
+    },
+    {
+      "boyut": 999,
+      "dosya": "tests/test_tek_olay_akis.py",
+      "fonksiyonlar": [
+        "test_tek_olay_akisi"
+      ],
+      "sha256": "21b2a3019acc41e695083d840ac3c7f452fd213f3efb1d86a797307869b48048",
+      "siniflar": []
+    },
+    {
+      "boyut": 1117,
+      "dosya": "tests/test_tek_olay_core_motoru.py",
+      "fonksiyonlar": [
+        "test_tek_olay_core_motoru"
+      ],
+      "sha256": "b55b7d516fe6a439010430da15279196d8d3c5ab88f485c3ebb42bd6eff69b28",
+      "siniflar": [
+        "SahteAdaptor"
+      ]
+    },
+    {
+      "boyut": 1237,
+      "dosya": "tests/test_uc_uca_core_dogrulama.py",
+      "fonksiyonlar": [
+        "test_uc_uca_core_dogrulama"
+      ],
+      "sha256": "9a04175c31c4813aed65f8706e58514396e85f6c53c76915d63e09cf74420fed",
+      "siniflar": [
+        "SahteCore",
+        "SahteHash",
+        "SahteOlayZinciri",
+        "Sonuc"
+      ]
+    }
+  ],
+  "zincir": "cekirdek_olay_orkestrasyon"
+}

@@ -1,0 +1,288 @@
+{
+  "kaynak_sayisi": 10,
+  "kaynaklar": [
+    {
+      "boyut": 2514,
+      "dosya": "src/syk_core/entegrasyon/vbps_goruntu_sensor_veri_motoru.py",
+      "fonksiyonlar": [],
+      "importlar": [
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json"
+      ],
+      "sha256": "4a982a342f3f35af1eaee9d31aa8bc5e0181994b018a05554f1886ef110e53c1",
+      "siniflar": [
+        "VBPSGoruntuSensorKaydi",
+        "VBPSGoruntuSensorVeriMotoru"
+      ]
+    },
+    {
+      "boyut": 2827,
+      "dosya": "src/syk_core/entegrasyon/vbps_karar_kayit_motoru.py",
+      "fonksiyonlar": [],
+      "importlar": [
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json"
+      ],
+      "sha256": "4bc32763c67f1bf93e6386cd4425fe6e0668751fca3126bbd8b38ffc6d77223b",
+      "siniflar": [
+        "VBPSKararKayitMotoru",
+        "VBPSKaydi"
+      ]
+    },
+    {
+      "boyut": 2269,
+      "dosya": "src/syk_core/entegrasyon/vbps_konum_harita_saha_motoru.py",
+      "fonksiyonlar": [],
+      "importlar": [
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json"
+      ],
+      "sha256": "9330bda9ceabb337500bf3ee880be1342824f47e49d785f074f759d18f83fd25",
+      "siniflar": [
+        "VBPSKonumHaritaSahaMotoru",
+        "VBPSKonumKaydi"
+      ]
+    },
+    {
+      "boyut": 2401,
+      "dosya": "src/syk_core/entegrasyon/vbps_operasyon_komuta_motoru.py",
+      "fonksiyonlar": [],
+      "importlar": [
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json"
+      ],
+      "sha256": "d45bf395f15d39fa912d3dde8febd0f99d905b18f4f7b660a096b3342124811e",
+      "siniflar": [
+        "VBPSKomutKaydi",
+        "VBPSOperasyonKomutaMotoru"
+      ]
+    },
+    {
+      "boyut": 2366,
+      "dosya": "src/syk_core/entegrasyon/vbps_rapor_kanit_paketi_motoru.py",
+      "fonksiyonlar": [],
+      "importlar": [
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json"
+      ],
+      "sha256": "00062f3acef5e858672ffcf641d3750ad2ce65cdfdd2f93386185849eb60b748",
+      "siniflar": [
+        "VBPSRaporKanitPaketiMotoru",
+        "VBPSRaporKaydi"
+      ]
+    },
+    {
+      "boyut": 2143,
+      "dosya": "src/syk_core/entegrasyon/vbps_saha_hafiza_karsilastirma_motoru.py",
+      "fonksiyonlar": [],
+      "importlar": [
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json"
+      ],
+      "sha256": "5bcdf3ec05473570977cc83dbc931c8e452d733ac98c6f9fe055c23222c3ecd8",
+      "siniflar": [
+        "VBPSSahaHafizaKarsilastirmaMotoru",
+        "VBPSSahaHafizaKaydi"
+      ]
+    },
+    {
+      "boyut": 2578,
+      "dosya": "src/syk_core/entegrasyon/vbps_syk_cekirdek_entegrasyon_kontrol_motoru.py",
+      "fonksiyonlar": [],
+      "importlar": [
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json"
+      ],
+      "sha256": "e8e6d3d8efc2e132513faaa1c6dd62a702caaa031e2d178ee7361d9d8f84a43a",
+      "siniflar": [
+        "SYKEntegrasyonKontrolKaydi",
+        "VBPSYKCekirdekEntegrasyonKontrolMotoru"
+      ]
+    },
+    {
+      "boyut": 1865,
+      "dosya": "src/syk_core/entegrasyon/vbps_teslim_arsiv_baglanti_motoru.py",
+      "fonksiyonlar": [],
+      "importlar": [
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json"
+      ],
+      "sha256": "1002f2dc145ccc931217198872c216a0336e401a8016fce03be4db559dc161de",
+      "siniflar": [
+        "VBPSTeslimArsivBaglantiMotoru",
+        "VBPSTeslimArsivKaydi"
+      ]
+    },
+    {
+      "boyut": 2274,
+      "dosya": "src/syk_core/entegrasyon/vbps_veri_akis_sensor_yonetim_motoru.py",
+      "fonksiyonlar": [],
+      "importlar": [
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json"
+      ],
+      "sha256": "175b5743ca8bc66a47e80e8076c250cb8f7bfa06e91c6cc9512bdf03fdf7d0d7",
+      "siniflar": [
+        "VBPSVeriAkisSensorYonetimMotoru",
+        "VBPSVeriKaydi"
+      ]
+    },
+    {
+      "boyut": 2531,
+      "dosya": "src/syk_core/entegrasyon/vbps_veri_yetersizligi_talep_motoru.py",
+      "fonksiyonlar": [],
+      "importlar": [
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json"
+      ],
+      "sha256": "7831bf7b0f70a504597b6a5e672d38a1fe8381e05f6ae8bb3f458f78f8c07dda",
+      "siniflar": [
+        "VBPSVeriYetersizligiTalepMotoru",
+        "VBPSVeriYetersizlikKaydi"
+      ]
+    }
+  ],
+  "test_dosyasi_sayisi": 10,
+  "testler": [
+    {
+      "boyut": 676,
+      "dosya": "tests/test_vbps_goruntu_sensor_veri_motoru.py",
+      "fonksiyonlar": [
+        "test_goruntu_sensor_veri"
+      ],
+      "importlar": [
+        "syk_core.entegrasyon.vbps_goruntu_sensor_veri_motoru"
+      ],
+      "sha256": "68aeea396ff01d42e4b65719c3b076c3e8415ed8f94f277cc20821bcc098697b",
+      "siniflar": []
+    },
+    {
+      "boyut": 716,
+      "dosya": "tests/test_vbps_karar_kayit_motoru.py",
+      "fonksiyonlar": [
+        "test_vbps_kayit"
+      ],
+      "importlar": [
+        "syk_core.entegrasyon.vbps_karar_kayit_motoru"
+      ],
+      "sha256": "1f80e29195028d6010c0ad579dfb9b96e749898da4ced6b111fdd240ecd7ebb6",
+      "siniflar": []
+    },
+    {
+      "boyut": 648,
+      "dosya": "tests/test_vbps_konum_harita_saha_motoru.py",
+      "fonksiyonlar": [
+        "test_vbps_konum"
+      ],
+      "importlar": [
+        "syk_core.entegrasyon.vbps_konum_harita_saha_motoru"
+      ],
+      "sha256": "434a0b83855e3f1983323ee18cf48e2b9d556369325d29ef36780feefade7f75",
+      "siniflar": []
+    },
+    {
+      "boyut": 677,
+      "dosya": "tests/test_vbps_operasyon_komuta_motoru.py",
+      "fonksiyonlar": [
+        "test_vbps_komuta"
+      ],
+      "importlar": [
+        "syk_core.entegrasyon.vbps_operasyon_komuta_motoru"
+      ],
+      "sha256": "b0cd7c631b2e15efaa939b382256ce7d63e13670059dd69b894874a4693c3179",
+      "siniflar": []
+    },
+    {
+      "boyut": 644,
+      "dosya": "tests/test_vbps_rapor_kanit_paketi_motoru.py",
+      "fonksiyonlar": [
+        "test_vbps_rapor"
+      ],
+      "importlar": [
+        "syk_core.entegrasyon.vbps_rapor_kanit_paketi_motoru"
+      ],
+      "sha256": "9baaac46df30f1cc60d7662bf57988a61b04653176a30cd9e25c5c9488fa13d1",
+      "siniflar": []
+    },
+    {
+      "boyut": 658,
+      "dosya": "tests/test_vbps_saha_hafiza_karsilastirma_motoru.py",
+      "fonksiyonlar": [
+        "test_saha_hafiza"
+      ],
+      "importlar": [
+        "syk_core.entegrasyon.vbps_saha_hafiza_karsilastirma_motoru"
+      ],
+      "sha256": "2d72592f949940c49f54393f3bffb6f08be2f408dde3fc66afbd41e1f21c3855",
+      "siniflar": []
+    },
+    {
+      "boyut": 592,
+      "dosya": "tests/test_vbps_syk_cekirdek_entegrasyon_kontrol_motoru.py",
+      "fonksiyonlar": [
+        "test_entegrasyon_kontrol"
+      ],
+      "importlar": [
+        "syk_core.entegrasyon.vbps_syk_cekirdek_entegrasyon_kontrol_motoru"
+      ],
+      "sha256": "d9e99a896433cd828af0c2a6cc1ebad1b31ed4cc1f5a536a62b10fb2fa96c593",
+      "siniflar": []
+    },
+    {
+      "boyut": 610,
+      "dosya": "tests/test_vbps_teslim_arsiv_baglanti_motoru.py",
+      "fonksiyonlar": [
+        "test_teslim_arsiv"
+      ],
+      "importlar": [
+        "syk_core.entegrasyon.vbps_teslim_arsiv_baglanti_motoru"
+      ],
+      "sha256": "0bfb137bfce7c8329740d2ad66078300cce2cb33b4b786142739ddf2886f12e9",
+      "siniflar": []
+    },
+    {
+      "boyut": 649,
+      "dosya": "tests/test_vbps_veri_akis_sensor_yonetim_motoru.py",
+      "fonksiyonlar": [
+        "test_vbps_veri"
+      ],
+      "importlar": [
+        "syk_core.entegrasyon.vbps_veri_akis_sensor_yonetim_motoru"
+      ],
+      "sha256": "f529136dc6936fb2b2235de9be1cdf2ae340f68c5134614675b07b03113c18c0",
+      "siniflar": []
+    },
+    {
+      "boyut": 685,
+      "dosya": "tests/test_vbps_veri_yetersizligi_talep_motoru.py",
+      "fonksiyonlar": [
+        "test_veri_yetersizligi"
+      ],
+      "importlar": [
+        "syk_core.entegrasyon.vbps_veri_yetersizligi_talep_motoru"
+      ],
+      "sha256": "5fecf83886ab764da61e09f40acf53b096dd0cbb562b6b44044e41bd4d5be78c",
+      "siniflar": []
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+﻿[
+    {
+        "Name":  "LOGONSERVER",
+        "Value":  "\\\\DESKTOP-2KO19M9"
+    },
+    {
+        "Name":  "SYK_UI_TEST_URL",
+        "Value":  "http://127.0.0.1:8013/syk-ui-screen"
+    }
+]

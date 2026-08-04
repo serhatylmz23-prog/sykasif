@@ -1,0 +1,107 @@
+{
+  "kaynak_sayisi": 5,
+  "kaynaklar": [
+    {
+      "boyut": 2403,
+      "dosya": "src/syk_core/entegrasyon/cekirdek_kanit_zinciri_birlestirme.py",
+      "fonksiyonlar": [],
+      "sha256": "ed56c7033cd9f4e77bce4eead785ee6abf3524fee19cc5b0518e23cc6403c90a",
+      "siniflar": [
+        "CekirdekKanitZinciri",
+        "CekirdekKanitZinciriBirlestirme"
+      ]
+    },
+    {
+      "boyut": 2655,
+      "dosya": "src/syk_core/entegrasyon/cekirdek_kanit_zinciri_sonuc_raporu.py",
+      "fonksiyonlar": [],
+      "sha256": "d652bf435a21533ecc52936e5d9febd291fee621fd174c34783a06f09d7f5f45",
+      "siniflar": [
+        "CekirdekKanitZinciriSonucRaporuUretici",
+        "ZincirSonucRaporu"
+      ]
+    },
+    {
+      "boyut": 1749,
+      "dosya": "src/syk_core/entegrasyon/kanit_guven_konsensus.py",
+      "fonksiyonlar": [],
+      "sha256": "ba213635fabf22da7a4b4506bb4fc885b4dac7ffa197069500dccdcc4bb5a686",
+      "siniflar": [
+        "KanitDegerlendirme",
+        "KanitGuvenKonsensusBaglantisi"
+      ]
+    },
+    {
+      "boyut": 2018,
+      "dosya": "src/syk_core/entegrasyon/agirlikli_uzman_motoru.py",
+      "fonksiyonlar": [],
+      "sha256": "c4aa35f62fe24c638d3551f9ebb1d95d82cc56593538baa932e6853c3dbe9d8b",
+      "siniflar": [
+        "AgirlikliUzmanKararMotoru",
+        "KanitGrafikKaydi",
+        "UzmanDugumu"
+      ]
+    },
+    {
+      "boyut": 1762,
+      "dosya": "src/syk_core/entegrasyon/uzman_sonuc_agi.py",
+      "fonksiyonlar": [],
+      "sha256": "8843613dc9f3b76e19842fe6c51b023c08f9c8dadba895f4dacf442d4887b0ff",
+      "siniflar": [
+        "KanitAgKaydi",
+        "UzmanSonucAgMotoru",
+        "UzmanSonucu"
+      ]
+    }
+  ],
+  "test_dosyasi_sayisi": 5,
+  "testler": [
+    {
+      "boyut": 716,
+      "dosya": "tests/test_cekirdek_kanit_zinciri_birlestirme.py",
+      "fonksiyonlar": [
+        "test_cekirdek_kanit_zinciri"
+      ],
+      "sha256": "b355accb7128bb6afb5abead6f288f939d38b689a909b9cb3c4144b029ba8fea",
+      "siniflar": []
+    },
+    {
+      "boyut": 1018,
+      "dosya": "tests/test_cekirdek_kanit_zinciri_sonuc_raporu.py",
+      "fonksiyonlar": [
+        "test_sonuc_inceleme",
+        "test_sonuc_raporu_onayli"
+      ],
+      "sha256": "5b9f39ae8536f06369444bf4cff274fe3ac61fb065249b9e0ec0732b35386700",
+      "siniflar": []
+    },
+    {
+      "boyut": 643,
+      "dosya": "tests/test_kanit_guven_konsensus.py",
+      "fonksiyonlar": [
+        "test_kanit_guven_konsensus"
+      ],
+      "sha256": "989e31ad9205e432e5d2fd95f0e1de96a400fed300cf90d15cf38d37664d4d44",
+      "siniflar": []
+    },
+    {
+      "boyut": 891,
+      "dosya": "tests/test_agirlikli_uzman_motoru.py",
+      "fonksiyonlar": [
+        "test_agirlikli_uzman_motoru"
+      ],
+      "sha256": "8db4c7b14111d3f04111da7807d4cafbd4761a589dd5624b26ff82a328c9a685",
+      "siniflar": []
+    },
+    {
+      "boyut": 771,
+      "dosya": "tests/test_uzman_sonuc_agi.py",
+      "fonksiyonlar": [
+        "test_uzman_sonuc_agi"
+      ],
+      "sha256": "5b7df85593321fe6cf630bbaa40daf3a393810a89a6b9c3e208d337c6e634b29",
+      "siniflar": []
+    }
+  ],
+  "zincir": "cekirdek_kanit_birlestirme"
+}

@@ -1,0 +1,1247 @@
+
+================================================================================
+src/syk_jarmin/speech_to_text.py
+================================================================================
+
+SINIF: SpeechRecognitionBackend
+  METOT: transcribe | tür=normal | giriş=['self', 'audio'] | satır=13-21
+
+SINIF: TranscriptResult
+  METOT: as_dict | tür=normal | giriş=['self'] | satır=36-59
+
+SINIF: TextFixtureRecognitionBackend
+  METOT: transcribe | tür=normal | giriş=['self', 'audio'] | satır=65-81
+
+SINIF: SpeechToTextEngine
+  METOT: __init__ | tür=normal | giriş=['self', 'backend'] | satır=85-95
+  METOT: transcribe | tür=normal | giriş=['self', 'audio'] | satır=97-149
+  METOT: _validate | tür=normal | giriş=[] | satır=152-176
+
+--- DOSYA İÇERİĞİ ---
+0001: from __future__ import annotations
+0002: 
+0003: from dataclasses import dataclass
+0004: from hashlib import sha256
+0005: from typing import Any, Protocol
+0006: 
+0007: 
+0008: class SpeechRecognitionBackend(
+0009:     Protocol
+0010: ):
+0011:     backend_id: str
+0012: 
+0013:     def transcribe(
+0014:         self,
+0015:         audio: bytes,
+0016:         *,
+0017:         sample_rate: int,
+0018:         channels: int,
+0019:         language: str,
+0020:     ) -> str:
+0021:         ...
+0022: 
+0023: 
+0024: @dataclass(frozen=True, slots=True)
+0025: class TranscriptResult:
+0026:     text: str
+0027:     language: str
+0028:     backend_id: str
+0029:     audio_sha256: str
+0030:     byte_count: int
+0031:     sample_rate: int
+0032:     channels: int
+0033:     digital_confidence: float
+0034:     simulated: bool
+0035: 
+0036:     def as_dict(self) -> dict[str, Any]:
+0037:         return {
+0038:             "text": self.text,
+0039:             "language": self.language,
+0040:             "backend_id": self.backend_id,
+0041:             "audio_sha256": (
+0042:                 self.audio_sha256
+0043:             ),
+0044:             "byte_count": self.byte_count,
+0045:             "sample_rate": self.sample_rate,
+0046:             "channels": self.channels,
+0047:             "digital_confidence": round(
+0048:                 min(
+0049:                     99.9,
+0050:                     max(
+0051:                         0.0,
+0052:                         self.digital_confidence,
+0053:                     ),
+0054:                 ),
+0055:                 3,
+0056:             ),
+0057:             "simulated": self.simulated,
+0058:             "field_validation_required": True,
+0059:         }
+0060: 
+0061: 
+0062: class TextFixtureRecognitionBackend:
+0063:     backend_id = "text_fixture"
+0064: 
+0065:     def transcribe(
+0066:         self,
+0067:         audio: bytes,
+0068:         *,
+0069:         sample_rate: int,
+0070:         channels: int,
+0071:         language: str,
+0072:     ) -> str:
+0073:         try:
+0074:             return audio.decode(
+0075:                 "utf-8"
+0076:             ).strip()
+0077:         except UnicodeDecodeError as error:
+0078:             raise RuntimeError(
+0079:                 "Test ses verisi UTF-8 metin "
+0080:                 "olarak çözülemedi."
+0081:             ) from error
+0082: 
+0083: 
+0084: class SpeechToTextEngine:
+0085:     def __init__(
+0086:         self,
+0087:         backend: (
+0088:             SpeechRecognitionBackend
+0089:             | None
+0090:         ) = None,
+0091:     ) -> None:
+0092:         self.backend = (
+0093:             backend
+0094:             or TextFixtureRecognitionBackend()
+0095:         )
+0096: 
+0097:     def transcribe(
+0098:         self,
+0099:         audio: bytes,
+0100:         *,
+0101:         sample_rate: int = 16000,
+0102:         channels: int = 1,
+0103:         language: str = "tr-TR",
+0104:     ) -> TranscriptResult:
+0105:         self._validate(
+0106:             audio=audio,
+0107:             sample_rate=sample_rate,
+0108:             channels=channels,
+0109:         )
+0110: 
+0111:         text = self.backend.transcribe(
+0112:             audio,
+0113:             sample_rate=sample_rate,
+0114:             channels=channels,
+0115:             language=language,
+0116:         ).strip()
+0117: 
+0118:         if not text:
+0119:             raise ValueError(
+0120:                 "Ses verisinden metin "
+0121:                 "üretilemedi."
+0122:             )
+0123: 
+0124:         simulated = (
+0125:             self.backend.backend_id
+0126:             == "text_fixture"
+0127:         )
+0128: 
+0129:         confidence = (
+0130:             80.0
+0131:             if simulated
+0132:             else 90.0
+0133:         )
+0134: 
+0135:         return TranscriptResult(
+0136:             text=text,
+0137:             language=language,
+0138:             backend_id=(
+0139:                 self.backend.backend_id
+0140:             ),
+0141:             audio_sha256=sha256(
+0142:                 audio
+0143:             ).hexdigest(),
+0144:             byte_count=len(audio),
+0145:             sample_rate=sample_rate,
+0146:             channels=channels,
+0147:             digital_confidence=confidence,
+0148:             simulated=simulated,
+0149:         )
+0150: 
+0151:     @staticmethod
+0152:     def _validate(
+0153:         *,
+0154:         audio: bytes,
+0155:         sample_rate: int,
+0156:         channels: int,
+0157:     ) -> None:
+0158:         if not audio:
+0159:             raise ValueError(
+0160:                 "Ses verisi boş olamaz."
+0161:             )
+0162: 
+0163:         if sample_rate < 8000:
+0164:             raise ValueError(
+0165:                 "Örnekleme hızı en az "
+0166:                 "8000 Hz olmalıdır."
+0167:             )
+0168: 
+0169:         if channels not in {
+0170:             1,
+0171:             2,
+0172:         }:
+0173:             raise ValueError(
+0174:                 "Yalnız tek veya çift kanal "
+0175:                 "desteklenir."
+0176:             )
+
+================================================================================
+src/syk_jarmin/text_to_speech.py
+================================================================================
+
+SINIF: SpeechSynthesisBackend
+  METOT: synthesize | tür=normal | giriş=['self', 'text'] | satır=19-25
+
+SINIF: DeterministicSpeechBackend
+  METOT: synthesize | tür=normal | giriş=['self', 'text'] | satır=31-50
+
+SINIF: SynthesisResult
+  METOT: as_dict | tür=normal | giriş=['self'] | satır=63-98
+
+SINIF: TextToSpeechEngine
+  METOT: __init__ | tür=normal | giriş=['self', 'backend', 'profiles'] | satır=102-121
+  METOT: synthesize | tür=normal | giriş=['self', 'text'] | satır=123-183
+
+--- DOSYA İÇERİĞİ ---
+0001: from __future__ import annotations
+0002: 
+0003: from dataclasses import dataclass
+0004: from hashlib import sha256
+0005: import json
+0006: from typing import Any, Protocol
+0007: 
+0008: from .voice_profiles import (
+0009:     VoiceProfile,
+0010:     VoiceProfileRegistry,
+0011: )
+0012: 
+0013: 
+0014: class SpeechSynthesisBackend(
+0015:     Protocol
+0016: ):
+0017:     backend_id: str
+0018: 
+0019:     def synthesize(
+0020:         self,
+0021:         text: str,
+0022:         *,
+0023:         profile: VoiceProfile,
+0024:     ) -> bytes:
+0025:         ...
+0026: 
+0027: 
+0028: class DeterministicSpeechBackend:
+0029:     backend_id = "deterministic_preview"
+0030: 
+0031:     def synthesize(
+0032:         self,
+0033:         text: str,
+0034:         *,
+0035:         profile: VoiceProfile,
+0036:     ) -> bytes:
+0037:         payload = {
+0038:             "schema": (
+0039:                 "sykasif-jarmin-speech-preview/v1"
+0040:             ),
+0041:             "text": text,
+0042:             "profile": profile.as_dict(),
+0043:         }
+0044: 
+0045:         return json.dumps(
+0046:             payload,
+0047:             ensure_ascii=False,
+0048:             sort_keys=True,
+0049:             separators=(",", ":"),
+0050:         ).encode("utf-8")
+0051: 
+0052: 
+0053: @dataclass(frozen=True, slots=True)
+0054: class SynthesisResult:
+0055:     text: str
+0056:     profile_id: str
+0057:     backend_id: str
+0058:     audio: bytes
+0059:     audio_sha256: str
+0060:     digital_confidence: float
+0061:     preview_only: bool
+0062: 
+0063:     def as_dict(
+0064:         self,
+0065:         *,
+0066:         include_audio: bool = False,
+0067:     ) -> dict[str, Any]:
+0068:         payload = {
+0069:             "text": self.text,
+0070:             "profile_id": self.profile_id,
+0071:             "backend_id": self.backend_id,
+0072:             "audio_sha256": (
+0073:                 self.audio_sha256
+0074:             ),
+0075:             "byte_count": len(
+0076:                 self.audio
+0077:             ),
+0078:             "digital_confidence": round(
+0079:                 min(
+0080:                     99.9,
+0081:                     max(
+0082:                         0.0,
+0083:                         self.digital_confidence,
+0084:                     ),
+0085:                 ),
+0086:                 3,
+0087:             ),
+0088:             "preview_only": (
+0089:                 self.preview_only
+0090:             ),
+0091:         }
+0092: 
+0093:         if include_audio:
+0094:             payload["audio"] = (
+0095:                 self.audio
+0096:             )
+0097: 
+0098:         return payload
+0099: 
+0100: 
+0101: class TextToSpeechEngine:
+0102:     def __init__(
+0103:         self,
+0104:         backend: (
+0105:             SpeechSynthesisBackend
+0106:             | None
+0107:         ) = None,
+0108:         profiles: (
+0109:             VoiceProfileRegistry
+0110:             | None
+0111:         ) = None,
+0112:     ) -> None:
+0113:         self.backend = (
+0114:             backend
+0115:             or DeterministicSpeechBackend()
+0116:         )
+0117: 
+0118:         self.profiles = (
+0119:             profiles
+0120:             or VoiceProfileRegistry()
+0121:         )
+0122: 
+0123:     def synthesize(
+0124:         self,
+0125:         text: str,
+0126:         *,
+0127:         profile_id: str = (
+0128:             "jarmin_default"
+0129:         ),
+0130:     ) -> SynthesisResult:
+0131:         normalized = str(
+0132:             text or ""
+0133:         ).strip()
+0134: 
+0135:         if not normalized:
+0136:             raise ValueError(
+0137:                 "Seslendirilecek metin boş "
+0138:                 "olamaz."
+0139:             )
+0140: 
+0141:         if len(normalized) > 5000:
+0142:             raise ValueError(
+0143:                 "Seslendirilecek metin "
+0144:                 "5000 karakteri aşamaz."
+0145:             )
+0146: 
+0147:         profile = self.profiles.get(
+0148:             profile_id
+0149:         )
+0150: 
+0151:         audio = self.backend.synthesize(
+0152:             normalized,
+0153:             profile=profile,
+0154:         )
+0155: 
+0156:         if not audio:
+0157:             raise RuntimeError(
+0158:                 "Ses üretim motoru boş veri "
+0159:                 "döndürdü."
+0160:             )
+0161: 
+0162:         preview_only = (
+0163:             self.backend.backend_id
+0164:             == "deterministic_preview"
+0165:         )
+0166: 
+0167:         return SynthesisResult(
+0168:             text=normalized,
+0169:             profile_id=profile.profile_id,
+0170:             backend_id=(
+0171:                 self.backend.backend_id
+0172:             ),
+0173:             audio=audio,
+0174:             audio_sha256=sha256(
+0175:                 audio
+0176:             ).hexdigest(),
+0177:             digital_confidence=(
+0178:                 80.0
+0179:                 if preview_only
+0180:                 else 90.0
+0181:             ),
+0182:             preview_only=preview_only,
+0183:         )
+
+================================================================================
+src/syk_jarmin/wake_word.py
+================================================================================
+
+SINIF: WakeWordResult
+  METOT: as_dict | tür=normal | giriş=['self'] | satır=15-30
+
+SINIF: WakeWordEngine
+  METOT: __init__ | tür=normal | giriş=['self', 'wake_words'] | satır=34-52
+  METOT: detect | tür=normal | giriş=['self', 'text'] | satır=54-106
+  METOT: _normalize | tür=normal | giriş=['text'] | satır=109-120
+
+--- DOSYA İÇERİĞİ ---
+0001: from __future__ import annotations
+0002: 
+0003: from dataclasses import dataclass
+0004: import re
+0005: from typing import Any
+0006: 
+0007: 
+0008: @dataclass(frozen=True, slots=True)
+0009: class WakeWordResult:
+0010:     detected: bool
+0011:     wake_word: str | None
+0012:     command_text: str
+0013:     confidence: float
+0014: 
+0015:     def as_dict(self) -> dict[str, Any]:
+0016:         return {
+0017:             "detected": self.detected,
+0018:             "wake_word": self.wake_word,
+0019:             "command_text": self.command_text,
+0020:             "confidence": round(
+0021:                 min(
+0022:                     99.9,
+0023:                     max(
+0024:                         0.0,
+0025:                         self.confidence,
+0026:                     ),
+0027:                 ),
+0028:                 3,
+0029:             ),
+0030:         }
+0031: 
+0032: 
+0033: class WakeWordEngine:
+0034:     def __init__(
+0035:         self,
+0036:         wake_words: tuple[str, ...] = (
+0037:             "jarmin",
+0038:             "hey jarmin",
+0039:             "jarmin dinle",
+0040:         ),
+0041:     ) -> None:
+0042:         self.wake_words = tuple(
+0043:             item.strip().lower()
+0044:             for item in wake_words
+0045:             if item.strip()
+0046:         )
+0047: 
+0048:         if not self.wake_words:
+0049:             raise ValueError(
+0050:                 "En az bir uyandırma sözcüğü "
+0051:                 "tanımlanmalıdır."
+0052:             )
+0053: 
+0054:     def detect(
+0055:         self,
+0056:         text: str,
+0057:     ) -> WakeWordResult:
+0058:         normalized = self._normalize(
+0059:             text
+0060:         )
+0061: 
+0062:         if not normalized:
+0063:             return WakeWordResult(
+0064:                 detected=False,
+0065:                 wake_word=None,
+0066:                 command_text="",
+0067:                 confidence=0.0,
+0068:             )
+0069: 
+0070:         ordered = sorted(
+0071:             self.wake_words,
+0072:             key=len,
+0073:             reverse=True,
+0074:         )
+0075: 
+0076:         for wake_word in ordered:
+0077:             pattern = (
+0078:                 r"^\s*"
+0079:                 + re.escape(wake_word)
+0080:                 + r"[\s,;:!?-]*(.*)$"
+0081:             )
+0082: 
+0083:             match = re.match(
+0084:                 pattern,
+0085:                 normalized,
+0086:                 flags=re.IGNORECASE,
+0087:             )
+0088: 
+0089:             if not match:
+0090:                 continue
+0091: 
+0092:             command = match.group(1).strip()
+0093: 
+0094:             return WakeWordResult(
+0095:                 detected=True,
+0096:                 wake_word=wake_word,
+0097:                 command_text=command,
+0098:                 confidence=99.0,
+0099:             )
+0100: 
+0101:         return WakeWordResult(
+0102:             detected=False,
+0103:             wake_word=None,
+0104:             command_text=normalized,
+0105:             confidence=20.0,
+0106:         )
+0107: 
+0108:     @staticmethod
+0109:     def _normalize(
+0110:         text: str,
+0111:     ) -> str:
+0112:         value = str(
+0113:             text or ""
+0114:         ).strip().lower()
+0115: 
+0116:         return re.sub(
+0117:             r"\s+",
+0118:             " ",
+0119:             value,
+0120:         )
+
+================================================================================
+src/syk_jarmin/voice_profiles.py
+================================================================================
+
+SINIF: VoiceProfile
+  METOT: as_dict | tür=normal | giriş=['self'] | satır=17-28
+
+SINIF: VoiceProfileRegistry
+  METOT: __init__ | tür=normal | giriş=['self'] | satır=32-61
+  METOT: get | tür=normal | giriş=['self', 'profile_id'] | satır=63-75
+  METOT: list | tür=normal | giriş=['self'] | satır=77-83
+  METOT: ids | tür=normal | giriş=['self'] | satır=85-90
+
+--- DOSYA İÇERİĞİ ---
+0001: from __future__ import annotations
+0002: 
+0003: from dataclasses import dataclass
+0004: from typing import Any
+0005: 
+0006: 
+0007: @dataclass(frozen=True, slots=True)
+0008: class VoiceProfile:
+0009:     profile_id: str
+0010:     title: str
+0011:     language: str
+0012:     rate: float
+0013:     pitch: float
+0014:     volume: float
+0015:     notification_level: float
+0016: 
+0017:     def as_dict(self) -> dict[str, Any]:
+0018:         return {
+0019:             "profile_id": self.profile_id,
+0020:             "title": self.title,
+0021:             "language": self.language,
+0022:             "rate": self.rate,
+0023:             "pitch": self.pitch,
+0024:             "volume": self.volume,
+0025:             "notification_level": (
+0026:                 self.notification_level
+0027:             ),
+0028:         }
+0029: 
+0030: 
+0031: class VoiceProfileRegistry:
+0032:     def __init__(self) -> None:
+0033:         self._profiles = {
+0034:             "jarmin_default": VoiceProfile(
+0035:                 profile_id="jarmin_default",
+0036:                 title="Jarmin Varsayılan",
+0037:                 language="tr-TR",
+0038:                 rate=1.0,
+0039:                 pitch=1.0,
+0040:                 volume=0.85,
+0041:                 notification_level=0.72,
+0042:             ),
+0043:             "jarmin_field": VoiceProfile(
+0044:                 profile_id="jarmin_field",
+0045:                 title="Jarmin Saha",
+0046:                 language="tr-TR",
+0047:                 rate=0.94,
+0048:                 pitch=0.96,
+0049:                 volume=1.0,
+0050:                 notification_level=0.90,
+0051:             ),
+0052:             "jarmin_quiet": VoiceProfile(
+0053:                 profile_id="jarmin_quiet",
+0054:                 title="Jarmin Sessiz Ortam",
+0055:                 language="tr-TR",
+0056:                 rate=0.90,
+0057:                 pitch=0.98,
+0058:                 volume=0.52,
+0059:                 notification_level=0.35,
+0060:             ),
+0061:         }
+0062: 
+0063:     def get(
+0064:         self,
+0065:         profile_id: str,
+0066:     ) -> VoiceProfile:
+0067:         try:
+0068:             return self._profiles[
+0069:                 profile_id
+0070:             ]
+0071:         except KeyError as error:
+0072:             raise KeyError(
+0073:                 f"Ses profili bulunamadı: "
+0074:                 f"{profile_id}"
+0075:             ) from error
+0076: 
+0077:     def list(
+0078:         self,
+0079:     ) -> list[dict[str, Any]]:
+0080:         return [
+0081:             profile.as_dict()
+0082:             for profile in self._profiles.values()
+0083:         ]
+0084: 
+0085:     def ids(
+0086:         self,
+0087:     ) -> tuple[str, ...]:
+0088:         return tuple(
+0089:             self._profiles
+0090:         )
+
+================================================================================
+src/syk_jarmin/audio_router.py
+================================================================================
+
+SINIF: AudioCommandResult
+  METOT: as_dict | tür=normal | giriş=['self'] | satır=26-43
+
+SINIF: AudioRouter
+  METOT: __init__ | tür=normal | giriş=['self'] | satır=47-76
+  METOT: receive | tür=normal | giriş=['self', 'audio'] | satır=78-107
+  METOT: respond | tür=normal | giriş=['self', 'text'] | satır=109-123
+
+--- DOSYA İÇERİĞİ ---
+0001: from __future__ import annotations
+0002: 
+0003: from dataclasses import dataclass
+0004: from typing import Any
+0005: 
+0006: from .speech_to_text import (
+0007:     SpeechToTextEngine,
+0008:     TranscriptResult,
+0009: )
+0010: from .text_to_speech import (
+0011:     SynthesisResult,
+0012:     TextToSpeechEngine,
+0013: )
+0014: from .wake_word import (
+0015:     WakeWordEngine,
+0016:     WakeWordResult,
+0017: )
+0018: 
+0019: 
+0020: @dataclass(frozen=True, slots=True)
+0021: class AudioCommandResult:
+0022:     transcript: TranscriptResult
+0023:     wake_word: WakeWordResult
+0024:     command_text: str
+0025: 
+0026:     def as_dict(self) -> dict[str, Any]:
+0027:         return {
+0028:             "transcript": (
+0029:                 self.transcript.as_dict()
+0030:             ),
+0031:             "wake_word": (
+0032:                 self.wake_word.as_dict()
+0033:             ),
+0034:             "command_text": (
+0035:                 self.command_text
+0036:             ),
+0037:             "ready_for_jarmin": (
+0038:                 self.wake_word.detected
+0039:                 and bool(
+0040:                     self.command_text
+0041:                 )
+0042:             ),
+0043:         }
+0044: 
+0045: 
+0046: class AudioRouter:
+0047:     def __init__(
+0048:         self,
+0049:         *,
+0050:         speech_to_text: (
+0051:             SpeechToTextEngine
+0052:             | None
+0053:         ) = None,
+0054:         text_to_speech: (
+0055:             TextToSpeechEngine
+0056:             | None
+0057:         ) = None,
+0058:         wake_word: (
+0059:             WakeWordEngine
+0060:             | None
+0061:         ) = None,
+0062:     ) -> None:
+0063:         self.speech_to_text = (
+0064:             speech_to_text
+0065:             or SpeechToTextEngine()
+0066:         )
+0067: 
+0068:         self.text_to_speech = (
+0069:             text_to_speech
+0070:             or TextToSpeechEngine()
+0071:         )
+0072: 
+0073:         self.wake_word = (
+0074:             wake_word
+0075:             or WakeWordEngine()
+0076:         )
+0077: 
+0078:     def receive(
+0079:         self,
+0080:         audio: bytes,
+0081:         *,
+0082:         sample_rate: int = 16000,
+0083:         channels: int = 1,
+0084:         language: str = "tr-TR",
+0085:     ) -> AudioCommandResult:
+0086:         transcript = (
+0087:             self.speech_to_text.transcribe(
+0088:                 audio,
+0089:                 sample_rate=sample_rate,
+0090:                 channels=channels,
+0091:                 language=language,
+0092:             )
+0093:         )
+0094: 
+0095:         wake_result = (
+0096:             self.wake_word.detect(
+0097:                 transcript.text
+0098:             )
+0099:         )
+0100: 
+0101:         return AudioCommandResult(
+0102:             transcript=transcript,
+0103:             wake_word=wake_result,
+0104:             command_text=(
+0105:                 wake_result.command_text
+0106:             ),
+0107:         )
+0108: 
+0109:     def respond(
+0110:         self,
+0111:         text: str,
+0112:         *,
+0113:         profile_id: str = (
+0114:             "jarmin_default"
+0115:         ),
+0116:     ) -> SynthesisResult:
+0117:         return (
+0118:             self.text_to_speech
+0119:             .synthesize(
+0120:                 text,
+0121:                 profile_id=profile_id,
+0122:             )
+0123:         )
+
+================================================================================
+src/syk_jarmin/notification_engine.py
+================================================================================
+
+SINIF: Notification
+  METOT: as_dict | tür=normal | giriş=['self'] | satır=24-43
+
+SINIF: NotificationEngine
+  METOT: __init__ | tür=normal | giriş=['self'] | satır=61-68
+  METOT: create | tür=normal | giriş=['self'] | satır=70-154
+  METOT: acknowledge | tür=normal | giriş=['self', 'notification_id'] | satır=156-185
+  METOT: get | tür=normal | giriş=['self', 'notification_id'] | satır=187-194
+  METOT: list | tür=normal | giriş=['self'] | satır=196-227
+  METOT: _require | tür=normal | giriş=['self', 'notification_id'] | satır=229-240
+
+--- DOSYA İÇERİĞİ ---
+0001: from __future__ import annotations
+0002: 
+0003: from dataclasses import dataclass
+0004: from datetime import UTC, datetime
+0005: from hashlib import sha256
+0006: import json
+0007: from threading import RLock
+0008: from typing import Any
+0009: from uuid import uuid4
+0010: 
+0011: 
+0012: @dataclass(frozen=True, slots=True)
+0013: class Notification:
+0014:     notification_id: str
+0015:     level: str
+0016:     title: str
+0017:     message: str
+0018:     sound_id: str
+0019:     encrypted_hint: bool
+0020:     acknowledged: bool
+0021:     created_at: str
+0022:     sha256: str
+0023: 
+0024:     def as_dict(self) -> dict[str, Any]:
+0025:         return {
+0026:             "notification_id": (
+0027:                 self.notification_id
+0028:             ),
+0029:             "level": self.level,
+0030:             "title": self.title,
+0031:             "message": self.message,
+0032:             "sound_id": self.sound_id,
+0033:             "encrypted_hint": (
+0034:                 self.encrypted_hint
+0035:             ),
+0036:             "acknowledged": (
+0037:                 self.acknowledged
+0038:             ),
+0039:             "created_at": (
+0040:                 self.created_at
+0041:             ),
+0042:             "sha256": self.sha256,
+0043:         }
+0044: 
+0045: 
+0046: class NotificationEngine:
+0047:     LEVELS = {
+0048:         "information",
+0049:         "success",
+0050:         "warning",
+0051:         "critical",
+0052:     }
+0053: 
+0054:     DEFAULT_SOUNDS = {
+0055:         "information": "jarmin_info",
+0056:         "success": "jarmin_success",
+0057:         "warning": "jarmin_warning",
+0058:         "critical": "jarmin_secure_alert",
+0059:     }
+0060: 
+0061:     def __init__(self) -> None:
+0062:         self._notifications: dict[
+0063:             str,
+0064:             Notification,
+0065:         ] = {}
+0066: 
+0067:         self._order: list[str] = []
+0068:         self._lock = RLock()
+0069: 
+0070:     def create(
+0071:         self,
+0072:         *,
+0073:         level: str,
+0074:         title: str,
+0075:         message: str,
+0076:         sound_id: str | None = None,
+0077:         encrypted_hint: bool = False,
+0078:     ) -> Notification:
+0079:         normalized_level = (
+0080:             level.strip().lower()
+0081:         )
+0082: 
+0083:         if normalized_level not in self.LEVELS:
+0084:             raise ValueError(
+0085:                 "Geçersiz bildirim seviyesi."
+0086:             )
+0087: 
+0088:         normalized_title = title.strip()
+0089:         normalized_message = message.strip()
+0090: 
+0091:         if not normalized_title:
+0092:             raise ValueError(
+0093:                 "Bildirim başlığı boş olamaz."
+0094:             )
+0095: 
+0096:         if not normalized_message:
+0097:             raise ValueError(
+0098:                 "Bildirim mesajı boş olamaz."
+0099:             )
+0100: 
+0101:         notification_id = (
+0102:             f"NTF-{uuid4().hex[:24]}"
+0103:         )
+0104: 
+0105:         created_at = datetime.now(
+0106:             UTC
+0107:         ).isoformat()
+0108: 
+0109:         resolved_sound = (
+0110:             sound_id
+0111:             or self.DEFAULT_SOUNDS[
+0112:                 normalized_level
+0113:             ]
+0114:         )
+0115: 
+0116:         unsigned = {
+0117:             "notification_id": (
+0118:                 notification_id
+0119:             ),
+0120:             "level": normalized_level,
+0121:             "title": normalized_title,
+0122:             "message": normalized_message,
+0123:             "sound_id": resolved_sound,
+0124:             "encrypted_hint": bool(
+0125:                 encrypted_hint
+0126:             ),
+0127:             "acknowledged": False,
+0128:             "created_at": created_at,
+0129:         }
+0130: 
+0131:         canonical = json.dumps(
+0132:             unsigned,
+0133:             ensure_ascii=False,
+0134:             sort_keys=True,
+0135:             separators=(",", ":"),
+0136:         ).encode("utf-8")
+0137: 
+0138:         notification = Notification(
+0139:             **unsigned,
+0140:             sha256=sha256(
+0141:                 canonical
+0142:             ).hexdigest(),
+0143:         )
+0144: 
+0145:         with self._lock:
+0146:             self._notifications[
+0147:                 notification_id
+0148:             ] = notification
+0149: 
+0150:             self._order.append(
+0151:                 notification_id
+0152:             )
+0153: 
+0154:         return notification
+0155: 
+0156:     def acknowledge(
+0157:         self,
+0158:         notification_id: str,
+0159:     ) -> Notification:
+0160:         with self._lock:
+0161:             current = self._require(
+0162:                 notification_id
+0163:             )
+0164: 
+0165:             updated = Notification(
+0166:                 notification_id=(
+0167:                     current.notification_id
+0168:                 ),
+0169:                 level=current.level,
+0170:                 title=current.title,
+0171:                 message=current.message,
+0172:                 sound_id=current.sound_id,
+0173:                 encrypted_hint=(
+0174:                     current.encrypted_hint
+0175:                 ),
+0176:                 acknowledged=True,
+0177:                 created_at=current.created_at,
+0178:                 sha256=current.sha256,
+0179:             )
+0180: 
+0181:             self._notifications[
+0182:                 notification_id
+0183:             ] = updated
+0184: 
+0185:             return updated
+0186: 
+0187:     def get(
+0188:         self,
+0189:         notification_id: str,
+0190:     ) -> Notification:
+0191:         with self._lock:
+0192:             return self._require(
+0193:                 notification_id
+0194:             )
+0195: 
+0196:     def list(
+0197:         self,
+0198:         *,
+0199:         acknowledged: bool | None = None,
+0200:         limit: int = 50,
+0201:     ) -> list[Notification]:
+0202:         if limit <= 0:
+0203:             raise ValueError(
+0204:                 "Bildirim sınırı pozitif "
+0205:                 "olmalıdır."
+0206:             )
+0207: 
+0208:         with self._lock:
+0209:             values = [
+0210:                 self._notifications[
+0211:                     notification_id
+0212:                 ]
+0213:                 for notification_id
+0214:                 in self._order
+0215:             ]
+0216: 
+0217:         if acknowledged is not None:
+0218:             values = [
+0219:                 item
+0220:                 for item in values
+0221:                 if (
+0222:                     item.acknowledged
+0223:                     is acknowledged
+0224:                 )
+0225:             ]
+0226: 
+0227:         return values[-limit:]
+0228: 
+0229:     def _require(
+0230:         self,
+0231:         notification_id: str,
+0232:     ) -> Notification:
+0233:         try:
+0234:             return self._notifications[
+0235:                 notification_id
+0236:             ]
+0237:         except KeyError as error:
+0238:             raise KeyError(
+0239:                 "Bildirim bulunamadı."
+0240:             ) from error
+
+================================================================================
+tests/test_speech_to_text.py
+================================================================================
+0001: from syk_jarmin.speech_to_text import (
+0002:     SpeechToTextEngine,
+0003: )
+0004: 
+0005: 
+0006: def test_test_ses_verisi_metne_cevrilir():
+0007:     result = (
+0008:         SpeechToTextEngine()
+0009:         .transcribe(
+0010:             "Jarmin görüntüyü incele"
+0011:             .encode("utf-8")
+0012:         )
+0013:     )
+0014: 
+0015:     assert (
+0016:         result.text
+0017:         == "Jarmin görüntüyü incele"
+0018:     )
+0019: 
+0020:     assert result.simulated
+0021: 
+0022:     assert len(
+0023:         result.audio_sha256
+0024:     ) == 64
+0025: 
+0026: 
+0027: def test_bos_ses_reddedilir():
+0028:     try:
+0029:         (
+0030:             SpeechToTextEngine()
+0031:             .transcribe(b"")
+0032:         )
+0033:     except ValueError:
+0034:         pass
+0035:     else:
+0036:         raise AssertionError(
+0037:             "Boş ses kabul edildi."
+0038:         )
+
+================================================================================
+tests/test_text_to_speech.py
+================================================================================
+0001: from syk_jarmin.text_to_speech import (
+0002:     TextToSpeechEngine,
+0003: )
+0004: 
+0005: 
+0006: def test_turkce_metin_ses_paketi_uretir():
+0007:     result = (
+0008:         TextToSpeechEngine()
+0009:         .synthesize(
+0010:             "Görüntü analizi tamamlandı."
+0011:         )
+0012:     )
+0013: 
+0014:     assert result.audio
+0015: 
+0016:     assert result.preview_only
+0017: 
+0018:     assert len(
+0019:         result.audio_sha256
+0020:     ) == 64
+0021: 
+0022: 
+0023: def test_ses_profili_secilebilir():
+0024:     result = (
+0025:         TextToSpeechEngine()
+0026:         .synthesize(
+0027:             "Saha bildirimi",
+0028:             profile_id="jarmin_field",
+0029:         )
+0030:     )
+0031: 
+0032:     assert (
+0033:         result.profile_id
+0034:         == "jarmin_field"
+0035:     )
+
+================================================================================
+tests/test_wake_word.py
+================================================================================
+0001: from syk_jarmin.wake_word import (
+0002:     WakeWordEngine,
+0003: )
+0004: 
+0005: 
+0006: def test_uyandirma_sozcugu_algilanir():
+0007:     result = WakeWordEngine().detect(
+0008:         "Hey Jarmin, sistem durumu"
+0009:     )
+0010: 
+0011:     assert result.detected
+0012: 
+0013:     assert (
+0014:         result.command_text
+0015:         == "sistem durumu"
+0016:     )
+0017: 
+0018: 
+0019: def test_uyandirma_sozcugu_yoksa():
+0020:     result = WakeWordEngine().detect(
+0021:         "sistem durumu"
+0022:     )
+0023: 
+0024:     assert not result.detected
+
+================================================================================
+tests/test_voice_profiles.py
+================================================================================
+0001: from syk_jarmin.voice_profiles import (
+0002:     VoiceProfileRegistry,
+0003: )
+0004: 
+0005: 
+0006: def test_turkce_ses_profilleri_var():
+0007:     registry = VoiceProfileRegistry()
+0008: 
+0009:     assert (
+0010:         "jarmin_default"
+0011:         in registry.ids()
+0012:     )
+0013: 
+0014:     assert (
+0015:         registry.get(
+0016:             "jarmin_field"
+0017:         ).language
+0018:         == "tr-TR"
+0019:     )
+
+================================================================================
+tests/test_audio_router.py
+================================================================================
+0001: from syk_jarmin.audio_router import (
+0002:     AudioRouter,
+0003: )
+0004: 
+0005: 
+0006: def test_ses_komutu_jarmin_icin_hazirlanir():
+0007:     result = AudioRouter().receive(
+0008:         "Jarmin, finans özeti"
+0009:         .encode("utf-8")
+0010:     )
+0011: 
+0012:     assert result.wake_word.detected
+0013: 
+0014:     assert (
+0015:         result.command_text
+0016:         == "finans özeti"
+0017:     )
+0018: 
+0019:     assert (
+0020:         result.as_dict()[
+0021:             "ready_for_jarmin"
+0022:         ]
+0023:     )
+0024: 
+0025: 
+0026: def test_jarmin_yaniti_seslendirilir():
+0027:     result = AudioRouter().respond(
+0028:         "İşlem tamamlandı."
+0029:     )
+0030: 
+0031:     assert result.audio
+
+================================================================================
+tests/test_notification_engine.py
+================================================================================
+0001: from syk_jarmin.notification_engine import (
+0002:     NotificationEngine,
+0003: )
+0004: 
+0005: 
+0006: def test_guvenli_bildirim_uretilir():
+0007:     engine = NotificationEngine()
+0008: 
+0009:     result = engine.create(
+0010:         level="critical",
+0011:         title="SyKaşif Uyarısı",
+0012:         message=(
+0013:             "Dikkat gerektiren olay bulundu."
+0014:         ),
+0015:         encrypted_hint=True,
+0016:     )
+0017: 
+0018:     assert (
+0019:         result.sound_id
+0020:         == "jarmin_secure_alert"
+0021:     )
+0022: 
+0023:     assert result.encrypted_hint
+0024: 
+0025:     assert len(
+0026:         result.sha256
+0027:     ) == 64
+0028: 
+0029: 
+0030: def test_bildirim_onaylanir():
+0031:     engine = NotificationEngine()
+0032: 
+0033:     created = engine.create(
+0034:         level="information",
+0035:         title="Bilgi",
+0036:         message="İşlem hazır.",
+0037:     )
+0038: 
+0039:     acknowledged = (
+0040:         engine.acknowledge(
+0041:             created.notification_id
+0042:         )
+0043:     )
+0044: 
+0045:     assert acknowledged.acknowledged

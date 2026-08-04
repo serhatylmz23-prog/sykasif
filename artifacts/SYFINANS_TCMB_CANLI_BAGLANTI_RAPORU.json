@@ -1,0 +1,28 @@
+{
+  "baglanti_adresi": "https://www.tcmb.gov.tr/kurlar/today.xml",
+  "baslangic_zamani": "2026-08-03T20:46:40.294744+00:00",
+  "bitis_zamani": "2026-08-03T20:46:40.498258+00:00",
+  "durum": "basarili",
+  "eurtry": {
+    "alis": "54.6882",
+    "gecikme_saniyesi": 60,
+    "orta": "54.7374",
+    "satis": "54.7867",
+    "veri_durumu": "gecikmeli",
+    "veri_sha256": "a220bc8f7046ccc47ea13cde94c0138a3a5f315a84010689b44975acb797ef24"
+  },
+  "gecen_saniye": 0.204,
+  "kayit_sayisi": 21,
+  "kaynak": "TCMB",
+  "usdtry": {
+    "alis": "47.4497",
+    "gecikme_saniyesi": 60,
+    "orta": "47.4924",
+    "satis": "47.5352",
+    "veri_durumu": "gecikmeli",
+    "veri_sha256": "a621f4bbc9904848c9f8e261723d52e92ca60d3eced44faaa1908c2e4e55d1c4"
+  },
+  "veri_tarihi": "08/03/2026",
+  "veri_uyarisi": "TCMB gösterge kuru; doğrudan işlem fiyatı değildir.",
+  "yanit_sha256": "b743f4d1fba2328a848bb891f1a7aabf8aeae0d7016261381ea90a464175a179"
+}

@@ -1,0 +1,506 @@
+﻿[
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_fastapi_sunucusu.py",
+        "Satir":  78,
+        "Arama":  "FastAPI(",
+        "Metin":  "uygulama = FastAPI("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_fastapi_sunucusu.py",
+        "Satir":  447,
+        "Arama":  "HTMLResponse(",
+        "Metin":  "return HTMLResponse("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  40,
+        "Arama":  "app =",
+        "Metin":  "app = _mevcut_uygulamayi_bul()"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  80,
+        "Arama":  "include_router(",
+        "Metin":  "app.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  88,
+        "Arama":  "include_router(",
+        "Metin":  "app.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\adaptive_environment_routes.py",
+        "Satir":  22,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\adaptive_environment_routes.py",
+        "Satir":  22,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  45,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  45,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  1071,
+        "Arama":  "include_router(",
+        "Metin":  "router.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  1079,
+        "Arama":  "include_router(",
+        "Metin":  "router.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  1086,
+        "Arama":  "include_router(",
+        "Metin":  "router.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  1093,
+        "Arama":  "include_router(",
+        "Metin":  "router.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  1106,
+        "Arama":  "include_router(",
+        "Metin":  "router.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  1110,
+        "Arama":  "include_router(",
+        "Metin":  "router.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  1114,
+        "Arama":  "include_router(",
+        "Metin":  "router.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  1118,
+        "Arama":  "include_router(",
+        "Metin":  "router.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  1122,
+        "Arama":  "include_router(",
+        "Metin":  "router.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  1126,
+        "Arama":  "include_router(",
+        "Metin":  "router.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+        "Satir":  1130,
+        "Arama":  "include_router(",
+        "Metin":  "router.include_router("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\dtse_attention_routes.py",
+        "Satir":  21,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\dtse_attention_routes.py",
+        "Satir":  21,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\goruntu_dtse_routes.py",
+        "Satir":  30,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\goruntu_dtse_routes.py",
+        "Satir":  30,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\integration.py",
+        "Satir":  10,
+        "Arama":  "include_router(",
+        "Metin":  "app.include_router(api_router)"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\integration.py",
+        "Satir":  11,
+        "Arama":  "include_router(",
+        "Metin":  "app.include_router(screen_router)"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\kasif_icon_routes.py",
+        "Satir":  14,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\kasif_icon_routes.py",
+        "Satir":  14,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\media_upload_routes.py",
+        "Satir":  22,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\media_upload_routes.py",
+        "Satir":  22,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\media_upload_routes.py",
+        "Satir":  115,
+        "Arama":  "FileResponse(",
+        "Metin":  "return FileResponse("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\media_upload_routes.py",
+        "Satir":  192,
+        "Arama":  "FileResponse(",
+        "Metin":  "return FileResponse("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\mobile_control_routes.py",
+        "Satir":  17,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\mobile_control_routes.py",
+        "Satir":  17,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\mobile_device_routes.py",
+        "Satir":  20,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\mobile_device_routes.py",
+        "Satir":  20,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\mobile_offline_routes.py",
+        "Satir":  19,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\mobile_offline_routes.py",
+        "Satir":  19,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\mobile_sensor_routes.py",
+        "Satir":  21,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\mobile_sensor_routes.py",
+        "Satir":  21,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\screen_routes.py",
+        "Satir":  10,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter()"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\screen_routes.py",
+        "Satir":  10,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter()"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\screen_routes.py",
+        "Satir":  15,
+        "Arama":  "FileResponse(",
+        "Metin":  "return FileResponse("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\static_routes.py",
+        "Satir":  15,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter()"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\static_routes.py",
+        "Satir":  15,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter()"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\static_routes.py",
+        "Satir":  22,
+        "Arama":  "StaticFiles(",
+        "Metin":  "StaticFiles(directory=STATIC),"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\syfinans_runtime_routes.py",
+        "Satir":  39,
+        "Arama":  "APIRouter(",
+        "Metin":  "finans_router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\syfinans_runtime_routes.py",
+        "Satir":  39,
+        "Arama":  "router =",
+        "Metin":  "finans_router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\theme_api.py",
+        "Satir":  15,
+        "Arama":  "APIRouter(",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\theme_api.py",
+        "Satir":  15,
+        "Arama":  "router =",
+        "Metin":  "router = APIRouter("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\theme_api.py",
+        "Satir":  112,
+        "Arama":  "FileResponse(",
+        "Metin":  "return FileResponse("
+    },
+    {
+        "Dosya":  ".\\tests\\test_syfinans_runtime_routes.py",
+        "Satir":  12,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_syfinans_runtime_routes.py",
+        "Satir":  13,
+        "Arama":  "include_router(",
+        "Metin":  "app.include_router(finans_router)"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_balik_syframe_modulleri.py",
+        "Satir":  8,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_bilimsel_moduller_toplu.py",
+        "Satir":  28,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dashboard_canli.py",
+        "Satir":  8,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_assets.py",
+        "Satir":  8,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_attention_api.py",
+        "Satir":  10,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_attention_api.py",
+        "Satir":  11,
+        "Arama":  "include_router(",
+        "Metin":  "app.include_router("
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_goruntu_dtse_api.py",
+        "Satir":  10,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_goruntu_dtse_api.py",
+        "Satir":  12,
+        "Arama":  "include_router(",
+        "Metin":  "app.include_router("
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_goruntu_dtse_kanit_api.py",
+        "Satir":  12,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_goruntu_dtse_kanit_api.py",
+        "Satir":  14,
+        "Arama":  "include_router(",
+        "Metin":  "app.include_router("
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_adapter_api.py",
+        "Satir":  8,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_adapter_api.py",
+        "Satir":  56,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_analysis_syframe_api.py",
+        "Satir":  59,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_analysis_syframe_websocket.py",
+        "Satir":  50,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_views.py",
+        "Satir":  8,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_ble_api.py",
+        "Satir":  59,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_analysis_api.py",
+        "Satir":  40,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_evidence_api.py",
+        "Satir":  61,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_evidence_package_api.py",
+        "Satir":  67,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_hub_api.py",
+        "Satir":  86,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_manager_api.py",
+        "Satir":  68,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_package_seal_api.py",
+        "Satir":  87,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_recording_pipeline_api.py",
+        "Satir":  39,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_session_api.py",
+        "Satir":  62,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_runtime_api.py",
+        "Satir":  8,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_runtime_live.py",
+        "Satir":  8,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_runtime_live.py",
+        "Satir":  46,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_serial_api.py",
+        "Satir":  52,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_tcp_api.py",
+        "Satir":  39,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_static_routes.py",
+        "Satir":  7,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_toplu_entegrasyon.py",
+        "Satir":  8,
+        "Arama":  "FastAPI(",
+        "Metin":  "app = FastAPI()"
+    }
+]

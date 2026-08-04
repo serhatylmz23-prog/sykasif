@@ -1,0 +1,142 @@
+﻿[
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  35,
+        "Metin":  "\"/syk-ui-screen\" in yollar"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\screen_routes.py",
+        "Satir":  13,
+        "Metin":  "@router.get(\"/syk-ui-screen\", include_in_schema=False)"
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_ui_sunucusu.py",
+        "Satir":  9,
+        "Metin":  "ekran = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_ui_sunucusu.py",
+        "Satir":  27,
+        "Metin":  "ilk_ekran = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_ui_sunucusu.py",
+        "Satir":  28,
+        "Metin":  "ikinci_ekran = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_adaptive_environment_tarayici.py",
+        "Satir":  15,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_balik_syframe_modulleri.py",
+        "Satir":  13,
+        "Metin":  "ekran = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_balik_syframe_tarayici.py",
+        "Satir":  9,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_bilimsel_moduller_tarayici.py",
+        "Satir":  38,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_bilimsel_moduller_toplu.py",
+        "Satir":  33,
+        "Metin":  "screen = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_canli_tarayici.py",
+        "Satir":  9,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dashboard_canli.py",
+        "Satir":  13,
+        "Metin":  "screen = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_assets.py",
+        "Satir":  13,
+        "Metin":  "screen = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  42,
+        "Metin":  "f\"{base_url}/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_evidence_card_tarayici.py",
+        "Satir":  19,
+        "Metin":  "f\"{base_url}/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_evidence_focus_tarayici.py",
+        "Satir":  14,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_evidence_scientific_runtime_tarayici.py",
+        "Satir":  15,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_kasif_icon_tarayici.py",
+        "Satir":  15,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_live_environment_tarayici.py",
+        "Satir":  15,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_media_upload_preview_tarayici.py",
+        "Satir":  15,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_media_upload_tarayici.py",
+        "Satir":  15,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_mobile_control_tarayici.py",
+        "Satir":  15,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_mobile_device_runtime_tarayici.py",
+        "Satir":  15,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_mobile_offline_runtime_tarayici.py",
+        "Satir":  14,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_mobile_sensor_runtime_tarayici.py",
+        "Satir":  14,
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_tarayici.py",
+        "Satir":  14,
+        "Metin":  "f\"{base_url}/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_views.py",
+        "Satir":  13,
+        "Metin":  "screen = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_toplu_entegrasyon.py",
+        "Satir":  13,
+        "Metin":  "screen = client.get(\"/syk-ui-screen\")"
+    }
+]

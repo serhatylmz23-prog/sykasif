@@ -1,0 +1,667 @@
+{
+  "api_routes_incelemesi": {
+    "app_atamalari": [],
+    "cagri_kayitlari": [
+      {
+        "anahtarlar": {},
+        "argumanlar": [
+          "dtse_attention_router"
+        ],
+        "cagri": "router.include_router",
+        "satir": 1077
+      },
+      {
+        "anahtarlar": {},
+        "argumanlar": [
+          "goruntu_dtse_router"
+        ],
+        "cagri": "router.include_router",
+        "satir": 1085
+      },
+      {
+        "anahtarlar": {},
+        "argumanlar": [
+          "media_upload_router"
+        ],
+        "cagri": "router.include_router",
+        "satir": 1092
+      },
+      {
+        "anahtarlar": {},
+        "argumanlar": [
+          "adaptive_environment_router"
+        ],
+        "cagri": "router.include_router",
+        "satir": 1099
+      },
+      {
+        "anahtarlar": {},
+        "argumanlar": [
+          "theme_router"
+        ],
+        "cagri": "router.include_router",
+        "satir": 1106
+      },
+      {
+        "anahtarlar": {},
+        "argumanlar": [
+          "kasif_icon_router"
+        ],
+        "cagri": "router.include_router",
+        "satir": 1110
+      },
+      {
+        "anahtarlar": {},
+        "argumanlar": [
+          "mobile_control_router"
+        ],
+        "cagri": "router.include_router",
+        "satir": 1114
+      },
+      {
+        "anahtarlar": {},
+        "argumanlar": [
+          "mobile_device_router"
+        ],
+        "cagri": "router.include_router",
+        "satir": 1118
+      },
+      {
+        "anahtarlar": {},
+        "argumanlar": [
+          "mobile_offline_router"
+        ],
+        "cagri": "router.include_router",
+        "satir": 1122
+      },
+      {
+        "anahtarlar": {},
+        "argumanlar": [
+          "mobile_sensor_router"
+        ],
+        "cagri": "router.include_router",
+        "satir": 1126
+      },
+      {
+        "anahtarlar": {},
+        "argumanlar": [
+          "jarmin_integration_router"
+        ],
+        "cagri": "router.include_router",
+        "satir": 1130
+      }
+    ],
+    "donusler": [
+      {
+        "deger": "snapshot",
+        "satir": 135
+      },
+      {
+        "deger": "scientific_runtime.inventory",
+        "satir": 155
+      },
+      {
+        "deger": "scientific_adapters.inventory",
+        "satir": 241
+      },
+      {
+        "deger": "scientific_device_manager.transports",
+        "satir": 447
+      },
+      {
+        "deger": "",
+        "satir": 454
+      },
+      {
+        "deger": "",
+        "satir": 480
+      },
+      {
+        "deger": "",
+        "satir": 492
+      },
+      {
+        "deger": "scientific_device_sessions.inventory",
+        "satir": 598
+      },
+      {
+        "deger": "scientific_device_recording_pipeline.ingest",
+        "satir": 812
+      },
+      {
+        "deger": "scientific_device_analysis.verify",
+        "satir": 1034
+      },
+      {
+        "deger": "scientific_analysis_syframe.snapshot",
+        "satir": 1071
+      },
+      {
+        "deger": "scientific_runtime.get",
+        "satir": 161
+      },
+      {
+        "deger": "scientific_runtime.update",
+        "satir": 183
+      },
+      {
+        "deger": "",
+        "satir": 211
+      },
+      {
+        "deger": "scientific_adapters.ingest",
+        "satir": 261
+      },
+      {
+        "deger": "serial_transport.inventory",
+        "satir": 293
+      },
+      {
+        "deger": "ingest_transport_packet",
+        "satir": 315
+      },
+      {
+        "deger": "ingest_transport_packet",
+        "satir": 356
+      },
+      {
+        "deger": "",
+        "satir": 395
+      },
+      {
+        "deger": "ingest_transport_packet",
+        "satir": 421
+      },
+      {
+        "deger": "scientific_device_hub.register_manual",
+        "satir": 502
+      },
+      {
+        "deger": "scientific_device_hub.get",
+        "satir": 525
+      },
+      {
+        "deger": "scientific_device_hub.set_connection",
+        "satir": 546
+      },
+      {
+        "deger": "scientific_device_hub.update_telemetry",
+        "satir": 568
+      },
+      {
+        "deger": "scientific_device_sessions.start",
+        "satir": 606
+      },
+      {
+        "deger": "scientific_device_sessions.get",
+        "satir": 634
+      },
+      {
+        "deger": "scientific_device_sessions.append_sample",
+        "satir": 655
+      },
+      {
+        "deger": "scientific_device_sessions.stop",
+        "satir": 684
+      },
+      {
+        "deger": "record",
+        "satir": 743
+      },
+      {
+        "deger": "scientific_device_evidence.records",
+        "satir": 765
+      },
+      {
+        "deger": "scientific_device_evidence.verify",
+        "satir": 789
+      },
+      {
+        "deger": "scientific_device_package_builder.build",
+        "satir": 839
+      },
+      {
+        "deger": "scientific_device_package_builder.verify",
+        "satir": 876
+      },
+      {
+        "deger": "scientific_device_package_seal.create",
+        "satir": 926
+      },
+      {
+        "deger": "scientific_device_package_seal.verify",
+        "satir": 963
+      },
+      {
+        "deger": "scientific_device_analysis.analyze",
+        "satir": 987
+      },
+      {
+        "deger": "scientific_device_analysis.get",
+        "satir": 1015
+      },
+      {
+        "deger": "scientific_analysis_syframe.apply",
+        "satir": 1045
+      },
+      {
+        "deger": "",
+        "satir": 151
+      },
+      {
+        "deger": "",
+        "satir": 229
+      }
+    ],
+    "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+    "fonksiyonlar": [
+      {
+        "ad": "get_runtime_state",
+        "parametreler": [],
+        "satir": 122
+      },
+      {
+        "ad": "live_runtime",
+        "parametreler": [
+          "websocket"
+        ],
+        "satir": 139
+      },
+      {
+        "ad": "get_scientific_modules",
+        "parametreler": [],
+        "satir": 154
+      },
+      {
+        "ad": "get_scientific_module",
+        "parametreler": [
+          "module_id"
+        ],
+        "satir": 159
+      },
+      {
+        "ad": "update_scientific_module",
+        "parametreler": [
+          "module_id",
+          "request"
+        ],
+        "satir": 178
+      },
+      {
+        "ad": "scientific_module_live",
+        "parametreler": [
+          "websocket",
+          "module_id"
+        ],
+        "satir": 202
+      },
+      {
+        "ad": "get_scientific_adapters",
+        "parametreler": [],
+        "satir": 240
+      },
+      {
+        "ad": "ingest_scientific_adapter_data",
+        "parametreler": [
+          "adapter_id",
+          "module_id",
+          "request"
+        ],
+        "satir": 248
+      },
+      {
+        "ad": "discover_serial_devices",
+        "parametreler": [],
+        "satir": 291
+      },
+      {
+        "ad": "read_serial_device",
+        "parametreler": [
+          "request"
+        ],
+        "satir": 305
+      },
+      {
+        "ad": "read_tcp_device",
+        "parametreler": [
+          "request"
+        ],
+        "satir": 346
+      },
+      {
+        "ad": "discover_ble_devices",
+        "parametreler": [
+          "request"
+        ],
+        "satir": 391
+      },
+      {
+        "ad": "read_ble_device",
+        "parametreler": [
+          "request"
+        ],
+        "satir": 409
+      },
+      {
+        "ad": "get_scientific_device_transports",
+        "parametreler": [],
+        "satir": 446
+      },
+      {
+        "ad": "discover_all_scientific_devices",
+        "parametreler": [
+          "request"
+        ],
+        "satir": 451
+      },
+      {
+        "ad": "get_device_hub",
+        "parametreler": [],
+        "satir": 479
+      },
+      {
+        "ad": "refresh_device_hub",
+        "parametreler": [
+          "request"
+        ],
+        "satir": 489
+      },
+      {
+        "ad": "register_device_hub_device",
+        "parametreler": [
+          "request"
+        ],
+        "satir": 498
+      },
+      {
+        "ad": "get_device_hub_device",
+        "parametreler": [
+          "device_id"
+        ],
+        "satir": 521
+      },
+      {
+        "ad": "update_device_hub_connection",
+        "parametreler": [
+          "device_id",
+          "request"
+        ],
+        "satir": 541
+      },
+      {
+        "ad": "update_device_hub_telemetry",
+        "parametreler": [
+          "device_id",
+          "request"
+        ],
+        "satir": 563
+      },
+      {
+        "ad": "get_device_sessions",
+        "parametreler": [],
+        "satir": 597
+      },
+      {
+        "ad": "start_device_session",
+        "parametreler": [
+          "request"
+        ],
+        "satir": 602
+      },
+      {
+        "ad": "get_device_session",
+        "parametreler": [
+          "session_id"
+        ],
+        "satir": 630
+      },
+      {
+        "ad": "append_device_session_samples",
+        "parametreler": [
+          "session_id",
+          "request"
+        ],
+        "satir": 650
+      },
+      {
+        "ad": "stop_device_session",
+        "parametreler": [
+          "session_id"
+        ],
+        "satir": 680
+      },
+      {
+        "ad": "append_device_session_evidence",
+        "parametreler": [
+          "session_id",
+          "request"
+        ],
+        "satir": 711
+      },
+      {
+        "ad": "get_device_session_evidence",
+        "parametreler": [
+          "session_id"
+        ],
+        "satir": 757
+      },
+      {
+        "ad": "verify_device_session_evidence",
+        "parametreler": [
+          "session_id"
+        ],
+        "satir": 781
+      },
+      {
+        "ad": "ingest_device_recording_packet",
+        "parametreler": [
+          "device_id",
+          "request"
+        ],
+        "satir": 808
+      },
+      {
+        "ad": "build_device_session_package",
+        "parametreler": [
+          "session_id"
+        ],
+        "satir": 820
+      },
+      {
+        "ad": "verify_device_session_package",
+        "parametreler": [
+          "session_id"
+        ],
+        "satir": 868
+      },
+      {
+        "ad": "seal_device_session_package",
+        "parametreler": [
+          "session_id"
+        ],
+        "satir": 896
+      },
+      {
+        "ad": "verify_device_session_seal",
+        "parametreler": [
+          "session_id"
+        ],
+        "satir": 955
+      },
+      {
+        "ad": "analyze_device_session",
+        "parametreler": [
+          "session_id"
+        ],
+        "satir": 983
+      },
+      {
+        "ad": "get_device_session_analysis",
+        "parametreler": [
+          "session_id"
+        ],
+        "satir": 1011
+      },
+      {
+        "ad": "verify_device_session_analysis",
+        "parametreler": [
+          "session_id"
+        ],
+        "satir": 1031
+      },
+      {
+        "ad": "apply_device_analysis_to_syframe",
+        "parametreler": [
+          "session_id"
+        ],
+        "satir": 1041
+      },
+      {
+        "ad": "get_analysis_syframe_state",
+        "parametreler": [],
+        "satir": 1070
+      }
+    ],
+    "router_atamalari": [
+      {
+        "cagri": "APIRouter",
+        "hedefler": [
+          "router"
+        ],
+        "satir": 51
+      }
+    ],
+    "sha256": "2b2caa8bdc3ed7e179cb29be4f440491511d28fb2a71aa4e0816cba84cf54ad5"
+  },
+  "app_modulleri": [
+    "syk_simulasyon.runtime_ui_sunucusu"
+  ],
+  "rapor_sha256": "377a9fa36412dbb79f792be52d031507f35e8110f9fe6e924a19386c7245d68b",
+  "runtime_modulleri": [
+    {
+      "app_id": 2152490864992,
+      "app_turu": "fastapi.applications.FastAPI",
+      "basarili": true,
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "yol_sayisi": 19,
+      "yollar": [
+        "/cikis",
+        "/docs",
+        "/docs/oauth2-redirect",
+        "/giris",
+        "/openapi.json",
+        "/redoc",
+        "/runtime/cihaz-iptal",
+        "/runtime/csv",
+        "/runtime/health",
+        "/runtime/html",
+        "/runtime/ilk-kurulum",
+        "/runtime/json",
+        "/runtime/markdown",
+        "/runtime/oturum",
+        "/runtime/xml",
+        "/runtime/yaml",
+        "/syk-ui",
+        "/terminal",
+        "/ws/runtime"
+      ]
+    }
+  ],
+  "schema": "syk-gercek-app-kurulum-zinciri/v1",
+  "sunucu_incelemesi": {
+    "app_atamalari": [
+      {
+        "cagri": "_mevcut_uygulamayi_bul",
+        "hedefler": [
+          "app"
+        ],
+        "satir": 43
+      }
+    ],
+    "cagri_kayitlari": [
+      {
+        "anahtarlar": {},
+        "argumanlar": [
+          "finans_router"
+        ],
+        "cagri": "app.include_router",
+        "satir": 48
+      }
+    ],
+    "donusler": [
+      {
+        "deger": "",
+        "satir": 37
+      },
+      {
+        "deger": "aday",
+        "satir": 14
+      },
+      {
+        "deger": "aday",
+        "satir": 25
+      }
+    ],
+    "dosya": "src/syk_simulasyon/runtime_ui_sunucusu.py",
+    "fonksiyonlar": [
+      {
+        "ad": "_mevcut_uygulamayi_bul",
+        "parametreler": [],
+        "satir": 10
+      },
+      {
+        "ad": "_ui_kurulu_mu",
+        "parametreler": [
+          "uygulama"
+        ],
+        "satir": 32
+      }
+    ],
+    "router_atamalari": [],
+    "sha256": "c2802129a1c435f744f766dcecd37976b3237d661ac3c64a1ff3849195a5447a"
+  },
+  "test_app_importlari": [
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "satir": 3,
+      "test": "tests/test_jarmin_integration_api.py",
+      "yerel_ad": "app"
+    },
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "satir": 5,
+      "test": "tests/test_spr_006_mobile_runtime_closure.py",
+      "yerel_ad": "app"
+    },
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "satir": 3,
+      "test": "tests/test_ui_kasif_icon_api.py",
+      "yerel_ad": "app"
+    },
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "satir": 3,
+      "test": "tests/test_ui_mobile_control_api.py",
+      "yerel_ad": "app"
+    },
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "satir": 3,
+      "test": "tests/test_ui_mobile_device_runtime_api.py",
+      "yerel_ad": "app"
+    },
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "satir": 3,
+      "test": "tests/test_ui_mobile_offline_runtime_api.py",
+      "yerel_ad": "app"
+    },
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "satir": 5,
+      "test": "tests/test_ui_mobile_sensor_runtime_api.py",
+      "yerel_ad": "app"
+    }
+  ]
+}

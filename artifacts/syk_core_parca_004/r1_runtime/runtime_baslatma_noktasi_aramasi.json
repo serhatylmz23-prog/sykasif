@@ -1,0 +1,1112 @@
+﻿[
+    {
+        "Dosya":  ".\\pyproject.toml",
+        "Satir":  12,
+        "Aranan":  "uvicorn",
+        "Metin":  "\"uvicorn\u003e=0.51,\u003c1\","
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_durumu.py",
+        "Satir":  35,
+        "Aranan":  "FastAPI",
+        "Metin":  "Sınıf mevcut dış sözleşmeyi korur. Terminal, FastAPI ve olay adaptörleri"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_fastapi_sunucusu.py",
+        "Satir":  10,
+        "Aranan":  "FastAPI",
+        "Metin":  "FastAPI,"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_fastapi_sunucusu.py",
+        "Satir":  76,
+        "Aranan":  "FastAPI",
+        "Metin":  "def olustur(self) -\u003e FastAPI:"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_fastapi_sunucusu.py",
+        "Satir":  78,
+        "Aranan":  "FastAPI",
+        "Metin":  "uygulama = FastAPI("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_fastapi_sunucusu.py",
+        "Satir":  1093,
+        "Aranan":  "FastAPI",
+        "Metin":  ") -\u003e FastAPI:"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_fastapi_sunucusu.py",
+        "Satir":  1167,
+        "Aranan":  "uvicorn",
+        "Metin":  "import uvicorn"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_fastapi_sunucusu.py",
+        "Satir":  1169,
+        "Aranan":  "uvicorn",
+        "Metin":  "uvicorn.run("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  3,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  7,
+        "Aranan":  "FastAPI",
+        "Metin":  "def _mevcut_uygulamayi_bul() -\u003e FastAPI:"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  10,
+        "Aranan":  "FastAPI",
+        "Metin":  "if isinstance(aday, FastAPI):"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  15,
+        "Aranan":  "create_app",
+        "Metin":  "\"create_app\","
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  21,
+        "Aranan":  "FastAPI",
+        "Metin":  "if isinstance(aday, FastAPI):"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  25,
+        "Aranan":  "FastAPI",
+        "Metin":  "\"Mevcut FastAPI uygulamasÄ± veya uygulama fabrikasÄ± bulunamadÄ±.\""
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  29,
+        "Aranan":  "FastAPI",
+        "Metin":  "def _ui_kurulu_mu(uygulama: FastAPI) -\u003e bool:"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  35,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"/syk-ui-screen\" in yollar"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+        "Satir":  40,
+        "Aranan":  "app =",
+        "Metin":  "app = _mevcut_uygulamayi_bul()"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\integration.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\integration.py",
+        "Satir":  8,
+        "Aranan":  "FastAPI",
+        "Metin":  "def install_ui(app: FastAPI) -\u003e FastAPI:"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\kasif_icon_registry.py",
+        "Satir":  94,
+        "Aranan":  "base_url",
+        "Metin":  "asset_base_url: str,"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\kasif_icon_registry.py",
+        "Satir":  106,
+        "Aranan":  "base_url",
+        "Metin":  "f\"{asset_base_url}/\""
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\kasif_icon_registry.py",
+        "Satir":  131,
+        "Aranan":  "base_url",
+        "Metin":  "asset_base_url: str = ("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\kasif_icon_registry.py",
+        "Satir":  155,
+        "Aranan":  "base_url",
+        "Metin":  "self.asset_base_url = ("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\kasif_icon_registry.py",
+        "Satir":  156,
+        "Aranan":  "base_url",
+        "Metin":  "asset_base_url.rstrip(\"/\")"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\kasif_icon_registry.py",
+        "Satir":  590,
+        "Aranan":  "base_url",
+        "Metin":  "asset_base_url=("
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\kasif_icon_registry.py",
+        "Satir":  591,
+        "Aranan":  "base_url",
+        "Metin":  "self.asset_base_url"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\screen_routes.py",
+        "Satir":  13,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "@router.get(\"/syk-ui-screen\", include_in_schema=False)"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon_veri_modeli.egg-info\\requires.txt",
+        "Satir":  2,
+        "Aranan":  "uvicorn",
+        "Metin":  "uvicorn\u003c1,\u003e=0.51"
+    },
+    {
+        "Dosya":  ".\\tests\\test_pyproject_bagimlilik_sozlesmesi.py",
+        "Satir":  23,
+        "Aranan":  "uvicorn",
+        "Metin":  "deger.startswith(\"uvicorn\u003e=\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_fastapi_core.py",
+        "Satir":  27,
+        "Aranan":  "FastAPI",
+        "Metin":  "\"FASTAPI-001\""
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_fastapi_core.py",
+        "Satir":  38,
+        "Aranan":  "FastAPI",
+        "Metin":  "\"FASTAPI-001\""
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_terminal_playwright_e2e.py",
+        "Satir":  11,
+        "Aranan":  "uvicorn",
+        "Metin":  "import uvicorn"
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_terminal_playwright_e2e.py",
+        "Satir":  98,
+        "Aranan":  "uvicorn",
+        "Metin":  "\"Uvicorn test sunucusu zamanında hazır olmadı.\""
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_terminal_playwright_e2e.py",
+        "Satir":  109,
+        "Aranan":  "uvicorn",
+        "Metin":  "ayar = uvicorn.Config("
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_terminal_playwright_e2e.py",
+        "Satir":  119,
+        "Aranan":  "uvicorn",
+        "Metin":  "sunucu = uvicorn.Server(ayar)"
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_terminal_playwright_e2e.py",
+        "Satir":  124,
+        "Aranan":  "uvicorn",
+        "Metin":  "name=\"sykasif-dsp-0009-uvicorn\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_terminal_playwright_e2e.py",
+        "Satir":  144,
+        "Aranan":  "uvicorn",
+        "Metin":  "\"Uvicorn test sunucusu kapatılamadı.\""
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_ui_sunucusu.py",
+        "Satir":  9,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "ekran = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_ui_sunucusu.py",
+        "Satir":  27,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "ilk_ekran = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_runtime_ui_sunucusu.py",
+        "Satir":  28,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "ikinci_ekran = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_syfinans_runtime_routes.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_syfinans_runtime_routes.py",
+        "Satir":  12,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_syfinans_runtime_routes.py",
+        "Satir":  12,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_adaptive_environment_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_adaptive_environment_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_balik_syframe_modulleri.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_balik_syframe_modulleri.py",
+        "Satir":  8,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_balik_syframe_modulleri.py",
+        "Satir":  8,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_balik_syframe_modulleri.py",
+        "Satir":  13,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "ekran = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_balik_syframe_tarayici.py",
+        "Satir":  9,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_balik_syframe_tarayici.py",
+        "Satir":  9,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_bilimsel_moduller_tarayici.py",
+        "Satir":  38,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_bilimsel_moduller_tarayici.py",
+        "Satir":  38,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_bilimsel_moduller_toplu.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_bilimsel_moduller_toplu.py",
+        "Satir":  28,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_bilimsel_moduller_toplu.py",
+        "Satir":  28,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_bilimsel_moduller_toplu.py",
+        "Satir":  33,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "screen = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_canli_tarayici.py",
+        "Satir":  9,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_canli_tarayici.py",
+        "Satir":  9,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dashboard_canli.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dashboard_canli.py",
+        "Satir":  8,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dashboard_canli.py",
+        "Satir":  8,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dashboard_canli.py",
+        "Satir":  13,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "screen = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_assets.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_assets.py",
+        "Satir":  8,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_assets.py",
+        "Satir":  8,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_assets.py",
+        "Satir":  13,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "screen = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  11,
+        "Aranan":  "base_url",
+        "Metin":  "base_url: str,"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  14,
+        "Aranan":  "base_url",
+        "Metin":  "f\"{base_url}/api/syk-ui/device-sessions\""
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  26,
+        "Aranan":  "base_url",
+        "Metin":  "f\"{base_url}/api/syk-ui/\""
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  35,
+        "Aranan":  "base_url",
+        "Metin":  "base_url = os.getenv("
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  36,
+        "Aranan":  "base_url",
+        "Metin":  "\"SYK_UI_BASE_URL\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  37,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  42,
+        "Aranan":  "base_url",
+        "Metin":  "f\"{base_url}/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  42,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "f\"{base_url}/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  46,
+        "Aranan":  "base_url",
+        "Metin":  "f\"{base_url}/api/syk-ui/device-hub/register\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  61,
+        "Aranan":  "base_url",
+        "Metin":  "base_url,"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  66,
+        "Aranan":  "base_url",
+        "Metin":  "f\"{base_url}/api/syk-ui/device-hub/\""
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  139,
+        "Aranan":  "base_url",
+        "Metin":  "f\"{base_url}/api/syk-ui/device-sessions\""
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_device_hub_tarayici.py",
+        "Satir":  157,
+        "Aranan":  "base_url",
+        "Metin":  "f\"{base_url}/api/syk-ui/\""
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_attention_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_attention_api.py",
+        "Satir":  10,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_attention_api.py",
+        "Satir":  10,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_evidence_card_tarayici.py",
+        "Satir":  12,
+        "Aranan":  "base_url",
+        "Metin":  "base_url = os.getenv("
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_evidence_card_tarayici.py",
+        "Satir":  13,
+        "Aranan":  "base_url",
+        "Metin":  "\"SYK_UI_BASE_URL\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_evidence_card_tarayici.py",
+        "Satir":  14,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_evidence_card_tarayici.py",
+        "Satir":  19,
+        "Aranan":  "base_url",
+        "Metin":  "f\"{base_url}/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_evidence_card_tarayici.py",
+        "Satir":  19,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "f\"{base_url}/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_evidence_focus_tarayici.py",
+        "Satir":  14,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_evidence_focus_tarayici.py",
+        "Satir":  14,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_evidence_scientific_runtime_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_dtse_evidence_scientific_runtime_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_goruntu_dtse_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_goruntu_dtse_api.py",
+        "Satir":  10,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_goruntu_dtse_api.py",
+        "Satir":  10,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_goruntu_dtse_kanit_api.py",
+        "Satir":  3,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_goruntu_dtse_kanit_api.py",
+        "Satir":  12,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_goruntu_dtse_kanit_api.py",
+        "Satir":  12,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_kasif_icon_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_kasif_icon_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_live_environment_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_live_environment_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_live_environment_tarayici.py",
+        "Satir":  28,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013\""
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_media_upload_preview_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_media_upload_preview_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_media_upload_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_media_upload_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_mobile_control_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_mobile_control_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_mobile_device_runtime_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_mobile_device_runtime_tarayici.py",
+        "Satir":  15,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_mobile_offline_runtime_tarayici.py",
+        "Satir":  14,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_mobile_offline_runtime_tarayici.py",
+        "Satir":  14,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_mobile_sensor_runtime_tarayici.py",
+        "Satir":  14,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_mobile_sensor_runtime_tarayici.py",
+        "Satir":  14,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "\"http://127.0.0.1:8013/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_adapter_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_adapter_api.py",
+        "Satir":  8,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_adapter_api.py",
+        "Satir":  8,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_adapter_api.py",
+        "Satir":  56,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_adapter_api.py",
+        "Satir":  56,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_analysis_syframe_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_analysis_syframe_api.py",
+        "Satir":  59,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_analysis_syframe_api.py",
+        "Satir":  59,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_analysis_syframe_websocket.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_analysis_syframe_websocket.py",
+        "Satir":  50,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_analysis_syframe_websocket.py",
+        "Satir":  50,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_tarayici.py",
+        "Satir":  7,
+        "Aranan":  "base_url",
+        "Metin":  "base_url = os.getenv("
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_tarayici.py",
+        "Satir":  8,
+        "Aranan":  "base_url",
+        "Metin":  "\"SYK_UI_BASE_URL\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_tarayici.py",
+        "Satir":  9,
+        "Aranan":  "8013",
+        "Metin":  "\"http://127.0.0.1:8013\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_tarayici.py",
+        "Satir":  14,
+        "Aranan":  "base_url",
+        "Metin":  "f\"{base_url}/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_tarayici.py",
+        "Satir":  14,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "f\"{base_url}/syk-ui-screen\","
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_tarayici.py",
+        "Satir":  19,
+        "Aranan":  "base_url",
+        "Metin":  "f\"{base_url}\""
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_tarayici.py",
+        "Satir":  64,
+        "Aranan":  "base_url",
+        "Metin":  "f\"{base_url}\""
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_views.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_views.py",
+        "Satir":  8,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_views.py",
+        "Satir":  8,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_api_views.py",
+        "Satir":  13,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "screen = client.get(\"/syk-ui-screen\")"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_ble_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_ble_api.py",
+        "Satir":  59,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_ble_api.py",
+        "Satir":  59,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_analysis_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_analysis_api.py",
+        "Satir":  40,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_analysis_api.py",
+        "Satir":  40,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_evidence_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_evidence_api.py",
+        "Satir":  61,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_evidence_api.py",
+        "Satir":  61,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_evidence_package_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_evidence_package_api.py",
+        "Satir":  67,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_evidence_package_api.py",
+        "Satir":  67,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_hub_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_hub_api.py",
+        "Satir":  86,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_hub_api.py",
+        "Satir":  86,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_manager_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_manager_api.py",
+        "Satir":  68,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_manager_api.py",
+        "Satir":  68,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_package_seal_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_package_seal_api.py",
+        "Satir":  87,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_package_seal_api.py",
+        "Satir":  87,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_recording_pipeline_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_recording_pipeline_api.py",
+        "Satir":  39,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_recording_pipeline_api.py",
+        "Satir":  39,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_session_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_session_api.py",
+        "Satir":  62,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_device_session_api.py",
+        "Satir":  62,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_runtime_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_runtime_api.py",
+        "Satir":  8,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_runtime_api.py",
+        "Satir":  8,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_runtime_live.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_runtime_live.py",
+        "Satir":  8,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_runtime_live.py",
+        "Satir":  8,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_runtime_live.py",
+        "Satir":  46,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_runtime_live.py",
+        "Satir":  46,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_serial_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_serial_api.py",
+        "Satir":  52,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_serial_api.py",
+        "Satir":  52,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_tcp_api.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_tcp_api.py",
+        "Satir":  39,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_scientific_tcp_api.py",
+        "Satir":  39,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_static_routes.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_static_routes.py",
+        "Satir":  7,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_static_routes.py",
+        "Satir":  7,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_toplu_entegrasyon.py",
+        "Satir":  1,
+        "Aranan":  "FastAPI",
+        "Metin":  "from fastapi import FastAPI"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_toplu_entegrasyon.py",
+        "Satir":  8,
+        "Aranan":  "app =",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_toplu_entegrasyon.py",
+        "Satir":  8,
+        "Aranan":  "FastAPI",
+        "Metin":  "app = FastAPI()"
+    },
+    {
+        "Dosya":  ".\\tests\\test_ui_toplu_entegrasyon.py",
+        "Satir":  13,
+        "Aranan":  "syk-ui-screen",
+        "Metin":  "screen = client.get(\"/syk-ui-screen\")"
+    }
+]

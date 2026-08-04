@@ -1,0 +1,30 @@
+SYFİNANSOTAĞI TEFAS RESMÎ KAYNAK İNCELEMESİ
+
+SAYFA: fon_analiz
+DURUM: yanit_alindi
+HTTP: 200
+SON ADRES: https://www.tefas.gov.tr/FonAnaliz.aspx
+İÇERİK TÜRÜ: text/html
+ERİŞİM REDDİ: True
+JAVASCRIPT GEREKLİ: True
+FORM SAYISI: 0
+OLASI VERİ ADRESİ: 0
+SHA-256: afe95b1e238a031a11b21d61a379b04f14053895b53d9fce7a14f890a192c8ca
+
+SAYFA: fon_karsilastirma
+DURUM: yanit_alindi
+HTTP: 200
+SON ADRES: https://www.tefas.gov.tr/FonKarsilastirma.aspx
+İÇERİK TÜRÜ: text/html
+ERİŞİM REDDİ: True
+JAVASCRIPT GEREKLİ: True
+FORM SAYISI: 0
+OLASI VERİ ADRESİ: 0
+SHA-256: 915b8e211add37f6c6377513d6455799f0abfa5e7d11baae01819e835f05ff4e
+
+GENEL SONUÇ
+Yanıt alınan sayfa: 2
+Doğrudan erişilebilir sayfa: 0
+Olası veri adresi: 0
+
+KARAR: Belgelendirilmiş ve izinli veri adresi doğrulanmadan üretim bağlantısı etkinleştirilmeyecektir.

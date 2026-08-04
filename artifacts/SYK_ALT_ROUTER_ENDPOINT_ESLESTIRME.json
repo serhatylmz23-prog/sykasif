@@ -1,0 +1,865 @@
+{
+  "alt_routerlar": [
+    {
+      "kisa_ad": "mobile_control",
+      "modul": "syk_simulasyon.syk_ui_runtime.mobile_control_routes",
+      "nesne": "router",
+      "prefix": "/mobile-control",
+      "route_sayisi": 6,
+      "routes": [
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_mobile_control_runtime",
+          "path": "/mobile-control"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "list_mobile_controls",
+          "path": "/mobile-control/devices"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "register_mobile_control",
+          "path": "/mobile-control/devices"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_mobile_control",
+          "path": "/mobile-control/devices/{device_id}"
+        },
+        {
+          "methods": [
+            "PATCH"
+          ],
+          "name": "update_mobile_control",
+          "path": "/mobile-control/devices/{device_id}"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "reset_mobile_control",
+          "path": "/mobile-control/devices/{device_id}/reset"
+        }
+      ]
+    },
+    {
+      "kisa_ad": "mobile_device",
+      "modul": "syk_simulasyon.syk_ui_runtime.mobile_device_routes",
+      "nesne": "router",
+      "prefix": "/mobile-runtime",
+      "route_sayisi": 8,
+      "routes": [
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_mobile_runtime",
+          "path": "/mobile-runtime"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "list_mobile_devices",
+          "path": "/mobile-runtime/devices"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "register_mobile_device",
+          "path": "/mobile-runtime/devices"
+        },
+        {
+          "methods": [
+            "DELETE"
+          ],
+          "name": "deactivate_mobile_device",
+          "path": "/mobile-runtime/devices/{device_id}"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_mobile_device",
+          "path": "/mobile-runtime/devices/{device_id}"
+        },
+        {
+          "methods": [
+            "PATCH"
+          ],
+          "name": "update_mobile_device",
+          "path": "/mobile-runtime/devices/{device_id}"
+        },
+        {
+          "methods": [
+            "PATCH"
+          ],
+          "name": "trust_mobile_device",
+          "path": "/mobile-runtime/devices/{device_id}/trust"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "resolve_mobile_layout",
+          "path": "/mobile-runtime/layout"
+        }
+      ]
+    },
+    {
+      "kisa_ad": "mobile_offline",
+      "modul": "syk_simulasyon.syk_ui_runtime.mobile_offline_routes",
+      "nesne": "router",
+      "prefix": "/mobile-offline",
+      "route_sayisi": 18,
+      "routes": [
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_offline_runtime",
+          "path": "/mobile-offline"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "list_cache",
+          "path": "/mobile-offline/cache"
+        },
+        {
+          "methods": [
+            "PUT"
+          ],
+          "name": "put_cache",
+          "path": "/mobile-offline/cache"
+        },
+        {
+          "methods": [
+            "DELETE"
+          ],
+          "name": "delete_cache",
+          "path": "/mobile-offline/cache/{cache_key}"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_cache",
+          "path": "/mobile-offline/cache/{cache_key}"
+        },
+        {
+          "methods": [
+            "PATCH"
+          ],
+          "name": "set_online_state",
+          "path": "/mobile-offline/online"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "list_pairings",
+          "path": "/mobile-offline/pairings"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "create_pairing",
+          "path": "/mobile-offline/pairings"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "confirm_pairing",
+          "path": "/mobile-offline/pairings/confirm"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "verify_pairing",
+          "path": "/mobile-offline/pairings/verify"
+        },
+        {
+          "methods": [
+            "DELETE"
+          ],
+          "name": "revoke_pairing",
+          "path": "/mobile-offline/pairings/{pairing_id}"
+        },
+        {
+          "methods": [
+            "DELETE"
+          ],
+          "name": "remove_completed_items",
+          "path": "/mobile-offline/queue"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "list_offline_queue",
+          "path": "/mobile-offline/queue"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "enqueue_offline_item",
+          "path": "/mobile-offline/queue"
+        },
+        {
+          "methods": [
+            "DELETE"
+          ],
+          "name": "cancel_offline_item",
+          "path": "/mobile-offline/queue/{item_id}"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "begin_offline_item",
+          "path": "/mobile-offline/queue/{item_id}/begin"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "complete_offline_item",
+          "path": "/mobile-offline/queue/{item_id}/complete"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "fail_offline_item",
+          "path": "/mobile-offline/queue/{item_id}/fail"
+        }
+      ]
+    },
+    {
+      "kisa_ad": "mobile_sensor",
+      "modul": "syk_simulasyon.syk_ui_runtime.mobile_sensor_routes",
+      "nesne": "router",
+      "prefix": "/mobile-sensors",
+      "route_sayisi": 11,
+      "routes": [
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_sensor_runtime",
+          "path": "/mobile-sensors"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "start_camera",
+          "path": "/mobile-sensors/camera/start"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "stop_camera",
+          "path": "/mobile-sensors/camera/stop"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "list_frames",
+          "path": "/mobile-sensors/frames"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "capture_frame",
+          "path": "/mobile-sensors/frames"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_frame",
+          "path": "/mobile-sensors/frames/{frame_id}"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "add_location",
+          "path": "/mobile-sensors/location"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "list_locations",
+          "path": "/mobile-sensors/locations"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "start_microphone",
+          "path": "/mobile-sensors/microphone/start"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "stop_microphone",
+          "path": "/mobile-sensors/microphone/stop"
+        },
+        {
+          "methods": [
+            "PATCH"
+          ],
+          "name": "update_sensor_permission",
+          "path": "/mobile-sensors/permissions"
+        }
+      ]
+    },
+    {
+      "kisa_ad": "kasif_icon",
+      "modul": "syk_simulasyon.syk_ui_runtime.kasif_icon_routes",
+      "nesne": "router",
+      "prefix": "/kasif-icons",
+      "route_sayisi": 7,
+      "routes": [
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "list_kasif_icons",
+          "path": "/kasif-icons"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_kasif_assistant_profile",
+          "path": "/kasif-icons/assistant"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_kasif_icon_groups",
+          "path": "/kasif-icons/groups"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_kasif_icon_manifest",
+          "path": "/kasif-icons/manifest"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "reload_kasif_icons",
+          "path": "/kasif-icons/reload"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "search_kasif_icons",
+          "path": "/kasif-icons/search"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_kasif_icon",
+          "path": "/kasif-icons/{icon_id}"
+        }
+      ]
+    },
+    {
+      "kisa_ad": "jarmin",
+      "modul": "syk_jarmin.jarmin_integration_api",
+      "nesne": "router",
+      "prefix": "/jarmin/integration",
+      "route_sayisi": 6,
+      "routes": [
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_integration_state",
+          "path": "/jarmin/integration"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "list_jarmin_events",
+          "path": "/jarmin/integration/events"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "ingest_jarmin_event",
+          "path": "/jarmin/integration/events"
+        },
+        {
+          "methods": [
+            "DELETE"
+          ],
+          "name": "reset_jarmin_settings",
+          "path": "/jarmin/integration/settings"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "get_jarmin_settings",
+          "path": "/jarmin/integration/settings"
+        },
+        {
+          "methods": [
+            "PATCH"
+          ],
+          "name": "update_jarmin_settings",
+          "path": "/jarmin/integration/settings"
+        }
+      ]
+    }
+  ],
+  "gercek_app": {
+    "route_sayisi": 19,
+    "routes": [
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "oturum_kapat",
+        "path": "/cikis"
+      },
+      {
+        "methods": [
+          "GET",
+          "HEAD"
+        ],
+        "name": "swagger_ui_html",
+        "path": "/docs"
+      },
+      {
+        "methods": [
+          "GET",
+          "HEAD"
+        ],
+        "name": "swagger_ui_redirect",
+        "path": "/docs/oauth2-redirect"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "giris_ekrani",
+        "path": "/giris"
+      },
+      {
+        "methods": [
+          "GET",
+          "HEAD"
+        ],
+        "name": "openapi",
+        "path": "/openapi.json"
+      },
+      {
+        "methods": [
+          "GET",
+          "HEAD"
+        ],
+        "name": "redoc_html",
+        "path": "/redoc"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "taninmis_cihazi_iptal_et",
+        "path": "/runtime/cihaz-iptal"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "runtime_csv",
+        "path": "/runtime/csv"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "runtime_sagligi",
+        "path": "/runtime/health"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "runtime_html",
+        "path": "/runtime/html"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "ilk_kurulum",
+        "path": "/runtime/ilk-kurulum"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "runtime_json",
+        "path": "/runtime/json"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "runtime_markdown",
+        "path": "/runtime/markdown"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "oturum_ac",
+        "path": "/runtime/oturum"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "runtime_xml",
+        "path": "/runtime/xml"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "runtime_yaml",
+        "path": "/runtime/yaml"
+      },
+      {
+        "methods": [],
+        "name": "syk-ui",
+        "path": "/syk-ui"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "terminal",
+        "path": "/terminal"
+      },
+      {
+        "methods": [],
+        "name": "runtime_websocket",
+        "path": "/ws/runtime"
+      }
+    ]
+  },
+  "rapor_sha256": "de154da26a0e5882cca84dae99a6b5bde4e7cd760a98c666a62a62b4a1db6ced",
+  "schema": "syk-alt-router-endpoint-eslestirme/v1",
+  "ui_router": {
+    "prefix": "/api/syk-ui",
+    "route_sayisi": 39,
+    "routes": [
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "get_device_hub",
+        "path": "/api/syk-ui/device-hub"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "refresh_device_hub",
+        "path": "/api/syk-ui/device-hub/refresh"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "register_device_hub_device",
+        "path": "/api/syk-ui/device-hub/register"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "get_device_hub_device",
+        "path": "/api/syk-ui/device-hub/{device_id}"
+      },
+      {
+        "methods": [
+          "PATCH"
+        ],
+        "name": "update_device_hub_connection",
+        "path": "/api/syk-ui/device-hub/{device_id}/connection"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "ingest_device_recording_packet",
+        "path": "/api/syk-ui/device-hub/{device_id}/recording-ingest"
+      },
+      {
+        "methods": [
+          "PATCH"
+        ],
+        "name": "update_device_hub_telemetry",
+        "path": "/api/syk-ui/device-hub/{device_id}/telemetry"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "get_device_sessions",
+        "path": "/api/syk-ui/device-sessions"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "start_device_session",
+        "path": "/api/syk-ui/device-sessions/start"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "get_device_session",
+        "path": "/api/syk-ui/device-sessions/{session_id}"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "get_device_session_analysis",
+        "path": "/api/syk-ui/device-sessions/{session_id}/analysis"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "analyze_device_session",
+        "path": "/api/syk-ui/device-sessions/{session_id}/analysis"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "verify_device_session_analysis",
+        "path": "/api/syk-ui/device-sessions/{session_id}/analysis/verify"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "get_device_session_evidence",
+        "path": "/api/syk-ui/device-sessions/{session_id}/evidence"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "append_device_session_evidence",
+        "path": "/api/syk-ui/device-sessions/{session_id}/evidence"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "verify_device_session_evidence",
+        "path": "/api/syk-ui/device-sessions/{session_id}/evidence/verify"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "build_device_session_package",
+        "path": "/api/syk-ui/device-sessions/{session_id}/package"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "verify_device_session_package",
+        "path": "/api/syk-ui/device-sessions/{session_id}/package/verify"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "append_device_session_samples",
+        "path": "/api/syk-ui/device-sessions/{session_id}/samples"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "seal_device_session_package",
+        "path": "/api/syk-ui/device-sessions/{session_id}/seal"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "verify_device_session_seal",
+        "path": "/api/syk-ui/device-sessions/{session_id}/seal/verify"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "stop_device_session",
+        "path": "/api/syk-ui/device-sessions/{session_id}/stop"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "apply_device_analysis_to_syframe",
+        "path": "/api/syk-ui/device-sessions/{session_id}/syframe"
+      },
+      {
+        "methods": [],
+        "name": "live_runtime",
+        "path": "/api/syk-ui/live"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "get_runtime_state",
+        "path": "/api/syk-ui/runtime-state"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "get_scientific_adapters",
+        "path": "/api/syk-ui/scientific-adapters"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "ingest_scientific_adapter_data",
+        "path": "/api/syk-ui/scientific-adapters/{adapter_id}/modules/{module_id}/ingest"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "discover_ble_devices",
+        "path": "/api/syk-ui/scientific-devices/ble/discover"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "read_ble_device",
+        "path": "/api/syk-ui/scientific-devices/ble/read"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "discover_all_scientific_devices",
+        "path": "/api/syk-ui/scientific-devices/discover"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "discover_serial_devices",
+        "path": "/api/syk-ui/scientific-devices/serial"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "read_serial_device",
+        "path": "/api/syk-ui/scientific-devices/serial/read"
+      },
+      {
+        "methods": [
+          "POST"
+        ],
+        "name": "read_tcp_device",
+        "path": "/api/syk-ui/scientific-devices/tcp/read"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "get_scientific_device_transports",
+        "path": "/api/syk-ui/scientific-devices/transports"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "get_scientific_modules",
+        "path": "/api/syk-ui/scientific-modules"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "get_scientific_module",
+        "path": "/api/syk-ui/scientific-modules/{module_id}"
+      },
+      {
+        "methods": [
+          "PATCH"
+        ],
+        "name": "update_scientific_module",
+        "path": "/api/syk-ui/scientific-modules/{module_id}"
+      },
+      {
+        "methods": [],
+        "name": "scientific_module_live",
+        "path": "/api/syk-ui/scientific-modules/{module_id}/live"
+      },
+      {
+        "methods": [
+          "GET"
+        ],
+        "name": "get_analysis_syframe_state",
+        "path": "/api/syk-ui/syframe/analysis-state"
+      }
+    ]
+  }
+}

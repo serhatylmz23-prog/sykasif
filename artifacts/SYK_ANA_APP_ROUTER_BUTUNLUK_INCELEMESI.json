@@ -1,0 +1,342 @@
+{
+  "app_ice_aktarmalari": [
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "nesne": "app",
+      "satir": 3,
+      "test_dosyasi": "tests/test_jarmin_integration_api.py"
+    },
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "nesne": "app",
+      "satir": 5,
+      "test_dosyasi": "tests/test_spr_006_mobile_runtime_closure.py"
+    },
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "nesne": "app",
+      "satir": 3,
+      "test_dosyasi": "tests/test_ui_kasif_icon_api.py"
+    },
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "nesne": "app",
+      "satir": 3,
+      "test_dosyasi": "tests/test_ui_mobile_control_api.py"
+    },
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "nesne": "app",
+      "satir": 3,
+      "test_dosyasi": "tests/test_ui_mobile_device_runtime_api.py"
+    },
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "nesne": "app",
+      "satir": 3,
+      "test_dosyasi": "tests/test_ui_mobile_offline_runtime_api.py"
+    },
+    {
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "nesne": "app",
+      "satir": 5,
+      "test_dosyasi": "tests/test_ui_mobile_sensor_runtime_api.py"
+    }
+  ],
+  "app_kaynaklari": [
+    {
+      "app_atamalari": [],
+      "dosya": "src/syk_simulasyon/runtime_ui_sunucusu.py",
+      "importlar": [
+        {
+          "adlar": [
+            "annotations"
+          ],
+          "modul": "__future__",
+          "satir": 1
+        },
+        {
+          "adlar": [
+            "FastAPI"
+          ],
+          "modul": "fastapi",
+          "satir": 3
+        },
+        {
+          "adlar": [
+            "runtime_fastapi_sunucusu"
+          ],
+          "modul": null,
+          "satir": 5
+        },
+        {
+          "adlar": [
+            "install_ui"
+          ],
+          "modul": "syk_ui",
+          "satir": 6
+        }
+      ],
+      "include_router": [],
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "sha256": "48994c8dfee63256d023d871e4c23b7856409744b619362aaa2c70029b6b4f06"
+    }
+  ],
+  "app_modulleri": [
+    "syk_simulasyon.runtime_ui_sunucusu"
+  ],
+  "beklenen_yollar": [
+    "/api/syk-ui/jarmin/integration",
+    "/api/syk-ui/mobile-runtime",
+    "/api/syk-ui/mobile-sensors",
+    "/api/syk-ui/mobile-offline",
+    "/api/syk-ui/mobile-control",
+    "/api/syk-ui/kasif-icons",
+    "/syfinans/runtime"
+  ],
+  "eksik_yollar": [
+    "/api/syk-ui/jarmin/integration",
+    "/api/syk-ui/mobile-runtime",
+    "/api/syk-ui/mobile-sensors",
+    "/api/syk-ui/mobile-offline",
+    "/api/syk-ui/mobile-control",
+    "/api/syk-ui/kasif-icons",
+    "/syfinans/runtime"
+  ],
+  "ilgili_router_adaylari": [
+    {
+      "dosya": "src/syk_jarmin/jarmin_integration_api.py",
+      "nesne": "router",
+      "prefix": "/jarmin/integration",
+      "satir": 19,
+      "tags": [
+        "jarmin-integration"
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/adaptive_environment_routes.py",
+      "nesne": "router",
+      "prefix": "/environment",
+      "satir": 22,
+      "tags": [
+        "sykasif-environment"
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/kasif_icon_routes.py",
+      "nesne": "router",
+      "prefix": "/kasif-icons",
+      "satir": 14,
+      "tags": [
+        "kasif-icon-library"
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py",
+      "nesne": "router",
+      "prefix": "/media-analysis",
+      "satir": 22,
+      "tags": [
+        "sykasif-media-analysis"
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/mobile_control_routes.py",
+      "nesne": "router",
+      "prefix": "/mobile-control",
+      "satir": 17,
+      "tags": [
+        "telefon-tablet-kontrol-paneli"
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py",
+      "nesne": "router",
+      "prefix": "/mobile-runtime",
+      "satir": 20,
+      "tags": [
+        "telefon-tablet-runtime"
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/mobile_offline_routes.py",
+      "nesne": "router",
+      "prefix": "/mobile-offline",
+      "satir": 19,
+      "tags": [
+        "telefon-tablet-cevrimdisi"
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/mobile_sensor_routes.py",
+      "nesne": "router",
+      "prefix": "/mobile-sensors",
+      "satir": 21,
+      "tags": [
+        "telefon-tablet-sensorleri"
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/syfinans_runtime_routes.py",
+      "nesne": "finans_router",
+      "prefix": "/syfinans",
+      "satir": 39,
+      "tags": [
+        "SyFinansOtağı"
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/theme_api.py",
+      "nesne": "router",
+      "prefix": "/themes",
+      "satir": 15,
+      "tags": [
+        "sykasif-themes"
+      ]
+    }
+  ],
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "rapor_sha256": "fd593c29d874f541e3dc1861e854649e455c12a49e71ca061a008bd884ff475c",
+  "runtime_sonuclari": [
+    {
+      "basarili": true,
+      "modul": "syk_simulasyon.runtime_ui_sunucusu",
+      "yollar": [
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "oturum_kapat",
+          "path": "/cikis"
+        },
+        {
+          "methods": [
+            "GET",
+            "HEAD"
+          ],
+          "name": "swagger_ui_html",
+          "path": "/docs"
+        },
+        {
+          "methods": [
+            "GET",
+            "HEAD"
+          ],
+          "name": "swagger_ui_redirect",
+          "path": "/docs/oauth2-redirect"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "giris_ekrani",
+          "path": "/giris"
+        },
+        {
+          "methods": [
+            "GET",
+            "HEAD"
+          ],
+          "name": "openapi",
+          "path": "/openapi.json"
+        },
+        {
+          "methods": [
+            "GET",
+            "HEAD"
+          ],
+          "name": "redoc_html",
+          "path": "/redoc"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "taninmis_cihazi_iptal_et",
+          "path": "/runtime/cihaz-iptal"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "runtime_csv",
+          "path": "/runtime/csv"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "runtime_sagligi",
+          "path": "/runtime/health"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "runtime_html",
+          "path": "/runtime/html"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "ilk_kurulum",
+          "path": "/runtime/ilk-kurulum"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "runtime_json",
+          "path": "/runtime/json"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "runtime_markdown",
+          "path": "/runtime/markdown"
+        },
+        {
+          "methods": [
+            "POST"
+          ],
+          "name": "oturum_ac",
+          "path": "/runtime/oturum"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "runtime_xml",
+          "path": "/runtime/xml"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "runtime_yaml",
+          "path": "/runtime/yaml"
+        },
+        {
+          "methods": [],
+          "name": "syk-ui",
+          "path": "/syk-ui"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "name": "terminal",
+          "path": "/terminal"
+        },
+        {
+          "methods": [],
+          "name": "runtime_websocket",
+          "path": "/ws/runtime"
+        }
+      ]
+    }
+  ],
+  "schema": "syk-ana-app-router-butunluk-incelemesi/v1"
+}

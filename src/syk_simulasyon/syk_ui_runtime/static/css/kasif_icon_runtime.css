@@ -1,0 +1,608 @@
+:root {
+    --syk-icon-size: 144px;
+    --syk-icon-border:
+        rgba(180, 124, 39, 0.82);
+    --syk-icon-glow:
+        rgba(215, 162, 63, 0.44);
+    --syk-icon-accent:
+        #d7a23f;
+    --syk-icon-background:
+        rgba(3, 10, 13, 0.94);
+}
+
+.syk-kasif-icon-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                min(
+                    100%,
+                    150px
+                ),
+                1fr
+            )
+        );
+    gap:
+        clamp(
+            12px,
+            2vw,
+            24px
+        );
+
+    align-items: start;
+}
+
+.syk-kasif-icon {
+    position: relative;
+
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+
+    min-width: 0;
+    padding: 8px;
+
+    color: #e7c77e;
+
+    border: 0;
+    background: transparent;
+
+    font: inherit;
+    text-align: center;
+
+    cursor: pointer;
+
+    isolation: isolate;
+}
+
+.syk-kasif-icon__frame {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width:
+        min(
+            100%,
+            var(--syk-icon-size)
+        );
+
+    aspect-ratio: 1;
+
+    padding: 7px;
+
+    border:
+        1px solid
+        var(--syk-icon-border);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 50% 44%,
+            rgba(34, 29, 20, 0.88),
+            rgba(4, 9, 12, 0.98) 67%
+        );
+
+    box-shadow:
+        inset 0 0 0 3px
+            rgba(30, 22, 12, 0.88),
+        inset 0 0 0 5px
+            rgba(166, 111, 34, 0.28),
+        0 0 24px
+            rgba(0, 0, 0, 0.55);
+
+    overflow: hidden;
+}
+
+.syk-kasif-icon__frame::before,
+.syk-kasif-icon__frame::after {
+    content: "";
+
+    position: absolute;
+    z-index: 3;
+
+    width: 10px;
+    height: 10px;
+
+    border:
+        1px solid
+        var(--syk-icon-accent);
+
+    background:
+        var(--syk-icon-background);
+
+    transform:
+        rotate(45deg);
+}
+
+.syk-kasif-icon__frame::before {
+    top: -5px;
+}
+
+.syk-kasif-icon__frame::after {
+    bottom: -5px;
+}
+
+.syk-kasif-icon__media {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.syk-kasif-icon__media::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    border-radius: inherit;
+
+    background:
+        radial-gradient(
+            circle at 50% 28%,
+            transparent 0 38%,
+            rgba(0, 0, 0, 0.17) 64%,
+            rgba(0, 0, 0, 0.64) 100%
+        );
+
+    pointer-events: none;
+}
+
+.syk-kasif-icon__image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: inherit;
+}
+
+.syk-kasif-icon__fallback {
+    display: grid;
+    place-items: center;
+
+    width: 76%;
+    height: 76%;
+
+    color:
+        var(--syk-icon-accent);
+
+    border:
+        1px solid
+        color-mix(
+            in srgb,
+            var(--syk-icon-accent)
+            55%,
+            transparent
+        );
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            color-mix(
+                in srgb,
+                var(--syk-icon-accent)
+                22%,
+                transparent
+            ),
+            transparent 68%
+        );
+
+    box-shadow:
+        0 0 24px
+        var(--syk-icon-glow);
+
+    font-size:
+        clamp(
+            28px,
+            5vw,
+            54px
+        );
+}
+
+.syk-kasif-icon__title {
+    display: block;
+
+    max-width: 100%;
+
+    color:
+        var(--syk-icon-accent);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            11px,
+            1.4vw,
+            15px
+        );
+
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 1px 8px
+        rgba(0, 0, 0, 0.94);
+}
+
+.syk-kasif-icon__description {
+    display: block;
+
+    max-width: 230px;
+
+    color:
+        rgba(
+            214,
+            225,
+            228,
+            0.72
+        );
+
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+.syk-kasif-icon:hover
+.syk-kasif-icon__frame,
+.syk-kasif-icon:focus-visible
+.syk-kasif-icon__frame {
+    border-color:
+        var(--syk-icon-accent);
+
+    box-shadow:
+        inset 0 0 0 3px
+            rgba(30, 22, 12, 0.88),
+        inset 0 0 0 5px
+            color-mix(
+                in srgb,
+                var(--syk-icon-accent)
+                35%,
+                transparent
+            ),
+        0 0 32px
+            var(--syk-icon-glow);
+}
+
+.syk-kasif-icon:focus-visible {
+    outline:
+        2px solid
+        var(--syk-icon-accent);
+
+    outline-offset: 4px;
+
+    border-radius: 12px;
+}
+
+.syk-kasif-icon[
+    data-icon-theme="gold"
+] {
+    --syk-icon-border:
+        rgba(181, 125, 40, 0.86);
+    --syk-icon-glow:
+        rgba(215, 162, 63, 0.48);
+    --syk-icon-accent:
+        #d7a23f;
+}
+
+.syk-kasif-icon[
+    data-icon-theme="silver"
+] {
+    --syk-icon-border:
+        rgba(176, 184, 190, 0.82);
+    --syk-icon-glow:
+        rgba(188, 203, 213, 0.38);
+    --syk-icon-accent:
+        #c5ccd1;
+}
+
+.syk-kasif-icon[
+    data-icon-theme="blue"
+] {
+    --syk-icon-border:
+        rgba(52, 147, 191, 0.82);
+    --syk-icon-glow:
+        rgba(33, 169, 224, 0.42);
+    --syk-icon-accent:
+        #51c6eb;
+}
+
+.syk-kasif-icon[
+    data-icon-theme="green"
+] {
+    --syk-icon-border:
+        rgba(74, 157, 93, 0.82);
+    --syk-icon-glow:
+        rgba(76, 190, 101, 0.38);
+    --syk-icon-accent:
+        #79c989;
+}
+
+.syk-kasif-icon[
+    data-icon-theme="red"
+] {
+    --syk-icon-border:
+        rgba(174, 62, 43, 0.84);
+    --syk-icon-glow:
+        rgba(224, 68, 39, 0.42);
+    --syk-icon-accent:
+        #e36b4a;
+}
+
+.syk-kasif-icon[
+    data-icon-theme="dark"
+] {
+    --syk-icon-border:
+        rgba(100, 103, 108, 0.72);
+    --syk-icon-glow:
+        rgba(135, 142, 150, 0.24);
+    --syk-icon-accent:
+        #a4a9ad;
+}
+
+.syk-kasif-icon[
+    data-icon-id="kasif"
+]
+.syk-kasif-icon__media::after {
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(0, 0, 0, 0.22),
+            rgba(0, 0, 0, 0.72) 66%,
+            rgba(0, 0, 0, 0.96) 100%
+        );
+}
+
+.syk-kasif-icon[
+    data-icon-id="kasif"
+]
+.syk-kasif-icon__image {
+    filter:
+        brightness(0.76)
+        contrast(1.12)
+        saturate(0.88);
+}
+
+.syk-kasif-icon[
+    data-icon-animation="pulse"
+]
+.syk-kasif-icon__frame {
+    animation:
+        syk-kasif-pulse
+        3.4s
+        ease-in-out
+        infinite;
+}
+
+.syk-kasif-icon[
+    data-icon-animation="rotate"
+]
+.syk-kasif-icon__fallback {
+    animation:
+        syk-kasif-rotate
+        12s
+        linear
+        infinite;
+}
+
+.syk-kasif-icon[
+    data-icon-animation="scan"
+]
+.syk-kasif-icon__media::before {
+    content: "";
+
+    position: absolute;
+    z-index: 4;
+    top: -30%;
+    right: 0;
+    left: 0;
+
+    height: 20%;
+
+    background:
+        linear-gradient(
+            transparent,
+            color-mix(
+                in srgb,
+                var(--syk-icon-accent)
+                45%,
+                transparent
+            ),
+            transparent
+        );
+
+    animation:
+        syk-kasif-scan
+        4s
+        ease-in-out
+        infinite;
+
+    pointer-events: none;
+}
+
+.syk-kasif-icon[
+    data-icon-animation="wave"
+]
+.syk-kasif-icon__frame {
+    animation:
+        syk-kasif-wave
+        3.8s
+        ease-in-out
+        infinite;
+}
+
+.syk-kasif-icon[
+    data-icon-animation="glow"
+]
+.syk-kasif-icon__frame {
+    animation:
+        syk-kasif-glow
+        4s
+        ease-in-out
+        infinite;
+}
+
+.syk-kasif-icon[
+    data-icon-animation="float"
+] {
+    animation:
+        syk-kasif-float
+        5s
+        ease-in-out
+        infinite;
+}
+
+@keyframes syk-kasif-pulse {
+    0%,
+    100% {
+        transform:
+            scale(1);
+
+        box-shadow:
+            0 0 18px
+            rgba(0, 0, 0, 0.48);
+    }
+
+    50% {
+        transform:
+            scale(1.025);
+
+        box-shadow:
+            0 0 30px
+            var(--syk-icon-glow);
+    }
+}
+
+@keyframes syk-kasif-rotate {
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+@keyframes syk-kasif-scan {
+    0% {
+        transform:
+            translateY(-150%);
+    }
+
+    55%,
+    100% {
+        transform:
+            translateY(650%);
+    }
+}
+
+@keyframes syk-kasif-wave {
+    0%,
+    100% {
+        filter:
+            brightness(0.94);
+    }
+
+    50% {
+        filter:
+            brightness(1.17);
+    }
+}
+
+@keyframes syk-kasif-glow {
+    0%,
+    100% {
+        box-shadow:
+            0 0 16px
+            rgba(0, 0, 0, 0.5);
+    }
+
+    50% {
+        box-shadow:
+            0 0 32px
+            var(--syk-icon-glow);
+    }
+}
+
+@keyframes syk-kasif-float {
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-5px);
+    }
+}
+
+@media (max-width: 700px) {
+    :root {
+        --syk-icon-size: 116px;
+    }
+
+    .syk-kasif-icon-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap: 10px;
+    }
+
+    .syk-kasif-icon {
+        padding: 5px;
+    }
+
+    .syk-kasif-icon__title {
+        font-size: 10px;
+    }
+}
+
+@media (
+    min-width: 701px
+)
+and (
+    max-width: 1100px
+) {
+    .syk-kasif-icon-grid {
+        grid-template-columns:
+            repeat(
+                4,
+                minmax(0, 1fr)
+            );
+    }
+}
+
+@media (
+    prefers-reduced-motion:
+    reduce
+) {
+    .syk-kasif-icon,
+    .syk-kasif-icon__frame,
+    .syk-kasif-icon__fallback,
+    .syk-kasif-icon__media::before {
+        animation:
+            none !important;
+    }
+}

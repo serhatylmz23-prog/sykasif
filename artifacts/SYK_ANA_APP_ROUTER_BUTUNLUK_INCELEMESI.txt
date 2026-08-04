@@ -1,0 +1,39 @@
+SYK ANA APP ROUTER BÜTÜNLÜK İNCELEMESİ
+
+APP İÇE AKTARMALARI
+tests/test_jarmin_integration_api.py:3 | from syk_simulasyon.runtime_ui_sunucusu import app
+tests/test_spr_006_mobile_runtime_closure.py:5 | from syk_simulasyon.runtime_ui_sunucusu import app
+tests/test_ui_kasif_icon_api.py:3 | from syk_simulasyon.runtime_ui_sunucusu import app
+tests/test_ui_mobile_control_api.py:3 | from syk_simulasyon.runtime_ui_sunucusu import app
+tests/test_ui_mobile_device_runtime_api.py:3 | from syk_simulasyon.runtime_ui_sunucusu import app
+tests/test_ui_mobile_offline_runtime_api.py:3 | from syk_simulasyon.runtime_ui_sunucusu import app
+tests/test_ui_mobile_sensor_runtime_api.py:5 | from syk_simulasyon.runtime_ui_sunucusu import app
+
+APP MODÜLLERİ
+syk_simulasyon.runtime_ui_sunucusu
+
+RUNTIME YOL SAYILARI
+syk_simulasyon.runtime_ui_sunucusu | başarılı=True | yol=19
+
+EKSİK BEKLENEN YOLLAR
+/api/syk-ui/jarmin/integration
+/api/syk-ui/mobile-runtime
+/api/syk-ui/mobile-sensors
+/api/syk-ui/mobile-offline
+/api/syk-ui/mobile-control
+/api/syk-ui/kasif-icons
+/syfinans/runtime
+
+İLGİLİ ROUTER ADAYLARI
+src/syk_jarmin/jarmin_integration_api.py:19 | router | prefix=/jarmin/integration | tags=('jarmin-integration',)
+src/syk_simulasyon/syk_ui_runtime/adaptive_environment_routes.py:22 | router | prefix=/environment | tags=('sykasif-environment',)
+src/syk_simulasyon/syk_ui_runtime/kasif_icon_routes.py:14 | router | prefix=/kasif-icons | tags=('kasif-icon-library',)
+src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py:22 | router | prefix=/media-analysis | tags=('sykasif-media-analysis',)
+src/syk_simulasyon/syk_ui_runtime/mobile_control_routes.py:17 | router | prefix=/mobile-control | tags=('telefon-tablet-kontrol-paneli',)
+src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py:20 | router | prefix=/mobile-runtime | tags=('telefon-tablet-runtime',)
+src/syk_simulasyon/syk_ui_runtime/mobile_offline_routes.py:19 | router | prefix=/mobile-offline | tags=('telefon-tablet-cevrimdisi',)
+src/syk_simulasyon/syk_ui_runtime/mobile_sensor_routes.py:21 | router | prefix=/mobile-sensors | tags=('telefon-tablet-sensorleri',)
+src/syk_simulasyon/syk_ui_runtime/syfinans_runtime_routes.py:39 | finans_router | prefix=/syfinans | tags=('SyFinansOtağı',)
+src/syk_simulasyon/syk_ui_runtime/theme_api.py:15 | router | prefix=/themes | tags=('sykasif-themes',)
+
+RAPOR SHA-256: fd593c29d874f541e3dc1861e854649e455c12a49e71ca061a008bd884ff475c

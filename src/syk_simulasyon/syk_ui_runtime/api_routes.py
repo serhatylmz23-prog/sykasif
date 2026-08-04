@@ -1096,7 +1096,37 @@ router.include_router(
 from .theme_api import (
     router as theme_router,
 )
+from .mobile_control_routes import router as mobile_control_router
+from .mobile_device_routes import router as mobile_device_router
+from .mobile_offline_routes import router as mobile_offline_router
+from .mobile_sensor_routes import router as mobile_sensor_router
+from .kasif_icon_routes import router as kasif_icon_router
+from syk_jarmin.jarmin_integration_api import router as jarmin_integration_router
 
 router.include_router(
     theme_router,
+)
+
+router.include_router(
+    mobile_control_router
+)
+
+router.include_router(
+    mobile_device_router
+)
+
+router.include_router(
+    mobile_offline_router
+)
+
+router.include_router(
+    mobile_sensor_router
+)
+
+router.include_router(
+    kasif_icon_router
+)
+
+router.include_router(
+    jarmin_integration_router
 )

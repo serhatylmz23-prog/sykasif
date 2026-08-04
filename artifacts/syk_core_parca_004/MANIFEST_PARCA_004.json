@@ -1,0 +1,41 @@
+﻿{
+    "branch":  "spr-003-ui-runtime-integration-fix",
+    "test":  {
+                 "value":  "1258 passed in 56.59s",
+                 "PSPath":  "D:\\sykasif_repo\\sykasif\\artifacts\\syk_core_parca_004\\kapanis\\tum_repo_testi.txt",
+                 "PSParentPath":  "D:\\sykasif_repo\\sykasif\\artifacts\\syk_core_parca_004\\kapanis",
+                 "PSChildName":  "tum_repo_testi.txt",
+                 "PSDrive":  {
+                                 "CurrentLocation":  "sykasif_repo\\sykasif",
+                                 "Name":  "D",
+                                 "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                 "Root":  "D:\\",
+                                 "Description":  "",
+                                 "MaximumSize":  null,
+                                 "Credential":  "System.Management.Automation.PSCredential",
+                                 "DisplayRoot":  null
+                             },
+                 "PSProvider":  {
+                                    "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                    "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                    "Name":  "FileSystem",
+                                    "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                    "ModuleName":  "Microsoft.PowerShell.Core",
+                                    "Module":  null,
+                                    "Description":  "",
+                                    "Capabilities":  52,
+                                    "Home":  "C:\\Users\\Pc",
+                                    "Drives":  "C D F"
+                                },
+                 "ReadCount":  19
+             },
+    "distribution_tests":  "5/5",
+    "absolute_certainty":  false,
+    "sha_records":  51,
+    "artifact":  "SYK_CORE_PARCA_004",
+    "commit":  "fdf0274fa68aa96e0f16202a47e1a273282cca25",
+    "digital_verification":  "99.9%",
+    "status":  "MUHUR_ADAYI",
+    "human_approval_required":  true,
+    "ui_tests":  "32/32"
+}

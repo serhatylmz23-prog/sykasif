@@ -1,0 +1,1068 @@
+
+================================================================================================
+src\syk_simulasyon\runtime_terminal.py
+================================================================================================
+
+--- RuntimeTerminal / 7-258 ---
+0007: class RuntimeTerminal:
+0008:     """
+0009:     SyOtağı terminal görünüm sağlayıcısı.
+0010: 
+0011:     Çift panel görünümü, aynı RuntimeDurumu nesnesinden alınan anlık
+0012:     işleyiş ve sistem hazırlık verilerini gösterir.
+0013:     """
+0014: 
+0015:     def __init__(
+0016:         self,
+0017:         runtime_durumu: RuntimeDurumu | None = None,
+0018:     ) -> None:
+0019:         self._runtime_durumu = (
+0020:             runtime_durumu
+0021:             if runtime_durumu is not None
+0022:             else RuntimeDurumu()
+0023:         )
+0024: 
+0025:     @property
+0026:     def runtime_durumu(self) -> RuntimeDurumu:
+0027:         return self._runtime_durumu
+0028: 
+0029:     def durum(self) -> SyOtagiDurumu:
+0030:         """
+0031:         Mevcut SyOtağı dış sözleşmesini geriye uyumlu biçimde korur.
+0032:         """
+0033: 
+0034:         return SyOtagiDurumu(
+0035:             runtime_durumu="AKTİF",
+0036:             websocket_durumu="BAĞLI",
+0037:             sistem_durumu="HAZIR",
+0038:             baslangic="Belirlenmedi",
+0039:             hedef="Beklemede",
+0040:             rota="Hazırlanıyor",
+0041:         )
+0042: 
+0043:     @staticmethod
+0044:     def _metin(deger: object | None, varsayilan: str) -> str:
+0045:         if deger is None:
+0046:             return varsayilan
+0047: 
+0048:         temiz = str(deger).strip()
+0049:         if not temiz:
+0050:             return varsayilan
+0051: 
+0052:         return escape(temiz, quote=True)
+0053: 
+0054:     @staticmethod
+0055:     def _yuzde(deger: object) -> str:
+0056:         try:
+0057:             sayisal = float(deger)
+0058:         except (TypeError, ValueError):
+0059:             sayisal = 0.0
+0060: 
+0061:         sayisal = min(max(sayisal, 0.0), 100.0)
+0062: 
+0063:         if sayisal.is_integer():
+0064:             return str(int(sayisal))
+0065: 
+0066:         return f"{sayisal:.2f}".rstrip("0").rstrip(".")
+0067: 
+0068:     def _cift_panel_html(self) -> str:
+0069:         isleyis = self._runtime_durumu.gorunum()
+0070:         hazirlik = self._runtime_durumu.sistem_hazirlik_ozeti()
+0071: 
+0072:         aktif_adim = self._metin(
+0073:             isleyis.get("aktif_modul"),
+0074:             "Beklemede",
+0075:         )
+0076:         durum_metni = self._metin(
+0077:             isleyis.get("durum"),
+0078:             "Belirlenmedi",
+0079:         )
+0080:         risk = self._metin(
+0081:             isleyis.get("risk"),
+0082:             "Yok",
+0083:         )
+0084:         son_hata = self._metin(
+0085:             isleyis.get("son_hata"),
+0086:             "Yok",
+0087:         )
+0088: 
+0089:         tamamlanan = int(isleyis.get("tamamlanan_adim", 0))
+0090:         toplam = int(isleyis.get("toplam_adim", 0))
+0091:         kalan = int(isleyis.get("kalan_adim", 0))
+0092:         ilerleme = self._yuzde(
+0093:             isleyis.get("ilerleme_yuzdesi", 0),
+0094:         )
+0095: 
+0096:         terminal_arayuzu = self._yuzde(
+0097:             hazirlik.get("terminal_arayuzu", 0),
+0098:         )
+0099:         veri_akisi = self._yuzde(
+0100:             hazirlik.get("veri_akisi", 0),
+0101:         )
+0102:         kayit_zinciri = self._yuzde(
+0103:             hazirlik.get("kayit_zinciri", 0),
+0104:         )
+0105:         test_durumu = self._yuzde(
+0106:             hazirlik.get("test_durumu", 0),
+0107:         )
+0108:         disa_aktarim = self._yuzde(
+0109:             hazirlik.get("disa_aktarim_hazirligi", 0),
+0110:         )
+0111:         genel_hazirlik = self._yuzde(
+0112:             hazirlik.get("genel_uretime_hazirlik", 0),
+0113:         )
+0114: 
+0115:         return f"""
+0116: <section id="syk-cift-panel" style="
+0117:     display:grid;
+0118:     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+0119:     gap:16px;
+0120:     margin:18px auto;
+0121:     max-width:1000px;
+0122:     font-family:system-ui,-apple-system,'Segoe UI',sans-serif;
+0123: ">
+0124:     <article style="
+0125:         border:1px solid #39424e;
+0126:         border-radius:12px;
+0127:         padding:18px;
+0128:         background:#111820;
+0129:     ">
+0130:         <h2>İşleyiş Durumu</h2>
+0131:         <dl>
+0132:             <dt>Aktif Adım</dt><dd>{aktif_adim}</dd>
+0133:             <dt>Çalışma Durumu</dt><dd>{durum_metni}</dd>
+0134:             <dt>Tamamlanan Adım</dt><dd>{tamamlanan}</dd>
+0135:             <dt>Toplam Adım</dt><dd>{toplam}</dd>
+0136:             <dt>Kalan Adım</dt><dd>{kalan}</dd>
+0137:             <dt>Genel İlerleme</dt><dd>%{ilerleme}</dd>
+0138:             <dt>Risk</dt><dd>{risk}</dd>
+0139:             <dt>Son Hata</dt><dd>{son_hata}</dd>
+0140:         </dl>
+0141:     </article>
+0142: 
+0143:     <article style="
+0144:         border:1px solid #39424e;
+0145:         border-radius:12px;
+0146:         padding:18px;
+0147:         background:#111820;
+0148:     ">
+0149:         <h2>Sistem Hazırlık Durumu</h2>
+0150:         <dl>
+0151:             <dt>Terminal Arayüzü</dt><dd>%{terminal_arayuzu}</dd>
+0152:             <dt>Veri Akışı</dt><dd>%{veri_akisi}</dd>
+0153:             <dt>Kayıt Zinciri</dt><dd>%{kayit_zinciri}</dd>
+0154:             <dt>Test Durumu</dt><dd>%{test_durumu}</dd>
+0155:             <dt>Dışa Aktarım Hazırlığı</dt><dd>%{disa_aktarim}</dd>
+0156:             <dt>Üretime Hazırlık</dt><dd>%{genel_hazirlik}</dd>
+0157:         </dl>
+0158:     </article>
+0159: </section>
+0160: """
+0161: 
+0162:     def html(self) -> str:
+0163:         durum = self.durum()
+0164:         panel = self._cift_panel_html()
+0165: 
+0166:         return f"""
+0167: <!doctype html>
+0168: <html lang="tr">
+0169: <head>
+0170: <meta charset="utf-8">
+0171: 
+0172: <title>SyOtağı</title>
+0173: 
+0174: <style>
+0175: body {{
+0176:     font-family: Arial, sans-serif;
+0177:     background: #111;
+0178:     color: #eee;
+0179:     padding: 30px;
+0180: }}
+0181: 
+0182: .panel {{
+0183:     max-width: 600px;
+0184:     margin: auto;
+0185: }}
+0186: 
+0187: .kart {{
+0188:     border: 1px solid #555;
+0189:     padding: 15px;
+0190:     margin: 10px 0;
+0191:     border-radius: 8px;
+0192: }}
+0193: 
+0194: .baslik {{
+0195:     text-align: center;
+0196: }}
+0197: 
+0198: #syk-cift-panel dt {{
+0199:     font-weight: 700;
+0200:     margin-top: 8px;
+0201: }}
+0202: 
+0203: #syk-cift-panel dd {{
+0204:     margin: 2px 0 8px;
+0205: }}
+0206: </style>
+0207: 
+0208: </head>
+0209: 
+0210: <body>
+0211: 
+0212: <div class="panel">
+0213: 
+0214: <h1 class="baslik">
+0215: SYKAŞİF
+0216: </h1>
+0217: 
+0218: <h2 class="baslik">
+0219: SyOtağı
+0220: </h2>
+0221: 
+0222: <div class="kart">
+0223: <b>Runtime:</b>
+0224: {escape(str(durum.runtime_durumu), quote=True)}
+0225: </div>
+0226: 
+0227: <div class="kart">
+0228: <b>WebSocket:</b>
+0229: {escape(str(durum.websocket_durumu), quote=True)}
+0230: </div>
+0231: 
+0232: <div class="kart">
+0233: <b>Sistem:</b>
+0234: {escape(str(durum.sistem_durumu), quote=True)}
+0235: </div>
+0236: 
+0237: <div class="kart">
+0238: <b>Başlangıç:</b>
+0239: {escape(str(durum.baslangic), quote=True)}
+0240: </div>
+0241: 
+0242: <div class="kart">
+0243: <b>Rota:</b>
+0244: {escape(str(durum.rota), quote=True)}
+0245: </div>
+0246: 
+0247: <div class="kart">
+0248: <b>Hedef:</b>
+0249: {escape(str(durum.hedef), quote=True)}
+0250: </div>
+0251: 
+0252: </div>
+0253: 
+0254: {panel}
+0255: 
+0256: </body>
+0257: </html>
+0258: """
+
+--- _cift_panel_html / 68-160 ---
+0068:     def _cift_panel_html(self) -> str:
+0069:         isleyis = self._runtime_durumu.gorunum()
+0070:         hazirlik = self._runtime_durumu.sistem_hazirlik_ozeti()
+0071: 
+0072:         aktif_adim = self._metin(
+0073:             isleyis.get("aktif_modul"),
+0074:             "Beklemede",
+0075:         )
+0076:         durum_metni = self._metin(
+0077:             isleyis.get("durum"),
+0078:             "Belirlenmedi",
+0079:         )
+0080:         risk = self._metin(
+0081:             isleyis.get("risk"),
+0082:             "Yok",
+0083:         )
+0084:         son_hata = self._metin(
+0085:             isleyis.get("son_hata"),
+0086:             "Yok",
+0087:         )
+0088: 
+0089:         tamamlanan = int(isleyis.get("tamamlanan_adim", 0))
+0090:         toplam = int(isleyis.get("toplam_adim", 0))
+0091:         kalan = int(isleyis.get("kalan_adim", 0))
+0092:         ilerleme = self._yuzde(
+0093:             isleyis.get("ilerleme_yuzdesi", 0),
+0094:         )
+0095: 
+0096:         terminal_arayuzu = self._yuzde(
+0097:             hazirlik.get("terminal_arayuzu", 0),
+0098:         )
+0099:         veri_akisi = self._yuzde(
+0100:             hazirlik.get("veri_akisi", 0),
+0101:         )
+0102:         kayit_zinciri = self._yuzde(
+0103:             hazirlik.get("kayit_zinciri", 0),
+0104:         )
+0105:         test_durumu = self._yuzde(
+0106:             hazirlik.get("test_durumu", 0),
+0107:         )
+0108:         disa_aktarim = self._yuzde(
+0109:             hazirlik.get("disa_aktarim_hazirligi", 0),
+0110:         )
+0111:         genel_hazirlik = self._yuzde(
+0112:             hazirlik.get("genel_uretime_hazirlik", 0),
+0113:         )
+0114: 
+0115:         return f"""
+0116: <section id="syk-cift-panel" style="
+0117:     display:grid;
+0118:     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+0119:     gap:16px;
+0120:     margin:18px auto;
+0121:     max-width:1000px;
+0122:     font-family:system-ui,-apple-system,'Segoe UI',sans-serif;
+0123: ">
+0124:     <article style="
+0125:         border:1px solid #39424e;
+0126:         border-radius:12px;
+0127:         padding:18px;
+0128:         background:#111820;
+0129:     ">
+0130:         <h2>İşleyiş Durumu</h2>
+0131:         <dl>
+0132:             <dt>Aktif Adım</dt><dd>{aktif_adim}</dd>
+0133:             <dt>Çalışma Durumu</dt><dd>{durum_metni}</dd>
+0134:             <dt>Tamamlanan Adım</dt><dd>{tamamlanan}</dd>
+0135:             <dt>Toplam Adım</dt><dd>{toplam}</dd>
+0136:             <dt>Kalan Adım</dt><dd>{kalan}</dd>
+0137:             <dt>Genel İlerleme</dt><dd>%{ilerleme}</dd>
+0138:             <dt>Risk</dt><dd>{risk}</dd>
+0139:             <dt>Son Hata</dt><dd>{son_hata}</dd>
+0140:         </dl>
+0141:     </article>
+0142: 
+0143:     <article style="
+0144:         border:1px solid #39424e;
+0145:         border-radius:12px;
+0146:         padding:18px;
+0147:         background:#111820;
+0148:     ">
+0149:         <h2>Sistem Hazırlık Durumu</h2>
+0150:         <dl>
+0151:             <dt>Terminal Arayüzü</dt><dd>%{terminal_arayuzu}</dd>
+0152:             <dt>Veri Akışı</dt><dd>%{veri_akisi}</dd>
+0153:             <dt>Kayıt Zinciri</dt><dd>%{kayit_zinciri}</dd>
+0154:             <dt>Test Durumu</dt><dd>%{test_durumu}</dd>
+0155:             <dt>Dışa Aktarım Hazırlığı</dt><dd>%{disa_aktarim}</dd>
+0156:             <dt>Üretime Hazırlık</dt><dd>%{genel_hazirlik}</dd>
+0157:         </dl>
+0158:     </article>
+0159: </section>
+0160: """
+
+--- html / 162-258 ---
+0162:     def html(self) -> str:
+0163:         durum = self.durum()
+0164:         panel = self._cift_panel_html()
+0165: 
+0166:         return f"""
+0167: <!doctype html>
+0168: <html lang="tr">
+0169: <head>
+0170: <meta charset="utf-8">
+0171: 
+0172: <title>SyOtağı</title>
+0173: 
+0174: <style>
+0175: body {{
+0176:     font-family: Arial, sans-serif;
+0177:     background: #111;
+0178:     color: #eee;
+0179:     padding: 30px;
+0180: }}
+0181: 
+0182: .panel {{
+0183:     max-width: 600px;
+0184:     margin: auto;
+0185: }}
+0186: 
+0187: .kart {{
+0188:     border: 1px solid #555;
+0189:     padding: 15px;
+0190:     margin: 10px 0;
+0191:     border-radius: 8px;
+0192: }}
+0193: 
+0194: .baslik {{
+0195:     text-align: center;
+0196: }}
+0197: 
+0198: #syk-cift-panel dt {{
+0199:     font-weight: 700;
+0200:     margin-top: 8px;
+0201: }}
+0202: 
+0203: #syk-cift-panel dd {{
+0204:     margin: 2px 0 8px;
+0205: }}
+0206: </style>
+0207: 
+0208: </head>
+0209: 
+0210: <body>
+0211: 
+0212: <div class="panel">
+0213: 
+0214: <h1 class="baslik">
+0215: SYKAŞİF
+0216: </h1>
+0217: 
+0218: <h2 class="baslik">
+0219: SyOtağı
+0220: </h2>
+0221: 
+0222: <div class="kart">
+0223: <b>Runtime:</b>
+0224: {escape(str(durum.runtime_durumu), quote=True)}
+0225: </div>
+0226: 
+0227: <div class="kart">
+0228: <b>WebSocket:</b>
+0229: {escape(str(durum.websocket_durumu), quote=True)}
+0230: </div>
+0231: 
+0232: <div class="kart">
+0233: <b>Sistem:</b>
+0234: {escape(str(durum.sistem_durumu), quote=True)}
+0235: </div>
+0236: 
+0237: <div class="kart">
+0238: <b>Başlangıç:</b>
+0239: {escape(str(durum.baslangic), quote=True)}
+0240: </div>
+0241: 
+0242: <div class="kart">
+0243: <b>Rota:</b>
+0244: {escape(str(durum.rota), quote=True)}
+0245: </div>
+0246: 
+0247: <div class="kart">
+0248: <b>Hedef:</b>
+0249: {escape(str(durum.hedef), quote=True)}
+0250: </div>
+0251: 
+0252: </div>
+0253: 
+0254: {panel}
+0255: 
+0256: </body>
+0257: </html>
+0258: """
+
+================================================================================================
+src\syk_simulasyon\runtime_fastapi_sunucusu.py
+================================================================================================
+
+--- RuntimeFastApiSunucusu / 26-170 ---
+0026: class RuntimeFastApiSunucusu:
+0027: 
+0028:     def __init__(
+0029:         self,
+0030:         disa_aktarim: RuntimeDisaAktarim,
+0031:         websocket_yayinci: RuntimeWebSocketYayincisi | None = None,
+0032:         runtime_durumu: RuntimeDurumu | None = None,
+0033:     ) -> None:
+0034: 
+0035:         self._api = RuntimeHttpApi(disa_aktarim)
+0036:         self._websocket = websocket_yayinci
+0037:         self._terminal = RuntimeTerminal(runtime_durumu)
+0038: 
+0039:     def olustur(self) -> FastAPI:
+0040: 
+0041:         uygulama = FastAPI(
+0042:             title="SyKaşif Runtime API",
+0043:             version="1.1",
+0044:         )
+0045: 
+0046:         @uygulama.get("/terminal")
+0047:         def terminal() -> Response:
+0048: 
+0049:             return Response(
+0050:                 content=self._terminal.html(),
+0051:                 media_type="text/html; charset=utf-8",
+0052:             )
+0053: 
+0054:         @uygulama.get("/runtime/json")
+0055:         def runtime_json() -> Response:
+0056: 
+0057:             durum, govde = self._api.json()
+0058: 
+0059:             return Response(
+0060:                 content=govde,
+0061:                 status_code=durum,
+0062:                 media_type="application/json",
+0063:             )
+0064: 
+0065:         @uygulama.get("/runtime/html")
+0066:         def runtime_html() -> Response:
+0067: 
+0068:             durum, govde = self._api.html()
+0069: 
+0070:             return Response(
+0071:                 content=govde,
+0072:                 status_code=durum,
+0073:                 media_type="text/html",
+0074:             )
+0075: 
+0076:         @uygulama.get("/runtime/csv")
+0077:         def runtime_csv() -> Response:
+0078: 
+0079:             durum, govde = self._api.csv()
+0080: 
+0081:             return Response(
+0082:                 content=govde,
+0083:                 status_code=durum,
+0084:                 media_type="text/csv",
+0085:             )
+0086: 
+0087:         @uygulama.get("/runtime/markdown")
+0088:         def runtime_markdown() -> Response:
+0089: 
+0090:             durum, govde = self._api.markdown()
+0091: 
+0092:             return Response(
+0093:                 content=govde,
+0094:                 status_code=durum,
+0095:                 media_type="text/markdown",
+0096:             )
+0097: 
+0098:         @uygulama.get("/runtime/xml")
+0099:         def runtime_xml() -> Response:
+0100: 
+0101:             durum, govde = self._api.xml()
+0102: 
+0103:             return Response(
+0104:                 content=govde,
+0105:                 status_code=durum,
+0106:                 media_type="application/xml",
+0107:             )
+0108: 
+0109:         @uygulama.get("/runtime/yaml")
+0110:         def runtime_yaml() -> Response:
+0111: 
+0112:             durum, govde = self._api.yaml()
+0113: 
+0114:             return Response(
+0115:                 content=govde,
+0116:                 status_code=durum,
+0117:                 media_type="application/yaml",
+0118:             )
+0119: 
+0120:         @uygulama.websocket("/ws/runtime")
+0121:         async def runtime_websocket(
+0122:             websocket: WebSocket,
+0123:         ) -> None:
+0124: 
+0125:             await websocket.accept()
+0126: 
+0127:             if self._websocket is None:
+0128:                 await websocket.send_json(
+0129:                     {
+0130:                         "durum": "kullanılamıyor",
+0131:                         "mesaj": (
+0132:                             "WebSocket yayıncısı yapılandırılmadı."
+0133:                         ),
+0134:                     }
+0135:                 )
+0136:                 await websocket.close(code=1011)
+0137:                 return
+0138: 
+0139:             await websocket.send_json(
+0140:                 self._websocket.baglanti_mesaji()
+0141:             )
+0142: 
+0143:             try:
+0144: 
+0145:                 while True:
+0146: 
+0147:                     komut = await websocket.receive_text()
+0148: 
+0149:                     if komut.lower() in {
+0150:                         "güncelle",
+0151:                         "guncelle",
+0152:                         "yenile",
+0153:                     }:
+0154: 
+0155:                         await websocket.send_json(
+0156:                             self._websocket.guncelleme_mesaji()
+0157:                         )
+0158: 
+0159:                     else:
+0160: 
+0161:                         await websocket.send_json(
+0162:                             self._websocket.bilinmeyen_komut(
+0163:                                 komut
+0164:                             )
+0165:                         )
+0166: 
+0167:             except WebSocketDisconnect:
+0168:                 pass
+0169: 
+0170:         return uygulama
+
+================================================================================================
+ILGILI TESTLER
+================================================================================================
+
+--- tests\test_runtime_cift_panel_ilerleme.py ---
+0001: from syk_simulasyon.runtime_durumu import RuntimeDurumu
+0002: from syk_simulasyon.runtime_terminal import RuntimeTerminal
+0003: 
+0004: 
+0005: def test_cift_panel_alanlari_gorunur():
+0006:     html = RuntimeTerminal().html()
+0007: 
+0008:     assert "\u0130\u015fleyi\u015f Durumu" in html
+0009:     assert "Sistem Haz\u0131rl\u0131k Durumu" in html
+0010:     assert "Aktif Ad\u0131m" in html
+0011:     assert "Tamamlanan Ad\u0131m" in html
+0012:     assert "Toplam Ad\u0131m" in html
+0013:     assert "Genel \u0130lerleme" in html
+0014:     assert "Terminal Aray\u00fcz\u00fc" in html
+0015:     assert "Veri Ak\u0131\u015f\u0131" in html
+0016:     assert "Kay\u0131t Zinciri" in html
+0017:     assert "Test Durumu" in html
+0018:     assert "D\u0131\u015fa Aktar\u0131m Haz\u0131rl\u0131\u011f\u0131" in html
+0019:     assert "\u00dcretime Haz\u0131rl\u0131k" in html
+0020: 
+0021: 
+0022: def test_sistem_hazirlik_yuzdeleri_hesaplanir():
+0023:     durum = RuntimeDurumu()
+0024: 
+0025:     assert hasattr(durum, "sistem_hazirlik_guncelle")
+0026:     assert hasattr(durum, "sistem_hazirlik_ozeti")
+0027: 
+0028:     durum.sistem_hazirlik_guncelle("terminal_arayuzu", 100)
+0029:     durum.sistem_hazirlik_guncelle("veri_akisi", 100)
+0030:     durum.sistem_hazirlik_guncelle("kayit_zinciri", 100)
+0031:     durum.sistem_hazirlik_guncelle("test_durumu", 100)
+0032:     durum.sistem_hazirlik_guncelle("disa_aktarim_hazirligi", 80)
+0033: 
+0034:     ozet = durum.sistem_hazirlik_ozeti()
+0035: 
+0036:     assert ozet["terminal_arayuzu"] == 100
+0037:     assert ozet["veri_akisi"] == 100
+0038:     assert ozet["kayit_zinciri"] == 100
+0039:     assert ozet["test_durumu"] == 100
+0040:     assert ozet["disa_aktarim_hazirligi"] == 80
+0041:     assert ozet["genel_uretime_hazirlik"] == 96.0
+
+--- tests\test_runtime_cift_panel_dinamik.py ---
+0001: from syk_simulasyon.runtime_durumu import (
+0002:     RuntimeDurumu,
+0003:     RuntimeDurumTuru,
+0004: )
+0005: from syk_simulasyon.runtime_terminal import RuntimeTerminal
+0006: 
+0007: 
+0008: def test_terminal_gercek_isleyis_verilerini_gosterir():
+0009:     durum = RuntimeDurumu()
+0010: 
+0011:     durum.adimlari_guncelle(
+0012:         tamamlanan_adim=3,
+0013:         toplam_adim=8,
+0014:         aktif_modul="Ham Sinyal Birleşimi",
+0015:     )
+0016:     durum.durum_guncelle(
+0017:         durum=RuntimeDurumTuru.CALISIYOR,
+0018:         ilerleme_yuzdesi=37.5,
+0019:     )
+0020:     durum.risk_guncelle("Düşük gecikme riski")
+0021: 
+0022:     html = RuntimeTerminal(durum).html()
+0023: 
+0024:     assert "Ham Sinyal Birleşimi" in html
+0025:     assert "<dd>3</dd>" in html
+0026:     assert "<dd>8</dd>" in html
+0027:     assert "<dd>5</dd>" in html
+0028:     assert "<dd>%37.5</dd>" in html
+0029:     assert "çalışıyor" in html
+0030:     assert "Düşük gecikme riski" in html
+0031: 
+0032: 
+0033: def test_terminal_gercek_hazirlik_yuzdelerini_gosterir():
+0034:     durum = RuntimeDurumu()
+0035: 
+0036:     durum.sistem_hazirlik_guncelle("terminal_arayuzu", 100)
+0037:     durum.sistem_hazirlik_guncelle("veri_akisi", 80)
+0038:     durum.sistem_hazirlik_guncelle("kayit_zinciri", 60)
+0039:     durum.sistem_hazirlik_guncelle("test_durumu", 40)
+0040:     durum.sistem_hazirlik_guncelle(
+0041:         "disa_aktarim_hazirligi",
+0042:         20,
+0043:     )
+0044: 
+0045:     html = RuntimeTerminal(
+0046:         runtime_durumu=durum,
+0047:     ).html()
+0048: 
+0049:     assert "<dt>Terminal Arayüzü</dt><dd>%100</dd>" in html
+0050:     assert "<dt>Veri Akışı</dt><dd>%80</dd>" in html
+0051:     assert "<dt>Kayıt Zinciri</dt><dd>%60</dd>" in html
+0052:     assert "<dt>Test Durumu</dt><dd>%40</dd>" in html
+0053:     assert (
+0054:         "<dt>Dışa Aktarım Hazırlığı</dt><dd>%20</dd>"
+0055:         in html
+0056:     )
+0057:     assert "<dt>Üretime Hazırlık</dt><dd>%60</dd>" in html
+0058: 
+0059: 
+0060: def test_terminal_metinsel_verileri_html_kacisiyla_korur():
+0061:     durum = RuntimeDurumu()
+0062: 
+0063:     durum.adimlari_guncelle(
+0064:         tamamlanan_adim=1,
+0065:         toplam_adim=2,
+0066:         aktif_modul='<script>alert("x")</script>',
+0067:     )
+0068:     durum.risk_guncelle("<b>kritik</b>")
+0069: 
+0070:     html = RuntimeTerminal(durum).html()
+0071: 
+0072:     assert '<script>alert("x")</script>' not in html
+0073:     assert "&lt;script&gt;alert(&quot;x&quot;)&lt;/script&gt;" in html
+0074:     assert "<b>kritik</b>" not in html
+0075:     assert "&lt;b&gt;kritik&lt;/b&gt;" in html
+0076: 
+0077: 
+0078: def test_terminal_varsayilan_kullanimda_geriye_uyumludur():
+0079:     terminal = RuntimeTerminal()
+0080:     html = terminal.html()
+0081: 
+0082:     assert terminal.durum().runtime_durumu == "AKTİF"
+0083:     assert "SYKAŞİF" in html
+0084:     assert "SyOtağı" in html
+0085:     assert "İşleyiş Durumu" in html
+0086:     assert "Sistem Hazırlık Durumu" in html
+0087:     assert "<dt>Genel İlerleme</dt><dd>%0</dd>" in html
+0088: 
+0089: 
+0090: def test_terminal_ayni_durum_nesnesindeki_guncellemeyi_yansitir():
+0091:     durum = RuntimeDurumu()
+0092:     terminal = RuntimeTerminal(durum)
+0093: 
+0094:     ilk_html = terminal.html()
+0095:     assert "Sinyal Çözümleme" not in ilk_html
+0096: 
+0097:     durum.adimlari_guncelle(
+0098:         tamamlanan_adim=4,
+0099:         toplam_adim=5,
+0100:         aktif_modul="Sinyal Çözümleme",
+0101:     )
+0102: 
+0103:     ikinci_html = terminal.html()
+0104: 
+0105:     assert "Sinyal Çözümleme" in ikinci_html
+0106:     assert "<dt>Genel İlerleme</dt><dd>%80</dd>" in ikinci_html
+
+--- tests\test_runtime_fastapi_canli_panel.py ---
+0001: from fastapi.testclient import TestClient
+0002: 
+0003: from syk_simulasyon.runtime_anlik_gorunum import (
+0004:     RuntimeAnlikGorunumSaglayicisi,
+0005: )
+0006: from syk_simulasyon.runtime_csv import RuntimeCsvSaglayicisi
+0007: from syk_simulasyon.runtime_disa_aktarim import RuntimeDisaAktarim
+0008: from syk_simulasyon.runtime_durumu import RuntimeDurumTuru
+0009: from syk_simulasyon.runtime_fastapi_sunucusu import (
+0010:     RuntimeFastApiSunucusu,
+0011: )
+0012: from syk_simulasyon.runtime_html import RuntimeHtmlSaglayicisi
+0013: from syk_simulasyon.runtime_izleme import RuntimeIzlemeSaglayicisi
+0014: from syk_simulasyon.runtime_json import RuntimeJsonSaglayicisi
+0015: from syk_simulasyon.runtime_markdown import (
+0016:     RuntimeMarkdownSaglayicisi,
+0017: )
+0018: from syk_simulasyon.runtime_servisi import RuntimeServisi
+0019: from syk_simulasyon.runtime_websocket import (
+0020:     RuntimeWebSocketYayincisi,
+0021: )
+0022: from syk_simulasyon.runtime_xml import RuntimeXmlSaglayicisi
+0023: from syk_simulasyon.runtime_yaml import RuntimeYamlSaglayicisi
+0024: 
+0025: 
+0026: def _istemci_ve_servis() -> tuple[TestClient, RuntimeServisi]:
+0027:     servis = RuntimeServisi()
+0028: 
+0029:     gorunum = RuntimeAnlikGorunumSaglayicisi(
+0030:         RuntimeIzlemeSaglayicisi(servis)
+0031:     )
+0032: 
+0033:     disa_aktarim = RuntimeDisaAktarim(
+0034:         RuntimeJsonSaglayicisi(gorunum),
+0035:         RuntimeCsvSaglayicisi(gorunum),
+0036:         RuntimeHtmlSaglayicisi(gorunum),
+0037:         RuntimeMarkdownSaglayicisi(gorunum),
+0038:         RuntimeXmlSaglayicisi(gorunum),
+0039:         RuntimeYamlSaglayicisi(gorunum),
+0040:     )
+0041: 
+0042:     websocket_yayinci = RuntimeWebSocketYayincisi(
+0043:         gorunum
+0044:     )
+0045: 
+0046:     uygulama = RuntimeFastApiSunucusu(
+0047:         disa_aktarim,
+0048:         websocket_yayinci,
+0049:         servis.durum,
+0050:     ).olustur()
+0051: 
+0052:     return TestClient(uygulama), servis
+0053: 
+0054: 
+0055: def test_terminal_servisin_canli_durumunu_gosterir():
+0056:     istemci, servis = _istemci_ve_servis()
+0057: 
+0058:     servis.durum.adimlari_guncelle(
+0059:         tamamlanan_adim=2,
+0060:         toplam_adim=5,
+0061:         aktif_modul="Canlı Sinyal İşleme",
+0062:     )
+0063:     servis.durum.durum_guncelle(
+0064:         durum=RuntimeDurumTuru.CALISIYOR,
+0065:     )
+0066:     servis.durum.sistem_hazirlik_guncelle(
+0067:         "veri_akisi",
+0068:         80,
+0069:     )
+0070: 
+0071:     yanit = istemci.get("/terminal")
+0072: 
+0073:     assert yanit.status_code == 200
+0074:     assert "Canlı Sinyal İşleme" in yanit.text
+0075:     assert "<dt>Tamamlanan Adım</dt><dd>2</dd>" in yanit.text
+0076:     assert "<dt>Toplam Adım</dt><dd>5</dd>" in yanit.text
+0077:     assert "<dt>Genel İlerleme</dt><dd>%40</dd>" in yanit.text
+0078:     assert "<dt>Veri Akışı</dt><dd>%80</dd>" in yanit.text
+0079:     assert "çalışıyor" in yanit.text
+0080: 
+0081: 
+0082: def test_terminal_sonraki_istekte_guncel_durumu_okur():
+0083:     istemci, servis = _istemci_ve_servis()
+0084: 
+0085:     ilk_yanit = istemci.get("/terminal")
+0086:     assert "Sinyal Çözümleme" not in ilk_yanit.text
+0087: 
+0088:     servis.durum.adimlari_guncelle(
+0089:         tamamlanan_adim=4,
+0090:         toplam_adim=4,
+0091:         aktif_modul="Sinyal Çözümleme",
+0092:     )
+0093:     servis.durum.durum_guncelle(
+0094:         durum=RuntimeDurumTuru.TAMAMLANDI,
+0095:         ilerleme_yuzdesi=100,
+0096:     )
+0097: 
+0098:     ikinci_yanit = istemci.get("/terminal")
+0099: 
+0100:     assert ikinci_yanit.status_code == 200
+0101:     assert "Sinyal Çözümleme" in ikinci_yanit.text
+0102:     assert "<dt>Genel İlerleme</dt><dd>%100</dd>" in ikinci_yanit.text
+0103:     assert "tamamlandı" in ikinci_yanit.text
+0104: 
+0105: 
+0106: def test_websocket_ve_terminal_ayni_servis_durumunu_okur():
+0107:     istemci, servis = _istemci_ve_servis()
+0108: 
+0109:     servis.durum.adimlari_guncelle(
+0110:         tamamlanan_adim=3,
+0111:         toplam_adim=6,
+0112:         aktif_modul="Ortak Canlı Kaynak",
+0113:     )
+0114:     servis.durum.durum_guncelle(
+0115:         durum=RuntimeDurumTuru.CALISIYOR,
+0116:     )
+0117: 
+0118:     terminal_yaniti = istemci.get("/terminal")
+0119: 
+0120:     assert "Ortak Canlı Kaynak" in terminal_yaniti.text
+0121:     assert "<dt>Genel İlerleme</dt><dd>%50</dd>" in (
+0122:         terminal_yaniti.text
+0123:     )
+0124: 
+0125:     with istemci.websocket_connect("/ws/runtime") as websocket:
+0126:         baglanti = websocket.receive_json()
+0127: 
+0128:         assert baglanti["mesaj"] == (
+0129:             "SyOtağı bağlantısı kuruldu"
+0130:         )
+0131:         assert baglanti["gorunum"]["aktif_modul"] == (
+0132:             "Ortak Canlı Kaynak"
+0133:         )
+0134:         assert baglanti["gorunum"]["ilerleme_yuzdesi"] == 50.0
+0135: 
+0136:         servis.durum.adimlari_guncelle(
+0137:             tamamlanan_adim=5,
+0138:             toplam_adim=6,
+0139:             aktif_modul="Ortak Canlı Kaynak",
+0140:         )
+0141: 
+0142:         websocket.send_text("yenile")
+0143:         guncelleme = websocket.receive_json()
+0144: 
+0145:         assert guncelleme["mesaj"] == (
+0146:             "Canlı görünüm güncellendi"
+0147:         )
+0148:         assert guncelleme["gorunum"]["aktif_modul"] == (
+0149:             "Ortak Canlı Kaynak"
+0150:         )
+0151:         assert guncelleme["gorunum"]["ilerleme_yuzdesi"] == 83.33
+0152: 
+0153: 
+0154: def test_eski_sunucu_kurulumu_geriye_uyumludur():
+0155:     servis = RuntimeServisi()
+0156: 
+0157:     gorunum = RuntimeAnlikGorunumSaglayicisi(
+0158:         RuntimeIzlemeSaglayicisi(servis)
+0159:     )
+0160: 
+0161:     disa_aktarim = RuntimeDisaAktarim(
+0162:         RuntimeJsonSaglayicisi(gorunum),
+0163:         RuntimeCsvSaglayicisi(gorunum),
+0164:         RuntimeHtmlSaglayicisi(gorunum),
+0165:         RuntimeMarkdownSaglayicisi(gorunum),
+0166:         RuntimeXmlSaglayicisi(gorunum),
+0167:         RuntimeYamlSaglayicisi(gorunum),
+0168:     )
+0169: 
+0170:     uygulama = RuntimeFastApiSunucusu(
+0171:         disa_aktarim
+0172:     ).olustur()
+0173: 
+0174:     istemci = TestClient(uygulama)
+0175:     yanit = istemci.get("/terminal")
+0176: 
+0177:     assert yanit.status_code == 200
+0178:     assert "SYKAŞİF" in yanit.text
+0179:     assert "İşleyiş Durumu" in yanit.text
+
+--- tests\test_runtime_websocket.py ---
+0001: from fastapi.testclient import TestClient
+0002: 
+0003: from syk_simulasyon.runtime_fastapi_sunucusu import uygulama_olustur
+0004: 
+0005: 
+0006: def test_websocket_baglanti_mesaji():
+0007:     istemci = TestClient(uygulama_olustur())
+0008: 
+0009:     with istemci.websocket_connect("/ws/runtime") as websocket:
+0010:         veri = websocket.receive_json()
+0011: 
+0012:     assert veri["mesaj"] == "SyOtağı bağlantısı kuruldu"
+0013:     assert veri["terminal"] == "SYK-FIELD-01"
+0014: 
+0015: 
+0016: def test_websocket_guncelleme_mesaji():
+0017:     istemci = TestClient(uygulama_olustur())
+0018: 
+0019:     with istemci.websocket_connect("/ws/runtime") as websocket:
+0020:         websocket.receive_json()
+0021: 
+0022:         websocket.send_text("güncelle")
+0023: 
+0024:         veri = websocket.receive_json()
+0025: 
+0026:     assert veri["mesaj"] == "Canlı görünüm güncellendi"
+0027: 
+0028: 
+0029: def test_websocket_bilinmeyen_komut():
+0030:     istemci = TestClient(uygulama_olustur())
+0031: 
+0032:     with istemci.websocket_connect("/ws/runtime") as websocket:
+0033:         websocket.receive_json()
+0034: 
+0035:         websocket.send_text("test")
+0036: 
+0037:         veri = websocket.receive_json()
+0038: 
+0039:     assert veri["mesaj"] == "Bilinmeyen komut"
+0040:     assert veri["komut"] == "test"
+0041: 
+0042: 
+0043: def test_terminal_turkce_kontrol():
+0044:     istemci = TestClient(uygulama_olustur())
+0045: 
+0046:     yanit = istemci.get("/terminal")
+0047: 
+0048:     assert yanit.status_code == 200
+0049:     assert "SyOtağı" in yanit.text
+
+--- tests\test_runtime_websocket_gorunum_sozlesmesi.py ---
+0001: from dataclasses import dataclass
+0002: 
+0003: import pytest
+0004: 
+0005: from syk_simulasyon.runtime_websocket import (
+0006:     RuntimeWebSocketYayincisi,
+0007: )
+0008: 
+0009: 
+0010: @dataclass
+0011: class _AnlikGorunum:
+0012:     durum: str
+0013:     aktif_modul: str
+0014:     ilerleme_yuzdesi: float
+0015:     olay_sayisi: int
+0016: 
+0017: 
+0018: class _GorunumSaglayici:
+0019:     def gorunum(self) -> _AnlikGorunum:
+0020:         return _AnlikGorunum(
+0021:             durum="çalışıyor",
+0022:             aktif_modul="Canlı Modül",
+0023:             ilerleme_yuzdesi=62.5,
+0024:             olay_sayisi=4,
+0025:         )
+0026: 
+0027: 
+0028: class _OlusturSaglayici:
+0029:     def olustur(self) -> dict[str, object]:
+0030:         return {
+0031:             "durum": "hazır",
+0032:             "aktif_modul": "Eski Sözleşme",
+0033:             "ilerleme_yuzdesi": 25.0,
+0034:             "olay_sayisi": 1,
+0035:         }
+0036: 
+0037: 
+0038: class _GecersizSaglayici:
+0039:     def gorunum(self) -> object:
+0040:         return object()
+0041: 
+0042: 
+0043: def test_websocket_gorunum_metodunu_okur():
+0044:     yayinci = RuntimeWebSocketYayincisi(
+0045:         _GorunumSaglayici()
+0046:     )
+0047: 
+0048:     mesaj = yayinci.guncelleme_mesaji()
+0049: 
+0050:     assert mesaj["gorunum"]["durum"] == "çalışıyor"
+0051:     assert mesaj["gorunum"]["aktif_modul"] == "Canlı Modül"
+0052:     assert mesaj["gorunum"]["ilerleme_yuzdesi"] == 62.5
+0053:     assert mesaj["gorunum"]["olay_sayisi"] == 4
+0054: 
+0055: 
+0056: def test_websocket_eski_olustur_sozlesmesini_korur():
+0057:     yayinci = RuntimeWebSocketYayincisi(
+0058:         _OlusturSaglayici()
+0059:     )
+0060: 
+0061:     mesaj = yayinci.baglanti_mesaji()
+0062: 
+0063:     assert mesaj["gorunum"]["aktif_modul"] == "Eski Sözleşme"
+0064:     assert mesaj["gorunum"]["ilerleme_yuzdesi"] == 25.0
+0065: 
+0066: 
+0067: def test_websocket_gecersiz_gorunumu_reddeder():
+0068:     yayinci = RuntimeWebSocketYayincisi(
+0069:         _GecersizSaglayici()
+0070:     )
+0071: 
+0072:     with pytest.raises(
+0073:         TypeError,
+0074:         match="sözlüğe dönüştürülebilir",
+0075:     ):
+0076:         yayinci.guncelleme_mesaji()

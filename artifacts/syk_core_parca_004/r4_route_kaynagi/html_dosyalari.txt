@@ -1,0 +1,3 @@
+﻿.\artifacts\tefas_resmi_yanitlar\fon_analiz.html
+.\artifacts\tefas_resmi_yanitlar\fon_karsilastirma.html
+.\src\syk_simulasyon\syk_ui_runtime\static\index.html

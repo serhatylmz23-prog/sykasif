@@ -1,0 +1,16 @@
+SYK İÇ İÇE YÖNLENDİRİCİ VE HTTP DOĞRULAMASI
+
+ÜST DÜZEY YOL SAYISI: 23
+İÇ İÇE TOPLAM YOL SAYISI: 23
+
+BEKLENEN YOLLAR
+/api/syk-ui/jarmin/integration | ZİNCİR=False | HTTP=200 | DURUM=VAR
+/api/syk-ui/mobile-runtime | ZİNCİR=False | HTTP=200 | DURUM=VAR
+/api/syk-ui/mobile-sensors | ZİNCİR=False | HTTP=200 | DURUM=VAR
+/api/syk-ui/mobile-offline | ZİNCİR=False | HTTP=200 | DURUM=VAR
+/api/syk-ui/mobile-control | ZİNCİR=False | HTTP=200 | DURUM=VAR
+/api/syk-ui/kasif-icons | ZİNCİR=False | HTTP=200 | DURUM=VAR
+/syfinans/runtime | ZİNCİR=False | HTTP=200 | DURUM=VAR
+
+İLGİLİ İÇ İÇE YOLLAR
+Mount | /syk-ui | 

@@ -1,0 +1,215 @@
+SYK ALT ROUTER RUNTIME KESİN TEŞHİS
+
+ANA ROUTER PREFIX: /api/syk-ui
+ANA ROUTER YOL SAYISI: 39
+
+ALT ROUTERLAR
+mobile_control | prefix=/mobile-control | yol=6 | id=2249158204944
+  /mobile-control
+  /mobile-control/devices
+  /mobile-control/devices
+  /mobile-control/devices/{device_id}
+  /mobile-control/devices/{device_id}
+  /mobile-control/devices/{device_id}/reset
+mobile_device | prefix=/mobile-runtime | yol=8 | id=2249158525824
+  /mobile-runtime
+  /mobile-runtime/devices
+  /mobile-runtime/devices
+  /mobile-runtime/devices/{device_id}
+  /mobile-runtime/devices/{device_id}
+  /mobile-runtime/devices/{device_id}/trust
+  /mobile-runtime/devices/{device_id}
+  /mobile-runtime/layout
+mobile_offline | prefix=/mobile-offline | yol=18 | id=2249158872608
+  /mobile-offline
+  /mobile-offline/online
+  /mobile-offline/queue
+  /mobile-offline/queue
+  /mobile-offline/queue/{item_id}/begin
+  /mobile-offline/queue/{item_id}/complete
+  /mobile-offline/queue/{item_id}/fail
+  /mobile-offline/queue/{item_id}
+  /mobile-offline/queue
+  /mobile-offline/pairings
+  /mobile-offline/pairings/confirm
+  /mobile-offline/pairings/verify
+  /mobile-offline/pairings
+  /mobile-offline/pairings/{pairing_id}
+  /mobile-offline/cache
+  /mobile-offline/cache/{cache_key}
+  /mobile-offline/cache
+  /mobile-offline/cache/{cache_key}
+mobile_sensor | prefix=/mobile-sensors | yol=11 | id=2249158204400
+  /mobile-sensors
+  /mobile-sensors/permissions
+  /mobile-sensors/camera/start
+  /mobile-sensors/camera/stop
+  /mobile-sensors/microphone/start
+  /mobile-sensors/microphone/stop
+  /mobile-sensors/location
+  /mobile-sensors/locations
+  /mobile-sensors/frames
+  /mobile-sensors/frames
+  /mobile-sensors/frames/{frame_id}
+kasif_icon | prefix=/kasif-icons | yol=7 | id=2249159567808
+  /kasif-icons
+  /kasif-icons/manifest
+  /kasif-icons/groups
+  /kasif-icons/assistant
+  /kasif-icons/search
+  /kasif-icons/reload
+  /kasif-icons/{icon_id}
+jarmin | prefix=/jarmin/integration | yol=6 | id=2249159806768
+  /jarmin/integration
+  /jarmin/integration/settings
+  /jarmin/integration/settings
+  /jarmin/integration/settings
+  /jarmin/integration/events
+  /jarmin/integration/events
+
+API_ROUTES INCLUDE KAYITLARI
+{"cagri": "router.include_router", "kapsam": ["module"], "kaynak": "router.include_router(dtse_attention_router)", "router": "dtse_attention_router", "satir": 1071}
+{"cagri": "router.include_router", "kapsam": ["module"], "kaynak": "router.include_router(goruntu_dtse_router)", "router": "goruntu_dtse_router", "satir": 1079}
+{"cagri": "router.include_router", "kapsam": ["module"], "kaynak": "router.include_router(media_upload_router)", "router": "media_upload_router", "satir": 1086}
+{"cagri": "router.include_router", "kapsam": ["module"], "kaynak": "router.include_router(adaptive_environment_router)", "router": "adaptive_environment_router", "satir": 1093}
+{"cagri": "router.include_router", "kapsam": ["module"], "kaynak": "router.include_router(theme_router)", "router": "theme_router", "satir": 1106}
+{"cagri": "router.include_router", "kapsam": ["module"], "kaynak": "router.include_router(mobile_control_router)", "router": "mobile_control_router", "satir": 1110}
+{"cagri": "router.include_router", "kapsam": ["module"], "kaynak": "router.include_router(mobile_device_router)", "router": "mobile_device_router", "satir": 1114}
+{"cagri": "router.include_router", "kapsam": ["module"], "kaynak": "router.include_router(mobile_offline_router)", "router": "mobile_offline_router", "satir": 1118}
+{"cagri": "router.include_router", "kapsam": ["module"], "kaynak": "router.include_router(mobile_sensor_router)", "router": "mobile_sensor_router", "satir": 1122}
+{"cagri": "router.include_router", "kapsam": ["module"], "kaynak": "router.include_router(kasif_icon_router)", "router": "kasif_icon_router", "satir": 1126}
+{"cagri": "router.include_router", "kapsam": ["module"], "kaynak": "router.include_router(jarmin_integration_router)", "router": "jarmin_integration_router", "satir": 1130}
+
+DENEME ROUTER YOL SAYISI: 0
+
+BEKLENEN YOL KARŞILAŞTIRMASI
+{"ana_router_eslesmeleri": [], "beklenen": "/api/syk-ui/jarmin/integration", "deneme_router_eslesmeleri": []}
+{"ana_router_eslesmeleri": [], "beklenen": "/api/syk-ui/mobile-runtime", "deneme_router_eslesmeleri": []}
+{"ana_router_eslesmeleri": [], "beklenen": "/api/syk-ui/mobile-sensors", "deneme_router_eslesmeleri": []}
+{"ana_router_eslesmeleri": [], "beklenen": "/api/syk-ui/mobile-offline", "deneme_router_eslesmeleri": []}
+{"ana_router_eslesmeleri": [], "beklenen": "/api/syk-ui/mobile-control", "deneme_router_eslesmeleri": []}
+{"ana_router_eslesmeleri": [], "beklenen": "/api/syk-ui/kasif-icons", "deneme_router_eslesmeleri": []}
+
+API_ROUTES SON 120 SATIR
+ 1013 |     except KeyError as error:
+ 1014 |         from fastapi import HTTPException
+ 1015 | 
+ 1016 |         raise HTTPException(
+ 1017 |             status_code=404,
+ 1018 |             detail=f"Analiz bulunamadı: {session_id}",
+ 1019 |         ) from error
+ 1020 | 
+ 1021 | 
+ 1022 | @router.get(
+ 1023 |     "/device-sessions/{session_id}/analysis/verify"
+ 1024 | )
+ 1025 | def verify_device_session_analysis(
+ 1026 |     session_id: str,
+ 1027 | ) -> dict:
+ 1028 |     return scientific_device_analysis.verify(
+ 1029 |         session_id
+ 1030 |     )
+ 1031 | 
+ 1032 | @router.post(
+ 1033 |     "/device-sessions/{session_id}/syframe"
+ 1034 | )
+ 1035 | def apply_device_analysis_to_syframe(
+ 1036 |     session_id: str,
+ 1037 | ) -> dict:
+ 1038 |     try:
+ 1039 |         return scientific_analysis_syframe.apply(
+ 1040 |             session_id
+ 1041 |         )
+ 1042 | 
+ 1043 |     except KeyError as error:
+ 1044 |         from fastapi import HTTPException
+ 1045 | 
+ 1046 |         raise HTTPException(
+ 1047 |             status_code=404,
+ 1048 |             detail=(
+ 1049 |                 f"Analiz bulunamadı: "
+ 1050 |                 f"{session_id}"
+ 1051 |             ),
+ 1052 |         ) from error
+ 1053 | 
+ 1054 |     except ValueError as error:
+ 1055 |         from fastapi import HTTPException
+ 1056 | 
+ 1057 |         raise HTTPException(
+ 1058 |             status_code=422,
+ 1059 |             detail=str(error),
+ 1060 |         ) from error
+ 1061 | 
+ 1062 | 
+ 1063 | @router.get("/syframe/analysis-state")
+ 1064 | def get_analysis_syframe_state() -> dict:
+ 1065 |     return scientific_analysis_syframe.snapshot()
+ 1066 | 
+ 1067 | from .dtse_attention_routes import (
+ 1068 |     router as dtse_attention_router,
+ 1069 | )
+ 1070 | 
+ 1071 | router.include_router(
+ 1072 |     dtse_attention_router
+ 1073 | )
+ 1074 | 
+ 1075 | from .goruntu_dtse_routes import (
+ 1076 |     router as goruntu_dtse_router,
+ 1077 | )
+ 1078 | 
+ 1079 | router.include_router(
+ 1080 |     goruntu_dtse_router
+ 1081 | )
+ 1082 | from .media_upload_routes import (
+ 1083 |     router as media_upload_router,
+ 1084 | )
+ 1085 | 
+ 1086 | router.include_router(
+ 1087 |     media_upload_router,
+ 1088 | )
+ 1089 | from .adaptive_environment_routes import (
+ 1090 |     router as adaptive_environment_router,
+ 1091 | )
+ 1092 | 
+ 1093 | router.include_router(
+ 1094 |     adaptive_environment_router,
+ 1095 | )
+ 1096 | from .theme_api import (
+ 1097 |     router as theme_router,
+ 1098 | )
+ 1099 | from .mobile_control_routes import router as mobile_control_router
+ 1100 | from .mobile_device_routes import router as mobile_device_router
+ 1101 | from .mobile_offline_routes import router as mobile_offline_router
+ 1102 | from .mobile_sensor_routes import router as mobile_sensor_router
+ 1103 | from .kasif_icon_routes import router as kasif_icon_router
+ 1104 | from syk_jarmin.jarmin_integration_api import router as jarmin_integration_router
+ 1105 | 
+ 1106 | router.include_router(
+ 1107 |     theme_router,
+ 1108 | )
+ 1109 | 
+ 1110 | router.include_router(
+ 1111 |     mobile_control_router
+ 1112 | )
+ 1113 | 
+ 1114 | router.include_router(
+ 1115 |     mobile_device_router
+ 1116 | )
+ 1117 | 
+ 1118 | router.include_router(
+ 1119 |     mobile_offline_router
+ 1120 | )
+ 1121 | 
+ 1122 | router.include_router(
+ 1123 |     mobile_sensor_router
+ 1124 | )
+ 1125 | 
+ 1126 | router.include_router(
+ 1127 |     kasif_icon_router
+ 1128 | )
+ 1129 | 
+ 1130 | router.include_router(
+ 1131 |     jarmin_integration_router
+ 1132 | )
+
+RAPOR SHA-256: 63d87e2863085c490af0764276e0b257fccc4c1317970de07f59b8d27a03596e

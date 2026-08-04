@@ -1,0 +1,128 @@
+﻿.\tests\test_ui_adaptive_environment_tarayici.py:1 [PORT] import json
+.\tests\test_ui_adaptive_environment_tarayici.py:2 [port] import os
+.\tests\test_ui_adaptive_environment_tarayici.py:4 [PORT] from playwright.sync_api import (
+.\tests\test_ui_adaptive_environment_tarayici.py:15 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_adaptive_environment_tarayici.py:15 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_adaptive_environment_tarayici.py:46 [page.goto] page.goto(
+.\tests\test_ui_balik_syframe_tarayici.py:1 [PORT] import os
+.\tests\test_ui_balik_syframe_tarayici.py:3 [port] from playwright.sync_api import Page, expect
+.\tests\test_ui_balik_syframe_tarayici.py:9 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_balik_syframe_tarayici.py:9 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_balik_syframe_tarayici.py:12 [page.goto] page.goto(url, wait_until="networkidle")
+.\tests\test_ui_bilimsel_moduller_tarayici.py:1 [port] import os
+.\tests\test_ui_bilimsel_moduller_tarayici.py:3 [port] import pytest
+.\tests\test_ui_bilimsel_moduller_tarayici.py:4 [PORT] from playwright.sync_api import Page, expect
+.\tests\test_ui_bilimsel_moduller_tarayici.py:38 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_bilimsel_moduller_tarayici.py:38 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_bilimsel_moduller_tarayici.py:41 [page.goto] page.goto(url, wait_until="networkidle")
+.\tests\test_ui_canli_tarayici.py:1 [port] import os
+.\tests\test_ui_canli_tarayici.py:3 [port] from playwright.sync_api import Page, expect
+.\tests\test_ui_canli_tarayici.py:9 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_canli_tarayici.py:9 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_canli_tarayici.py:12 [page.goto] page.goto(url, wait_until="networkidle")
+.\tests\test_ui_device_hub_tarayici.py:1 [PORT] import os
+.\tests\test_ui_device_hub_tarayici.py:3 [port] from playwright.sync_api import Page, expect
+.\tests\test_ui_device_hub_tarayici.py:11 [BASE_URL] base_url: str,
+.\tests\test_ui_device_hub_tarayici.py:14 [BASE_URL] f"{base_url}/api/syk-ui/device-sessions"
+.\tests\test_ui_device_hub_tarayici.py:26 [base_url] f"{base_url}/api/syk-ui/"
+.\tests\test_ui_device_hub_tarayici.py:35 [BASE_URL] base_url = os.getenv(
+.\tests\test_ui_device_hub_tarayici.py:36 [BASE_URL] "SYK_UI_BASE_URL",
+.\tests\test_ui_device_hub_tarayici.py:37 [127.0.0.1] "http://127.0.0.1:8013",
+.\tests\test_ui_device_hub_tarayici.py:37 [http://] "http://127.0.0.1:8013",
+.\tests\test_ui_device_hub_tarayici.py:42 [BASE_URL] f"{base_url}/syk-ui-screen",
+.\tests\test_ui_device_hub_tarayici.py:46 [BASE_URL] f"{base_url}/api/syk-ui/device-hub/register",
+.\tests\test_ui_device_hub_tarayici.py:50 [PORT] "transport": "tcp",
+.\tests\test_ui_device_hub_tarayici.py:51 [127.0.0.1] "address": "127.0.0.1:9100",
+.\tests\test_ui_device_hub_tarayici.py:61 [BASE_URL] base_url,
+.\tests\test_ui_device_hub_tarayici.py:66 [BASE_URL] f"{base_url}/api/syk-ui/device-hub/"
+.\tests\test_ui_device_hub_tarayici.py:76 [page.goto] page.goto(
+.\tests\test_ui_device_hub_tarayici.py:139 [base_url] f"{base_url}/api/syk-ui/device-sessions"
+.\tests\test_ui_device_hub_tarayici.py:157 [base_url] f"{base_url}/api/syk-ui/"
+.\tests\test_ui_dtse_evidence_card_tarayici.py:1 [port] import os
+.\tests\test_ui_dtse_evidence_card_tarayici.py:3 [PORT] from playwright.sync_api import (
+.\tests\test_ui_dtse_evidence_card_tarayici.py:12 [BASE_URL] base_url = os.getenv(
+.\tests\test_ui_dtse_evidence_card_tarayici.py:13 [base_url] "SYK_UI_BASE_URL",
+.\tests\test_ui_dtse_evidence_card_tarayici.py:14 [127.0.0.1] "http://127.0.0.1:8013",
+.\tests\test_ui_dtse_evidence_card_tarayici.py:14 [http://] "http://127.0.0.1:8013",
+.\tests\test_ui_dtse_evidence_card_tarayici.py:19 [BASE_URL] f"{base_url}/syk-ui-screen",
+.\tests\test_ui_dtse_evidence_card_tarayici.py:95 [page.goto] page.goto(
+.\tests\test_ui_dtse_evidence_focus_tarayici.py:1 [port] import os
+.\tests\test_ui_dtse_evidence_focus_tarayici.py:3 [port] from playwright.sync_api import (
+.\tests\test_ui_dtse_evidence_focus_tarayici.py:14 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_dtse_evidence_focus_tarayici.py:14 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_dtse_evidence_focus_tarayici.py:17 [page.goto] page.goto(
+.\tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py:1 [port] import json
+.\tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py:2 [port] import os
+.\tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py:4 [port] from playwright.sync_api import (
+.\tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py:15 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py:15 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py:84 [page.goto] page.goto(
+.\tests\test_ui_kasif_icon_tarayici.py:1 [PORT] import json
+.\tests\test_ui_kasif_icon_tarayici.py:2 [PORT] import os
+.\tests\test_ui_kasif_icon_tarayici.py:4 [port] from playwright.sync_api import (
+.\tests\test_ui_kasif_icon_tarayici.py:15 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_kasif_icon_tarayici.py:15 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_kasif_icon_tarayici.py:96 [page.goto] page.goto(
+.\tests\test_ui_live_environment_tarayici.py:1 [port] import json
+.\tests\test_ui_live_environment_tarayici.py:2 [port] import os
+.\tests\test_ui_live_environment_tarayici.py:4 [port] from playwright.sync_api import (
+.\tests\test_ui_live_environment_tarayici.py:15 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_live_environment_tarayici.py:15 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_live_environment_tarayici.py:28 [127.0.0.1] "http://127.0.0.1:8013"
+.\tests\test_ui_live_environment_tarayici.py:28 [http://] "http://127.0.0.1:8013"
+.\tests\test_ui_live_environment_tarayici.py:70 [page.goto] page.goto(
+.\tests\test_ui_media_upload_preview_tarayici.py:1 [PORT] import json
+.\tests\test_ui_media_upload_preview_tarayici.py:2 [PORT] import os
+.\tests\test_ui_media_upload_preview_tarayici.py:4 [port] from playwright.sync_api import (
+.\tests\test_ui_media_upload_preview_tarayici.py:15 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_media_upload_preview_tarayici.py:15 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_media_upload_preview_tarayici.py:33 [PORT] "report_sha256": "a" * 64,
+.\tests\test_ui_media_upload_preview_tarayici.py:45 [PORT] "report"
+.\tests\test_ui_media_upload_preview_tarayici.py:70 [page.goto] page.goto(
+.\tests\test_ui_media_upload_tarayici.py:1 [port] import json
+.\tests\test_ui_media_upload_tarayici.py:2 [port] import os
+.\tests\test_ui_media_upload_tarayici.py:4 [PORT] from playwright.sync_api import (
+.\tests\test_ui_media_upload_tarayici.py:15 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_media_upload_tarayici.py:15 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_media_upload_tarayici.py:33 [PORT] "report_sha256": "a" * 64,
+.\tests\test_ui_media_upload_tarayici.py:38 [PORT] "report"
+.\tests\test_ui_media_upload_tarayici.py:51 [page.goto] page.goto(
+.\tests\test_ui_mobile_control_tarayici.py:1 [port] import json
+.\tests\test_ui_mobile_control_tarayici.py:2 [port] import os
+.\tests\test_ui_mobile_control_tarayici.py:4 [PORT] from playwright.sync_api import (
+.\tests\test_ui_mobile_control_tarayici.py:15 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_control_tarayici.py:15 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_control_tarayici.py:18 [PORT] page.set_viewport_size(
+.\tests\test_ui_mobile_control_tarayici.py:118 [page.goto] page.goto(
+.\tests\test_ui_mobile_device_runtime_tarayici.py:1 [port] import json
+.\tests\test_ui_mobile_device_runtime_tarayici.py:2 [port] import os
+.\tests\test_ui_mobile_device_runtime_tarayici.py:4 [PORT] from playwright.sync_api import (
+.\tests\test_ui_mobile_device_runtime_tarayici.py:15 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_device_runtime_tarayici.py:15 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_device_runtime_tarayici.py:18 [PORT] page.set_viewport_size(
+.\tests\test_ui_mobile_device_runtime_tarayici.py:67 [port] "phone-portrait-compact"
+.\tests\test_ui_mobile_device_runtime_tarayici.py:70 [PORT] "orientation": "portrait",
+.\tests\test_ui_mobile_device_runtime_tarayici.py:86 [page.goto] page.goto(
+.\tests\test_ui_mobile_device_runtime_tarayici.py:100 [PORT] "portrait",
+.\tests\test_ui_mobile_offline_runtime_tarayici.py:1 [port] import json
+.\tests\test_ui_mobile_offline_runtime_tarayici.py:2 [PORT] import os
+.\tests\test_ui_mobile_offline_runtime_tarayici.py:4 [PORT] from playwright.sync_api import (
+.\tests\test_ui_mobile_offline_runtime_tarayici.py:14 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_offline_runtime_tarayici.py:14 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_offline_runtime_tarayici.py:44 [page.goto] page.goto(
+.\tests\test_ui_mobile_sensor_runtime_tarayici.py:1 [port] import json
+.\tests\test_ui_mobile_sensor_runtime_tarayici.py:2 [PORT] import os
+.\tests\test_ui_mobile_sensor_runtime_tarayici.py:4 [port] from playwright.sync_api import (
+.\tests\test_ui_mobile_sensor_runtime_tarayici.py:14 [127.0.0.1] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_sensor_runtime_tarayici.py:14 [http://] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_sensor_runtime_tarayici.py:31 [page.goto] page.goto(
+.\tests\test_ui_scientific_api_tarayici.py:1 [port] import os
+.\tests\test_ui_scientific_api_tarayici.py:3 [port] from playwright.sync_api import Page, expect
+.\tests\test_ui_scientific_api_tarayici.py:7 [BASE_URL] base_url = os.getenv(
+.\tests\test_ui_scientific_api_tarayici.py:8 [BASE_URL] "SYK_UI_BASE_URL",
+.\tests\test_ui_scientific_api_tarayici.py:9 [127.0.0.1] "http://127.0.0.1:8013",
+.\tests\test_ui_scientific_api_tarayici.py:9 [http://] "http://127.0.0.1:8013",
+.\tests\test_ui_scientific_api_tarayici.py:14 [BASE_URL] f"{base_url}/syk-ui-screen",
+.\tests\test_ui_scientific_api_tarayici.py:19 [base_url] f"{base_url}"
+.\tests\test_ui_scientific_api_tarayici.py:32 [page.goto] page.goto(screen_url, wait_until="networkidle")
+.\tests\test_ui_scientific_api_tarayici.py:64 [base_url] f"{base_url}"

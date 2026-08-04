@@ -1,0 +1,2532 @@
+SYFİNANS PROTOTİP KAPANIŞ MİMARİ İNCELEMESİ
+
+Python dosyası: 648
+Arayüz dosyası: 40
+Finans kaynak dosyası: 28
+Finans test dosyası: 24
+Runtime adayı: 67
+Tarayıcı testi: 19
+HTTP yolu: 124
+
+EN GÜÇLÜ RUNTIME ADAYLARI
+11 | src/syk_simulasyon/syk_ui_runtime/api_routes.py | APIRouter, module_registry, include_router
+11 | src/syk_simulasyon/syk_ui_runtime/integration.py | FastAPI, static_routes, include_router
+11 | src/syk_simulasyon/syk_ui_runtime/static_routes.py | APIRouter, StaticFiles, mount(
+ 9 | src/syk_simulasyon/runtime_ui_sunucusu.py | FastAPI, syk-ui-screen
+ 9 | src/syk_simulasyon/syk_ui_runtime/screen_routes.py | APIRouter, syk-ui-screen
+ 9 | tests/test_ui_balik_syframe_modulleri.py | FastAPI, syk-ui-screen
+ 9 | tests/test_ui_bilimsel_moduller_toplu.py | FastAPI, syk-ui-screen
+ 9 | tests/test_ui_dashboard_canli.py | FastAPI, syk-ui-screen
+ 9 | tests/test_ui_device_hub_assets.py | FastAPI, syk-ui-screen
+ 9 | tests/test_ui_scientific_api_views.py | FastAPI, syk-ui-screen
+ 9 | tests/test_ui_toplu_entegrasyon.py | FastAPI, syk-ui-screen
+ 8 | tests/test_ui_dtse_attention_api.py | FastAPI, include_router
+ 8 | tests/test_ui_goruntu_dtse_api.py | FastAPI, include_router
+ 8 | tests/test_ui_goruntu_dtse_kanit_api.py | FastAPI, include_router
+ 8 | tests/test_ui_static_routes.py | FastAPI, static_routes
+
+TARAYICI TESTLERİ
+tests/test_pyproject_bagimlilik_sozlesmesi.py | playwright
+tests/test_runtime_terminal_playwright_e2e.py | playwright, chromium
+tests/test_ui_adaptive_environment_tarayıcı.py | page.goto, playwright, browser, expect(, SYK_UI_TEST_URL
+tests/test_ui_balik_syframe_tarayıcı.py | page.goto, playwright, expect(, SYK_UI_TEST_URL
+tests/test_ui_bilimsel_moduller_tarayıcı.py | page.goto, playwright, expect(, SYK_UI_TEST_URL
+tests/test_ui_canli_tarayıcı.py | page.goto, playwright, expect(, SYK_UI_TEST_URL
+tests/test_ui_device_hub_tarayıcı.py | page.goto, playwright, expect(, SYK_UI_TEST_URL
+tests/test_ui_dtse_evidence_card_tarayıcı.py | page.goto, playwright, browser, expect(, SYK_UI_TEST_URL
+tests/test_ui_dtse_evidence_focus_tarayıcı.py | page.goto, playwright, expect(, SYK_UI_TEST_URL
+tests/test_ui_dtse_evidence_scientific_runtime_tarayıcı.py | page.goto, playwright, browser, expect(, SYK_UI_TEST_URL
+tests/test_ui_kasif_icon_tarayıcı.py | page.goto, playwright, expect(, SYK_UI_TEST_URL
+tests/test_ui_live_environment_tarayıcı.py | page.goto, playwright, expect(, SYK_UI_TEST_URL
+tests/test_ui_media_upload_preview_tarayıcı.py | page.goto, playwright, expect(, SYK_UI_TEST_URL
+tests/test_ui_media_upload_tarayıcı.py | page.goto, playwright, expect(, SYK_UI_TEST_URL
+tests/test_ui_mobile_control_tarayıcı.py | page.goto, set_viewport_size, playwright, browser, expect(, SYK_UI_TEST_URL
+tests/test_ui_mobile_device_runtime_tarayıcı.py | page.goto, set_viewport_size, playwright, expect(, SYK_UI_TEST_URL
+tests/test_ui_mobile_offline_runtime_tarayıcı.py | page.goto, playwright, SYK_UI_TEST_URL
+tests/test_ui_mobile_sensor_runtime_tarayıcı.py | page.goto, playwright, SYK_UI_TEST_URL
+tests/test_ui_scientific_api_tarayıcı.py | page.goto, playwright, browser, expect(, SYK_UI_TEST_URL
+
+HTTP YOLLARI
+src/syk_jarmin/jarmin_integration_api.py:67 | /settings
+src/syk_jarmin/jarmin_integration_api.py:76 | /settings
+src/syk_jarmin/jarmin_integration_api.py:106 | /settings
+src/syk_jarmin/jarmin_integration_api.py:117 | /events
+src/syk_jarmin/jarmin_integration_api.py:142 | /events
+src/syk_simulasyon/syk_ui_runtime/adaptive_environment_routes.py:53 | /current
+src/syk_simulasyon/syk_ui_runtime/adaptive_environment_routes.py:58 | /current
+src/syk_simulasyon/syk_ui_runtime/adaptive_environment_routes.py:74 | /current
+src/syk_simulasyon/syk_ui_runtime/adaptive_environment_routes.py:82 | /live
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:115 | /runtime-state
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:147 | /scientific-modules
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:152 | /scientific-modules/{module_id}
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:171 | /scientific-modules/{module_id}
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:233 | /scientific-adapters
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:238 | /scientific-adapters/
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:284 | /scientific-devices/serial
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:298 | /scientific-devices/serial/read
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:339 | /scientific-devices/tcp/read
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:384 | /scientific-devices/ble/discover
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:402 | /scientific-devices/ble/read
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:439 | /scientific-devices/transports
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:444 | /scientific-devices/discover
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:472 | /device-hub
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:482 | /device-hub/refresh
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:491 | /device-hub/register
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:514 | /device-hub/{device_id}
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:532 | /device-hub/{device_id}/connection
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:554 | /device-hub/{device_id}/telemetry
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:590 | /device-sessions
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:595 | /device-sessions/start
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:623 | /device-sessions/{session_id}
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:641 | /device-sessions/{session_id}/samples
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:671 | /device-sessions/{session_id}/stop
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:702 | /device-sessions/{session_id}/evidence
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:748 | /device-sessions/{session_id}/evidence
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:772 | /device-sessions/{session_id}/evidence/verify
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:799 | /device-hub/{device_id}/recording-ingest
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:811 | /device-sessions/{session_id}/package
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:859 | /device-sessions/{session_id}/package/verify
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:887 | /device-sessions/{session_id}/seal
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:946 | /device-sessions/{session_id}/seal/verify
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:974 | /device-sessions/{session_id}/analysis
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:1002 | /device-sessions/{session_id}/analysis
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:1022 | /device-sessions/{session_id}/analysis/verify
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:1032 | /device-sessions/{session_id}/syframe
+src/syk_simulasyon/syk_ui_runtime/api_routes.py:1063 | /syframe/analysis-state
+src/syk_simulasyon/syk_ui_runtime/dtse_attention_routes.py:59 | /frames/attention
+src/syk_simulasyon/syk_ui_runtime/dtse_attention_routes.py:99 | /events
+src/syk_simulasyon/syk_ui_runtime/dtse_attention_routes.py:113 | /events/{event_id}
+src/syk_simulasyon/syk_ui_runtime/dtse_attention_routes.py:131 | /state
+src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_routes.py:103 | /kayitlar
+src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_routes.py:144 | /kayitlar/{veri_kimligi}/supheli-bolgeler
+src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_routes.py:203 | /kayitlar/{veri_kimligi}
+src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_routes.py:225 | /dtse-adapter-state
+src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_routes.py:229 | /kayitlar/{veri_kimligi}/kanit-zinciri
+src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_routes.py:259 | /kayitlar/{veri_kimligi}/kanit-manifesti
+src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_routes.py:281 | /kayitlar/{veri_kimligi}/kanit-dogrula
+src/syk_simulasyon/syk_ui_runtime/kasif_icon_routes.py:45 | /manifest
+src/syk_simulasyon/syk_ui_runtime/kasif_icon_routes.py:51 | /groups
+src/syk_simulasyon/syk_ui_runtime/kasif_icon_routes.py:61 | /assistant
+src/syk_simulasyon/syk_ui_runtime/kasif_icon_routes.py:67 | /search
+src/syk_simulasyon/syk_ui_runtime/kasif_icon_routes.py:91 | /reload
+src/syk_simulasyon/syk_ui_runtime/kasif_icon_routes.py:104 | /{icon_id}
+src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py:69 | /{analysis_id}
+src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py:90 | /{analysis_id}/report
+src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py:125 | /{analysis_id}/manifest
+src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py:162 | /{analysis_id}/preview
+src/syk_simulasyon/syk_ui_runtime/mobile_control_routes.py:60 | /devices
+src/syk_simulasyon/syk_ui_runtime/mobile_control_routes.py:82 | /devices
+src/syk_simulasyon/syk_ui_runtime/mobile_control_routes.py:87 | /devices/{device_id}
+src/syk_simulasyon/syk_ui_runtime/mobile_control_routes.py:103 | /devices/{device_id}
+src/syk_simulasyon/syk_ui_runtime/mobile_control_routes.py:160 | /devices/{device_id}/reset
+src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py:110 | /devices
+src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py:141 | /devices
+src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py:150 | /devices/{device_id}
+src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py:166 | /devices/{device_id}
+src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py:201 | /devices/{device_id}/trust
+src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py:221 | /devices/{device_id}
+src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py:238 | /layout
+src/syk_simulasyon/syk_ui_runtime/mobile_offline_routes.py:84 | /online
+
+MEVCUT FİNANS REFERANSLARI
+src/syk_finans_otagi/__init__.py:24 | SyFinansOtagiCekirdegi
+src/syk_finans_otagi/baglanti_calisma_katmani.py:55 | SyFinansOtigi/1.0
+src/syk_finans_otagi/baglanti_calisma_katmani.py:275 | ) from error
+
+    def var_mi(
+        self,
+        *,
+        anahtar: str,
+    ) -> bool:
+        with self._lock:
+            return (
+                anahtar
+                in self._yanitlar
+            )
+
+
+class KaynakSaglikIzleyici:
+    def __init__(
+        self,
+        *,
+        saglayici_id: str,
+    ) -> None:
+        self._kayit = KaynakSaglikKaydi(
+            saglayici_id=saglayici_id,
+            durum=(
+                KaynakSaglikDurumu
+                .BILINMIYOR
+            ),
+            basarili_istek_sayisi=0,
+            basarisiz_istek_sayisi=0,
+            ardisik_hata_sayisi=0,
+            son_basarili_zaman=None,
+            son_hata_zamani=None,
+            son_hata=None,
+            son_gecikme_milisaniye=None,
+        )
+
+        self._lock = RLock()
+
+    def basari(
+        self,
+        *,
+        gecikme_milisaniye: float,
+    ) -> None:
+        durum = (
+            KaynakSaglikDurumu.YAVAS
+            if gecikme_milisaniye >= 2000
+            else KaynakSaglikDurumu.SAGLIKLI
+        )
+
+        with self._lock:
+            self._kayit = replace(
+                self._kayit,
+                durum=durum,
+                basarili_istek_sayisi=(
+                    self._kayit
+                    .basarili_istek_sayisi
+                    + 1
+                ),
+                ardisik_hata_sayisi=0,
+                son_basarili_zaman=_simdi(),
+                son_hata=None,
+                son_gecikme_milisaniye=round(
+                    gecikme_milisaniye,
+                    3,
+                ),
+            )
+
+    def hata(
+        self,
+        *,
+        aciklama: str,
+    ) -> None:
+        yeni_hata_sayisi = (
+            self._kayit
+            .ardisik_hata_sayisi
+            + 1
+        )
+
+        durum = (
+            KaynakSaglikDurumu
+            .ERISILEMIYOR
+            if yeni_hata_sayisi >= 3
+            else KaynakSaglikDurumu
+            .KESINTILI
+        )
+
+        with self._lock:
+            self._kayit = replace(
+                self._kayit,
+                durum=durum,
+                basarisiz_istek_sayisi=(
+                    self._kayit
+                    .basarisiz_istek_sayisi
+                    + 1
+                ),
+                ardisik_hata_sayisi=(
+                    yeni_hata_sayisi
+                ),
+                son_hata_zamani=_simdi(),
+                son_hata=str(
+                    aciklama
+                ),
+            )
+
+    def snapshot(
+        self,
+    ) -> KaynakSaglikKaydi:
+        with self._lock:
+            return self._kayit
+
+
+class FinansAgIstemcisi:
+    def __init__(
+        self,
+        *,
+        ayarlar: BaglantiAyarlari,
+        depo: (
+            SonGuvenilirYanitDeposu
+            | None
+        ) = None,
+        yerel_ornekler: (
+            Mapping[str, Any] | None
+        ) = None,
+        tasiyici: (
+            Callable[
+                [
+                    str,
+                    Mapping[str, str],
+                    float,
+                ],
+                tuple[
+                    int,
+                    bytes,
+                ],
+            ]
+            | None
+        ) = None,
+        uyku: Callable[
+            [float],
+            None,
+        ] = time.sleep,
+        saat: Callable[
+            [],
+            float,
+        ] = time.monotonic,
+    ) -> None:
+        self.ayarlar = ayarlar
+
+        self.depo = (
+            depo
+            or SonGuvenilirYanitDeposu()
+        )
+
+        self.yerel_ornekler = dict(
+            yerel_ornekler
+            or {}
+        )
+
+        self.tasiyici = (
+            tasiyici
+            or self._gercek_tasiyici
+        )
+
+        self.uyku = uyku
+        self.saat = saat
+
+        self.saglik = (
+            KaynakSaglikIzleyici(
+                saglayici_id=(
+                    ayarlar.saglayici_id
+                )
+            )
+        )
+
+        self._son_istek_zamani: (
+            float | None
+        ) = None
+
+        self._lock = RLock()
+
+    @staticmethod
+    def _gercek_tasiyici(
+        adres: str,
+        basliklar: Mapping[str, str],
+        zaman_asimi: float,
+    ) -> tuple[int, bytes]:
+        istek = Request(
+            adres,
+            headers=dict(
+                basliklar
+            ),
+            method=
+src/syk_finans_otagi/bist_piyasa_bagdastiricisi.py:457 | SYFINANS_BIST_API_ADRESI
+src/syk_finans_otagi/bist_piyasa_bagdastiricisi.py:465 | SYFINANS_BIST_API_ANAHTARI
+src/syk_finans_otagi/bist_piyasa_bagdastiricisi.py:513 | ,
+        )
+
+        with urlopen(
+            istek,
+            timeout=zaman_asimi,
+        ) as yanit:
+            return yanit.read()
+
+    @property
+    def saglayici_id(self) -> str:
+        return self.SAGLAYICI_ID
+
+    @property
+    def kaynak_sinifi(
+        self,
+    ) -> FinansKaynakSinifi:
+        return FinansKaynakSinifi.BIST
+
+    @property
+    def guven_profili(
+        self,
+    ) -> KaynakGuvenProfili:
+        return KaynakGuvenProfili(
+            saglayici_id=(
+                self.saglayici_id
+            ),
+            kaynak_turu=(
+                KaynakTuru.LISANSLI_PIYASA
+            ),
+            temel_guven_puani=90,
+            guncellik_puani=(
+                94
+                if self.veri_gecikmesi_saniyesi
+                == 0
+                else 82
+            ),
+            gecmis_tutarlilik_puani=90,
+            kesinti_dayanim_puani=85,
+            lisansli=True,
+            resmi=False,
+            aciklama=(
+src/syk_finans_otagi/bist_piyasa_bagdastiricisi.py:569 | SyFinansOtigi/1.0
+src/syk_finans_otagi/bist_piyasa_bagdastiricisi.py:593 | SYFINANS_BIST_API_ADRESI
+src/syk_finans_otagi/cift_katman.py:49 | : self.etkin,
+        }
+
+
+class PiyasaEvreni:
+    def __init__(
+        self,
+        *,
+        veri_kapisi: (
+            FinansVeriKapisi | None
+        ) = None,
+    ) -> None:
+        self.veri_kapisi = veri_kapisi
+
+        self._kayitlar: dict[
+            tuple[str, VarlikTuru],
+            PiyasaEvreniKaydi,
+        ] = {}
+
+        self._lock = RLock()
+
+    def varlik_ekle(
+        self,
+        *,
+        sembol: str,
+        varlik_turu: VarlikTuru,
+        ad: str,
+        sektor: str =
+src/syk_finans_otagi/cift_katman.py:493 | : (
+                self.degerlendirme_sha256
+            ),
+        }
+
+
+class SyFinansCiftKatman:
+    def __init__(
+        self,
+        *,
+        piyasa: PiyasaEvreni,
+        kasa: KullaniciKasasi,
+    ) -> None:
+        self.piyasa = piyasa
+        self.kasa = kasa
+
+    def karsilastir(
+        self,
+    ) -> CiftKatmanDegerlendirmesi:
+        piyasa_kayitlari = (
+            self.piyasa.listele()
+        )
+
+        kasa_anahtarlari = (
+            self.kasa.semboller()
+        )
+
+        piyasada_olmayan = sorted(
+            {
+                kayit.sembol
+                for kayit
+                in piyasa_kayitlari
+                if (
+                    kayit.sembol,
+                    kayit.varlik_turu,
+                )
+                not in kasa_anahtarlari
+            }
+        )
+
+        kasada_olan = sorted(
+            {
+                sembol
+                for sembol, _
+                in kasa_anahtarlari
+            }
+        )
+
+        kanit = {
+src/syk_finans_otagi/finans_arayuz_paketi.py:40 | ),
+        rounding=ROUND_HALF_UP,
+    )
+
+
+class FinansSekmesi(StrEnum):
+    PIYASA =
+src/syk_finans_otagi/finans_arayuz_paketi.py:63 | @dataclass(frozen=True, slots=True)
+class FinansBilgiSatiri:
+    durum: BilgiSatiriDurumu
+    baslik: str
+    aciklama: str
+    son_guncelleme: str
+    gecikme_saniyesi: int | None
+    kaynak_sayisi: int
+    kanit_sha256: str
+
+    def as_dict(
+        self,
+    ) -> dict[str, Any]:
+        return {
+src/syk_finans_otagi/finans_arayuz_paketi.py:197 | : (
+                self.kanit_sha256
+            ),
+        }
+
+
+@dataclass(frozen=True, slots=True)
+class FinansSekmePaketi:
+    sekme: FinansSekmesi
+    ekran_sinifi: EkranSinifi
+    bilgi_satiri: FinansBilgiSatiri
+    kartlar: tuple[
+        Mapping[str, Any],
+        ...
+    ]
+    grafikler: tuple[
+        Mapping[str, Any],
+        ...
+    ]
+    uretilme_zamani: str
+    paket_sha256: str
+
+    def as_dict(
+        self,
+    ) -> dict[str, Any]:
+        return {
+src/syk_finans_otagi/finans_arayuz_paketi.py:224 | syfinans-sekme-paketi/v1
+src/syk_finans_otagi/finans_arayuz_paketi.py:245 | : (
+                self.paket_sha256
+            ),
+        }
+
+
+class FinansArayuzMotoru:
+    def __init__(
+        self,
+        *,
+        gorunum_motoru: FinansGorunumMotoru,
+        grafik_motoru: (
+            FinansGrafikMotoru | None
+        ) = None,
+    ) -> None:
+        self.gorunum_motoru = (
+            gorunum_motoru
+        )
+        self.grafik_motoru = (
+            grafik_motoru
+        )
+
+    @staticmethod
+    def _ekran_sinifi(
+        *,
+        genislik: int,
+    ) -> EkranSinifi:
+        if genislik < 600:
+            return EkranSinifi.TELEFON
+
+        if genislik < 1100:
+            return EkranSinifi.TABLET
+
+        return EkranSinifi.MASAUSTU
+
+    @staticmethod
+    def _bilgi_satiri_uret(
+        *,
+        piyasa_kartlari: Iterable[
+            PiyasaGorunumKarti
+        ] = (),
+        kaynak_kartlari: Iterable[
+            KaynakSaglikKarti
+        ] = (),
+    ) -> FinansBilgiSatiri:
+        piyasa = tuple(
+            piyasa_kartlari
+        )
+        kaynaklar = tuple(
+            kaynak_kartlari
+        )
+
+        durumlar = {
+            kart.veri_akis_durumu
+            for kart in piyasa
+        }
+
+        hata_sayisi = sum(
+            kart.durum
+            ==
+src/syk_finans_otagi/finans_arayuz_paketi.py:338 | Bazı finans verileri kaynak
+src/syk_finans_otagi/finans_arayuz_paketi.py:349 | Finans verileri kullanılabilir
+src/syk_finans_otagi/finans_arayuz_paketi.py:363 | Bazı finans kaynaklarına
+src/syk_finans_otagi/finans_arayuz_paketi.py:375 | Henüz görüntülenecek finans
+src/syk_finans_otagi/finans_arayuz_paketi.py:401 | )
+
+        return FinansBilgiSatiri(
+            durum=durum,
+            baslik=baslik,
+            aciklama=aciklama,
+            son_guncelleme=zaman,
+            gecikme_saniyesi=gecikme,
+            kaynak_sayisi=len(
+                kaynaklar
+            ),
+            kanit_sha256=sha256(
+                kodlu
+            ).hexdigest(),
+        )
+
+    @staticmethod
+    def _paket_muhurle(
+        *,
+        sekme: FinansSekmesi,
+        ekran_sinifi: EkranSinifi,
+        bilgi_satiri: FinansBilgiSatiri,
+        kartlar: Iterable[
+            Mapping[str, Any]
+        ],
+        grafikler: Iterable[
+            Mapping[str, Any]
+        ],
+        uretilme_zamani: str,
+    ) -> str:
+        kanit = {
+src/syk_finans_otagi/finans_arayuz_paketi.py:457 | )
+
+        return sha256(
+            kodlu
+        ).hexdigest()
+
+    def piyasa_sekmesi(
+        self,
+        *,
+        varliklar: Iterable[
+            tuple[str, VarlikTuru]
+        ],
+        ekran_genisligi: int,
+        grafik_donemi: GrafikDonemi = (
+            GrafikDonemi.GUNLUK
+        ),
+    ) -> FinansSekmePaketi:
+        ekran = self._ekran_sinifi(
+            genislik=ekran_genisligi
+        )
+
+        piyasa_kartlari = tuple(
+            self.gorunum_motoru
+            .piyasa_karti_uret(
+                sembol=sembol,
+                varlik_turu=varlik_turu,
+            )
+            for sembol, varlik_turu
+            in varliklar
+        )
+
+        saglik_kartlari = (
+            self.gorunum_motoru
+            .kaynak_saglik_kartlari()
+        )
+
+        bilgi_satiri = (
+            self._bilgi_satiri_uret(
+                piyasa_kartlari=(
+                    piyasa_kartlari
+                ),
+                kaynak_kartlari=(
+                    saglik_kartlari
+                ),
+            )
+        )
+
+        grafikler: list[
+            Mapping[str, Any]
+        ] = []
+
+        if self.grafik_motoru is not None:
+            for kart in piyasa_kartlari:
+                try:
+                    grafikler.append(
+                        self.grafik_motoru
+                        .ekran_ciktisi(
+                            sembol=kart.sembol,
+                            donem=(
+                                grafik_donemi
+                            ),
+                        )
+                    )
+                except ValueError:
+                    continue
+
+        kartlar = tuple(
+            kart.as_dict()
+            for kart in piyasa_kartlari
+        ) + tuple(
+            {
+src/syk_finans_otagi/finans_arayuz_paketi.py:529 | ),
+                **kart.as_dict(),
+            }
+            for kart in saglik_kartlari
+        )
+
+        uretilme_zamani = _simdi()
+
+        paket_sha256 = (
+            self._paket_muhurle(
+                sekme=FinansSekmesi.PIYASA,
+                ekran_sinifi=ekran,
+                bilgi_satiri=(
+                    bilgi_satiri
+                ),
+                kartlar=kartlar,
+                grafikler=grafikler,
+                uretilme_zamani=(
+                    uretilme_zamani
+                ),
+            )
+        )
+
+        return FinansSekmePaketi(
+            sekme=FinansSekmesi.PIYASA,
+            ekran_sinifi=ekran,
+            bilgi_satiri=(
+                bilgi_satiri
+            ),
+            kartlar=kartlar,
+            grafikler=tuple(
+                grafikler
+            ),
+            uretilme_zamani=(
+                uretilme_zamani
+            ),
+            paket_sha256=(
+                paket_sha256
+            ),
+        )
+
+    def kasam_sekmesi(
+        self,
+        *,
+        varliklar: Iterable[
+            Mapping[str, Any]
+        ],
+        ekran_genisligi: int,
+        grafik_donemi: GrafikDonemi = (
+            GrafikDonemi.AYLIK
+        ),
+    ) -> FinansSekmePaketi:
+        ekran = self._ekran_sinifi(
+            genislik=ekran_genisligi
+        )
+
+        kasa_kartlari: list[
+            KasaGorunumKarti
+        ] = []
+
+        grafikler: list[
+            Mapping[str, Any]
+        ] = []
+
+        piyasa_kartlari: list[
+            PiyasaGorunumKarti
+        ] = []
+
+        for varlik in varliklar:
+            kasa = (
+                self.gorunum_motoru
+                .kasa_karti_uret(
+                    sembol=str(
+                        varlik[
+src/syk_finans_otagi/finans_arayuz_paketi.py:639 | ),
+                    kanit_sha256=(
+                        kasa.kanit_sha256
+                    ),
+                )
+            )
+
+            if self.grafik_motoru is not None:
+                try:
+                    grafikler.append(
+                        self.grafik_motoru
+                        .ekran_ciktisi(
+                            sembol=(
+                                kasa.sembol
+                            ),
+                            donem=(
+                                grafik_donemi
+                            ),
+                            ortalama_maliyet=(
+                                kasa
+                                .ortalama_maliyet
+                            ),
+                            miktar=(
+                                kasa.miktar
+                            ),
+                        )
+                    )
+                except ValueError:
+                    continue
+
+        saglik_kartlari = (
+            self.gorunum_motoru
+            .kaynak_saglik_kartlari()
+        )
+
+        bilgi_satiri = (
+            self._bilgi_satiri_uret(
+                piyasa_kartlari=(
+                    piyasa_kartlari
+                ),
+                kaynak_kartlari=(
+                    saglik_kartlari
+                ),
+            )
+        )
+
+        kartlar = tuple(
+            kart.as_dict()
+            for kart in kasa_kartlari
+        )
+
+        uretilme_zamani = _simdi()
+
+        paket_sha256 = (
+            self._paket_muhurle(
+                sekme=FinansSekmesi.KASAM,
+                ekran_sinifi=ekran,
+                bilgi_satiri=(
+                    bilgi_satiri
+                ),
+                kartlar=kartlar,
+                grafikler=grafikler,
+                uretilme_zamani=(
+                    uretilme_zamani
+                ),
+            )
+        )
+
+        return FinansSekmePaketi(
+            sekme=FinansSekmesi.KASAM,
+            ekran_sinifi=ekran,
+            bilgi_satiri=(
+                bilgi_satiri
+            ),
+            kartlar=kartlar,
+            grafikler=tuple(
+                grafikler
+            ),
+            uretilme_zamani=(
+                uretilme_zamani
+            ),
+            paket_sha256=(
+                paket_sha256
+            ),
+        )
+
+    def analiz_sekmesi(
+        self,
+        *,
+        analizler: Iterable[
+            Mapping[str, Any]
+        ],
+        ekran_genisligi: int,
+    ) -> FinansSekmePaketi:
+        ekran = self._ekran_sinifi(
+            genislik=ekran_genisligi
+        )
+
+        kartlar: list[
+            Mapping[str, Any]
+        ] = []
+
+        for analiz in analizler:
+            sembol = str(
+                analiz[
+src/syk_finans_otagi/finans_arayuz_paketi.py:871 | ),
+                    )
+                ),
+                kanit_sha256=sha256(
+                    kodlu
+                ).hexdigest(),
+            )
+
+            kartlar.append(
+                kart.as_dict()
+            )
+
+        bilgi_satiri = (
+            self._bilgi_satiri_uret()
+        )
+
+        uretilme_zamani = _simdi()
+
+        paket_sha256 = (
+            self._paket_muhurle(
+                sekme=(
+                    FinansSekmesi.ANALIZ
+                ),
+                ekran_sinifi=ekran,
+                bilgi_satiri=(
+                    bilgi_satiri
+                ),
+                kartlar=kartlar,
+                grafikler=(),
+                uretilme_zamani=(
+                    uretilme_zamani
+                ),
+            )
+        )
+
+        return FinansSekmePaketi(
+            sekme=FinansSekmesi.ANALIZ,
+            ekran_sinifi=ekran,
+            bilgi_satiri=(
+                bilgi_satiri
+            ),
+            kartlar=tuple(
+                kartlar
+            ),
+            grafikler=(),
+            uretilme_zamani=(
+                uretilme_zamani
+            ),
+            paket_sha256=(
+                paket_sha256
+            ),
+        )
+
+    def planlar_sekmesi(
+        self,
+        *,
+        planlar: Iterable[
+            Mapping[str, Any]
+        ],
+        ekran_genisligi: int,
+    ) -> FinansSekmePaketi:
+        ekran = self._ekran_sinifi(
+            genislik=ekran_genisligi
+        )
+
+        kartlar: list[
+            Mapping[str, Any]
+        ] = []
+
+        for plan in planlar:
+            kademe_sayisi = int(
+                plan[
+src/syk_finans_otagi/finans_calisma_profili.py:196 | : (
+                self.toplu_sha256
+            ),
+        }
+
+
+class SyFinansCalismaProfili:
+    def __init__(
+        self,
+        *,
+        merkez: FinansKaynakMerkezi,
+        oncelikli_varliklar: Iterable[
+            OncelikliVarlik
+        ] = (),
+    ) -> None:
+        self.merkez = merkez
+
+        self._oncelikli_varliklar: dict[
+            tuple[
+                str,
+                VarlikTuru,
+            ],
+            OncelikliVarlik,
+        ] = {}
+
+        for varlik in oncelikli_varliklar:
+            self.varlik_ekle(
+                varlik
+            )
+
+    @classmethod
+    def varsayilan(
+        cls,
+        *,
+        tcmb: (
+            TcmbGuvenliBagdastiricisi
+            | None
+        ) = None,
+        kap: (
+            KapBildirimBagdastiricisi
+            | None
+        ) = None,
+        tefas: (
+            TefasFonBagdastiricisi
+            | None
+        ) = None,
+        bist: (
+            BistPiyasaBagdastiricisi
+            | None
+        ) = None,
+        oncelikli_varliklar: Iterable[
+            OncelikliVarlik
+        ] = (),
+    ) -> SyFinansCalismaProfili:
+        piyasa_kaynaklari = [
+            kaynak
+            for kaynak in (
+                tcmb,
+                tefas,
+                bist,
+            )
+            if kaynak is not None
+        ]
+
+        kap_kaynaklari = [
+            kaynak
+            for kaynak in (
+                kap,
+            )
+            if kaynak is not None
+        ]
+
+        merkez = FinansKaynakMerkezi(
+            piyasa_kaynaklari=(
+                piyasa_kaynaklari
+            ),
+            kap_kaynaklari=(
+                kap_kaynaklari
+            ),
+        )
+
+        return cls(
+            merkez=merkez,
+            oncelikli_varliklar=(
+                oncelikli_varliklar
+            ),
+        )
+
+    def varlik_ekle(
+        self,
+        varlik: OncelikliVarlik,
+    ) -> None:
+        anahtar = (
+            varlik.sembol
+            .strip()
+            .upper(),
+            varlik.varlik_turu,
+        )
+
+        self._oncelikli_varliklar[
+            anahtar
+        ] = OncelikliVarlik(
+            sembol=anahtar[0],
+            varlik_turu=(
+                varlik.varlik_turu
+            ),
+            oncelik=varlik.oncelik,
+            kullanici_etiketi=(
+                varlik.kullanici_etiketi
+            ),
+        )
+
+    def varlik_sil(
+        self,
+        *,
+        sembol: str,
+        varlik_turu: VarlikTuru,
+    ) -> bool:
+        anahtar = (
+            str(sembol)
+            .strip()
+            .upper(),
+            varlik_turu,
+        )
+
+        return (
+            self._oncelikli_varliklar
+            .pop(
+                anahtar,
+                None,
+            )
+            is not None
+        )
+
+    def oncelikli_varliklar(
+        self,
+    ) -> tuple[
+        OncelikliVarlik,
+        ...
+    ]:
+        return tuple(
+            sorted(
+                self._oncelikli_varliklar
+                .values(),
+                key=lambda varlik: (
+                    -varlik.oncelik,
+                    varlik.varlik_turu.value,
+                    varlik.sembol,
+                ),
+            )
+        )
+
+    def varlik_verisi_getir(
+        self,
+        *,
+        sembol: str,
+        varlik_turu: VarlikTuru,
+    ) -> MerkeziPiyasaSonucu:
+        return (
+            self.merkez
+            .piyasa_verisi_getir(
+                sembol=sembol,
+                kaynak_sinifi=(
+                    _varlik_sinifi(
+                        varlik_turu
+                    )
+                ),
+            )
+        )
+
+    def kap_bildirimleri_getir(
+        self,
+        *,
+        sembol: str | None = None,
+        limit: int = 50,
+    ) -> MerkeziKapSonucu:
+        return (
+            self.merkez
+            .kap_bildirimleri_getir(
+                sembol=sembol,
+                limit=limit,
+            )
+        )
+
+    def toplu_guncelle(
+        self,
+    ) -> TopluGuncellemeSonucu:
+        baslangic = _simdi()
+
+        kayitlar: list[
+            TopluGuncellemeKaydi
+        ] = []
+
+        for varlik in (
+            self.oncelikli_varliklar()
+        ):
+            try:
+                sonuc = (
+                    self.varlik_verisi_getir(
+                        sembol=(
+                            varlik.sembol
+                        ),
+                        varlik_turu=(
+                            varlik.varlik_turu
+                        ),
+                    )
+                )
+
+                kayitlar.append(
+                    TopluGuncellemeKaydi(
+                        sembol=(
+                            varlik.sembol
+                        ),
+                        varlik_turu=(
+                            varlik.varlik_turu
+                        ),
+                        basarili=True,
+                        fiyat=float(
+                            sonuc.secilen_fiyat
+                        ),
+                        veri_akis_durumu=(
+                            sonuc
+                            .veri_akis_durumu
+                            .value
+                        ),
+                        kullanilan_kaynaklar=(
+                            sonuc
+                            .kullanilan_kaynaklar
+                        ),
+                        aciklama=(
+                            sonuc
+                            .kullanici_aciklamasi
+                        ),
+                        hata=None,
+                        sonuc_sha256=(
+                            sonuc.merkez_sha256
+                        ),
+                    )
+                )
+
+            except (
+                ValueError,
+                KeyError,
+                ConnectionError,
+                TimeoutError,
+                RuntimeError,
+            ) as error:
+                kayitlar.append(
+                    TopluGuncellemeKaydi(
+                        sembol=(
+                            varlik.sembol
+                        ),
+                        varlik_turu=(
+                            varlik.varlik_turu
+                        ),
+                        basarili=False,
+                        fiyat=None,
+                        veri_akis_durumu=None,
+                        kullanilan_kaynaklar=(),
+                        aciklama=(
+src/syk_finans_otagi/finans_calisma_profili.py:588 | ]
+            ),
+        }
+
+
+class KasifFinansGecidi:
+    def __init__(
+        self,
+        *,
+        calisma_profili: (
+            SyFinansCalismaProfili
+        ),
+    ) -> None:
+        self.calisma_profili = (
+            calisma_profili
+        )
+
+    def varlik_bilgisi(
+        self,
+        *,
+        sembol: str,
+        varlik_turu: VarlikTuru,
+    ) -> dict[str, Any]:
+        sonuc = (
+            self.calisma_profili
+            .varlik_verisi_getir(
+                sembol=sembol,
+                varlik_turu=(
+                    varlik_turu
+                ),
+            )
+        )
+
+        return {
+src/syk_finans_otagi/finans_calisma_profili.py:624 | syfinans-kasif-gecidi/v1
+src/syk_finans_otagi/finans_gorunumleri.py:192 | : (
+                float(self.hacim)
+                if self.hacim is not None
+                else None
+            ),
+        }
+
+
+@dataclass(frozen=True, slots=True)
+class FinansGorunumPaketi:
+    uretilme_zamani: str
+    piyasa_kartlari: tuple[
+        PiyasaGorunumKarti,
+        ...
+    ]
+    kasa_kartlari: tuple[
+        KasaGorunumKarti,
+        ...
+    ]
+    kaynak_saglik_kartlari: tuple[
+        KaynakSaglikKarti,
+        ...
+    ]
+    kap_bildirim_kartlari: tuple[
+        KapBildirimKarti,
+        ...
+    ]
+    paket_sha256: str
+
+    def as_dict(self) -> dict[str, Any]:
+        return {
+src/syk_finans_otagi/finans_gorunumleri.py:224 | syfinans-gorunum-paketi/v1
+src/syk_finans_otagi/finans_gorunumleri.py:247 | : (
+                self.paket_sha256
+            ),
+        }
+
+
+class FinansGorunumMotoru:
+    def __init__(
+        self,
+        *,
+        calisma_profili: (
+            SyFinansCalismaProfili
+        ),
+    ) -> None:
+        self.calisma_profili = (
+            calisma_profili
+        )
+
+    def piyasa_karti_uret(
+        self,
+        *,
+        sembol: str,
+        varlik_turu: VarlikTuru,
+    ) -> PiyasaGorunumKarti:
+        sonuc = (
+            self.calisma_profili
+            .varlik_verisi_getir(
+                sembol=sembol,
+                varlik_turu=(
+                    varlik_turu
+                ),
+            )
+        )
+
+        return PiyasaGorunumKarti(
+            sembol=sonuc.sembol,
+            varlik_turu=(
+                sonuc.varlik_turu
+            ),
+            fiyat=_para(
+                sonuc.secilen_fiyat
+            ),
+            veri_akis_durumu=(
+                sonuc.veri_akis_durumu
+            ),
+            kaynaklar=(
+                sonuc.kullanilan_kaynaklar
+            ),
+            aciklama=(
+                sonuc.kullanici_aciklamasi
+            ),
+            kanit_sha256=(
+                sonuc.merkez_sha256
+            ),
+        )
+
+    def kasa_karti_uret(
+        self,
+        *,
+        sembol: str,
+        varlik_turu: VarlikTuru,
+        miktar: Decimal | int | float | str,
+        ortalama_maliyet: (
+            Decimal | int | float | str
+        ),
+    ) -> KasaGorunumKarti:
+        piyasa = self.piyasa_karti_uret(
+            sembol=sembol,
+            varlik_turu=varlik_turu,
+        )
+
+        miktar_degeri = _para(
+            miktar
+        )
+
+        maliyet_degeri = _para(
+            ortalama_maliyet
+        )
+
+        toplam_maliyet = _para(
+            miktar_degeri
+            * maliyet_degeri
+        )
+
+        guncel_deger = _para(
+            miktar_degeri
+            * piyasa.fiyat
+        )
+
+        kar_zarar = _para(
+            guncel_deger
+            - toplam_maliyet
+        )
+
+        kar_zarar_orani = (
+            round(
+                float(
+                    kar_zarar
+                    / toplam_maliyet
+                    * Decimal(
+src/syk_finans_otagi/finans_gorunumleri.py:449 | ]
+        )
+
+    def kap_kartlari_uret(
+        self,
+        *,
+        sembol: str | None = None,
+        limit: int = 20,
+    ) -> tuple[
+        KapBildirimKarti,
+        ...
+    ]:
+        sonuc = (
+            self.calisma_profili
+            .kap_bildirimleri_getir(
+                sembol=sembol,
+                limit=limit,
+            )
+        )
+
+        onem_sirasi = {
+            BildirimOnemi.KRITIK: 4,
+            BildirimOnemi.ONEMLI: 3,
+            BildirimOnemi.DIKKAT: 2,
+            BildirimOnemi.BILGI: 1,
+        }
+
+        bildirimler = sorted(
+            sonuc.bildirimler,
+            key=lambda bildirim: (
+                onem_sirasi[
+                    bildirim.onem
+                ],
+                bildirim.yayin_zamani,
+            ),
+            reverse=True,
+        )
+
+        return tuple(
+            KapBildirimKarti(
+                bildirim_id=(
+                    bildirim.bildirim_id
+                ),
+                sembol=bildirim.sembol,
+                baslik=bildirim.baslik,
+                yayin_zamani=(
+                    bildirim.yayin_zamani
+                ),
+                onem=bildirim.onem,
+                kaynak_adresi=(
+                    bildirim.kaynak_adresi
+                ),
+                ozet=bildirim.ozet,
+                bildirim_sha256=(
+                    bildirim
+                    .bildirim_sha256
+                ),
+            )
+            for bildirim
+            in bildirimler
+        )
+
+    def paket_uret(
+        self,
+        *,
+        piyasa_varliklari: Iterable[
+            tuple[str, VarlikTuru]
+        ] = (),
+        kasa_varliklari: Iterable[
+            Mapping[str, Any]
+        ] = (),
+        kap_sembolu: str | None = None,
+        kap_limiti: int = 20,
+    ) -> FinansGorunumPaketi:
+        uretilme_zamani = _simdi()
+
+        piyasa_kartlari = tuple(
+            self.piyasa_karti_uret(
+                sembol=sembol,
+                varlik_turu=varlik_turu,
+            )
+            for sembol, varlik_turu
+            in piyasa_varliklari
+        )
+
+        kasa_kartlari = tuple(
+            self.kasa_karti_uret(
+                sembol=str(
+                    kayit[
+src/syk_finans_otagi/finans_grafik_gecmisi.py:186 | syfinans-grafik-serisi/v1
+src/syk_finans_otagi/finans_grafik_gecmisi.py:468 | ]
+                ),
+            )
+            for kayit in ham_kayitlar
+        )
+
+
+class FinansGrafikMotoru:
+    DONEM_GUNLERI = {
+        GrafikDonemi.GUNLUK: 1,
+        GrafikDonemi.HAFTALIK: 7,
+        GrafikDonemi.AYLIK: 31,
+    }
+
+    def __init__(
+        self,
+        *,
+        depo: FiyatGecmisDeposu,
+    ) -> None:
+        self.depo = depo
+
+    @staticmethod
+    def _doneme_gore_filtrele(
+        kayitlar: Iterable[
+            FiyatGecmisKaydi
+        ],
+        *,
+        donem: GrafikDonemi,
+    ) -> tuple[
+        FiyatGecmisKaydi,
+        ...
+    ]:
+        sirali = tuple(
+            sorted(
+                kayitlar,
+                key=lambda kayit: (
+                    kayit.zaman
+                ),
+            )
+        )
+
+        if (
+            not sirali
+            or donem
+            == GrafikDonemi.TUMU
+        ):
+            return sirali
+
+        son_zaman = datetime.fromisoformat(
+            sirali[-1].zaman
+        )
+
+        gun_sayisi = (
+            FinansGrafikMotoru
+            .DONEM_GUNLERI[
+                donem
+            ]
+        )
+
+        return tuple(
+            kayit
+            for kayit in sirali
+            if (
+                son_zaman
+                - datetime.fromisoformat(
+                    kayit.zaman
+                )
+            ).total_seconds()
+            <= gun_sayisi * 86400
+        )
+
+    def seri_uret(
+        self,
+        *,
+        sembol: str,
+        donem: GrafikDonemi = (
+            GrafikDonemi.TUMU
+        ),
+        ortalama_maliyet: (
+            Decimal
+            | int
+            | float
+            | str
+            | None
+        ) = None,
+        miktar: (
+            Decimal
+            | int
+            | float
+            | str
+            | None
+        ) = None,
+    ) -> GrafikSerisi:
+        kayitlar = self._doneme_gore_filtrele(
+            self.depo.kayitlari_getir(
+                sembol=sembol
+            ),
+            donem=donem,
+        )
+
+        if not kayitlar:
+            raise ValueError(
+src/syk_finans_otagi/finans_grafik_gecmisi.py:725 | syfinans-grafik-ekrani/v1
+src/syk_finans_otagi/finans_karar_destegi.py:214 | syfinans-butce-dagilimi/v1
+src/syk_finans_otagi/finans_karar_destegi.py:296 | syfinans-kademe-plani/v1
+src/syk_finans_otagi/finans_karar_destegi.py:328 | : (
+                self.plan_sha256
+            ),
+        }
+
+
+@dataclass(frozen=True, slots=True)
+class KasifFinansYorumu:
+    sembol: str
+    karar_puani: float
+    yonelim: KararYonelimi
+    kisa_yorum: str
+    kanit_ozeti: tuple[str, ...]
+    risk_uyarisi: str
+    kesinlik_uyarisi: str
+    yorum_sha256: str
+
+    def as_dict(self) -> dict[str, Any]:
+        return {
+src/syk_finans_otagi/finans_karar_destegi.py:348 | syfinans-kasif-yorumu/v1
+src/syk_finans_otagi/finans_karar_destegi.py:365 | : (
+                self.yorum_sha256
+            ),
+        }
+
+
+class SyFinansKararDestekMotoru:
+    def adaylari_sirala(
+        self,
+        *,
+        adaylar: Iterable[VarlikAdayi],
+        secim_turu: YatirimSecimTuru,
+        en_fazla_aday: int = 7,
+    ) -> tuple[VarlikAdayi, ...]:
+        if not 1 <= int(en_fazla_aday) <= 7:
+            raise ValueError(
+src/syk_finans_otagi/finans_karar_destegi.py:737 | : (
+                str(ortalama_maliyet)
+                if ortalama_maliyet
+                is not None
+                else None
+            ),
+        }
+
+        return KademePlani(
+            plan_id=plan_id,
+            sembol=sembol.upper(),
+            kademe_turu=kademe_turu,
+            toplam_butce=butce,
+            kademeler=tuple(
+                kademeler
+            ),
+            gerceklesen_adet=(
+                gerceklesen_adet
+            ),
+            gerceklesen_tutar=(
+                gerceklesen_tutar
+            ),
+            ortalama_maliyet=(
+                ortalama_maliyet
+            ),
+            gerceklesme_orani=(
+                gerceklesme_orani
+            ),
+            basari_orani=(
+                basari_orani
+            ),
+            plan_sha256=_muhur(
+                kanit
+            ),
+        )
+
+    def kasif_yorumu_uret(
+        self,
+        *,
+        aday: VarlikAdayi,
+    ) -> KasifFinansYorumu:
+        if aday.yonelim == (
+            KararYonelimi.GUCLU_ADAY
+        ):
+            yorum = (
+src/syk_finans_otagi/finans_karar_destegi.py:850 | : list(
+                kanit_ozeti
+            ),
+        }
+
+        return KasifFinansYorumu(
+            sembol=aday.sembol.upper(),
+            karar_puani=(
+                aday.karar_puani
+            ),
+            yonelim=aday.yonelim,
+            kisa_yorum=yorum,
+            kanit_ozeti=(
+                kanit_ozeti
+            ),
+            risk_uyarisi=(
+                risk_uyarisi
+            ),
+            kesinlik_uyarisi=(
+src/syk_finans_otagi/finans_kaynak_merkezi.py:39 | class PiyasaKaynakSozlesmesi(
+    Protocol
+):
+    @property
+    def saglayici_id(
+        self,
+    ) -> str:
+        ...
+
+    @property
+    def kaynak_sinifi(
+        self,
+    ) -> FinansKaynakSinifi:
+        ...
+
+    def piyasa_verisi_getir(
+        self,
+        *,
+        sembol: str,
+    ) -> KaynakliPiyasaVerisi:
+        ...
+
+
+class KapKaynakSozlesmesi(
+    Protocol
+):
+    @property
+    def saglayici_id(
+        self,
+    ) -> str:
+        ...
+
+    def bildirimleri_getir(
+        self,
+        *,
+        sembol: str | None = None,
+        limit: int = 50,
+    ) -> tuple[
+        KapBildirimi,
+        ...
+    ]:
+        ...
+
+
+@dataclass(frozen=True, slots=True)
+class KaynakDurumKaydi:
+    saglayici_id: str
+    kaynak_sinifi: str
+    durum: KaynakMerkeziDurumu
+    son_denetim_zamani: str
+    son_basarili_zaman: str | None
+    son_hata_zamani: str | None
+    son_hata: str | None
+    veri_akis_durumu: str | None
+    yanit_kaynagi: str | None
+    toplam_istek: int
+    basarili_istek: int
+    basarisiz_istek: int
+
+    @property
+    def basari_orani(
+        self,
+    ) -> float:
+        if self.toplam_istek <= 0:
+            return 0.0
+
+        return round(
+            (
+                self.basarili_istek
+                / self.toplam_istek
+                * 100.0
+            ),
+            3,
+        )
+
+    def as_dict(
+        self,
+    ) -> dict[str, Any]:
+        return {
+src/syk_finans_otagi/finans_kaynak_merkezi.py:283 | : (
+                self.merkez_sha256
+            ),
+        }
+
+
+class FinansKaynakMerkezi:
+    def __init__(
+        self,
+        *,
+        piyasa_kaynaklari: Iterable[
+            PiyasaKaynakSozlesmesi
+        ] = (),
+        kap_kaynaklari: Iterable[
+            KapKaynakSozlesmesi
+        ] = (),
+    ) -> None:
+        self._piyasa_kaynaklari: dict[
+            str,
+            PiyasaKaynakSozlesmesi,
+        ] = {}
+
+        self._kap_kaynaklari: dict[
+            str,
+            KapKaynakSozlesmesi,
+        ] = {}
+
+        self._durumlar: dict[
+            str,
+            KaynakDurumKaydi,
+        ] = {}
+
+        self._lock = RLock()
+
+        for kaynak in piyasa_kaynaklari:
+            self.piyasa_kaynagi_ekle(
+                kaynak
+            )
+
+        for kaynak in kap_kaynaklari:
+            self.kap_kaynagi_ekle(
+                kaynak
+            )
+
+    def piyasa_kaynagi_ekle(
+        self,
+        kaynak: PiyasaKaynakSozlesmesi,
+    ) -> None:
+        kimlik = str(
+            kaynak.saglayici_id
+        ).strip()
+
+        if not kimlik:
+            raise ValueError(
+src/syk_finans_otagi/finans_kaynak_merkezi.py:391 | )
+
+            self._kap_kaynaklari[
+                kimlik
+            ] = kaynak
+
+            self._durumlar[
+                kimlik
+            ] = self._ilk_durum(
+                saglayici_id=kimlik,
+                kaynak_sinifi=(
+                    FinansKaynakSinifi
+                    .KAP.value
+                ),
+            )
+
+    @staticmethod
+    def _ilk_durum(
+        *,
+        saglayici_id: str,
+        kaynak_sinifi: str,
+    ) -> KaynakDurumKaydi:
+        return KaynakDurumKaydi(
+            saglayici_id=saglayici_id,
+            kaynak_sinifi=(
+                kaynak_sinifi
+            ),
+            durum=(
+                KaynakMerkeziDurumu
+                .TANIMSIZ
+            ),
+            son_denetim_zamani=_simdi(),
+            son_basarili_zaman=None,
+            son_hata_zamani=None,
+            son_hata=None,
+            veri_akis_durumu=None,
+            yanit_kaynagi=None,
+            toplam_istek=0,
+            basarili_istek=0,
+            basarisiz_istek=0,
+        )
+
+    def _basari_kaydet(
+        self,
+        *,
+        saglayici_id: str,
+        veri_akis_durumu: (
+            VeriAkisDurumu
+            | None
+        ) = None,
+        yanit_kaynagi: (
+            YanitKaynagi
+            | str
+            | None
+        ) = None,
+    ) -> None:
+        with self._lock:
+            onceki = self._durumlar[
+                saglayici_id
+            ]
+
+            if isinstance(
+                yanit_kaynagi,
+                YanitKaynagi,
+            ):
+                yanit_kaynagi_degeri = (
+                    yanit_kaynagi.value
+                )
+            elif yanit_kaynagi is None:
+                yanit_kaynagi_degeri = None
+            else:
+                yanit_kaynagi_degeri = str(
+                    yanit_kaynagi
+                )
+
+            self._durumlar[
+                saglayici_id
+            ] = KaynakDurumKaydi(
+                saglayici_id=(
+                    onceki.saglayici_id
+                ),
+                kaynak_sinifi=(
+                    onceki.kaynak_sinifi
+                ),
+                durum=(
+                    KaynakMerkeziDurumu.HAZIR
+                ),
+                son_denetim_zamani=_simdi(),
+                son_basarili_zaman=_simdi(),
+                son_hata_zamani=(
+                    onceki.son_hata_zamani
+                ),
+                son_hata=None,
+                veri_akis_durumu=(
+                    veri_akis_durumu.value
+                    if veri_akis_durumu
+                    is not None
+                    else None
+                ),
+                yanit_kaynagi=(
+                    yanit_kaynagi_degeri
+                ),
+                toplam_istek=(
+                    onceki.toplam_istek
+                    + 1
+                ),
+                basarili_istek=(
+                    onceki.basarili_istek
+                    + 1
+                ),
+                basarisiz_istek=(
+                    onceki.basarisiz_istek
+                ),
+            )
+
+    def _hata_kaydet(
+        self,
+        *,
+        saglayici_id: str,
+        hata: Exception,
+    ) -> None:
+        with self._lock:
+            onceki = self._durumlar[
+                saglayici_id
+            ]
+
+            self._durumlar[
+                saglayici_id
+            ] = KaynakDurumKaydi(
+                saglayici_id=(
+                    onceki.saglayici_id
+                ),
+                kaynak_sinifi=(
+                    onceki.kaynak_sinifi
+                ),
+                durum=(
+                    KaynakMerkeziDurumu
+                    .ERISILEMIYOR
+                ),
+                son_denetim_zamani=_simdi(),
+                son_basarili_zaman=(
+                    onceki.son_basarili_zaman
+                ),
+                son_hata_zamani=_simdi(),
+                son_hata=str(
+                    hata
+                ),
+                veri_akis_durumu=(
+                    onceki.veri_akis_durumu
+                ),
+                yanit_kaynagi=(
+                    onceki.yanit_kaynagi
+                ),
+                toplam_istek=(
+                    onceki.toplam_istek
+                    + 1
+                ),
+                basarili_istek=(
+                    onceki.basarili_istek
+                ),
+                basarisiz_istek=(
+                    onceki.basarisiz_istek
+                    + 1
+                ),
+            )
+
+    @staticmethod
+    def _akis_durumu_belirle(
+        veriler: Iterable[
+            KaynakliPiyasaVerisi
+        ],
+    ) -> VeriAkisDurumu:
+        durumlar = {
+            kayit.veri.veri_durumu
+            for kayit in veriler
+        }
+
+        if (
+            VeriAkisDurumu.CEVRIMDISI
+            in durumlar
+        ):
+            return (
+                VeriAkisDurumu.CEVRIMDISI
+            )
+
+        if (
+            VeriAkisDurumu.GECIKMELI
+            in durumlar
+        ):
+            return (
+                VeriAkisDurumu.GECIKMELI
+            )
+
+        return VeriAkisDurumu.ANLIK
+
+    def piyasa_verisi_getir(
+        self,
+        *,
+        sembol: str,
+        kaynak_sinifi: (
+            FinansKaynakSinifi
+            | None
+        ) = None,
+        saglayici_kimlikleri: (
+            Iterable[str]
+            | None
+        ) = None,
+    ) -> MerkeziPiyasaSonucu:
+        aranan = str(
+            sembol
+        ).strip().upper()
+
+        if not aranan:
+            raise ValueError(
+src/syk_finans_otagi/finans_kaynak_merkezi.py:694 | Hiçbir finans kaynağı
+src/syk_finans_otagi/finans_kaynak_merkezi.py:740 | Finans verisi birden fazla
+src/syk_finans_otagi/finans_kaynak_merkezi.py:751 | son güvenilir finans kaydı
+src/syk_finans_otagi/finans_kaynak_merkezi.py:760 | Finans verisi gecikmeli
+src/syk_finans_otagi/finans_kaynak_merkezi.py:766 | Finans verisi kullanılabilir
+src/syk_finans_otagi/finans_kaynak_merkezi.py:1000 | Finans kaynağı
+src/syk_finans_otagi/finans_kaynak_merkezi.py:1052 | syfinans-kaynak-merkezi/v1
+src/syk_finans_otagi/finans_uyari_ogrenme.py:406 | ,
+                )
+
+
+class SyFinansAlarmMotoru:
+    def __init__(
+        self,
+        *,
+        tekrar_engelleyici: (
+            AlarmTekrarEngelleyici | None
+        ) = None,
+    ) -> None:
+        self.tekrar_engelleyici = (
+            tekrar_engelleyici
+            or AlarmTekrarEngelleyici()
+        )
+
+    @staticmethod
+    def _esik_asildi(
+        *,
+        guncel: Decimal,
+        hedef: Decimal,
+        yonelim: AlarmYonelimi,
+    ) -> bool:
+        if yonelim == AlarmYonelimi.YUKARI:
+            return guncel >= hedef
+
+        if yonelim == AlarmYonelimi.ASAGI:
+            return guncel <= hedef
+
+        return guncel == hedef
+
+    def fiyat_alarm_degerlendir(
+        self,
+        *,
+        kural: AlarmKurali,
+        guncel_fiyat: (
+            Decimal | int | float | str
+        ),
+        zaman: str | None = None,
+    ) -> AlarmOlayi | None:
+        if not kural.etkin:
+            return None
+
+        if kural.alarm_turu not in {
+            AlarmTuru.FIYAT,
+            AlarmTuru.KADEME,
+        }:
+            raise ValueError(
+src/syk_finans_otagi/finans_uyari_ogrenme.py:696 | Finans veri kaynağı kesintisi
+src/syk_finans_otagi/finans_uyari_ogrenme.py:1041 | : yeni,
+        }
+
+        return KaynakOgrenmeKaydi(
+            saglayici_id=saglayici_id,
+            toplam_istek=toplam_istek,
+            basarili_istek=(
+                basarili_istek
+            ),
+            hatali_istek=hatali_istek,
+            tutarli_veri=tutarli_veri,
+            tutarsiz_veri=(
+                tutarsiz_veri
+            ),
+            onceki_guven_puani=float(
+                onceki_guven_puani
+            ),
+            yeni_guven_puani=yeni,
+            aciklama=aciklama,
+            kayit_sha256=_muhur(
+                kanit
+            ),
+        )
+
+
+class FinansArastirmaArgeMotoru:
+    def oneriler_uret(
+        self,
+        *,
+        kaynak_durumlari: Iterable[
+            Mapping[str, Any]
+        ] = (),
+        karar_basari_ozeti: (
+            Mapping[str, Any] | None
+        ) = None,
+        portfoy_ozeti: (
+            Mapping[str, Any] | None
+        ) = None,
+    ) -> tuple[
+        ArastirmaOnerisi,
+        ...
+    ]:
+        oneriler: list[
+            ArastirmaOnerisi
+        ] = []
+
+        for kaynak in kaynak_durumlari:
+            durum = str(
+                kaynak.get(
+src/syk_finans_otagi/gercek_kaynak_sozlesmeleri.py:58 | ) from error
+
+    if sonuc.tzinfo is None:
+        sonuc = sonuc.replace(
+            tzinfo=UTC
+        )
+
+    return sonuc.isoformat()
+
+
+class FinansKaynakSinifi(StrEnum):
+    BIST =
+src/syk_finans_otagi/gercek_kaynak_sozlesmeleri.py:402 | : (
+                self.para_birimi
+            ),
+        }
+
+
+class GercekKaynakBagdastiricisi(ABC):
+    @property
+    @abstractmethod
+    def saglayici_id(self) -> str:
+        raise NotImplementedError
+
+    @property
+    @abstractmethod
+    def kaynak_sinifi(
+        self,
+    ) -> FinansKaynakSinifi:
+        raise NotImplementedError
+
+    @property
+    @abstractmethod
+    def guven_profili(
+        self,
+    ) -> KaynakGuvenProfili:
+        raise NotImplementedError
+
+
+class PiyasaKaynakBagdastiricisi(
+    GercekKaynakBagdastiricisi
+):
+    @abstractmethod
+    def piyasa_verisi_getir(
+        self,
+        *,
+        sembol: str,
+    ) -> KaynakliPiyasaVerisi:
+        raise NotImplementedError
+
+
+class KapKaynakBagdastiricisi(
+    GercekKaynakBagdastiricisi
+):
+    @abstractmethod
+    def bildirimleri_getir(
+        self,
+        *,
+        sembol: str | None = None,
+        limit: int = 50,
+    ) -> tuple[KapBildirimi, ...]:
+        raise NotImplementedError
+
+
+class DenemeGercekKaynakBagdastiricisi(
+    PiyasaKaynakBagdastiricisi
+):
+    def __init__(
+        self,
+        *,
+        saglayici_id: str,
+        kaynak_sinifi: FinansKaynakSinifi,
+        guven_profili: KaynakGuvenProfili,
+        kayitlar: Mapping[
+            str,
+            BistPiyasaKaydi
+            | FonKaydi
+            | DovizKaydi
+            | KiymetliMadenKaydi,
+        ],
+        veri_durumu: VeriAkisDurumu = (
+            VeriAkisDurumu.ANLIK
+        ),
+        gecikme_saniyesi: int = 0,
+    ) -> None:
+        if (
+            guven_profili.saglayici_id
+            != saglayici_id
+        ):
+            raise ValueError(
+src/syk_finans_otagi/gercek_kaynak_sozlesmeleri.py:481 | )
+
+        self._saglayici_id = saglayici_id
+        self._kaynak_sinifi = kaynak_sinifi
+        self._guven_profili = guven_profili
+        self.kayitlar = {
+            str(kod).strip().upper(): kayit
+            for kod, kayit
+            in kayitlar.items()
+        }
+        self.veri_durumu = veri_durumu
+        self.gecikme_saniyesi = max(
+            0,
+            int(gecikme_saniyesi),
+        )
+
+    @property
+    def saglayici_id(self) -> str:
+        return self._saglayici_id
+
+    @property
+    def kaynak_sinifi(
+        self,
+    ) -> FinansKaynakSinifi:
+        return self._kaynak_sinifi
+
+    @property
+    def guven_profili(
+        self,
+    ) -> KaynakGuvenProfili:
+        return self._guven_profili
+
+    def piyasa_verisi_getir(
+        self,
+        *,
+        sembol: str,
+    ) -> KaynakliPiyasaVerisi:
+        anahtar = str(
+            sembol
+        ).strip().upper()
+
+        try:
+            kayit = self.kayitlar[
+                anahtar
+            ]
+        except KeyError as error:
+            raise KeyError(
+                f
+src/syk_finans_otagi/gercek_kaynak_sozlesmeleri.py:676 | )
+
+        return replace(
+            bildirim,
+            dogrulanmis=True,
+            bildirim_sha256=sha256(
+                kodlu
+            ).hexdigest(),
+        )
+
+    @classmethod
+    def dogrula(
+        cls,
+        bildirim: KapBildirimi,
+    ) -> bool:
+        if not (
+            bildirim.dogrulanmis
+            and bildirim.bildirim_sha256
+        ):
+            return False
+
+        yeniden = cls.muhurle(
+            KapBildirimi(
+                bildirim_id=(
+                    bildirim.bildirim_id
+                ),
+                sembol=bildirim.sembol,
+                baslik=bildirim.baslik,
+                yayin_zamani=(
+                    bildirim.yayin_zamani
+                ),
+                bildirim_turu=(
+                    bildirim.bildirim_turu
+                ),
+                ozet=bildirim.ozet,
+                kaynak_adresi=(
+                    bildirim.kaynak_adresi
+                ),
+                onem=bildirim.onem,
+            )
+        )
+
+        return (
+            yeniden.bildirim_sha256
+            == bildirim.bildirim_sha256
+        )
+
+
+class FinansKaynakHavuzu:
+    def __init__(
+        self,
+        *,
+        bagdastiricilar: Iterable[
+            PiyasaKaynakBagdastiricisi
+        ],
+    ) -> None:
+        self.bagdastiricilar = tuple(
+            bagdastiricilar
+        )
+
+        if not self.bagdastiricilar:
+            raise ValueError(
+src/syk_finans_otagi/kap_bildirim_bagdastiricisi.py:176 | finansal rapor
+src/syk_finans_otagi/kap_bildirim_bagdastiricisi.py:446 | SYFINANS_KAP_API_ADRESI
+src/syk_finans_otagi/kap_bildirim_bagdastiricisi.py:454 | SYFINANS_KAP_API_ANAHTARI
+src/syk_finans_otagi/kap_bildirim_bagdastiricisi.py:490 | ,
+        )
+
+        with urlopen(
+            istek,
+            timeout=zaman_asimi,
+        ) as yanit:
+            return yanit.read()
+
+    @property
+    def saglayici_id(self) -> str:
+        return self.SAGLAYICI_ID
+
+    @property
+    def kaynak_sinifi(
+        self,
+    ) -> FinansKaynakSinifi:
+        return FinansKaynakSinifi.KAP
+
+    @property
+    def guven_profili(
+        self,
+    ) -> dict[str, Any]:
+        return {
+src/syk_finans_otagi/kap_bildirim_bagdastiricisi.py:536 | SYFINANS_KAP_API_ADRESI
+src/syk_finans_otagi/kap_bildirim_bagdastiricisi.py:577 | SyFinansOtigi/1.0
+src/syk_finans_otagi/sykasif_arge.py:560 | : (
+                self.degerlendirme_sha256
+            ),
+        }
+
+
+class SyKasifArgeMotoru:
+    @classmethod
+    def degerlendir(
+        cls,
+        *,
+        varliklar: Iterable[
+            ArgeVarligi
+        ],
+        tedarikciler: Iterable[
+            TedarikciKaydi
+        ] = (),
+        toplam_arge_butcesi: (
+            Decimal | int | float | str
+        ),
+        finans_butce_fazlasi: (
+            Decimal | int | float | str
+        ) = 0,
+        asgari_nakit_guvenligi: (
+            Decimal | int | float | str
+        ) = 0,
+    ) -> ArgeDegerlendirmesi:
+        varlik_listesi = tuple(
+            varliklar
+        )
+
+        if not varlik_listesi:
+            raise ValueError(
+src/syk_finans_otagi/sykasif_arge.py:607 | )
+
+        butce = _para(
+            toplam_arge_butcesi
+        )
+
+        fazlalik = _para(
+            finans_butce_fazlasi
+        )
+
+        nakit_guvenligi = _para(
+            asgari_nakit_guvenligi
+        )
+
+        if butce < 0:
+            raise ValueError(
+src/syk_finans_otagi/sykasif_arge.py:629 | Finans bütçe fazlası
+src/syk_finans_otagi/sykasif_arge.py:885 | finans bütçe fazlası,
+src/syk_finans_otagi/sykasif_arge.py:946 | )
+
+        return ArgeDegerlendirmesi(
+            varliklar=varlik_listesi,
+            oneriler=tuple(
+                oneriler
+            ),
+            toplam_arge_butcesi=butce,
+            kullanilabilir_butce=(
+                kullanilabilir
+            ),
+            en_zayif_varlik_id=(
+                en_zayif
+            ),
+            degerlendirme_sha256=sha256(
+                kodlu
+            ).hexdigest(),
+        )
+
+
+class SyFinansUcKatmanSozlesmesi:
+    @staticmethod
+    def ekran_sozlesmesi() -> dict[str, Any]:
+        return {
+src/syk_finans_otagi/sykasif_arge.py:1007 | finans_fazlasi_argeye_aktarilabilir
+src/syk_finans_otagi/tcmb_doviz_bagdastiricisi.py:326 | SyFinansOtigi/1.0
+src/syk_finans_otagi/tcmb_doviz_bagdastiricisi.py:329 | ,
+        )
+
+        with urlopen(
+            istek,
+            timeout=zaman_asimi,
+        ) as yanit:
+            return yanit.read()
+
+    @property
+    def saglayici_id(self) -> str:
+        return self.SAGLAYICI_ID
+
+    @property
+    def kaynak_sinifi(
+        self,
+    ) -> FinansKaynakSinifi:
+        return FinansKaynakSinifi.DOVIZ
+
+    @property
+    def guven_profili(
+        self,
+    ) -> KaynakGuvenProfili:
+        return KaynakGuvenProfili(
+            saglayici_id=(
+                self.saglayici_id
+            ),
+            kaynak_turu=(
+                KaynakTuru.RESMI
+            ),
+            temel_guven_puani=96,
+            guncellik_puani=85,
+            gecmis_tutarlilik_puani=95,
+            kesinti_dayanim_puani=85,
+            lisansli=True,
+            resmi=True,
+            aciklama=(
+src/syk_finans_otagi/tcmb_guvenli_calisma.py:139 | SyFinansOtigi/1.0
+src/syk_finans_otagi/tcmb_guvenli_calisma.py:142 | ,
+        )
+
+        with urlopen(
+            istek,
+            timeout=zaman_asimi,
+        ) as yanit:
+            return yanit.read()
+
+    @property
+    def saglayici_id(self) -> str:
+        return self.SAGLAYICI_ID
+
+    @property
+    def kaynak_sinifi(
+        self,
+    ) -> FinansKaynakSinifi:
+        return FinansKaynakSinifi.DOVIZ
+
+    @property
+    def guven_profili(
+        self,
+    ) -> KaynakGuvenProfili:
+        return KaynakGuvenProfili(
+            saglayici_id=(
+                self.saglayici_id
+            ),
+            kaynak_turu=(
+                KaynakTuru.RESMI
+            ),
+            temel_guven_puani=96,
+            guncellik_puani=85,
+            gecmis_tutarlilik_puani=95,
+            kesinti_dayanim_puani=92,
+            lisansli=True,
+            resmi=True,
+            aciklama=(
+src/syk_finans_otagi/tefas_fon_bagdastiricisi.py:481 | SYFINANS_TEFAS_API_ADRESI
+src/syk_finans_otagi/tefas_fon_bagdastiricisi.py:522 | ,
+        )
+
+        with urlopen(
+            istek,
+            timeout=zaman_asimi,
+        ) as yanit:
+            return yanit.read()
+
+    @property
+    def saglayici_id(self) -> str:
+        return self.SAGLAYICI_ID
+
+    @property
+    def kaynak_sinifi(
+        self,
+    ) -> FinansKaynakSinifi:
+        return FinansKaynakSinifi.FON
+
+    @property
+    def guven_profili(
+        self,
+    ) -> KaynakGuvenProfili:
+        return KaynakGuvenProfili(
+            saglayici_id=(
+                self.saglayici_id
+            ),
+            kaynak_turu=(
+                KaynakTuru.RESMI
+            ),
+            temel_guven_puani=94,
+            guncellik_puani=82,
+            gecmis_tutarlilik_puani=92,
+            kesinti_dayanim_puani=80,
+            lisansli=True,
+            resmi=True,
+            aciklama=(
+src/syk_finans_otagi/tefas_fon_bagdastiricisi.py:574 | SYFINANS_TEFAS_API_ADRESI
+src/syk_finans_otagi/tefas_fon_bagdastiricisi.py:616 | SyFinansOtigi/1.0
+src/syk_finans_otagi/toplu_yatirim_plani.py:397 | SyFinansOtağı toplu
+src/syk_finans_otagi/varlik_incelemesi.py:241 | ),
+        }
+
+
+@dataclass(frozen=True, slots=True)
+class KasifFinansYorumu:
+    kisa_yorum: str
+    ayrintili_yorum: str
+    olumlu_kanitlar: tuple[str, ...]
+    riskler: tuple[str, ...]
+    izlenecek_kosullar: tuple[str, ...]
+    guven_endeksi: float
+    kanit_gucu: float
+    karar_durumu: str
+
+    def as_dict(
+        self,
+        *,
+        ayrintili: bool,
+    ) -> dict[str, Any]:
+        veri = {
+
+RAPOR SHA-256: 4d0576dfa002d6ca2b23b5d92841d975d394f39490b7d05b65e53c34ed11b33c

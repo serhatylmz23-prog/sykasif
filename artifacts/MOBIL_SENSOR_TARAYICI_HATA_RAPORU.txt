@@ -1,0 +1,3 @@
+MOBİL_SENSOR_YANITI durum=200 adres=http://127.0.0.1:8013/syk-ui/js/mobile_sensor_runtime.js
+KONSOL error: Failed to load resource: the server responded with a status of 404 (Not Found)
+MOBİL_SENSOR_DURUMU {'mobilSensorTuru': 'object', 'kameraTuru': 'function', 'mikrofonTuru': 'function', 'konumTuru': 'function', 'betikSayisi': 1, 'betikAdresi': 'http://127.0.0.1:8013/syk-ui/js/mobile_sensor_runtime.js'}

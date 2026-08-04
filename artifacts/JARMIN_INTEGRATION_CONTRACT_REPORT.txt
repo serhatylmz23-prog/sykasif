@@ -1,0 +1,77 @@
+JARMIN INTEGRATION CONTRACT REPORT
+
+RUNTIME CHAINS
+self.runtime
+self.runtime.assistant
+self.runtime.assistant.configure
+self.runtime.assistant.core
+self.runtime.assistant.core.commands
+self.runtime.notifications
+self.runtime.snapshot
+self.runtime.voice
+self.runtime.voice.configure
+
+RUNTIME CALLS
+self.runtime.assistant.configure
+self.runtime.snapshot
+self.runtime.voice.configure
+
+RUNTIME METHODS
+__init__
+_build_result
+_extract_intent
+_extract_response
+_hash
+_remember
+_resolve_intent
+_resolve_response
+_route_command
+as_dict
+ask
+clear_history
+execute
+handle
+history
+is_running
+process
+run
+snapshot
+start
+state
+stop
+
+RUNTIME ATTRIBUTES
+_history
+_last_error
+_lock
+_state
+assistant
+assistant_name
+command
+command_router
+commands
+conversation_memory
+core
+device
+device_bridge
+devices
+display_name
+intent
+intent_engine
+intents
+jarmin
+kasif
+maximum_history
+memory
+name
+notification
+notification_router
+notifications
+runtime
+status
+voice
+voice_runtime
+
+MISSING CALLS
+self.runtime.assistant.configure
+self.runtime.voice.configure

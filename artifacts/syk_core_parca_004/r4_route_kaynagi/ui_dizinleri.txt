@@ -1,0 +1,7 @@
+﻿.\artifacts\syk_core_parca_004\r3_ui_kaynagi
+.\build
+.\build\bdist.win-amd64
+.\src\syk_jarmin\ui
+.\src\syk_simulasyon\syk_ui_runtime
+.\src\syk_simulasyon\syk_ui_runtime\static
+.\src\syk_simulasyon\syk_ui_runtime\templates

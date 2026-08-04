@@ -1,0 +1,418 @@
+{
+  "api_routes_kaynagi": {
+    "app_atamalari": [],
+    "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+    "ilgili_importlar": [
+      {
+        "adlar": [
+          {
+            "ad": "router",
+            "takma_ad": "kasif_icon_router"
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "kasif_icon_routes",
+        "satir": 43,
+        "seviye": 1
+      },
+      {
+        "adlar": [
+          {
+            "ad": "router",
+            "takma_ad": "mobile_control_router"
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "mobile_control_routes",
+        "satir": 44,
+        "seviye": 1
+      },
+      {
+        "adlar": [
+          {
+            "ad": "router",
+            "takma_ad": "mobile_device_router"
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "mobile_device_routes",
+        "satir": 45,
+        "seviye": 1
+      },
+      {
+        "adlar": [
+          {
+            "ad": "router",
+            "takma_ad": "mobile_offline_router"
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "mobile_offline_routes",
+        "satir": 46,
+        "seviye": 1
+      },
+      {
+        "adlar": [
+          {
+            "ad": "router",
+            "takma_ad": "mobile_sensor_router"
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "mobile_sensor_routes",
+        "satir": 47,
+        "seviye": 1
+      },
+      {
+        "adlar": [
+          {
+            "ad": "router",
+            "takma_ad": "jarmin_integration_router"
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "syk_jarmin.jarmin_integration_api",
+        "satir": 48,
+        "seviye": 0
+      },
+      {
+        "adlar": [
+          {
+            "ad": "router",
+            "takma_ad": "dtse_attention_router"
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "dtse_attention_routes",
+        "satir": 1073,
+        "seviye": 1
+      },
+      {
+        "adlar": [
+          {
+            "ad": "router",
+            "takma_ad": "goruntu_dtse_router"
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "goruntu_dtse_routes",
+        "satir": 1081,
+        "seviye": 1
+      },
+      {
+        "adlar": [
+          {
+            "ad": "router",
+            "takma_ad": "media_upload_router"
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "media_upload_routes",
+        "satir": 1088,
+        "seviye": 1
+      },
+      {
+        "adlar": [
+          {
+            "ad": "router",
+            "takma_ad": "adaptive_environment_router"
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "adaptive_environment_routes",
+        "satir": 1095,
+        "seviye": 1
+      },
+      {
+        "adlar": [
+          {
+            "ad": "router",
+            "takma_ad": "theme_router"
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "theme_api",
+        "satir": 1102,
+        "seviye": 1
+      }
+    ],
+    "include_routerlar": [
+      {
+        "cagri": "router.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "router.include_router(dtse_attention_router)",
+        "router": "dtse_attention_router",
+        "satir": 1077
+      },
+      {
+        "cagri": "router.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "router.include_router(goruntu_dtse_router)",
+        "router": "goruntu_dtse_router",
+        "satir": 1085
+      },
+      {
+        "cagri": "router.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "router.include_router(media_upload_router)",
+        "router": "media_upload_router",
+        "satir": 1092
+      },
+      {
+        "cagri": "router.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "router.include_router(adaptive_environment_router)",
+        "router": "adaptive_environment_router",
+        "satir": 1099
+      },
+      {
+        "cagri": "router.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "router.include_router(theme_router)",
+        "router": "theme_router",
+        "satir": 1106
+      },
+      {
+        "cagri": "router.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "router.include_router(kasif_icon_router)",
+        "router": "kasif_icon_router",
+        "satir": 1110
+      },
+      {
+        "cagri": "router.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "router.include_router(mobile_control_router)",
+        "router": "mobile_control_router",
+        "satir": 1114
+      },
+      {
+        "cagri": "router.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "router.include_router(mobile_device_router)",
+        "router": "mobile_device_router",
+        "satir": 1118
+      },
+      {
+        "cagri": "router.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "router.include_router(mobile_offline_router)",
+        "router": "mobile_offline_router",
+        "satir": 1122
+      },
+      {
+        "cagri": "router.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "router.include_router(mobile_sensor_router)",
+        "router": "mobile_sensor_router",
+        "satir": 1126
+      },
+      {
+        "cagri": "router.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "router.include_router(jarmin_integration_router)",
+        "router": "jarmin_integration_router",
+        "satir": 1130
+      }
+    ],
+    "sha256": "2b2caa8bdc3ed7e179cb29be4f440491511d28fb2a71aa4e0816cba84cf54ad5"
+  },
+  "finans_routes_kaynagi": {
+    "app_atamalari": [],
+    "dosya": "src/syk_simulasyon/syk_ui_runtime/syfinans_runtime_routes.py",
+    "ilgili_importlar": [],
+    "include_routerlar": [],
+    "sha256": "1a53f7e17473bfb7aecdd09f62eb40e4d2c4b0e61a32258cacf60a8df566fbd0"
+  },
+  "rapor_sha256": "3e84995772e108b8faf259833d2dcdcbc3053acfc18c2f5ec7e9f62010c8b790",
+  "runtime": {
+    "api_modul_dosyasi": "D:\\sykasif_repo\\sykasif\\src\\syk_simulasyon\\syk_ui_runtime\\api_routes.py",
+    "app_id": 2530756727136,
+    "app_turu": "fastapi.applications.FastAPI",
+    "app_yol_sayisi": 19,
+    "app_yollari": [
+      "/cikis",
+      "/docs",
+      "/docs/oauth2-redirect",
+      "/giris",
+      "/openapi.json",
+      "/redoc",
+      "/runtime/cihaz-iptal",
+      "/runtime/csv",
+      "/runtime/health",
+      "/runtime/html",
+      "/runtime/ilk-kurulum",
+      "/runtime/json",
+      "/runtime/markdown",
+      "/runtime/oturum",
+      "/runtime/xml",
+      "/runtime/yaml",
+      "/syk-ui",
+      "/terminal",
+      "/ws/runtime"
+    ],
+    "finans_modul_dosyasi": "D:\\sykasif_repo\\sykasif\\src\\syk_simulasyon\\syk_ui_runtime\\syfinans_runtime_routes.py",
+    "finans_router_id": 2530756339888,
+    "finans_router_yol_sayisi": 5,
+    "finans_router_yollari": [
+      "/syfinans/alarmlar",
+      "/syfinans/cihaz-profilleri",
+      "/syfinans/kaynaklar",
+      "/syfinans/runtime",
+      "/syfinans/sekmeler/{sekme}"
+    ],
+    "sunucu_modul_dosyasi": "D:\\sykasif_repo\\sykasif\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+    "syk_ui_router_id": 2530731388688,
+    "syk_ui_router_yol_sayisi": 36,
+    "syk_ui_router_yollari": [
+      "/api/syk-ui/device-hub",
+      "/api/syk-ui/device-hub/refresh",
+      "/api/syk-ui/device-hub/register",
+      "/api/syk-ui/device-hub/{device_id}",
+      "/api/syk-ui/device-hub/{device_id}/connection",
+      "/api/syk-ui/device-hub/{device_id}/recording-ingest",
+      "/api/syk-ui/device-hub/{device_id}/telemetry",
+      "/api/syk-ui/device-sessions",
+      "/api/syk-ui/device-sessions/start",
+      "/api/syk-ui/device-sessions/{session_id}",
+      "/api/syk-ui/device-sessions/{session_id}/analysis",
+      "/api/syk-ui/device-sessions/{session_id}/analysis/verify",
+      "/api/syk-ui/device-sessions/{session_id}/evidence",
+      "/api/syk-ui/device-sessions/{session_id}/evidence/verify",
+      "/api/syk-ui/device-sessions/{session_id}/package",
+      "/api/syk-ui/device-sessions/{session_id}/package/verify",
+      "/api/syk-ui/device-sessions/{session_id}/samples",
+      "/api/syk-ui/device-sessions/{session_id}/seal",
+      "/api/syk-ui/device-sessions/{session_id}/seal/verify",
+      "/api/syk-ui/device-sessions/{session_id}/stop",
+      "/api/syk-ui/device-sessions/{session_id}/syframe",
+      "/api/syk-ui/live",
+      "/api/syk-ui/runtime-state",
+      "/api/syk-ui/scientific-adapters",
+      "/api/syk-ui/scientific-adapters/{adapter_id}/modules/{module_id}/ingest",
+      "/api/syk-ui/scientific-devices/ble/discover",
+      "/api/syk-ui/scientific-devices/ble/read",
+      "/api/syk-ui/scientific-devices/discover",
+      "/api/syk-ui/scientific-devices/serial",
+      "/api/syk-ui/scientific-devices/serial/read",
+      "/api/syk-ui/scientific-devices/tcp/read",
+      "/api/syk-ui/scientific-devices/transports",
+      "/api/syk-ui/scientific-modules",
+      "/api/syk-ui/scientific-modules/{module_id}",
+      "/api/syk-ui/scientific-modules/{module_id}/live",
+      "/api/syk-ui/syframe/analysis-state"
+    ]
+  },
+  "schema": "syk-router-kapsam-ve-app-kimlik-incelemesi/v1",
+  "sunucu_kaynagi": {
+    "app_atamalari": [
+      {
+        "deger": "_mevcut_uygulamayi_bul",
+        "hedefler": [
+          "app"
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "app = _mevcut_uygulamayi_bul()",
+        "satir": 44
+      }
+    ],
+    "dosya": "src/syk_simulasyon/runtime_ui_sunucusu.py",
+    "ilgili_importlar": [
+      {
+        "adlar": [
+          {
+            "ad": "finans_router",
+            "takma_ad": null
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "syk_ui_runtime.syfinans_runtime_routes",
+        "satir": 7,
+        "seviye": 1
+      },
+      {
+        "adlar": [
+          {
+            "ad": "router",
+            "takma_ad": "syk_ui_router"
+          }
+        ],
+        "kapsam": [
+          "module"
+        ],
+        "modul": "syk_ui_runtime.api_routes",
+        "satir": 8,
+        "seviye": 1
+      }
+    ],
+    "include_routerlar": [
+      {
+        "cagri": "app.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "app.include_router(syk_ui_router)",
+        "router": "syk_ui_router",
+        "satir": 46
+      },
+      {
+        "cagri": "app.include_router",
+        "kapsam": [
+          "module"
+        ],
+        "kaynak": "app.include_router(finans_router)",
+        "router": "finans_router",
+        "satir": 53
+      }
+    ],
+    "sha256": "bf45c514a4636d97e1c3da6ebf9dd4575ab680c8329bb885279768512747c2c6"
+  }
+}

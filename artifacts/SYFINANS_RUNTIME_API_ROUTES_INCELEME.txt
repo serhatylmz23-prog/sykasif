@@ -1,0 +1,319 @@
+SYFİNANS RUNTIME API_ROUTES MİMARİ İNCELEMESİ
+
+HEDEF: src/syk_simulasyon/syk_ui_runtime/api_routes.py
+HEDEF SHA-256: 8458ea01d2e8315bd6197048e6962f3160395569fb97732695f13ba5ac94b1c5
+SATIR SAYISI: 1144
+ROUTER NESNESİ: 1
+FASTAPI NESNESİ: 0
+HTTP YOLU: 39
+FONKSİYON: 39
+SINIF: 13
+
+ROUTER NESNELERİ
+Satır 45 | ['router'] | APIRouter
+
+FASTAPI NESNELERİ
+Bulunamadı.
+
+HTTP YOLLARI
+Satır 116 | GET | /runtime-state | get_runtime_state
+Satır 133 | WEBSOCKET | /live | live_runtime
+Satır 148 | GET | /scientific-modules | get_scientific_modules
+Satır 153 | GET | /scientific-modules/{module_id} | get_scientific_module
+Satır 172 | PATCH | /scientific-modules/{module_id} | update_scientific_module
+Satır 196 | WEBSOCKET | /scientific-modules/{module_id}/live | scientific_module_live
+Satır 234 | GET | /scientific-adapters | get_scientific_adapters
+Satır 242 | POST | /scientific-adapters/{adapter_id}/modules/{module_id}/ingest | ingest_scientific_adapter_data
+Satır 285 | GET | /scientific-devices/serial | discover_serial_devices
+Satır 299 | POST | /scientific-devices/serial/read | read_serial_device
+Satır 340 | POST | /scientific-devices/tcp/read | read_tcp_device
+Satır 385 | POST | /scientific-devices/ble/discover | discover_ble_devices
+Satır 403 | POST | /scientific-devices/ble/read | read_ble_device
+Satır 440 | GET | /scientific-devices/transports | get_scientific_device_transports
+Satır 445 | POST | /scientific-devices/discover | discover_all_scientific_devices
+Satır 473 | GET | /device-hub | get_device_hub
+Satır 483 | POST | /device-hub/refresh | refresh_device_hub
+Satır 492 | POST | /device-hub/register | register_device_hub_device
+Satır 515 | GET | /device-hub/{device_id} | get_device_hub_device
+Satır 535 | PATCH | /device-hub/{device_id}/connection | update_device_hub_connection
+Satır 557 | PATCH | /device-hub/{device_id}/telemetry | update_device_hub_telemetry
+Satır 591 | GET | /device-sessions | get_device_sessions
+Satır 596 | POST | /device-sessions/start | start_device_session
+Satır 624 | GET | /device-sessions/{session_id} | get_device_session
+Satır 644 | POST | /device-sessions/{session_id}/samples | append_device_session_samples
+Satır 674 | POST | /device-sessions/{session_id}/stop | stop_device_session
+Satır 705 | POST | /device-sessions/{session_id}/evidence | append_device_session_evidence
+Satır 751 | GET | /device-sessions/{session_id}/evidence | get_device_session_evidence
+Satır 775 | GET | /device-sessions/{session_id}/evidence/verify | verify_device_session_evidence
+Satır 802 | POST | /device-hub/{device_id}/recording-ingest | ingest_device_recording_packet
+Satır 814 | POST | /device-sessions/{session_id}/package | build_device_session_package
+Satır 862 | GET | /device-sessions/{session_id}/package/verify | verify_device_session_package
+Satır 890 | POST | /device-sessions/{session_id}/seal | seal_device_session_package
+Satır 949 | GET | /device-sessions/{session_id}/seal/verify | verify_device_session_seal
+Satır 977 | POST | /device-sessions/{session_id}/analysis | analyze_device_session
+Satır 1005 | GET | /device-sessions/{session_id}/analysis | get_device_session_analysis
+Satır 1025 | GET | /device-sessions/{session_id}/analysis/verify | verify_device_session_analysis
+Satır 1035 | POST | /device-sessions/{session_id}/syframe | apply_device_analysis_to_syframe
+Satır 1064 | GET | /syframe/analysis-state | get_analysis_syframe_state
+
+FONKSİYONLAR
+Satır 116 | get_runtime_state | dekoratör=['router.get']
+Satır 133 | live_runtime | dekoratör=['router.websocket']
+Satır 148 | get_scientific_modules | dekoratör=['router.get']
+Satır 153 | get_scientific_module | dekoratör=['router.get']
+Satır 172 | update_scientific_module | dekoratör=['router.patch']
+Satır 196 | scientific_module_live | dekoratör=['router.websocket']
+Satır 234 | get_scientific_adapters | dekoratör=['router.get']
+Satır 242 | ingest_scientific_adapter_data | dekoratör=['router.post']
+Satır 285 | discover_serial_devices | dekoratör=['router.get']
+Satır 299 | read_serial_device | dekoratör=['router.post']
+Satır 340 | read_tcp_device | dekoratör=['router.post']
+Satır 385 | discover_ble_devices | dekoratör=['router.post']
+Satır 403 | read_ble_device | dekoratör=['router.post']
+Satır 440 | get_scientific_device_transports | dekoratör=['router.get']
+Satır 445 | discover_all_scientific_devices | dekoratör=['router.post']
+Satır 473 | get_device_hub | dekoratör=['router.get']
+Satır 483 | refresh_device_hub | dekoratör=['router.post']
+Satır 492 | register_device_hub_device | dekoratör=['router.post']
+Satır 515 | get_device_hub_device | dekoratör=['router.get']
+Satır 535 | update_device_hub_connection | dekoratör=['router.patch']
+Satır 557 | update_device_hub_telemetry | dekoratör=['router.patch']
+Satır 591 | get_device_sessions | dekoratör=['router.get']
+Satır 596 | start_device_session | dekoratör=['router.post']
+Satır 624 | get_device_session | dekoratör=['router.get']
+Satır 644 | append_device_session_samples | dekoratör=['router.post']
+Satır 674 | stop_device_session | dekoratör=['router.post']
+Satır 705 | append_device_session_evidence | dekoratör=['router.post']
+Satır 751 | get_device_session_evidence | dekoratör=['router.get']
+Satır 775 | verify_device_session_evidence | dekoratör=['router.get']
+Satır 802 | ingest_device_recording_packet | dekoratör=['router.post']
+Satır 814 | build_device_session_package | dekoratör=['router.post']
+Satır 862 | verify_device_session_package | dekoratör=['router.get']
+Satır 890 | seal_device_session_package | dekoratör=['router.post']
+Satır 949 | verify_device_session_seal | dekoratör=['router.get']
+Satır 977 | analyze_device_session | dekoratör=['router.post']
+Satır 1005 | get_device_session_analysis | dekoratör=['router.get']
+Satır 1025 | verify_device_session_analysis | dekoratör=['router.get']
+Satır 1035 | apply_device_analysis_to_syframe | dekoratör=['router.post']
+Satır 1064 | get_analysis_syframe_state | dekoratör=['router.get']
+
+KARDEŞ RUNTIME DOSYALARI
+src/syk_simulasyon/syk_ui_runtime/adaptive_environment.py
+src/syk_simulasyon/syk_ui_runtime/adaptive_environment_routes.py
+src/syk_simulasyon/syk_ui_runtime/adaptive_theme.py
+src/syk_simulasyon/syk_ui_runtime/api_routes.py
+src/syk_simulasyon/syk_ui_runtime/asset_manager.py
+src/syk_simulasyon/syk_ui_runtime/audio_manager.py
+src/syk_simulasyon/syk_ui_runtime/brand_title_manager.py
+src/syk_simulasyon/syk_ui_runtime/dtse_attention_engine.py
+src/syk_simulasyon/syk_ui_runtime/dtse_attention_routes.py
+src/syk_simulasyon/syk_ui_runtime/environment.py
+src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_adapter.py
+src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_kanit_zinciri.py
+src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_routes.py
+src/syk_simulasyon/syk_ui_runtime/icon_manager.py
+src/syk_simulasyon/syk_ui_runtime/image_manager.py
+src/syk_simulasyon/syk_ui_runtime/integration.py
+src/syk_simulasyon/syk_ui_runtime/kasif_icon_registry.py
+src/syk_simulasyon/syk_ui_runtime/kasif_icon_routes.py
+src/syk_simulasyon/syk_ui_runtime/live_environment_provider.py
+src/syk_simulasyon/syk_ui_runtime/media_annotation.py
+src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py
+src/syk_simulasyon/syk_ui_runtime/media_upload_service.py
+src/syk_simulasyon/syk_ui_runtime/mobile_control_routes.py
+src/syk_simulasyon/syk_ui_runtime/mobile_control_runtime.py
+src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py
+src/syk_simulasyon/syk_ui_runtime/mobile_device_runtime.py
+src/syk_simulasyon/syk_ui_runtime/mobile_offline_routes.py
+src/syk_simulasyon/syk_ui_runtime/mobile_offline_runtime.py
+src/syk_simulasyon/syk_ui_runtime/mobile_sensor_routes.py
+src/syk_simulasyon/syk_ui_runtime/mobile_sensor_runtime.py
+src/syk_simulasyon/syk_ui_runtime/module_registry.py
+src/syk_simulasyon/syk_ui_runtime/runtime_manager.py
+src/syk_simulasyon/syk_ui_runtime/runtime_theme.py
+src/syk_simulasyon/syk_ui_runtime/scientific_adapter.py
+src/syk_simulasyon/syk_ui_runtime/scientific_analysis_syframe.py
+src/syk_simulasyon/syk_ui_runtime/scientific_device_analysis.py
+src/syk_simulasyon/syk_ui_runtime/scientific_device_evidence.py
+src/syk_simulasyon/syk_ui_runtime/scientific_device_evidence_package.py
+src/syk_simulasyon/syk_ui_runtime/scientific_device_hub.py
+src/syk_simulasyon/syk_ui_runtime/scientific_device_manager.py
+src/syk_simulasyon/syk_ui_runtime/scientific_device_package_seal.py
+src/syk_simulasyon/syk_ui_runtime/scientific_device_recording_pipeline.py
+src/syk_simulasyon/syk_ui_runtime/scientific_device_session.py
+src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py
+src/syk_simulasyon/syk_ui_runtime/scientific_transport.py
+src/syk_simulasyon/syk_ui_runtime/screen_routes.py
+src/syk_simulasyon/syk_ui_runtime/sealed_report.py
+src/syk_simulasyon/syk_ui_runtime/static_routes.py
+src/syk_simulasyon/syk_ui_runtime/syframe_manager.py
+src/syk_simulasyon/syk_ui_runtime/theme_api.py
+src/syk_simulasyon/syk_ui_runtime/theme_engine.py
+src/syk_simulasyon/syk_ui_runtime/theme_manager.py
+src/syk_simulasyon/syk_ui_runtime/theme_registry.py
+src/syk_simulasyon/syk_ui_runtime/typography.py
+src/syk_simulasyon/syk_ui_runtime/ui_runtime_state.py
+
+İLGİLİ KAYNAK SATIRLARI
+   5 | from fastapi import APIRouter, WebSocket, WebSocketDisconnect
+  41 | from .scientific_runtime import ScientificRuntime
+  42 | from .ui_runtime_state import UIRuntimeState
+  45 | router = APIRouter(
+  50 | runtime_state = UIRuntimeState()
+  51 | scientific_runtime = ScientificRuntime()
+  57 |     scientific_runtime
+ 115 | @router.get("/runtime-state")
+ 116 | def get_runtime_state() -> dict:
+ 117 |     snapshot = runtime_state.snapshot()
+ 132 | @router.websocket("/live")
+ 133 | async def live_runtime(websocket: WebSocket) -> None:
+ 138 |             snapshot = get_runtime_state()
+ 147 | @router.get("/scientific-modules")
+ 149 |     return scientific_runtime.inventory()
+ 152 | @router.get("/scientific-modules/{module_id}")
+ 155 |         return scientific_runtime.get(module_id)
+ 157 |         from fastapi import HTTPException
+ 164 | class ScientificUpdateRequest(BaseModel):
+ 171 | @router.patch("/scientific-modules/{module_id}")
+ 174 |     request: ScientificUpdateRequest,
+ 177 |         return scientific_runtime.update(
+ 179 |             live_value=request.live_value,
+ 180 |             confidence=request.confidence,
+ 181 |             status=request.status,
+ 182 |             source=request.source,
+ 185 |         from fastapi import HTTPException
+ 193 | @router.websocket(
+ 200 |     if not scientific_runtime.exists(module_id):
+ 213 |             payload = scientific_runtime.get(module_id)
+ 225 | class ScientificAdapterIngestRequest(BaseModel):
+ 233 | @router.get("/scientific-adapters")
+ 238 | @router.post(
+ 245 |     request: ScientificAdapterIngestRequest,
+ 248 |         payload = request.model_dump()
+ 262 |         from fastapi import HTTPException
+ 271 |         from fastapi import HTTPException
+ 278 | class SerialReadRequest(BaseModel):
+ 284 | @router.get("/scientific-devices/serial")
+ 290 |         from fastapi import HTTPException
+ 298 | @router.post("/scientific-devices/serial/read")
+ 300 |     request: SerialReadRequest,
+ 304 |             port=request.port,
+ 305 |             baud_rate=request.baud_rate,
+ 306 |             timeout=request.timeout,
+ 315 |         from fastapi import HTTPException
+ 326 |         from fastapi import HTTPException
+ 333 | class TcpReadRequest(BaseModel):
+ 339 | @router.post("/scientific-devices/tcp/read")
+ 341 |     request: TcpReadRequest,
+ 345 |             host=request.host,
+ 346 |             port=request.port,
+ 347 |             timeout=request.timeout,
+ 356 |         from fastapi import HTTPException
+ 367 |         from fastapi import HTTPException
+ 374 | class BleDiscoveryRequest(BaseModel):
+ 378 | class BleReadRequest(BaseModel):
+ 384 | @router.post("/scientific-devices/ble/discover")
+ 386 |     request: BleDiscoveryRequest,
+ 390 |             timeout=request.timeout
+ 394 |         from fastapi import HTTPException
+ 402 | @router.post("/scientific-devices/ble/read")
+ 404 |     request: BleReadRequest,
+ 408 |             address=request.address,
+ 410 |                 request.characteristic_uuid
+ 412 |             timeout=request.timeout,
+ 421 |         from fastapi import HTTPException
+ 432 |         from fastapi import HTTPException
+ 439 | @router.get("/scientific-devices/transports")
+ 444 | @router.post("/scientific-devices/discover")
+ 446 |     request: BleDiscoveryRequest,
+ 449 |         ble_timeout=request.timeout
+ 452 | class DeviceHubRegisterRequest(BaseModel):
+ 461 | class DeviceHubConnectionRequest(BaseModel):
+ 465 | class DeviceHubTelemetryRequest(BaseModel):
+ 472 | @router.get("/device-hub")
+ 482 | @router.post("/device-hub/refresh")
+ 484 |     request: BleDiscoveryRequest,
+ 487 |         ble_timeout=request.timeout
+ 491 | @router.post("/device-hub/register")
+ 493 |     request: DeviceHubRegisterRequest,
+ 497 |             device_id=request.device_id,
+ 498 |             title=request.title,
+ 499 |             transport=request.transport,
+ 500 |             address=request.address,
+ 501 |             module_id=request.module_id,
+ 502 |             metadata=request.metadata,
+ 506 |         from fastapi import HTTPException
+ 514 | @router.get("/device-hub/{device_id}")
+ 524 |         from fastapi import HTTPException
+ 532 | @router.patch(
+ 537 |     request: DeviceHubConnectionRequest,
+ 542 |             connected=request.connected,
+ 546 |         from fastapi import HTTPException
+ 554 | @router.patch(
+ 559 |     request: DeviceHubTelemetryRequest,
+ 564 |             battery=request.battery,
+ 566 |                 request.signal_quality
+ 568 |             firmware=request.firmware,
+ 569 |             module_id=request.module_id,
+ 573 |         from fastapi import HTTPException
+ 580 | class DeviceSessionStartRequest(BaseModel):
+ 586 | class DeviceSessionSampleRequest(BaseModel):
+ 590 | @router.get("/device-sessions")
+ 595 | @router.post("/device-sessions/start")
+ 597 |     request: DeviceSessionStartRequest,
+ 601 |             device_id=request.device_id,
+ 602 |             module_id=request.module_id,
+ 603 |             metadata=request.metadata,
+ 607 |         from fastapi import HTTPException
+ 615 |         from fastapi import HTTPException
+ 623 | @router.get("/device-sessions/{session_id}")
+ 633 |         from fastapi import HTTPException
+ 641 | @router.post(
+ 644 | def append_device_session_samples(
+ 646 |     request: DeviceSessionSampleRequest,
+ 649 |         return scientific_device_sessions.append_sample(
+ 651 |             count=request.count,
+ 655 |         from fastapi import HTTPException
+ 663 |         from fastapi import HTTPException
+ 671 | @router.post(
+ 683 |         from fastapi import HTTPException
+ 691 |         from fastapi import HTTPException
+ 698 | class DeviceEvidenceAppendRequest(BaseModel):
+ 702 | @router.post(
+ 705 | def append_device_session_evidence(
+ 707 |     request: DeviceEvidenceAppendRequest,
+ 715 |             from fastapi import HTTPException
+ 725 |         record = scientific_device_evidence.append(
+ 729 |             payload=request.payload,
+ 732 |         scientific_device_sessions.append_sample(
+ 740 |         from fastapi import HTTPException
+ 748 | @router.get(
+ 764 |         from fastapi import HTTPException
+ 772 | @router.get(
+ 788 |         from fastapi import HTTPException
+ 795 | class DevicePipelineIngestRequest(BaseModel):
+ 799 | @router.post(
+ 804 |     request: DevicePipelineIngestRequest,
+ 808 |         payload=request.payload,
+ 811 | @router.post(
+ 823 |             from fastapi import HTTPException
+ 840 |         from fastapi import HTTPException
+ 851 |         from fastapi import HTTPException
+ 859 | @router.get(
+ 877 |         from fastapi import HTTPException
+ 887 | @router.post(
+ 899 |             from fastapi import HTTPException
+ 927 |         from fastapi import HTTPException
+ 938 |         from fastapi import HTTPException
+ 946 | @router.get(
+ 964 |         from fastapi import HTTPException
+ 974 | @router.post(
+ 986 |         from fastapi import HTTPException
+ 994 |         from fastapi import HTTPException
+1002 | @router.get(
+1014 |         from fastapi import HTTPException
+1022 | @router.get(
+1032 | @router.post(
+1035 | def apply_device_analysis_to_syframe(
+
+RAPOR SHA-256: 72026fe00034d73c61a9e394802aa3cc86ef1fbcff0cb188c6167c3c306e2b9c

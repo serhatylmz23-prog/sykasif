@@ -1,0 +1,37 @@
+﻿# SYK-CORE PARÇA 004 — ORTAK VARLIK MODELİ
+
+Durum: Mühür Adayı
+
+Birleşik akış:
+
+GPS
+→ Kamera / Fotoğraf / Video Karesi
+→ Canlı Tespit
+→ Dinamik Balık ve Bitki Katmanı
+→ DTSE Yüzey Zekâsı
+→ SyFrame Çerçeve ve Açıklama
+→ Ortak Varlık Modeli
+→ GPS Harita Pini
+→ Kümelendirme
+→ Kanıt Referansları
+→ SHA-256 Denetim Zinciri
+→ Manifest
+→ Dinamik Rapor Verisi
+
+Kalıcı öğrenme:
+
+Yeni Kaynak
+→ Kaynak Güven Analizi
+→ Çelişki Tespiti
+→ Etki Analizi
+→ Bilge Kaan Onayı
+→ Kurucu Kaan Uygulaması
+→ Model Sürümü
+→ Geri Alma
+
+Temel güvenlik kuralı:
+
+Sistem araştırır, karşılaştırır ve öneri üretir.
+Kalıcı model değişikliği insan onayı olmadan uygulanmaz.
+%100 kesinlik iddiası üretilmez.
+%99,9 dijital doğrulama yalnız doğrulanmış dijital koşullar için kullanılır.

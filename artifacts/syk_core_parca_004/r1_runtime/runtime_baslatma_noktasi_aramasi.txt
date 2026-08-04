@@ -1,0 +1,185 @@
+﻿.\pyproject.toml:12 [uvicorn] "uvicorn>=0.51,<1",
+.\src\syk_simulasyon\runtime_durumu.py:35 [FastAPI] Sınıf mevcut dış sözleşmeyi korur. Terminal, FastAPI ve olay adaptörleri
+.\src\syk_simulasyon\runtime_fastapi_sunucusu.py:10 [FastAPI] FastAPI,
+.\src\syk_simulasyon\runtime_fastapi_sunucusu.py:76 [FastAPI] def olustur(self) -> FastAPI:
+.\src\syk_simulasyon\runtime_fastapi_sunucusu.py:78 [FastAPI] uygulama = FastAPI(
+.\src\syk_simulasyon\runtime_fastapi_sunucusu.py:1093 [FastAPI] ) -> FastAPI:
+.\src\syk_simulasyon\runtime_fastapi_sunucusu.py:1167 [uvicorn] import uvicorn
+.\src\syk_simulasyon\runtime_fastapi_sunucusu.py:1169 [uvicorn] uvicorn.run(
+.\src\syk_simulasyon\runtime_ui_sunucusu.py:3 [FastAPI] from fastapi import FastAPI
+.\src\syk_simulasyon\runtime_ui_sunucusu.py:7 [FastAPI] def _mevcut_uygulamayi_bul() -> FastAPI:
+.\src\syk_simulasyon\runtime_ui_sunucusu.py:10 [FastAPI] if isinstance(aday, FastAPI):
+.\src\syk_simulasyon\runtime_ui_sunucusu.py:15 [create_app] "create_app",
+.\src\syk_simulasyon\runtime_ui_sunucusu.py:21 [FastAPI] if isinstance(aday, FastAPI):
+.\src\syk_simulasyon\runtime_ui_sunucusu.py:25 [FastAPI] "Mevcut FastAPI uygulamasÄ± veya uygulama fabrikasÄ± bulunamadÄ±."
+.\src\syk_simulasyon\runtime_ui_sunucusu.py:29 [FastAPI] def _ui_kurulu_mu(uygulama: FastAPI) -> bool:
+.\src\syk_simulasyon\runtime_ui_sunucusu.py:35 [syk-ui-screen] "/syk-ui-screen" in yollar
+.\src\syk_simulasyon\runtime_ui_sunucusu.py:40 [app =] app = _mevcut_uygulamayi_bul()
+.\src\syk_simulasyon\syk_ui_runtime\integration.py:1 [FastAPI] from fastapi import FastAPI
+.\src\syk_simulasyon\syk_ui_runtime\integration.py:8 [FastAPI] def install_ui(app: FastAPI) -> FastAPI:
+.\src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:94 [base_url] asset_base_url: str,
+.\src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:106 [base_url] f"{asset_base_url}/"
+.\src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:131 [base_url] asset_base_url: str = (
+.\src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:155 [base_url] self.asset_base_url = (
+.\src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:156 [base_url] asset_base_url.rstrip("/")
+.\src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:590 [base_url] asset_base_url=(
+.\src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:591 [base_url] self.asset_base_url
+.\src\syk_simulasyon\syk_ui_runtime\screen_routes.py:13 [syk-ui-screen] @router.get("/syk-ui-screen", include_in_schema=False)
+.\src\syk_simulasyon_veri_modeli.egg-info\requires.txt:2 [uvicorn] uvicorn<1,>=0.51
+.\tests\test_pyproject_bagimlilik_sozlesmesi.py:23 [uvicorn] deger.startswith("uvicorn>=")
+.\tests\test_runtime_fastapi_core.py:27 [FastAPI] "FASTAPI-001"
+.\tests\test_runtime_fastapi_core.py:38 [FastAPI] "FASTAPI-001"
+.\tests\test_runtime_terminal_playwright_e2e.py:11 [uvicorn] import uvicorn
+.\tests\test_runtime_terminal_playwright_e2e.py:98 [uvicorn] "Uvicorn test sunucusu zamanında hazır olmadı."
+.\tests\test_runtime_terminal_playwright_e2e.py:109 [uvicorn] ayar = uvicorn.Config(
+.\tests\test_runtime_terminal_playwright_e2e.py:119 [uvicorn] sunucu = uvicorn.Server(ayar)
+.\tests\test_runtime_terminal_playwright_e2e.py:124 [uvicorn] name="sykasif-dsp-0009-uvicorn",
+.\tests\test_runtime_terminal_playwright_e2e.py:144 [uvicorn] "Uvicorn test sunucusu kapatılamadı."
+.\tests\test_runtime_ui_sunucusu.py:9 [syk-ui-screen] ekran = client.get("/syk-ui-screen")
+.\tests\test_runtime_ui_sunucusu.py:27 [syk-ui-screen] ilk_ekran = client.get("/syk-ui-screen")
+.\tests\test_runtime_ui_sunucusu.py:28 [syk-ui-screen] ikinci_ekran = client.get("/syk-ui-screen")
+.\tests\test_syfinans_runtime_routes.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_syfinans_runtime_routes.py:12 [app =] app = FastAPI()
+.\tests\test_syfinans_runtime_routes.py:12 [FastAPI] app = FastAPI()
+.\tests\test_ui_adaptive_environment_tarayici.py:15 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_adaptive_environment_tarayici.py:15 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_balik_syframe_modulleri.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_balik_syframe_modulleri.py:8 [app =] app = FastAPI()
+.\tests\test_ui_balik_syframe_modulleri.py:8 [FastAPI] app = FastAPI()
+.\tests\test_ui_balik_syframe_modulleri.py:13 [syk-ui-screen] ekran = client.get("/syk-ui-screen")
+.\tests\test_ui_balik_syframe_tarayici.py:9 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_balik_syframe_tarayici.py:9 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_bilimsel_moduller_tarayici.py:38 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_bilimsel_moduller_tarayici.py:38 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_bilimsel_moduller_toplu.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_bilimsel_moduller_toplu.py:28 [app =] app = FastAPI()
+.\tests\test_ui_bilimsel_moduller_toplu.py:28 [FastAPI] app = FastAPI()
+.\tests\test_ui_bilimsel_moduller_toplu.py:33 [syk-ui-screen] screen = client.get("/syk-ui-screen")
+.\tests\test_ui_canli_tarayici.py:9 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_canli_tarayici.py:9 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_dashboard_canli.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_dashboard_canli.py:8 [app =] app = FastAPI()
+.\tests\test_ui_dashboard_canli.py:8 [FastAPI] app = FastAPI()
+.\tests\test_ui_dashboard_canli.py:13 [syk-ui-screen] screen = client.get("/syk-ui-screen")
+.\tests\test_ui_device_hub_assets.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_device_hub_assets.py:8 [app =] app = FastAPI()
+.\tests\test_ui_device_hub_assets.py:8 [FastAPI] app = FastAPI()
+.\tests\test_ui_device_hub_assets.py:13 [syk-ui-screen] screen = client.get("/syk-ui-screen")
+.\tests\test_ui_device_hub_tarayici.py:11 [base_url] base_url: str,
+.\tests\test_ui_device_hub_tarayici.py:14 [base_url] f"{base_url}/api/syk-ui/device-sessions"
+.\tests\test_ui_device_hub_tarayici.py:26 [base_url] f"{base_url}/api/syk-ui/"
+.\tests\test_ui_device_hub_tarayici.py:35 [base_url] base_url = os.getenv(
+.\tests\test_ui_device_hub_tarayici.py:36 [base_url] "SYK_UI_BASE_URL",
+.\tests\test_ui_device_hub_tarayici.py:37 [8013] "http://127.0.0.1:8013",
+.\tests\test_ui_device_hub_tarayici.py:42 [base_url] f"{base_url}/syk-ui-screen",
+.\tests\test_ui_device_hub_tarayici.py:42 [syk-ui-screen] f"{base_url}/syk-ui-screen",
+.\tests\test_ui_device_hub_tarayici.py:46 [base_url] f"{base_url}/api/syk-ui/device-hub/register",
+.\tests\test_ui_device_hub_tarayici.py:61 [base_url] base_url,
+.\tests\test_ui_device_hub_tarayici.py:66 [base_url] f"{base_url}/api/syk-ui/device-hub/"
+.\tests\test_ui_device_hub_tarayici.py:139 [base_url] f"{base_url}/api/syk-ui/device-sessions"
+.\tests\test_ui_device_hub_tarayici.py:157 [base_url] f"{base_url}/api/syk-ui/"
+.\tests\test_ui_dtse_attention_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_dtse_attention_api.py:10 [app =] app = FastAPI()
+.\tests\test_ui_dtse_attention_api.py:10 [FastAPI] app = FastAPI()
+.\tests\test_ui_dtse_evidence_card_tarayici.py:12 [base_url] base_url = os.getenv(
+.\tests\test_ui_dtse_evidence_card_tarayici.py:13 [base_url] "SYK_UI_BASE_URL",
+.\tests\test_ui_dtse_evidence_card_tarayici.py:14 [8013] "http://127.0.0.1:8013",
+.\tests\test_ui_dtse_evidence_card_tarayici.py:19 [base_url] f"{base_url}/syk-ui-screen",
+.\tests\test_ui_dtse_evidence_card_tarayici.py:19 [syk-ui-screen] f"{base_url}/syk-ui-screen",
+.\tests\test_ui_dtse_evidence_focus_tarayici.py:14 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_dtse_evidence_focus_tarayici.py:14 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py:15 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py:15 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_goruntu_dtse_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_goruntu_dtse_api.py:10 [app =] app = FastAPI()
+.\tests\test_ui_goruntu_dtse_api.py:10 [FastAPI] app = FastAPI()
+.\tests\test_ui_goruntu_dtse_kanit_api.py:3 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_goruntu_dtse_kanit_api.py:12 [app =] app = FastAPI()
+.\tests\test_ui_goruntu_dtse_kanit_api.py:12 [FastAPI] app = FastAPI()
+.\tests\test_ui_kasif_icon_tarayici.py:15 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_kasif_icon_tarayici.py:15 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_live_environment_tarayici.py:15 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_live_environment_tarayici.py:15 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_live_environment_tarayici.py:28 [8013] "http://127.0.0.1:8013"
+.\tests\test_ui_media_upload_preview_tarayici.py:15 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_media_upload_preview_tarayici.py:15 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_media_upload_tarayici.py:15 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_media_upload_tarayici.py:15 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_control_tarayici.py:15 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_control_tarayici.py:15 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_device_runtime_tarayici.py:15 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_device_runtime_tarayici.py:15 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_offline_runtime_tarayici.py:14 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_offline_runtime_tarayici.py:14 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_sensor_runtime_tarayici.py:14 [8013] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_mobile_sensor_runtime_tarayici.py:14 [syk-ui-screen] "http://127.0.0.1:8013/syk-ui-screen",
+.\tests\test_ui_scientific_adapter_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_adapter_api.py:8 [app =] app = FastAPI()
+.\tests\test_ui_scientific_adapter_api.py:8 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_adapter_api.py:56 [app =] app = FastAPI()
+.\tests\test_ui_scientific_adapter_api.py:56 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_analysis_syframe_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_analysis_syframe_api.py:59 [app =] app = FastAPI()
+.\tests\test_ui_scientific_analysis_syframe_api.py:59 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_analysis_syframe_websocket.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_analysis_syframe_websocket.py:50 [app =] app = FastAPI()
+.\tests\test_ui_scientific_analysis_syframe_websocket.py:50 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_api_tarayici.py:7 [base_url] base_url = os.getenv(
+.\tests\test_ui_scientific_api_tarayici.py:8 [base_url] "SYK_UI_BASE_URL",
+.\tests\test_ui_scientific_api_tarayici.py:9 [8013] "http://127.0.0.1:8013",
+.\tests\test_ui_scientific_api_tarayici.py:14 [base_url] f"{base_url}/syk-ui-screen",
+.\tests\test_ui_scientific_api_tarayici.py:14 [syk-ui-screen] f"{base_url}/syk-ui-screen",
+.\tests\test_ui_scientific_api_tarayici.py:19 [base_url] f"{base_url}"
+.\tests\test_ui_scientific_api_tarayici.py:64 [base_url] f"{base_url}"
+.\tests\test_ui_scientific_api_views.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_api_views.py:8 [app =] app = FastAPI()
+.\tests\test_ui_scientific_api_views.py:8 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_api_views.py:13 [syk-ui-screen] screen = client.get("/syk-ui-screen")
+.\tests\test_ui_scientific_ble_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_ble_api.py:59 [app =] app = FastAPI()
+.\tests\test_ui_scientific_ble_api.py:59 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_device_analysis_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_device_analysis_api.py:40 [app =] app = FastAPI()
+.\tests\test_ui_scientific_device_analysis_api.py:40 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_device_evidence_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_device_evidence_api.py:61 [app =] app = FastAPI()
+.\tests\test_ui_scientific_device_evidence_api.py:61 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_device_evidence_package_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_device_evidence_package_api.py:67 [app =] app = FastAPI()
+.\tests\test_ui_scientific_device_evidence_package_api.py:67 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_device_hub_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_device_hub_api.py:86 [app =] app = FastAPI()
+.\tests\test_ui_scientific_device_hub_api.py:86 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_device_manager_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_device_manager_api.py:68 [app =] app = FastAPI()
+.\tests\test_ui_scientific_device_manager_api.py:68 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_device_package_seal_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_device_package_seal_api.py:87 [app =] app = FastAPI()
+.\tests\test_ui_scientific_device_package_seal_api.py:87 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_device_recording_pipeline_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_device_recording_pipeline_api.py:39 [app =] app = FastAPI()
+.\tests\test_ui_scientific_device_recording_pipeline_api.py:39 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_device_session_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_device_session_api.py:62 [app =] app = FastAPI()
+.\tests\test_ui_scientific_device_session_api.py:62 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_runtime_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_runtime_api.py:8 [app =] app = FastAPI()
+.\tests\test_ui_scientific_runtime_api.py:8 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_runtime_live.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_runtime_live.py:8 [app =] app = FastAPI()
+.\tests\test_ui_scientific_runtime_live.py:8 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_runtime_live.py:46 [app =] app = FastAPI()
+.\tests\test_ui_scientific_runtime_live.py:46 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_serial_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_serial_api.py:52 [app =] app = FastAPI()
+.\tests\test_ui_scientific_serial_api.py:52 [FastAPI] app = FastAPI()
+.\tests\test_ui_scientific_tcp_api.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_scientific_tcp_api.py:39 [app =] app = FastAPI()
+.\tests\test_ui_scientific_tcp_api.py:39 [FastAPI] app = FastAPI()
+.\tests\test_ui_static_routes.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_static_routes.py:7 [app =] app = FastAPI()
+.\tests\test_ui_static_routes.py:7 [FastAPI] app = FastAPI()
+.\tests\test_ui_toplu_entegrasyon.py:1 [FastAPI] from fastapi import FastAPI
+.\tests\test_ui_toplu_entegrasyon.py:8 [app =] app = FastAPI()
+.\tests\test_ui_toplu_entegrasyon.py:8 [FastAPI] app = FastAPI()
+.\tests\test_ui_toplu_entegrasyon.py:13 [syk-ui-screen] screen = client.get("/syk-ui-screen")

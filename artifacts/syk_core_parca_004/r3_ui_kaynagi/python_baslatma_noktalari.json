@@ -1,0 +1,50 @@
+﻿[
+    {
+        "Dosya":  ".\\artifacts\\syfinans_prototip_kapanis_mimari_inceleme.py",
+        "Satir":  226,
+        "Arama":  "StaticFiles",
+        "Metin":  "(\"StaticFiles\", 4),"
+    },
+    {
+        "Dosya":  ".\\artifacts\\syfinans_runtime_api_routes_inceleme.py",
+        "Satir":  370,
+        "Arama":  "StaticFiles",
+        "Metin":  "\"StaticFiles\","
+    },
+    {
+        "Dosya":  ".\\build\\lib\\syk_simulasyon\\runtime_fastapi_sunucusu.py",
+        "Satir":  209,
+        "Arama":  "if __name__ ==",
+        "Metin":  "if __name__ == \"__main__\":"
+    },
+    {
+        "Dosya":  ".\\scripts\\generate_ui_audio_assets.py",
+        "Satir":  52,
+        "Arama":  "def main(",
+        "Metin":  "def main() -\u003e None:"
+    },
+    {
+        "Dosya":  ".\\scripts\\generate_ui_audio_assets.py",
+        "Satir":  66,
+        "Arama":  "if __name__ ==",
+        "Metin":  "if __name__ == \"__main__\":"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\runtime_fastapi_sunucusu.py",
+        "Satir":  1165,
+        "Arama":  "if __name__ ==",
+        "Metin":  "if __name__ == \"__main__\":"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\static_routes.py",
+        "Satir":  9,
+        "Arama":  "StaticFiles",
+        "Metin":  "from fastapi.staticfiles import StaticFiles"
+    },
+    {
+        "Dosya":  ".\\src\\syk_simulasyon\\syk_ui_runtime\\static_routes.py",
+        "Satir":  22,
+        "Arama":  "StaticFiles",
+        "Metin":  "StaticFiles(directory=STATIC),"
+    }
+]

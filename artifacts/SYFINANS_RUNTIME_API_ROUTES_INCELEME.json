@@ -1,0 +1,2662 @@
+{
+  "atamalar": [
+    {
+      "cagri": "APIRouter",
+      "deger": null,
+      "hedefler": [
+        "router"
+      ],
+      "satir": 45
+    },
+    {
+      "cagri": "UIRuntimeState",
+      "deger": null,
+      "hedefler": [
+        "runtime_state"
+      ],
+      "satir": 50
+    },
+    {
+      "cagri": "ScientificRuntime",
+      "deger": null,
+      "hedefler": [
+        "scientific_runtime"
+      ],
+      "satir": 51
+    },
+    {
+      "cagri": "BleScientificTransport",
+      "deger": null,
+      "hedefler": [
+        "ble_transport"
+      ],
+      "satir": 52
+    },
+    {
+      "cagri": "SerialScientificTransport",
+      "deger": null,
+      "hedefler": [
+        "serial_transport"
+      ],
+      "satir": 53
+    },
+    {
+      "cagri": "TcpScientificTransport",
+      "deger": null,
+      "hedefler": [
+        "tcp_transport"
+      ],
+      "satir": 54
+    },
+    {
+      "cagri": "ScientificAdapterRegistry",
+      "deger": null,
+      "hedefler": [
+        "scientific_adapters"
+      ],
+      "satir": 56
+    },
+    {
+      "cagri": "ScientificDeviceManager",
+      "deger": null,
+      "hedefler": [
+        "scientific_device_manager"
+      ],
+      "satir": 60
+    },
+    {
+      "cagri": "ScientificDeviceHub",
+      "deger": null,
+      "hedefler": [
+        "scientific_device_hub"
+      ],
+      "satir": 67
+    },
+    {
+      "cagri": "DeviceEvidenceStore",
+      "deger": null,
+      "hedefler": [
+        "scientific_device_evidence"
+      ],
+      "satir": 71
+    },
+    {
+      "cagri": "DeviceEvidencePackageBuilder",
+      "deger": null,
+      "hedefler": [
+        "scientific_device_package_builder"
+      ],
+      "satir": 73
+    },
+    {
+      "cagri": "DeviceEvidencePackageSeal",
+      "deger": null,
+      "hedefler": [
+        "scientific_device_package_seal"
+      ],
+      "satir": 79
+    },
+    {
+      "cagri": "ScientificDeviceSessionManager",
+      "deger": null,
+      "hedefler": [
+        "scientific_device_sessions"
+      ],
+      "satir": 85
+    },
+    {
+      "cagri": "ScientificDeviceRecordingPipeline",
+      "deger": null,
+      "hedefler": [
+        "scientific_device_recording_pipeline"
+      ],
+      "satir": 91
+    },
+    {
+      "cagri": "ScientificDeviceAnalysisEngine",
+      "deger": null,
+      "hedefler": [
+        "scientific_device_analysis"
+      ],
+      "satir": 98
+    },
+    {
+      "cagri": "SyFrameManager",
+      "deger": null,
+      "hedefler": [
+        "scientific_analysis_syframe_manager"
+      ],
+      "satir": 105
+    },
+    {
+      "cagri": "ScientificAnalysisSyFrameBridge",
+      "deger": null,
+      "hedefler": [
+        "scientific_analysis_syframe"
+      ],
+      "satir": 107
+    },
+    {
+      "cagri": "runtime_state.snapshot",
+      "deger": null,
+      "hedefler": [
+        "snapshot"
+      ],
+      "satir": 117
+    },
+    {
+      "cagri": "",
+      "deger": null,
+      "hedefler": [
+        ""
+      ],
+      "satir": 118
+    },
+    {
+      "cagri": "scientific_analysis_syframe.snapshot",
+      "deger": null,
+      "hedefler": [
+        ""
+      ],
+      "satir": 126
+    },
+    {
+      "cagri": "",
+      "deger": -1,
+      "hedefler": [
+        "last_sequence"
+      ],
+      "satir": 210
+    },
+    {
+      "cagri": "request.model_dump",
+      "deger": null,
+      "hedefler": [
+        "payload"
+      ],
+      "satir": 248
+    },
+    {
+      "cagri": "serial_transport.read_packet",
+      "deger": null,
+      "hedefler": [
+        "packet"
+      ],
+      "satir": 303
+    },
+    {
+      "cagri": "tcp_transport.read_packet",
+      "deger": null,
+      "hedefler": [
+        "packet"
+      ],
+      "satir": 344
+    },
+    {
+      "cagri": "",
+      "deger": null,
+      "hedefler": [
+        "packet"
+      ],
+      "satir": 407
+    },
+    {
+      "cagri": "scientific_device_sessions.get",
+      "deger": null,
+      "hedefler": [
+        "session"
+      ],
+      "satir": 710
+    },
+    {
+      "cagri": "scientific_device_evidence.append",
+      "deger": null,
+      "hedefler": [
+        "record"
+      ],
+      "satir": 725
+    },
+    {
+      "cagri": "scientific_device_sessions.get",
+      "deger": null,
+      "hedefler": [
+        "session"
+      ],
+      "satir": 818
+    },
+    {
+      "cagri": "scientific_device_sessions.get",
+      "deger": null,
+      "hedefler": [
+        "session"
+      ],
+      "satir": 894
+    },
+    {
+      "cagri": "scientific_device_package_builder.verify",
+      "deger": null,
+      "hedefler": [
+        "package_verification"
+      ],
+      "satir": 909
+    },
+    {
+      "cagri": "get_runtime_state",
+      "deger": null,
+      "hedefler": [
+        "snapshot"
+      ],
+      "satir": 138
+    },
+    {
+      "cagri": "",
+      "deger": "live",
+      "hedefler": [
+        ""
+      ],
+      "satir": 139
+    },
+    {
+      "cagri": "scientific_runtime.get",
+      "deger": null,
+      "hedefler": [
+        "payload"
+      ],
+      "satir": 213
+    },
+    {
+      "cagri": "",
+      "deger": null,
+      "hedefler": [
+        "sequence"
+      ],
+      "satir": 214
+    },
+    {
+      "cagri": "",
+      "deger": null,
+      "hedefler": [
+        ""
+      ],
+      "satir": 251
+    },
+    {
+      "cagri": "",
+      "deger": null,
+      "hedefler": [
+        "last_sequence"
+      ],
+      "satir": 218
+    }
+  ],
+  "fonksiyonlar": [
+    {
+      "ad": "get_runtime_state",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [],
+      "satir": 116
+    },
+    {
+      "ad": "live_runtime",
+      "asenkron": true,
+      "dekoratorler": [
+        "router.websocket"
+      ],
+      "parametreler": [
+        "websocket"
+      ],
+      "satir": 133
+    },
+    {
+      "ad": "get_scientific_modules",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [],
+      "satir": 148
+    },
+    {
+      "ad": "get_scientific_module",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [
+        "module_id"
+      ],
+      "satir": 153
+    },
+    {
+      "ad": "update_scientific_module",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.patch"
+      ],
+      "parametreler": [
+        "module_id",
+        "request"
+      ],
+      "satir": 172
+    },
+    {
+      "ad": "scientific_module_live",
+      "asenkron": true,
+      "dekoratorler": [
+        "router.websocket"
+      ],
+      "parametreler": [
+        "websocket",
+        "module_id"
+      ],
+      "satir": 196
+    },
+    {
+      "ad": "get_scientific_adapters",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [],
+      "satir": 234
+    },
+    {
+      "ad": "ingest_scientific_adapter_data",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "adapter_id",
+        "module_id",
+        "request"
+      ],
+      "satir": 242
+    },
+    {
+      "ad": "discover_serial_devices",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [],
+      "satir": 285
+    },
+    {
+      "ad": "read_serial_device",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "request"
+      ],
+      "satir": 299
+    },
+    {
+      "ad": "read_tcp_device",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "request"
+      ],
+      "satir": 340
+    },
+    {
+      "ad": "discover_ble_devices",
+      "asenkron": true,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "request"
+      ],
+      "satir": 385
+    },
+    {
+      "ad": "read_ble_device",
+      "asenkron": true,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "request"
+      ],
+      "satir": 403
+    },
+    {
+      "ad": "get_scientific_device_transports",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [],
+      "satir": 440
+    },
+    {
+      "ad": "discover_all_scientific_devices",
+      "asenkron": true,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "request"
+      ],
+      "satir": 445
+    },
+    {
+      "ad": "get_device_hub",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [],
+      "satir": 473
+    },
+    {
+      "ad": "refresh_device_hub",
+      "asenkron": true,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "request"
+      ],
+      "satir": 483
+    },
+    {
+      "ad": "register_device_hub_device",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "request"
+      ],
+      "satir": 492
+    },
+    {
+      "ad": "get_device_hub_device",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [
+        "device_id"
+      ],
+      "satir": 515
+    },
+    {
+      "ad": "update_device_hub_connection",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.patch"
+      ],
+      "parametreler": [
+        "device_id",
+        "request"
+      ],
+      "satir": 535
+    },
+    {
+      "ad": "update_device_hub_telemetry",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.patch"
+      ],
+      "parametreler": [
+        "device_id",
+        "request"
+      ],
+      "satir": 557
+    },
+    {
+      "ad": "get_device_sessions",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [],
+      "satir": 591
+    },
+    {
+      "ad": "start_device_session",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "request"
+      ],
+      "satir": 596
+    },
+    {
+      "ad": "get_device_session",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [
+        "session_id"
+      ],
+      "satir": 624
+    },
+    {
+      "ad": "append_device_session_samples",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "session_id",
+        "request"
+      ],
+      "satir": 644
+    },
+    {
+      "ad": "stop_device_session",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "session_id"
+      ],
+      "satir": 674
+    },
+    {
+      "ad": "append_device_session_evidence",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "session_id",
+        "request"
+      ],
+      "satir": 705
+    },
+    {
+      "ad": "get_device_session_evidence",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [
+        "session_id"
+      ],
+      "satir": 751
+    },
+    {
+      "ad": "verify_device_session_evidence",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [
+        "session_id"
+      ],
+      "satir": 775
+    },
+    {
+      "ad": "ingest_device_recording_packet",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "device_id",
+        "request"
+      ],
+      "satir": 802
+    },
+    {
+      "ad": "build_device_session_package",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "session_id"
+      ],
+      "satir": 814
+    },
+    {
+      "ad": "verify_device_session_package",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [
+        "session_id"
+      ],
+      "satir": 862
+    },
+    {
+      "ad": "seal_device_session_package",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "session_id"
+      ],
+      "satir": 890
+    },
+    {
+      "ad": "verify_device_session_seal",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [
+        "session_id"
+      ],
+      "satir": 949
+    },
+    {
+      "ad": "analyze_device_session",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "session_id"
+      ],
+      "satir": 977
+    },
+    {
+      "ad": "get_device_session_analysis",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [
+        "session_id"
+      ],
+      "satir": 1005
+    },
+    {
+      "ad": "verify_device_session_analysis",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [
+        "session_id"
+      ],
+      "satir": 1025
+    },
+    {
+      "ad": "apply_device_analysis_to_syframe",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.post"
+      ],
+      "parametreler": [
+        "session_id"
+      ],
+      "satir": 1035
+    },
+    {
+      "ad": "get_analysis_syframe_state",
+      "asenkron": false,
+      "dekoratorler": [
+        "router.get"
+      ],
+      "parametreler": [],
+      "satir": 1064
+    }
+  ],
+  "hedef": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+  "hedef_sha256": "8458ea01d2e8315bd6197048e6962f3160395569fb97732695f13ba5ac94b1c5",
+  "http_yollari": [
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "get_runtime_state",
+      "satir": 116,
+      "yol": "/runtime-state",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.websocket",
+      "fonksiyon": "live_runtime",
+      "satir": 133,
+      "yol": "/live",
+      "yontem": "websocket"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "get_scientific_modules",
+      "satir": 148,
+      "yol": "/scientific-modules",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "get_scientific_module",
+      "satir": 153,
+      "yol": "/scientific-modules/{module_id}",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.patch",
+      "fonksiyon": "update_scientific_module",
+      "satir": 172,
+      "yol": "/scientific-modules/{module_id}",
+      "yontem": "patch"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.websocket",
+      "fonksiyon": "scientific_module_live",
+      "satir": 196,
+      "yol": "/scientific-modules/{module_id}/live",
+      "yontem": "websocket"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "get_scientific_adapters",
+      "satir": 234,
+      "yol": "/scientific-adapters",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "ingest_scientific_adapter_data",
+      "satir": 242,
+      "yol": "/scientific-adapters/{adapter_id}/modules/{module_id}/ingest",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "discover_serial_devices",
+      "satir": 285,
+      "yol": "/scientific-devices/serial",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "read_serial_device",
+      "satir": 299,
+      "yol": "/scientific-devices/serial/read",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "read_tcp_device",
+      "satir": 340,
+      "yol": "/scientific-devices/tcp/read",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "discover_ble_devices",
+      "satir": 385,
+      "yol": "/scientific-devices/ble/discover",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "read_ble_device",
+      "satir": 403,
+      "yol": "/scientific-devices/ble/read",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "get_scientific_device_transports",
+      "satir": 440,
+      "yol": "/scientific-devices/transports",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "discover_all_scientific_devices",
+      "satir": 445,
+      "yol": "/scientific-devices/discover",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "get_device_hub",
+      "satir": 473,
+      "yol": "/device-hub",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "refresh_device_hub",
+      "satir": 483,
+      "yol": "/device-hub/refresh",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "register_device_hub_device",
+      "satir": 492,
+      "yol": "/device-hub/register",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "get_device_hub_device",
+      "satir": 515,
+      "yol": "/device-hub/{device_id}",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.patch",
+      "fonksiyon": "update_device_hub_connection",
+      "satir": 535,
+      "yol": "/device-hub/{device_id}/connection",
+      "yontem": "patch"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.patch",
+      "fonksiyon": "update_device_hub_telemetry",
+      "satir": 557,
+      "yol": "/device-hub/{device_id}/telemetry",
+      "yontem": "patch"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "get_device_sessions",
+      "satir": 591,
+      "yol": "/device-sessions",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "start_device_session",
+      "satir": 596,
+      "yol": "/device-sessions/start",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "get_device_session",
+      "satir": 624,
+      "yol": "/device-sessions/{session_id}",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "append_device_session_samples",
+      "satir": 644,
+      "yol": "/device-sessions/{session_id}/samples",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "stop_device_session",
+      "satir": 674,
+      "yol": "/device-sessions/{session_id}/stop",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "append_device_session_evidence",
+      "satir": 705,
+      "yol": "/device-sessions/{session_id}/evidence",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "get_device_session_evidence",
+      "satir": 751,
+      "yol": "/device-sessions/{session_id}/evidence",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "verify_device_session_evidence",
+      "satir": 775,
+      "yol": "/device-sessions/{session_id}/evidence/verify",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "ingest_device_recording_packet",
+      "satir": 802,
+      "yol": "/device-hub/{device_id}/recording-ingest",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "build_device_session_package",
+      "satir": 814,
+      "yol": "/device-sessions/{session_id}/package",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "verify_device_session_package",
+      "satir": 862,
+      "yol": "/device-sessions/{session_id}/package/verify",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "seal_device_session_package",
+      "satir": 890,
+      "yol": "/device-sessions/{session_id}/seal",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "verify_device_session_seal",
+      "satir": 949,
+      "yol": "/device-sessions/{session_id}/seal/verify",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "analyze_device_session",
+      "satir": 977,
+      "yol": "/device-sessions/{session_id}/analysis",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "get_device_session_analysis",
+      "satir": 1005,
+      "yol": "/device-sessions/{session_id}/analysis",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "verify_device_session_analysis",
+      "satir": 1025,
+      "yol": "/device-sessions/{session_id}/analysis/verify",
+      "yontem": "get"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.post",
+      "fonksiyon": "apply_device_analysis_to_syframe",
+      "satir": 1035,
+      "yol": "/device-sessions/{session_id}/syframe",
+      "yontem": "post"
+    },
+    {
+      "anahtarlar": {},
+      "dekorator": "router.get",
+      "fonksiyon": "get_analysis_syframe_state",
+      "satir": 1064,
+      "yol": "/syframe/analysis-state",
+      "yontem": "get"
+    }
+  ],
+  "ice_aktarmalar": [
+    {
+      "adlar": [
+        "annotations"
+      ],
+      "modul": "__future__",
+      "satir": 1,
+      "tur": "from"
+    },
+    {
+      "moduller": [
+        "asyncio"
+      ],
+      "satir": 3,
+      "tur": "import"
+    },
+    {
+      "adlar": [
+        "APIRouter",
+        "WebSocket",
+        "WebSocketDisconnect"
+      ],
+      "modul": "fastapi",
+      "satir": 5,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "BaseModel"
+      ],
+      "modul": "pydantic",
+      "satir": 6,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "enabled_modules"
+      ],
+      "modul": "module_registry",
+      "satir": 8,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "ScientificAdapterRegistry",
+        "ingest_transport_packet"
+      ],
+      "modul": "scientific_adapter",
+      "satir": 9,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "ScientificTransportError",
+        "BleScientificTransport",
+        "SerialScientificTransport",
+        "TcpScientificTransport"
+      ],
+      "modul": "scientific_transport",
+      "satir": 13,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "ScientificAnalysisSyFrameBridge"
+      ],
+      "modul": "scientific_analysis_syframe",
+      "satir": 19,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "SyFrameManager"
+      ],
+      "modul": "syframe_manager",
+      "satir": 22,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "ScientificDeviceAnalysisEngine"
+      ],
+      "modul": "scientific_device_analysis",
+      "satir": 23,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "DeviceEvidenceStore"
+      ],
+      "modul": "scientific_device_evidence",
+      "satir": 26,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "DeviceEvidencePackageSeal"
+      ],
+      "modul": "scientific_device_package_seal",
+      "satir": 27,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "DeviceEvidencePackageBuilder"
+      ],
+      "modul": "scientific_device_evidence_package",
+      "satir": 30,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "ScientificDeviceHub"
+      ],
+      "modul": "scientific_device_hub",
+      "satir": 33,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "ScientificDeviceManager"
+      ],
+      "modul": "scientific_device_manager",
+      "satir": 34,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "ScientificDeviceRecordingPipeline"
+      ],
+      "modul": "scientific_device_recording_pipeline",
+      "satir": 35,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "ScientificDeviceSessionManager"
+      ],
+      "modul": "scientific_device_session",
+      "satir": 38,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "ScientificRuntime"
+      ],
+      "modul": "scientific_runtime",
+      "satir": 41,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "UIRuntimeState"
+      ],
+      "modul": "ui_runtime_state",
+      "satir": 42,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "router"
+      ],
+      "modul": "dtse_attention_routes",
+      "satir": 1067,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "router"
+      ],
+      "modul": "goruntu_dtse_routes",
+      "satir": 1075,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "router"
+      ],
+      "modul": "media_upload_routes",
+      "satir": 1082,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "router"
+      ],
+      "modul": "adaptive_environment_routes",
+      "satir": 1089,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "router"
+      ],
+      "modul": "theme_api",
+      "satir": 1096,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "router"
+      ],
+      "modul": "syk_jarmin.jarmin_integration_api",
+      "satir": 1103,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "router"
+      ],
+      "modul": "mobile_device_routes",
+      "satir": 1110,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "router"
+      ],
+      "modul": "mobile_sensor_routes",
+      "satir": 1117,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "router"
+      ],
+      "modul": "mobile_offline_routes",
+      "satir": 1124,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "router"
+      ],
+      "modul": "mobile_control_routes",
+      "satir": 1131,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "router"
+      ],
+      "modul": "kasif_icon_routes",
+      "satir": 1138,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 157,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 185,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 262,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 271,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 290,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 315,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 326,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 356,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 367,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 394,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 421,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 432,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 506,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 524,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 546,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 573,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 607,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 615,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 633,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 655,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 663,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 683,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 691,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 715,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 740,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 764,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 788,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 823,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 840,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 851,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 877,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 899,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 927,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 938,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 964,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 986,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 994,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 1014,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 1044,
+      "tur": "from"
+    },
+    {
+      "adlar": [
+        "HTTPException"
+      ],
+      "modul": "fastapi",
+      "satir": 1055,
+      "tur": "from"
+    }
+  ],
+  "ilgili_satirlar": [
+    {
+      "metin": "from fastapi import APIRouter, WebSocket, WebSocketDisconnect",
+      "satir": 5
+    },
+    {
+      "metin": "from .scientific_runtime import ScientificRuntime",
+      "satir": 41
+    },
+    {
+      "metin": "from .ui_runtime_state import UIRuntimeState",
+      "satir": 42
+    },
+    {
+      "metin": "router = APIRouter(",
+      "satir": 45
+    },
+    {
+      "metin": "runtime_state = UIRuntimeState()",
+      "satir": 50
+    },
+    {
+      "metin": "scientific_runtime = ScientificRuntime()",
+      "satir": 51
+    },
+    {
+      "metin": "    scientific_runtime",
+      "satir": 57
+    },
+    {
+      "metin": "@router.get(\"/runtime-state\")",
+      "satir": 115
+    },
+    {
+      "metin": "def get_runtime_state() -> dict:",
+      "satir": 116
+    },
+    {
+      "metin": "    snapshot = runtime_state.snapshot()",
+      "satir": 117
+    },
+    {
+      "metin": "@router.websocket(\"/live\")",
+      "satir": 132
+    },
+    {
+      "metin": "async def live_runtime(websocket: WebSocket) -> None:",
+      "satir": 133
+    },
+    {
+      "metin": "            snapshot = get_runtime_state()",
+      "satir": 138
+    },
+    {
+      "metin": "@router.get(\"/scientific-modules\")",
+      "satir": 147
+    },
+    {
+      "metin": "    return scientific_runtime.inventory()",
+      "satir": 149
+    },
+    {
+      "metin": "@router.get(\"/scientific-modules/{module_id}\")",
+      "satir": 152
+    },
+    {
+      "metin": "        return scientific_runtime.get(module_id)",
+      "satir": 155
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 157
+    },
+    {
+      "metin": "class ScientificUpdateRequest(BaseModel):",
+      "satir": 164
+    },
+    {
+      "metin": "@router.patch(\"/scientific-modules/{module_id}\")",
+      "satir": 171
+    },
+    {
+      "metin": "    request: ScientificUpdateRequest,",
+      "satir": 174
+    },
+    {
+      "metin": "        return scientific_runtime.update(",
+      "satir": 177
+    },
+    {
+      "metin": "            live_value=request.live_value,",
+      "satir": 179
+    },
+    {
+      "metin": "            confidence=request.confidence,",
+      "satir": 180
+    },
+    {
+      "metin": "            status=request.status,",
+      "satir": 181
+    },
+    {
+      "metin": "            source=request.source,",
+      "satir": 182
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 185
+    },
+    {
+      "metin": "@router.websocket(",
+      "satir": 193
+    },
+    {
+      "metin": "    if not scientific_runtime.exists(module_id):",
+      "satir": 200
+    },
+    {
+      "metin": "            payload = scientific_runtime.get(module_id)",
+      "satir": 213
+    },
+    {
+      "metin": "class ScientificAdapterIngestRequest(BaseModel):",
+      "satir": 225
+    },
+    {
+      "metin": "@router.get(\"/scientific-adapters\")",
+      "satir": 233
+    },
+    {
+      "metin": "@router.post(",
+      "satir": 238
+    },
+    {
+      "metin": "    request: ScientificAdapterIngestRequest,",
+      "satir": 245
+    },
+    {
+      "metin": "        payload = request.model_dump()",
+      "satir": 248
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 262
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 271
+    },
+    {
+      "metin": "class SerialReadRequest(BaseModel):",
+      "satir": 278
+    },
+    {
+      "metin": "@router.get(\"/scientific-devices/serial\")",
+      "satir": 284
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 290
+    },
+    {
+      "metin": "@router.post(\"/scientific-devices/serial/read\")",
+      "satir": 298
+    },
+    {
+      "metin": "    request: SerialReadRequest,",
+      "satir": 300
+    },
+    {
+      "metin": "            port=request.port,",
+      "satir": 304
+    },
+    {
+      "metin": "            baud_rate=request.baud_rate,",
+      "satir": 305
+    },
+    {
+      "metin": "            timeout=request.timeout,",
+      "satir": 306
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 315
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 326
+    },
+    {
+      "metin": "class TcpReadRequest(BaseModel):",
+      "satir": 333
+    },
+    {
+      "metin": "@router.post(\"/scientific-devices/tcp/read\")",
+      "satir": 339
+    },
+    {
+      "metin": "    request: TcpReadRequest,",
+      "satir": 341
+    },
+    {
+      "metin": "            host=request.host,",
+      "satir": 345
+    },
+    {
+      "metin": "            port=request.port,",
+      "satir": 346
+    },
+    {
+      "metin": "            timeout=request.timeout,",
+      "satir": 347
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 356
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 367
+    },
+    {
+      "metin": "class BleDiscoveryRequest(BaseModel):",
+      "satir": 374
+    },
+    {
+      "metin": "class BleReadRequest(BaseModel):",
+      "satir": 378
+    },
+    {
+      "metin": "@router.post(\"/scientific-devices/ble/discover\")",
+      "satir": 384
+    },
+    {
+      "metin": "    request: BleDiscoveryRequest,",
+      "satir": 386
+    },
+    {
+      "metin": "            timeout=request.timeout",
+      "satir": 390
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 394
+    },
+    {
+      "metin": "@router.post(\"/scientific-devices/ble/read\")",
+      "satir": 402
+    },
+    {
+      "metin": "    request: BleReadRequest,",
+      "satir": 404
+    },
+    {
+      "metin": "            address=request.address,",
+      "satir": 408
+    },
+    {
+      "metin": "                request.characteristic_uuid",
+      "satir": 410
+    },
+    {
+      "metin": "            timeout=request.timeout,",
+      "satir": 412
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 421
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 432
+    },
+    {
+      "metin": "@router.get(\"/scientific-devices/transports\")",
+      "satir": 439
+    },
+    {
+      "metin": "@router.post(\"/scientific-devices/discover\")",
+      "satir": 444
+    },
+    {
+      "metin": "    request: BleDiscoveryRequest,",
+      "satir": 446
+    },
+    {
+      "metin": "        ble_timeout=request.timeout",
+      "satir": 449
+    },
+    {
+      "metin": "class DeviceHubRegisterRequest(BaseModel):",
+      "satir": 452
+    },
+    {
+      "metin": "class DeviceHubConnectionRequest(BaseModel):",
+      "satir": 461
+    },
+    {
+      "metin": "class DeviceHubTelemetryRequest(BaseModel):",
+      "satir": 465
+    },
+    {
+      "metin": "@router.get(\"/device-hub\")",
+      "satir": 472
+    },
+    {
+      "metin": "@router.post(\"/device-hub/refresh\")",
+      "satir": 482
+    },
+    {
+      "metin": "    request: BleDiscoveryRequest,",
+      "satir": 484
+    },
+    {
+      "metin": "        ble_timeout=request.timeout",
+      "satir": 487
+    },
+    {
+      "metin": "@router.post(\"/device-hub/register\")",
+      "satir": 491
+    },
+    {
+      "metin": "    request: DeviceHubRegisterRequest,",
+      "satir": 493
+    },
+    {
+      "metin": "            device_id=request.device_id,",
+      "satir": 497
+    },
+    {
+      "metin": "            title=request.title,",
+      "satir": 498
+    },
+    {
+      "metin": "            transport=request.transport,",
+      "satir": 499
+    },
+    {
+      "metin": "            address=request.address,",
+      "satir": 500
+    },
+    {
+      "metin": "            module_id=request.module_id,",
+      "satir": 501
+    },
+    {
+      "metin": "            metadata=request.metadata,",
+      "satir": 502
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 506
+    },
+    {
+      "metin": "@router.get(\"/device-hub/{device_id}\")",
+      "satir": 514
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 524
+    },
+    {
+      "metin": "@router.patch(",
+      "satir": 532
+    },
+    {
+      "metin": "    request: DeviceHubConnectionRequest,",
+      "satir": 537
+    },
+    {
+      "metin": "            connected=request.connected,",
+      "satir": 542
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 546
+    },
+    {
+      "metin": "@router.patch(",
+      "satir": 554
+    },
+    {
+      "metin": "    request: DeviceHubTelemetryRequest,",
+      "satir": 559
+    },
+    {
+      "metin": "            battery=request.battery,",
+      "satir": 564
+    },
+    {
+      "metin": "                request.signal_quality",
+      "satir": 566
+    },
+    {
+      "metin": "            firmware=request.firmware,",
+      "satir": 568
+    },
+    {
+      "metin": "            module_id=request.module_id,",
+      "satir": 569
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 573
+    },
+    {
+      "metin": "class DeviceSessionStartRequest(BaseModel):",
+      "satir": 580
+    },
+    {
+      "metin": "class DeviceSessionSampleRequest(BaseModel):",
+      "satir": 586
+    },
+    {
+      "metin": "@router.get(\"/device-sessions\")",
+      "satir": 590
+    },
+    {
+      "metin": "@router.post(\"/device-sessions/start\")",
+      "satir": 595
+    },
+    {
+      "metin": "    request: DeviceSessionStartRequest,",
+      "satir": 597
+    },
+    {
+      "metin": "            device_id=request.device_id,",
+      "satir": 601
+    },
+    {
+      "metin": "            module_id=request.module_id,",
+      "satir": 602
+    },
+    {
+      "metin": "            metadata=request.metadata,",
+      "satir": 603
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 607
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 615
+    },
+    {
+      "metin": "@router.get(\"/device-sessions/{session_id}\")",
+      "satir": 623
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 633
+    },
+    {
+      "metin": "@router.post(",
+      "satir": 641
+    },
+    {
+      "metin": "def append_device_session_samples(",
+      "satir": 644
+    },
+    {
+      "metin": "    request: DeviceSessionSampleRequest,",
+      "satir": 646
+    },
+    {
+      "metin": "        return scientific_device_sessions.append_sample(",
+      "satir": 649
+    },
+    {
+      "metin": "            count=request.count,",
+      "satir": 651
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 655
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 663
+    },
+    {
+      "metin": "@router.post(",
+      "satir": 671
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 683
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 691
+    },
+    {
+      "metin": "class DeviceEvidenceAppendRequest(BaseModel):",
+      "satir": 698
+    },
+    {
+      "metin": "@router.post(",
+      "satir": 702
+    },
+    {
+      "metin": "def append_device_session_evidence(",
+      "satir": 705
+    },
+    {
+      "metin": "    request: DeviceEvidenceAppendRequest,",
+      "satir": 707
+    },
+    {
+      "metin": "            from fastapi import HTTPException",
+      "satir": 715
+    },
+    {
+      "metin": "        record = scientific_device_evidence.append(",
+      "satir": 725
+    },
+    {
+      "metin": "            payload=request.payload,",
+      "satir": 729
+    },
+    {
+      "metin": "        scientific_device_sessions.append_sample(",
+      "satir": 732
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 740
+    },
+    {
+      "metin": "@router.get(",
+      "satir": 748
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 764
+    },
+    {
+      "metin": "@router.get(",
+      "satir": 772
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 788
+    },
+    {
+      "metin": "class DevicePipelineIngestRequest(BaseModel):",
+      "satir": 795
+    },
+    {
+      "metin": "@router.post(",
+      "satir": 799
+    },
+    {
+      "metin": "    request: DevicePipelineIngestRequest,",
+      "satir": 804
+    },
+    {
+      "metin": "        payload=request.payload,",
+      "satir": 808
+    },
+    {
+      "metin": "@router.post(",
+      "satir": 811
+    },
+    {
+      "metin": "            from fastapi import HTTPException",
+      "satir": 823
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 840
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 851
+    },
+    {
+      "metin": "@router.get(",
+      "satir": 859
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 877
+    },
+    {
+      "metin": "@router.post(",
+      "satir": 887
+    },
+    {
+      "metin": "            from fastapi import HTTPException",
+      "satir": 899
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 927
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 938
+    },
+    {
+      "metin": "@router.get(",
+      "satir": 946
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 964
+    },
+    {
+      "metin": "@router.post(",
+      "satir": 974
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 986
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 994
+    },
+    {
+      "metin": "@router.get(",
+      "satir": 1002
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 1014
+    },
+    {
+      "metin": "@router.get(",
+      "satir": 1022
+    },
+    {
+      "metin": "@router.post(",
+      "satir": 1032
+    },
+    {
+      "metin": "def apply_device_analysis_to_syframe(",
+      "satir": 1035
+    },
+    {
+      "metin": "        return scientific_analysis_syframe.apply(",
+      "satir": 1039
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 1044
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 1055
+    },
+    {
+      "metin": "@router.get(\"/syframe/analysis-state\")",
+      "satir": 1063
+    },
+    {
+      "metin": "    router as dtse_attention_router,",
+      "satir": 1068
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1071
+    },
+    {
+      "metin": "    dtse_attention_router",
+      "satir": 1072
+    },
+    {
+      "metin": "    router as goruntu_dtse_router,",
+      "satir": 1076
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1079
+    },
+    {
+      "metin": "    goruntu_dtse_router",
+      "satir": 1080
+    },
+    {
+      "metin": "    router as media_upload_router,",
+      "satir": 1083
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1086
+    },
+    {
+      "metin": "    media_upload_router,",
+      "satir": 1087
+    },
+    {
+      "metin": "    router as adaptive_environment_router,",
+      "satir": 1090
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1093
+    },
+    {
+      "metin": "    adaptive_environment_router,",
+      "satir": 1094
+    },
+    {
+      "metin": "    router as theme_router,",
+      "satir": 1097
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1100
+    },
+    {
+      "metin": "    theme_router,",
+      "satir": 1101
+    },
+    {
+      "metin": "    router as jarmin_integration_router,",
+      "satir": 1104
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1107
+    },
+    {
+      "metin": "    jarmin_integration_router,",
+      "satir": 1108
+    },
+    {
+      "metin": "from .mobile_device_routes import (",
+      "satir": 1110
+    },
+    {
+      "metin": "    router as mobile_device_router,",
+      "satir": 1111
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1114
+    },
+    {
+      "metin": "    mobile_device_router,",
+      "satir": 1115
+    },
+    {
+      "metin": "from .mobile_sensor_routes import (",
+      "satir": 1117
+    },
+    {
+      "metin": "    router as mobile_sensor_router,",
+      "satir": 1118
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1121
+    },
+    {
+      "metin": "    mobile_sensor_router,",
+      "satir": 1122
+    },
+    {
+      "metin": "from .mobile_offline_routes import (",
+      "satir": 1124
+    },
+    {
+      "metin": "    router as mobile_offline_router,",
+      "satir": 1125
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1128
+    },
+    {
+      "metin": "    mobile_offline_router,",
+      "satir": 1129
+    },
+    {
+      "metin": "from .mobile_control_routes import (",
+      "satir": 1131
+    },
+    {
+      "metin": "    router as mobile_control_router,",
+      "satir": 1132
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1135
+    },
+    {
+      "metin": "    mobile_control_router,",
+      "satir": 1136
+    },
+    {
+      "metin": "    router as kasif_icon_router,",
+      "satir": 1139
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1142
+    },
+    {
+      "metin": "    kasif_icon_router,",
+      "satir": 1143
+    }
+  ],
+  "include_router_cagrilari": [
+    {
+      "anahtarlar": {},
+      "argumanlar": [
+        null
+      ],
+      "cagri": "router.include_router",
+      "satir": 1071
+    },
+    {
+      "anahtarlar": {},
+      "argumanlar": [
+        null
+      ],
+      "cagri": "router.include_router",
+      "satir": 1079
+    },
+    {
+      "anahtarlar": {},
+      "argumanlar": [
+        null
+      ],
+      "cagri": "router.include_router",
+      "satir": 1086
+    },
+    {
+      "anahtarlar": {},
+      "argumanlar": [
+        null
+      ],
+      "cagri": "router.include_router",
+      "satir": 1093
+    },
+    {
+      "anahtarlar": {},
+      "argumanlar": [
+        null
+      ],
+      "cagri": "router.include_router",
+      "satir": 1100
+    },
+    {
+      "anahtarlar": {},
+      "argumanlar": [
+        null
+      ],
+      "cagri": "router.include_router",
+      "satir": 1107
+    },
+    {
+      "anahtarlar": {},
+      "argumanlar": [
+        null
+      ],
+      "cagri": "router.include_router",
+      "satir": 1114
+    },
+    {
+      "anahtarlar": {},
+      "argumanlar": [
+        null
+      ],
+      "cagri": "router.include_router",
+      "satir": 1121
+    },
+    {
+      "anahtarlar": {},
+      "argumanlar": [
+        null
+      ],
+      "cagri": "router.include_router",
+      "satir": 1128
+    },
+    {
+      "anahtarlar": {},
+      "argumanlar": [
+        null
+      ],
+      "cagri": "router.include_router",
+      "satir": 1135
+    },
+    {
+      "anahtarlar": {},
+      "argumanlar": [
+        null
+      ],
+      "cagri": "router.include_router",
+      "satir": 1142
+    }
+  ],
+  "init_icerigi": null,
+  "init_var": false,
+  "kardes_dosyalar": [
+    "src/syk_simulasyon/syk_ui_runtime/adaptive_environment.py",
+    "src/syk_simulasyon/syk_ui_runtime/adaptive_environment_routes.py",
+    "src/syk_simulasyon/syk_ui_runtime/adaptive_theme.py",
+    "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+    "src/syk_simulasyon/syk_ui_runtime/asset_manager.py",
+    "src/syk_simulasyon/syk_ui_runtime/audio_manager.py",
+    "src/syk_simulasyon/syk_ui_runtime/brand_title_manager.py",
+    "src/syk_simulasyon/syk_ui_runtime/dtse_attention_engine.py",
+    "src/syk_simulasyon/syk_ui_runtime/dtse_attention_routes.py",
+    "src/syk_simulasyon/syk_ui_runtime/environment.py",
+    "src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_adapter.py",
+    "src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_kanit_zinciri.py",
+    "src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_routes.py",
+    "src/syk_simulasyon/syk_ui_runtime/icon_manager.py",
+    "src/syk_simulasyon/syk_ui_runtime/image_manager.py",
+    "src/syk_simulasyon/syk_ui_runtime/integration.py",
+    "src/syk_simulasyon/syk_ui_runtime/kasif_icon_registry.py",
+    "src/syk_simulasyon/syk_ui_runtime/kasif_icon_routes.py",
+    "src/syk_simulasyon/syk_ui_runtime/live_environment_provider.py",
+    "src/syk_simulasyon/syk_ui_runtime/media_annotation.py",
+    "src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py",
+    "src/syk_simulasyon/syk_ui_runtime/media_upload_service.py",
+    "src/syk_simulasyon/syk_ui_runtime/mobile_control_routes.py",
+    "src/syk_simulasyon/syk_ui_runtime/mobile_control_runtime.py",
+    "src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py",
+    "src/syk_simulasyon/syk_ui_runtime/mobile_device_runtime.py",
+    "src/syk_simulasyon/syk_ui_runtime/mobile_offline_routes.py",
+    "src/syk_simulasyon/syk_ui_runtime/mobile_offline_runtime.py",
+    "src/syk_simulasyon/syk_ui_runtime/mobile_sensor_routes.py",
+    "src/syk_simulasyon/syk_ui_runtime/mobile_sensor_runtime.py",
+    "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+    "src/syk_simulasyon/syk_ui_runtime/runtime_manager.py",
+    "src/syk_simulasyon/syk_ui_runtime/runtime_theme.py",
+    "src/syk_simulasyon/syk_ui_runtime/scientific_adapter.py",
+    "src/syk_simulasyon/syk_ui_runtime/scientific_analysis_syframe.py",
+    "src/syk_simulasyon/syk_ui_runtime/scientific_device_analysis.py",
+    "src/syk_simulasyon/syk_ui_runtime/scientific_device_evidence.py",
+    "src/syk_simulasyon/syk_ui_runtime/scientific_device_evidence_package.py",
+    "src/syk_simulasyon/syk_ui_runtime/scientific_device_hub.py",
+    "src/syk_simulasyon/syk_ui_runtime/scientific_device_manager.py",
+    "src/syk_simulasyon/syk_ui_runtime/scientific_device_package_seal.py",
+    "src/syk_simulasyon/syk_ui_runtime/scientific_device_recording_pipeline.py",
+    "src/syk_simulasyon/syk_ui_runtime/scientific_device_session.py",
+    "src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py",
+    "src/syk_simulasyon/syk_ui_runtime/scientific_transport.py",
+    "src/syk_simulasyon/syk_ui_runtime/screen_routes.py",
+    "src/syk_simulasyon/syk_ui_runtime/sealed_report.py",
+    "src/syk_simulasyon/syk_ui_runtime/static_routes.py",
+    "src/syk_simulasyon/syk_ui_runtime/syframe_manager.py",
+    "src/syk_simulasyon/syk_ui_runtime/theme_api.py",
+    "src/syk_simulasyon/syk_ui_runtime/theme_engine.py",
+    "src/syk_simulasyon/syk_ui_runtime/theme_manager.py",
+    "src/syk_simulasyon/syk_ui_runtime/theme_registry.py",
+    "src/syk_simulasyon/syk_ui_runtime/typography.py",
+    "src/syk_simulasyon/syk_ui_runtime/ui_runtime_state.py"
+  ],
+  "mount_cagrilari": [],
+  "rapor_sha256": "72026fe00034d73c61a9e394802aa3cc86ef1fbcff0cb188c6167c3c306e2b9c",
+  "router_nesneleri": [
+    {
+      "cagri": "APIRouter",
+      "deger": null,
+      "hedefler": [
+        "router"
+      ],
+      "satir": 45
+    }
+  ],
+  "satir_sayisi": 1144,
+  "schema": "syfinans-runtime-api-routes-inceleme/v1",
+  "siniflar": [
+    {
+      "ad": "ScientificUpdateRequest",
+      "satir": 164,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    },
+    {
+      "ad": "ScientificAdapterIngestRequest",
+      "satir": 225,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    },
+    {
+      "ad": "SerialReadRequest",
+      "satir": 278,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    },
+    {
+      "ad": "TcpReadRequest",
+      "satir": 333,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    },
+    {
+      "ad": "BleDiscoveryRequest",
+      "satir": 374,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    },
+    {
+      "ad": "BleReadRequest",
+      "satir": 378,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    },
+    {
+      "ad": "DeviceHubRegisterRequest",
+      "satir": 452,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    },
+    {
+      "ad": "DeviceHubConnectionRequest",
+      "satir": 461,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    },
+    {
+      "ad": "DeviceHubTelemetryRequest",
+      "satir": 465,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    },
+    {
+      "ad": "DeviceSessionStartRequest",
+      "satir": 580,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    },
+    {
+      "ad": "DeviceSessionSampleRequest",
+      "satir": 586,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    },
+    {
+      "ad": "DeviceEvidenceAppendRequest",
+      "satir": 698,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    },
+    {
+      "ad": "DevicePipelineIngestRequest",
+      "satir": 795,
+      "tabanlar": [
+        "BaseModel"
+      ]
+    }
+  ],
+  "uygulama_nesneleri": []
+}

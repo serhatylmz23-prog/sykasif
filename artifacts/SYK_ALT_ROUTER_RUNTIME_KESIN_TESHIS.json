@@ -1,0 +1,787 @@
+{
+  "alt_routerlar": [
+    {
+      "kisa_ad": "mobile_control",
+      "modul": "syk_simulasyon.syk_ui_runtime.mobile_control_routes",
+      "nesne": "router",
+      "prefix": "/mobile-control",
+      "router_id": 2249158204944,
+      "yol_sayisi": 6,
+      "yollar": [
+        "/mobile-control",
+        "/mobile-control/devices",
+        "/mobile-control/devices",
+        "/mobile-control/devices/{device_id}",
+        "/mobile-control/devices/{device_id}",
+        "/mobile-control/devices/{device_id}/reset"
+      ]
+    },
+    {
+      "kisa_ad": "mobile_device",
+      "modul": "syk_simulasyon.syk_ui_runtime.mobile_device_routes",
+      "nesne": "router",
+      "prefix": "/mobile-runtime",
+      "router_id": 2249158525824,
+      "yol_sayisi": 8,
+      "yollar": [
+        "/mobile-runtime",
+        "/mobile-runtime/devices",
+        "/mobile-runtime/devices",
+        "/mobile-runtime/devices/{device_id}",
+        "/mobile-runtime/devices/{device_id}",
+        "/mobile-runtime/devices/{device_id}/trust",
+        "/mobile-runtime/devices/{device_id}",
+        "/mobile-runtime/layout"
+      ]
+    },
+    {
+      "kisa_ad": "mobile_offline",
+      "modul": "syk_simulasyon.syk_ui_runtime.mobile_offline_routes",
+      "nesne": "router",
+      "prefix": "/mobile-offline",
+      "router_id": 2249158872608,
+      "yol_sayisi": 18,
+      "yollar": [
+        "/mobile-offline",
+        "/mobile-offline/online",
+        "/mobile-offline/queue",
+        "/mobile-offline/queue",
+        "/mobile-offline/queue/{item_id}/begin",
+        "/mobile-offline/queue/{item_id}/complete",
+        "/mobile-offline/queue/{item_id}/fail",
+        "/mobile-offline/queue/{item_id}",
+        "/mobile-offline/queue",
+        "/mobile-offline/pairings",
+        "/mobile-offline/pairings/confirm",
+        "/mobile-offline/pairings/verify",
+        "/mobile-offline/pairings",
+        "/mobile-offline/pairings/{pairing_id}",
+        "/mobile-offline/cache",
+        "/mobile-offline/cache/{cache_key}",
+        "/mobile-offline/cache",
+        "/mobile-offline/cache/{cache_key}"
+      ]
+    },
+    {
+      "kisa_ad": "mobile_sensor",
+      "modul": "syk_simulasyon.syk_ui_runtime.mobile_sensor_routes",
+      "nesne": "router",
+      "prefix": "/mobile-sensors",
+      "router_id": 2249158204400,
+      "yol_sayisi": 11,
+      "yollar": [
+        "/mobile-sensors",
+        "/mobile-sensors/permissions",
+        "/mobile-sensors/camera/start",
+        "/mobile-sensors/camera/stop",
+        "/mobile-sensors/microphone/start",
+        "/mobile-sensors/microphone/stop",
+        "/mobile-sensors/location",
+        "/mobile-sensors/locations",
+        "/mobile-sensors/frames",
+        "/mobile-sensors/frames",
+        "/mobile-sensors/frames/{frame_id}"
+      ]
+    },
+    {
+      "kisa_ad": "kasif_icon",
+      "modul": "syk_simulasyon.syk_ui_runtime.kasif_icon_routes",
+      "nesne": "router",
+      "prefix": "/kasif-icons",
+      "router_id": 2249159567808,
+      "yol_sayisi": 7,
+      "yollar": [
+        "/kasif-icons",
+        "/kasif-icons/manifest",
+        "/kasif-icons/groups",
+        "/kasif-icons/assistant",
+        "/kasif-icons/search",
+        "/kasif-icons/reload",
+        "/kasif-icons/{icon_id}"
+      ]
+    },
+    {
+      "kisa_ad": "jarmin",
+      "modul": "syk_jarmin.jarmin_integration_api",
+      "nesne": "router",
+      "prefix": "/jarmin/integration",
+      "router_id": 2249159806768,
+      "yol_sayisi": 6,
+      "yollar": [
+        "/jarmin/integration",
+        "/jarmin/integration/settings",
+        "/jarmin/integration/settings",
+        "/jarmin/integration/settings",
+        "/jarmin/integration/events",
+        "/jarmin/integration/events"
+      ]
+    }
+  ],
+  "ana_router_id": 2249130171360,
+  "ana_router_prefix": "/api/syk-ui",
+  "ana_router_yol_sayisi": 39,
+  "ana_router_yollari": [
+    "/api/syk-ui/runtime-state",
+    "/api/syk-ui/live",
+    "/api/syk-ui/scientific-modules",
+    "/api/syk-ui/scientific-modules/{module_id}",
+    "/api/syk-ui/scientific-modules/{module_id}",
+    "/api/syk-ui/scientific-modules/{module_id}/live",
+    "/api/syk-ui/scientific-adapters",
+    "/api/syk-ui/scientific-adapters/{adapter_id}/modules/{module_id}/ingest",
+    "/api/syk-ui/scientific-devices/serial",
+    "/api/syk-ui/scientific-devices/serial/read",
+    "/api/syk-ui/scientific-devices/tcp/read",
+    "/api/syk-ui/scientific-devices/ble/discover",
+    "/api/syk-ui/scientific-devices/ble/read",
+    "/api/syk-ui/scientific-devices/transports",
+    "/api/syk-ui/scientific-devices/discover",
+    "/api/syk-ui/device-hub",
+    "/api/syk-ui/device-hub/refresh",
+    "/api/syk-ui/device-hub/register",
+    "/api/syk-ui/device-hub/{device_id}",
+    "/api/syk-ui/device-hub/{device_id}/connection",
+    "/api/syk-ui/device-hub/{device_id}/telemetry",
+    "/api/syk-ui/device-sessions",
+    "/api/syk-ui/device-sessions/start",
+    "/api/syk-ui/device-sessions/{session_id}",
+    "/api/syk-ui/device-sessions/{session_id}/samples",
+    "/api/syk-ui/device-sessions/{session_id}/stop",
+    "/api/syk-ui/device-sessions/{session_id}/evidence",
+    "/api/syk-ui/device-sessions/{session_id}/evidence",
+    "/api/syk-ui/device-sessions/{session_id}/evidence/verify",
+    "/api/syk-ui/device-hub/{device_id}/recording-ingest",
+    "/api/syk-ui/device-sessions/{session_id}/package",
+    "/api/syk-ui/device-sessions/{session_id}/package/verify",
+    "/api/syk-ui/device-sessions/{session_id}/seal",
+    "/api/syk-ui/device-sessions/{session_id}/seal/verify",
+    "/api/syk-ui/device-sessions/{session_id}/analysis",
+    "/api/syk-ui/device-sessions/{session_id}/analysis",
+    "/api/syk-ui/device-sessions/{session_id}/analysis/verify",
+    "/api/syk-ui/device-sessions/{session_id}/syframe",
+    "/api/syk-ui/syframe/analysis-state"
+  ],
+  "api_routes": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+  "api_routes_sha256": "03311c2c084fdd2d9755b26bd3f3c30807e924a31616e379c38b0e1a0ef48dc5",
+  "beklenen_durumlari": [
+    {
+      "ana_router_eslesmeleri": [],
+      "beklenen": "/api/syk-ui/jarmin/integration",
+      "deneme_router_eslesmeleri": []
+    },
+    {
+      "ana_router_eslesmeleri": [],
+      "beklenen": "/api/syk-ui/mobile-runtime",
+      "deneme_router_eslesmeleri": []
+    },
+    {
+      "ana_router_eslesmeleri": [],
+      "beklenen": "/api/syk-ui/mobile-sensors",
+      "deneme_router_eslesmeleri": []
+    },
+    {
+      "ana_router_eslesmeleri": [],
+      "beklenen": "/api/syk-ui/mobile-offline",
+      "deneme_router_eslesmeleri": []
+    },
+    {
+      "ana_router_eslesmeleri": [],
+      "beklenen": "/api/syk-ui/mobile-control",
+      "deneme_router_eslesmeleri": []
+    },
+    {
+      "ana_router_eslesmeleri": [],
+      "beklenen": "/api/syk-ui/kasif-icons",
+      "deneme_router_eslesmeleri": []
+    }
+  ],
+  "deneme_hatalari": [],
+  "deneme_router_prefix": "/api/syk-ui",
+  "deneme_router_yol_sayisi": 0,
+  "deneme_router_yollari": [],
+  "include_kayitlari": [
+    {
+      "cagri": "router.include_router",
+      "kapsam": [
+        "module"
+      ],
+      "kaynak": "router.include_router(dtse_attention_router)",
+      "router": "dtse_attention_router",
+      "satir": 1071
+    },
+    {
+      "cagri": "router.include_router",
+      "kapsam": [
+        "module"
+      ],
+      "kaynak": "router.include_router(goruntu_dtse_router)",
+      "router": "goruntu_dtse_router",
+      "satir": 1079
+    },
+    {
+      "cagri": "router.include_router",
+      "kapsam": [
+        "module"
+      ],
+      "kaynak": "router.include_router(media_upload_router)",
+      "router": "media_upload_router",
+      "satir": 1086
+    },
+    {
+      "cagri": "router.include_router",
+      "kapsam": [
+        "module"
+      ],
+      "kaynak": "router.include_router(adaptive_environment_router)",
+      "router": "adaptive_environment_router",
+      "satir": 1093
+    },
+    {
+      "cagri": "router.include_router",
+      "kapsam": [
+        "module"
+      ],
+      "kaynak": "router.include_router(theme_router)",
+      "router": "theme_router",
+      "satir": 1106
+    },
+    {
+      "cagri": "router.include_router",
+      "kapsam": [
+        "module"
+      ],
+      "kaynak": "router.include_router(mobile_control_router)",
+      "router": "mobile_control_router",
+      "satir": 1110
+    },
+    {
+      "cagri": "router.include_router",
+      "kapsam": [
+        "module"
+      ],
+      "kaynak": "router.include_router(mobile_device_router)",
+      "router": "mobile_device_router",
+      "satir": 1114
+    },
+    {
+      "cagri": "router.include_router",
+      "kapsam": [
+        "module"
+      ],
+      "kaynak": "router.include_router(mobile_offline_router)",
+      "router": "mobile_offline_router",
+      "satir": 1118
+    },
+    {
+      "cagri": "router.include_router",
+      "kapsam": [
+        "module"
+      ],
+      "kaynak": "router.include_router(mobile_sensor_router)",
+      "router": "mobile_sensor_router",
+      "satir": 1122
+    },
+    {
+      "cagri": "router.include_router",
+      "kapsam": [
+        "module"
+      ],
+      "kaynak": "router.include_router(kasif_icon_router)",
+      "router": "kasif_icon_router",
+      "satir": 1126
+    },
+    {
+      "cagri": "router.include_router",
+      "kapsam": [
+        "module"
+      ],
+      "kaynak": "router.include_router(jarmin_integration_router)",
+      "router": "jarmin_integration_router",
+      "satir": 1130
+    }
+  ],
+  "rapor_sha256": "63d87e2863085c490af0764276e0b257fccc4c1317970de07f59b8d27a03596e",
+  "schema": "syk-alt-router-runtime-kesin-teshis/v1",
+  "son_kaynak_satirlari": [
+    {
+      "metin": "    except KeyError as error:",
+      "satir": 1013
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 1014
+    },
+    {
+      "metin": "",
+      "satir": 1015
+    },
+    {
+      "metin": "        raise HTTPException(",
+      "satir": 1016
+    },
+    {
+      "metin": "            status_code=404,",
+      "satir": 1017
+    },
+    {
+      "metin": "            detail=f\"Analiz bulunamadı: {session_id}\",",
+      "satir": 1018
+    },
+    {
+      "metin": "        ) from error",
+      "satir": 1019
+    },
+    {
+      "metin": "",
+      "satir": 1020
+    },
+    {
+      "metin": "",
+      "satir": 1021
+    },
+    {
+      "metin": "@router.get(",
+      "satir": 1022
+    },
+    {
+      "metin": "    \"/device-sessions/{session_id}/analysis/verify\"",
+      "satir": 1023
+    },
+    {
+      "metin": ")",
+      "satir": 1024
+    },
+    {
+      "metin": "def verify_device_session_analysis(",
+      "satir": 1025
+    },
+    {
+      "metin": "    session_id: str,",
+      "satir": 1026
+    },
+    {
+      "metin": ") -> dict:",
+      "satir": 1027
+    },
+    {
+      "metin": "    return scientific_device_analysis.verify(",
+      "satir": 1028
+    },
+    {
+      "metin": "        session_id",
+      "satir": 1029
+    },
+    {
+      "metin": "    )",
+      "satir": 1030
+    },
+    {
+      "metin": "",
+      "satir": 1031
+    },
+    {
+      "metin": "@router.post(",
+      "satir": 1032
+    },
+    {
+      "metin": "    \"/device-sessions/{session_id}/syframe\"",
+      "satir": 1033
+    },
+    {
+      "metin": ")",
+      "satir": 1034
+    },
+    {
+      "metin": "def apply_device_analysis_to_syframe(",
+      "satir": 1035
+    },
+    {
+      "metin": "    session_id: str,",
+      "satir": 1036
+    },
+    {
+      "metin": ") -> dict:",
+      "satir": 1037
+    },
+    {
+      "metin": "    try:",
+      "satir": 1038
+    },
+    {
+      "metin": "        return scientific_analysis_syframe.apply(",
+      "satir": 1039
+    },
+    {
+      "metin": "            session_id",
+      "satir": 1040
+    },
+    {
+      "metin": "        )",
+      "satir": 1041
+    },
+    {
+      "metin": "",
+      "satir": 1042
+    },
+    {
+      "metin": "    except KeyError as error:",
+      "satir": 1043
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 1044
+    },
+    {
+      "metin": "",
+      "satir": 1045
+    },
+    {
+      "metin": "        raise HTTPException(",
+      "satir": 1046
+    },
+    {
+      "metin": "            status_code=404,",
+      "satir": 1047
+    },
+    {
+      "metin": "            detail=(",
+      "satir": 1048
+    },
+    {
+      "metin": "                f\"Analiz bulunamadı: \"",
+      "satir": 1049
+    },
+    {
+      "metin": "                f\"{session_id}\"",
+      "satir": 1050
+    },
+    {
+      "metin": "            ),",
+      "satir": 1051
+    },
+    {
+      "metin": "        ) from error",
+      "satir": 1052
+    },
+    {
+      "metin": "",
+      "satir": 1053
+    },
+    {
+      "metin": "    except ValueError as error:",
+      "satir": 1054
+    },
+    {
+      "metin": "        from fastapi import HTTPException",
+      "satir": 1055
+    },
+    {
+      "metin": "",
+      "satir": 1056
+    },
+    {
+      "metin": "        raise HTTPException(",
+      "satir": 1057
+    },
+    {
+      "metin": "            status_code=422,",
+      "satir": 1058
+    },
+    {
+      "metin": "            detail=str(error),",
+      "satir": 1059
+    },
+    {
+      "metin": "        ) from error",
+      "satir": 1060
+    },
+    {
+      "metin": "",
+      "satir": 1061
+    },
+    {
+      "metin": "",
+      "satir": 1062
+    },
+    {
+      "metin": "@router.get(\"/syframe/analysis-state\")",
+      "satir": 1063
+    },
+    {
+      "metin": "def get_analysis_syframe_state() -> dict:",
+      "satir": 1064
+    },
+    {
+      "metin": "    return scientific_analysis_syframe.snapshot()",
+      "satir": 1065
+    },
+    {
+      "metin": "",
+      "satir": 1066
+    },
+    {
+      "metin": "from .dtse_attention_routes import (",
+      "satir": 1067
+    },
+    {
+      "metin": "    router as dtse_attention_router,",
+      "satir": 1068
+    },
+    {
+      "metin": ")",
+      "satir": 1069
+    },
+    {
+      "metin": "",
+      "satir": 1070
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1071
+    },
+    {
+      "metin": "    dtse_attention_router",
+      "satir": 1072
+    },
+    {
+      "metin": ")",
+      "satir": 1073
+    },
+    {
+      "metin": "",
+      "satir": 1074
+    },
+    {
+      "metin": "from .goruntu_dtse_routes import (",
+      "satir": 1075
+    },
+    {
+      "metin": "    router as goruntu_dtse_router,",
+      "satir": 1076
+    },
+    {
+      "metin": ")",
+      "satir": 1077
+    },
+    {
+      "metin": "",
+      "satir": 1078
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1079
+    },
+    {
+      "metin": "    goruntu_dtse_router",
+      "satir": 1080
+    },
+    {
+      "metin": ")",
+      "satir": 1081
+    },
+    {
+      "metin": "from .media_upload_routes import (",
+      "satir": 1082
+    },
+    {
+      "metin": "    router as media_upload_router,",
+      "satir": 1083
+    },
+    {
+      "metin": ")",
+      "satir": 1084
+    },
+    {
+      "metin": "",
+      "satir": 1085
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1086
+    },
+    {
+      "metin": "    media_upload_router,",
+      "satir": 1087
+    },
+    {
+      "metin": ")",
+      "satir": 1088
+    },
+    {
+      "metin": "from .adaptive_environment_routes import (",
+      "satir": 1089
+    },
+    {
+      "metin": "    router as adaptive_environment_router,",
+      "satir": 1090
+    },
+    {
+      "metin": ")",
+      "satir": 1091
+    },
+    {
+      "metin": "",
+      "satir": 1092
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1093
+    },
+    {
+      "metin": "    adaptive_environment_router,",
+      "satir": 1094
+    },
+    {
+      "metin": ")",
+      "satir": 1095
+    },
+    {
+      "metin": "from .theme_api import (",
+      "satir": 1096
+    },
+    {
+      "metin": "    router as theme_router,",
+      "satir": 1097
+    },
+    {
+      "metin": ")",
+      "satir": 1098
+    },
+    {
+      "metin": "from .mobile_control_routes import router as mobile_control_router",
+      "satir": 1099
+    },
+    {
+      "metin": "from .mobile_device_routes import router as mobile_device_router",
+      "satir": 1100
+    },
+    {
+      "metin": "from .mobile_offline_routes import router as mobile_offline_router",
+      "satir": 1101
+    },
+    {
+      "metin": "from .mobile_sensor_routes import router as mobile_sensor_router",
+      "satir": 1102
+    },
+    {
+      "metin": "from .kasif_icon_routes import router as kasif_icon_router",
+      "satir": 1103
+    },
+    {
+      "metin": "from syk_jarmin.jarmin_integration_api import router as jarmin_integration_router",
+      "satir": 1104
+    },
+    {
+      "metin": "",
+      "satir": 1105
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1106
+    },
+    {
+      "metin": "    theme_router,",
+      "satir": 1107
+    },
+    {
+      "metin": ")",
+      "satir": 1108
+    },
+    {
+      "metin": "",
+      "satir": 1109
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1110
+    },
+    {
+      "metin": "    mobile_control_router",
+      "satir": 1111
+    },
+    {
+      "metin": ")",
+      "satir": 1112
+    },
+    {
+      "metin": "",
+      "satir": 1113
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1114
+    },
+    {
+      "metin": "    mobile_device_router",
+      "satir": 1115
+    },
+    {
+      "metin": ")",
+      "satir": 1116
+    },
+    {
+      "metin": "",
+      "satir": 1117
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1118
+    },
+    {
+      "metin": "    mobile_offline_router",
+      "satir": 1119
+    },
+    {
+      "metin": ")",
+      "satir": 1120
+    },
+    {
+      "metin": "",
+      "satir": 1121
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1122
+    },
+    {
+      "metin": "    mobile_sensor_router",
+      "satir": 1123
+    },
+    {
+      "metin": ")",
+      "satir": 1124
+    },
+    {
+      "metin": "",
+      "satir": 1125
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1126
+    },
+    {
+      "metin": "    kasif_icon_router",
+      "satir": 1127
+    },
+    {
+      "metin": ")",
+      "satir": 1128
+    },
+    {
+      "metin": "",
+      "satir": 1129
+    },
+    {
+      "metin": "router.include_router(",
+      "satir": 1130
+    },
+    {
+      "metin": "    jarmin_integration_router",
+      "satir": 1131
+    },
+    {
+      "metin": ")",
+      "satir": 1132
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "kaynak_sayisi": 7,
+  "kaynaklar": [
+    {
+      "boyut": 1971,
+      "dosya": "src/syk_core/degerlendirme/birlesik_degerlendirme.py",
+      "fonksiyonlar": [],
+      "sha256": "bd348e4fcd7ec2abe98f7b5f6ba8f1d500219a05245d2cde17d0c4572113c31f",
+      "siniflar": [
+        "BirlesikDegerlendirmeKaydi",
+        "BirlesikDegerlendirmeYoneticisi"
+      ]
+    },
+    {
+      "boyut": 2046,
+      "dosya": "src/syk_core/degerlendirme/konsensus_motoru.py",
+      "fonksiyonlar": [],
+      "sha256": "09ca23acdbe456eaefed89cca0360ab23fa34f000534eb16cd8c9947eedddefb",
+      "siniflar": [
+        "KonsensusKaydi",
+        "KonsensusMotoru"
+      ]
+    },
+    {
+      "boyut": 1326,
+      "dosya": "src/syk_core/uzmanlar/onay_zinciri.py",
+      "fonksiyonlar": [],
+      "sha256": "5d10b03fcc3d4e742e9e212046f238cd89d49a7148d93cb8ddbdf04f5f0360fd",
+      "siniflar": [
+        "OnayKaydi",
+        "OnayZinciri"
+      ]
+    },
+    {
+      "boyut": 2119,
+      "dosya": "src/syk_core/uzmanlar/uzman_enstitu.py",
+      "fonksiyonlar": [],
+      "sha256": "acba80f7cdd1015a88d752e635c14eeb00bf3f1c0ad5f700824d962c2ba11db0",
+      "siniflar": [
+        "UzmanBaglantisi",
+        "UzmanEnstituAgaci",
+        "UzmanEnstitusu",
+        "UzmanErisimYasagi"
+      ]
+    },
+    {
+      "boyut": 1542,
+      "dosya": "src/syk_core/uzmanlar/uzman_modeli.py",
+      "fonksiyonlar": [],
+      "sha256": "fdeb156450835b206218420370655f4a12e4414633a4b57cf76b4a5b6561ac18",
+      "siniflar": [
+        "UzmanKararYasagi",
+        "UzmanModeli"
+      ]
+    },
+    {
+      "boyut": 2117,
+      "dosya": "src/syk_core/uzmanlar/uzman_yasam_dongusu.py",
+      "fonksiyonlar": [],
+      "sha256": "abd5cb294d6e602a1c3f3e965fdd3ce6e3608d95b1c535e8b29263ce19eeabc8",
+      "siniflar": [
+        "UzmanYasamHatasi",
+        "UzmanYasamKaydi",
+        "UzmanYasamYoneticisi"
+      ]
+    },
+    {
+      "boyut": 389,
+      "dosya": "src/syk_core/uzmanlar/uzman_yetki_modeli.py",
+      "fonksiyonlar": [
+        "karar_kontrolu"
+      ],
+      "sha256": "965a1de424c2f0377565b256b8b5f693de85fcbacaeb0d6fe3a301e708008422",
+      "siniflar": [
+        "UzmanYetki",
+        "UzmanYetkiYasagi"
+      ]
+    }
+  ],
+  "test_dosyasi_sayisi": 6,
+  "testler": [
+    {
+      "boyut": 1552,
+      "dosya": "tests/test_birlesik_degerlendirme.py",
+      "fonksiyonlar": [
+        "test_birlesik_kayit_olusturulur",
+        "test_goruntu_ve_materyal_baglanir",
+        "test_guven_celiski_uzman_bilgisi"
+      ],
+      "sha256": "5aa7d9f0797f1e7aafd1702a839f94847a0426fd27d5007695a5c08554e102e2",
+      "siniflar": []
+    },
+    {
+      "boyut": 1145,
+      "dosya": "tests/test_konsensus_motoru.py",
+      "fonksiyonlar": [
+        "test_celiski_guveni_dusurur",
+        "test_konsensus_kaydi",
+        "test_uzman_destegi_puani_artirir"
+      ],
+      "sha256": "dca5a3184b9f0ddcdc0e530e7e7c4e0f19f4eb8c8f1af421bbf082f9ccf35ff7",
+      "siniflar": []
+    },
+    {
+      "boyut": 1763,
+      "dosya": "tests/test_uzman_enstitu.py",
+      "fonksiyonlar": [
+        "test_farkli_aile_verisine_erisim_yoktur",
+        "test_uzman_ailesine_bagli_olur",
+        "test_uzman_emekliye_ayrilir"
+      ],
+      "sha256": "a1c6a44d8d05e030782d1a0d2873e501123cefcd11a4dcd419a3fb10a8fbf7bf",
+      "siniflar": []
+    },
+    {
+      "boyut": 1119,
+      "dosya": "tests/test_uzman_modeli.py",
+      "fonksiyonlar": [
+        "test_uzman_karar_veremez",
+        "test_uzman_ogrenme_kaydi_tutar",
+        "test_uzman_oneri_uretebilir"
+      ],
+      "sha256": "ba086efd526259466b1513afc26e101d48e8bbf6468fafcfab200c674aa4b2ea",
+      "siniflar": []
+    },
+    {
+      "boyut": 950,
+      "dosya": "tests/test_uzman_onay_zinciri.py",
+      "fonksiyonlar": [
+        "test_kasif_ve_bilge_kaan_onayi",
+        "test_onay_zinciri_bekleme",
+        "test_uzman_karar_yetkisi_yoktur"
+      ],
+      "sha256": "84c8b4351aaee6eccbb84bb28b305a61039f9f0313a97a3935f008b5788703f4",
+      "siniflar": []
+    },
+    {
+      "boyut": 1898,
+      "dosya": "tests/test_uzman_yasam_dongusu.py",
+      "fonksiyonlar": [
+        "test_eski_uzman_yeni_uzmana_bilgi_aktarir",
+        "test_uzman_egitim_ve_deneyim_kaydi",
+        "test_uzman_emekliye_ayrilir",
+        "test_uzman_olusturulur"
+      ],
+      "sha256": "67d897d3d79acfce75533e4731cab0e2dbdf8eef283c92c2a82e91049a26d4aa",
+      "siniflar": []
+    }
+  ]
+}

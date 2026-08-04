@@ -1,0 +1,60 @@
+{
+  "kaynak_sayisi": 3,
+  "kaynaklar": [
+    {
+      "boyut": 2076,
+      "dosya": "src/syk_core/goruntu/canli_analiz_paneli.py",
+      "fonksiyonlar": [],
+      "sha256": "252a678492dbcdbf3c6f590547e87d697bf945033350e441b13ca05c138cc271",
+      "siniflar": [
+        "CanliAnalizPaneli",
+        "CanliGoruntuAkisi"
+      ]
+    },
+    {
+      "boyut": 2095,
+      "dosya": "src/syk_core/goruntu/goruntu_kanit_baglanti.py",
+      "fonksiyonlar": [],
+      "sha256": "935c89fc1af47da3cbe6a5e896c348cc224bb247dae5cc4e67768c3fff87bf43",
+      "siniflar": [
+        "GoruntuKanitYoneticisi",
+        "GoruntuKaniti"
+      ]
+    },
+    {
+      "boyut": 1891,
+      "dosya": "src/syk_core/goruntu/goruntu_uzmani_modeli.py",
+      "fonksiyonlar": [],
+      "sha256": "e70ea90352928577f59c44f4fba76c678aee83caa9d694634e1a48b8b61960a6",
+      "siniflar": [
+        "GoruntuKaydi",
+        "GoruntuUzmani"
+      ]
+    }
+  ],
+  "test_dosyasi_sayisi": 2,
+  "testler": [
+    {
+      "boyut": 1291,
+      "dosya": "tests/test_goruntu_kanit_baglanti.py",
+      "fonksiyonlar": [
+        "test_goruntu_kanit_baglantisi",
+        "test_goruntu_kaniti_kaydedilir",
+        "test_manipulasyon_suphesi_tutulur"
+      ],
+      "sha256": "c2a4ebc772759448f367290e81e4eb4c6cd454f6a7516d26757ce77bb691b449",
+      "siniflar": []
+    },
+    {
+      "boyut": 1064,
+      "dosya": "tests/test_goruntu_uzmani_modeli.py",
+      "fonksiyonlar": [
+        "test_goruntu_kaydi",
+        "test_konum_yoksa_analiz_ister",
+        "test_supheli_bolge_isaretlenir"
+      ],
+      "sha256": "0b7c7e66d7c9b7981b6b4192043479c1f8bd4f25d259304b0396fe93410f7c8f",
+      "siniflar": []
+    }
+  ]
+}
