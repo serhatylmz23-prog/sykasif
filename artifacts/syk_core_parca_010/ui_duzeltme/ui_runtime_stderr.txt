@@ -1,0 +1,184 @@
+INFO:     Started server process [13944]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8013 (Press CTRL+C to quit)
+INFO:     127.0.0.1:64448 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64449 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64457 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64458 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64465 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64466 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64473 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64474 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64475 - "WebSocket /api/syk-ui/scientific-modules/geology/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64476 - "WebSocket /api/syk-ui/scientific-modules/soil/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64477 - "WebSocket /api/syk-ui/scientific-modules/lidar/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64478 - "WebSocket /api/syk-ui/scientific-modules/hydro/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64479 - "WebSocket /api/syk-ui/scientific-modules/thermal/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64486 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64487 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64488 - "WebSocket /api/syk-ui/scientific-modules/thermal/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64489 - "WebSocket /api/syk-ui/scientific-modules/spectral/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64496 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64497 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64504 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64505 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64512 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64513 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64520 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64521 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64528 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64529 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64536 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64537 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64544 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64545 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64552 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64553 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64561 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64562 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64563 - "WebSocket /api/syk-ui/scientific-modules/thermal/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64565 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64572 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64573 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64574 - "WebSocket /api/syk-ui/scientific-modules/geology/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64581 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64582 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64583 - "WebSocket /api/syk-ui/scientific-modules/frequency/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64590 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64591 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64592 - "WebSocket /api/syk-ui/scientific-modules/lidar/live" [accepted]
+INFO:     connection open
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+INFO:     127.0.0.1:64599 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64600 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64601 - "WebSocket /api/syk-ui/scientific-modules/astronomy/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64608 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64609 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64610 - "WebSocket /api/syk-ui/scientific-modules/chemistry/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64617 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64618 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64619 - "WebSocket /api/syk-ui/scientific-modules/spectral/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64626 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64627 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64628 - "WebSocket /api/syk-ui/scientific-modules/thermal/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64635 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64636 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64638 - "WebSocket /api/syk-ui/scientific-modules/magnetometer/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64645 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64646 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64647 - "WebSocket /api/syk-ui/scientific-modules/gravimeter/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64654 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64655 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64657 - "WebSocket /api/syk-ui/scientific-modules/ert/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64664 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64665 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64666 - "WebSocket /api/syk-ui/scientific-modules/gpr/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64673 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64674 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64675 - "WebSocket /api/syk-ui/scientific-modules/seismic/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64683 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64684 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64685 - "WebSocket /api/syk-ui/scientific-modules/hydro/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64692 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64693 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64694 - "WebSocket /api/syk-ui/scientific-modules/botany/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64701 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64702 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64703 - "WebSocket /api/syk-ui/scientific-modules/soil/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64710 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:64711 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:64712 - "WebSocket /api/syk-ui/scientific-modules/water/live" [accepted]
+INFO:     connection open

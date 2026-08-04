@@ -1,0 +1,15 @@
+﻿{
+    "sprint":  "SPR-010",
+    "durum":  "tamamlandı",
+    "dal":  "spr-010-gercek-cihaz-dogrulama-hazirligi",
+    "dijital_prototip_dogrulama_orani":  99.9,
+    "tum_repo_test_sayisi":  1682,
+    "tum_repo_test_durumu":  "başarılı",
+    "gercek_bilgisayar_denetim_toplami":  3,
+    "gercek_bilgisayar_denetim_basarili":  3,
+    "gercek_bilgisayar_denetim_basarisiz":  0,
+    "gercek_bilgisayar_dogrulamasi":  "başarılı",
+    "saha_sensor_probe_dogrulamasi":  "bekliyor",
+    "gercek_saha_testi":  "bekliyor",
+    "olusturulma_zamani":  "2026-08-05T02:01:20.2971188+03:00"
+}

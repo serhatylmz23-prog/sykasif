@@ -1,0 +1,222 @@
+INFO:     Started server process [6972]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8013 (Press CTRL+C to quit)
+INFO:     127.0.0.1:65373 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65374 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65381 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65382 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65389 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65390 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65391 - "WebSocket /api/syk-ui/scientific-modules/geology/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65398 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65399 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65407 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65408 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65415 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65416 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65423 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65424 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65425 - "WebSocket /api/syk-ui/scientific-modules/geology/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65426 - "WebSocket /api/syk-ui/scientific-modules/soil/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65427 - "WebSocket /api/syk-ui/scientific-modules/lidar/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65428 - "WebSocket /api/syk-ui/scientific-modules/hydro/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65429 - "WebSocket /api/syk-ui/scientific-modules/thermal/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65436 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65437 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65438 - "WebSocket /api/syk-ui/scientific-modules/thermal/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65439 - "WebSocket /api/syk-ui/scientific-modules/spectral/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65446 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65447 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65455 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65456 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65463 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65464 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65471 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65472 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+INFO:     127.0.0.1:65479 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65480 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65487 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65488 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65497 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65498 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65506 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65507 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65516 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65517 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65518 - "WebSocket /api/syk-ui/scientific-modules/thermal/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65519 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:65534 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49152 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49153 - "WebSocket /api/syk-ui/scientific-modules/frequency/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49160 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49161 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49162 - "WebSocket /api/syk-ui/scientific-modules/lidar/live" [accepted]
+INFO:     connection open
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+INFO:     127.0.0.1:49170 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49171 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49172 - "WebSocket /api/syk-ui/scientific-modules/astronomy/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49179 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49180 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49181 - "WebSocket /api/syk-ui/scientific-modules/chemistry/live" [accepted]
+INFO:     connection open
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+INFO:     127.0.0.1:49188 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49189 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49190 - "WebSocket /api/syk-ui/scientific-modules/spectral/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49197 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49198 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49200 - "WebSocket /api/syk-ui/scientific-modules/thermal/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49207 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49208 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49209 - "WebSocket /api/syk-ui/scientific-modules/magnetometer/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49216 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49217 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49218 - "WebSocket /api/syk-ui/scientific-modules/gravimeter/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49225 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49226 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49227 - "WebSocket /api/syk-ui/scientific-modules/ert/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49234 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49235 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49236 - "WebSocket /api/syk-ui/scientific-modules/gpr/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49243 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49244 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49245 - "WebSocket /api/syk-ui/scientific-modules/seismic/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49252 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49253 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49254 - "WebSocket /api/syk-ui/scientific-modules/hydro/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49261 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49262 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49263 - "WebSocket /api/syk-ui/scientific-modules/botany/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49270 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49271 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49272 - "WebSocket /api/syk-ui/scientific-modules/soil/live" [accepted]
+INFO:     connection open
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pc\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Varolan bir bağlantı uzaktaki bir ana bilgisayar tarafından zorla kapatıldı
+INFO:     127.0.0.1:49279 - "WebSocket /api/syk-ui/dtse/live" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:49280 - "WebSocket /api/syk-ui/live" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:49282 - "WebSocket /api/syk-ui/scientific-modules/water/live" [accepted]
+INFO:     connection open

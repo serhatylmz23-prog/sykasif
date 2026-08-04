@@ -59,6 +59,7 @@ def test_src_altinda_tek_urun_paketi_var() -> None:
         "syk_core/ovm",
         "syk_core/runtime_device_link",
         "syk_core/runtime_field_link",
+        "syk_core/runtime_hardware_validation",
         "syk_core/runtime_kernel",
         "syk_core/runtime_prototype",
         "syk_core/runtime_terminal",

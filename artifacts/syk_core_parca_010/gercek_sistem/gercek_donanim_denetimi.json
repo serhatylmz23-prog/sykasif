@@ -1,0 +1,165 @@
+{
+  "sistem": "Windows",
+  "toplam_denetim_sayısı": 3,
+  "başarılı_denetim_sayısı": 3,
+  "başarısız_denetim_sayısı": 0,
+  "gerçek_sistem_denetimi": true,
+  "sonuçlar": [
+    {
+      "denetim_türü": "usb",
+      "durum": "başarılı",
+      "başarılı": true,
+      "başlama_zamanı": "2026-08-04T22:51:10.042878+00:00",
+      "bitiş_zamanı": "2026-08-04T22:51:10.750172+00:00",
+      "kayıt_sayısı": 12,
+      "kayıtlar": [
+        {
+          "cihaz_kimliği": "USB\\VID_046D&PID_C52F&MI_00\\7&1F51DFD6&0&0000",
+          "cihaz_adı": "USB Giri� Ayg�t�",
+          "üretici": "(Standart sistem ayg�tlar�)",
+          "durum": "OK",
+          "pnp_kimliği": "USB\\VID_046D&PID_C52F&MI_00\\7&1F51DFD6&0&0000"
+        },
+        {
+          "cihaz_kimliği": "USB\\VID_046D&PID_C52B\\6&35CEE406&1&2",
+          "cihaz_adı": "USB Bile�ik Ayg�t",
+          "üretici": "(Standart USB Ana Bilgisayar Denetleyicisi)",
+          "durum": "OK",
+          "pnp_kimliği": "USB\\VID_046D&PID_C52B\\6&35CEE406&1&2"
+        },
+        {
+          "cihaz_kimliği": "USBSTOR\\DISK&VEN_WD&PROD_ELEMENTS_25A2&REV_1021\\57583931453137324659564E&0",
+          "cihaz_adı": "WD Elements 25A2 USB Device",
+          "üretici": "(Standart disk s�r�c�leri)",
+          "durum": "OK",
+          "pnp_kimliği": "USBSTOR\\DISK&VEN_WD&PROD_ELEMENTS_25A2&REV_1021\\57583931453137324659564E&0"
+        },
+        {
+          "cihaz_kimliği": "USB\\VID_05E3&PID_0610\\5&603AA5A&0&10",
+          "cihaz_adı": "Genel USB Hub",
+          "üretici": "(Standart USB HUB'lar�)",
+          "durum": "OK",
+          "pnp_kimliği": "USB\\VID_05E3&PID_0610\\5&603AA5A&0&10"
+        },
+        {
+          "cihaz_kimliği": "USB\\VID_046D&PID_C52F&MI_01\\7&1F51DFD6&0&0001",
+          "cihaz_adı": "USB Giri� Ayg�t�",
+          "üretici": "(Standart sistem ayg�tlar�)",
+          "durum": "OK",
+          "pnp_kimliği": "USB\\VID_046D&PID_C52F&MI_01\\7&1F51DFD6&0&0001"
+        },
+        {
+          "cihaz_kimliği": "USB\\VID_046D&PID_C52F\\6&35CEE406&1&1",
+          "cihaz_adı": "USB Bile�ik Ayg�t",
+          "üretici": "(Standart USB Ana Bilgisayar Denetleyicisi)",
+          "durum": "OK",
+          "pnp_kimliği": "USB\\VID_046D&PID_C52F\\6&35CEE406&1&1"
+        },
+        {
+          "cihaz_kimliği": "USB\\ROOT_HUB30\\4&168933EA&0&0",
+          "cihaz_adı": "USB K�k Hub (USB 3.0)",
+          "üretici": "(Standart USB HUB'lar�)",
+          "durum": "OK",
+          "pnp_kimliği": "USB\\ROOT_HUB30\\4&168933EA&0&0"
+        },
+        {
+          "cihaz_kimliği": "USB\\VID_046D&PID_C52B&MI_00\\7&2107E682&0&0000",
+          "cihaz_adı": "Logitech USB Input Device",
+          "üretici": "Logitech (x64)",
+          "durum": "OK",
+          "pnp_kimliği": "USB\\VID_046D&PID_C52B&MI_00\\7&2107E682&0&0000"
+        },
+        {
+          "cihaz_kimliği": "USB\\VID_046D&PID_C52B&MI_01\\7&2107E682&0&0001",
+          "cihaz_adı": "USB Giri� Ayg�t�",
+          "üretici": "(Standart sistem ayg�tlar�)",
+          "durum": "OK",
+          "pnp_kimliği": "USB\\VID_046D&PID_C52B&MI_01\\7&2107E682&0&0001"
+        },
+        {
+          "cihaz_kimliği": "USB\\VID_046D&PID_C52B&MI_02\\7&2107E682&0&0002",
+          "cihaz_adı": "USB Giri� Ayg�t�",
+          "üretici": "(Standart sistem ayg�tlar�)",
+          "durum": "OK",
+          "pnp_kimliği": "USB\\VID_046D&PID_C52B&MI_02\\7&2107E682&0&0002"
+        },
+        {
+          "cihaz_kimliği": "USB\\VID_148F&PID_3070\\1.0",
+          "cihaz_adı": "802.11n USB Wireless LAN Card",
+          "üretici": "Ralink Technology, Corp.",
+          "durum": "OK",
+          "pnp_kimliği": "USB\\VID_148F&PID_3070\\1.0"
+        },
+        {
+          "cihaz_kimliği": "USB\\VID_1058&PID_25A2\\57583931453137324659564E",
+          "cihaz_adı": "USB Y���n Depolama Ayg�t�",
+          "üretici": "Uyumlu USB depolama ayg�t�",
+          "durum": "OK",
+          "pnp_kimliği": "USB\\VID_1058&PID_25A2\\57583931453137324659564E"
+        }
+      ],
+      "hata": null
+    },
+    {
+      "denetim_türü": "seri",
+      "durum": "başarılı",
+      "başarılı": true,
+      "başlama_zamanı": "2026-08-04T22:51:10.750187+00:00",
+      "bitiş_zamanı": "2026-08-04T22:51:11.177573+00:00",
+      "kayıt_sayısı": 1,
+      "kayıtlar": [
+        {
+          "bağlantı_noktası": "COM1",
+          "açıklama": "�leti�im Ba�lant� Noktas� (COM1)",
+          "üretici": null,
+          "cihaz_kimliği": "ACPI\\PNP0501\\0"
+        }
+      ],
+      "hata": null
+    },
+    {
+      "denetim_türü": "ağ",
+      "durum": "başarılı",
+      "başarılı": true,
+      "başlama_zamanı": "2026-08-04T22:51:11.177587+00:00",
+      "bitiş_zamanı": "2026-08-04T22:51:14.034498+00:00",
+      "kayıt_sayısı": 2,
+      "kayıtlar": [
+        {
+          "arayüz_adı": "Wi-Fi",
+          "durum": "Up",
+          "etkin": true,
+          "mac_adresi": "C8-3A-35-CC-5D-65",
+          "ip_adresleri": [
+            "192.168.1.115"
+          ],
+          "ağ_geçidi": "192.168.1.1",
+          "dns_adresleri": [
+            "fe80::5e63:bfff:fea8:f58a",
+            "192.168.1.1"
+          ]
+        },
+        {
+          "arayüz_adı": "Ethernet",
+          "durum": "Disconnected",
+          "etkin": false,
+          "mac_adresi": "00-D8-61-73-5E-5A",
+          "ip_adresleri": [
+            "169.254.192.247"
+          ],
+          "ağ_geçidi": null,
+          "dns_adresleri": [
+            "192.168.0.1"
+          ]
+        }
+      ],
+      "hata": null
+    }
+  ],
+  "çalıştırma": {
+    "araç": "syk_gercek_donanim_denetle",
+    "sistem": "Windows",
+    "çıktı_dosyası": "artifacts\\syk_core_parca_010\\gercek_sistem\\gercek_donanim_denetimi.json",
+    "başarısız_denetimde_hata": false
+  }
+}
