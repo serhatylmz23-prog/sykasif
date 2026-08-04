@@ -1,0 +1,11 @@
+﻿SPRINT=SPR-007
+KONU=Cihazlar arası güvenli gerçek iletişim
+ONCEKI_DAL=spr-006-runtime-terminal
+BASLANGIC_COMMITI=54e8741 feat(runtime): complete runtime terminal (SPR-006)
+HEDEF_1=Samsung tablet ile ana makine iletişimi
+HEDEF_2=iPhone ile ana makine iletişimi
+HEDEF_3=Yetkili cihaz doğrulama
+HEDEF_4=Komut gönderme ve sonuç alma
+HEDEF_5=Bağlantı kopması ve yeniden bağlanma
+HEDEF_6=İzinsiz dış veri çıkışını engelleme
+HEDEF_7=Canlı ağ ve tarayıcı doğrulaması

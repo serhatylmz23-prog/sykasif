@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 from pathlib import Path
 import tomllib
@@ -57,7 +57,9 @@ def test_src_altinda_tek_urun_paketi_var() -> None:
         "syk_core/live_analysis",
         "syk_core/live_persistence",
         "syk_core/ovm",
+        "syk_core/runtime_device_link",
         "syk_core/runtime_kernel",
+        "syk_core/runtime_terminal",
         "syk_finans_otagi",
         "syk_jarmin",
         "syk_simulasyon",

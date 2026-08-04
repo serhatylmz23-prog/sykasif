@@ -1,0 +1,19 @@
+﻿SPR-007
+
+PAKET-001
+
+MODULLER
+
+- cihaz_oturumu
+- cihaz_yonetici
+- baglanti
+- guvenlik
+- protokol
+
+HEDEF
+
+Tablet
+Telefon
+Terminal
+Yetkili cihaz doğrulaması
+Canlı bağlantı
