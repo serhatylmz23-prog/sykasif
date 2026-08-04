@@ -1,0 +1,100 @@
+﻿                    bildirim_merkezi.abone_sil(
+                        runtime_olayi_geldi
+                    )
+
+                if olay_yayin_gorevi is not None:
+                    if not olay_yayin_gorevi.done():
+                        olay_yayin_gorevi.cancel()
+
+                    await asyncio.gather(
+                        olay_yayin_gorevi,
+                        return_exceptions=True,
+                    )
+
+        return uygulama
+
+
+def uygulama_olustur(
+    *,
+    hesap_deposu_etkin: bool = True,
+) -> FastAPI:
+
+    olay_gunlugu_yolu = os.getenv(
+        "SYK_RUNTIME_OLAY_GUNLUGU"
+    )
+
+    servis = RuntimeServisi(
+        olay_gunlugu_yolu or None
+    )
+
+    gorunum = RuntimeAnlikGorunumSaglayicisi(
+        RuntimeIzlemeSaglayicisi(servis)
+    )
+
+    guvenli_gorunum = SecureExportViewProvider(
+        gorunum,
+        ExportSecurityProfile.from_environment(
+            role=ExportRole.PUBLIC,
+        ),
+    )
+
+    disa_aktarim = RuntimeDisaAktarim(
+        RuntimeJsonSaglayicisi(guvenli_gorunum),
+        RuntimeCsvSaglayicisi(guvenli_gorunum),
+        RuntimeHtmlSaglayicisi(guvenli_gorunum),
+        RuntimeMarkdownSaglayicisi(guvenli_gorunum),
+        RuntimeXmlSaglayicisi(guvenli_gorunum),
+        RuntimeYamlSaglayicisi(guvenli_gorunum),
+    )
+
+    websocket_yayinci = RuntimeWebSocketYayincisi(
+        gorunum,
+        servis.durum.sistem_hazirlik_ozeti,
+    )
+
+    oturum_yoneticisi = (
+        RuntimeOturumYoneticisi.ortamdan_olustur()
+    )
+
+    hesap_deposu = (
+        RuntimeHesapDeposu()
+        if os.name == "nt" and hesap_deposu_etkin
+        else None
+    )
+
+    if oturum_yoneticisi is None and hesap_deposu is not None:
+        gecici_parola = secrets.token_urlsafe(32)
+        oturum_yoneticisi = RuntimeOturumYoneticisi(
+            kullanici_adi="__hesap_deposu__",
+            parola_ozeti=parola_ozeti_uret(
+                gecici_parola,
+            ),
+            oturum_anahtari=secrets.token_bytes(32),
+        )
+
+    uygulama = RuntimeFastApiSunucusu(
+        disa_aktarim,
+        websocket_yayinci,
+        servis.durum,
+        runtime_servisi=servis,
+        oturum_yoneticisi=oturum_yoneticisi,
+        hesap_deposu=hesap_deposu,
+    ).olustur()
+
+    uygulama.state.runtime_servisi = servis
+    uygulama.state.runtime_olay_gunlugu_yolu = (
+        olay_gunlugu_yolu
+    )
+
+    return uygulama
+
+
+if __name__ == "__main__":
+
+    import uvicorn
+
+    uvicorn.run(
+        uygulama_olustur(),
+        host="0.0.0.0",
+        port=8000,
+    )

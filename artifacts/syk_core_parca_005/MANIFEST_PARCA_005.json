@@ -1,0 +1,16 @@
+﻿{
+    "branch":  "spr-003-ui-runtime-integration-fix",
+    "ui":  "32/32",
+    "shaKayit":  2080,
+    "kesinlikIddiasi":  false,
+    "runtime":  "OK",
+    "integration":  "117/117",
+    "ad":  "SYK_CORE_PARCA_005",
+    "dogrulama":  "99.9%",
+    "tarih":  "2026-08-04T22:01:23",
+    "test":  "1375 passed",
+    "insanOnayi":  true,
+    "commit":  "64572cf7f4c8e56f70dd952c29f795e6fbfef8d9",
+    "dagitim":  "5/5",
+    "durum":  "MUHUR_ADAYI"
+}

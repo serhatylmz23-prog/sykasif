@@ -1,0 +1,133 @@
+﻿D:\sykasif_repo\sykasif\tests\test_pyproject_bagimlilik_sozlesmesi.py:23: deger.startswith("uvicorn>=")
+D:\sykasif_repo\sykasif\tests\test_runtime_fastapi_core.py:27: "FASTAPI-001"
+D:\sykasif_repo\sykasif\tests\test_runtime_fastapi_core.py:38: "FASTAPI-001"
+D:\sykasif_repo\sykasif\tests\test_runtime_terminal_playwright_e2e.py:11: import uvicorn
+D:\sykasif_repo\sykasif\tests\test_runtime_terminal_playwright_e2e.py:98: "Uvicorn test sunucusu zamanında hazır olmadı."
+D:\sykasif_repo\sykasif\tests\test_runtime_terminal_playwright_e2e.py:109: ayar = uvicorn.Config(
+D:\sykasif_repo\sykasif\tests\test_runtime_terminal_playwright_e2e.py:119: sunucu = uvicorn.Server(ayar)
+D:\sykasif_repo\sykasif\tests\test_runtime_terminal_playwright_e2e.py:124: name="sykasif-dsp-0009-uvicorn",
+D:\sykasif_repo\sykasif\tests\test_runtime_terminal_playwright_e2e.py:144: "Uvicorn test sunucusu kapatılamadı."
+D:\sykasif_repo\sykasif\tests\test_runtime_ui_sunucusu.py:9: ekran = client.get("/syk-ui-screen")
+D:\sykasif_repo\sykasif\tests\test_runtime_ui_sunucusu.py:27: ilk_ekran = client.get("/syk-ui-screen")
+D:\sykasif_repo\sykasif\tests\test_runtime_ui_sunucusu.py:28: ikinci_ekran = client.get("/syk-ui-screen")
+D:\sykasif_repo\sykasif\tests\test_syfinans_runtime_routes.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_syfinans_runtime_routes.py:12: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_adaptive_environment_tarayici.py:14: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_adaptive_environment_tarayici.py:15: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_balik_syframe_modulleri.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_balik_syframe_modulleri.py:8: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_balik_syframe_modulleri.py:13: ekran = client.get("/syk-ui-screen")
+D:\sykasif_repo\sykasif\tests\test_ui_balik_syframe_tarayici.py:8: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_balik_syframe_tarayici.py:9: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_bilimsel_moduller_tarayici.py:37: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_bilimsel_moduller_tarayici.py:38: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_bilimsel_moduller_toplu.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_bilimsel_moduller_toplu.py:28: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_bilimsel_moduller_toplu.py:33: screen = client.get("/syk-ui-screen")
+D:\sykasif_repo\sykasif\tests\test_ui_canli_tarayici.py:8: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_canli_tarayici.py:9: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_dashboard_canli.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_dashboard_canli.py:8: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_dashboard_canli.py:13: screen = client.get("/syk-ui-screen")
+D:\sykasif_repo\sykasif\tests\test_ui_device_hub_assets.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_device_hub_assets.py:8: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_device_hub_assets.py:13: screen = client.get("/syk-ui-screen")
+D:\sykasif_repo\sykasif\tests\test_ui_device_hub_tarayici.py:37: "http://127.0.0.1:8013",
+D:\sykasif_repo\sykasif\tests\test_ui_device_hub_tarayici.py:41: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_device_hub_tarayici.py:42: f"{base_url}/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_dtse_attention_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_dtse_attention_api.py:10: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_dtse_evidence_card_tarayici.py:14: "http://127.0.0.1:8013",
+D:\sykasif_repo\sykasif\tests\test_ui_dtse_evidence_card_tarayici.py:18: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_dtse_evidence_card_tarayici.py:19: f"{base_url}/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_dtse_evidence_focus_tarayici.py:13: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_dtse_evidence_focus_tarayici.py:14: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py:14: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py:15: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_goruntu_dtse_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_goruntu_dtse_api.py:10: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_goruntu_dtse_kanit_api.py:3: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_goruntu_dtse_kanit_api.py:12: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_kasif_icon_tarayici.py:14: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_kasif_icon_tarayici.py:15: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_live_environment_tarayici.py:14: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_live_environment_tarayici.py:15: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_live_environment_tarayici.py:28: "http://127.0.0.1:8013"
+D:\sykasif_repo\sykasif\tests\test_ui_media_upload_preview_tarayici.py:14: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_media_upload_preview_tarayici.py:15: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_media_upload_tarayici.py:14: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_media_upload_tarayici.py:15: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_mobile_control_tarayici.py:14: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_mobile_control_tarayici.py:15: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_mobile_device_runtime_tarayici.py:14: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_mobile_device_runtime_tarayici.py:15: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_mobile_offline_runtime_tarayici.py:13: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_mobile_offline_runtime_tarayici.py:14: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_mobile_sensor_runtime_tarayici.py:13: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_mobile_sensor_runtime_tarayici.py:14: "http://127.0.0.1:8013/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_adapter_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_adapter_api.py:8: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_adapter_api.py:56: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_analysis_syframe_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_analysis_syframe_api.py:59: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_analysis_syframe_websocket.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_analysis_syframe_websocket.py:50: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_api_tarayici.py:9: "http://127.0.0.1:8013",
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_api_tarayici.py:13: "SYK_UI_TEST_URL",
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_api_tarayici.py:14: f"{base_url}/syk-ui-screen",
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_api_views.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_api_views.py:8: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_api_views.py:13: screen = client.get("/syk-ui-screen")
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_ble_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_ble_api.py:59: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_analysis_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_analysis_api.py:40: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_evidence_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_evidence_api.py:61: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_evidence_package_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_evidence_package_api.py:67: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_hub_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_hub_api.py:86: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_manager_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_manager_api.py:68: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_package_seal_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_package_seal_api.py:87: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_recording_pipeline_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_recording_pipeline_api.py:39: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_session_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_device_session_api.py:62: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_runtime_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_runtime_api.py:8: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_runtime_live.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_runtime_live.py:8: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_runtime_live.py:46: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_serial_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_serial_api.py:52: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_tcp_api.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_scientific_tcp_api.py:39: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_static_routes.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_static_routes.py:7: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_toplu_entegrasyon.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\tests\test_ui_toplu_entegrasyon.py:8: app = FastAPI()
+D:\sykasif_repo\sykasif\tests\test_ui_toplu_entegrasyon.py:13: screen = client.get("/syk-ui-screen")
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_durumu.py:35: Sınıf mevcut dış sözleşmeyi korur. Terminal, FastAPI ve olay adaptörleri
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_fastapi_sunucusu.py:10: FastAPI,
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_fastapi_sunucusu.py:76: def olustur(self) -> FastAPI:
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_fastapi_sunucusu.py:78: uygulama = FastAPI(
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_fastapi_sunucusu.py:1093: ) -> FastAPI:
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_fastapi_sunucusu.py:1167: import uvicorn
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_fastapi_sunucusu.py:1169: uvicorn.run(
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_ui_sunucusu.py:3: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_ui_sunucusu.py:7: def _mevcut_uygulamayi_bul() -> FastAPI:
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_ui_sunucusu.py:10: if isinstance(aday, FastAPI):
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_ui_sunucusu.py:21: if isinstance(aday, FastAPI):
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_ui_sunucusu.py:25: "Mevcut FastAPI uygulamasÄ± veya uygulama fabrikasÄ± bulunamadÄ±."
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_ui_sunucusu.py:29: def _ui_kurulu_mu(uygulama: FastAPI) -> bool:
+D:\sykasif_repo\sykasif\src\syk_simulasyon\runtime_ui_sunucusu.py:35: "/syk-ui-screen" in yollar
+D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\integration.py:1: from fastapi import FastAPI
+D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\integration.py:8: def install_ui(app: FastAPI) -> FastAPI:
+D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\screen_routes.py:13: @router.get("/syk-ui-screen", include_in_schema=False)
+D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\static_routes.py:9: from fastapi.staticfiles import StaticFiles
+D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\static_routes.py:22: StaticFiles(directory=STATIC),
+D:\sykasif_repo\sykasif\src\syk_simulasyon_veri_modeli.egg-info\requires.txt:2: uvicorn<1,>=0.51
+D:\sykasif_repo\sykasif\pyproject.toml:12: "uvicorn>=0.51,<1",
