@@ -60,6 +60,7 @@ def test_src_altinda_tek_urun_paketi_var() -> None:
         "syk_core/runtime_device_link",
         "syk_core/runtime_field_link",
         "syk_core/runtime_kernel",
+        "syk_core/runtime_prototype",
         "syk_core/runtime_terminal",
         "syk_finans_otagi",
         "syk_jarmin",
