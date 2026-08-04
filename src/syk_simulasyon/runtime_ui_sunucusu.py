@@ -4,8 +4,6 @@ from fastapi import FastAPI
 
 from . import runtime_fastapi_sunucusu as mevcut_sunucu
 from .syk_ui import install_ui
-
-
 def _mevcut_uygulamayi_bul() -> FastAPI:
     for ad in ("app", "uygulama"):
         aday = getattr(mevcut_sunucu, ad, None)
@@ -24,7 +22,7 @@ def _mevcut_uygulamayi_bul() -> FastAPI:
                 return aday
 
     raise RuntimeError(
-        "Mevcut FastAPI uygulaması veya uygulama fabrikası bulunamadı."
+        "Mevcut FastAPI uygulamasÄ± veya uygulama fabrikasÄ± bulunamadÄ±."
     )
 
 
@@ -40,6 +38,59 @@ def _ui_kurulu_mu(uygulama: FastAPI) -> bool:
 
 
 app = _mevcut_uygulamayi_bul()
+
+# === SYK_GERCEK_APP_KESIN_BAGLANTI_BASLANGIC ===
+
+from syk_simulasyon.syk_ui_runtime.api_routes import (
+    router as syk_ui_router,
+)
+
+from syk_simulasyon.syk_ui_runtime.syfinans_runtime_routes import (
+    finans_router,
+)
+
+
+def _syk_uygulama_yolu_var(
+    yol: str,
+) -> bool:
+    return any(
+        str(
+            getattr(
+                kayit,
+                "path",
+                "",
+            )
+        ) == yol
+        or str(
+            getattr(
+                kayit,
+                "path",
+                "",
+            )
+        ).startswith(
+            yol.rstrip("/") + "/"
+        )
+        for kayit in app.routes
+    )
+
+
+if not _syk_uygulama_yolu_var(
+    "/api/syk-ui/mobile-runtime"
+):
+    app.include_router(
+        syk_ui_router
+    )
+
+
+if not _syk_uygulama_yolu_var(
+    "/syfinans/runtime"
+):
+    app.include_router(
+        finans_router
+    )
+
+# === SYK_GERCEK_APP_KESIN_BAGLANTI_BITIS ===
+
 
 if not _ui_kurulu_mu(app):
     install_ui(app)
