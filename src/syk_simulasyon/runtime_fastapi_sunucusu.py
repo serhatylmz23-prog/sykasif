@@ -47,6 +47,12 @@ from .runtime_terminal import RuntimeTerminal
 from .runtime_websocket import RuntimeWebSocketYayincisi
 from .runtime_xml import RuntimeXmlSaglayicisi
 from .runtime_yaml import RuntimeYamlSaglayicisi
+from .syk_ui_runtime.terminal_routes import (
+    terminal_router as syk_terminal_router,
+)
+from .syk_ui_runtime.syfinans_runtime_routes import (
+    finans_router as syk_finans_router,
+)
 
 
 CIHAZ_KIMLIGI_CEREZI_ADI = "syk_taninmis_cihaz"
@@ -1084,6 +1090,7 @@ document.getElementById("{form_kimligi}").addEventListener(
                         return_exceptions=True,
                     )
 
+
         return uygulama
 
 
@@ -1158,6 +1165,27 @@ def uygulama_olustur(
     uygulama.state.runtime_olay_gunlugu_yolu = (
         olay_gunlugu_yolu
     )
+
+
+    # SYK_TERMINAL_FINANS_DOGRUDAN_ROUTE_BAGLANTISI
+    mevcut_yollar = {
+        getattr(route, "path", None)
+        for route in uygulama.router.routes
+    }
+
+    for route in syk_terminal_router.routes:
+        if getattr(route, "path", None) not in mevcut_yollar:
+            uygulama.router.routes.append(route)
+            mevcut_yollar.add(
+                getattr(route, "path", None)
+            )
+
+    for route in syk_finans_router.routes:
+        if getattr(route, "path", None) not in mevcut_yollar:
+            uygulama.router.routes.append(route)
+            mevcut_yollar.add(
+                getattr(route, "path", None)
+            )
 
     return uygulama
 
