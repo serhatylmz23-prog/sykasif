@@ -156,3 +156,48 @@ for _syk_project_route in reversed(
         _syk_project_insert_index,
         _syk_project_route,
     )
+
+# SYK_RESEARCH_RUNTIME_ROUTER_BAGLANTISI
+from syk_simulasyon.syk_ui_runtime.research_routes import (
+    research_router as syk_research_router,
+)
+
+_syk_research_paths = {
+    getattr(route, "path", None)
+    for route in syk_research_router.routes
+}
+
+app.router.routes[:] = [
+    route
+    for route in app.router.routes
+    if getattr(route, "path", None)
+    not in _syk_research_paths
+]
+
+_syk_research_insert_index = len(
+    app.router.routes
+)
+
+for _syk_index, _syk_route in enumerate(
+    app.router.routes
+):
+    _syk_path = getattr(
+        _syk_route,
+        "path",
+        "",
+    )
+
+    if (
+        "{" in _syk_path
+        and _syk_path.startswith("/api/syk-ui/")
+    ):
+        _syk_research_insert_index = _syk_index
+        break
+
+for _syk_research_route in reversed(
+    syk_research_router.routes
+):
+    app.router.routes.insert(
+        _syk_research_insert_index,
+        _syk_research_route,
+    )
