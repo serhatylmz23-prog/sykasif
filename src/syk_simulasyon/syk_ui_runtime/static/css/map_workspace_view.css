@@ -1,0 +1,285 @@
+.syk-map-workspace-panel {
+    min-height: 620px;
+    padding: 18px;
+    border: 1px solid rgba(120, 190, 220, 0.25);
+    border-radius: 18px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(9, 24, 32, 0.97),
+            rgba(13, 38, 48, 0.94)
+        );
+    overflow: hidden;
+}
+
+.syk-map-workspace-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.syk-map-workspace-header strong {
+    display: block;
+    margin-top: 4px;
+    font-size: 1.25rem;
+}
+
+.syk-map-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    opacity: 0.65;
+}
+
+.syk-map-workspace-status {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.syk-map-workspace-status span {
+    padding: 7px 10px;
+    border: 1px solid rgba(130, 210, 230, 0.2);
+    border-radius: 999px;
+    background: rgba(8, 27, 35, 0.72);
+    font-size: 0.78rem;
+}
+
+.syk-map-workspace-layout {
+    display: grid;
+    grid-template-columns: 190px minmax(360px, 1fr) 200px;
+    gap: 14px;
+}
+
+.syk-map-layer-panel,
+.syk-map-information-panel {
+    padding: 13px;
+    border: 1px solid rgba(130, 210, 230, 0.16);
+    border-radius: 14px;
+    background: rgba(3, 18, 24, 0.58);
+}
+
+.syk-map-layer-panel h3,
+.syk-map-information-panel h3 {
+    margin: 0 0 12px;
+    font-size: 0.88rem;
+}
+
+.syk-map-layer-button {
+    width: 100%;
+    display: grid;
+    gap: 3px;
+    margin-bottom: 7px;
+    padding: 9px;
+    text-align: left;
+    border: 1px solid rgba(120, 190, 220, 0.18);
+    border-radius: 10px;
+    background: rgba(18, 54, 67, 0.52);
+    color: inherit;
+    cursor: pointer;
+}
+
+.syk-map-layer-button[data-visible="false"] {
+    opacity: 0.38;
+}
+
+.syk-map-layer-button small {
+    opacity: 0.58;
+}
+
+.syk-map-canvas {
+    position: relative;
+    min-height: 520px;
+    border: 1px solid rgba(125, 205, 230, 0.22);
+    border-radius: 16px;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(40, 130, 150, 0.22),
+            transparent 42%
+        ),
+        linear-gradient(
+            160deg,
+            rgba(9, 41, 49, 0.96),
+            rgba(10, 29, 37, 0.98)
+        );
+    overflow: hidden;
+}
+
+.syk-map-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(
+            rgba(130, 210, 230, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(130, 210, 230, 0.08) 1px,
+            transparent 1px
+        );
+    background-size: 36px 36px;
+}
+
+.syk-map-shallow-zone {
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    bottom: 4%;
+    height: 24%;
+    border: 1px dashed rgba(85, 185, 210, 0.46);
+    border-radius: 48% 52% 12px 12px;
+    background: rgba(25, 105, 130, 0.13);
+}
+
+.syk-map-shallow-zone span {
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+    font-size: 0.72rem;
+    opacity: 0.68;
+}
+
+.syk-map-sonar-sweep {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    width: 68%;
+    height: 36%;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 10px 10px;
+    background:
+        repeating-radial-gradient(
+            ellipse at bottom,
+            transparent 0 18px,
+            rgba(85, 210, 230, 0.2) 19px 20px
+        );
+    animation: syk-sonar-pulse 2.8s infinite ease-in-out;
+}
+
+.syk-map-ar-overlay {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 8px 11px;
+    border-radius: 999px;
+    background: rgba(55, 155, 180, 0.2);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+}
+
+.syk-map-pin {
+    position: absolute;
+    display: grid;
+    justify-items: center;
+    gap: 3px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+}
+
+.syk-map-pin span {
+    width: 15px;
+    height: 15px;
+    border: 2px solid currentColor;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    background: rgba(20, 110, 135, 0.85);
+}
+
+.syk-map-pin small {
+    padding: 3px 6px;
+    border-radius: 7px;
+    background: rgba(5, 19, 25, 0.82);
+    white-space: nowrap;
+}
+
+.syk-map-measurement-line {
+    position: absolute;
+    left: 33%;
+    top: 48%;
+    width: 34%;
+    height: 1px;
+    border-top: 1px dashed rgba(175, 225, 235, 0.68);
+    transform-origin: left center;
+}
+
+.syk-map-measurement-line span {
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    padding: 3px 6px;
+    border-radius: 6px;
+    background: rgba(5, 19, 25, 0.8);
+    font-size: 0.72rem;
+}
+
+.syk-map-center-marker {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(170, 230, 240, 0.48);
+    border-radius: 50%;
+}
+
+.syk-map-center-marker span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.syk-map-information-panel dl {
+    display: grid;
+    gap: 9px;
+    margin: 0;
+}
+
+.syk-map-information-panel dl div {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(130, 210, 230, 0.1);
+}
+
+.syk-map-information-panel dt {
+    font-size: 0.7rem;
+    opacity: 0.55;
+}
+
+.syk-map-information-panel dd {
+    margin: 3px 0 0;
+    font-size: 0.83rem;
+    overflow-wrap: anywhere;
+}
+
+@keyframes syk-sonar-pulse {
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: translateX(-50%) scale(0.96);
+    }
+
+    50% {
+        opacity: 0.95;
+        transform: translateX(-50%) scale(1.02);
+    }
+}
+
+@media (max-width: 980px) {
+    .syk-map-workspace-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .syk-map-canvas {
+        min-height: 460px;
+        order: -1;
+    }
+}
