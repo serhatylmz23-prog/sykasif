@@ -12,6 +12,10 @@ from terminal_v2.core.api import router as api_router
 from terminal_v2.core.connection_registry import registry
 from terminal_v2.core.sse import router as sse_router
 from terminal_v2.core.device_routes import router as device_router
+from terminal_v2.core.panel_routes import router as panel_router
+from terminal_v2.core.panel_broadcast_routes import router as panel_broadcast_router
+from terminal_v2.core.runtime_state_routes import router as runtime_state_router
+from terminal_v2.core.module_card_routes import router as module_card_router
 from terminal_v2.core.tablet_validation import (
     tablet_validation_registry,
 )
@@ -43,6 +47,10 @@ def create_app() -> FastAPI:
     app.include_router(api_router)
     app.include_router(sse_router)
     app.include_router(device_router)
+    app.include_router(panel_router)
+    app.include_router(panel_broadcast_router)
+    app.include_router(runtime_state_router)
+    app.include_router(module_card_router)
 
     app.mount(
         "/static",

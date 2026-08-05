@@ -1,0 +1,16 @@
+﻿{
+  "sprint": "SPRINT_041",
+  "phase": "RUNTIME_STATE_API_SSE_BAGLANTISI_V1",
+  "status": "PASS",
+  "language": "tr-TR",
+  "progress": {
+    "envanter": 100,
+    "ortak_runtime_state": 100,
+    "sse_panel_yayini": 100,
+    "cihaz_senkronizasyonu": 100,
+    "canli_modul_kartlari": 0,
+    "saha_dogrulamasi": 0,
+    "sprint_toplam": 92
+  },
+  "next": "CANLI_MODUL_KARTLARI_V1"
+}
