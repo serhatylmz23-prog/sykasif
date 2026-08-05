@@ -1,0 +1,12 @@
+﻿{
+    "paket":  "SYK_DSP_0019_07",
+    "durum":  "dijital_kapanis_adayi",
+    "gercek_donanim_saha_dogrulamasi":  false,
+    "simulator_izolasyonu":  true,
+    "garmin_runtime":  true,
+    "sonar_runtime":  true,
+    "gps_runtime":  true,
+    "manifest_sha":  true,
+    "gercek_cihaz_verisi_uretildi":  false,
+    "olusturulma":  "2026-08-05T07:22:49.8480989Z"
+}
