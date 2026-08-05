@@ -1,0 +1,34 @@
+SPR-011 PAKET-006 RUNTIME 8013 PATCH SÖZLEŞME ÖZETİ
+
+ANA_DOSYA=src\syk_simulasyon\runtime_ui_sunucusu.py
+SATIR_SAYISI=489
+ROUTE_SAYISI=0
+FONKSIYON_SAYISI=3
+SINIF_SAYISI=0
+SUNUCU_TERIMLERI=FastAPI
+PORT_ADAYLARI=
+
+UYGULAMA_NESNESI_ADAYLARI:
+YOK
+
+BASLATMA_FONKSIYONU_ADAYLARI:
+YOK
+
+ROUTE_ISLEYICI_ADAYLARI:
+YOK
+
+MEVCUT_ROUTES:
+YOK
+
+PLANLANAN_UGR_ROUTES:
+GET /api/ugr/health
+GET /api/ugr/snapshot
+GET /api/ugr/icons/{ikon_kimligi}
+POST /api/ugr/icons/{ikon_kimligi}/state
+POST /api/ugr/icons/{ikon_kimligi}/view
+GET /api/ugr/events
+GET /api/ugr/events/history
+GET /static/icons/ugr/*
+
+PATCH_DURUMU=HAZIRLIK_TAMAMLANDI
+ANA_SUNUCU_HENUZ_DEGISTIRILMEDI

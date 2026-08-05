@@ -1,0 +1,3192 @@
+{
+  "sema": "sykasif.runtime-8013.app-route-diagnosis.v1",
+  "kaynak_ast": {
+    "kaynak": "src/syk_simulasyon/runtime_ui_sunucusu.py",
+    "satir_sayisi": 501,
+    "atamalar": [
+      {
+        "satir": 40,
+        "hedefler": [
+          "app"
+        ],
+        "deger": "_mevcut_uygulamayi_bul()"
+      },
+      {
+        "satir": 123,
+        "hedefler": [
+          "_syk_project_route_paths"
+        ],
+        "deger": "{getattr(route, 'path', None) for route in syk_project_router.routes}"
+      },
+      {
+        "satir": 128,
+        "hedefler": [
+          "app.router.routes[:]"
+        ],
+        "deger": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_project_route_paths]"
+      },
+      {
+        "satir": 135,
+        "hedefler": [
+          "_syk_project_insert_index"
+        ],
+        "deger": "len(app.router.routes)"
+      },
+      {
+        "satir": 171,
+        "hedefler": [
+          "_syk_research_paths"
+        ],
+        "deger": "{getattr(route, 'path', None) for route in syk_research_router.routes}"
+      },
+      {
+        "satir": 176,
+        "hedefler": [
+          "app.router.routes[:]"
+        ],
+        "deger": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_research_paths]"
+      },
+      {
+        "satir": 183,
+        "hedefler": [
+          "_syk_research_insert_index"
+        ],
+        "deger": "len(app.router.routes)"
+      },
+      {
+        "satir": 216,
+        "hedefler": [
+          "_syk_map_paths"
+        ],
+        "deger": "{getattr(route, 'path', None) for route in syk_map_workspace_router.routes}"
+      },
+      {
+        "satir": 221,
+        "hedefler": [
+          "app.router.routes[:]"
+        ],
+        "deger": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_map_paths]"
+      },
+      {
+        "satir": 228,
+        "hedefler": [
+          "_syk_map_insert_index"
+        ],
+        "deger": "len(app.router.routes)"
+      },
+      {
+        "satir": 261,
+        "hedefler": [
+          "_syk_external_device_paths"
+        ],
+        "deger": "{getattr(route, 'path', None) for route in syk_external_device_router.routes}"
+      },
+      {
+        "satir": 266,
+        "hedefler": [
+          "app.router.routes[:]"
+        ],
+        "deger": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_external_device_paths]"
+      },
+      {
+        "satir": 273,
+        "hedefler": [
+          "_syk_external_device_insert_index"
+        ],
+        "deger": "len(app.router.routes)"
+      },
+      {
+        "satir": 310,
+        "hedefler": [
+          "_syk_sonar_session_paths"
+        ],
+        "deger": "{getattr(route, 'path', None) for route in syk_sonar_session_router.routes}"
+      },
+      {
+        "satir": 315,
+        "hedefler": [
+          "app.router.routes[:]"
+        ],
+        "deger": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_sonar_session_paths]"
+      },
+      {
+        "satir": 322,
+        "hedefler": [
+          "_syk_sonar_session_insert_index"
+        ],
+        "deger": "len(app.router.routes)"
+      },
+      {
+        "satir": 359,
+        "hedefler": [
+          "_syk_real_device_paths"
+        ],
+        "deger": "{getattr(route, 'path', None) for route in syk_real_device_connection_router.routes}"
+      },
+      {
+        "satir": 364,
+        "hedefler": [
+          "app.router.routes[:]"
+        ],
+        "deger": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_real_device_paths]"
+      },
+      {
+        "satir": 371,
+        "hedefler": [
+          "_syk_real_device_insert_index"
+        ],
+        "deger": "len(app.router.routes)"
+      },
+      {
+        "satir": 404,
+        "hedefler": [
+          "_syk_sensor_gateway_paths"
+        ],
+        "deger": "{getattr(route, 'path', None) for route in syk_sensor_gateway_router.routes}"
+      },
+      {
+        "satir": 409,
+        "hedefler": [
+          "app.router.routes[:]"
+        ],
+        "deger": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_sensor_gateway_paths]"
+      },
+      {
+        "satir": 416,
+        "hedefler": [
+          "_syk_sensor_gateway_insert_index"
+        ],
+        "deger": "len(app.router.routes)"
+      },
+      {
+        "satir": 459,
+        "hedefler": [
+          "_syk_sensor_session_paths"
+        ],
+        "deger": "{getattr(route, 'path', None) for route in syk_sensor_gateway_session_router.routes}"
+      },
+      {
+        "satir": 464,
+        "hedefler": [
+          "app.router.routes[:]"
+        ],
+        "deger": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_sensor_session_paths]"
+      },
+      {
+        "satir": 471,
+        "hedefler": [
+          "_syk_sensor_session_insert_index"
+        ],
+        "deger": "len(app.router.routes)"
+      },
+      {
+        "satir": 30,
+        "hedefler": [
+          "yollar"
+        ],
+        "deger": "{getattr(route, 'path', None) for route in uygulama.routes}"
+      },
+      {
+        "satir": 142,
+        "hedefler": [
+          "_syk_path"
+        ],
+        "deger": "getattr(_syk_route, 'path', '')"
+      },
+      {
+        "satir": 190,
+        "hedefler": [
+          "_syk_path"
+        ],
+        "deger": "getattr(_syk_route, 'path', '')"
+      },
+      {
+        "satir": 235,
+        "hedefler": [
+          "_syk_path"
+        ],
+        "deger": "getattr(_syk_route, 'path', '')"
+      },
+      {
+        "satir": 280,
+        "hedefler": [
+          "_syk_path"
+        ],
+        "deger": "getattr(_syk_route, 'path', '')"
+      },
+      {
+        "satir": 329,
+        "hedefler": [
+          "_syk_path"
+        ],
+        "deger": "getattr(_syk_route, 'path', '')"
+      },
+      {
+        "satir": 378,
+        "hedefler": [
+          "_syk_path"
+        ],
+        "deger": "getattr(_syk_route, 'path', '')"
+      },
+      {
+        "satir": 423,
+        "hedefler": [
+          "_syk_path"
+        ],
+        "deger": "getattr(_syk_route, 'path', '')"
+      },
+      {
+        "satir": 478,
+        "hedefler": [
+          "_syk_path"
+        ],
+        "deger": "getattr(_syk_route, 'path', '')"
+      },
+      {
+        "satir": 9,
+        "hedefler": [
+          "aday"
+        ],
+        "deger": "getattr(mevcut_sunucu, ad, None)"
+      },
+      {
+        "satir": 18,
+        "hedefler": [
+          "fabrika"
+        ],
+        "deger": "getattr(mevcut_sunucu, ad, None)"
+      },
+      {
+        "satir": 155,
+        "hedefler": [
+          "_syk_project_insert_index"
+        ],
+        "deger": "_syk_index"
+      },
+      {
+        "satir": 200,
+        "hedefler": [
+          "_syk_research_insert_index"
+        ],
+        "deger": "_syk_index"
+      },
+      {
+        "satir": 245,
+        "hedefler": [
+          "_syk_map_insert_index"
+        ],
+        "deger": "_syk_index"
+      },
+      {
+        "satir": 292,
+        "hedefler": [
+          "_syk_external_device_insert_index"
+        ],
+        "deger": "_syk_index"
+      },
+      {
+        "satir": 341,
+        "hedefler": [
+          "_syk_sonar_session_insert_index"
+        ],
+        "deger": "_syk_index"
+      },
+      {
+        "satir": 388,
+        "hedefler": [
+          "_syk_real_device_insert_index"
+        ],
+        "deger": "_syk_index"
+      },
+      {
+        "satir": 435,
+        "hedefler": [
+          "_syk_sensor_gateway_insert_index"
+        ],
+        "deger": "_syk_index"
+      },
+      {
+        "satir": 490,
+        "hedefler": [
+          "_syk_sensor_session_insert_index"
+        ],
+        "deger": "_syk_index"
+      },
+      {
+        "satir": 20,
+        "hedefler": [
+          "aday"
+        ],
+        "deger": "fabrika()"
+      }
+    ],
+    "fonksiyonlar": [
+      {
+        "satir": 7,
+        "bitis": 26,
+        "ad": "_mevcut_uygulamayi_bul",
+        "async": false,
+        "imza": "def _mevcut_uygulamayi_bul() -> FastAPI:"
+      },
+      {
+        "satir": 29,
+        "bitis": 37,
+        "ad": "_ui_kurulu_mu",
+        "async": false,
+        "imza": "def _ui_kurulu_mu(uygulama: FastAPI) -> bool:"
+      },
+      {
+        "satir": 53,
+        "bitis": 74,
+        "ad": "_syk_uygulama_yolu_var",
+        "async": false,
+        "imza": "def _syk_uygulama_yolu_var(yol: str) -> bool:"
+      }
+    ],
+    "include_router_cagrilari": [
+      {
+        "satir": 80,
+        "bitis": 82,
+        "cagri": "app.include_router",
+        "alici": "app",
+        "argumanlar": [
+          "syk_ui_router"
+        ],
+        "anahtarlar": {}
+      },
+      {
+        "satir": 88,
+        "bitis": 90,
+        "cagri": "app.include_router",
+        "alici": "app",
+        "argumanlar": [
+          "finans_router"
+        ],
+        "anahtarlar": {}
+      },
+      {
+        "satir": 108,
+        "bitis": 110,
+        "cagri": "app.include_router",
+        "alici": "app",
+        "argumanlar": [
+          "syk_terminal_router"
+        ],
+        "anahtarlar": {}
+      },
+      {
+        "satir": 113,
+        "bitis": 115,
+        "cagri": "app.include_router",
+        "alici": "app",
+        "argumanlar": [
+          "syk_ugr_router"
+        ],
+        "anahtarlar": {}
+      }
+    ],
+    "fastapi_cagrilari": [],
+    "importlar": [
+      {
+        "satir": 1,
+        "tur": "from",
+        "modul": "__future__",
+        "adlar": [
+          "annotations"
+        ]
+      },
+      {
+        "satir": 3,
+        "tur": "from",
+        "modul": "fastapi",
+        "adlar": [
+          "FastAPI"
+        ]
+      },
+      {
+        "satir": 5,
+        "tur": "from",
+        "modul": null,
+        "adlar": [
+          "runtime_fastapi_sunucusu"
+        ]
+      },
+      {
+        "satir": 6,
+        "tur": "from",
+        "modul": "syk_ui",
+        "adlar": [
+          "install_ui"
+        ]
+      },
+      {
+        "satir": 44,
+        "tur": "from",
+        "modul": "syk_simulasyon.syk_ui_runtime.api_routes",
+        "adlar": [
+          "router"
+        ]
+      },
+      {
+        "satir": 48,
+        "tur": "from",
+        "modul": "syk_simulasyon.syk_ui_runtime.syfinans_runtime_routes",
+        "adlar": [
+          "finans_router"
+        ]
+      },
+      {
+        "satir": 99,
+        "tur": "from",
+        "modul": "syk_simulasyon.syk_ui_runtime.terminal_routes",
+        "adlar": [
+          "terminal_router"
+        ]
+      },
+      {
+        "satir": 119,
+        "tur": "from",
+        "modul": "syk_simulasyon.syk_ui_runtime.project_routes",
+        "adlar": [
+          "project_router"
+        ]
+      },
+      {
+        "satir": 167,
+        "tur": "from",
+        "modul": "syk_simulasyon.syk_ui_runtime.research_routes",
+        "adlar": [
+          "research_router"
+        ]
+      },
+      {
+        "satir": 212,
+        "tur": "from",
+        "modul": "syk_simulasyon.syk_ui_runtime.map_workspace_routes",
+        "adlar": [
+          "map_workspace_router"
+        ]
+      },
+      {
+        "satir": 257,
+        "tur": "from",
+        "modul": "syk_simulasyon.syk_ui_runtime.external_device_routes",
+        "adlar": [
+          "external_device_router"
+        ]
+      },
+      {
+        "satir": 306,
+        "tur": "from",
+        "modul": "syk_simulasyon.syk_ui_runtime.sonar_session_routes",
+        "adlar": [
+          "sonar_session_router"
+        ]
+      },
+      {
+        "satir": 355,
+        "tur": "from",
+        "modul": "syk_simulasyon.syk_ui_runtime.real_device_connection_routes",
+        "adlar": [
+          "real_device_connection_router"
+        ]
+      },
+      {
+        "satir": 400,
+        "tur": "from",
+        "modul": "syk_simulasyon.syk_ui_runtime.sensor_gateway_routes",
+        "adlar": [
+          "sensor_gateway_router"
+        ]
+      },
+      {
+        "satir": 449,
+        "tur": "from",
+        "modul": "syk_simulasyon.syk_ui_runtime.sensor_gateway_session_routes",
+        "adlar": [
+          "sensor_gateway_session_router"
+        ]
+      },
+      {
+        "satir": 454,
+        "tur": "from",
+        "modul": "syk_simulasyon.syk_ui_runtime.ugr_runtime_routes",
+        "adlar": [
+          "ugr_router"
+        ]
+      }
+    ],
+    "ugr_import_isareti": true,
+    "ugr_include_isareti": true,
+    "syk_ugr_router_geciyor": true
+  },
+  "runtime_modul": {
+    "modul": "syk_simulasyon.runtime_ui_sunucusu",
+    "dosya": "D:\\sykasif_repo\\sykasif\\src\\syk_simulasyon\\runtime_ui_sunucusu.py",
+    "aday_nesneler": [
+      {
+        "ad": "FastAPI",
+        "tur": "builtins.type",
+        "callable": true,
+        "modul": "fastapi.applications",
+        "sinif_mi": true,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(*, debug: Annotated[bool, Doc('\\n                Boolean indicating if debug tracebacks should be returned on server\\n                errors.\\n\\n                Read more in the\\n                [Starlette docs for Applications](https://starlette.dev/applications/#starlette.applications.Starlette).\\n                ')] = False, routes: Annotated[list[starlette.routing.BaseRoute] | None, Doc(\"\\n                **Note**: you probably shouldn't use this parameter, it is inherited\\n                from Starlette and supported for compatibility.\\n\\n                ---\\n\\n                A list of routes to serve incoming HTTP and WebSocket requests.\\n                \"), <_py_warnings.deprecated object at 0x000001D4C6324590>] = None, title: Annotated[str, Doc('\\n                The title of the API.\\n\\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\\n\\n                Read more in the\\n                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                app = FastAPI(title=\"ChimichangApp\")\\n                ```\\n                ')] = 'FastAPI', summary: Annotated[str | None, Doc('\\n                A short summary of the API.\\n\\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\\n\\n                Read more in the\\n                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                app = FastAPI(summary=\"Deadpond\\'s favorite app. Nuff said.\")\\n                ```\\n                ')] = None, description: Annotated[str, Doc('\\n                A description of the API. Supports Markdown (using\\n                [CommonMark syntax](https://commonmark.org/)).\\n\\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\\n\\n                Read more in the\\n                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                app = FastAPI(\\n                    description=\"\"\"\\n                                ChimichangApp API helps you do awesome stuff. 🚀\\n\\n                                ## Items\\n\\n                                You can **read items**.\\n\\n                                ## Users\\n\\n                                You will be able to:\\n\\n                                * **Create users** (_not implemented_).\\n                                * **Read users** (_not implemented_).\\n\\n                                \"\"\"\\n                )\\n                ```\\n                ')] = '', version: Annotated[str, Doc('\\n                The version of the API.\\n\\n                **Note** This is the version of your application, not the version of\\n                the OpenAPI specification nor the version of FastAPI being used.\\n\\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\\n\\n                Read more in the\\n                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                app = FastAPI(version=\"0.0.1\")\\n                ```\\n                ')] = '0.1.0', openapi_url: Annotated[str | None, Doc('\\n                The URL where the OpenAPI schema will be served from.\\n\\n                If you set it to `None`, no OpenAPI schema will be served publicly, and\\n                the default automatic endpoints `/docs` and `/redoc` will also be\\n                disabled.\\n\\n                Read more in the\\n                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#openapi-url).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                app = FastAPI(openapi_url=\"/api/v1/openapi.json\")\\n                ```\\n                ')] = '/openapi.json', openapi_tags: Annotated[list[dict[str, Any]] | None, Doc('\\n                A list of tags used by OpenAPI, these are the same `tags` you can set\\n                in the *path operations*, like:\\n\\n                * `@app.get(\"/users/\", tags=[\"users\"])`\\n                * `@app.get(\"/items/\", tags=[\"items\"])`\\n\\n                The order of the tags can be used to specify the order shown in\\n                tools like Swagger UI, used in the automatic path `/docs`.\\n\\n                It\\'s not required to specify all the tags used.\\n\\n                The tags that are not declared MAY be organized randomly or based\\n                on the tools\\' logic. Each tag name in the list MUST be unique.\\n\\n                The value of each item is a `dict` containing:\\n\\n                * `name`: The name of the tag.\\n                * `description`: A short description of the tag.\\n                    [CommonMark syntax](https://commonmark.org/) MAY be used for rich\\n                    text representation.\\n                * `externalDocs`: Additional external documentation for this tag. If\\n                    provided, it would contain a `dict` with:\\n                    * `description`: A short description of the target documentation.\\n                        [CommonMark syntax](https://commonmark.org/) MAY be used for\\n                        rich text representation.\\n                    * `url`: The URL for the target documentation. Value MUST be in\\n                        the form of a URL.\\n\\n                Read more in the\\n                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-tags).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                tags_metadata = [\\n                    {\\n                        \"name\": \"users\",\\n                        \"description\": \"Operations with users. The **login** logic is also here.\",\\n                    },\\n                    {\\n                        \"name\": \"items\",\\n                        \"description\": \"Manage items. So _fancy_ they have their own docs.\",\\n                        \"externalDocs\": {\\n                            \"description\": \"Items external docs\",\\n                            \"url\": \"https://fastapi.tiangolo.com/\",\\n                        },\\n                    },\\n                ]\\n\\n                app = FastAPI(openapi_tags=tags_metadata)\\n                ```\\n                ')] = None, servers: Annotated[list[dict[str, str | Any]] | None, Doc('\\n                A `list` of `dict`s with connectivity information to a target server.\\n\\n                You would use it, for example, if your application is served from\\n                different domains and you want to use the same Swagger UI in the\\n                browser to interact with each of them (instead of having multiple\\n                browser tabs open). Or if you want to leave fixed the possible URLs.\\n\\n                If the servers `list` is not provided, or is an empty `list`, the\\n                `servers` property in the generated OpenAPI will be:\\n\\n                * a `dict` with a `url` value of the application\\'s mounting point\\n                (`root_path`) if it\\'s different from `/`.\\n                * otherwise, the `servers` property will be omitted from the OpenAPI\\n                schema.\\n\\n                Each item in the `list` is a `dict` containing:\\n\\n                * `url`: A URL to the target host. This URL supports Server Variables\\n                and MAY be relative, to indicate that the host location is relative\\n                to the location where the OpenAPI document is being served. Variable\\n                substitutions will be made when a variable is named in `{`brackets`}`.\\n                * `description`: An optional string describing the host designated by\\n                the URL. [CommonMark syntax](https://commonmark.org/) MAY be used for\\n                rich text representation.\\n                * `variables`: A `dict` between a variable name and its value. The value\\n                    is used for substitution in the server\\'s URL template.\\n\\n                Read more in the\\n                [FastAPI docs for Behind a Proxy](https://fastapi.tiangolo.com/advanced/behind-a-proxy/#additional-servers).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                app = FastAPI(\\n                    servers=[\\n                        {\"url\": \"https://stag.example.com\", \"description\": \"Staging environment\"},\\n                        {\"url\": \"https://prod.example.com\", \"description\": \"Production environment\"},\\n                    ]\\n                )\\n                ```\\n                ')] = None, dependencies: Annotated[collections.abc.Sequence[fastapi.params.Depends] | None, Doc('\\n                A list of global dependencies, they will be applied to each\\n                *path operation*, including in sub-routers.\\n\\n                Read more about it in the\\n                [FastAPI docs for Global Dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/global-dependencies/).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import Depends, FastAPI\\n\\n                from .dependencies import func_dep_1, func_dep_2\\n\\n                app = FastAPI(dependencies=[Depends(func_dep_1), Depends(func_dep_2)])\\n                ```\\n                ')] = None, default_response_class: Annotated[type[starlette.responses.Response], Doc('\\n                The default response class to be used.\\n\\n                Read more in the\\n                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#default-response-class).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n                from fastapi.responses import ORJSONResponse\\n\\n                app = FastAPI(default_response_class=ORJSONResponse)\\n                ```\\n                ')] = <fastapi.datastructures.DefaultPlaceholder object at 0x000001D4C358F930>, redirect_slashes: Annotated[bool, Doc('\\n                Whether to detect and redirect slashes in URLs when the client doesn\\'t\\n                use the same format.\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                app = FastAPI(redirect_slashes=True)  # the default\\n\\n                @app.get(\"/items/\")\\n                async def read_items():\\n                    return [{\"item_id\": \"Foo\"}]\\n                ```\\n\\n                With this app, if a client goes to `/items` (without a trailing slash),\\n                they will be automatically redirected with an HTTP status code of 307\\n                to `/items/`.\\n                ')] = True, docs_url: Annotated[str | None, Doc('\\n                The path to the automatic interactive API documentation.\\n                It is handled in the browser by Swagger UI.\\n\\n                The default URL is `/docs`. You can disable it by setting it to `None`.\\n\\n                If `openapi_url` is set to `None`, this will be automatically disabled.\\n\\n                Read more in the\\n                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#docs-urls).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                app = FastAPI(docs_url=\"/documentation\", redoc_url=None)\\n                ```\\n                ')] = '/docs', redoc_url: Annotated[str | None, Doc('\\n                The path to the alternative automatic interactive API documentation\\n                provided by ReDoc.\\n\\n                The default URL is `/redoc`. You can disable it by setting it to `None`.\\n\\n                If `openapi_url` is set to `None`, this will be automatically disabled.\\n\\n                Read more in the\\n                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#docs-urls).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                app = FastAPI(docs_url=\"/documentation\", redoc_url=\"redocumentation\")\\n                ```\\n                ')] = '/redoc', swagger_ui_oauth2_redirect_url: Annotated[str | None, Doc('\\n                The OAuth2 redirect endpoint for the Swagger UI.\\n\\n                By default it is `/docs/oauth2-redirect`.\\n\\n                This is only used if you use OAuth2 (with the \"Authorize\" button)\\n                with Swagger UI.\\n                ')] = '/docs/oauth2-redirect', swagger_ui_init_oauth: Annotated[dict[str, Any] | None, Doc('\\n                OAuth2 configuration for the Swagger UI, by default shown at `/docs`.\\n\\n                Read more about the available configuration options in the\\n                [Swagger UI docs](https://swagger.io/docs/open-source-tools/swagger-ui/usage/oauth2/).\\n                ')] = None, middleware: Annotated[collections.abc.Sequence[starlette.middleware.Middleware] | None, Doc('\\n                List of middleware to be added when creating the application.\\n\\n                In FastAPI you would normally do this with `app.add_middleware()`\\n                instead.\\n\\n                Read more in the\\n                [FastAPI docs for Middleware](https://fastapi.tiangolo.com/tutorial/middleware/).\\n                ')] = None, exception_handlers: Annotated[dict[int | type[Exception], collections.abc.Callable[[starlette.requests.Request, Any], collections.abc.Coroutine[Any, Any, starlette.responses.Response]]] | None, Doc('\\n                A dictionary with handlers for exceptions.\\n\\n                In FastAPI, you would normally use the decorator\\n                `@app.exception_handler()`.\\n\\n                Read more in the\\n                [FastAPI docs for Handling Errors](https://fastapi.tiangolo.com/tutorial/handling-errors/).\\n                ')] = None, on_startup: Annotated[collections.abc.Sequence[collections.abc.Callable[[], Any]] | None, Doc('\\n                A list of startup event handler functions.\\n\\n                You should instead use the `lifespan` handlers.\\n\\n                Read more in the [FastAPI docs for `lifespan`](https://fastapi.tiangolo.com/advanced/events/).\\n                ')] = None, on_shutdown: Annotated[collections.abc.Sequence[collections.abc.Callable[[], Any]] | None, Doc('\\n                A list of shutdown event handler functions.\\n\\n                You should instead use the `lifespan` handlers.\\n\\n                Read more in the\\n                [FastAPI docs for `lifespan`](https://fastapi.tiangolo.com/advanced/events/).\\n                ')] = None, lifespan: Annotated[collections.abc.Callable[[~AppType], contextlib.AbstractAsyncContextManager[None]] | collections.abc.Callable[[~AppType], contextlib.AbstractAsyncContextManager[collections.abc.Mapping[str, Any]]] | None, Doc('\\n                A `Lifespan` context manager handler. This replaces `startup` and\\n                `shutdown` functions with a single context manager.\\n\\n                Read more in the\\n                [FastAPI docs for `lifespan`](https://fastapi.tiangolo.com/advanced/events/).\\n                ')] = None, terms_of_service: Annotated[str | None, Doc('\\n                A URL to the Terms of Service for your API.\\n\\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\\n\\n                Read more at the\\n                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).\\n\\n                **Example**\\n\\n                ```python\\n                app = FastAPI(terms_of_service=\"http://example.com/terms/\")\\n                ```\\n                ')] = None, contact: Annotated[dict[str, str | Any] | None, Doc('\\n                A dictionary with the contact information for the exposed API.\\n\\n                It can contain several fields.\\n\\n                * `name`: (`str`) The name of the contact person/organization.\\n                * `url`: (`str`) A URL pointing to the contact information. MUST be in\\n                    the format of a URL.\\n                * `email`: (`str`) The email address of the contact person/organization.\\n                    MUST be in the format of an email address.\\n\\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\\n\\n                Read more at the\\n                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).\\n\\n                **Example**\\n\\n                ```python\\n                app = FastAPI(\\n                    contact={\\n                        \"name\": \"Deadpoolio the Amazing\",\\n                        \"url\": \"http://x-force.example.com/contact/\",\\n                        \"email\": \"dp@x-force.example.com\",\\n                    }\\n                )\\n                ```\\n                ')] = None, license_info: Annotated[dict[str, str | Any] | None, Doc('\\n                A dictionary with the license information for the exposed API.\\n\\n                It can contain several fields.\\n\\n                * `name`: (`str`) **REQUIRED** (if a `license_info` is set). The\\n                    license name used for the API.\\n                * `identifier`: (`str`) An [SPDX](https://spdx.dev/) license expression\\n                    for the API. The `identifier` field is mutually exclusive of the `url`\\n                    field. Available since OpenAPI 3.1.0, FastAPI 0.99.0.\\n                * `url`: (`str`) A URL to the license used for the API. This MUST be\\n                    the format of a URL.\\n\\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\\n\\n                Read more at the\\n                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).\\n\\n                **Example**\\n\\n                ```python\\n                app = FastAPI(\\n                    license_info={\\n                        \"name\": \"Apache 2.0\",\\n                        \"url\": \"https://www.apache.org/licenses/LICENSE-2.0.html\",\\n                    }\\n                )\\n                ```\\n                ')] = None, openapi_prefix: Annotated[str, Doc('\\n                A URL prefix for the OpenAPI URL.\\n                '), <_py_warnings.deprecated object at 0x000001D4C6324350>] = '', root_path: Annotated[str, Doc('\\n                A path prefix handled by a proxy that is not seen by the application\\n                but is seen by external clients, which affects things like Swagger UI.\\n\\n                Read more about it at the\\n                [FastAPI docs for Behind a Proxy](https://fastapi.tiangolo.com/advanced/behind-a-proxy/).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                app = FastAPI(root_path=\"/api/v1\")\\n                ```\\n                ')] = '', root_path_in_servers: Annotated[bool, Doc('\\n                To disable automatically generating the URLs in the `servers` field\\n                in the autogenerated OpenAPI using the `root_path`.\\n\\n                Read more about it in the\\n                [FastAPI docs for Behind a Proxy](https://fastapi.tiangolo.com/advanced/behind-a-proxy/#disable-automatic-server-from-root-path).\\n\\n                **Example**\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                app = FastAPI(root_path_in_servers=False)\\n                ```\\n                ')] = True, responses: Annotated[dict[int | str, dict[str, Any]] | None, Doc('\\n                Additional responses to be shown in OpenAPI.\\n\\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\\n\\n                Read more about it in the\\n                [FastAPI docs for Additional Responses in OpenAPI](https://fastapi.tiangolo.com/advanced/additional-responses/).\\n\\n                And in the\\n                [FastAPI docs for Bigger Applications](https://fastapi.tiangolo.com/tutorial/bigger-applications/#include-an-apirouter-with-a-custom-prefix-tags-responses-and-dependencies).\\n                ')] = None, callbacks: Annotated[list[starlette.routing.BaseRoute] | None, Doc('\\n                OpenAPI callbacks that should apply to all *path operations*.\\n\\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\\n\\n                Read more about it in the\\n                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).\\n                ')] = None, webhooks: Annotated[fastapi.routing.APIRouter | None, Doc(\"\\n                Add OpenAPI webhooks. This is similar to `callbacks` but it doesn't\\n                depend on specific *path operations*.\\n\\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\\n\\n                **Note**: This is available since OpenAPI 3.1.0, FastAPI 0.99.0.\\n\\n                Read more about it in the\\n                [FastAPI docs for OpenAPI Webhooks](https://fastapi.tiangolo.com/advanced/openapi-webhooks/).\\n                \")] = None, deprecated: Annotated[bool | None, Doc(\"\\n                Mark all *path operations* as deprecated. You probably don't need it,\\n                but it's available.\\n\\n                It will be added to the generated OpenAPI (e.g. visible at `/docs`).\\n\\n                Read more about it in the\\n                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#deprecate-a-path-operation).\\n                \")] = None, include_in_schema: Annotated[bool, Doc(\"\\n                To include (or not) all the *path operations* in the generated OpenAPI.\\n                You probably don't need it, but it's available.\\n\\n                This affects the generated OpenAPI (e.g. visible at `/docs`).\\n\\n                Read more about it in the\\n                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).\\n                \")] = True, swagger_ui_parameters: Annotated[dict[str, Any] | None, Doc('\\n                Parameters to configure Swagger UI, the autogenerated interactive API\\n                documentation (by default at `/docs`).\\n\\n                Read more about it in the\\n                [FastAPI docs about how to Configure Swagger UI](https://fastapi.tiangolo.com/how-to/configure-swagger-ui/).\\n                ')] = None, generate_unique_id_function: Annotated[collections.abc.Callable[[fastapi.routing.APIRoute], str], Doc('\\n                Customize the function used to generate unique IDs for the *path\\n                operations* shown in the generated OpenAPI.\\n\\n                This is particularly useful when automatically generating clients or\\n                SDKs for your API.\\n\\n                Read more about it in the\\n                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).\\n                ')] = <fastapi.datastructures.DefaultPlaceholder object at 0x000001D4C35A01E0>, separate_input_output_schemas: Annotated[bool, Doc(\"\\n                Whether to generate separate OpenAPI schemas for request body and\\n                response body when the results would be more precise.\\n\\n                This is particularly useful when automatically generating clients.\\n\\n                For example, if you have a model like:\\n\\n                ```python\\n                from pydantic import BaseModel\\n\\n                class Item(BaseModel):\\n                    name: str\\n                    tags: list[str] = []\\n                ```\\n\\n                When `Item` is used for input, a request body, `tags` is not required,\\n                the client doesn't have to provide it.\\n\\n                But when using `Item` for output, for a response body, `tags` is always\\n                available because it has a default value, even if it's just an empty\\n                list. So, the client should be able to always expect it.\\n\\n                In this case, there would be two different schemas, one for input and\\n                another one for output.\\n\\n                Read more about it in the\\n                [FastAPI docs about how to separate schemas for input and output](https://fastapi.tiangolo.com/how-to/separate-openapi-schemas)\\n                \")] = True, openapi_external_docs: Annotated[dict[str, Any] | None, Doc('\\n                This field allows you to provide additional external documentation links.\\n                If provided, it must be a dictionary containing:\\n\\n                * `description`: A brief description of the external documentation.\\n                * `url`: The URL pointing to the external documentation. The value **MUST**\\n                be a valid URL format.\\n\\n                **Example**:\\n\\n                ```python\\n                from fastapi import FastAPI\\n\\n                external_docs = {\\n                    \"description\": \"Detailed API Reference\",\\n                    \"url\": \"https://example.com/api-docs\",\\n                }\\n\\n                app = FastAPI(openapi_external_docs=external_docs)\\n                ```\\n                ')] = None, strict_content_type: Annotated[bool, Doc(\"\\n                Enable strict checking for request Content-Type headers.\\n\\n                When `True` (the default), requests with a body that do not include\\n                a `Content-Type` header will **not** be parsed as JSON.\\n\\n                This prevents potential cross-site request forgery (CSRF) attacks\\n                that exploit the browser's ability to send requests without a\\n                Content-Type header, bypassing CORS preflight checks. In particular\\n                applicable for apps that need to be run locally (in localhost).\\n\\n                When `False`, requests without a `Content-Type` header will have\\n                their body parsed as JSON, which maintains compatibility with\\n                certain clients that don't send `Content-Type` headers.\\n\\n                Read more about it in the\\n                [FastAPI docs for Strict Content-Type](https://fastapi.tiangolo.com/advanced/strict-content-type/).\\n                \")] = True, **extra: Annotated[Any, Doc('\\n                Extra keyword arguments to be stored in the app, not used by FastAPI\\n                anywhere.\\n                ')]) -> None",
+        "route_sayisi": null,
+        "ugr_route_sayisi": 0,
+        "routes": [],
+        "routes_durumu": "uygulama_nesnesi_degil"
+      },
+      {
+        "ad": "_syk_external_device_route",
+        "tur": "fastapi.routing.APIRoute",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": null,
+        "ugr_route_sayisi": 0,
+        "routes": [],
+        "routes_durumu": "routes_yok"
+      },
+      {
+        "ad": "_syk_map_route",
+        "tur": "fastapi.routing.APIRoute",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": null,
+        "ugr_route_sayisi": 0,
+        "routes": [],
+        "routes_durumu": "routes_yok"
+      },
+      {
+        "ad": "_syk_project_route",
+        "tur": "fastapi.routing.APIRoute",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": null,
+        "ugr_route_sayisi": 0,
+        "routes": [],
+        "routes_durumu": "routes_yok"
+      },
+      {
+        "ad": "_syk_real_device_route",
+        "tur": "fastapi.routing.APIRoute",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": null,
+        "ugr_route_sayisi": 0,
+        "routes": [],
+        "routes_durumu": "routes_yok"
+      },
+      {
+        "ad": "_syk_research_route",
+        "tur": "fastapi.routing.APIRoute",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": null,
+        "ugr_route_sayisi": 0,
+        "routes": [],
+        "routes_durumu": "routes_yok"
+      },
+      {
+        "ad": "_syk_route",
+        "tur": "fastapi.routing.APIRoute",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": null,
+        "ugr_route_sayisi": 0,
+        "routes": [],
+        "routes_durumu": "routes_yok"
+      },
+      {
+        "ad": "_syk_sensor_gateway_route",
+        "tur": "fastapi.routing.APIRoute",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": null,
+        "ugr_route_sayisi": 0,
+        "routes": [],
+        "routes_durumu": "routes_yok"
+      },
+      {
+        "ad": "_syk_sensor_session_route",
+        "tur": "fastapi.routing.APIRoute",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": null,
+        "ugr_route_sayisi": 0,
+        "routes": [],
+        "routes_durumu": "routes_yok"
+      },
+      {
+        "ad": "_syk_sonar_session_route",
+        "tur": "fastapi.routing.APIRoute",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": null,
+        "ugr_route_sayisi": 0,
+        "routes": [],
+        "routes_durumu": "routes_yok"
+      },
+      {
+        "ad": "app",
+        "tur": "fastapi.applications.FastAPI",
+        "callable": true,
+        "modul": "fastapi.applications",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: collections.abc.MutableMapping[str, typing.Any], receive: collections.abc.Callable[[], collections.abc.Awaitable[collections.abc.MutableMapping[str, typing.Any]]], send: collections.abc.Callable[[collections.abc.MutableMapping[str, typing.Any]], collections.abc.Awaitable[None]]) -> None",
+        "route_sayisi": 81,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/openapi.json",
+            "name": "openapi",
+            "methods": [
+              "GET",
+              "HEAD"
+            ],
+            "tur": "starlette.routing.Route"
+          },
+          {
+            "indeks": 1,
+            "path": "/docs",
+            "name": "swagger_ui_html",
+            "methods": [
+              "GET",
+              "HEAD"
+            ],
+            "tur": "starlette.routing.Route"
+          },
+          {
+            "indeks": 2,
+            "path": "/docs/oauth2-redirect",
+            "name": "swagger_ui_redirect",
+            "methods": [
+              "GET",
+              "HEAD"
+            ],
+            "tur": "starlette.routing.Route"
+          },
+          {
+            "indeks": 3,
+            "path": "/redoc",
+            "name": "redoc_html",
+            "methods": [
+              "GET",
+              "HEAD"
+            ],
+            "tur": "starlette.routing.Route"
+          },
+          {
+            "indeks": 4,
+            "path": "/giris",
+            "name": "giris_ekrani",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 5,
+            "path": "/runtime/ilk-kurulum",
+            "name": "ilk_kurulum",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 6,
+            "path": "/runtime/oturum",
+            "name": "oturum_ac",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 7,
+            "path": "/runtime/cihaz-iptal",
+            "name": "taninmis_cihazi_iptal_et",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 8,
+            "path": "/cikis",
+            "name": "oturum_kapat",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 9,
+            "path": "/runtime/health",
+            "name": "runtime_sagligi",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 10,
+            "path": "/terminal",
+            "name": "terminal",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 11,
+            "path": "/runtime/json",
+            "name": "runtime_json",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 12,
+            "path": "/runtime/html",
+            "name": "runtime_html",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 13,
+            "path": "/runtime/csv",
+            "name": "runtime_csv",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 14,
+            "path": "/runtime/markdown",
+            "name": "runtime_markdown",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 15,
+            "path": "/runtime/xml",
+            "name": "runtime_xml",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 16,
+            "path": "/runtime/yaml",
+            "name": "runtime_yaml",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 17,
+            "path": "/ws/runtime",
+            "name": "runtime_websocket",
+            "methods": [],
+            "tur": "fastapi.routing.APIWebSocketRoute"
+          },
+          {
+            "indeks": 18,
+            "path": "/api/syk-ui/terminal/state",
+            "name": "terminal_state",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 19,
+            "path": "/syfinans/runtime",
+            "name": "get_syfinans_runtime",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 20,
+            "path": "/syfinans/kaynaklar",
+            "name": "get_syfinans_kaynaklari",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 21,
+            "path": "/syfinans/sekmeler/{sekme}",
+            "name": "get_syfinans_sekmesi",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 22,
+            "path": "/syfinans/cihaz-profilleri",
+            "name": "get_syfinans_cihaz_profilleri",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 23,
+            "path": "/syfinans/alarmlar",
+            "name": "get_syfinans_alarmlari",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 24,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 25,
+            "path": "/syk-ui",
+            "name": "syk-ui",
+            "methods": [],
+            "tur": "starlette.routing.Mount"
+          },
+          {
+            "indeks": 26,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 27,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 28,
+            "path": "/api/syk-ui/projects",
+            "name": "list_projects",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 29,
+            "path": "/api/syk-ui/projects",
+            "name": "create_project",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 30,
+            "path": "/api/syk-ui/research",
+            "name": "list_research",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 31,
+            "path": "/api/syk-ui/research",
+            "name": "create_research",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 32,
+            "path": "/api/syk-ui/map-workspaces",
+            "name": "list_workspaces",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 33,
+            "path": "/api/syk-ui/map-workspaces",
+            "name": "create_workspace",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 34,
+            "path": "/api/syk-ui/external-devices",
+            "name": "list_devices",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 35,
+            "path": "/api/syk-ui/external-devices/garmin/mock",
+            "name": "register_mock_garmin",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 36,
+            "path": "/api/syk-ui/sonar-sessions",
+            "name": "list_sessions",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 37,
+            "path": "/api/syk-ui/sonar-sessions",
+            "name": "create_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 38,
+            "path": "/api/syk-ui/real-device-connections",
+            "name": "list_connections",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 39,
+            "path": "/api/syk-ui/real-device-connections",
+            "name": "create_connection",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 40,
+            "path": "/api/syk-ui/sensor-gateway",
+            "name": "gateway_snapshot",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 41,
+            "path": "/api/syk-ui/sensor-gateway/sources",
+            "name": "register_source",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 42,
+            "path": "/api/syk-ui/sensor-sessions",
+            "name": "list_sessions",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 43,
+            "path": "/api/syk-ui/sensor-sessions",
+            "name": "create_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 44,
+            "path": "/api/syk-ui/sensor-sessions/{session_id}",
+            "name": "get_session",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 45,
+            "path": "/api/syk-ui/sensor-sessions/{session_id}/start",
+            "name": "start_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 46,
+            "path": "/api/syk-ui/sensor-sessions/{session_id}/sync",
+            "name": "sync_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 47,
+            "path": "/api/syk-ui/sensor-sessions/{session_id}/stop",
+            "name": "stop_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 48,
+            "path": "/api/syk-ui/sensor-gateway/sources/{source_id}/ingest",
+            "name": "ingest",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 49,
+            "path": "/api/syk-ui/sensor-gateway/envelopes",
+            "name": "list_envelopes",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 50,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}",
+            "name": "get_connection",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 51,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}/connect",
+            "name": "connect",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 52,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}/disconnect",
+            "name": "disconnect",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 53,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}/heartbeat",
+            "name": "heartbeat",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 54,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}/reconnect",
+            "name": "reconnect",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 55,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}/nmea",
+            "name": "ingest_nmea",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 56,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}/manifest",
+            "name": "manifest",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 57,
+            "path": "/api/syk-ui/sonar-sessions/{session_id}",
+            "name": "get_session",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 58,
+            "path": "/api/syk-ui/sonar-sessions/{session_id}/start",
+            "name": "start_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 59,
+            "path": "/api/syk-ui/sonar-sessions/{session_id}/capture",
+            "name": "capture_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 60,
+            "path": "/api/syk-ui/sonar-sessions/{session_id}/stop",
+            "name": "stop_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 61,
+            "path": "/api/syk-ui/external-devices/{device_id}",
+            "name": "get_device",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 62,
+            "path": "/api/syk-ui/external-devices/{device_id}/connect",
+            "name": "connect_device",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 63,
+            "path": "/api/syk-ui/external-devices/{device_id}/disconnect",
+            "name": "disconnect_device",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 64,
+            "path": "/api/syk-ui/external-devices/{device_id}/frames",
+            "name": "read_sonar_frame",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 65,
+            "path": "/api/syk-ui/external-devices/records/list",
+            "name": "list_sonar_records",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 66,
+            "path": "/api/syk-ui/map-workspaces/{workspace_id}",
+            "name": "get_workspace",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 67,
+            "path": "/api/syk-ui/map-workspaces/{workspace_id}/activate",
+            "name": "activate_workspace",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 68,
+            "path": "/api/syk-ui/map-workspaces/{workspace_id}/ar",
+            "name": "set_ar_state",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 69,
+            "path": "/api/syk-ui/map-workspaces/{workspace_id}/pins",
+            "name": "add_pin",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 70,
+            "path": "/api/syk-ui/map-workspaces/{workspace_id}/layers",
+            "name": "add_layer",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 71,
+            "path": "/api/syk-ui/map-workspaces/{workspace_id}/measurements",
+            "name": "add_measurement",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 72,
+            "path": "/api/syk-ui/research/{research_id}",
+            "name": "get_research",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 73,
+            "path": "/api/syk-ui/research/{research_id}/start",
+            "name": "start_research",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 74,
+            "path": "/api/syk-ui/research/{research_id}/complete",
+            "name": "complete_research",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 75,
+            "path": "/api/syk-ui/research/{research_id}/media",
+            "name": "link_media",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 76,
+            "path": "/api/syk-ui/research/{research_id}/evidence",
+            "name": "link_evidence",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 77,
+            "path": "/api/syk-ui/research/{research_id}/map-layer",
+            "name": "link_map_layer",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 78,
+            "path": "/api/syk-ui/projects/{project_id}",
+            "name": "get_project",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 79,
+            "path": "/api/syk-ui/projects/{project_id}/activate",
+            "name": "activate_project",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 80,
+            "path": "/api/syk-ui/projects/{project_id}/archive",
+            "name": "archive_project",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 0,
+        "routes_durumu": "routes_okundu"
+      },
+      {
+        "ad": "finans_router",
+        "tur": "fastapi.routing.APIRouter",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": 6,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/syfinans/runtime",
+            "name": "get_syfinans_runtime",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 1,
+            "path": "/syfinans/kaynaklar",
+            "name": "get_syfinans_kaynaklari",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 2,
+            "path": "/syfinans/sekmeler/{sekme}",
+            "name": "get_syfinans_sekmesi",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 3,
+            "path": "/syfinans/cihaz-profilleri",
+            "name": "get_syfinans_cihaz_profilleri",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 4,
+            "path": "/syfinans/alarmlar",
+            "name": "get_syfinans_alarmlari",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 5,
+            "path": "/syfinans/alarmlar",
+            "name": "post_syfinans_alarmi",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 0,
+        "routes_durumu": "routes_okundu"
+      },
+      {
+        "ad": "syk_external_device_router",
+        "tur": "fastapi.routing.APIRouter",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": 7,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/api/syk-ui/external-devices",
+            "name": "list_devices",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 1,
+            "path": "/api/syk-ui/external-devices/garmin/mock",
+            "name": "register_mock_garmin",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 2,
+            "path": "/api/syk-ui/external-devices/{device_id}",
+            "name": "get_device",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 3,
+            "path": "/api/syk-ui/external-devices/{device_id}/connect",
+            "name": "connect_device",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 4,
+            "path": "/api/syk-ui/external-devices/{device_id}/disconnect",
+            "name": "disconnect_device",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 5,
+            "path": "/api/syk-ui/external-devices/{device_id}/frames",
+            "name": "read_sonar_frame",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 6,
+            "path": "/api/syk-ui/external-devices/records/list",
+            "name": "list_sonar_records",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 0,
+        "routes_durumu": "routes_okundu"
+      },
+      {
+        "ad": "syk_map_workspace_router",
+        "tur": "fastapi.routing.APIRouter",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": 8,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/api/syk-ui/map-workspaces",
+            "name": "list_workspaces",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 1,
+            "path": "/api/syk-ui/map-workspaces",
+            "name": "create_workspace",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 2,
+            "path": "/api/syk-ui/map-workspaces/{workspace_id}",
+            "name": "get_workspace",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 3,
+            "path": "/api/syk-ui/map-workspaces/{workspace_id}/activate",
+            "name": "activate_workspace",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 4,
+            "path": "/api/syk-ui/map-workspaces/{workspace_id}/ar",
+            "name": "set_ar_state",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 5,
+            "path": "/api/syk-ui/map-workspaces/{workspace_id}/pins",
+            "name": "add_pin",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 6,
+            "path": "/api/syk-ui/map-workspaces/{workspace_id}/layers",
+            "name": "add_layer",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 7,
+            "path": "/api/syk-ui/map-workspaces/{workspace_id}/measurements",
+            "name": "add_measurement",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 0,
+        "routes_durumu": "routes_okundu"
+      },
+      {
+        "ad": "syk_project_router",
+        "tur": "fastapi.routing.APIRouter",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": 5,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/api/syk-ui/projects",
+            "name": "list_projects",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 1,
+            "path": "/api/syk-ui/projects",
+            "name": "create_project",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 2,
+            "path": "/api/syk-ui/projects/{project_id}",
+            "name": "get_project",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 3,
+            "path": "/api/syk-ui/projects/{project_id}/activate",
+            "name": "activate_project",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 4,
+            "path": "/api/syk-ui/projects/{project_id}/archive",
+            "name": "archive_project",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 0,
+        "routes_durumu": "routes_okundu"
+      },
+      {
+        "ad": "syk_real_device_connection_router",
+        "tur": "fastapi.routing.APIRouter",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": 9,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/api/syk-ui/real-device-connections",
+            "name": "list_connections",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 1,
+            "path": "/api/syk-ui/real-device-connections",
+            "name": "create_connection",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 2,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}",
+            "name": "get_connection",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 3,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}/connect",
+            "name": "connect",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 4,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}/disconnect",
+            "name": "disconnect",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 5,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}/heartbeat",
+            "name": "heartbeat",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 6,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}/reconnect",
+            "name": "reconnect",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 7,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}/nmea",
+            "name": "ingest_nmea",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 8,
+            "path": "/api/syk-ui/real-device-connections/{connection_id}/manifest",
+            "name": "manifest",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 0,
+        "routes_durumu": "routes_okundu"
+      },
+      {
+        "ad": "syk_research_router",
+        "tur": "fastapi.routing.APIRouter",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": 8,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/api/syk-ui/research",
+            "name": "list_research",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 1,
+            "path": "/api/syk-ui/research",
+            "name": "create_research",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 2,
+            "path": "/api/syk-ui/research/{research_id}",
+            "name": "get_research",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 3,
+            "path": "/api/syk-ui/research/{research_id}/start",
+            "name": "start_research",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 4,
+            "path": "/api/syk-ui/research/{research_id}/complete",
+            "name": "complete_research",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 5,
+            "path": "/api/syk-ui/research/{research_id}/media",
+            "name": "link_media",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 6,
+            "path": "/api/syk-ui/research/{research_id}/evidence",
+            "name": "link_evidence",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 7,
+            "path": "/api/syk-ui/research/{research_id}/map-layer",
+            "name": "link_map_layer",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 0,
+        "routes_durumu": "routes_okundu"
+      },
+      {
+        "ad": "syk_sensor_gateway_router",
+        "tur": "fastapi.routing.APIRouter",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": 4,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/api/syk-ui/sensor-gateway",
+            "name": "gateway_snapshot",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 1,
+            "path": "/api/syk-ui/sensor-gateway/sources",
+            "name": "register_source",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 2,
+            "path": "/api/syk-ui/sensor-gateway/sources/{source_id}/ingest",
+            "name": "ingest",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 3,
+            "path": "/api/syk-ui/sensor-gateway/envelopes",
+            "name": "list_envelopes",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 0,
+        "routes_durumu": "routes_okundu"
+      },
+      {
+        "ad": "syk_sensor_gateway_session_router",
+        "tur": "fastapi.routing.APIRouter",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": 6,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/api/syk-ui/sensor-sessions",
+            "name": "list_sessions",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 1,
+            "path": "/api/syk-ui/sensor-sessions",
+            "name": "create_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 2,
+            "path": "/api/syk-ui/sensor-sessions/{session_id}",
+            "name": "get_session",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 3,
+            "path": "/api/syk-ui/sensor-sessions/{session_id}/start",
+            "name": "start_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 4,
+            "path": "/api/syk-ui/sensor-sessions/{session_id}/sync",
+            "name": "sync_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 5,
+            "path": "/api/syk-ui/sensor-sessions/{session_id}/stop",
+            "name": "stop_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 0,
+        "routes_durumu": "routes_okundu"
+      },
+      {
+        "ad": "syk_sonar_session_router",
+        "tur": "fastapi.routing.APIRouter",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": 6,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/api/syk-ui/sonar-sessions",
+            "name": "list_sessions",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 1,
+            "path": "/api/syk-ui/sonar-sessions",
+            "name": "create_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 2,
+            "path": "/api/syk-ui/sonar-sessions/{session_id}",
+            "name": "get_session",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 3,
+            "path": "/api/syk-ui/sonar-sessions/{session_id}/start",
+            "name": "start_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 4,
+            "path": "/api/syk-ui/sonar-sessions/{session_id}/capture",
+            "name": "capture_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 5,
+            "path": "/api/syk-ui/sonar-sessions/{session_id}/stop",
+            "name": "stop_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 0,
+        "routes_durumu": "routes_okundu"
+      },
+      {
+        "ad": "syk_terminal_router",
+        "tur": "fastapi.routing.APIRouter",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": 1,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/api/syk-ui/terminal/state",
+            "name": "terminal_state",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 0,
+        "routes_durumu": "routes_okundu"
+      },
+      {
+        "ad": "syk_ugr_router",
+        "tur": "fastapi.routing.APIRouter",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": 13,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/api/ugr/health",
+            "name": "ugr_saglik",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 1,
+            "path": "/api/ugr/snapshot",
+            "name": "ugr_snapshot",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 2,
+            "path": "/api/ugr/icons",
+            "name": "ugr_ikonlari",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 3,
+            "path": "/api/ugr/icons/{ikon_kimligi}",
+            "name": "ugr_ikon",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 4,
+            "path": "/api/ugr/icons/{ikon_kimligi}/html",
+            "name": "ugr_ikon_html",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 5,
+            "path": "/api/ugr/icons/bulk/state",
+            "name": "ugr_toplu_ikon_durumu",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 6,
+            "path": "/api/ugr/icons/{ikon_kimligi}/state",
+            "name": "ugr_ikon_durumu_degistir",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 7,
+            "path": "/api/ugr/icons/{ikon_kimligi}/view",
+            "name": "ugr_ikon_gorunumu_degistir",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 8,
+            "path": "/api/ugr/icons/{ikon_kimligi}/active",
+            "name": "ugr_ikon_aktifligi_degistir",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 9,
+            "path": "/api/ugr/events/history",
+            "name": "ugr_olay_gecmisi",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 10,
+            "path": "/api/ugr/events",
+            "name": "ugr_canli_olaylar",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 11,
+            "path": "/api/ugr/preview",
+            "name": "ugr_onizleme",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 12,
+            "path": "/api/ugr/assets/{goreli_yol:path}",
+            "name": "ugr_statik_dosya",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 13,
+        "routes_durumu": "routes_okundu"
+      },
+      {
+        "ad": "syk_ui_router",
+        "tur": "fastapi.routing.APIRouter",
+        "callable": true,
+        "modul": "fastapi.routing",
+        "sinif_mi": false,
+        "modul_nesnesi_mi": false,
+        "property_nesnesi_mi": false,
+        "imza": "(scope: 'Scope', receive: 'Receive', send: 'Send') -> 'None'",
+        "route_sayisi": 50,
+        "routes": [
+          {
+            "indeks": 0,
+            "path": "/api/syk-ui/runtime-state",
+            "name": "get_runtime_state",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 1,
+            "path": "/api/syk-ui/live",
+            "name": "live_runtime",
+            "methods": [],
+            "tur": "fastapi.routing.APIWebSocketRoute"
+          },
+          {
+            "indeks": 2,
+            "path": "/api/syk-ui/scientific-modules",
+            "name": "get_scientific_modules",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 3,
+            "path": "/api/syk-ui/scientific-modules/{module_id}",
+            "name": "get_scientific_module",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 4,
+            "path": "/api/syk-ui/scientific-modules/{module_id}",
+            "name": "update_scientific_module",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 5,
+            "path": "/api/syk-ui/scientific-modules/{module_id}/live",
+            "name": "scientific_module_live",
+            "methods": [],
+            "tur": "fastapi.routing.APIWebSocketRoute"
+          },
+          {
+            "indeks": 6,
+            "path": "/api/syk-ui/scientific-adapters",
+            "name": "get_scientific_adapters",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 7,
+            "path": "/api/syk-ui/scientific-adapters/{adapter_id}/modules/{module_id}/ingest",
+            "name": "ingest_scientific_adapter_data",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 8,
+            "path": "/api/syk-ui/scientific-devices/serial",
+            "name": "discover_serial_devices",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 9,
+            "path": "/api/syk-ui/scientific-devices/serial/read",
+            "name": "read_serial_device",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 10,
+            "path": "/api/syk-ui/scientific-devices/tcp/read",
+            "name": "read_tcp_device",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 11,
+            "path": "/api/syk-ui/scientific-devices/ble/discover",
+            "name": "discover_ble_devices",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 12,
+            "path": "/api/syk-ui/scientific-devices/ble/read",
+            "name": "read_ble_device",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 13,
+            "path": "/api/syk-ui/scientific-devices/transports",
+            "name": "get_scientific_device_transports",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 14,
+            "path": "/api/syk-ui/scientific-devices/discover",
+            "name": "discover_all_scientific_devices",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 15,
+            "path": "/api/syk-ui/device-hub",
+            "name": "get_device_hub",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 16,
+            "path": "/api/syk-ui/device-hub/refresh",
+            "name": "refresh_device_hub",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 17,
+            "path": "/api/syk-ui/device-hub/register",
+            "name": "register_device_hub_device",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 18,
+            "path": "/api/syk-ui/device-hub/{device_id}",
+            "name": "get_device_hub_device",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 19,
+            "path": "/api/syk-ui/device-hub/{device_id}/connection",
+            "name": "update_device_hub_connection",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 20,
+            "path": "/api/syk-ui/device-hub/{device_id}/telemetry",
+            "name": "update_device_hub_telemetry",
+            "methods": [
+              "PATCH"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 21,
+            "path": "/api/syk-ui/device-sessions",
+            "name": "get_device_sessions",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 22,
+            "path": "/api/syk-ui/device-sessions/start",
+            "name": "start_device_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 23,
+            "path": "/api/syk-ui/device-sessions/{session_id}",
+            "name": "get_device_session",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 24,
+            "path": "/api/syk-ui/device-sessions/{session_id}/samples",
+            "name": "append_device_session_samples",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 25,
+            "path": "/api/syk-ui/device-sessions/{session_id}/stop",
+            "name": "stop_device_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 26,
+            "path": "/api/syk-ui/device-sessions/{session_id}/evidence",
+            "name": "append_device_session_evidence",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 27,
+            "path": "/api/syk-ui/device-sessions/{session_id}/evidence",
+            "name": "get_device_session_evidence",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 28,
+            "path": "/api/syk-ui/device-sessions/{session_id}/evidence/verify",
+            "name": "verify_device_session_evidence",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 29,
+            "path": "/api/syk-ui/device-hub/{device_id}/recording-ingest",
+            "name": "ingest_device_recording_packet",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 30,
+            "path": "/api/syk-ui/device-sessions/{session_id}/package",
+            "name": "build_device_session_package",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 31,
+            "path": "/api/syk-ui/device-sessions/{session_id}/package/verify",
+            "name": "verify_device_session_package",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 32,
+            "path": "/api/syk-ui/device-sessions/{session_id}/seal",
+            "name": "seal_device_session_package",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 33,
+            "path": "/api/syk-ui/device-sessions/{session_id}/seal/verify",
+            "name": "verify_device_session_seal",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 34,
+            "path": "/api/syk-ui/device-sessions/{session_id}/analysis",
+            "name": "analyze_device_session",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 35,
+            "path": "/api/syk-ui/device-sessions/{session_id}/analysis",
+            "name": "get_device_session_analysis",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 36,
+            "path": "/api/syk-ui/device-sessions/{session_id}/analysis/verify",
+            "name": "verify_device_session_analysis",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 37,
+            "path": "/api/syk-ui/device-sessions/{session_id}/syframe",
+            "name": "apply_device_analysis_to_syframe",
+            "methods": [
+              "POST"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 38,
+            "path": "/api/syk-ui/syframe/analysis-state",
+            "name": "get_analysis_syframe_state",
+            "methods": [
+              "GET"
+            ],
+            "tur": "fastapi.routing.APIRoute"
+          },
+          {
+            "indeks": 39,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 40,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 41,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 42,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 43,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 44,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 45,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 46,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 47,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 48,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          },
+          {
+            "indeks": 49,
+            "path": null,
+            "name": null,
+            "methods": [],
+            "tur": "fastapi.routing._IncludedRouter"
+          }
+        ],
+        "route_hatalari": [],
+        "ugr_route_sayisi": 0,
+        "routes_durumu": "routes_okundu"
+      }
+    ]
+  },
+  "uvicorn_adaylari": [
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:app",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:finans_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_external_device_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_map_workspace_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_project_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_real_device_connection_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_research_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_sensor_gateway_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_sensor_gateway_session_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_sonar_session_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_terminal_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_ugr_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_ui_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne"
+    }
+  ],
+  "canli_denetimler": [
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:app",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 200,
+      "openapi_icerik_turu": "application/json",
+      "openapi_yol_sayisi": 164,
+      "openapi_yollari": [
+        "/api/syk-ui/device-hub",
+        "/api/syk-ui/device-hub/refresh",
+        "/api/syk-ui/device-hub/register",
+        "/api/syk-ui/device-hub/{device_id}",
+        "/api/syk-ui/device-hub/{device_id}/connection",
+        "/api/syk-ui/device-hub/{device_id}/recording-ingest",
+        "/api/syk-ui/device-hub/{device_id}/telemetry",
+        "/api/syk-ui/device-sessions",
+        "/api/syk-ui/device-sessions/start",
+        "/api/syk-ui/device-sessions/{session_id}",
+        "/api/syk-ui/device-sessions/{session_id}/analysis",
+        "/api/syk-ui/device-sessions/{session_id}/analysis/verify",
+        "/api/syk-ui/device-sessions/{session_id}/evidence",
+        "/api/syk-ui/device-sessions/{session_id}/evidence/verify",
+        "/api/syk-ui/device-sessions/{session_id}/package",
+        "/api/syk-ui/device-sessions/{session_id}/package/verify",
+        "/api/syk-ui/device-sessions/{session_id}/samples",
+        "/api/syk-ui/device-sessions/{session_id}/seal",
+        "/api/syk-ui/device-sessions/{session_id}/seal/verify",
+        "/api/syk-ui/device-sessions/{session_id}/stop",
+        "/api/syk-ui/device-sessions/{session_id}/syframe",
+        "/api/syk-ui/dtse/events",
+        "/api/syk-ui/dtse/events/{event_id}",
+        "/api/syk-ui/dtse/frames/attention",
+        "/api/syk-ui/dtse/state",
+        "/api/syk-ui/environment/current",
+        "/api/syk-ui/environment/live",
+        "/api/syk-ui/external-devices",
+        "/api/syk-ui/external-devices/garmin/mock",
+        "/api/syk-ui/external-devices/records/list",
+        "/api/syk-ui/external-devices/{device_id}",
+        "/api/syk-ui/external-devices/{device_id}/connect",
+        "/api/syk-ui/external-devices/{device_id}/disconnect",
+        "/api/syk-ui/external-devices/{device_id}/frames",
+        "/api/syk-ui/goruntu/dtse-adapter-state",
+        "/api/syk-ui/goruntu/kayitlar",
+        "/api/syk-ui/goruntu/kayitlar/{veri_kimligi}",
+        "/api/syk-ui/goruntu/kayitlar/{veri_kimligi}/kanit-dogrula",
+        "/api/syk-ui/goruntu/kayitlar/{veri_kimligi}/kanit-manifesti",
+        "/api/syk-ui/goruntu/kayitlar/{veri_kimligi}/kanit-zinciri",
+        "/api/syk-ui/goruntu/kayitlar/{veri_kimligi}/supheli-bolgeler",
+        "/api/syk-ui/jarmin/integration",
+        "/api/syk-ui/jarmin/integration/events",
+        "/api/syk-ui/jarmin/integration/settings",
+        "/api/syk-ui/kasif-icons",
+        "/api/syk-ui/kasif-icons/assistant",
+        "/api/syk-ui/kasif-icons/groups",
+        "/api/syk-ui/kasif-icons/manifest",
+        "/api/syk-ui/kasif-icons/reload",
+        "/api/syk-ui/kasif-icons/search",
+        "/api/syk-ui/kasif-icons/{icon_id}",
+        "/api/syk-ui/map-workspaces",
+        "/api/syk-ui/map-workspaces/{workspace_id}",
+        "/api/syk-ui/map-workspaces/{workspace_id}/activate",
+        "/api/syk-ui/map-workspaces/{workspace_id}/ar",
+        "/api/syk-ui/map-workspaces/{workspace_id}/layers",
+        "/api/syk-ui/map-workspaces/{workspace_id}/measurements",
+        "/api/syk-ui/map-workspaces/{workspace_id}/pins",
+        "/api/syk-ui/media-analysis",
+        "/api/syk-ui/media-analysis/{analysis_id}",
+        "/api/syk-ui/media-analysis/{analysis_id}/manifest",
+        "/api/syk-ui/media-analysis/{analysis_id}/preview",
+        "/api/syk-ui/media-analysis/{analysis_id}/report",
+        "/api/syk-ui/mobile-control",
+        "/api/syk-ui/mobile-control/devices",
+        "/api/syk-ui/mobile-control/devices/{device_id}",
+        "/api/syk-ui/mobile-control/devices/{device_id}/reset",
+        "/api/syk-ui/mobile-offline",
+        "/api/syk-ui/mobile-offline/cache",
+        "/api/syk-ui/mobile-offline/cache/{cache_key}",
+        "/api/syk-ui/mobile-offline/online",
+        "/api/syk-ui/mobile-offline/pairings",
+        "/api/syk-ui/mobile-offline/pairings/confirm",
+        "/api/syk-ui/mobile-offline/pairings/verify",
+        "/api/syk-ui/mobile-offline/pairings/{pairing_id}",
+        "/api/syk-ui/mobile-offline/queue",
+        "/api/syk-ui/mobile-offline/queue/{item_id}",
+        "/api/syk-ui/mobile-offline/queue/{item_id}/begin",
+        "/api/syk-ui/mobile-offline/queue/{item_id}/complete",
+        "/api/syk-ui/mobile-offline/queue/{item_id}/fail",
+        "/api/syk-ui/mobile-runtime",
+        "/api/syk-ui/mobile-runtime/devices",
+        "/api/syk-ui/mobile-runtime/devices/{device_id}",
+        "/api/syk-ui/mobile-runtime/devices/{device_id}/trust",
+        "/api/syk-ui/mobile-runtime/layout",
+        "/api/syk-ui/mobile-sensors",
+        "/api/syk-ui/mobile-sensors/camera/start",
+        "/api/syk-ui/mobile-sensors/camera/stop",
+        "/api/syk-ui/mobile-sensors/frames",
+        "/api/syk-ui/mobile-sensors/frames/{frame_id}",
+        "/api/syk-ui/mobile-sensors/location",
+        "/api/syk-ui/mobile-sensors/locations",
+        "/api/syk-ui/mobile-sensors/microphone/start",
+        "/api/syk-ui/mobile-sensors/microphone/stop",
+        "/api/syk-ui/mobile-sensors/permissions",
+        "/api/syk-ui/projects",
+        "/api/syk-ui/projects/{project_id}",
+        "/api/syk-ui/projects/{project_id}/activate",
+        "/api/syk-ui/projects/{project_id}/archive",
+        "/api/syk-ui/real-device-connections",
+        "/api/syk-ui/real-device-connections/{connection_id}",
+        "/api/syk-ui/real-device-connections/{connection_id}/connect",
+        "/api/syk-ui/real-device-connections/{connection_id}/disconnect",
+        "/api/syk-ui/real-device-connections/{connection_id}/heartbeat",
+        "/api/syk-ui/real-device-connections/{connection_id}/manifest",
+        "/api/syk-ui/real-device-connections/{connection_id}/nmea",
+        "/api/syk-ui/real-device-connections/{connection_id}/reconnect",
+        "/api/syk-ui/research",
+        "/api/syk-ui/research/{research_id}",
+        "/api/syk-ui/research/{research_id}/complete",
+        "/api/syk-ui/research/{research_id}/evidence",
+        "/api/syk-ui/research/{research_id}/map-layer",
+        "/api/syk-ui/research/{research_id}/media",
+        "/api/syk-ui/research/{research_id}/start",
+        "/api/syk-ui/runtime-state",
+        "/api/syk-ui/scientific-adapters",
+        "/api/syk-ui/scientific-adapters/{adapter_id}/modules/{module_id}/ingest",
+        "/api/syk-ui/scientific-devices/ble/discover",
+        "/api/syk-ui/scientific-devices/ble/read",
+        "/api/syk-ui/scientific-devices/discover",
+        "/api/syk-ui/scientific-devices/serial",
+        "/api/syk-ui/scientific-devices/serial/read",
+        "/api/syk-ui/scientific-devices/tcp/read",
+        "/api/syk-ui/scientific-devices/transports",
+        "/api/syk-ui/scientific-modules",
+        "/api/syk-ui/scientific-modules/{module_id}",
+        "/api/syk-ui/sensor-gateway",
+        "/api/syk-ui/sensor-gateway/envelopes",
+        "/api/syk-ui/sensor-gateway/sources",
+        "/api/syk-ui/sensor-gateway/sources/{source_id}/ingest",
+        "/api/syk-ui/sensor-sessions",
+        "/api/syk-ui/sensor-sessions/{session_id}",
+        "/api/syk-ui/sensor-sessions/{session_id}/start",
+        "/api/syk-ui/sensor-sessions/{session_id}/stop",
+        "/api/syk-ui/sensor-sessions/{session_id}/sync",
+        "/api/syk-ui/sonar-sessions",
+        "/api/syk-ui/sonar-sessions/{session_id}",
+        "/api/syk-ui/sonar-sessions/{session_id}/capture",
+        "/api/syk-ui/sonar-sessions/{session_id}/start",
+        "/api/syk-ui/sonar-sessions/{session_id}/stop",
+        "/api/syk-ui/syframe/analysis-state",
+        "/api/syk-ui/terminal/state",
+        "/api/syk-ui/themes",
+        "/api/syk-ui/themes/automatic",
+        "/api/syk-ui/themes/current",
+        "/api/syk-ui/themes/{theme_id}/assets/{filename}",
+        "/cikis",
+        "/giris",
+        "/runtime/cihaz-iptal",
+        "/runtime/csv",
+        "/runtime/health",
+        "/runtime/html",
+        "/runtime/ilk-kurulum",
+        "/runtime/json",
+        "/runtime/markdown",
+        "/runtime/oturum",
+        "/runtime/xml",
+        "/runtime/yaml",
+        "/syfinans/alarmlar",
+        "/syfinans/cihaz-profilleri",
+        "/syfinans/kaynaklar",
+        "/syfinans/runtime",
+        "/syfinans/sekmeler/{sekme}",
+        "/terminal"
+      ],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 404,
+      "health_icerik_turu": "application/json",
+      "health_json": {
+        "detail": "Not Found"
+      },
+      "health_metin_ilk_500": "{\"detail\":\"Not Found\"}",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "application/json",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_01.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_01.txt",
+      "ugr_canli": false
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:finans_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 404,
+      "openapi_icerik_turu": "text/plain; charset=utf-8",
+      "openapi_yol_sayisi": 0,
+      "openapi_yollari": [],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 404,
+      "health_icerik_turu": "text/plain; charset=utf-8",
+      "health_json": null,
+      "health_metin_ilk_500": "Not Found",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "text/plain; charset=utf-8",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_02.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_02.txt",
+      "ugr_canli": false
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_external_device_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 404,
+      "openapi_icerik_turu": "text/plain; charset=utf-8",
+      "openapi_yol_sayisi": 0,
+      "openapi_yollari": [],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 404,
+      "health_icerik_turu": "text/plain; charset=utf-8",
+      "health_json": null,
+      "health_metin_ilk_500": "Not Found",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "text/plain; charset=utf-8",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_03.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_03.txt",
+      "ugr_canli": false
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_map_workspace_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 404,
+      "openapi_icerik_turu": "text/plain; charset=utf-8",
+      "openapi_yol_sayisi": 0,
+      "openapi_yollari": [],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 404,
+      "health_icerik_turu": "text/plain; charset=utf-8",
+      "health_json": null,
+      "health_metin_ilk_500": "Not Found",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "text/plain; charset=utf-8",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_04.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_04.txt",
+      "ugr_canli": false
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_project_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 404,
+      "openapi_icerik_turu": "text/plain; charset=utf-8",
+      "openapi_yol_sayisi": 0,
+      "openapi_yollari": [],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 404,
+      "health_icerik_turu": "text/plain; charset=utf-8",
+      "health_json": null,
+      "health_metin_ilk_500": "Not Found",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "text/plain; charset=utf-8",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_05.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_05.txt",
+      "ugr_canli": false
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_real_device_connection_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 404,
+      "openapi_icerik_turu": "text/plain; charset=utf-8",
+      "openapi_yol_sayisi": 0,
+      "openapi_yollari": [],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 404,
+      "health_icerik_turu": "text/plain; charset=utf-8",
+      "health_json": null,
+      "health_metin_ilk_500": "Not Found",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "text/plain; charset=utf-8",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_06.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_06.txt",
+      "ugr_canli": false
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_research_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 404,
+      "openapi_icerik_turu": "text/plain; charset=utf-8",
+      "openapi_yol_sayisi": 0,
+      "openapi_yollari": [],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 404,
+      "health_icerik_turu": "text/plain; charset=utf-8",
+      "health_json": null,
+      "health_metin_ilk_500": "Not Found",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "text/plain; charset=utf-8",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_07.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_07.txt",
+      "ugr_canli": false
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_sensor_gateway_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 404,
+      "openapi_icerik_turu": "text/plain; charset=utf-8",
+      "openapi_yol_sayisi": 0,
+      "openapi_yollari": [],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 404,
+      "health_icerik_turu": "text/plain; charset=utf-8",
+      "health_json": null,
+      "health_metin_ilk_500": "Not Found",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "text/plain; charset=utf-8",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_08.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_08.txt",
+      "ugr_canli": false
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_sensor_gateway_session_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 404,
+      "openapi_icerik_turu": "text/plain; charset=utf-8",
+      "openapi_yol_sayisi": 0,
+      "openapi_yollari": [],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 404,
+      "health_icerik_turu": "text/plain; charset=utf-8",
+      "health_json": null,
+      "health_metin_ilk_500": "Not Found",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "text/plain; charset=utf-8",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_09.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_09.txt",
+      "ugr_canli": false
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_sonar_session_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 404,
+      "openapi_icerik_turu": "text/plain; charset=utf-8",
+      "openapi_yol_sayisi": 0,
+      "openapi_yollari": [],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 404,
+      "health_icerik_turu": "text/plain; charset=utf-8",
+      "health_json": null,
+      "health_metin_ilk_500": "Not Found",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "text/plain; charset=utf-8",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_10.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_10.txt",
+      "ugr_canli": false
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_terminal_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 404,
+      "openapi_icerik_turu": "text/plain; charset=utf-8",
+      "openapi_yol_sayisi": 0,
+      "openapi_yollari": [],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 404,
+      "health_icerik_turu": "text/plain; charset=utf-8",
+      "health_json": null,
+      "health_metin_ilk_500": "Not Found",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "text/plain; charset=utf-8",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_11.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_11.txt",
+      "ugr_canli": false
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_ugr_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 404,
+      "openapi_icerik_turu": "text/plain; charset=utf-8",
+      "openapi_yol_sayisi": 0,
+      "openapi_yollari": [],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 500,
+      "health_icerik_turu": "text/plain; charset=utf-8",
+      "health_json": null,
+      "health_metin_ilk_500": "Internal Server Error",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "text/plain; charset=utf-8",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_12.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_12.txt",
+      "ugr_canli": false
+    },
+    {
+      "import": "syk_simulasyon.runtime_ui_sunucusu:syk_ui_router",
+      "factory": false,
+      "kaynak": "route_tasiyan_nesne",
+      "baslatildi": true,
+      "openapi_durum_kodu": 404,
+      "openapi_icerik_turu": "text/plain; charset=utf-8",
+      "openapi_yol_sayisi": 0,
+      "openapi_yollari": [],
+      "ugr_yol_sayisi": 0,
+      "ugr_yollari": [],
+      "health_durum_kodu": 404,
+      "health_icerik_turu": "text/plain; charset=utf-8",
+      "health_json": null,
+      "health_metin_ilk_500": "Not Found",
+      "kok_durum_kodu": 404,
+      "kok_icerik_turu": "text/plain; charset=utf-8",
+      "stdout": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stdout_13.txt",
+      "stderr": "artifacts/syk_core_parca_011/paket_007_runtime_8013_app_teshisi/teshis_runtime_stderr_13.txt",
+      "ugr_canli": false
+    }
+  ],
+  "canli_ugr_aday_sayisi": 0,
+  "dogru_aday": null
+}

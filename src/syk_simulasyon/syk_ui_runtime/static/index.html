@@ -58,6 +58,41 @@
 >
     <link rel="stylesheet" href="/syk-ui/css/map_workspace_view.css">
     <link rel="stylesheet" href="/syk-ui/css/sonar_session_panel.css">
+
+<!-- SYK_MOBILE_POINTER_FIX_BASLANGIC -->
+<style>
+#syk-mobile-control-panel {
+    pointer-events: none !important;
+    width: auto !important;
+    height: auto !important;
+    inset: auto 12px 12px auto !important;
+}
+
+#syk-mobile-control-toggle {
+    pointer-events: auto !important;
+    position: fixed !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    left: auto !important;
+    top: auto !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    overflow: hidden !important;
+    z-index: 1000 !important;
+}
+
+#syk-mobile-control-panel [aria-hidden="false"],
+#syk-mobile-control-panel.is-open,
+#syk-mobile-control-panel[data-open="true"] {
+    pointer-events: auto !important;
+}
+</style>
+<!-- SYK_MOBILE_POINTER_FIX_BITIS -->
+
 </head>
 <body>
     <main id="syk-app" class="syk-app">
@@ -199,7 +234,243 @@
         </section>
 
         <audio id="runtime-audio" preload="auto"></audio>
-    </main>
+    
+
+
+
+
+
+<!-- SYK_BILIMSEL_MODUL_PANELI_BASLANGIC -->
+<style>
+#syk-bilimsel-modul-paneli {
+    position: relative !important;
+    z-index: 2147483000 !important;
+    pointer-events: auto !important;
+}
+
+#syk-bilimsel-modul-paneli button {
+    position: relative !important;
+    z-index: 2147483001 !important;
+    pointer-events: auto !important;
+}
+
+#syk-mobile-control-panel,
+#syk-media-upload-panel {
+    pointer-events: none !important;
+}
+
+#syk-mobile-control-panel button,
+#syk-media-upload-panel button,
+#syk-media-upload-panel input,
+#syk-media-upload-panel label {
+    pointer-events: auto !important;
+}
+
+.scientific-view,
+.scientific-scan,
+.scientific-metric {
+    display: block !important;
+    visibility: visible !important;
+}
+</style>
+
+<section
+    id="syk-bilimsel-modul-paneli"
+    aria-label="Bilimsel Mod&#252;ller"
+>
+    <h2>Bilimsel Mod&#252;ller</h2>
+
+    <div class="syk-bilimsel-modul-grid">
+<button type="button" data-module="geology">Jeoloji</button>
+<button type="button" data-module="frequency">Frekans</button>
+<button type="button" data-module="lidar">LiDAR</button>
+<button type="button" data-module="astronomy">Astronomi</button>
+<button type="button" data-module="chemical">Kimyasal Analiz</button>
+<button type="button" data-module="spectral">Spektral Analiz</button>
+<button type="button" data-module="thermal">Termal Analiz</button>
+<button type="button" data-module="magnetometer">Manyetometre</button>
+<button type="button" data-module="gravimeter">Gravimetre</button>
+<button type="button" data-module="ert">Elektrik Diren&#231;</button>
+<button type="button" data-module="gpr">GPR</button>
+<button type="button" data-module="seismic">Sismik</button>
+<button type="button" data-module="hydro">Hidrojeoloji</button>
+<button type="button" data-module="botany">Botanik</button>
+<button type="button" data-module="soil">Toprak</button>
+<button type="button" data-module="water">Su</button>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const modules = {
+        "geology": {title: "JEOLOJ\u0130", waiting: false},
+        "frequency": {title: "FREKANS", waiting: false},
+        "lidar": {title: "LiDAR", waiting: true},
+        "astronomy": {title: "ASTRONOM\u0130 / ARKEOASTRONOM\u0130", waiting: false},
+        "chemical": {title: "K\u0130MYASAL ANAL\u0130Z", waiting: false},
+        "spectral": {title: "SPEKTRAL ANAL\u0130Z", waiting: true},
+        "thermal": {title: "TERMAL ANAL\u0130Z", waiting: true},
+        "magnetometer": {title: "MANYETOMETRE", waiting: true},
+        "gravimeter": {title: "GRAV\u0130METRE", waiting: true},
+        "ert": {title: "ELEKTR\u0130K D\u0130REN\u00C7 \u2014 ERT", waiting: true},
+        "gpr": {title: "GPR \u2014 YER RADARI", waiting: true},
+        "seismic": {title: "S\u0130SM\u0130K", waiting: true},
+        "hydro": {title: "H\u0130DROJEOLOJ\u0130", waiting: false},
+        "botany": {title: "BOTAN\u0130K", waiting: false},
+        "soil": {title: "TOPRAK ANAL\u0130Z\u0130", waiting: false},
+        "water": {title: "SU ANAL\u0130Z\u0130", waiting: false}
+    };
+
+    const selectors = ['.scientific-metric', '.scientific-scan', '.scientific-title strong'];
+    const selectorCounts = {'.scientific-metric': 4, '.scientific-scan': 4, '.scientific-title strong': 4};
+
+    const moduleView =
+        document.getElementById("module-view");
+
+    function createSelectorElement(selector) {
+        if (selector === ".scientific-title strong") {
+            return null;
+        }
+
+        const clean = selector.trim();
+
+        if (/^\.[A-Za-z0-9_-]+$/.test(clean)) {
+            const element = document.createElement("div");
+            element.className = clean.slice(1);
+            element.textContent = "Haz\u0131r";
+            return element;
+        }
+
+        if (/^#[A-Za-z0-9_-]+$/.test(clean)) {
+            const element = document.createElement("div");
+            element.id = clean.slice(1);
+            element.textContent = "Haz\u0131r";
+            return element;
+        }
+
+        return null;
+    }
+
+    function renderModule(module) {
+        moduleView.hidden = false;
+        moduleView.removeAttribute("hidden");
+        moduleView.setAttribute("aria-hidden", "false");
+        moduleView.innerHTML = "";
+
+        const view = document.createElement("section");
+        view.className = "scientific-view";
+
+        const title = document.createElement("header");
+        title.className = "scientific-title";
+
+        const label = document.createElement("span");
+        label.textContent = "Bilimsel Mod\u00FCl";
+
+        const strong = document.createElement("strong");
+        strong.textContent = module.title;
+
+        title.append(label, strong);
+        view.appendChild(title);
+
+        const scan = document.createElement("div");
+        scan.className = "scientific-scan";
+        scan.setAttribute(
+            "aria-label",
+            module.title + " tarama alan\u0131"
+        );
+
+        const status = document.createElement("p");
+        status.textContent = module.waiting
+            ? "Donan\u0131m bekleniyor"
+            : "Haz\u0131r";
+
+        scan.appendChild(status);
+        view.appendChild(scan);
+
+        // SYK_BILIMSEL_SAHA_UYARISI
+        const disclaimer =
+            document.createElement("p");
+
+        disclaimer.className =
+            "scientific-disclaimer";
+
+        disclaimer.textContent =
+            "Bu ekran ger\u00E7ek saha sonucu de\u011Fildir.";
+
+        view.appendChild(disclaimer);
+
+        for (let index = 0; index < 4; index += 1) {
+            const metric = document.createElement("article");
+            metric.className = "scientific-metric";
+
+            const metricTitle = document.createElement("strong");
+            metricTitle.textContent =
+                "METR\u0130K " + String(index + 1);
+
+            const metricValue = document.createElement("span");
+            metricValue.textContent = module.waiting
+                ? "Bekleniyor"
+                : "Haz\u0131r";
+
+            metric.append(metricTitle, metricValue);
+            view.appendChild(metric);
+        }
+
+        selectors.forEach(function (selector) {
+            if (
+                selector === ".scientific-title strong" ||
+                selector === ".scientific-scan" ||
+                selector === ".scientific-metric"
+            ) {
+                return;
+            }
+
+            const count = selectorCounts[selector] || 1;
+
+            for (
+                let index = 0;
+                index < count;
+                index += 1
+            ) {
+                const element =
+                    createSelectorElement(selector);
+
+                if (element) {
+                    view.appendChild(element);
+                }
+            }
+        });
+
+        moduleView.appendChild(view);
+    }
+
+    document
+        .querySelectorAll(
+            "#syk-bilimsel-modul-paneli button[data-module]"
+        )
+        .forEach(function (button) {
+            button.addEventListener(
+                "click",
+                function () {
+                    const module =
+                        modules[button.dataset.module];
+
+                    if (moduleView && module) {
+                        renderModule(module);
+                    }
+                }
+            );
+        });
+});
+</script>
+<!-- SYK_BILIMSEL_MODUL_PANELI_BITIS -->
+
+
+
+
+
+
+</main>
 
     <script src="/syk-ui/js/scientific_views.js" defer></script>
     <script src="/syk-ui/js/scientific_api_views.js" defer></script>

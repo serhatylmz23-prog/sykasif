@@ -1,0 +1,7 @@
+﻿=== 1. SENSÖR BİRLEŞTİRME MOTORU ===
+SENSOR_FUSION_YAZIM_OK
+
+=== 2. HEDEF TESTLER ===
+
+SYK_DSP_0020_03_SENSOR_FUSION_HATA
+HATA=Sensör birleştirme hedef testleri başarısız.

@@ -1,0 +1,57 @@
+{
+  "istenen_url": "http://127.0.0.1:8013/syk-ui-screen",
+  "son_url": "http://127.0.0.1:8013/runtime/html",
+  "http_durum": 200,
+  "sayfa_basligi": "",
+  "html_uzunlugu": 268,
+  "body_metin_uzunlugu": 71,
+  "body_metin_ilk_3000": "5MHHRO6FVD XXRD3ONLH4OLECID 767X3HR5UD 0.0 FTN2OFKCMB None AMEDFRATFD 0",
+  "tum_element_sayisi": 17,
+  "button_sayisi": 0,
+  "link_sayisi": 0,
+  "role_button_sayisi": 0,
+  "onclick_sayisi": 0,
+  "tiklanabilir_aday_sayisi": 0,
+  "tiklanabilir_adaylar": [],
+  "bilimsel_metin_eslesmeleri": {
+    "Jeoloji": [],
+    "Astronomi": [],
+    "Arkeoastronomi": [],
+    "Kimyasal Analiz": [],
+    "Spektral Analiz": [],
+    "Termal Analiz": [],
+    "Manyetometre": [],
+    "Gravimetre": [],
+    "Elektrik Direnç": [],
+    "ERT": [],
+    "GPR": [],
+    "Sismik": [],
+    "Hidrojeoloji": [],
+    "Botanik": [],
+    "Toprak Analizi": [],
+    "Su Analizi": []
+  },
+  "scriptler": [],
+  "stiller": [],
+  "frameler": [
+    {
+      "url": "http://127.0.0.1:8013/runtime/html",
+      "name": ""
+    }
+  ],
+  "console_mesajlari": [],
+  "page_hatalari": [],
+  "basarisiz_istekler": [],
+  "http_yanitlari": [
+    {
+      "url": "http://127.0.0.1:8013/syk-ui-screen",
+      "status": 307,
+      "content_type": ""
+    },
+    {
+      "url": "http://127.0.0.1:8013/runtime/html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    }
+  ]
+}

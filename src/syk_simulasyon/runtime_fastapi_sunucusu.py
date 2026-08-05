@@ -54,6 +54,12 @@ from .syk_ui_runtime.syfinans_runtime_routes import (
     finans_router as syk_finans_router,
 )
 
+# SYK_UGR_DOGRUDAN_ROUTER_IMPORT
+from syk_simulasyon.syk_ui_runtime.ugr_runtime_routes import (
+    ugr_router as syk_ugr_router,
+)
+
+
 
 CIHAZ_KIMLIGI_CEREZI_ADI = "syk_taninmis_cihaz"
 CIHAZ_ANAHTARI_CEREZI_ADI = "syk_cihaz_anahtari"
@@ -1176,6 +1182,16 @@ def uygulama_olustur(
     for route in syk_terminal_router.routes:
         if getattr(route, "path", None) not in mevcut_yollar:
             uygulama.router.routes.append(route)
+
+    # SYK_UGR_DOGRUDAN_ROUTE_BAGLANTISI
+    mevcut_yollar = {
+        getattr(route, "path", None)
+        for route in uygulama.router.routes
+    }
+
+    for route in syk_ugr_router.routes:
+        if getattr(route, "path", None) not in mevcut_yollar:
+            uygulama.router.routes.append(route)
             mevcut_yollar.add(
                 getattr(route, "path", None)
             )
@@ -1186,6 +1202,48 @@ def uygulama_olustur(
             mevcut_yollar.add(
                 getattr(route, "path", None)
             )
+
+    # SYK_UI_SCREEN_UYUMLULUK_YOLU
+    if not any(
+        getattr(route, "path", None) == "/syk-ui-screen"
+        for route in uygulama.router.routes
+    ):
+        from fastapi.responses import RedirectResponse
+
+        @uygulama.get(
+            "/syk-ui-screen",
+            include_in_schema=False,
+        )
+        async def syk_ui_screen_uyumluluk_yolu():
+            from syk_simulasyon.syk_ui_runtime.screen_routes import (
+                get_ui_screen,
+            )
+
+            return get_ui_screen()
+
+    # SYK_UI_STATIC_DOGRUDAN_MOUNT
+    from pathlib import Path as _SykPath
+    from fastapi.staticfiles import StaticFiles as _SykStaticFiles
+
+    _syk_static_dizin = (
+        _SykPath(__file__).resolve().parent
+        / "syk_ui_runtime"
+        / "static"
+    )
+
+    _syk_mount_yollari = {
+        getattr(route, "path", None)
+        for route in uygulama.routes
+    }
+
+    if "/syk-ui" not in _syk_mount_yollari:
+        uygulama.mount(
+            "/syk-ui",
+            _SykStaticFiles(
+                directory=str(_syk_static_dizin),
+            ),
+            name="syk-ui-static",
+        )
 
     return uygulama
 

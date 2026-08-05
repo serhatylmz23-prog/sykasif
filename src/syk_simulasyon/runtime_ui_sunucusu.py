@@ -109,6 +109,12 @@ if not any(
         syk_terminal_router
     )
 
+    # SYK_UGR_RUNTIME_ROUTER_BAGLANTISI
+    app.include_router(
+        syk_ugr_router,
+    )
+
+
 # SYK_PROJECT_RUNTIME_ROUTER_BAGLANTISI
 from syk_simulasyon.syk_ui_runtime.project_routes import (
     project_router as syk_project_router,
@@ -444,6 +450,12 @@ from syk_simulasyon.syk_ui_runtime.sensor_gateway_session_routes import (
     sensor_gateway_session_router as syk_sensor_gateway_session_router,
 )
 
+# SYK_UGR_RUNTIME_ROUTER_IMPORT
+from syk_simulasyon.syk_ui_runtime.ugr_runtime_routes import (
+    ugr_router as syk_ugr_router,
+)
+
+
 _syk_sensor_session_paths = {
     getattr(route, "path", None)
     for route in syk_sensor_gateway_session_router.routes
@@ -486,4 +498,53 @@ for _syk_sensor_session_route in reversed(
     app.router.routes.insert(
         _syk_sensor_session_insert_index,
         _syk_sensor_session_route,
+    )
+
+# SYK_SENSOR_FUSION_ROUTER_BAGLANTISI
+from syk_simulasyon.syk_ui_runtime.sensor_fusion_routes import (
+    sensor_fusion_router as syk_sensor_fusion_router,
+)
+
+_syk_sensor_fusion_paths = {
+    getattr(route, "path", None)
+    for route in syk_sensor_fusion_router.routes
+}
+
+app.router.routes[:] = [
+    route
+    for route in app.router.routes
+    if getattr(route, "path", None)
+    not in _syk_sensor_fusion_paths
+]
+
+_syk_sensor_fusion_insert_index = len(
+    app.router.routes
+)
+
+for _syk_index, _syk_route in enumerate(
+    app.router.routes
+):
+    _syk_path = getattr(
+        _syk_route,
+        "path",
+        "",
+    )
+
+    if (
+        "{" in _syk_path
+        and _syk_path.startswith(
+            "/api/syk-ui/"
+        )
+    ):
+        _syk_sensor_fusion_insert_index = (
+            _syk_index
+        )
+        break
+
+for _syk_sensor_fusion_route in reversed(
+    syk_sensor_fusion_router.routes
+):
+    app.router.routes.insert(
+        _syk_sensor_fusion_insert_index,
+        _syk_sensor_fusion_route,
     )

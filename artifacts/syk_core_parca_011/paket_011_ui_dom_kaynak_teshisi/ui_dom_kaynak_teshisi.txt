@@ -1,0 +1,68 @@
+SPR-011 PAKET-011
+UI DOM VE KAYNAK TESHISI
+
+ISTENEN_URL=http://127.0.0.1:8013/syk-ui-screen
+SON_URL=http://127.0.0.1:8013/runtime/html
+HTTP_DURUM=200
+SAYFA_BASLIGI=
+HTML_UZUNLUGU=268
+BODY_METIN_UZUNLUGU=71
+TUM_ELEMENT_SAYISI=17
+BUTTON_SAYISI=0
+LINK_SAYISI=0
+ROLE_BUTTON_SAYISI=0
+ONCLICK_SAYISI=0
+TIKLANABILIR_ADAY_SAYISI=0
+SCRIPT_SAYISI=0
+STIL_SAYISI=0
+FRAME_SAYISI=1
+PAGE_HATA_SAYISI=0
+BASARISIZ_ISTEK_SAYISI=0
+
+=== BODY METNI ===
+5MHHRO6FVD XXRD3ONLH4OLECID 767X3HR5UD 0.0 FTN2OFKCMB None AMEDFRATFD 0
+
+=== TIKLANABILIR ADAYLAR ===
+
+=== BILIMSEL METIN ESLESMELERI ===
+{
+  "Jeoloji": [],
+  "Astronomi": [],
+  "Arkeoastronomi": [],
+  "Kimyasal Analiz": [],
+  "Spektral Analiz": [],
+  "Termal Analiz": [],
+  "Manyetometre": [],
+  "Gravimetre": [],
+  "Elektrik Direnç": [],
+  "ERT": [],
+  "GPR": [],
+  "Sismik": [],
+  "Hidrojeoloji": [],
+  "Botanik": [],
+  "Toprak Analizi": [],
+  "Su Analizi": []
+}
+
+=== SCRIPTLER ===
+[]
+
+=== STILLER ===
+[]
+
+=== FRAMELER ===
+[
+  {
+    "url": "http://127.0.0.1:8013/runtime/html",
+    "name": ""
+  }
+]
+
+=== CONSOLE MESAJLARI ===
+[]
+
+=== PAGE HATALARI ===
+[]
+
+=== BASARISIZ ISTEKLER ===
+[]

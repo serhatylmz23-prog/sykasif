@@ -1,0 +1,2883 @@
+{
+  "incelenen_dosya_sayisi": 221,
+  "eslesme_sayisi": 171,
+  "route_dosyasi_sayisi": 24,
+  "html_adayi_sayisi": 21,
+  "en_guclu_ui_adaylari": [
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "bilimsel_etiket_sayisi": 12,
+      "button_sayisi": 0,
+      "role_button_sayisi": 0,
+      "toplam_puan": 240
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/web/demo/ugr_dynamic_icons_preview.html",
+      "bilimsel_etiket_sayisi": 7,
+      "button_sayisi": 30,
+      "role_button_sayisi": 0,
+      "toplam_puan": 230
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "bilimsel_etiket_sayisi": 11,
+      "button_sayisi": 0,
+      "role_button_sayisi": 0,
+      "toplam_puan": 220
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "bilimsel_etiket_sayisi": 7,
+      "button_sayisi": 0,
+      "role_button_sayisi": 0,
+      "toplam_puan": 140
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "bilimsel_etiket_sayisi": 7,
+      "button_sayisi": 0,
+      "role_button_sayisi": 0,
+      "toplam_puan": 140
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/dtse_evidence_scientific_runtime.js",
+      "bilimsel_etiket_sayisi": 6,
+      "button_sayisi": 0,
+      "role_button_sayisi": 0,
+      "toplam_puan": 120
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py",
+      "bilimsel_etiket_sayisi": 5,
+      "button_sayisi": 0,
+      "role_button_sayisi": 0,
+      "toplam_puan": 100
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/scientific_views.js",
+      "bilimsel_etiket_sayisi": 5,
+      "button_sayisi": 0,
+      "role_button_sayisi": 0,
+      "toplam_puan": 100
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/mobile_control_panel.js",
+      "bilimsel_etiket_sayisi": 0,
+      "button_sayisi": 10,
+      "role_button_sayisi": 0,
+      "toplam_puan": 30
+    },
+    {
+      "dosya": "src/syk_simulasyon/ortam_hafizasi.py",
+      "bilimsel_etiket_sayisi": 1,
+      "button_sayisi": 0,
+      "role_button_sayisi": 0,
+      "toplam_puan": 20
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/css/scientific_views.css",
+      "bilimsel_etiket_sayisi": 1,
+      "button_sayisi": 0,
+      "role_button_sayisi": 0,
+      "toplam_puan": 20
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/scientific_api_views.js",
+      "bilimsel_etiket_sayisi": 1,
+      "button_sayisi": 0,
+      "role_button_sayisi": 0,
+      "toplam_puan": 20
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/scientific_visibility_guard.js",
+      "bilimsel_etiket_sayisi": 1,
+      "button_sayisi": 0,
+      "role_button_sayisi": 0,
+      "toplam_puan": 20
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/device_hub.js",
+      "bilimsel_etiket_sayisi": 0,
+      "button_sayisi": 3,
+      "role_button_sayisi": 0,
+      "toplam_puan": 9
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/sonar_session_panel.js",
+      "bilimsel_etiket_sayisi": 0,
+      "button_sayisi": 3,
+      "role_button_sayisi": 0,
+      "toplam_puan": 9
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/dtse_evidence_focus.js",
+      "bilimsel_etiket_sayisi": 0,
+      "button_sayisi": 2,
+      "role_button_sayisi": 0,
+      "toplam_puan": 6
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/media_upload_panel.js",
+      "bilimsel_etiket_sayisi": 0,
+      "button_sayisi": 2,
+      "role_button_sayisi": 0,
+      "toplam_puan": 6
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_fastapi_sunucusu.py",
+      "bilimsel_etiket_sayisi": 0,
+      "button_sayisi": 1,
+      "role_button_sayisi": 0,
+      "toplam_puan": 3
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/index.html",
+      "bilimsel_etiket_sayisi": 0,
+      "button_sayisi": 1,
+      "role_button_sayisi": 0,
+      "toplam_puan": 3
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/web/render_modeli.py",
+      "bilimsel_etiket_sayisi": 0,
+      "button_sayisi": 1,
+      "role_button_sayisi": 0,
+      "toplam_puan": 3
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/css/mobile_device_runtime.css",
+      "bilimsel_etiket_sayisi": 0,
+      "button_sayisi": 0,
+      "role_button_sayisi": 1,
+      "toplam_puan": 2
+    }
+  ],
+  "route_kayitlari": [
+    {
+      "dosya": "src/syk_simulasyon/runtime_fastapi_sunucusu.py",
+      "routes": [
+        {
+          "fonksiyon": "giris_ekrani",
+          "satir": 398,
+          "dekoratorlar": [
+            "uygulama.get('/giris')"
+          ]
+        },
+        {
+          "fonksiyon": "ilk_kurulum",
+          "satir": 467,
+          "dekoratorlar": [
+            "uygulama.post('/runtime/ilk-kurulum')"
+          ]
+        },
+        {
+          "fonksiyon": "oturum_ac",
+          "satir": 593,
+          "dekoratorlar": [
+            "uygulama.post('/runtime/oturum')"
+          ]
+        },
+        {
+          "fonksiyon": "taninmis_cihazi_iptal_et",
+          "satir": 713,
+          "dekoratorlar": [
+            "uygulama.post('/runtime/cihaz-iptal')"
+          ]
+        },
+        {
+          "fonksiyon": "oturum_kapat",
+          "satir": 791,
+          "dekoratorlar": [
+            "uygulama.post('/cikis')"
+          ]
+        },
+        {
+          "fonksiyon": "runtime_sagligi",
+          "satir": 809,
+          "dekoratorlar": [
+            "uygulama.get('/runtime/health')"
+          ]
+        },
+        {
+          "fonksiyon": "terminal",
+          "satir": 904,
+          "dekoratorlar": [
+            "uygulama.get('/terminal')"
+          ]
+        },
+        {
+          "fonksiyon": "runtime_json",
+          "satir": 919,
+          "dekoratorlar": [
+            "uygulama.get('/runtime/json')"
+          ]
+        },
+        {
+          "fonksiyon": "runtime_html",
+          "satir": 930,
+          "dekoratorlar": [
+            "uygulama.get('/runtime/html')"
+          ]
+        },
+        {
+          "fonksiyon": "runtime_csv",
+          "satir": 941,
+          "dekoratorlar": [
+            "uygulama.get('/runtime/csv')"
+          ]
+        },
+        {
+          "fonksiyon": "runtime_markdown",
+          "satir": 952,
+          "dekoratorlar": [
+            "uygulama.get('/runtime/markdown')"
+          ]
+        },
+        {
+          "fonksiyon": "runtime_xml",
+          "satir": 963,
+          "dekoratorlar": [
+            "uygulama.get('/runtime/xml')"
+          ]
+        },
+        {
+          "fonksiyon": "runtime_yaml",
+          "satir": 974,
+          "dekoratorlar": [
+            "uygulama.get('/runtime/yaml')"
+          ]
+        },
+        {
+          "fonksiyon": "syk_ui_screen_uyumluluk_yolu",
+          "satir": 1217,
+          "dekoratorlar": [
+            "uygulama.get('/syk-ui-screen', include_in_schema=False)"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/adaptive_environment_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "get_current_environment",
+          "satir": 54,
+          "dekoratorlar": [
+            "router.get('/current')"
+          ]
+        },
+        {
+          "fonksiyon": "get_live_environment",
+          "satir": 83,
+          "dekoratorlar": [
+            "router.get('/live')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "get_runtime_state",
+          "satir": 116,
+          "dekoratorlar": [
+            "router.get('/runtime-state')"
+          ]
+        },
+        {
+          "fonksiyon": "get_scientific_modules",
+          "satir": 148,
+          "dekoratorlar": [
+            "router.get('/scientific-modules')"
+          ]
+        },
+        {
+          "fonksiyon": "get_scientific_module",
+          "satir": 153,
+          "dekoratorlar": [
+            "router.get('/scientific-modules/{module_id}')"
+          ]
+        },
+        {
+          "fonksiyon": "get_scientific_adapters",
+          "satir": 234,
+          "dekoratorlar": [
+            "router.get('/scientific-adapters')"
+          ]
+        },
+        {
+          "fonksiyon": "ingest_scientific_adapter_data",
+          "satir": 242,
+          "dekoratorlar": [
+            "router.post('/scientific-adapters/{adapter_id}/modules/{module_id}/ingest')"
+          ]
+        },
+        {
+          "fonksiyon": "discover_serial_devices",
+          "satir": 285,
+          "dekoratorlar": [
+            "router.get('/scientific-devices/serial')"
+          ]
+        },
+        {
+          "fonksiyon": "read_serial_device",
+          "satir": 299,
+          "dekoratorlar": [
+            "router.post('/scientific-devices/serial/read')"
+          ]
+        },
+        {
+          "fonksiyon": "read_tcp_device",
+          "satir": 340,
+          "dekoratorlar": [
+            "router.post('/scientific-devices/tcp/read')"
+          ]
+        },
+        {
+          "fonksiyon": "discover_ble_devices",
+          "satir": 385,
+          "dekoratorlar": [
+            "router.post('/scientific-devices/ble/discover')"
+          ]
+        },
+        {
+          "fonksiyon": "read_ble_device",
+          "satir": 403,
+          "dekoratorlar": [
+            "router.post('/scientific-devices/ble/read')"
+          ]
+        },
+        {
+          "fonksiyon": "get_scientific_device_transports",
+          "satir": 440,
+          "dekoratorlar": [
+            "router.get('/scientific-devices/transports')"
+          ]
+        },
+        {
+          "fonksiyon": "discover_all_scientific_devices",
+          "satir": 445,
+          "dekoratorlar": [
+            "router.post('/scientific-devices/discover')"
+          ]
+        },
+        {
+          "fonksiyon": "get_device_hub",
+          "satir": 473,
+          "dekoratorlar": [
+            "router.get('/device-hub')"
+          ]
+        },
+        {
+          "fonksiyon": "refresh_device_hub",
+          "satir": 483,
+          "dekoratorlar": [
+            "router.post('/device-hub/refresh')"
+          ]
+        },
+        {
+          "fonksiyon": "register_device_hub_device",
+          "satir": 492,
+          "dekoratorlar": [
+            "router.post('/device-hub/register')"
+          ]
+        },
+        {
+          "fonksiyon": "get_device_hub_device",
+          "satir": 515,
+          "dekoratorlar": [
+            "router.get('/device-hub/{device_id}')"
+          ]
+        },
+        {
+          "fonksiyon": "get_device_sessions",
+          "satir": 591,
+          "dekoratorlar": [
+            "router.get('/device-sessions')"
+          ]
+        },
+        {
+          "fonksiyon": "start_device_session",
+          "satir": 596,
+          "dekoratorlar": [
+            "router.post('/device-sessions/start')"
+          ]
+        },
+        {
+          "fonksiyon": "get_device_session",
+          "satir": 624,
+          "dekoratorlar": [
+            "router.get('/device-sessions/{session_id}')"
+          ]
+        },
+        {
+          "fonksiyon": "append_device_session_samples",
+          "satir": 644,
+          "dekoratorlar": [
+            "router.post('/device-sessions/{session_id}/samples')"
+          ]
+        },
+        {
+          "fonksiyon": "stop_device_session",
+          "satir": 674,
+          "dekoratorlar": [
+            "router.post('/device-sessions/{session_id}/stop')"
+          ]
+        },
+        {
+          "fonksiyon": "append_device_session_evidence",
+          "satir": 705,
+          "dekoratorlar": [
+            "router.post('/device-sessions/{session_id}/evidence')"
+          ]
+        },
+        {
+          "fonksiyon": "get_device_session_evidence",
+          "satir": 751,
+          "dekoratorlar": [
+            "router.get('/device-sessions/{session_id}/evidence')"
+          ]
+        },
+        {
+          "fonksiyon": "verify_device_session_evidence",
+          "satir": 775,
+          "dekoratorlar": [
+            "router.get('/device-sessions/{session_id}/evidence/verify')"
+          ]
+        },
+        {
+          "fonksiyon": "ingest_device_recording_packet",
+          "satir": 802,
+          "dekoratorlar": [
+            "router.post('/device-hub/{device_id}/recording-ingest')"
+          ]
+        },
+        {
+          "fonksiyon": "build_device_session_package",
+          "satir": 814,
+          "dekoratorlar": [
+            "router.post('/device-sessions/{session_id}/package')"
+          ]
+        },
+        {
+          "fonksiyon": "verify_device_session_package",
+          "satir": 862,
+          "dekoratorlar": [
+            "router.get('/device-sessions/{session_id}/package/verify')"
+          ]
+        },
+        {
+          "fonksiyon": "seal_device_session_package",
+          "satir": 890,
+          "dekoratorlar": [
+            "router.post('/device-sessions/{session_id}/seal')"
+          ]
+        },
+        {
+          "fonksiyon": "verify_device_session_seal",
+          "satir": 949,
+          "dekoratorlar": [
+            "router.get('/device-sessions/{session_id}/seal/verify')"
+          ]
+        },
+        {
+          "fonksiyon": "analyze_device_session",
+          "satir": 977,
+          "dekoratorlar": [
+            "router.post('/device-sessions/{session_id}/analysis')"
+          ]
+        },
+        {
+          "fonksiyon": "get_device_session_analysis",
+          "satir": 1005,
+          "dekoratorlar": [
+            "router.get('/device-sessions/{session_id}/analysis')"
+          ]
+        },
+        {
+          "fonksiyon": "verify_device_session_analysis",
+          "satir": 1025,
+          "dekoratorlar": [
+            "router.get('/device-sessions/{session_id}/analysis/verify')"
+          ]
+        },
+        {
+          "fonksiyon": "apply_device_analysis_to_syframe",
+          "satir": 1035,
+          "dekoratorlar": [
+            "router.post('/device-sessions/{session_id}/syframe')"
+          ]
+        },
+        {
+          "fonksiyon": "get_analysis_syframe_state",
+          "satir": 1064,
+          "dekoratorlar": [
+            "router.get('/syframe/analysis-state')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/dtse_attention_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "ingest_dtse_attention_frame",
+          "satir": 60,
+          "dekoratorlar": [
+            "router.post('/frames/attention')"
+          ]
+        },
+        {
+          "fonksiyon": "get_dtse_attention_events",
+          "satir": 100,
+          "dekoratorlar": [
+            "router.get('/events')"
+          ]
+        },
+        {
+          "fonksiyon": "get_dtse_attention_event",
+          "satir": 114,
+          "dekoratorlar": [
+            "router.get('/events/{event_id}')"
+          ]
+        },
+        {
+          "fonksiyon": "get_dtse_attention_state",
+          "satir": 132,
+          "dekoratorlar": [
+            "router.get('/state')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/external_device_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "list_devices",
+          "satir": 63,
+          "dekoratorlar": [
+            "external_device_router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "register_mock_garmin",
+          "satir": 76,
+          "dekoratorlar": [
+            "external_device_router.post('/garmin/mock', status_code=201)"
+          ]
+        },
+        {
+          "fonksiyon": "get_device",
+          "satir": 115,
+          "dekoratorlar": [
+            "external_device_router.get('/{device_id}')"
+          ]
+        },
+        {
+          "fonksiyon": "connect_device",
+          "satir": 137,
+          "dekoratorlar": [
+            "external_device_router.post('/{device_id}/connect')"
+          ]
+        },
+        {
+          "fonksiyon": "disconnect_device",
+          "satir": 156,
+          "dekoratorlar": [
+            "external_device_router.post('/{device_id}/disconnect')"
+          ]
+        },
+        {
+          "fonksiyon": "read_sonar_frame",
+          "satir": 176,
+          "dekoratorlar": [
+            "external_device_router.post('/{device_id}/frames', status_code=201)"
+          ]
+        },
+        {
+          "fonksiyon": "list_sonar_records",
+          "satir": 217,
+          "dekoratorlar": [
+            "external_device_router.get('/records/list')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "goruntu_kaydi_olustur",
+          "satir": 104,
+          "dekoratorlar": [
+            "router.post('/kayitlar')"
+          ]
+        },
+        {
+          "fonksiyon": "supheli_bolge_ekle",
+          "satir": 147,
+          "dekoratorlar": [
+            "router.post('/kayitlar/{veri_kimligi}/supheli-bolgeler')"
+          ]
+        },
+        {
+          "fonksiyon": "goruntu_kaydi_getir",
+          "satir": 206,
+          "dekoratorlar": [
+            "router.get('/kayitlar/{veri_kimligi}')"
+          ]
+        },
+        {
+          "fonksiyon": "goruntu_dtse_durumu",
+          "satir": 226,
+          "dekoratorlar": [
+            "router.get('/dtse-adapter-state')"
+          ]
+        },
+        {
+          "fonksiyon": "goruntu_dtse_kanit_zinciri_getir",
+          "satir": 232,
+          "dekoratorlar": [
+            "router.get('/kayitlar/{veri_kimligi}/kanit-zinciri')"
+          ]
+        },
+        {
+          "fonksiyon": "goruntu_dtse_kanit_manifesti_getir",
+          "satir": 262,
+          "dekoratorlar": [
+            "router.get('/kayitlar/{veri_kimligi}/kanit-manifesti')"
+          ]
+        },
+        {
+          "fonksiyon": "goruntu_dtse_kanit_dogrula",
+          "satir": 284,
+          "dekoratorlar": [
+            "router.get('/kayitlar/{veri_kimligi}/kanit-dogrula')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/kasif_icon_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "list_kasif_icons",
+          "satir": 21,
+          "dekoratorlar": [
+            "router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "get_kasif_icon_manifest",
+          "satir": 46,
+          "dekoratorlar": [
+            "router.get('/manifest')"
+          ]
+        },
+        {
+          "fonksiyon": "get_kasif_icon_groups",
+          "satir": 52,
+          "dekoratorlar": [
+            "router.get('/groups')"
+          ]
+        },
+        {
+          "fonksiyon": "get_kasif_assistant_profile",
+          "satir": 62,
+          "dekoratorlar": [
+            "router.get('/assistant')"
+          ]
+        },
+        {
+          "fonksiyon": "search_kasif_icons",
+          "satir": 68,
+          "dekoratorlar": [
+            "router.get('/search')"
+          ]
+        },
+        {
+          "fonksiyon": "reload_kasif_icons",
+          "satir": 92,
+          "dekoratorlar": [
+            "router.post('/reload')"
+          ]
+        },
+        {
+          "fonksiyon": "get_kasif_icon",
+          "satir": 105,
+          "dekoratorlar": [
+            "router.get('/{icon_id}')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/map_workspace_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "list_workspaces",
+          "satir": 67,
+          "dekoratorlar": [
+            "map_workspace_router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "create_workspace",
+          "satir": 90,
+          "dekoratorlar": [
+            "map_workspace_router.post('', status_code=201)"
+          ]
+        },
+        {
+          "fonksiyon": "get_workspace",
+          "satir": 116,
+          "dekoratorlar": [
+            "map_workspace_router.get('/{workspace_id}')"
+          ]
+        },
+        {
+          "fonksiyon": "add_pin",
+          "satir": 163,
+          "dekoratorlar": [
+            "map_workspace_router.post('/{workspace_id}/pins', status_code=201)"
+          ]
+        },
+        {
+          "fonksiyon": "add_layer",
+          "satir": 190,
+          "dekoratorlar": [
+            "map_workspace_router.post('/{workspace_id}/layers', status_code=201)"
+          ]
+        },
+        {
+          "fonksiyon": "add_measurement",
+          "satir": 218,
+          "dekoratorlar": [
+            "map_workspace_router.post('/{workspace_id}/measurements', status_code=201)"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "analyze_uploaded_media",
+          "satir": 33,
+          "dekoratorlar": [
+            "router.post('')"
+          ]
+        },
+        {
+          "fonksiyon": "list_media_analyses",
+          "satir": 65,
+          "dekoratorlar": [
+            "router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "get_media_analysis",
+          "satir": 70,
+          "dekoratorlar": [
+            "router.get('/{analysis_id}')"
+          ]
+        },
+        {
+          "fonksiyon": "download_media_report",
+          "satir": 91,
+          "dekoratorlar": [
+            "router.get('/{analysis_id}/report')"
+          ]
+        },
+        {
+          "fonksiyon": "download_media_manifest",
+          "satir": 126,
+          "dekoratorlar": [
+            "router.get('/{analysis_id}/manifest')"
+          ]
+        },
+        {
+          "fonksiyon": "get_annotated_media_preview",
+          "satir": 163,
+          "dekoratorlar": [
+            "router.get('/{analysis_id}/preview')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/mobile_control_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "get_mobile_control_runtime",
+          "satir": 55,
+          "dekoratorlar": [
+            "router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "register_mobile_control",
+          "satir": 61,
+          "dekoratorlar": [
+            "router.post('/devices')"
+          ]
+        },
+        {
+          "fonksiyon": "list_mobile_controls",
+          "satir": 83,
+          "dekoratorlar": [
+            "router.get('/devices')"
+          ]
+        },
+        {
+          "fonksiyon": "get_mobile_control",
+          "satir": 88,
+          "dekoratorlar": [
+            "router.get('/devices/{device_id}')"
+          ]
+        },
+        {
+          "fonksiyon": "reset_mobile_control",
+          "satir": 163,
+          "dekoratorlar": [
+            "router.post('/devices/{device_id}/reset')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "get_mobile_runtime",
+          "satir": 106,
+          "dekoratorlar": [
+            "router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "register_mobile_device",
+          "satir": 111,
+          "dekoratorlar": [
+            "router.post('/devices')"
+          ]
+        },
+        {
+          "fonksiyon": "list_mobile_devices",
+          "satir": 142,
+          "dekoratorlar": [
+            "router.get('/devices')"
+          ]
+        },
+        {
+          "fonksiyon": "get_mobile_device",
+          "satir": 151,
+          "dekoratorlar": [
+            "router.get('/devices/{device_id}')"
+          ]
+        },
+        {
+          "fonksiyon": "resolve_mobile_layout",
+          "satir": 239,
+          "dekoratorlar": [
+            "router.post('/layout')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/mobile_offline_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "get_offline_runtime",
+          "satir": 79,
+          "dekoratorlar": [
+            "router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "enqueue_offline_item",
+          "satir": 95,
+          "dekoratorlar": [
+            "router.post('/queue')"
+          ]
+        },
+        {
+          "fonksiyon": "list_offline_queue",
+          "satir": 127,
+          "dekoratorlar": [
+            "router.get('/queue')"
+          ]
+        },
+        {
+          "fonksiyon": "begin_offline_item",
+          "satir": 148,
+          "dekoratorlar": [
+            "router.post('/queue/{item_id}/begin')"
+          ]
+        },
+        {
+          "fonksiyon": "complete_offline_item",
+          "satir": 173,
+          "dekoratorlar": [
+            "router.post('/queue/{item_id}/complete')"
+          ]
+        },
+        {
+          "fonksiyon": "fail_offline_item",
+          "satir": 192,
+          "dekoratorlar": [
+            "router.post('/queue/{item_id}/fail')"
+          ]
+        },
+        {
+          "fonksiyon": "create_pairing",
+          "satir": 248,
+          "dekoratorlar": [
+            "router.post('/pairings')"
+          ]
+        },
+        {
+          "fonksiyon": "confirm_pairing",
+          "satir": 275,
+          "dekoratorlar": [
+            "router.post('/pairings/confirm')"
+          ]
+        },
+        {
+          "fonksiyon": "verify_pairing",
+          "satir": 304,
+          "dekoratorlar": [
+            "router.post('/pairings/verify')"
+          ]
+        },
+        {
+          "fonksiyon": "list_pairings",
+          "satir": 326,
+          "dekoratorlar": [
+            "router.get('/pairings')"
+          ]
+        },
+        {
+          "fonksiyon": "get_cache",
+          "satir": 389,
+          "dekoratorlar": [
+            "router.get('/cache/{cache_key}')"
+          ]
+        },
+        {
+          "fonksiyon": "list_cache",
+          "satir": 409,
+          "dekoratorlar": [
+            "router.get('/cache')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/mobile_sensor_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "get_sensor_runtime",
+          "satir": 91,
+          "dekoratorlar": [
+            "router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "start_camera",
+          "satir": 118,
+          "dekoratorlar": [
+            "router.post('/camera/start')"
+          ]
+        },
+        {
+          "fonksiyon": "stop_camera",
+          "satir": 147,
+          "dekoratorlar": [
+            "router.post('/camera/stop')"
+          ]
+        },
+        {
+          "fonksiyon": "start_microphone",
+          "satir": 153,
+          "dekoratorlar": [
+            "router.post('/microphone/start')"
+          ]
+        },
+        {
+          "fonksiyon": "stop_microphone",
+          "satir": 178,
+          "dekoratorlar": [
+            "router.post('/microphone/stop')"
+          ]
+        },
+        {
+          "fonksiyon": "add_location",
+          "satir": 184,
+          "dekoratorlar": [
+            "router.post('/location')"
+          ]
+        },
+        {
+          "fonksiyon": "list_locations",
+          "satir": 226,
+          "dekoratorlar": [
+            "router.get('/locations')"
+          ]
+        },
+        {
+          "fonksiyon": "capture_frame",
+          "satir": 245,
+          "dekoratorlar": [
+            "router.post('/frames')"
+          ]
+        },
+        {
+          "fonksiyon": "list_frames",
+          "satir": 288,
+          "dekoratorlar": [
+            "router.get('/frames')"
+          ]
+        },
+        {
+          "fonksiyon": "get_frame",
+          "satir": 307,
+          "dekoratorlar": [
+            "router.get('/frames/{frame_id}')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/project_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "list_projects",
+          "satir": 33,
+          "dekoratorlar": [
+            "project_router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "create_project",
+          "satir": 59,
+          "dekoratorlar": [
+            "project_router.post('', status_code=201)"
+          ]
+        },
+        {
+          "fonksiyon": "get_project",
+          "satir": 78,
+          "dekoratorlar": [
+            "project_router.get('/{project_id}')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/real_device_connection_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "list_connections",
+          "satir": 72,
+          "dekoratorlar": [
+            "real_device_connection_router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "create_connection",
+          "satir": 90,
+          "dekoratorlar": [
+            "real_device_connection_router.post('', status_code=201)"
+          ]
+        },
+        {
+          "fonksiyon": "get_connection",
+          "satir": 120,
+          "dekoratorlar": [
+            "real_device_connection_router.get('/{connection_id}')"
+          ]
+        },
+        {
+          "fonksiyon": "connect",
+          "satir": 144,
+          "dekoratorlar": [
+            "real_device_connection_router.post('/{connection_id}/connect')"
+          ]
+        },
+        {
+          "fonksiyon": "disconnect",
+          "satir": 165,
+          "dekoratorlar": [
+            "real_device_connection_router.post('/{connection_id}/disconnect')"
+          ]
+        },
+        {
+          "fonksiyon": "heartbeat",
+          "satir": 186,
+          "dekoratorlar": [
+            "real_device_connection_router.post('/{connection_id}/heartbeat')"
+          ]
+        },
+        {
+          "fonksiyon": "reconnect",
+          "satir": 213,
+          "dekoratorlar": [
+            "real_device_connection_router.post('/{connection_id}/reconnect')"
+          ]
+        },
+        {
+          "fonksiyon": "ingest_nmea",
+          "satir": 234,
+          "dekoratorlar": [
+            "real_device_connection_router.post('/{connection_id}/nmea')"
+          ]
+        },
+        {
+          "fonksiyon": "manifest",
+          "satir": 271,
+          "dekoratorlar": [
+            "real_device_connection_router.get('/{connection_id}/manifest')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/research_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "list_research",
+          "satir": 44,
+          "dekoratorlar": [
+            "research_router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "create_research",
+          "satir": 67,
+          "dekoratorlar": [
+            "research_router.post('', status_code=201)"
+          ]
+        },
+        {
+          "fonksiyon": "get_research",
+          "satir": 92,
+          "dekoratorlar": [
+            "research_router.get('/{research_id}')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/screen_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "get_ui_screen",
+          "satir": 14,
+          "dekoratorlar": [
+            "router.get('/syk-ui-screen', include_in_schema=False)"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/sensor_gateway_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "gateway_snapshot",
+          "satir": 73,
+          "dekoratorlar": [
+            "sensor_gateway_router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "register_source",
+          "satir": 81,
+          "dekoratorlar": [
+            "sensor_gateway_router.post('/sources', status_code=201)"
+          ]
+        },
+        {
+          "fonksiyon": "ingest",
+          "satir": 114,
+          "dekoratorlar": [
+            "sensor_gateway_router.post('/sources/{source_id}/ingest', status_code=201)"
+          ]
+        },
+        {
+          "fonksiyon": "list_envelopes",
+          "satir": 144,
+          "dekoratorlar": [
+            "sensor_gateway_router.get('/envelopes')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/sensor_gateway_session_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "list_sessions",
+          "satir": 45,
+          "dekoratorlar": [
+            "sensor_gateway_session_router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "create_session",
+          "satir": 82,
+          "dekoratorlar": [
+            "sensor_gateway_session_router.post('', status_code=201)"
+          ]
+        },
+        {
+          "fonksiyon": "get_session",
+          "satir": 115,
+          "dekoratorlar": [
+            "sensor_gateway_session_router.get('/{session_id}')"
+          ]
+        },
+        {
+          "fonksiyon": "start_session",
+          "satir": 143,
+          "dekoratorlar": [
+            "sensor_gateway_session_router.post('/{session_id}/start')"
+          ]
+        },
+        {
+          "fonksiyon": "sync_session",
+          "satir": 174,
+          "dekoratorlar": [
+            "sensor_gateway_session_router.post('/{session_id}/sync')"
+          ]
+        },
+        {
+          "fonksiyon": "stop_session",
+          "satir": 205,
+          "dekoratorlar": [
+            "sensor_gateway_session_router.post('/{session_id}/stop')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/sonar_session_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "list_sessions",
+          "satir": 58,
+          "dekoratorlar": [
+            "sonar_session_router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "create_session",
+          "satir": 96,
+          "dekoratorlar": [
+            "sonar_session_router.post('', status_code=201)"
+          ]
+        },
+        {
+          "fonksiyon": "get_session",
+          "satir": 126,
+          "dekoratorlar": [
+            "sonar_session_router.get('/{session_id}')"
+          ]
+        },
+        {
+          "fonksiyon": "start_session",
+          "satir": 148,
+          "dekoratorlar": [
+            "sonar_session_router.post('/{session_id}/start')"
+          ]
+        },
+        {
+          "fonksiyon": "capture_session",
+          "satir": 178,
+          "dekoratorlar": [
+            "sonar_session_router.post('/{session_id}/capture')"
+          ]
+        },
+        {
+          "fonksiyon": "stop_session",
+          "satir": 215,
+          "dekoratorlar": [
+            "sonar_session_router.post('/{session_id}/stop')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/syfinans_runtime_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "get_syfinans_runtime",
+          "satir": 491,
+          "dekoratorlar": [
+            "finans_router.get('/runtime')"
+          ]
+        },
+        {
+          "fonksiyon": "get_syfinans_kaynaklari",
+          "satir": 499,
+          "dekoratorlar": [
+            "finans_router.get('/kaynaklar')"
+          ]
+        },
+        {
+          "fonksiyon": "get_syfinans_sekmesi",
+          "satir": 525,
+          "dekoratorlar": [
+            "finans_router.get('/sekmeler/{sekme}')"
+          ]
+        },
+        {
+          "fonksiyon": "get_syfinans_cihaz_profilleri",
+          "satir": 546,
+          "dekoratorlar": [
+            "finans_router.get('/cihaz-profilleri')"
+          ]
+        },
+        {
+          "fonksiyon": "get_syfinans_alarmlari",
+          "satir": 570,
+          "dekoratorlar": [
+            "finans_router.get('/alarmlar')"
+          ]
+        },
+        {
+          "fonksiyon": "post_syfinans_alarmi",
+          "satir": 597,
+          "dekoratorlar": [
+            "finans_router.post('/alarmlar')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/terminal_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "terminal_state",
+          "satir": 15,
+          "dekoratorlar": [
+            "terminal_router.get('/state')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/theme_api.py",
+      "routes": [
+        {
+          "fonksiyon": "list_themes",
+          "satir": 35,
+          "dekoratorlar": [
+            "router.get('')"
+          ]
+        },
+        {
+          "fonksiyon": "current_theme",
+          "satir": 40,
+          "dekoratorlar": [
+            "router.get('/current')"
+          ]
+        },
+        {
+          "fonksiyon": "automatic_theme",
+          "satir": 60,
+          "dekoratorlar": [
+            "router.post('/automatic')"
+          ]
+        },
+        {
+          "fonksiyon": "theme_asset",
+          "satir": 79,
+          "dekoratorlar": [
+            "router.get('/{theme_id}/assets/{filename}')"
+          ]
+        }
+      ]
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py",
+      "routes": [
+        {
+          "fonksiyon": "ugr_saglik",
+          "satir": 220,
+          "dekoratorlar": [
+            "ugr_router.get('/health', summary='UGR canlı ikon sağlık durumu')"
+          ]
+        },
+        {
+          "fonksiyon": "ugr_snapshot",
+          "satir": 270,
+          "dekoratorlar": [
+            "ugr_router.get('/snapshot', summary='215 UGR ikonunun canlı snapshot çıktısı')"
+          ]
+        },
+        {
+          "fonksiyon": "ugr_ikonlari",
+          "satir": 296,
+          "dekoratorlar": [
+            "ugr_router.get('/icons', summary='UGR ikonlarını listeler')"
+          ]
+        },
+        {
+          "fonksiyon": "ugr_ikon",
+          "satir": 379,
+          "dekoratorlar": [
+            "ugr_router.get('/icons/{ikon_kimligi}', summary='Tek UGR ikonunun canlı durumunu verir')"
+          ]
+        },
+        {
+          "fonksiyon": "ugr_ikon_html",
+          "satir": 420,
+          "dekoratorlar": [
+            "ugr_router.get('/icons/{ikon_kimligi}/html', response_class=HTMLResponse, summary='Tek UGR ikonunun HTML bileşenini verir')"
+          ]
+        },
+        {
+          "fonksiyon": "ugr_toplu_ikon_durumu",
+          "satir": 457,
+          "dekoratorlar": [
+            "ugr_router.post('/icons/bulk/state', summary='Birden fazla UGR ikonunun durumunu değiştirir')"
+          ]
+        },
+        {
+          "fonksiyon": "ugr_ikon_durumu_degistir",
+          "satir": 555,
+          "dekoratorlar": [
+            "ugr_router.post('/icons/{ikon_kimligi}/state', summary='UGR ikonunun canlı durumunu değiştirir')"
+          ]
+        },
+        {
+          "fonksiyon": "ugr_ikon_gorunumu_degistir",
+          "satir": 666,
+          "dekoratorlar": [
+            "ugr_router.post('/icons/{ikon_kimligi}/view', summary='UGR ikonunun 2B, 3B veya AR görünümünü değiştirir')"
+          ]
+        },
+        {
+          "fonksiyon": "ugr_ikon_aktifligi_degistir",
+          "satir": 744,
+          "dekoratorlar": [
+            "ugr_router.post('/icons/{ikon_kimligi}/active', summary='UGR ikonunu aktif veya pasif yapar')"
+          ]
+        },
+        {
+          "fonksiyon": "ugr_olay_gecmisi",
+          "satir": 799,
+          "dekoratorlar": [
+            "ugr_router.get('/events/history', summary='Son UGR canlı ikon olaylarını verir')"
+          ]
+        },
+        {
+          "fonksiyon": "ugr_canli_olaylar",
+          "satir": 902,
+          "dekoratorlar": [
+            "ugr_router.get('/events', summary='UGR canlı Server-Sent Events kanalı')"
+          ]
+        },
+        {
+          "fonksiyon": "ugr_onizleme",
+          "satir": 942,
+          "dekoratorlar": [
+            "ugr_router.get('/preview', response_class=HTMLResponse, summary='UGR dinamik ikon ön izleme sayfası')"
+          ]
+        },
+        {
+          "fonksiyon": "ugr_statik_dosya",
+          "satir": 1066,
+          "dekoratorlar": [
+            "ugr_router.get('/assets/{goreli_yol:path}', summary='UGR ikon ve web çalışma dosyalarını sunar')"
+          ]
+        }
+      ]
+    }
+  ],
+  "eslesmeler": [
+    {
+      "dosya": "src/syk_simulasyon/ortam_hafizasi.py",
+      "satir": 17,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "JEOLOJI = \"jeoloji\""
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_fastapi_adaptoru.py",
+      "satir": 24,
+      "bulunanlar": [
+        "runtime/html"
+      ],
+      "icerik": "\"/runtime/html\": self._api.html,"
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_fastapi_adaptoru.py",
+      "satir": 32,
+      "bulunanlar": [
+        "runtime/html"
+      ],
+      "icerik": "\"/runtime/html\": \"text/html; charset=utf-8\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_fastapi_sunucusu.py",
+      "satir": 17,
+      "bulunanlar": [
+        "HTMLResponse"
+      ],
+      "icerik": "HTMLResponse,"
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_fastapi_sunucusu.py",
+      "satir": 459,
+      "bulunanlar": [
+        "HTMLResponse"
+      ],
+      "icerik": "return HTMLResponse("
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_fastapi_sunucusu.py",
+      "satir": 929,
+      "bulunanlar": [
+        "runtime/html"
+      ],
+      "icerik": "@uygulama.get(\"/runtime/html\")"
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_fastapi_sunucusu.py",
+      "satir": 1208,
+      "bulunanlar": [
+        "syk-ui-screen"
+      ],
+      "icerik": "getattr(route, \"path\", None) == \"/syk-ui-screen\""
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_fastapi_sunucusu.py",
+      "satir": 1214,
+      "bulunanlar": [
+        "syk-ui-screen"
+      ],
+      "icerik": "\"/syk-ui-screen\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_fastapi_sunucusu.py",
+      "satir": 1215,
+      "bulunanlar": [
+        "include_in_schema"
+      ],
+      "icerik": "include_in_schema=False,"
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_fastapi_sunucusu.py",
+      "satir": 1219,
+      "bulunanlar": [
+        "runtime/html"
+      ],
+      "icerik": "url=\"/runtime/html\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_ui_sunucusu.py",
+      "satir": 35,
+      "bulunanlar": [
+        "syk-ui-screen"
+      ],
+      "icerik": "\"/syk-ui-screen\" in yollar"
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_ui_sunucusu.py",
+      "satir": 80,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "app.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_ui_sunucusu.py",
+      "satir": 88,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "app.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_ui_sunucusu.py",
+      "satir": 108,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "app.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/runtime_ui_sunucusu.py",
+      "satir": 113,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "app.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+      "satir": 1071,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "router.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+      "satir": 1079,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "router.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+      "satir": 1086,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "router.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+      "satir": 1093,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "router.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+      "satir": 1106,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "router.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+      "satir": 1110,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "router.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+      "satir": 1114,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "router.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+      "satir": 1118,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "router.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+      "satir": 1122,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "router.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+      "satir": 1126,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "router.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/api_routes.py",
+      "satir": 1130,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "router.include_router("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/integration.py",
+      "satir": 10,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "app.include_router(api_router)"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/integration.py",
+      "satir": 11,
+      "bulunanlar": [
+        "include_router"
+      ],
+      "icerik": "app.include_router(screen_router)"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py",
+      "satir": 13,
+      "bulunanlar": [
+        "FileResponse"
+      ],
+      "icerik": "FileResponse,"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py",
+      "satir": 115,
+      "bulunanlar": [
+        "FileResponse"
+      ],
+      "icerik": "return FileResponse("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py",
+      "satir": 192,
+      "bulunanlar": [
+        "FileResponse"
+      ],
+      "icerik": "return FileResponse("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "satir": 27,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "Module(\"geology\", \"Jeoloji\"),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "satir": 37,
+      "bulunanlar": [
+        "Astronomi"
+      ],
+      "icerik": "Module(\"astronomy\", \"Astronomi\"),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "satir": 38,
+      "bulunanlar": [
+        "Kimyasal Analiz"
+      ],
+      "icerik": "Module(\"chemistry\", \"Kimyasal Analiz\"),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "satir": 39,
+      "bulunanlar": [
+        "Spektral Analiz"
+      ],
+      "icerik": "Module(\"spectral\", \"Spektral Analiz\"),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "satir": 40,
+      "bulunanlar": [
+        "Termal Analiz"
+      ],
+      "icerik": "Module(\"thermal\", \"Termal Analiz\"),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "satir": 41,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "Module(\"magnetometer\", \"Manyetometre\"),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "satir": 42,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "Module(\"gravimeter\", \"Gravimetre\"),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "satir": 43,
+      "bulunanlar": [
+        "Elektrik Direnç"
+      ],
+      "icerik": "Module(\"ert\", \"Elektrik Direnç\"),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "satir": 44,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "Module(\"gpr\", \"GPR\"),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "satir": 45,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "Module(\"seismic\", \"Sismik\"),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "satir": 46,
+      "bulunanlar": [
+        "Jeoloji",
+        "Hidrojeoloji"
+      ],
+      "icerik": "Module(\"hydro\", \"Hidrojeoloji\"),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/module_registry.py",
+      "satir": 47,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "Module(\"botany\", \"Botanik\"),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py",
+      "satir": 82,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "title=\"JEOLOJİ\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py",
+      "satir": 136,
+      "bulunanlar": [
+        "Astronomi",
+        "Arkeoastronomi"
+      ],
+      "icerik": "title=\"ASTRONOMİ / ARKEOASTRONOMİ\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py",
+      "satir": 208,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "title=\"MANYETOMETRE\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py",
+      "satir": 260,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"gpr\": ScientificModuleDefinition("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py",
+      "satir": 261,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "id=\"gpr\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py",
+      "satir": 262,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "title=\"GPR — YER RADARI\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py",
+      "satir": 298,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "title=\"HİDROJEOLOJİ\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py",
+      "satir": 382,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"gpr\": 83.0,"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/screen_routes.py",
+      "satir": 4,
+      "bulunanlar": [
+        "FileResponse"
+      ],
+      "icerik": "from fastapi.responses import FileResponse"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/screen_routes.py",
+      "satir": 13,
+      "bulunanlar": [
+        "syk-ui-screen",
+        "include_in_schema"
+      ],
+      "icerik": "@router.get(\"/syk-ui-screen\", include_in_schema=False)"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/screen_routes.py",
+      "satir": 14,
+      "bulunanlar": [
+        "FileResponse"
+      ],
+      "icerik": "def get_ui_screen() -> FileResponse:"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/screen_routes.py",
+      "satir": 15,
+      "bulunanlar": [
+        "FileResponse"
+      ],
+      "icerik": "return FileResponse("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/css/scientific_views.css",
+      "satir": 405,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": ".module-gpr { --module-color: #37dfff; }"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 56,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "\"title\": \"Jeoloji\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 59,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "\"description\": \"Kaya, mineral, katman ve jeolojik yapı inceleme alanı.\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 66,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "\"keywords\": [\"jeoloji\", \"kaya\", \"mineral\", \"katman\"]"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 281,
+      "bulunanlar": [
+        "Kimyasal Analiz"
+      ],
+      "icerik": "\"title\": \"Kimyasal Analiz\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 296,
+      "bulunanlar": [
+        "Spektral Analiz"
+      ],
+      "icerik": "\"title\": \"Spektral Analiz\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 311,
+      "bulunanlar": [
+        "Termal Analiz"
+      ],
+      "icerik": "\"title\": \"Termal Analiz\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 326,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "\"title\": \"Manyetometre\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 336,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "\"keywords\": [\"manyetometre\", \"manyetik\", \"alan\", \"jeofizik\"]"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 341,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "\"title\": \"Gravimetre\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 351,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "\"keywords\": [\"gravimetre\", \"yer çekimi\", \"yoğunluk\", \"jeofizik\"]"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 354,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"icon_id\": \"gpr\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 356,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"title\": \"GPR\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 358,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"module_id\": \"gpr\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 360,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"asset\": \"gpr.webp\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 365,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"permission\": \"module.gpr.view\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 366,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"keywords\": [\"gpr\", \"yer radarı\", \"kesit\", \"yer altı\"]"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 371,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "\"title\": \"Sismik\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 374,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "\"description\": \"Sismik dalga ve tabaka geçiş değerlendirme alanı.\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 381,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "\"keywords\": [\"sismik\", \"dalga\", \"tabaka\", \"jeofizik\"]"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 386,
+      "bulunanlar": [
+        "Elektrik Direnç"
+      ],
+      "icerik": "\"title\": \"Elektrik Direnç (ERT)\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 396,
+      "bulunanlar": [
+        "Elektrik Direnç"
+      ],
+      "icerik": "\"keywords\": [\"ert\", \"elektrik direnç\", \"özdirenç\", \"yer altı\"]"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 401,
+      "bulunanlar": [
+        "Jeoloji",
+        "Hidrojeoloji"
+      ],
+      "icerik": "\"title\": \"Hidrojeoloji\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 411,
+      "bulunanlar": [
+        "Jeoloji",
+        "Hidrojeoloji"
+      ],
+      "icerik": "\"keywords\": [\"hidrojeoloji\", \"su\", \"akış\", \"yer altı suyu\"]"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 416,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "\"title\": \"Botanik / Bitki Örtüsü\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 419,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "\"description\": \"Bitki örtüsü, botanik iz ve çevresel bağlam değerlendirme alanı.\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json",
+      "satir": 426,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "\"keywords\": [\"botanik\", \"bitki\", \"çevre\", \"bitki örtüsü\"]"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/dtse_evidence_scientific_runtime.js",
+      "satir": 8,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "\"jeoloji\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/dtse_evidence_scientific_runtime.js",
+      "satir": 21,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"gpr\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/dtse_evidence_scientific_runtime.js",
+      "satir": 25,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "\"sismik\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/dtse_evidence_scientific_runtime.js",
+      "satir": 27,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "\"gravimetre\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/dtse_evidence_scientific_runtime.js",
+      "satir": 356,
+      "bulunanlar": [
+        "Termal Analiz"
+      ],
+      "icerik": "thermal: \"Termal Analiz\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/dtse_evidence_scientific_runtime.js",
+      "satir": 357,
+      "bulunanlar": [
+        "Spektral Analiz"
+      ],
+      "icerik": "spectral: \"Spektral Analiz\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/scientific_api_views.js",
+      "satir": 13,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"gpr\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/scientific_views.js",
+      "satir": 4,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "title: \"JEOLOJİ\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/scientific_views.js",
+      "satir": 82,
+      "bulunanlar": [
+        "Astronomi",
+        "Arkeoastronomi"
+      ],
+      "icerik": "title: \"ASTRONOMİ / ARKEOASTRONOMİ\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/scientific_views.js",
+      "satir": 186,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "title: \"MANYETOMETRE\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/scientific_views.js",
+      "satir": 263,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "gpr: {"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/scientific_views.js",
+      "satir": 264,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "title: \"GPR — YER RADARI\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/scientific_views.js",
+      "satir": 278,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "[\"Hat\", \"GPR-03\"],"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/scientific_views.js",
+      "satir": 316,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "title: \"HİDROJEOLOJİ\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static/js/scientific_visibility_guard.js",
+      "satir": 12,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"gpr\","
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static_routes.py",
+      "satir": 9,
+      "bulunanlar": [
+        "StaticFiles"
+      ],
+      "icerik": "from fastapi.staticfiles import StaticFiles"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/static_routes.py",
+      "satir": 22,
+      "bulunanlar": [
+        "StaticFiles"
+      ],
+      "icerik": "StaticFiles(directory=STATIC),"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/theme_api.py",
+      "satir": 9,
+      "bulunanlar": [
+        "FileResponse"
+      ],
+      "icerik": "from fastapi.responses import FileResponse"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/theme_api.py",
+      "satir": 112,
+      "bulunanlar": [
+        "FileResponse"
+      ],
+      "icerik": "return FileResponse("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py",
+      "satir": 35,
+      "bulunanlar": [
+        "FileResponse"
+      ],
+      "icerik": "FileResponse,"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py",
+      "satir": 36,
+      "bulunanlar": [
+        "HTMLResponse"
+      ],
+      "icerik": "HTMLResponse,"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py",
+      "satir": 417,
+      "bulunanlar": [
+        "HTMLResponse"
+      ],
+      "icerik": "response_class=HTMLResponse,"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py",
+      "satir": 422,
+      "bulunanlar": [
+        "HTMLResponse"
+      ],
+      "icerik": ") -> HTMLResponse:"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py",
+      "satir": 432,
+      "bulunanlar": [
+        "HTMLResponse"
+      ],
+      "icerik": "return HTMLResponse("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py",
+      "satir": 939,
+      "bulunanlar": [
+        "HTMLResponse"
+      ],
+      "icerik": "response_class=HTMLResponse,"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py",
+      "satir": 942,
+      "bulunanlar": [
+        "HTMLResponse"
+      ],
+      "icerik": "def ugr_onizleme() -> HTMLResponse:"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py",
+      "satir": 946,
+      "bulunanlar": [
+        "HTMLResponse"
+      ],
+      "icerik": "return HTMLResponse("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py",
+      "satir": 1053,
+      "bulunanlar": [
+        "HTMLResponse"
+      ],
+      "icerik": "return HTMLResponse("
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py",
+      "satir": 1068,
+      "bulunanlar": [
+        "FileResponse"
+      ],
+      "icerik": ") -> FileResponse:"
+    },
+    {
+      "dosya": "src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py",
+      "satir": 1087,
+      "bulunanlar": [
+        "FileResponse"
+      ],
+      "icerik": "return FileResponse("
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 674,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "\"label\": \"botanik\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 675,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "\"filename\": \"020_botanik.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 676,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/ana_sistem/020_botanik.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 708,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "\"label\": \"jeoloji\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 709,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "\"filename\": \"021_jeoloji.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 710,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/ana_sistem/021_jeoloji.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 742,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "\"label\": \"manyetometre\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 743,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "\"filename\": \"022_manyetometre.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 744,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/ana_sistem/022_manyetometre.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 776,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "\"label\": \"gravimetre\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 777,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "\"filename\": \"023_gravimetre.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 778,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/ana_sistem/023_gravimetre.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 878,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"label\": \"gpr\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 879,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"filename\": \"026_gpr.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 880,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/ana_sistem/026_gpr.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 912,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "\"label\": \"sismik\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 913,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "\"filename\": \"027_sismik.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 914,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/ana_sistem/027_sismik.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 946,
+      "bulunanlar": [
+        "Jeoloji",
+        "Hidrojeoloji"
+      ],
+      "icerik": "\"label\": \"hidrojeoloji\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 947,
+      "bulunanlar": [
+        "Jeoloji",
+        "Hidrojeoloji"
+      ],
+      "icerik": "\"filename\": \"028_hidrojeoloji.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 948,
+      "bulunanlar": [
+        "Jeoloji",
+        "Hidrojeoloji"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/ana_sistem/028_hidrojeoloji.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1252,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"label\": \"gpr\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1253,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"filename\": \"007_gpr.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1254,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/bilimsel_sensorler/007_gpr.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1286,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "\"label\": \"sismik\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1287,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "\"filename\": \"008_sismik.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1288,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/bilimsel_sensorler/008_sismik.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1388,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "\"label\": \"botanik\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1389,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "\"filename\": \"011_botanik.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1390,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/bilimsel_sensorler/011_botanik.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1422,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "\"label\": \"jeoloji\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1423,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "\"filename\": \"012_jeoloji.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1424,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/bilimsel_sensorler/012_jeoloji.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1592,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "\"label\": \"gravimetre\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1593,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "\"filename\": \"017_gravimetre.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1594,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/bilimsel_sensorler/017_gravimetre.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1626,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "\"label\": \"manyetometre\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1627,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "\"filename\": \"018_manyetometre.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json",
+      "satir": 1628,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "\"path\": \"src/syk_ui/icons/ugr/prototype_icons/bilimsel_sensorler/018_manyetometre.png\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 47,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "\"botanik\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 48,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "\"jeoloji\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 49,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "\"manyetometre\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 50,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "\"gravimetre\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 53,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"gpr\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 54,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "\"sismik\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 55,
+      "bulunanlar": [
+        "Jeoloji",
+        "Hidrojeoloji"
+      ],
+      "icerik": "\"hidrojeoloji\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 67,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "\"gpr\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 68,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "\"sismik\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 71,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "\"botanik\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 72,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "\"jeoloji\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 77,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "\"gravimetre\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py",
+      "satir": 78,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "\"manyetometre\","
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/web/demo/ugr_dynamic_icons_preview.html",
+      "satir": 63,
+      "bulunanlar": [
+        "Botanik"
+      ],
+      "icerik": "<button class=\"syk-ugr-icon syk-ugr-state-dogrulaniyor syk-ugr-animation-nabiz syk-ugr-role-bilgi syk-ugr-view-3b\" data-syk-icon-id=\"sys-020\" data-syk-category=\"ana_sistem\" data-syk-label=\"botanik\" data-syk-state=\"dogrulaniyor\" data-syk-view=\"3b\" data-syk-animation=\"nabiz\" data-syk-color-role=\"bilgi\" data-syk-active=\"true\" style=\"--syk-icon-duration:1600ms;--syk-icon-iteration:infinite;--syk-icon-brightness:1.15;--syk-icon-opacity:1.0;--syk-icon-scale:1.02\" type=\"button\" aria-label=\"botanik\" title=\"botanik\"><span class=\"syk-ugr-icon-frame\"><img class=\"syk-ugr-icon-image\" src=\"/static/icons/ugr/prototype_icons/ana_sistem/020_botanik.png\" alt=\"\" draggable=\"false\"><span class=\"syk-ugr-icon-energy\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-scan\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-status\" aria-hidden=\"true\"></span></span><span class=\"syk-ugr-icon-caption\">botanik</span><span class=\"syk-ugr-icon-runtime-id\">sys-020</span></button>"
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/web/demo/ugr_dynamic_icons_preview.html",
+      "satir": 64,
+      "bulunanlar": [
+        "Jeoloji"
+      ],
+      "icerik": "<button class=\"syk-ugr-icon syk-ugr-state-senkronize_ediliyor syk-ugr-animation-donus syk-ugr-role-bilgi syk-ugr-view-ar\" data-syk-icon-id=\"sys-021\" data-syk-category=\"ana_sistem\" data-syk-label=\"jeoloji\" data-syk-state=\"senkronize_ediliyor\" data-syk-view=\"ar\" data-syk-animation=\"donus\" data-syk-color-role=\"bilgi\" data-syk-active=\"true\" style=\"--syk-icon-duration:1100ms;--syk-icon-iteration:infinite;--syk-icon-brightness:1.1;--syk-icon-opacity:1.0;--syk-icon-scale:1.0\" type=\"button\" aria-label=\"jeoloji\" title=\"jeoloji\"><span class=\"syk-ugr-icon-frame\"><img class=\"syk-ugr-icon-image\" src=\"/static/icons/ugr/prototype_icons/ana_sistem/021_jeoloji.png\" alt=\"\" draggable=\"false\"><span class=\"syk-ugr-icon-energy\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-scan\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-status\" aria-hidden=\"true\"></span></span><span class=\"syk-ugr-icon-caption\">jeoloji</span><span class=\"syk-ugr-icon-runtime-id\">sys-021</span></button>"
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/web/demo/ugr_dynamic_icons_preview.html",
+      "satir": 65,
+      "bulunanlar": [
+        "Manyetometre"
+      ],
+      "icerik": "<button class=\"syk-ugr-icon syk-ugr-state-tamamlandi syk-ugr-animation-parlama syk-ugr-role-basari syk-ugr-view-2b\" data-syk-icon-id=\"sys-022\" data-syk-category=\"ana_sistem\" data-syk-label=\"manyetometre\" data-syk-state=\"tamamlandi\" data-syk-view=\"2b\" data-syk-animation=\"parlama\" data-syk-color-role=\"basari\" data-syk-active=\"true\" style=\"--syk-icon-duration:900ms;--syk-icon-iteration:1;--syk-icon-brightness:1.2;--syk-icon-opacity:1.0;--syk-icon-scale:1.03\" type=\"button\" aria-label=\"manyetometre\" title=\"manyetometre\"><span class=\"syk-ugr-icon-frame\"><img class=\"syk-ugr-icon-image\" src=\"/static/icons/ugr/prototype_icons/ana_sistem/022_manyetometre.png\" alt=\"\" draggable=\"false\"><span class=\"syk-ugr-icon-energy\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-scan\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-status\" aria-hidden=\"true\"></span></span><span class=\"syk-ugr-icon-caption\">manyetometre</span><span class=\"syk-ugr-icon-runtime-id\">sys-022</span></button>"
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/web/demo/ugr_dynamic_icons_preview.html",
+      "satir": 66,
+      "bulunanlar": [
+        "Gravimetre"
+      ],
+      "icerik": "<button class=\"syk-ugr-icon syk-ugr-state-uyari syk-ugr-animation-nabiz syk-ugr-role-uyari syk-ugr-view-3b\" data-syk-icon-id=\"sys-023\" data-syk-category=\"ana_sistem\" data-syk-label=\"gravimetre\" data-syk-state=\"uyari\" data-syk-view=\"3b\" data-syk-animation=\"nabiz\" data-syk-color-role=\"uyari\" data-syk-active=\"true\" style=\"--syk-icon-duration:1050ms;--syk-icon-iteration:infinite;--syk-icon-brightness:1.22;--syk-icon-opacity:1.0;--syk-icon-scale:1.03\" type=\"button\" aria-label=\"gravimetre\" title=\"gravimetre\"><span class=\"syk-ugr-icon-frame\"><img class=\"syk-ugr-icon-image\" src=\"/static/icons/ugr/prototype_icons/ana_sistem/023_gravimetre.png\" alt=\"\" draggable=\"false\"><span class=\"syk-ugr-icon-energy\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-scan\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-status\" aria-hidden=\"true\"></span></span><span class=\"syk-ugr-icon-caption\">gravimetre</span><span class=\"syk-ugr-icon-runtime-id\">sys-023</span></button>"
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/web/demo/ugr_dynamic_icons_preview.html",
+      "satir": 69,
+      "bulunanlar": [
+        "GPR"
+      ],
+      "icerik": "<button class=\"syk-ugr-icon syk-ugr-state-cevrimdisi syk-ugr-animation-sabit syk-ugr-role-cevrimdisi syk-ugr-view-3b\" data-syk-icon-id=\"sys-026\" data-syk-category=\"ana_sistem\" data-syk-label=\"gpr\" data-syk-state=\"cevrimdisi\" data-syk-view=\"3b\" data-syk-animation=\"sabit\" data-syk-color-role=\"cevrimdisi\" data-syk-active=\"true\" style=\"--syk-icon-duration:0ms;--syk-icon-iteration:1;--syk-icon-brightness:0.5;--syk-icon-opacity:0.55;--syk-icon-scale:0.96\" type=\"button\" aria-label=\"gpr\" title=\"gpr\"><span class=\"syk-ugr-icon-frame\"><img class=\"syk-ugr-icon-image\" src=\"/static/icons/ugr/prototype_icons/ana_sistem/026_gpr.png\" alt=\"\" draggable=\"false\"><span class=\"syk-ugr-icon-energy\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-scan\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-status\" aria-hidden=\"true\"></span></span><span class=\"syk-ugr-icon-caption\">gpr</span><span class=\"syk-ugr-icon-runtime-id\">sys-026</span></button>"
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/web/demo/ugr_dynamic_icons_preview.html",
+      "satir": 70,
+      "bulunanlar": [
+        "Sismik"
+      ],
+      "icerik": "<button class=\"syk-ugr-icon syk-ugr-state-bekliyor syk-ugr-animation-nefes syk-ugr-role-notr syk-ugr-view-ar\" data-syk-icon-id=\"sys-027\" data-syk-category=\"ana_sistem\" data-syk-label=\"sismik\" data-syk-state=\"bekliyor\" data-syk-view=\"ar\" data-syk-animation=\"nefes\" data-syk-color-role=\"notr\" data-syk-active=\"true\" style=\"--syk-icon-duration:2600ms;--syk-icon-iteration:infinite;--syk-icon-brightness:0.82;--syk-icon-opacity:0.88;--syk-icon-scale:1.0\" type=\"button\" aria-label=\"sismik\" title=\"sismik\"><span class=\"syk-ugr-icon-frame\"><img class=\"syk-ugr-icon-image\" src=\"/static/icons/ugr/prototype_icons/ana_sistem/027_sismik.png\" alt=\"\" draggable=\"false\"><span class=\"syk-ugr-icon-energy\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-scan\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-status\" aria-hidden=\"true\"></span></span><span class=\"syk-ugr-icon-caption\">sismik</span><span class=\"syk-ugr-icon-runtime-id\">sys-027</span></button>"
+    },
+    {
+      "dosya": "src/syk_ui/icons/ugr/web/demo/ugr_dynamic_icons_preview.html",
+      "satir": 71,
+      "bulunanlar": [
+        "Jeoloji",
+        "Hidrojeoloji"
+      ],
+      "icerik": "<button class=\"syk-ugr-icon syk-ugr-state-baslatiliyor syk-ugr-animation-donus syk-ugr-role-islem syk-ugr-view-2b\" data-syk-icon-id=\"sys-028\" data-syk-category=\"ana_sistem\" data-syk-label=\"hidrojeoloji\" data-syk-state=\"baslatiliyor\" data-syk-view=\"2b\" data-syk-animation=\"donus\" data-syk-color-role=\"islem\" data-syk-active=\"true\" style=\"--syk-icon-duration:1200ms;--syk-icon-iteration:infinite;--syk-icon-brightness:1.0;--syk-icon-opacity:1.0;--syk-icon-scale:1.0\" type=\"button\" aria-label=\"hidrojeoloji\" title=\"hidrojeoloji\"><span class=\"syk-ugr-icon-frame\"><img class=\"syk-ugr-icon-image\" src=\"/static/icons/ugr/prototype_icons/ana_sistem/028_hidrojeoloji.png\" alt=\"\" draggable=\"false\"><span class=\"syk-ugr-icon-energy\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-scan\" aria-hidden=\"true\"></span><span class=\"syk-ugr-icon-status\" aria-hidden=\"true\"></span></span><span class=\"syk-ugr-icon-caption\">hidrojeoloji</span><span class=\"syk-ugr-icon-runtime-id\">sys-028</span></button>"
+    }
+  ]
+}

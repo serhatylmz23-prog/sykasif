@@ -1,0 +1,301 @@
+SPR-011 PAKET-006 GERCEK ROUTER TESPIT RAPORU
+TARIH=2026-08-05T11:29:55.9039484+03:00
+RUNTIME_DIZINI=src\syk_simulasyon\syk_ui_runtime
+MEVCUT_DOSYA_SAYISI=5
+
+==========================================================================================
+DOSYA=src\syk_simulasyon\syk_ui_runtime\project_runtime.py
+SATIR_SAYISI=119
+
+ROUTER_ESLESMESI=YOK
+
+==========================================================================================
+DOSYA=src\syk_simulasyon\syk_ui_runtime\syfinans_runtime_routes.py
+SATIR_SAYISI=602
+
+ROUTER_ESLESME_SAYISI=8
+
+----- SATIR 7-24 -----
+0007: import json
+0008: from threading import RLock
+0009: from typing import Any, Mapping
+0010: 
+0011: from fastapi import (
+0012:     APIRouter,
+0013:     HTTPException,
+0014: )
+0015: from pydantic import BaseModel, Field
+0016: 
+0017: 
+0018: def _simdi() -> str:
+0019:     return datetime.now(
+0020:         UTC
+0021:     ).isoformat()
+0022: 
+0023: 
+0024: def _muhur(
+
+----- SATIR 34-51 -----
+0034:     return sha256(
+0035:         kodlu
+0036:     ).hexdigest()
+0037: 
+0038: 
+0039: finans_router = APIRouter(
+0040:     prefix="/syfinans",
+0041:     tags=["SyFinansOtağı"],
+0042: )
+0043: 
+0044: 
+0045: SEKMELER = (
+0046:     "piyasa",
+0047:     "kasam",
+0048:     "analiz",
+0049:     "planlar",
+0050: )
+0051: 
+
+----- SATIR 483-508 -----
+0483: 
+0484: 
+0485: _servis = SyFinansRuntimeServisi()
+0486: 
+0487: 
+0488: @finans_router.get(
+0489:     "/runtime",
+0490: )
+0491: def get_syfinans_runtime(
+0492: ) -> dict[str, Any]:
+0493:     return _servis.runtime_snapshot()
+0494: 
+0495: 
+0496: @finans_router.get(
+0497:     "/kaynaklar",
+0498: )
+0499: def get_syfinans_kaynaklari(
+0500: ) -> dict[str, Any]:
+0501:     kaynaklar = [
+0502:         kaynak.as_dict()
+0503:         for kaynak
+0504:         in _servis.kaynak_durumlari()
+0505:     ]
+0506: 
+0507:     veri = {
+0508:         "schema": (
+
+----- SATIR 517-534 -----
+0517:             veri
+0518:         ),
+0519:     }
+0520: 
+0521: 
+0522: @finans_router.get(
+0523:     "/sekmeler/{sekme}",
+0524: )
+0525: def get_syfinans_sekmesi(
+0526:     sekme: str,
+0527: ) -> dict[str, Any]:
+0528:     try:
+0529:         return (
+0530:             _servis
+0531:             .sekme_sozlesmesi(
+0532:                 sekme
+0533:             )
+0534:         )
+
+----- SATIR 538-555 -----
+0538:             status_code=404,
+0539:             detail=str(error),
+0540:         ) from error
+0541: 
+0542: 
+0543: @finans_router.get(
+0544:     "/cihaz-profilleri",
+0545: )
+0546: def get_syfinans_cihaz_profilleri(
+0547: ) -> dict[str, Any]:
+0548:     profiller = list(
+0549:         _servis.cihaz_profilleri()
+0550:     )
+0551: 
+0552:     veri = {
+0553:         "schema": (
+0554:             "syfinans-cihaz-profilleri/v1"
+0555:         ),
+
+----- SATIR 562-579 -----
+0562:             veri
+0563:         ),
+0564:     }
+0565: 
+0566: 
+0567: @finans_router.get(
+0568:     "/alarmlar",
+0569: )
+0570: def get_syfinans_alarmlari(
+0571: ) -> dict[str, Any]:
+0572:     alarmlar = list(
+0573:         _servis.alarm_listesi()
+0574:     )
+0575: 
+0576:     veri = {
+0577:         "schema": (
+0578:             "syfinans-alarm-kuyrugu/v1"
+0579:         ),
+
+----- SATIR 589-602 -----
+0589:             veri
+0590:         ),
+0591:     }
+0592: 
+0593: 
+0594: @finans_router.post(
+0595:     "/alarmlar",
+0596: )
+0597: def post_syfinans_alarmi(
+0598:     istek: AlarmKuyrukIstegi,
+0599: ) -> dict[str, Any]:
+0600:     return _servis.alarm_ekle(
+0601:         istek
+0602:     )
+
+==========================================================================================
+DOSYA=src\syk_simulasyon\syk_ui_runtime\runtime_manager.py
+SATIR_SAYISI=24
+
+ROUTER_ESLESMESI=YOK
+
+==========================================================================================
+DOSYA=src\syk_simulasyon\syk_ui_runtime\ui_runtime_state.py
+SATIR_SAYISI=42
+
+ROUTER_ESLESMESI=YOK
+
+==========================================================================================
+DOSYA=src\syk_simulasyon\runtime_ui_sunucusu.py
+SATIR_SAYISI=489
+
+ROUTER_ESLESME_SAYISI=12
+
+----- SATIR 1-41 -----
+0001: from __future__ import annotations
+0002: 
+0003: from fastapi import FastAPI
+0004: 
+0005: from . import runtime_fastapi_sunucusu as mevcut_sunucu
+0006: from .syk_ui import install_ui
+0007: def _mevcut_uygulamayi_bul() -> FastAPI:
+0008:     for ad in ("app", "uygulama"):
+0009:         aday = getattr(mevcut_sunucu, ad, None)
+0010:         if isinstance(aday, FastAPI):
+0011:             return aday
+0012: 
+0013:     for ad in (
+0014:         "uygulama_olustur",
+0015:         "create_app",
+0016:         "sunucu_olustur",
+0017:     ):
+0018:         fabrika = getattr(mevcut_sunucu, ad, None)
+0019:         if callable(fabrika):
+0020:             aday = fabrika()
+0021:             if isinstance(aday, FastAPI):
+0022:                 return aday
+0023: 
+0024:     raise RuntimeError(
+0025:         "Mevcut FastAPI uygulamasÄ± veya uygulama fabrikasÄ± bulunamadÄ±."
+0026:     )
+0027: 
+0028: 
+0029: def _ui_kurulu_mu(uygulama: FastAPI) -> bool:
+0030:     yollar = {
+0031:         getattr(route, "path", None)
+0032:         for route in uygulama.routes
+0033:     }
+0034:     return (
+0035:         "/syk-ui-screen" in yollar
+0036:         and "/api/syk-ui/runtime-state" in yollar
+0037:     )
+0038: 
+0039: 
+0040: app = _mevcut_uygulamayi_bul()
+0041: 
+
+----- SATIR 75-100 -----
+0075: 
+0076: 
+0077: if not _syk_uygulama_yolu_var(
+0078:     "/api/syk-ui/mobile-runtime"
+0079: ):
+0080:     app.include_router(
+0081:         syk_ui_router
+0082:     )
+0083: 
+0084: 
+0085: if not _syk_uygulama_yolu_var(
+0086:     "/syfinans/runtime"
+0087: ):
+0088:     app.include_router(
+0089:         finans_router
+0090:     )
+0091: 
+0092: # === SYK_GERCEK_APP_KESIN_BAGLANTI_BITIS ===
+0093: 
+0094: 
+0095: if not _ui_kurulu_mu(app):
+0096:     install_ui(app)
+0097: 
+0098: # SYK_TERMINAL_ROUTER_RUNTIME_BAGLANTISI
+0099: from syk_simulasyon.syk_ui_runtime.terminal_routes import (
+0100:     terminal_router as syk_terminal_router,
+
+----- SATIR 103-131 -----
+0103: if not any(
+0104:     getattr(route, "path", None)
+0105:     == "/api/syk-ui/terminal/state"
+0106:     for route in app.routes
+0107: ):
+0108:     app.include_router(
+0109:         syk_terminal_router
+0110:     )
+0111: 
+0112: # SYK_PROJECT_RUNTIME_ROUTER_BAGLANTISI
+0113: from syk_simulasyon.syk_ui_runtime.project_routes import (
+0114:     project_router as syk_project_router,
+0115: )
+0116: 
+0117: _syk_project_route_paths = {
+0118:     getattr(route, "path", None)
+0119:     for route in syk_project_router.routes
+0120: }
+0121: 
+0122: app.router.routes[:] = [
+0123:     route
+0124:     for route in app.router.routes
+0125:     if getattr(route, "path", None)
+0126:     not in _syk_project_route_paths
+0127: ]
+0128: 
+0129: _syk_project_insert_index = len(
+0130:     app.router.routes
+0131: )
+
+----- SATIR 148-165 -----
+0148:     ):
+0149:         _syk_project_insert_index = _syk_index
+0150:         break
+0151: 
+0152: for _syk_project_route in reversed(
+0153:     syk_project_router.routes
+0154: ):
+0155:     app.router.routes.insert(
+0156:         _syk_project_insert_index,
+0157:         _syk_project_route,
+0158:     )
+0159: 
+0160: # SYK_RESEARCH_RUNTIME_ROUTER_BAGLANTISI
+0161: from syk_simulasyon.syk_ui_runtime.research_routes import (
+0162:     research_router as syk_research_router,
+0163: )
+0164: 
+0165: _syk_research_paths = {
+

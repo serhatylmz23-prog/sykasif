@@ -1,0 +1,31 @@
+{
+    "sema":  "sykasif.ugr.runtime-8013-bridge.v1",
+    "surum":  "prototype-0.1",
+    "sprint":  "SPR-011",
+    "paket":  "005",
+    "durum":  "kodlandi",
+    "runtime_portu":  8013,
+    "desteklenen_ikon_sayisi":  215,
+    "desteklenen_durum_sayisi":  13,
+    "desteklenen_gorunumler":  [
+                                   "2b",
+                                   "3b",
+                                   "ar"
+                               ],
+    "canli_kanallar":  [
+                           "http_json",
+                           "snapshot",
+                           "sse"
+                       ],
+    "websocket_durumu":  "mevcut_sunucu_sozlesmesi_incelendikten_sonra_baglanacak",
+    "kaynaklar":  [
+                      "__init__.py",
+                      "runtime_8013_events.py",
+                      "runtime_8013_store.py",
+                      "runtime_8013_stream.py",
+                      "runtime_8013_bridge.py",
+                      "runtime_8013_http_api.py"
+                  ],
+    "kalici_ikon_kimlikleri":  "prototip_sonrasina_ertelendi",
+    "olusturulma_zamani":  "2026-08-05T11:19:49.5862053+03:00"
+}

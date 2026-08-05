@@ -1,55 +1,47 @@
-﻿from dataclasses import dataclass
-from pathlib import Path
+﻿from __future__ import annotations
 
-ROOT = Path(__file__).resolve().parent
-STATIC = ROOT / "static"
-
-ASSETS = {
-    "css": STATIC / "css",
-    "js": STATIC / "js",
-    "images": STATIC / "images",
-    "icons": STATIC / "icons",
-    "audio": STATIC / "audio",
-}
+from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
 class Module:
-    id: str
+    module_id: str
     title: str
-    enabled: bool = True
+    hardware_required: bool = False
+    runtime_state: str = "hazir"
 
 
-MODULES = [
-    Module("dashboard", "Ana Terminal"),
-    Module("syframe", "SyFrame"),
-    Module("maps", "Haritalar"),
+MODULES = (
     Module("geology", "Jeoloji"),
-    Module("sonar", "Sonar"),
     Module("frequency", "Frekans"),
-    Module("material", "Materyal"),
-    Module("measurement", "Ölçüm"),
-    Module("gps", "GPS"),
-    Module("rtk", "RTK"),
-    Module("lidar", "LiDAR"),
-    Module("history", "Tarih"),
-    Module("archaeology", "Arkeoloji"),
+    Module("lidar", "LiDAR", True, "donanim_bekliyor"),
     Module("astronomy", "Astronomi"),
-    Module("chemistry", "Kimyasal Analiz"),
-    Module("spectral", "Spektral Analiz"),
-    Module("thermal", "Termal Analiz"),
-    Module("magnetometer", "Manyetometre"),
-    Module("gravimeter", "Gravimetre"),
-    Module("ert", "Elektrik Direnç"),
-    Module("gpr", "GPR"),
-    Module("seismic", "Sismik"),
+    Module("chemical", "Kimyasal Analiz"),
+    Module("spectral", "Spektral Analiz", True, "donanim_bekliyor"),
+    Module("thermal", "Termal Analiz", True, "donanim_bekliyor"),
+    Module("magnetometer", "Manyetometre", True, "donanim_bekliyor"),
+    Module("gravimeter", "Gravimetre", True, "donanim_bekliyor"),
+    Module("ert", "Elektrik Direnç", True, "donanim_bekliyor"),
+    Module("gpr", "GPR", True, "donanim_bekliyor"),
+    Module("seismic", "Sismik", True, "donanim_bekliyor"),
     Module("hydro", "Hidrojeoloji"),
     Module("botany", "Botanik"),
     Module("soil", "Toprak"),
     Module("water", "Su"),
-    Module("finance", "SyFinansOtağı"),
-]
+)
 
 
-def enabled_modules():
-    return [module for module in MODULES if module.enabled]
+def list_modules() -> tuple[Module, ...]:
+    return MODULES
+
+
+def get_module(
+    module_id: str,
+) -> Module:
+    for module in MODULES:
+        if module.module_id == module_id:
+            return module
+
+    raise KeyError(
+        module_id
+    )

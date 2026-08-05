@@ -1,0 +1,43 @@
+{
+    "sema":  "sykasif.ugr.dynamic-icon-runtime.v1",
+    "surum":  "prototype-0.1",
+    "sprint":  "SPR-011",
+    "paket":  "003",
+    "durum":  "kodlandi",
+    "ikon_kaynagi":  "ugr_prototype_icons_manifest.json",
+    "desteklenen_ikon_sayisi":  215,
+    "kalici_ikon_kimlikleri":  "prototip_sonrasina_ertelendi",
+    "desteklenen_gorunumler":  [
+                                   "2b",
+                                   "3b",
+                                   "ar"
+                               ],
+    "desteklenen_durumlar":  [
+                                 "bekliyor",
+                                 "baslatiliyor",
+                                 "calisiyor",
+                                 "tariyor",
+                                 "veri_aktariyor",
+                                 "analiz_ediliyor",
+                                 "dogrulaniyor",
+                                 "senkronize_ediliyor",
+                                 "tamamlandi",
+                                 "uyari",
+                                 "hata",
+                                 "durduruldu",
+                                 "cevrimdisi"
+                             ],
+    "kaynaklar":  [
+                      "__init__.py",
+                      "durumlar.py",
+                      "modeller.py",
+                      "stil_kurallari.py",
+                      "gecis_kurallari.py",
+                      "durum_makinesi.py",
+                      "kayit_defteri.py",
+                      "manifest_yukleyici.py",
+                      "olay_yolu.py",
+                      "servis.py"
+                  ],
+    "olusturulma_zamani":  "2026-08-05T11:09:42.8646969+03:00"
+}

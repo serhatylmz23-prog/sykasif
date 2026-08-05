@@ -1,0 +1,81 @@
+RUNTIME_UI_SUNUCUSU_PATCH_KESITI
+DOSYA=src\syk_simulasyon\runtime_ui_sunucusu.py
+TOPLAM_SATIR=489
+
+===== SATIR 1-37 =====
+0001: from __future__ import annotations
+0002: 
+0003: from fastapi import FastAPI
+0004: 
+0005: from . import runtime_fastapi_sunucusu as mevcut_sunucu
+0006: from .syk_ui import install_ui
+0007: def _mevcut_uygulamayi_bul() -> FastAPI:
+0008:     for ad in ("app", "uygulama"):
+0009:         aday = getattr(mevcut_sunucu, ad, None)
+0010:         if isinstance(aday, FastAPI):
+0011:             return aday
+0012: 
+0013:     for ad in (
+0014:         "uygulama_olustur",
+0015:         "create_app",
+0016:         "sunucu_olustur",
+0017:     ):
+0018:         fabrika = getattr(mevcut_sunucu, ad, None)
+0019:         if callable(fabrika):
+0020:             aday = fabrika()
+0021:             if isinstance(aday, FastAPI):
+0022:                 return aday
+0023: 
+0024:     raise RuntimeError(
+0025:         "Mevcut FastAPI uygulamasÄ± veya uygulama fabrikasÄ± bulunamadÄ±."
+0026:     )
+0027: 
+0028: 
+0029: def _ui_kurulu_mu(uygulama: FastAPI) -> bool:
+0030:     yollar = {
+0031:         getattr(route, "path", None)
+0032:         for route in uygulama.routes
+0033:     }
+0034:     return (
+0035:         "/syk-ui-screen" in yollar
+0036:         and "/api/syk-ui/runtime-state" in yollar
+0037:     )
+
+===== SATIR 76-96 =====
+0076: 
+0077: if not _syk_uygulama_yolu_var(
+0078:     "/api/syk-ui/mobile-runtime"
+0079: ):
+0080:     app.include_router(
+0081:         syk_ui_router
+0082:     )
+0083: 
+0084: 
+0085: if not _syk_uygulama_yolu_var(
+0086:     "/syfinans/runtime"
+0087: ):
+0088:     app.include_router(
+0089:         finans_router
+0090:     )
+0091: 
+0092: # === SYK_GERCEK_APP_KESIN_BAGLANTI_BITIS ===
+0093: 
+0094: 
+0095: if not _ui_kurulu_mu(app):
+0096:     install_ui(app)
+
+===== SATIR 104-116 =====
+0104:     getattr(route, "path", None)
+0105:     == "/api/syk-ui/terminal/state"
+0106:     for route in app.routes
+0107: ):
+0108:     app.include_router(
+0109:         syk_terminal_router
+0110:     )
+0111: 
+0112: # SYK_PROJECT_RUNTIME_ROUTER_BAGLANTISI
+0113: from syk_simulasyon.syk_ui_runtime.project_routes import (
+0114:     project_router as syk_project_router,
+0115: )
+0116: 
+

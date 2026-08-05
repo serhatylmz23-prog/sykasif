@@ -1,0 +1,54 @@
+{
+    "kutuphane":  "SyKaşif UGR Icon Library",
+    "surum":  "prototype-0.1",
+    "kaynak_zip":  "C:\\Users\\Pc\\Downloads\\kurumsal resimler\\00 UGR (Unified GeoRuntime) ana ekran ikonları.zip",
+    "repo_zip":  "artifacts\\syk_core_parca_011\\ugr_icon_library\\ham\\00 UGR (Unified GeoRuntime) ana ekran ikonları.zip",
+    "toplam_kaynak_sayfa":  5,
+    "prototype_icons_dizini":  "src\\syk_ui\\icons\\ugr\\prototype_icons",
+    "prototype_icons_dizini_hazir":  true,
+    "tekil_ikon_ayristirma":  "bekliyor",
+    "kalici_ikon_kimlikleri":  "prototip_sonrasina_ertelendi",
+    "sayfalar":  [
+                     {
+                         "sira":  1,
+                         "dosya":  "01_ana_sistem.png",
+                         "kaynak":  "C:\\Users\\Pc\\AppData\\Local\\Temp\\syk_ugr_icon_extract\\00 UGR (Unified GeoRuntime) ana ekran ikonlar\\01 anasistem\\ana sistem ikonlar.png",
+                         "hedef":  "src\\syk_ui\\icons\\ugr\\source_sheets\\01_ana_sistem.png",
+                         "sha256":  "053E14E411BFCD94FFE4F8E95822611D68783A86B93A31EA9C48612EBF79A916",
+                         "tekil_ikon_durumu":  "ayristirma_bekliyor"
+                     },
+                     {
+                         "sira":  2,
+                         "dosya":  "02_bilimsel_sensorler.png",
+                         "kaynak":  "C:\\Users\\Pc\\AppData\\Local\\Temp\\syk_ugr_icon_extract\\00 UGR (Unified GeoRuntime) ana ekran ikonlar\\02 bilimsel sens”zler\\bilimsel sens”rler.png",
+                         "hedef":  "src\\syk_ui\\icons\\ugr\\source_sheets\\02_bilimsel_sensorler.png",
+                         "sha256":  "6C8A6170096EEC1D5291C176DB8FE3DA820912CF1EEF2299DA475A4EC7C22BB1",
+                         "tekil_ikon_durumu":  "ayristirma_bekliyor"
+                     },
+                     {
+                         "sira":  3,
+                         "dosya":  "03_canli_durumlar.png",
+                         "kaynak":  "C:\\Users\\Pc\\AppData\\Local\\Temp\\syk_ugr_icon_extract\\00 UGR (Unified GeoRuntime) ana ekran ikonlar\\03 canl durum ikonlar\\canl durum ikonlar.png",
+                         "hedef":  "src\\syk_ui\\icons\\ugr\\source_sheets\\03_canli_durumlar.png",
+                         "sha256":  "C858AF233F1EC32C21BC3BD840CC31159416A38CD5348747733E8092E25569FD",
+                         "tekil_ikon_durumu":  "ayristirma_bekliyor"
+                     },
+                     {
+                         "sira":  4,
+                         "dosya":  "04_ekosistem_modulleri.png",
+                         "kaynak":  "C:\\Users\\Pc\\AppData\\Local\\Temp\\syk_ugr_icon_extract\\00 UGR (Unified GeoRuntime) ana ekran ikonlar\\04 ekosistem modlleri\\ekosistem modlleri.png",
+                         "hedef":  "src\\syk_ui\\icons\\ugr\\source_sheets\\04_ekosistem_modulleri.png",
+                         "sha256":  "97D5D525C6CC4934405B6F28F3BEF0769F33EE5E9667F2E3183E2F89A5B5A01D",
+                         "tekil_ikon_durumu":  "ayristirma_bekliyor"
+                     },
+                     {
+                         "sira":  5,
+                         "dosya":  "05_harita_nesneleri.png",
+                         "kaynak":  "C:\\Users\\Pc\\AppData\\Local\\Temp\\syk_ugr_icon_extract\\00 UGR (Unified GeoRuntime) ana ekran ikonlar\\05 harita nesneleri\\harita nesneleri.png",
+                         "hedef":  "src\\syk_ui\\icons\\ugr\\source_sheets\\05_harita_nesneleri.png",
+                         "sha256":  "1C02545D192FE14C5285271EA692B526C2B89177C580172FEBC90EDA0DCB1C69",
+                         "tekil_ikon_durumu":  "ayristirma_bekliyor"
+                     }
+                 ],
+    "olusturulma_zamani":  "2026-08-05T10:56:25.9887956+03:00"
+}

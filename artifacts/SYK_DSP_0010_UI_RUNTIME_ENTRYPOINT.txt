@@ -1,0 +1,362 @@
+==============================================================================
+DSP-0010 UI RUNTIME ENTRYPOINT TESHISI
+==============================================================================
+INCELENEN_DOSYA_SAYISI 832
+
+=== ANAHTAR ESLESMELER ===
+pyproject.toml:12:"uvicorn>=0.51,<1",
+scripts\syk_terminal_baslat.py:9:import uvicorn
+scripts\syk_terminal_baslat.py:141:uvicorn.run(
+src\syk_core\runtime_hardware_validation\sistem_denetimi.py:212:sonuc = subprocess.run(
+src\syk_core\runtime_terminal\canli_sunucu.py:13:import uvicorn
+src\syk_core\runtime_terminal\canli_sunucu.py:76:self._sunucu: uvicorn.Server | None = None
+src\syk_core\runtime_terminal\canli_sunucu.py:137:yapilandirma = uvicorn.Config(
+src\syk_core\runtime_terminal\canli_sunucu.py:146:self._sunucu = uvicorn.Server(
+src\syk_core\runtime_terminal\uygulama.py:56:subprocess.Popen[Any],
+src\syk_core\runtime_terminal\uygulama.py:96:surec = subprocess.Popen(
+src\syk_core\runtime_terminal\uygulama.py:238:subprocess.run(
+src\syk_core\runtime_terminal\uygulama.py:251:subprocess.run(
+src\syk_simulasyon\runtime_fastapi_sunucusu.py:1195:import uvicorn
+src\syk_simulasyon\runtime_fastapi_sunucusu.py:1197:uvicorn.run(
+src\syk_simulasyon\runtime_ui_sunucusu.py:35:"/syk-ui-screen" in yollar
+src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:94:asset_base_url: str,
+src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:106:f"{asset_base_url}/"
+src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:131:asset_base_url: str = (
+src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:155:self.asset_base_url = (
+src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:156:asset_base_url.rstrip("/")
+src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:590:asset_base_url=(
+src\syk_simulasyon\syk_ui_runtime\kasif_icon_registry.py:591:self.asset_base_url
+src\syk_simulasyon\syk_ui_runtime\screen_routes.py:13:@router.get("/syk-ui-screen", include_in_schema=False)
+tests\test_pyproject_bagimlilik_sozlesmesi.py:23:deger.startswith("uvicorn>=")
+tests\test_runtime_terminal_playwright_e2e.py:11:import uvicorn
+tests\test_runtime_terminal_playwright_e2e.py:98:"Uvicorn test sunucusu zamanında hazır olmadı."
+tests\test_runtime_terminal_playwright_e2e.py:109:ayar = uvicorn.Config(
+tests\test_runtime_terminal_playwright_e2e.py:119:sunucu = uvicorn.Server(ayar)
+tests\test_runtime_terminal_playwright_e2e.py:124:name="sykasif-dsp-0009-uvicorn",
+tests\test_runtime_terminal_playwright_e2e.py:144:"Uvicorn test sunucusu kapatılamadı."
+tests\test_runtime_ui_sunucusu.py:9:ekran = client.get("/syk-ui-screen")
+tests\test_runtime_ui_sunucusu.py:27:ilk_ekran = client.get("/syk-ui-screen")
+tests\test_runtime_ui_sunucusu.py:28:ikinci_ekran = client.get("/syk-ui-screen")
+tests\test_syk_core_runtime_hardware_cli.py:56:"127.0.0.1:8013"
+tests\test_syk_core_runtime_hardware_cli.py:59:8013,
+tests\test_syk_core_runtime_hardware_cli.py:124:8013,
+tests\test_syk_core_runtime_hardware_cli.py:141:8013,
+tests\test_syk_core_runtime_hardware_cli.py:244:"127.0.0.1:8013",
+tests\test_syk_core_runtime_hardware_inspector.py:294:baglanti_noktasi=8013,
+tests\test_syk_core_runtime_hardware_inspector.py:435:8013,
+tests\test_ui_adaptive_environment_tarayici.py:14:"SYK_UI_TEST_URL",
+tests\test_ui_adaptive_environment_tarayici.py:15:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_balik_syframe_modulleri.py:13:ekran = client.get("/syk-ui-screen")
+tests\test_ui_balik_syframe_tarayici.py:8:"SYK_UI_TEST_URL",
+tests\test_ui_balik_syframe_tarayici.py:9:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_bilimsel_moduller_tarayici.py:37:"SYK_UI_TEST_URL",
+tests\test_ui_bilimsel_moduller_tarayici.py:38:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_bilimsel_moduller_toplu.py:33:screen = client.get("/syk-ui-screen")
+tests\test_ui_canli_tarayici.py:8:"SYK_UI_TEST_URL",
+tests\test_ui_canli_tarayici.py:9:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_dashboard_canli.py:13:screen = client.get("/syk-ui-screen")
+tests\test_ui_device_hub_assets.py:13:screen = client.get("/syk-ui-screen")
+tests\test_ui_device_hub_tarayici.py:11:base_url: str,
+tests\test_ui_device_hub_tarayici.py:14:f"{base_url}/api/syk-ui/device-sessions"
+tests\test_ui_device_hub_tarayici.py:26:f"{base_url}/api/syk-ui/"
+tests\test_ui_device_hub_tarayici.py:35:base_url = os.getenv(
+tests\test_ui_device_hub_tarayici.py:36:"SYK_UI_BASE_URL",
+tests\test_ui_device_hub_tarayici.py:37:"http://127.0.0.1:8013",
+tests\test_ui_device_hub_tarayici.py:41:"SYK_UI_TEST_URL",
+tests\test_ui_device_hub_tarayici.py:42:f"{base_url}/syk-ui-screen",
+tests\test_ui_device_hub_tarayici.py:46:f"{base_url}/api/syk-ui/device-hub/register",
+tests\test_ui_device_hub_tarayici.py:61:base_url,
+tests\test_ui_device_hub_tarayici.py:66:f"{base_url}/api/syk-ui/device-hub/"
+tests\test_ui_device_hub_tarayici.py:139:f"{base_url}/api/syk-ui/device-sessions"
+tests\test_ui_device_hub_tarayici.py:157:f"{base_url}/api/syk-ui/"
+tests\test_ui_dtse_evidence_card_tarayici.py:12:base_url = os.getenv(
+tests\test_ui_dtse_evidence_card_tarayici.py:13:"SYK_UI_BASE_URL",
+tests\test_ui_dtse_evidence_card_tarayici.py:14:"http://127.0.0.1:8013",
+tests\test_ui_dtse_evidence_card_tarayici.py:18:"SYK_UI_TEST_URL",
+tests\test_ui_dtse_evidence_card_tarayici.py:19:f"{base_url}/syk-ui-screen",
+tests\test_ui_dtse_evidence_focus_tarayici.py:13:"SYK_UI_TEST_URL",
+tests\test_ui_dtse_evidence_focus_tarayici.py:14:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py:14:"SYK_UI_TEST_URL",
+tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py:15:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_kasif_icon_tarayici.py:14:"SYK_UI_TEST_URL",
+tests\test_ui_kasif_icon_tarayici.py:15:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_live_environment_tarayici.py:14:"SYK_UI_TEST_URL",
+tests\test_ui_live_environment_tarayici.py:15:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_live_environment_tarayici.py:28:"http://127.0.0.1:8013"
+tests\test_ui_media_upload_preview_tarayici.py:14:"SYK_UI_TEST_URL",
+tests\test_ui_media_upload_preview_tarayici.py:15:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_media_upload_tarayici.py:14:"SYK_UI_TEST_URL",
+tests\test_ui_media_upload_tarayici.py:15:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_mobile_control_tarayici.py:14:"SYK_UI_TEST_URL",
+tests\test_ui_mobile_control_tarayici.py:15:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_mobile_device_runtime_tarayici.py:14:"SYK_UI_TEST_URL",
+tests\test_ui_mobile_device_runtime_tarayici.py:15:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_mobile_offline_runtime_tarayici.py:13:"SYK_UI_TEST_URL",
+tests\test_ui_mobile_offline_runtime_tarayici.py:14:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_mobile_sensor_runtime_tarayici.py:13:"SYK_UI_TEST_URL",
+tests\test_ui_mobile_sensor_runtime_tarayici.py:14:"http://127.0.0.1:8013/syk-ui-screen",
+tests\test_ui_scientific_api_tarayici.py:7:base_url = os.getenv(
+tests\test_ui_scientific_api_tarayici.py:8:"SYK_UI_BASE_URL",
+tests\test_ui_scientific_api_tarayici.py:9:"http://127.0.0.1:8013",
+tests\test_ui_scientific_api_tarayici.py:13:"SYK_UI_TEST_URL",
+tests\test_ui_scientific_api_tarayici.py:14:f"{base_url}/syk-ui-screen",
+tests\test_ui_scientific_api_tarayici.py:19:f"{base_url}"
+tests\test_ui_scientific_api_tarayici.py:64:f"{base_url}"
+tests\test_ui_scientific_api_views.py:13:screen = client.get("/syk-ui-screen")
+tests\test_ui_toplu_entegrasyon.py:13:screen = client.get("/syk-ui-screen")
+
+=== PYTHON FASTAPI / UVICORN ADAYLARI ===
+
+DOSYA scripts\syk_terminal_baslat.py
+  run SATIR 141: uvicorn.run(terminal_uygulamasi.uygulama, host=args.ana_makine, port=args.baglanti_noktasi, reload=False, log_level=ayarlar.gunluk_seviyesi)
+
+DOSYA src\syk_core\runtime_device_link\api.py
+  FastAPI SATIR 114
+
+DOSYA src\syk_core\runtime_field_link\api.py
+  FastAPI SATIR 146
+
+DOSYA src\syk_core\runtime_hardware_validation\sistem_denetimi.py
+  run SATIR 212: subprocess.run(list(komut), capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=zaman_asimi_saniye, check=False)
+
+DOSYA src\syk_core\runtime_terminal\ag_gecidi.py
+  FastAPI SATIR 249
+
+DOSYA src\syk_core\runtime_terminal\uygulama.py
+  Popen SATIR 96: subprocess.Popen(komut, cwd=str(yol) if yol.is_dir() else str(yol.parent), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL, creationflags=subprocess.CREATE_NEW_PROCESS_GROUP if sys.platform == 'win32' else 0)
+  run SATIR 238: subprocess.run(['shutdown', '/s', '/t', '30', '/c', 'SyKaşif yetkili kapatma işlemi'], check=True)
+  run SATIR 251: subprocess.run(['shutdown', '/r', '/t', '30', '/c', 'SyKaşif yetkili yeniden başlatma işlemi'], check=True)
+
+DOSYA src\syk_simulasyon\runtime_fastapi_sunucusu.py
+  FONKSIYON uygulama_olustur SATIR 1097
+  run SATIR 1197: uvicorn.run(uygulama_olustur(), host='0.0.0.0', port=8000)
+  FastAPI SATIR 84
+
+DOSYA src\syk_simulasyon\runtime_ui_sunucusu.py
+  include_router SATIR 80: app.include_router(syk_ui_router)
+  include_router SATIR 88: app.include_router(finans_router)
+  include_router SATIR 108: app.include_router(syk_terminal_router)
+
+DOSYA src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  include_router SATIR 1071: router.include_router(dtse_attention_router)
+  include_router SATIR 1079: router.include_router(goruntu_dtse_router)
+  include_router SATIR 1086: router.include_router(media_upload_router)
+  include_router SATIR 1093: router.include_router(adaptive_environment_router)
+  include_router SATIR 1106: router.include_router(theme_router)
+  include_router SATIR 1110: router.include_router(mobile_control_router)
+  include_router SATIR 1114: router.include_router(mobile_device_router)
+  include_router SATIR 1118: router.include_router(mobile_offline_router)
+  include_router SATIR 1122: router.include_router(mobile_sensor_router)
+  include_router SATIR 1126: router.include_router(kasif_icon_router)
+  include_router SATIR 1130: router.include_router(jarmin_integration_router)
+
+DOSYA src\syk_simulasyon\syk_ui_runtime\integration.py
+  include_router SATIR 10: app.include_router(api_router)
+  include_router SATIR 11: app.include_router(screen_router)
+
+DOSYA src\syk_simulasyon\syk_ui_runtime\static_routes.py
+  mount SATIR 20: app.mount('/syk-ui', StaticFiles(directory=STATIC), name='syk-ui')
+
+DOSYA tests\test_syfinans_runtime_routes.py
+  FastAPI SATIR 12
+  include_router SATIR 13: app.include_router(finans_router)
+
+DOSYA tests\test_syk_core_runtime_device_link_api.py
+  FastAPI SATIR 94
+
+DOSYA tests\test_syk_core_runtime_field_api.py
+  FastAPI SATIR 47
+
+DOSYA tests\test_syk_core_runtime_terminal_uygulamasi.py
+  FONKSIYON uygulama_olustur SATIR 106
+
+DOSYA tests\test_terminal_runtime.py
+  FastAPI SATIR 41
+  include_router SATIR 42: app.include_router(terminal_router)
+
+DOSYA tests\test_ui_balik_syframe_modulleri.py
+  FastAPI SATIR 8
+
+DOSYA tests\test_ui_bilimsel_moduller_toplu.py
+  FastAPI SATIR 28
+
+DOSYA tests\test_ui_dashboard_canli.py
+  FastAPI SATIR 8
+
+DOSYA tests\test_ui_device_hub_assets.py
+  FastAPI SATIR 8
+
+DOSYA tests\test_ui_dtse_attention_api.py
+  FastAPI SATIR 10
+  include_router SATIR 11: app.include_router(router, prefix='/api/syk-ui')
+
+DOSYA tests\test_ui_goruntu_dtse_api.py
+  FastAPI SATIR 10
+  include_router SATIR 12: app.include_router(router, prefix='/api/syk-ui')
+
+DOSYA tests\test_ui_goruntu_dtse_kanit_api.py
+  FastAPI SATIR 12
+  include_router SATIR 14: app.include_router(router, prefix='/api/syk-ui')
+
+DOSYA tests\test_ui_scientific_adapter_api.py
+  FastAPI SATIR 8
+  FastAPI SATIR 56
+
+DOSYA tests\test_ui_scientific_analysis_syframe_api.py
+  FastAPI SATIR 59
+
+DOSYA tests\test_ui_scientific_analysis_syframe_websocket.py
+  FastAPI SATIR 50
+
+DOSYA tests\test_ui_scientific_api_views.py
+  FastAPI SATIR 8
+
+DOSYA tests\test_ui_scientific_ble_api.py
+  FastAPI SATIR 59
+
+DOSYA tests\test_ui_scientific_device_analysis_api.py
+  FastAPI SATIR 40
+
+DOSYA tests\test_ui_scientific_device_evidence_api.py
+  FastAPI SATIR 61
+
+DOSYA tests\test_ui_scientific_device_evidence_package_api.py
+  FastAPI SATIR 67
+
+DOSYA tests\test_ui_scientific_device_hub_api.py
+  FastAPI SATIR 86
+
+DOSYA tests\test_ui_scientific_device_manager_api.py
+  FastAPI SATIR 68
+
+DOSYA tests\test_ui_scientific_device_package_seal_api.py
+  FastAPI SATIR 87
+
+DOSYA tests\test_ui_scientific_device_recording_pipeline_api.py
+  FastAPI SATIR 39
+
+DOSYA tests\test_ui_scientific_device_session_api.py
+  FastAPI SATIR 62
+
+DOSYA tests\test_ui_scientific_runtime_api.py
+  FastAPI SATIR 8
+
+DOSYA tests\test_ui_scientific_runtime_live.py
+  FastAPI SATIR 8
+  FastAPI SATIR 46
+
+DOSYA tests\test_ui_scientific_serial_api.py
+  FastAPI SATIR 52
+
+DOSYA tests\test_ui_scientific_tcp_api.py
+  FastAPI SATIR 39
+
+DOSYA tests\test_ui_static_routes.py
+  FastAPI SATIR 7
+
+DOSYA tests\test_ui_toplu_entegrasyon.py
+  FastAPI SATIR 8
+
+=== TEST FIXTURE DOSYALARI ===
+src\syk_core\runtime_terminal\canli_sunucu.py
+src\syk_simulasyon\runtime_fastapi_sunucusu.py
+src\syk_simulasyon\runtime_ui_sunucusu.py
+tests\test_runtime_fastapi_sunucusu.py
+tests\test_runtime_hesap_deposu_sunucu_baglantisi.py
+tests\test_runtime_terminal_playwright_e2e.py
+tests\test_runtime_ui_sunucusu.py
+tests\test_syk_core_runtime_terminal_canli_sunucu.py
+
+=== UI TEST HEDEFLERI ===
+
+TEST tests\test_ui_adaptive_environment_tarayici.py
+  14: "SYK_UI_TEST_URL",
+  15: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_balik_syframe_tarayici.py
+  8: "SYK_UI_TEST_URL",
+  9: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_bilimsel_moduller_tarayici.py
+  37: "SYK_UI_TEST_URL",
+  38: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_canli_tarayici.py
+  8: "SYK_UI_TEST_URL",
+  9: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_device_hub_tarayici.py
+  37: "http://127.0.0.1:8013",
+  41: "SYK_UI_TEST_URL",
+  42: f"{base_url}/syk-ui-screen",
+
+TEST tests\test_ui_dtse_evidence_card_tarayici.py
+  14: "http://127.0.0.1:8013",
+  18: "SYK_UI_TEST_URL",
+  19: f"{base_url}/syk-ui-screen",
+
+TEST tests\test_ui_dtse_evidence_focus_tarayici.py
+  13: "SYK_UI_TEST_URL",
+  14: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_dtse_evidence_scientific_runtime_tarayici.py
+  14: "SYK_UI_TEST_URL",
+  15: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_kasif_icon_tarayici.py
+  14: "SYK_UI_TEST_URL",
+  15: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_live_environment_tarayici.py
+  14: "SYK_UI_TEST_URL",
+  15: "http://127.0.0.1:8013/syk-ui-screen",
+  28: "http://127.0.0.1:8013"
+
+TEST tests\test_ui_media_upload_preview_tarayici.py
+  14: "SYK_UI_TEST_URL",
+  15: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_media_upload_tarayici.py
+  14: "SYK_UI_TEST_URL",
+  15: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_mobile_control_tarayici.py
+  14: "SYK_UI_TEST_URL",
+  15: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_mobile_device_runtime_tarayici.py
+  14: "SYK_UI_TEST_URL",
+  15: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_mobile_offline_runtime_tarayici.py
+  13: "SYK_UI_TEST_URL",
+  14: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_mobile_sensor_runtime_tarayici.py
+  13: "SYK_UI_TEST_URL",
+  14: "http://127.0.0.1:8013/syk-ui-screen",
+
+TEST tests\test_ui_scientific_api_tarayici.py
+  9: "http://127.0.0.1:8013",
+  13: "SYK_UI_TEST_URL",
+  14: f"{base_url}/syk-ui-screen",
+
+=== ONCELIKLI ENTRYPOINT ADAYLARI ===
+
+ADAY src\syk_simulasyon\runtime_ui_sunucusu.py
+SYK_UI_SCREEN True
+UVICORN False
+FASTAPI False
+UYGULAMA_OLUSTUR True
+
+ADAY src\syk_simulasyon\runtime_fastapi_sunucusu.py
+SYK_UI_SCREEN False
+UVICORN True
+FASTAPI True
+UYGULAMA_OLUSTUR True
+
+ADAY src\syk_simulasyon\syk_ui.py
+SYK_UI_SCREEN False
+UVICORN False
+FASTAPI False
+UYGULAMA_OLUSTUR False

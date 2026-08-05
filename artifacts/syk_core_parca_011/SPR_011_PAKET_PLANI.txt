@@ -1,0 +1,44 @@
+﻿SPR-011 PAKET PLANI
+
+PAKET-001
+Sensör ve probe kimlik modeli
+Bağlantı türü
+Ölçüm kanalı
+Kalibrasyon durumu
+Donanım güvenlik sınırları
+
+PAKET-002
+USB ve seri probe bağlantı yöneticisi
+Bağlantı açma
+Bağlantı kapatma
+Zaman aşımı
+Paket bütünlüğü
+Ham veri kabulü
+
+PAKET-003
+Kontrollü laboratuvar oturumu
+Referans hedef
+Mesafe kaydı
+Ortam koşulları
+Tekrarlı ölçüm
+Hata ve sapma kaydı
+
+PAKET-004
+Ham sinyal kanıt zinciri
+Zaman damgası
+SHA256
+Oturum kimliği
+Cihaz kimliği
+Ölçüm sırası
+
+PAKET-005
+Canlı laboratuvar doğrulama aracı
+Gerçek cihaz bağlıysa gerçek test
+Cihaz bağlı değilse açık biçimde bekliyor sonucu
+Simülasyonu gerçek cihaz sonucu olarak işaretlememe
+
+PAKET-006
+Tüm depo doğrulaması
+Kanıt paketi
+SHA256
+Commit

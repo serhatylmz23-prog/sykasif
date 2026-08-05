@@ -1,0 +1,289 @@
+SPR-011 PAKET-013
+UI KAYNAK HARITASI
+
+INCELENEN_DOSYA_SAYISI=221
+ESLESME_SAYISI=171
+ROUTE_DOSYASI_SAYISI=24
+UI_ADAYI_SAYISI=21
+
+=== EN GUCLU UI ADAYLARI ===
+DOSYA=src/syk_simulasyon/syk_ui_runtime/module_registry.py | BILIMSEL=12 | BUTTON=0 | ROLE_BUTTON=0 | PUAN=240
+DOSYA=src/syk_ui/icons/ugr/web/demo/ugr_dynamic_icons_preview.html | BILIMSEL=7 | BUTTON=30 | ROLE_BUTTON=0 | PUAN=230
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json | BILIMSEL=11 | BUTTON=0 | ROLE_BUTTON=0 | PUAN=220
+DOSYA=src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json | BILIMSEL=7 | BUTTON=0 | ROLE_BUTTON=0 | PUAN=140
+DOSYA=src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py | BILIMSEL=7 | BUTTON=0 | ROLE_BUTTON=0 | PUAN=140
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/js/dtse_evidence_scientific_runtime.js | BILIMSEL=6 | BUTTON=0 | ROLE_BUTTON=0 | PUAN=120
+DOSYA=src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py | BILIMSEL=5 | BUTTON=0 | ROLE_BUTTON=0 | PUAN=100
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/js/scientific_views.js | BILIMSEL=5 | BUTTON=0 | ROLE_BUTTON=0 | PUAN=100
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/js/mobile_control_panel.js | BILIMSEL=0 | BUTTON=10 | ROLE_BUTTON=0 | PUAN=30
+DOSYA=src/syk_simulasyon/ortam_hafizasi.py | BILIMSEL=1 | BUTTON=0 | ROLE_BUTTON=0 | PUAN=20
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/css/scientific_views.css | BILIMSEL=1 | BUTTON=0 | ROLE_BUTTON=0 | PUAN=20
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/js/scientific_api_views.js | BILIMSEL=1 | BUTTON=0 | ROLE_BUTTON=0 | PUAN=20
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/js/scientific_visibility_guard.js | BILIMSEL=1 | BUTTON=0 | ROLE_BUTTON=0 | PUAN=20
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/js/device_hub.js | BILIMSEL=0 | BUTTON=3 | ROLE_BUTTON=0 | PUAN=9
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/js/sonar_session_panel.js | BILIMSEL=0 | BUTTON=3 | ROLE_BUTTON=0 | PUAN=9
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/js/dtse_evidence_focus.js | BILIMSEL=0 | BUTTON=2 | ROLE_BUTTON=0 | PUAN=6
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/js/media_upload_panel.js | BILIMSEL=0 | BUTTON=2 | ROLE_BUTTON=0 | PUAN=6
+DOSYA=src/syk_simulasyon/runtime_fastapi_sunucusu.py | BILIMSEL=0 | BUTTON=1 | ROLE_BUTTON=0 | PUAN=3
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/index.html | BILIMSEL=0 | BUTTON=1 | ROLE_BUTTON=0 | PUAN=3
+DOSYA=src/syk_ui/icons/ugr/web/render_modeli.py | BILIMSEL=0 | BUTTON=1 | ROLE_BUTTON=0 | PUAN=3
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/css/mobile_device_runtime.css | BILIMSEL=0 | BUTTON=0 | ROLE_BUTTON=1 | PUAN=2
+
+=== ROUTE KAYITLARI ===
+DOSYA=src/syk_simulasyon/runtime_fastapi_sunucusu.py
+  SATIR=398 FONKSIYON=giris_ekrani DEKORATOR=["uygulama.get('/giris')"]
+  SATIR=467 FONKSIYON=ilk_kurulum DEKORATOR=["uygulama.post('/runtime/ilk-kurulum')"]
+  SATIR=593 FONKSIYON=oturum_ac DEKORATOR=["uygulama.post('/runtime/oturum')"]
+  SATIR=713 FONKSIYON=taninmis_cihazi_iptal_et DEKORATOR=["uygulama.post('/runtime/cihaz-iptal')"]
+  SATIR=791 FONKSIYON=oturum_kapat DEKORATOR=["uygulama.post('/cikis')"]
+  SATIR=809 FONKSIYON=runtime_sagligi DEKORATOR=["uygulama.get('/runtime/health')"]
+  SATIR=904 FONKSIYON=terminal DEKORATOR=["uygulama.get('/terminal')"]
+  SATIR=919 FONKSIYON=runtime_json DEKORATOR=["uygulama.get('/runtime/json')"]
+  SATIR=930 FONKSIYON=runtime_html DEKORATOR=["uygulama.get('/runtime/html')"]
+  SATIR=941 FONKSIYON=runtime_csv DEKORATOR=["uygulama.get('/runtime/csv')"]
+  SATIR=952 FONKSIYON=runtime_markdown DEKORATOR=["uygulama.get('/runtime/markdown')"]
+  SATIR=963 FONKSIYON=runtime_xml DEKORATOR=["uygulama.get('/runtime/xml')"]
+  SATIR=974 FONKSIYON=runtime_yaml DEKORATOR=["uygulama.get('/runtime/yaml')"]
+  SATIR=1217 FONKSIYON=syk_ui_screen_uyumluluk_yolu DEKORATOR=["uygulama.get('/syk-ui-screen', include_in_schema=False)"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/adaptive_environment_routes.py
+  SATIR=54 FONKSIYON=get_current_environment DEKORATOR=["router.get('/current')"]
+  SATIR=83 FONKSIYON=get_live_environment DEKORATOR=["router.get('/live')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/api_routes.py
+  SATIR=116 FONKSIYON=get_runtime_state DEKORATOR=["router.get('/runtime-state')"]
+  SATIR=148 FONKSIYON=get_scientific_modules DEKORATOR=["router.get('/scientific-modules')"]
+  SATIR=153 FONKSIYON=get_scientific_module DEKORATOR=["router.get('/scientific-modules/{module_id}')"]
+  SATIR=234 FONKSIYON=get_scientific_adapters DEKORATOR=["router.get('/scientific-adapters')"]
+  SATIR=242 FONKSIYON=ingest_scientific_adapter_data DEKORATOR=["router.post('/scientific-adapters/{adapter_id}/modules/{module_id}/ingest')"]
+  SATIR=285 FONKSIYON=discover_serial_devices DEKORATOR=["router.get('/scientific-devices/serial')"]
+  SATIR=299 FONKSIYON=read_serial_device DEKORATOR=["router.post('/scientific-devices/serial/read')"]
+  SATIR=340 FONKSIYON=read_tcp_device DEKORATOR=["router.post('/scientific-devices/tcp/read')"]
+  SATIR=385 FONKSIYON=discover_ble_devices DEKORATOR=["router.post('/scientific-devices/ble/discover')"]
+  SATIR=403 FONKSIYON=read_ble_device DEKORATOR=["router.post('/scientific-devices/ble/read')"]
+  SATIR=440 FONKSIYON=get_scientific_device_transports DEKORATOR=["router.get('/scientific-devices/transports')"]
+  SATIR=445 FONKSIYON=discover_all_scientific_devices DEKORATOR=["router.post('/scientific-devices/discover')"]
+  SATIR=473 FONKSIYON=get_device_hub DEKORATOR=["router.get('/device-hub')"]
+  SATIR=483 FONKSIYON=refresh_device_hub DEKORATOR=["router.post('/device-hub/refresh')"]
+  SATIR=492 FONKSIYON=register_device_hub_device DEKORATOR=["router.post('/device-hub/register')"]
+  SATIR=515 FONKSIYON=get_device_hub_device DEKORATOR=["router.get('/device-hub/{device_id}')"]
+  SATIR=591 FONKSIYON=get_device_sessions DEKORATOR=["router.get('/device-sessions')"]
+  SATIR=596 FONKSIYON=start_device_session DEKORATOR=["router.post('/device-sessions/start')"]
+  SATIR=624 FONKSIYON=get_device_session DEKORATOR=["router.get('/device-sessions/{session_id}')"]
+  SATIR=644 FONKSIYON=append_device_session_samples DEKORATOR=["router.post('/device-sessions/{session_id}/samples')"]
+  SATIR=674 FONKSIYON=stop_device_session DEKORATOR=["router.post('/device-sessions/{session_id}/stop')"]
+  SATIR=705 FONKSIYON=append_device_session_evidence DEKORATOR=["router.post('/device-sessions/{session_id}/evidence')"]
+  SATIR=751 FONKSIYON=get_device_session_evidence DEKORATOR=["router.get('/device-sessions/{session_id}/evidence')"]
+  SATIR=775 FONKSIYON=verify_device_session_evidence DEKORATOR=["router.get('/device-sessions/{session_id}/evidence/verify')"]
+  SATIR=802 FONKSIYON=ingest_device_recording_packet DEKORATOR=["router.post('/device-hub/{device_id}/recording-ingest')"]
+  SATIR=814 FONKSIYON=build_device_session_package DEKORATOR=["router.post('/device-sessions/{session_id}/package')"]
+  SATIR=862 FONKSIYON=verify_device_session_package DEKORATOR=["router.get('/device-sessions/{session_id}/package/verify')"]
+  SATIR=890 FONKSIYON=seal_device_session_package DEKORATOR=["router.post('/device-sessions/{session_id}/seal')"]
+  SATIR=949 FONKSIYON=verify_device_session_seal DEKORATOR=["router.get('/device-sessions/{session_id}/seal/verify')"]
+  SATIR=977 FONKSIYON=analyze_device_session DEKORATOR=["router.post('/device-sessions/{session_id}/analysis')"]
+  SATIR=1005 FONKSIYON=get_device_session_analysis DEKORATOR=["router.get('/device-sessions/{session_id}/analysis')"]
+  SATIR=1025 FONKSIYON=verify_device_session_analysis DEKORATOR=["router.get('/device-sessions/{session_id}/analysis/verify')"]
+  SATIR=1035 FONKSIYON=apply_device_analysis_to_syframe DEKORATOR=["router.post('/device-sessions/{session_id}/syframe')"]
+  SATIR=1064 FONKSIYON=get_analysis_syframe_state DEKORATOR=["router.get('/syframe/analysis-state')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/dtse_attention_routes.py
+  SATIR=60 FONKSIYON=ingest_dtse_attention_frame DEKORATOR=["router.post('/frames/attention')"]
+  SATIR=100 FONKSIYON=get_dtse_attention_events DEKORATOR=["router.get('/events')"]
+  SATIR=114 FONKSIYON=get_dtse_attention_event DEKORATOR=["router.get('/events/{event_id}')"]
+  SATIR=132 FONKSIYON=get_dtse_attention_state DEKORATOR=["router.get('/state')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/external_device_routes.py
+  SATIR=63 FONKSIYON=list_devices DEKORATOR=["external_device_router.get('')"]
+  SATIR=76 FONKSIYON=register_mock_garmin DEKORATOR=["external_device_router.post('/garmin/mock', status_code=201)"]
+  SATIR=115 FONKSIYON=get_device DEKORATOR=["external_device_router.get('/{device_id}')"]
+  SATIR=137 FONKSIYON=connect_device DEKORATOR=["external_device_router.post('/{device_id}/connect')"]
+  SATIR=156 FONKSIYON=disconnect_device DEKORATOR=["external_device_router.post('/{device_id}/disconnect')"]
+  SATIR=176 FONKSIYON=read_sonar_frame DEKORATOR=["external_device_router.post('/{device_id}/frames', status_code=201)"]
+  SATIR=217 FONKSIYON=list_sonar_records DEKORATOR=["external_device_router.get('/records/list')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/goruntu_dtse_routes.py
+  SATIR=104 FONKSIYON=goruntu_kaydi_olustur DEKORATOR=["router.post('/kayitlar')"]
+  SATIR=147 FONKSIYON=supheli_bolge_ekle DEKORATOR=["router.post('/kayitlar/{veri_kimligi}/supheli-bolgeler')"]
+  SATIR=206 FONKSIYON=goruntu_kaydi_getir DEKORATOR=["router.get('/kayitlar/{veri_kimligi}')"]
+  SATIR=226 FONKSIYON=goruntu_dtse_durumu DEKORATOR=["router.get('/dtse-adapter-state')"]
+  SATIR=232 FONKSIYON=goruntu_dtse_kanit_zinciri_getir DEKORATOR=["router.get('/kayitlar/{veri_kimligi}/kanit-zinciri')"]
+  SATIR=262 FONKSIYON=goruntu_dtse_kanit_manifesti_getir DEKORATOR=["router.get('/kayitlar/{veri_kimligi}/kanit-manifesti')"]
+  SATIR=284 FONKSIYON=goruntu_dtse_kanit_dogrula DEKORATOR=["router.get('/kayitlar/{veri_kimligi}/kanit-dogrula')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/kasif_icon_routes.py
+  SATIR=21 FONKSIYON=list_kasif_icons DEKORATOR=["router.get('')"]
+  SATIR=46 FONKSIYON=get_kasif_icon_manifest DEKORATOR=["router.get('/manifest')"]
+  SATIR=52 FONKSIYON=get_kasif_icon_groups DEKORATOR=["router.get('/groups')"]
+  SATIR=62 FONKSIYON=get_kasif_assistant_profile DEKORATOR=["router.get('/assistant')"]
+  SATIR=68 FONKSIYON=search_kasif_icons DEKORATOR=["router.get('/search')"]
+  SATIR=92 FONKSIYON=reload_kasif_icons DEKORATOR=["router.post('/reload')"]
+  SATIR=105 FONKSIYON=get_kasif_icon DEKORATOR=["router.get('/{icon_id}')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/map_workspace_routes.py
+  SATIR=67 FONKSIYON=list_workspaces DEKORATOR=["map_workspace_router.get('')"]
+  SATIR=90 FONKSIYON=create_workspace DEKORATOR=["map_workspace_router.post('', status_code=201)"]
+  SATIR=116 FONKSIYON=get_workspace DEKORATOR=["map_workspace_router.get('/{workspace_id}')"]
+  SATIR=163 FONKSIYON=add_pin DEKORATOR=["map_workspace_router.post('/{workspace_id}/pins', status_code=201)"]
+  SATIR=190 FONKSIYON=add_layer DEKORATOR=["map_workspace_router.post('/{workspace_id}/layers', status_code=201)"]
+  SATIR=218 FONKSIYON=add_measurement DEKORATOR=["map_workspace_router.post('/{workspace_id}/measurements', status_code=201)"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py
+  SATIR=33 FONKSIYON=analyze_uploaded_media DEKORATOR=["router.post('')"]
+  SATIR=65 FONKSIYON=list_media_analyses DEKORATOR=["router.get('')"]
+  SATIR=70 FONKSIYON=get_media_analysis DEKORATOR=["router.get('/{analysis_id}')"]
+  SATIR=91 FONKSIYON=download_media_report DEKORATOR=["router.get('/{analysis_id}/report')"]
+  SATIR=126 FONKSIYON=download_media_manifest DEKORATOR=["router.get('/{analysis_id}/manifest')"]
+  SATIR=163 FONKSIYON=get_annotated_media_preview DEKORATOR=["router.get('/{analysis_id}/preview')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/mobile_control_routes.py
+  SATIR=55 FONKSIYON=get_mobile_control_runtime DEKORATOR=["router.get('')"]
+  SATIR=61 FONKSIYON=register_mobile_control DEKORATOR=["router.post('/devices')"]
+  SATIR=83 FONKSIYON=list_mobile_controls DEKORATOR=["router.get('/devices')"]
+  SATIR=88 FONKSIYON=get_mobile_control DEKORATOR=["router.get('/devices/{device_id}')"]
+  SATIR=163 FONKSIYON=reset_mobile_control DEKORATOR=["router.post('/devices/{device_id}/reset')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/mobile_device_routes.py
+  SATIR=106 FONKSIYON=get_mobile_runtime DEKORATOR=["router.get('')"]
+  SATIR=111 FONKSIYON=register_mobile_device DEKORATOR=["router.post('/devices')"]
+  SATIR=142 FONKSIYON=list_mobile_devices DEKORATOR=["router.get('/devices')"]
+  SATIR=151 FONKSIYON=get_mobile_device DEKORATOR=["router.get('/devices/{device_id}')"]
+  SATIR=239 FONKSIYON=resolve_mobile_layout DEKORATOR=["router.post('/layout')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/mobile_offline_routes.py
+  SATIR=79 FONKSIYON=get_offline_runtime DEKORATOR=["router.get('')"]
+  SATIR=95 FONKSIYON=enqueue_offline_item DEKORATOR=["router.post('/queue')"]
+  SATIR=127 FONKSIYON=list_offline_queue DEKORATOR=["router.get('/queue')"]
+  SATIR=148 FONKSIYON=begin_offline_item DEKORATOR=["router.post('/queue/{item_id}/begin')"]
+  SATIR=173 FONKSIYON=complete_offline_item DEKORATOR=["router.post('/queue/{item_id}/complete')"]
+  SATIR=192 FONKSIYON=fail_offline_item DEKORATOR=["router.post('/queue/{item_id}/fail')"]
+  SATIR=248 FONKSIYON=create_pairing DEKORATOR=["router.post('/pairings')"]
+  SATIR=275 FONKSIYON=confirm_pairing DEKORATOR=["router.post('/pairings/confirm')"]
+  SATIR=304 FONKSIYON=verify_pairing DEKORATOR=["router.post('/pairings/verify')"]
+  SATIR=326 FONKSIYON=list_pairings DEKORATOR=["router.get('/pairings')"]
+  SATIR=389 FONKSIYON=get_cache DEKORATOR=["router.get('/cache/{cache_key}')"]
+  SATIR=409 FONKSIYON=list_cache DEKORATOR=["router.get('/cache')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/mobile_sensor_routes.py
+  SATIR=91 FONKSIYON=get_sensor_runtime DEKORATOR=["router.get('')"]
+  SATIR=118 FONKSIYON=start_camera DEKORATOR=["router.post('/camera/start')"]
+  SATIR=147 FONKSIYON=stop_camera DEKORATOR=["router.post('/camera/stop')"]
+  SATIR=153 FONKSIYON=start_microphone DEKORATOR=["router.post('/microphone/start')"]
+  SATIR=178 FONKSIYON=stop_microphone DEKORATOR=["router.post('/microphone/stop')"]
+  SATIR=184 FONKSIYON=add_location DEKORATOR=["router.post('/location')"]
+  SATIR=226 FONKSIYON=list_locations DEKORATOR=["router.get('/locations')"]
+  SATIR=245 FONKSIYON=capture_frame DEKORATOR=["router.post('/frames')"]
+  SATIR=288 FONKSIYON=list_frames DEKORATOR=["router.get('/frames')"]
+  SATIR=307 FONKSIYON=get_frame DEKORATOR=["router.get('/frames/{frame_id}')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/project_routes.py
+  SATIR=33 FONKSIYON=list_projects DEKORATOR=["project_router.get('')"]
+  SATIR=59 FONKSIYON=create_project DEKORATOR=["project_router.post('', status_code=201)"]
+  SATIR=78 FONKSIYON=get_project DEKORATOR=["project_router.get('/{project_id}')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/real_device_connection_routes.py
+  SATIR=72 FONKSIYON=list_connections DEKORATOR=["real_device_connection_router.get('')"]
+  SATIR=90 FONKSIYON=create_connection DEKORATOR=["real_device_connection_router.post('', status_code=201)"]
+  SATIR=120 FONKSIYON=get_connection DEKORATOR=["real_device_connection_router.get('/{connection_id}')"]
+  SATIR=144 FONKSIYON=connect DEKORATOR=["real_device_connection_router.post('/{connection_id}/connect')"]
+  SATIR=165 FONKSIYON=disconnect DEKORATOR=["real_device_connection_router.post('/{connection_id}/disconnect')"]
+  SATIR=186 FONKSIYON=heartbeat DEKORATOR=["real_device_connection_router.post('/{connection_id}/heartbeat')"]
+  SATIR=213 FONKSIYON=reconnect DEKORATOR=["real_device_connection_router.post('/{connection_id}/reconnect')"]
+  SATIR=234 FONKSIYON=ingest_nmea DEKORATOR=["real_device_connection_router.post('/{connection_id}/nmea')"]
+  SATIR=271 FONKSIYON=manifest DEKORATOR=["real_device_connection_router.get('/{connection_id}/manifest')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/research_routes.py
+  SATIR=44 FONKSIYON=list_research DEKORATOR=["research_router.get('')"]
+  SATIR=67 FONKSIYON=create_research DEKORATOR=["research_router.post('', status_code=201)"]
+  SATIR=92 FONKSIYON=get_research DEKORATOR=["research_router.get('/{research_id}')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/screen_routes.py
+  SATIR=14 FONKSIYON=get_ui_screen DEKORATOR=["router.get('/syk-ui-screen', include_in_schema=False)"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/sensor_gateway_routes.py
+  SATIR=73 FONKSIYON=gateway_snapshot DEKORATOR=["sensor_gateway_router.get('')"]
+  SATIR=81 FONKSIYON=register_source DEKORATOR=["sensor_gateway_router.post('/sources', status_code=201)"]
+  SATIR=114 FONKSIYON=ingest DEKORATOR=["sensor_gateway_router.post('/sources/{source_id}/ingest', status_code=201)"]
+  SATIR=144 FONKSIYON=list_envelopes DEKORATOR=["sensor_gateway_router.get('/envelopes')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/sensor_gateway_session_routes.py
+  SATIR=45 FONKSIYON=list_sessions DEKORATOR=["sensor_gateway_session_router.get('')"]
+  SATIR=82 FONKSIYON=create_session DEKORATOR=["sensor_gateway_session_router.post('', status_code=201)"]
+  SATIR=115 FONKSIYON=get_session DEKORATOR=["sensor_gateway_session_router.get('/{session_id}')"]
+  SATIR=143 FONKSIYON=start_session DEKORATOR=["sensor_gateway_session_router.post('/{session_id}/start')"]
+  SATIR=174 FONKSIYON=sync_session DEKORATOR=["sensor_gateway_session_router.post('/{session_id}/sync')"]
+  SATIR=205 FONKSIYON=stop_session DEKORATOR=["sensor_gateway_session_router.post('/{session_id}/stop')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/sonar_session_routes.py
+  SATIR=58 FONKSIYON=list_sessions DEKORATOR=["sonar_session_router.get('')"]
+  SATIR=96 FONKSIYON=create_session DEKORATOR=["sonar_session_router.post('', status_code=201)"]
+  SATIR=126 FONKSIYON=get_session DEKORATOR=["sonar_session_router.get('/{session_id}')"]
+  SATIR=148 FONKSIYON=start_session DEKORATOR=["sonar_session_router.post('/{session_id}/start')"]
+  SATIR=178 FONKSIYON=capture_session DEKORATOR=["sonar_session_router.post('/{session_id}/capture')"]
+  SATIR=215 FONKSIYON=stop_session DEKORATOR=["sonar_session_router.post('/{session_id}/stop')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/syfinans_runtime_routes.py
+  SATIR=491 FONKSIYON=get_syfinans_runtime DEKORATOR=["finans_router.get('/runtime')"]
+  SATIR=499 FONKSIYON=get_syfinans_kaynaklari DEKORATOR=["finans_router.get('/kaynaklar')"]
+  SATIR=525 FONKSIYON=get_syfinans_sekmesi DEKORATOR=["finans_router.get('/sekmeler/{sekme}')"]
+  SATIR=546 FONKSIYON=get_syfinans_cihaz_profilleri DEKORATOR=["finans_router.get('/cihaz-profilleri')"]
+  SATIR=570 FONKSIYON=get_syfinans_alarmlari DEKORATOR=["finans_router.get('/alarmlar')"]
+  SATIR=597 FONKSIYON=post_syfinans_alarmi DEKORATOR=["finans_router.post('/alarmlar')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/terminal_routes.py
+  SATIR=15 FONKSIYON=terminal_state DEKORATOR=["terminal_router.get('/state')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/theme_api.py
+  SATIR=35 FONKSIYON=list_themes DEKORATOR=["router.get('')"]
+  SATIR=40 FONKSIYON=current_theme DEKORATOR=["router.get('/current')"]
+  SATIR=60 FONKSIYON=automatic_theme DEKORATOR=["router.post('/automatic')"]
+  SATIR=79 FONKSIYON=theme_asset DEKORATOR=["router.get('/{theme_id}/assets/{filename}')"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py
+  SATIR=220 FONKSIYON=ugr_saglik DEKORATOR=["ugr_router.get('/health', summary='UGR canlı ikon sağlık durumu')"]
+  SATIR=270 FONKSIYON=ugr_snapshot DEKORATOR=["ugr_router.get('/snapshot', summary='215 UGR ikonunun canlı snapshot çıktısı')"]
+  SATIR=296 FONKSIYON=ugr_ikonlari DEKORATOR=["ugr_router.get('/icons', summary='UGR ikonlarını listeler')"]
+  SATIR=379 FONKSIYON=ugr_ikon DEKORATOR=["ugr_router.get('/icons/{ikon_kimligi}', summary='Tek UGR ikonunun canlı durumunu verir')"]
+  SATIR=420 FONKSIYON=ugr_ikon_html DEKORATOR=["ugr_router.get('/icons/{ikon_kimligi}/html', response_class=HTMLResponse, summary='Tek UGR ikonunun HTML bileşenini verir')"]
+  SATIR=457 FONKSIYON=ugr_toplu_ikon_durumu DEKORATOR=["ugr_router.post('/icons/bulk/state', summary='Birden fazla UGR ikonunun durumunu değiştirir')"]
+  SATIR=555 FONKSIYON=ugr_ikon_durumu_degistir DEKORATOR=["ugr_router.post('/icons/{ikon_kimligi}/state', summary='UGR ikonunun canlı durumunu değiştirir')"]
+  SATIR=666 FONKSIYON=ugr_ikon_gorunumu_degistir DEKORATOR=["ugr_router.post('/icons/{ikon_kimligi}/view', summary='UGR ikonunun 2B, 3B veya AR görünümünü değiştirir')"]
+  SATIR=744 FONKSIYON=ugr_ikon_aktifligi_degistir DEKORATOR=["ugr_router.post('/icons/{ikon_kimligi}/active', summary='UGR ikonunu aktif veya pasif yapar')"]
+  SATIR=799 FONKSIYON=ugr_olay_gecmisi DEKORATOR=["ugr_router.get('/events/history', summary='Son UGR canlı ikon olaylarını verir')"]
+  SATIR=902 FONKSIYON=ugr_canli_olaylar DEKORATOR=["ugr_router.get('/events', summary='UGR canlı Server-Sent Events kanalı')"]
+  SATIR=942 FONKSIYON=ugr_onizleme DEKORATOR=["ugr_router.get('/preview', response_class=HTMLResponse, summary='UGR dinamik ikon ön izleme sayfası')"]
+  SATIR=1066 FONKSIYON=ugr_statik_dosya DEKORATOR=["ugr_router.get('/assets/{goreli_yol:path}', summary='UGR ikon ve web çalışma dosyalarını sunar')"]
+
+=== JEOLOJI VE UI ESLESMELERI ===
+DOSYA=src/syk_simulasyon/ortam_hafizasi.py SATIR=17 BULUNAN=['Jeoloji'] ICERIK=JEOLOJI = "jeoloji"
+DOSYA=src/syk_simulasyon/runtime_fastapi_adaptoru.py SATIR=24 BULUNAN=['runtime/html'] ICERIK="/runtime/html": self._api.html,
+DOSYA=src/syk_simulasyon/runtime_fastapi_adaptoru.py SATIR=32 BULUNAN=['runtime/html'] ICERIK="/runtime/html": "text/html; charset=utf-8",
+DOSYA=src/syk_simulasyon/runtime_fastapi_sunucusu.py SATIR=17 BULUNAN=['HTMLResponse'] ICERIK=HTMLResponse,
+DOSYA=src/syk_simulasyon/runtime_fastapi_sunucusu.py SATIR=459 BULUNAN=['HTMLResponse'] ICERIK=return HTMLResponse(
+DOSYA=src/syk_simulasyon/runtime_fastapi_sunucusu.py SATIR=929 BULUNAN=['runtime/html'] ICERIK=@uygulama.get("/runtime/html")
+DOSYA=src/syk_simulasyon/runtime_fastapi_sunucusu.py SATIR=1208 BULUNAN=['syk-ui-screen'] ICERIK=getattr(route, "path", None) == "/syk-ui-screen"
+DOSYA=src/syk_simulasyon/runtime_fastapi_sunucusu.py SATIR=1214 BULUNAN=['syk-ui-screen'] ICERIK="/syk-ui-screen",
+DOSYA=src/syk_simulasyon/runtime_fastapi_sunucusu.py SATIR=1219 BULUNAN=['runtime/html'] ICERIK=url="/runtime/html",
+DOSYA=src/syk_simulasyon/runtime_ui_sunucusu.py SATIR=35 BULUNAN=['syk-ui-screen'] ICERIK="/syk-ui-screen" in yollar
+DOSYA=src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py SATIR=13 BULUNAN=['FileResponse'] ICERIK=FileResponse,
+DOSYA=src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py SATIR=115 BULUNAN=['FileResponse'] ICERIK=return FileResponse(
+DOSYA=src/syk_simulasyon/syk_ui_runtime/media_upload_routes.py SATIR=192 BULUNAN=['FileResponse'] ICERIK=return FileResponse(
+DOSYA=src/syk_simulasyon/syk_ui_runtime/module_registry.py SATIR=27 BULUNAN=['Jeoloji'] ICERIK=Module("geology", "Jeoloji"),
+DOSYA=src/syk_simulasyon/syk_ui_runtime/module_registry.py SATIR=46 BULUNAN=['Jeoloji', 'Hidrojeoloji'] ICERIK=Module("hydro", "Hidrojeoloji"),
+DOSYA=src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py SATIR=82 BULUNAN=['Jeoloji'] ICERIK=title="JEOLOJİ",
+DOSYA=src/syk_simulasyon/syk_ui_runtime/scientific_runtime.py SATIR=298 BULUNAN=['Jeoloji'] ICERIK=title="HİDROJEOLOJİ",
+DOSYA=src/syk_simulasyon/syk_ui_runtime/screen_routes.py SATIR=4 BULUNAN=['FileResponse'] ICERIK=from fastapi.responses import FileResponse
+DOSYA=src/syk_simulasyon/syk_ui_runtime/screen_routes.py SATIR=13 BULUNAN=['syk-ui-screen', 'include_in_schema'] ICERIK=@router.get("/syk-ui-screen", include_in_schema=False)
+DOSYA=src/syk_simulasyon/syk_ui_runtime/screen_routes.py SATIR=14 BULUNAN=['FileResponse'] ICERIK=def get_ui_screen() -> FileResponse:
+DOSYA=src/syk_simulasyon/syk_ui_runtime/screen_routes.py SATIR=15 BULUNAN=['FileResponse'] ICERIK=return FileResponse(
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json SATIR=56 BULUNAN=['Jeoloji'] ICERIK="title": "Jeoloji",
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json SATIR=59 BULUNAN=['Jeoloji'] ICERIK="description": "Kaya, mineral, katman ve jeolojik yapı inceleme alanı.",
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json SATIR=66 BULUNAN=['Jeoloji'] ICERIK="keywords": ["jeoloji", "kaya", "mineral", "katman"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json SATIR=401 BULUNAN=['Jeoloji', 'Hidrojeoloji'] ICERIK="title": "Hidrojeoloji",
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/icons/kasif/icons.json SATIR=411 BULUNAN=['Jeoloji', 'Hidrojeoloji'] ICERIK="keywords": ["hidrojeoloji", "su", "akış", "yer altı suyu"]
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/js/dtse_evidence_scientific_runtime.js SATIR=8 BULUNAN=['Jeoloji'] ICERIK="jeoloji",
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/js/scientific_views.js SATIR=4 BULUNAN=['Jeoloji'] ICERIK=title: "JEOLOJİ",
+DOSYA=src/syk_simulasyon/syk_ui_runtime/static/js/scientific_views.js SATIR=316 BULUNAN=['Jeoloji'] ICERIK=title: "HİDROJEOLOJİ",
+DOSYA=src/syk_simulasyon/syk_ui_runtime/theme_api.py SATIR=9 BULUNAN=['FileResponse'] ICERIK=from fastapi.responses import FileResponse
+DOSYA=src/syk_simulasyon/syk_ui_runtime/theme_api.py SATIR=112 BULUNAN=['FileResponse'] ICERIK=return FileResponse(
+DOSYA=src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py SATIR=35 BULUNAN=['FileResponse'] ICERIK=FileResponse,
+DOSYA=src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py SATIR=36 BULUNAN=['HTMLResponse'] ICERIK=HTMLResponse,
+DOSYA=src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py SATIR=417 BULUNAN=['HTMLResponse'] ICERIK=response_class=HTMLResponse,
+DOSYA=src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py SATIR=422 BULUNAN=['HTMLResponse'] ICERIK=) -> HTMLResponse:
+DOSYA=src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py SATIR=432 BULUNAN=['HTMLResponse'] ICERIK=return HTMLResponse(
+DOSYA=src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py SATIR=939 BULUNAN=['HTMLResponse'] ICERIK=response_class=HTMLResponse,
+DOSYA=src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py SATIR=942 BULUNAN=['HTMLResponse'] ICERIK=def ugr_onizleme() -> HTMLResponse:
+DOSYA=src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py SATIR=946 BULUNAN=['HTMLResponse'] ICERIK=return HTMLResponse(
+DOSYA=src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py SATIR=1053 BULUNAN=['HTMLResponse'] ICERIK=return HTMLResponse(
+DOSYA=src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py SATIR=1068 BULUNAN=['FileResponse'] ICERIK=) -> FileResponse:
+DOSYA=src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py SATIR=1087 BULUNAN=['FileResponse'] ICERIK=return FileResponse(
+DOSYA=src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json SATIR=708 BULUNAN=['Jeoloji'] ICERIK="label": "jeoloji",
+DOSYA=src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json SATIR=709 BULUNAN=['Jeoloji'] ICERIK="filename": "021_jeoloji.png",
+DOSYA=src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json SATIR=710 BULUNAN=['Jeoloji'] ICERIK="path": "src/syk_ui/icons/ugr/prototype_icons/ana_sistem/021_jeoloji.png",
+DOSYA=src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json SATIR=946 BULUNAN=['Jeoloji', 'Hidrojeoloji'] ICERIK="label": "hidrojeoloji",
+DOSYA=src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json SATIR=947 BULUNAN=['Jeoloji', 'Hidrojeoloji'] ICERIK="filename": "028_hidrojeoloji.png",
+DOSYA=src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json SATIR=948 BULUNAN=['Jeoloji', 'Hidrojeoloji'] ICERIK="path": "src/syk_ui/icons/ugr/prototype_icons/ana_sistem/028_hidrojeoloji.png",
+DOSYA=src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json SATIR=1422 BULUNAN=['Jeoloji'] ICERIK="label": "jeoloji",
+DOSYA=src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json SATIR=1423 BULUNAN=['Jeoloji'] ICERIK="filename": "012_jeoloji.png",
+DOSYA=src/syk_ui/icons/ugr/manifests/ugr_prototype_icons_manifest.json SATIR=1424 BULUNAN=['Jeoloji'] ICERIK="path": "src/syk_ui/icons/ugr/prototype_icons/bilimsel_sensorler/012_jeoloji.png",
+DOSYA=src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py SATIR=48 BULUNAN=['Jeoloji'] ICERIK="jeoloji",
+DOSYA=src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py SATIR=55 BULUNAN=['Jeoloji', 'Hidrojeoloji'] ICERIK="hidrojeoloji",
+DOSYA=src/syk_ui/icons/ugr/tools/ugr_icon_exact_splitter.py SATIR=72 BULUNAN=['Jeoloji'] ICERIK="jeoloji",
+DOSYA=src/syk_ui/icons/ugr/web/demo/ugr_dynamic_icons_preview.html SATIR=64 BULUNAN=['Jeoloji'] ICERIK=<button class="syk-ugr-icon syk-ugr-state-senkronize_ediliyor syk-ugr-animation-donus syk-ugr-role-bilgi syk-ugr-view-ar" data-syk-icon-id="sys-021" data-syk-category="ana_sistem" data-syk-label="jeoloji" data-syk-state="senkronize_ediliyor" data-syk-view="ar" data-syk-animation="donus" data-syk-color-role="bilgi" data-syk-active="true" style="--syk-icon-duration:1100ms;--syk-icon-iteration:infinite;--syk-icon-brightness:1.1;--syk-icon-opacity:1.0;--syk-icon-scale:1.0" type="button" aria-label="jeoloji" title="jeoloji"><span class="syk-ugr-icon-frame"><img class="syk-ugr-icon-image" src="/static/icons/ugr/prototype_icons/ana_sistem/021_jeoloji.png" alt="" draggable="false"><span class="syk-ugr-icon-energy" aria-hidden="true"></span><span class="syk-ugr-icon-scan" aria-hidden="true"></span><span class="syk-ugr-icon-status" aria-hidden="true"></span></span><span class="syk-ugr-icon-caption">jeoloji</span><span class="syk-ugr-icon-runtime-id">sys-021</span></button>
+DOSYA=src/syk_ui/icons/ugr/web/demo/ugr_dynamic_icons_preview.html SATIR=71 BULUNAN=['Jeoloji', 'Hidrojeoloji'] ICERIK=<button class="syk-ugr-icon syk-ugr-state-baslatiliyor syk-ugr-animation-donus syk-ugr-role-islem syk-ugr-view-2b" data-syk-icon-id="sys-028" data-syk-category="ana_sistem" data-syk-label="hidrojeoloji" data-syk-state="baslatiliyor" data-syk-view="2b" data-syk-animation="donus" data-syk-color-role="islem" data-syk-active="true" style="--syk-icon-duration:1200ms;--syk-icon-iteration:infinite;--syk-icon-brightness:1.0;--syk-icon-opacity:1.0;--syk-icon-scale:1.0" type="button" aria-label="hidrojeoloji" title="hidrojeoloji"><span class="syk-ugr-icon-frame"><img class="syk-ugr-icon-image" src="/static/icons/ugr/prototype_icons/ana_sistem/028_hidrojeoloji.png" alt="" draggable="false"><span class="syk-ugr-icon-energy" aria-hidden="true"></span><span class="syk-ugr-icon-scan" aria-hidden="true"></span><span class="syk-ugr-icon-status" aria-hidden="true"></span></span><span class="syk-ugr-icon-caption">hidrojeoloji</span><span class="syk-ugr-icon-runtime-id">sys-028</span></button>

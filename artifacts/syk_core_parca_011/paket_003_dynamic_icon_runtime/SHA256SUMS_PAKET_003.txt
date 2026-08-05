@@ -1,0 +1,13 @@
+﻿07E291BE250663A7FBBB6B6BED7F5B2B76DCB90143D6D79B732BD9D3548FA1FA  D:\sykasif_repo\sykasif\src\syk_ui\icons\ugr\runtime\durumlar.py
+ABD23082FED8C205248E8D93491837EBE598B464611CD697513D1DD06037AF9C  D:\sykasif_repo\sykasif\src\syk_ui\icons\ugr\runtime\durum_makinesi.py
+06C860DFD77903A6AB51F09B213E13C7EBBCA8973FF6480AE03AC8CE9605D491  D:\sykasif_repo\sykasif\src\syk_ui\icons\ugr\runtime\gecis_kurallari.py
+B18348CC7D9ABBA8F7E1D02D6D1154F8B51ABF0AC72F085E5F88A53C5B86AE75  D:\sykasif_repo\sykasif\src\syk_ui\icons\ugr\runtime\kayit_defteri.py
+802D9628A442B6D052E91DD759C05ACB5DB39716E206AF9571B089C857D14F5A  D:\sykasif_repo\sykasif\src\syk_ui\icons\ugr\runtime\manifest_yukleyici.py
+A21F18BD1EC46B84E0D7CA8829770A5ABDEAF9E57F74EC64CA922F4C64C696BE  D:\sykasif_repo\sykasif\src\syk_ui\icons\ugr\runtime\modeller.py
+C8B0451B26E58ED58C507A75B2EF3696D70B34E7F06428C1E0DC4F8BCAEBB470  D:\sykasif_repo\sykasif\src\syk_ui\icons\ugr\runtime\olay_yolu.py
+FF3BE2009D4726F7E793EFBE7BE40E7CFE34D28AB46B06211F37F54E7F5EBC83  D:\sykasif_repo\sykasif\src\syk_ui\icons\ugr\runtime\servis.py
+9D472A2E13DAF7588DB808EADCE8B707C84398569A0DF1103E445AE596D007A1  D:\sykasif_repo\sykasif\src\syk_ui\icons\ugr\runtime\stil_kurallari.py
+19367DB60DE26B916827777BFE6316502E212EB21089A798500CC071E68CEA4C  D:\sykasif_repo\sykasif\src\syk_ui\icons\ugr\runtime\__init__.py
+84A34BE668034DC65E7F782FE29DC2409173F2A5799A38F76FCAA806EE9E3260  D:\sykasif_repo\sykasif\tests\test_ugr_dynamic_icon_runtime.py
+98701ED1B0E30A625411B9A154981451722EF1CAE74C56C918FE25CBEC45D30D  src\syk_ui\icons\ugr\runtime\dynamic_icon_runtime_manifest.json
+81DE39F25EEEBFD30C271EFD5AD82991D8B6F17DD5816C24290FFC42FD22745D  artifacts\syk_core_parca_011\paket_003_dynamic_icon_runtime\SPR_011_PAKET_003_TEST_OZETI.txt

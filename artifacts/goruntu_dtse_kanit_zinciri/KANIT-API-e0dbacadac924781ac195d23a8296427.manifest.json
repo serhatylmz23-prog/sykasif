@@ -1,0 +1,18 @@
+{
+  "digital_scope": "image_video_live_attention_events",
+  "dtse_event_sha256_values": [
+    "95e7ed5937f85107e5c292100ffef8d70de6480bf4f25eab483220aaa3c4ec82"
+  ],
+  "evidence_links": [
+    "DTSE-78343f1d-5618-4f8c-9f21-d3e77ee669c3-02a466509068"
+  ],
+  "field_validation_required": true,
+  "first_record_sha256": "02a466509068dae17b809fdf9ad6225a9419c81d8f1433f46906300f65e72665",
+  "last_record_sha256": "02a466509068dae17b809fdf9ad6225a9419c81d8f1433f46906300f65e72665",
+  "manifest_sha256": "eb8e28433eaf2d09b98e031b7ea22326b7c016a3e432ddc722286f7ae069abb3",
+  "maximum_digital_confidence": 99.9,
+  "media_id": "KANIT-API-e0dbacadac924781ac195d23a8296427",
+  "record_count": 1,
+  "schema": "sykasif-goruntu-dtse-evidence-manifest/v1",
+  "updated_at": "2026-08-04T22:26:46.695944+00:00"
+}

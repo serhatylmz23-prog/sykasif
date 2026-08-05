@@ -1,0 +1,77 @@
+{
+  "sema": "sykasif.ugr.runtime-8013-live-validation.v1",
+  "host": "127.0.0.1",
+  "port": 8013,
+  "base_url": "http://127.0.0.1:8013",
+  "app_import": "syk_simulasyon.runtime_ui_sunucusu:app",
+  "toplam_denetim": 8,
+  "basarili_denetim": 0,
+  "basarisiz_denetim": 8,
+  "genel_durum": "basarisiz",
+  "sonuclar": [
+    {
+      "ad": "HTTP_HEALTH",
+      "basarili": false,
+      "sure_ms": 174.71069999737665,
+      "durum_kodu": null,
+      "aciklama": "AssertionError: ",
+      "ayrintilar": null
+    },
+    {
+      "ad": "HTTP_SNAPSHOT",
+      "basarili": false,
+      "sure_ms": 2.308100025402382,
+      "durum_kodu": null,
+      "aciklama": "AssertionError: ",
+      "ayrintilar": null
+    },
+    {
+      "ad": "HTTP_PREVIEW",
+      "basarili": false,
+      "sure_ms": 2.0213999960105866,
+      "durum_kodu": null,
+      "aciklama": "AssertionError: ",
+      "ayrintilar": null
+    },
+    {
+      "ad": "HTTP_CSS",
+      "basarili": false,
+      "sure_ms": 2.0828999986406416,
+      "durum_kodu": null,
+      "aciklama": "AssertionError: ",
+      "ayrintilar": null
+    },
+    {
+      "ad": "HTTP_JAVASCRIPT",
+      "basarili": false,
+      "sure_ms": 2.0247999927960336,
+      "durum_kodu": null,
+      "aciklama": "AssertionError: ",
+      "ayrintilar": null
+    },
+    {
+      "ad": "HTTP_IKON_DURUM_DEGISIMI",
+      "basarili": false,
+      "sure_ms": 2.1320999949239194,
+      "durum_kodu": null,
+      "aciklama": "AssertionError: ",
+      "ayrintilar": null
+    },
+    {
+      "ad": "HTTP_TOPLU_DURUM",
+      "basarili": false,
+      "sure_ms": 2.0630000217352062,
+      "durum_kodu": null,
+      "aciklama": "AssertionError: ",
+      "ayrintilar": null
+    },
+    {
+      "ad": "SSE_CANLI_IKON_OLAYI",
+      "basarili": false,
+      "sure_ms": 3.0759999935980886,
+      "durum_kodu": null,
+      "aciklama": "RuntimeError: AssertionError: ",
+      "ayrintilar": null
+    }
+  ]
+}

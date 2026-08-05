@@ -49,6 +49,10 @@
     "syk_simulasyon.syk_ui_runtime.theme_api.router"
   ],
   "loaded_modules": [
+    "syk_core.runtime_device_link.api",
+    "syk_core.runtime_field_link.api",
+    "syk_core.runtime_terminal.ag_gecidi",
+    "syk_core.runtime_terminal.panel",
     "syk_jarmin.jarmin_integration_api",
     "syk_simulasyon.runtime_fastapi_sunucusu",
     "syk_simulasyon.runtime_ui_sunucusu",

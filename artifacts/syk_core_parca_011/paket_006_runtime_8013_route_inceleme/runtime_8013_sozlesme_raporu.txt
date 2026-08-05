@@ -1,0 +1,142 @@
+SPR-011 PAKET-006
+RUNTIME 8013 GERCEK SOZLESME INCELEME RAPORU
+
+TOPLAM_DOSYA=6
+MEVCUT_DOSYA=6
+TOPLAM_ROUTE=0
+
+==============================================================================
+DOSYA=src/syk_simulasyon/runtime_ui_sunucusu.py
+MEVCUT=True
+SATIR_SAYISI=489
+SUNUCU_TERIMLERI=FastAPI
+PORT_ADAYLARI=
+MAIN_GUARD=FALSE
+
+ROUTES:
+ROUTE_BULUNMADI
+
+UST_SEVIYE_FONKSIYONLAR:
+LINE=7 def _mevcut_uygulamayi_bul() -> FastAPI
+LINE=29 def _ui_kurulu_mu(uygulama: FastAPI) -> bool
+LINE=53 def _syk_uygulama_yolu_var(yol: str) -> bool
+
+SINIFLAR:
+SINIF_BULUNMADI
+
+==============================================================================
+DOSYA=src/syk_simulasyon/runtime_fastapi_sunucusu.py
+MEVCUT=True
+SATIR_SAYISI=1201
+SUNUCU_TERIMLERI=FastAPI,HTMLResponse,JSONResponse,WebSocket,WebSocketDisconnect,uvicorn
+PORT_ADAYLARI=130,131,1011,2937,4401,5563,8000
+MAIN_GUARD=TRUE
+
+ROUTES:
+ROUTE_BULUNMADI
+
+UST_SEVIYE_FONKSIYONLAR:
+LINE=1097 def uygulama_olustur(*, hesap_deposu_etkin: bool = True) -> FastAPI
+
+SINIFLAR:
+LINE=63 CLASS=RuntimeFastApiSunucusu BASES=
+  LINE=65 def __init__(self, disa_aktarim: RuntimeDisaAktarim, websocket_yayinci: RuntimeWebSocketYayincisi | None = None, runtime_durumu: RuntimeDurumu | None = None, runtime_servisi: RuntimeServisi | None = None, oturum_yoneticisi: RuntimeOturumYoneticisi | None = None, hesap_deposu: RuntimeHesapDeposu | None = None) -> None
+  LINE=82 def olustur(self) -> FastAPI
+
+==============================================================================
+DOSYA=src/syk_simulasyon/runtime_fastapi_adaptoru.py
+MEVCUT=True
+SATIR_SAYISI=54
+SUNUCU_TERIMLERI=
+PORT_ADAYLARI=
+MAIN_GUARD=FALSE
+
+ROUTES:
+ROUTE_BULUNMADI
+
+UST_SEVIYE_FONKSIYONLAR:
+UST_SEVIYE_FONKSIYON_BULUNMADI
+
+SINIFLAR:
+LINE=10 CLASS=RuntimeHttpYaniti BASES=
+LINE=16 CLASS=RuntimeFastApiAdaptoru BASES=
+  LINE=19 def __init__(self, api: RuntimeHttpApi) -> None
+  LINE=38 def rota_isle(self, yol: str) -> RuntimeHttpYaniti
+
+==============================================================================
+DOSYA=src/syk_simulasyon/runtime_http_api.py
+MEVCUT=True
+SATIR_SAYISI=28
+SUNUCU_TERIMLERI=
+PORT_ADAYLARI=
+MAIN_GUARD=FALSE
+
+ROUTES:
+ROUTE_BULUNMADI
+
+UST_SEVIYE_FONKSIYONLAR:
+UST_SEVIYE_FONKSIYON_BULUNMADI
+
+SINIFLAR:
+LINE=6 CLASS=RuntimeHttpApi BASES=
+  LINE=9 def __init__(self, disa_aktarim: RuntimeDisaAktarim) -> None
+  LINE=12 def json(self) -> tuple[int, str]
+  LINE=15 def csv(self) -> tuple[int, str]
+  LINE=18 def html(self) -> tuple[int, str]
+  LINE=21 def markdown(self) -> tuple[int, str]
+  LINE=24 def xml(self) -> tuple[int, str]
+  LINE=27 def yaml(self) -> tuple[int, str]
+
+==============================================================================
+DOSYA=src/syk_simulasyon/runtime_websocket.py
+MEVCUT=True
+SATIR_SAYISI=108
+SUNUCU_TERIMLERI=WebSocket
+PORT_ADAYLARI=
+MAIN_GUARD=FALSE
+
+ROUTES:
+ROUTE_BULUNMADI
+
+UST_SEVIYE_FONKSIYONLAR:
+UST_SEVIYE_FONKSIYON_BULUNMADI
+
+SINIFLAR:
+LINE=7 CLASS=RuntimeWebSocketYayincisi BASES=
+  LINE=12 def __init__(self, gorunum_saglayici: Any, sistem_hazirlik_saglayici: Any | None = None) -> None
+  LINE=22 def baglanti_mesaji(self) -> dict[str, Any]
+  LINE=30 def guncelleme_mesaji(self) -> dict[str, Any]
+  LINE=38 def bilinmeyen_komut(self, komut: str) -> dict[str, Any]
+  LINE=44 def _sistem_hazirlik(self) -> dict[str, Any]
+  LINE=69 def _gorunum(self) -> dict[str, Any]
+
+==============================================================================
+DOSYA=src/syk_simulasyon/runtime_servisi.py
+MEVCUT=True
+SATIR_SAYISI=83
+SUNUCU_TERIMLERI=
+PORT_ADAYLARI=
+MAIN_GUARD=FALSE
+
+ROUTES:
+ROUTE_BULUNMADI
+
+UST_SEVIYE_FONKSIYONLAR:
+UST_SEVIYE_FONKSIYON_BULUNMADI
+
+SINIFLAR:
+LINE=15 CLASS=RuntimeServisi BASES=
+  LINE=20 def __init__(self, olay_gunlugu_yolu: str | Path | None = None) -> None
+  LINE=43 def durum(self) -> RuntimeDurumu
+  LINE=46 def bildirim_merkezi(self) -> RuntimeBildirimMerkezi
+  LINE=50 def olay_gunlugu(self) -> RuntimeOlayGunlugu | None
+  LINE=53 def gorunum(self) -> dict[str, object]
+  LINE=56 def olay_uret(self, *, arastirma_kimligi: str, deney_numarasi: str | None = None) -> Olay
+  LINE=74 def olay_gecmisi(self) -> tuple[Olay, ...]
+  LINE=77 def son_olay(self) -> Olay | None
+  LINE=82 def olay_gecmisini_temizle(self) -> None
+
+==============================================================================
+KARAR:
+Bu rapor tamamlanmadan runtime_ui_sunucusu.py dosyasına otomatik route patch uygulanmayacaktır.
+Paket-006 ikinci adımı gerçek route, uygulama nesnesi, yanıt sınıfı ve başlatma sözleşmesine göre üretilecektir.

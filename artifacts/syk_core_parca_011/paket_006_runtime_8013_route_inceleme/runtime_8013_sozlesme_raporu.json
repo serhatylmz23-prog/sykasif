@@ -1,0 +1,623 @@
+{
+  "schema": "sykasif.ugr.runtime-8013-contract-report.v1",
+  "file_count": 6,
+  "existing_file_count": 6,
+  "route_count": 0,
+  "files": [
+    {
+      "path": "src/syk_simulasyon/runtime_ui_sunucusu.py",
+      "exists": true,
+      "line_count": 489,
+      "imports": [
+        "__future__.annotations",
+        "fastapi.FastAPI",
+        ".runtime_fastapi_sunucusu",
+        "syk_ui.install_ui",
+        "syk_simulasyon.syk_ui_runtime.api_routes.router",
+        "syk_simulasyon.syk_ui_runtime.syfinans_runtime_routes.finans_router",
+        "syk_simulasyon.syk_ui_runtime.terminal_routes.terminal_router",
+        "syk_simulasyon.syk_ui_runtime.project_routes.project_router",
+        "syk_simulasyon.syk_ui_runtime.research_routes.research_router",
+        "syk_simulasyon.syk_ui_runtime.map_workspace_routes.map_workspace_router",
+        "syk_simulasyon.syk_ui_runtime.external_device_routes.external_device_router",
+        "syk_simulasyon.syk_ui_runtime.sonar_session_routes.sonar_session_router",
+        "syk_simulasyon.syk_ui_runtime.real_device_connection_routes.real_device_connection_router",
+        "syk_simulasyon.syk_ui_runtime.sensor_gateway_routes.sensor_gateway_router",
+        "syk_simulasyon.syk_ui_runtime.sensor_gateway_session_routes.sensor_gateway_session_router"
+      ],
+      "assignments": [
+        {
+          "targets": [
+            "app"
+          ],
+          "value": "_mevcut_uygulamayi_bul()",
+          "line": 40
+        },
+        {
+          "targets": [
+            "_syk_project_route_paths"
+          ],
+          "value": "{getattr(route, 'path', None) for route in syk_project_router.routes}",
+          "line": 117
+        },
+        {
+          "targets": [
+            "app.router.routes[:]"
+          ],
+          "value": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_project_route_paths]",
+          "line": 122
+        },
+        {
+          "targets": [
+            "_syk_project_insert_index"
+          ],
+          "value": "len(app.router.routes)",
+          "line": 129
+        },
+        {
+          "targets": [
+            "_syk_research_paths"
+          ],
+          "value": "{getattr(route, 'path', None) for route in syk_research_router.routes}",
+          "line": 165
+        },
+        {
+          "targets": [
+            "app.router.routes[:]"
+          ],
+          "value": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_research_paths]",
+          "line": 170
+        },
+        {
+          "targets": [
+            "_syk_research_insert_index"
+          ],
+          "value": "len(app.router.routes)",
+          "line": 177
+        },
+        {
+          "targets": [
+            "_syk_map_paths"
+          ],
+          "value": "{getattr(route, 'path', None) for route in syk_map_workspace_router.routes}",
+          "line": 210
+        },
+        {
+          "targets": [
+            "app.router.routes[:]"
+          ],
+          "value": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_map_paths]",
+          "line": 215
+        },
+        {
+          "targets": [
+            "_syk_map_insert_index"
+          ],
+          "value": "len(app.router.routes)",
+          "line": 222
+        },
+        {
+          "targets": [
+            "_syk_external_device_paths"
+          ],
+          "value": "{getattr(route, 'path', None) for route in syk_external_device_router.routes}",
+          "line": 255
+        },
+        {
+          "targets": [
+            "app.router.routes[:]"
+          ],
+          "value": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_external_device_paths]",
+          "line": 260
+        },
+        {
+          "targets": [
+            "_syk_external_device_insert_index"
+          ],
+          "value": "len(app.router.routes)",
+          "line": 267
+        },
+        {
+          "targets": [
+            "_syk_sonar_session_paths"
+          ],
+          "value": "{getattr(route, 'path', None) for route in syk_sonar_session_router.routes}",
+          "line": 304
+        },
+        {
+          "targets": [
+            "app.router.routes[:]"
+          ],
+          "value": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_sonar_session_paths]",
+          "line": 309
+        },
+        {
+          "targets": [
+            "_syk_sonar_session_insert_index"
+          ],
+          "value": "len(app.router.routes)",
+          "line": 316
+        },
+        {
+          "targets": [
+            "_syk_real_device_paths"
+          ],
+          "value": "{getattr(route, 'path', None) for route in syk_real_device_connection_router.routes}",
+          "line": 353
+        },
+        {
+          "targets": [
+            "app.router.routes[:]"
+          ],
+          "value": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_real_device_paths]",
+          "line": 358
+        },
+        {
+          "targets": [
+            "_syk_real_device_insert_index"
+          ],
+          "value": "len(app.router.routes)",
+          "line": 365
+        },
+        {
+          "targets": [
+            "_syk_sensor_gateway_paths"
+          ],
+          "value": "{getattr(route, 'path', None) for route in syk_sensor_gateway_router.routes}",
+          "line": 398
+        },
+        {
+          "targets": [
+            "app.router.routes[:]"
+          ],
+          "value": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_sensor_gateway_paths]",
+          "line": 403
+        },
+        {
+          "targets": [
+            "_syk_sensor_gateway_insert_index"
+          ],
+          "value": "len(app.router.routes)",
+          "line": 410
+        },
+        {
+          "targets": [
+            "_syk_sensor_session_paths"
+          ],
+          "value": "{getattr(route, 'path', None) for route in syk_sensor_gateway_session_router.routes}",
+          "line": 447
+        },
+        {
+          "targets": [
+            "app.router.routes[:]"
+          ],
+          "value": "[route for route in app.router.routes if getattr(route, 'path', None) not in _syk_sensor_session_paths]",
+          "line": 452
+        },
+        {
+          "targets": [
+            "_syk_sensor_session_insert_index"
+          ],
+          "value": "len(app.router.routes)",
+          "line": 459
+        }
+      ],
+      "functions": [
+        {
+          "name": "_mevcut_uygulamayi_bul",
+          "signature": "def _mevcut_uygulamayi_bul() -> FastAPI",
+          "async": false,
+          "line": 7,
+          "end_line": 26,
+          "decorators": []
+        },
+        {
+          "name": "_ui_kurulu_mu",
+          "signature": "def _ui_kurulu_mu(uygulama: FastAPI) -> bool",
+          "async": false,
+          "line": 29,
+          "end_line": 37,
+          "decorators": []
+        },
+        {
+          "name": "_syk_uygulama_yolu_var",
+          "signature": "def _syk_uygulama_yolu_var(yol: str) -> bool",
+          "async": false,
+          "line": 53,
+          "end_line": 74,
+          "decorators": []
+        }
+      ],
+      "classes": [],
+      "routes": [],
+      "route_paths": [],
+      "server_terms": [
+        "FastAPI"
+      ],
+      "port_candidates": [],
+      "contains_main_guard": false
+    },
+    {
+      "path": "src/syk_simulasyon/runtime_fastapi_sunucusu.py",
+      "exists": true,
+      "line_count": 1201,
+      "imports": [
+        "__future__.annotations",
+        "asyncio",
+        "base64",
+        "binascii",
+        "os",
+        "secrets",
+        "fastapi.FastAPI",
+        "fastapi.Request",
+        "fastapi.Response",
+        "fastapi.WebSocket",
+        "fastapi.WebSocketDisconnect",
+        "fastapi.responses.HTMLResponse",
+        "fastapi.responses.JSONResponse",
+        "fastapi.responses.RedirectResponse",
+        "runtime_anlik_gorunum.RuntimeAnlikGorunumSaglayicisi",
+        "runtime_csv.RuntimeCsvSaglayicisi",
+        "runtime_disa_aktarim.RuntimeDisaAktarim",
+        "runtime_html.RuntimeHtmlSaglayicisi",
+        "runtime_hesap_deposu.RuntimeHesapDeposu",
+        "runtime_http_api.RuntimeHttpApi",
+        "runtime_izleme.RuntimeIzlemeSaglayicisi",
+        "runtime_json.RuntimeJsonSaglayicisi",
+        "runtime_markdown.RuntimeMarkdownSaglayicisi",
+        "runtime_olay_gunlugu.RuntimeOlayGunluguButunlukHatasi",
+        "runtime_oturum.OTURUM_CEREZI_ADI",
+        "runtime_oturum.RuntimeOturumYoneticisi",
+        "runtime_oturum.parola_ozeti_uret",
+        "runtime_servisi.RuntimeServisi",
+        "runtime_secure_export.ExportRole",
+        "runtime_secure_export.ExportSecurityProfile",
+        "runtime_secure_export.SecureExportViewProvider",
+        "runtime_durumu.RuntimeDurumu",
+        "runtime_terminal.RuntimeTerminal",
+        "runtime_websocket.RuntimeWebSocketYayincisi",
+        "runtime_xml.RuntimeXmlSaglayicisi",
+        "runtime_yaml.RuntimeYamlSaglayicisi",
+        "syk_ui_runtime.terminal_routes.terminal_router",
+        "syk_ui_runtime.syfinans_runtime_routes.finans_router"
+      ],
+      "assignments": [
+        {
+          "targets": [
+            "CIHAZ_KIMLIGI_CEREZI_ADI"
+          ],
+          "value": "'syk_taninmis_cihaz'",
+          "line": 58
+        },
+        {
+          "targets": [
+            "CIHAZ_ANAHTARI_CEREZI_ADI"
+          ],
+          "value": "'syk_cihaz_anahtari'",
+          "line": 59
+        },
+        {
+          "targets": [
+            "CIHAZ_CEREZI_SURESI_SANIYE"
+          ],
+          "value": "30 * 24 * 60 * 60",
+          "line": 60
+        }
+      ],
+      "functions": [
+        {
+          "name": "uygulama_olustur",
+          "signature": "def uygulama_olustur(*, hesap_deposu_etkin: bool = True) -> FastAPI",
+          "async": false,
+          "line": 1097,
+          "end_line": 1190,
+          "decorators": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RuntimeFastApiSunucusu",
+          "line": 63,
+          "bases": [],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "def __init__(self, disa_aktarim: RuntimeDisaAktarim, websocket_yayinci: RuntimeWebSocketYayincisi | None = None, runtime_durumu: RuntimeDurumu | None = None, runtime_servisi: RuntimeServisi | None = None, oturum_yoneticisi: RuntimeOturumYoneticisi | None = None, hesap_deposu: RuntimeHesapDeposu | None = None) -> None",
+              "async": false,
+              "line": 65
+            },
+            {
+              "name": "olustur",
+              "signature": "def olustur(self) -> FastAPI",
+              "async": false,
+              "line": 82
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "route_paths": [],
+      "server_terms": [
+        "FastAPI",
+        "HTMLResponse",
+        "JSONResponse",
+        "WebSocket",
+        "WebSocketDisconnect",
+        "uvicorn"
+      ],
+      "port_candidates": [
+        130,
+        131,
+        1011,
+        2937,
+        4401,
+        5563,
+        8000
+      ],
+      "contains_main_guard": true
+    },
+    {
+      "path": "src/syk_simulasyon/runtime_fastapi_adaptoru.py",
+      "exists": true,
+      "line_count": 54,
+      "imports": [
+        "__future__.annotations",
+        "dataclasses.dataclass",
+        "typing.Callable",
+        "runtime_http_api.RuntimeHttpApi"
+      ],
+      "assignments": [],
+      "functions": [],
+      "classes": [
+        {
+          "name": "RuntimeHttpYaniti",
+          "line": 10,
+          "bases": [],
+          "methods": []
+        },
+        {
+          "name": "RuntimeFastApiAdaptoru",
+          "line": 16,
+          "bases": [],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "def __init__(self, api: RuntimeHttpApi) -> None",
+              "async": false,
+              "line": 19
+            },
+            {
+              "name": "rota_isle",
+              "signature": "def rota_isle(self, yol: str) -> RuntimeHttpYaniti",
+              "async": false,
+              "line": 38
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "route_paths": [],
+      "server_terms": [],
+      "port_candidates": [],
+      "contains_main_guard": false
+    },
+    {
+      "path": "src/syk_simulasyon/runtime_http_api.py",
+      "exists": true,
+      "line_count": 28,
+      "imports": [
+        "__future__.annotations",
+        "runtime_disa_aktarim.RuntimeDisaAktarim"
+      ],
+      "assignments": [],
+      "functions": [],
+      "classes": [
+        {
+          "name": "RuntimeHttpApi",
+          "line": 6,
+          "bases": [],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "def __init__(self, disa_aktarim: RuntimeDisaAktarim) -> None",
+              "async": false,
+              "line": 9
+            },
+            {
+              "name": "json",
+              "signature": "def json(self) -> tuple[int, str]",
+              "async": false,
+              "line": 12
+            },
+            {
+              "name": "csv",
+              "signature": "def csv(self) -> tuple[int, str]",
+              "async": false,
+              "line": 15
+            },
+            {
+              "name": "html",
+              "signature": "def html(self) -> tuple[int, str]",
+              "async": false,
+              "line": 18
+            },
+            {
+              "name": "markdown",
+              "signature": "def markdown(self) -> tuple[int, str]",
+              "async": false,
+              "line": 21
+            },
+            {
+              "name": "xml",
+              "signature": "def xml(self) -> tuple[int, str]",
+              "async": false,
+              "line": 24
+            },
+            {
+              "name": "yaml",
+              "signature": "def yaml(self) -> tuple[int, str]",
+              "async": false,
+              "line": 27
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "route_paths": [],
+      "server_terms": [],
+      "port_candidates": [],
+      "contains_main_guard": false
+    },
+    {
+      "path": "src/syk_simulasyon/runtime_websocket.py",
+      "exists": true,
+      "line_count": 108,
+      "imports": [
+        "__future__.annotations",
+        "dataclasses.asdict",
+        "dataclasses.is_dataclass",
+        "typing.Any"
+      ],
+      "assignments": [],
+      "functions": [],
+      "classes": [
+        {
+          "name": "RuntimeWebSocketYayincisi",
+          "line": 7,
+          "bases": [],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "def __init__(self, gorunum_saglayici: Any, sistem_hazirlik_saglayici: Any | None = None) -> None",
+              "async": false,
+              "line": 12
+            },
+            {
+              "name": "baglanti_mesaji",
+              "signature": "def baglanti_mesaji(self) -> dict[str, Any]",
+              "async": false,
+              "line": 22
+            },
+            {
+              "name": "guncelleme_mesaji",
+              "signature": "def guncelleme_mesaji(self) -> dict[str, Any]",
+              "async": false,
+              "line": 30
+            },
+            {
+              "name": "bilinmeyen_komut",
+              "signature": "def bilinmeyen_komut(self, komut: str) -> dict[str, Any]",
+              "async": false,
+              "line": 38
+            },
+            {
+              "name": "_sistem_hazirlik",
+              "signature": "def _sistem_hazirlik(self) -> dict[str, Any]",
+              "async": false,
+              "line": 44
+            },
+            {
+              "name": "_gorunum",
+              "signature": "def _gorunum(self) -> dict[str, Any]",
+              "async": false,
+              "line": 69
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "route_paths": [],
+      "server_terms": [
+        "WebSocket"
+      ],
+      "port_candidates": [],
+      "contains_main_guard": false
+    },
+    {
+      "path": "src/syk_simulasyon/runtime_servisi.py",
+      "exists": true,
+      "line_count": 83,
+      "imports": [
+        "__future__.annotations",
+        "runtime_bildirim.RuntimeBildirimMerkezi",
+        "collections.deque",
+        "pathlib.Path",
+        "typing.Deque",
+        "olay_omurgasi.Olay",
+        "runtime_olay_gunlugu.RuntimeOlayGunlugu",
+        "runtime_durumu.RuntimeDurumu",
+        "runtime_olay_adaptoru.runtime_durumunu_olaya_cevir"
+      ],
+      "assignments": [],
+      "functions": [],
+      "classes": [
+        {
+          "name": "RuntimeServisi",
+          "line": 15,
+          "bases": [],
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "def __init__(self, olay_gunlugu_yolu: str | Path | None = None) -> None",
+              "async": false,
+              "line": 20
+            },
+            {
+              "name": "durum",
+              "signature": "def durum(self) -> RuntimeDurumu",
+              "async": false,
+              "line": 43
+            },
+            {
+              "name": "bildirim_merkezi",
+              "signature": "def bildirim_merkezi(self) -> RuntimeBildirimMerkezi",
+              "async": false,
+              "line": 46
+            },
+            {
+              "name": "olay_gunlugu",
+              "signature": "def olay_gunlugu(self) -> RuntimeOlayGunlugu | None",
+              "async": false,
+              "line": 50
+            },
+            {
+              "name": "gorunum",
+              "signature": "def gorunum(self) -> dict[str, object]",
+              "async": false,
+              "line": 53
+            },
+            {
+              "name": "olay_uret",
+              "signature": "def olay_uret(self, *, arastirma_kimligi: str, deney_numarasi: str | None = None) -> Olay",
+              "async": false,
+              "line": 56
+            },
+            {
+              "name": "olay_gecmisi",
+              "signature": "def olay_gecmisi(self) -> tuple[Olay, ...]",
+              "async": false,
+              "line": 74
+            },
+            {
+              "name": "son_olay",
+              "signature": "def son_olay(self) -> Olay | None",
+              "async": false,
+              "line": 77
+            },
+            {
+              "name": "olay_gecmisini_temizle",
+              "signature": "def olay_gecmisini_temizle(self) -> None",
+              "async": false,
+              "line": 82
+            }
+          ]
+        }
+      ],
+      "routes": [],
+      "route_paths": [],
+      "server_terms": [],
+      "port_candidates": [],
+      "contains_main_guard": false
+    }
+  ]
+}

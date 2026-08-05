@@ -1,0 +1,30 @@
+SPR-011 PAKET-006
+UGR RUNTIME 8013 ROUTE PATCH RAPORU
+
+ANA_DOSYA=D:/sykasif_repo/sykasif/src/syk_simulasyon/runtime_ui_sunucusu.py
+YEDEK=D:/sykasif_repo/sykasif/artifacts/syk_core_parca_011/paket_006_ugr_runtime_route_patch/runtime_ui_sunucusu_patch_oncesi.py
+UYGULAMA_NESNESI=app
+IMPORT_EKLENDI=True
+INCLUDE_ROUTER_EKLENDI=True
+TOPLAM_INCLUDE_ROUTER=4
+UGR_INCLUDE_ROUTER_SAYISI=1
+UGR_ROUTER=syk_ugr_router
+PREFIX=/api/ugr
+TESPIT_YONTEMI=MEVCUT_INCLUDE_ROUTER_RECEIVER
+TEKRAR_CALISTIRILABILIR=EVET
+GERI_ALINABILIR=EVET
+
+ROUTES:
+GET /api/ugr/health
+GET /api/ugr/snapshot
+GET /api/ugr/icons
+GET /api/ugr/icons/{ikon_kimligi}
+GET /api/ugr/icons/{ikon_kimligi}/html
+POST /api/ugr/icons/{ikon_kimligi}/state
+POST /api/ugr/icons/{ikon_kimligi}/view
+POST /api/ugr/icons/{ikon_kimligi}/active
+POST /api/ugr/icons/bulk/state
+GET /api/ugr/events/history
+GET /api/ugr/events
+GET /api/ugr/preview
+GET /api/ugr/assets/{goreli_yol:path}

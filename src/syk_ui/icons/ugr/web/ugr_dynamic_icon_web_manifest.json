@@ -1,0 +1,32 @@
+{
+    "sema":  "sykasif.ugr.dynamic-icon-web.v1",
+    "surum":  "prototype-0.1",
+    "sprint":  "SPR-011",
+    "paket":  "004",
+    "durum":  "kodlandi",
+    "desteklenen_ikon_sayisi":  215,
+    "desteklenen_durum_sayisi":  13,
+    "desteklenen_gorunumler":  [
+                                   "2b",
+                                   "3b",
+                                   "ar"
+                               ],
+    "css":  "static/css/ugr_dynamic_icons.css",
+    "javascript":  "static/js/ugr_dynamic_icons.js",
+    "python_render_kaynaklari":  [
+                                     "__init__.py",
+                                     "render_modeli.py",
+                                     "render_servisi.py"
+                                 ],
+    "tarayici_yetenekleri":  [
+                                 "durum_degistirme",
+                                 "gorunum_degistirme",
+                                 "aktif_pasif",
+                                 "olay_yayini",
+                                 "mutation_observer",
+                                 "event_source",
+                                 "reduced_motion"
+                             ],
+    "kalici_ikon_kimlikleri":  "prototip_sonrasina_ertelendi",
+    "olusturulma_zamani":  "2026-08-05T11:15:02.9555040+03:00"
+}

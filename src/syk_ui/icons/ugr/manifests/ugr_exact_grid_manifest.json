@@ -1,0 +1,104 @@
+{
+  "schema": "sykasif.ugr.exact-grid.v1",
+  "library": "SyKaşif UGR Icon Library",
+  "version": "prototype-0.2",
+  "created_at": "2026-08-05T08:04:17.303252+00:00",
+  "sheet_count": 5,
+  "sheets": [
+    {
+      "order": 1,
+      "category": "ana_sistem",
+      "source_filename": "01_ana_sistem.png",
+      "source_path": "src/syk_ui/icons/ugr/source_sheets/01_ana_sistem.png",
+      "source_width": 1536,
+      "source_height": 1024,
+      "source_sha256": "053E14E411BFCD94FFE4F8E95822611D68783A86B93A31EA9C48612EBF79A916",
+      "content_box": [
+        20,
+        0,
+        1516,
+        1024
+      ],
+      "columns": 6,
+      "rows": 5,
+      "icon_count": 30,
+      "grid_status": "gorsel_olarak_dogrulandi"
+    },
+    {
+      "order": 2,
+      "category": "bilimsel_sensorler",
+      "source_filename": "02_bilimsel_sensorler.png",
+      "source_path": "src/syk_ui/icons/ugr/source_sheets/02_bilimsel_sensorler.png",
+      "source_width": 1536,
+      "source_height": 1024,
+      "source_sha256": "6C8A6170096EEC1D5291C176DB8FE3DA820912CF1EEF2299DA475A4EC7C22BB1",
+      "content_box": [
+        20,
+        54,
+        1516,
+        1008
+      ],
+      "columns": 8,
+      "rows": 5,
+      "icon_count": 40,
+      "grid_status": "gorsel_olarak_dogrulandi"
+    },
+    {
+      "order": 3,
+      "category": "canli_durumlar",
+      "source_filename": "03_canli_durumlar.png",
+      "source_path": "src/syk_ui/icons/ugr/source_sheets/03_canli_durumlar.png",
+      "source_width": 1536,
+      "source_height": 1024,
+      "source_sha256": "C858AF233F1EC32C21BC3BD840CC31159416A38CD5348747733E8092E25569FD",
+      "content_box": [
+        20,
+        55,
+        1516,
+        1002
+      ],
+      "columns": 9,
+      "rows": 5,
+      "icon_count": 45,
+      "grid_status": "gorsel_olarak_dogrulandi"
+    },
+    {
+      "order": 4,
+      "category": "ekosistem_modulleri",
+      "source_filename": "04_ekosistem_modulleri.png",
+      "source_path": "src/syk_ui/icons/ugr/source_sheets/04_ekosistem_modulleri.png",
+      "source_width": 1536,
+      "source_height": 1024,
+      "source_sha256": "97D5D525C6CC4934405B6F28F3BEF0769F33EE5E9667F2E3183E2F89A5B5A01D",
+      "content_box": [
+        20,
+        54,
+        1516,
+        1000
+      ],
+      "columns": 10,
+      "rows": 5,
+      "icon_count": 50,
+      "grid_status": "gorsel_olarak_dogrulandi"
+    },
+    {
+      "order": 5,
+      "category": "harita_nesneleri",
+      "source_filename": "05_harita_nesneleri.png",
+      "source_path": "src/syk_ui/icons/ugr/source_sheets/05_harita_nesneleri.png",
+      "source_width": 1536,
+      "source_height": 1024,
+      "source_sha256": "1C02545D192FE14C5285271EA692B526C2B89177C580172FEBC90EDA0DCB1C69",
+      "content_box": [
+        20,
+        48,
+        1516,
+        910
+      ],
+      "columns": 10,
+      "rows": 5,
+      "icon_count": 50,
+      "grid_status": "gorsel_olarak_dogrulandi"
+    }
+  ]
+}

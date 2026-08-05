@@ -1,0 +1,56 @@
+======================================================================
+DOSYA: src\syk_simulasyon\runtime_fastapi_sunucusu.py
+======================================================================
+IMPORT 22 from .runtime_anlik_gorunum import RuntimeAnlikGorunumSaglayicisi
+IMPORT 23 from .runtime_csv import RuntimeCsvSaglayicisi
+IMPORT 24 from .runtime_disa_aktarim import RuntimeDisaAktarim
+IMPORT 25 from .runtime_html import RuntimeHtmlSaglayicisi
+IMPORT 26 from .runtime_hesap_deposu import RuntimeHesapDeposu
+IMPORT 27 from .runtime_http_api import RuntimeHttpApi
+IMPORT 28 from .runtime_izleme import RuntimeIzlemeSaglayicisi
+IMPORT 29 from .runtime_json import RuntimeJsonSaglayicisi
+IMPORT 30 from .runtime_markdown import RuntimeMarkdownSaglayicisi
+IMPORT 31 from .runtime_olay_gunlugu import RuntimeOlayGunluguButunlukHatasi
+IMPORT 34 from .runtime_oturum import OTURUM_CEREZI_ADI, RuntimeOturumYoneticisi, parola_ozeti_uret
+IMPORT 39 from .runtime_servisi import RuntimeServisi
+IMPORT 40 from .runtime_secure_export import ExportRole, ExportSecurityProfile, SecureExportViewProvider
+IMPORT 45 from .runtime_durumu import RuntimeDurumu
+IMPORT 46 from .runtime_terminal import RuntimeTerminal
+IMPORT 47 from .runtime_websocket import RuntimeWebSocketYayincisi
+IMPORT 48 from .runtime_xml import RuntimeXmlSaglayicisi
+IMPORT 49 from .runtime_yaml import RuntimeYamlSaglayicisi
+IMPORT 50 from .syk_ui_runtime.terminal_routes import terminal_router as syk_terminal_router
+IMPORT 53 from .syk_ui_runtime.syfinans_runtime_routes import finans_router as syk_finans_router
+METOT olustur SATIR 82
+FASTAPI_CALL 84
+FONKSIYON uygulama_olustur SATIR 1097
+OLUSTUR_CALL 1155 RuntimeFastApiSunucusu(disa_aktarim, websocket_yayinci, servis.durum, runtime_servisi=servis, oturum_yoneticisi=oturum_yoneticisi, hesap_deposu=hesap_deposu).olustur()
+INCLUDE_ROUTER 1176 uygulama.include_router(syk_terminal_router)
+INCLUDE_ROUTER 1186 uygulama.include_router(syk_finans_router)
+SUNUCU_CALL 1155 RuntimeFastApiSunucusu(disa_aktarim, websocket_yayinci, servis.durum, runtime_servisi=servis, oturum_yoneticisi=oturum_yoneticisi, hesap_deposu=hesap_deposu)
+
+======================================================================
+GERCEK UYGULAMA YOLLARI
+======================================================================
+APP_ROUTE /openapi.json
+APP_ROUTE /docs
+APP_ROUTE /docs/oauth2-redirect
+APP_ROUTE /redoc
+APP_ROUTE /giris
+APP_ROUTE /runtime/ilk-kurulum
+APP_ROUTE /runtime/oturum
+APP_ROUTE /runtime/cihaz-iptal
+APP_ROUTE /cikis
+APP_ROUTE /runtime/health
+APP_ROUTE /terminal
+APP_ROUTE /runtime/json
+APP_ROUTE /runtime/html
+APP_ROUTE /runtime/csv
+APP_ROUTE /runtime/markdown
+APP_ROUTE /runtime/xml
+APP_ROUTE /runtime/yaml
+APP_ROUTE /ws/runtime
+HEDEF /api/syk-ui/terminal/state SAYI 0
+HEDEF /syfinans/runtime SAYI 0
+
+SYK_DSP_0008_FASTAPI_ZINCIR_TESHIS_OK

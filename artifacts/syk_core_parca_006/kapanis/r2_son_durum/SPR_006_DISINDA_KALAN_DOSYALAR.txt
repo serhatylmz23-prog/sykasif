@@ -1,0 +1,16 @@
+﻿ M artifacts/goruntu_dtse_kanit_zinciri/CANLI-001.jsonl
+ M artifacts/goruntu_dtse_kanit_zinciri/CANLI-001.manifest.json
+ M artifacts/jarmin/settings.json
+ M artifacts/syk_core_parca_004/r8_ui_runtime/runtime_diagnostics.json
+ M tests/test_pyproject_dagitim_sozlesmesi.py
+?? artifacts/goruntu_dtse_kanit_zinciri/KANIT-API-1c9c980457314f59a9d1cf240fbe4883.jsonl
+?? artifacts/goruntu_dtse_kanit_zinciri/KANIT-API-1c9c980457314f59a9d1cf240fbe4883.manifest.json
+?? artifacts/goruntu_dtse_kanit_zinciri/KANIT-API-5159179fa4974c568b236fccd4acac39.jsonl
+?? artifacts/goruntu_dtse_kanit_zinciri/KANIT-API-5159179fa4974c568b236fccd4acac39.manifest.json
+?? artifacts/goruntu_dtse_kanit_zinciri/KANIT-API-a221ed07ecd0442097f6fcca782eea1c.jsonl
+?? artifacts/goruntu_dtse_kanit_zinciri/KANIT-API-a221ed07ecd0442097f6fcca782eea1c.manifest.json
+?? artifacts/goruntu_dtse_kanit_zinciri/KANIT-API-c1e17c7457614a9496205101808d4d4a.jsonl
+?? artifacts/goruntu_dtse_kanit_zinciri/KANIT-API-c1e17c7457614a9496205101808d4d4a.manifest.json
+?? artifacts/goruntu_dtse_kanit_zinciri/KANIT-API-eece94d862944feab332fe414047c932.jsonl
+?? artifacts/goruntu_dtse_kanit_zinciri/KANIT-API-eece94d862944feab332fe414047c932.manifest.json
+?? artifacts/syk_core_parca_006/kapanis/r2_son_durum/

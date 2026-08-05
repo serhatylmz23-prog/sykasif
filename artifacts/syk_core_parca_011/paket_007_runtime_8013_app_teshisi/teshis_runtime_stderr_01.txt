@@ -1,0 +1,238 @@
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_runtime_state_api_syk_ui_runtime_state_get for function get_runtime_state at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_scientific_modules_api_syk_ui_scientific_modules_get for function get_scientific_modules at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_scientific_module_api_syk_ui_scientific_modules__module_id__get for function get_scientific_module at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID update_scientific_module_api_syk_ui_scientific_modules__module_id__patch for function update_scientific_module at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_scientific_adapters_api_syk_ui_scientific_adapters_get for function get_scientific_adapters at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID ingest_scientific_adapter_data_api_syk_ui_scientific_adapters__adapter_id__modules__module_id__ingest_post for function ingest_scientific_adapter_data at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID discover_serial_devices_api_syk_ui_scientific_devices_serial_get for function discover_serial_devices at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID read_serial_device_api_syk_ui_scientific_devices_serial_read_post for function read_serial_device at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID read_tcp_device_api_syk_ui_scientific_devices_tcp_read_post for function read_tcp_device at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID discover_ble_devices_api_syk_ui_scientific_devices_ble_discover_post for function discover_ble_devices at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID read_ble_device_api_syk_ui_scientific_devices_ble_read_post for function read_ble_device at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_scientific_device_transports_api_syk_ui_scientific_devices_transports_get for function get_scientific_device_transports at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID discover_all_scientific_devices_api_syk_ui_scientific_devices_discover_post for function discover_all_scientific_devices at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_device_hub_api_syk_ui_device_hub_get for function get_device_hub at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID refresh_device_hub_api_syk_ui_device_hub_refresh_post for function refresh_device_hub at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID register_device_hub_device_api_syk_ui_device_hub_register_post for function register_device_hub_device at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_device_hub_device_api_syk_ui_device_hub__device_id__get for function get_device_hub_device at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID update_device_hub_connection_api_syk_ui_device_hub__device_id__connection_patch for function update_device_hub_connection at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID update_device_hub_telemetry_api_syk_ui_device_hub__device_id__telemetry_patch for function update_device_hub_telemetry at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_device_sessions_api_syk_ui_device_sessions_get for function get_device_sessions at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID start_device_session_api_syk_ui_device_sessions_start_post for function start_device_session at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_device_session_api_syk_ui_device_sessions__session_id__get for function get_device_session at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID append_device_session_samples_api_syk_ui_device_sessions__session_id__samples_post for function append_device_session_samples at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID stop_device_session_api_syk_ui_device_sessions__session_id__stop_post for function stop_device_session at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID append_device_session_evidence_api_syk_ui_device_sessions__session_id__evidence_post for function append_device_session_evidence at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_device_session_evidence_api_syk_ui_device_sessions__session_id__evidence_get for function get_device_session_evidence at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID verify_device_session_evidence_api_syk_ui_device_sessions__session_id__evidence_verify_get for function verify_device_session_evidence at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID ingest_device_recording_packet_api_syk_ui_device_hub__device_id__recording_ingest_post for function ingest_device_recording_packet at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID build_device_session_package_api_syk_ui_device_sessions__session_id__package_post for function build_device_session_package at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID verify_device_session_package_api_syk_ui_device_sessions__session_id__package_verify_get for function verify_device_session_package at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID seal_device_session_package_api_syk_ui_device_sessions__session_id__seal_post for function seal_device_session_package at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID verify_device_session_seal_api_syk_ui_device_sessions__session_id__seal_verify_get for function verify_device_session_seal at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID analyze_device_session_api_syk_ui_device_sessions__session_id__analysis_post for function analyze_device_session at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_device_session_analysis_api_syk_ui_device_sessions__session_id__analysis_get for function get_device_session_analysis at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID verify_device_session_analysis_api_syk_ui_device_sessions__session_id__analysis_verify_get for function verify_device_session_analysis at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID apply_device_analysis_to_syframe_api_syk_ui_device_sessions__session_id__syframe_post for function apply_device_analysis_to_syframe at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_analysis_syframe_state_api_syk_ui_syframe_analysis_state_get for function get_analysis_syframe_state at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\api_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID ingest_dtse_attention_frame_api_syk_ui_dtse_frames_attention_post for function ingest_dtse_attention_frame at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\dtse_attention_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_dtse_attention_events_api_syk_ui_dtse_events_get for function get_dtse_attention_events at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\dtse_attention_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_dtse_attention_event_api_syk_ui_dtse_events__event_id__get for function get_dtse_attention_event at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\dtse_attention_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_dtse_attention_state_api_syk_ui_dtse_state_get for function get_dtse_attention_state at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\dtse_attention_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID goruntu_kaydi_olustur_api_syk_ui_goruntu_kayitlar_post for function goruntu_kaydi_olustur at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\goruntu_dtse_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID supheli_bolge_ekle_api_syk_ui_goruntu_kayitlar__veri_kimligi__supheli_bolgeler_post for function supheli_bolge_ekle at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\goruntu_dtse_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID goruntu_kaydi_getir_api_syk_ui_goruntu_kayitlar__veri_kimligi__get for function goruntu_kaydi_getir at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\goruntu_dtse_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID goruntu_dtse_durumu_api_syk_ui_goruntu_dtse_adapter_state_get for function goruntu_dtse_durumu at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\goruntu_dtse_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID goruntu_dtse_kanit_zinciri_getir_api_syk_ui_goruntu_kayitlar__veri_kimligi__kanit_zinciri_get for function goruntu_dtse_kanit_zinciri_getir at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\goruntu_dtse_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID goruntu_dtse_kanit_manifesti_getir_api_syk_ui_goruntu_kayitlar__veri_kimligi__kanit_manifesti_get for function goruntu_dtse_kanit_manifesti_getir at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\goruntu_dtse_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID goruntu_dtse_kanit_dogrula_api_syk_ui_goruntu_kayitlar__veri_kimligi__kanit_dogrula_get for function goruntu_dtse_kanit_dogrula at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\goruntu_dtse_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID analyze_uploaded_media_api_syk_ui_media_analysis_post for function analyze_uploaded_media at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\media_upload_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID list_media_analyses_api_syk_ui_media_analysis_get for function list_media_analyses at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\media_upload_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_media_analysis_api_syk_ui_media_analysis__analysis_id__get for function get_media_analysis at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\media_upload_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID download_media_report_api_syk_ui_media_analysis__analysis_id__report_get for function download_media_report at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\media_upload_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID download_media_manifest_api_syk_ui_media_analysis__analysis_id__manifest_get for function download_media_manifest at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\media_upload_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_annotated_media_preview_api_syk_ui_media_analysis__analysis_id__preview_get for function get_annotated_media_preview at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\media_upload_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_current_environment_api_syk_ui_environment_current_get for function get_current_environment at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\adaptive_environment_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID update_current_environment_api_syk_ui_environment_current_patch for function update_current_environment at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\adaptive_environment_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID clear_current_environment_api_syk_ui_environment_current_delete for function clear_current_environment at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\adaptive_environment_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_live_environment_api_syk_ui_environment_live_get for function get_live_environment at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\adaptive_environment_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID list_themes_api_syk_ui_themes_get for function list_themes at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\theme_api.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID current_theme_api_syk_ui_themes_current_get for function current_theme at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\theme_api.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID select_theme_api_syk_ui_themes_current_put for function select_theme at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\theme_api.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID automatic_theme_api_syk_ui_themes_automatic_post for function automatic_theme at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\theme_api.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID theme_asset_api_syk_ui_themes__theme_id__assets__filename__get for function theme_asset at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\theme_api.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_mobile_control_runtime_api_syk_ui_mobile_control_get for function get_mobile_control_runtime at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_control_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID register_mobile_control_api_syk_ui_mobile_control_devices_post for function register_mobile_control at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_control_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID list_mobile_controls_api_syk_ui_mobile_control_devices_get for function list_mobile_controls at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_control_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_mobile_control_api_syk_ui_mobile_control_devices__device_id__get for function get_mobile_control at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_control_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID update_mobile_control_api_syk_ui_mobile_control_devices__device_id__patch for function update_mobile_control at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_control_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID reset_mobile_control_api_syk_ui_mobile_control_devices__device_id__reset_post for function reset_mobile_control at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_control_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_mobile_runtime_api_syk_ui_mobile_runtime_get for function get_mobile_runtime at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_device_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID register_mobile_device_api_syk_ui_mobile_runtime_devices_post for function register_mobile_device at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_device_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID list_mobile_devices_api_syk_ui_mobile_runtime_devices_get for function list_mobile_devices at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_device_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_mobile_device_api_syk_ui_mobile_runtime_devices__device_id__get for function get_mobile_device at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_device_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID update_mobile_device_api_syk_ui_mobile_runtime_devices__device_id__patch for function update_mobile_device at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_device_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID trust_mobile_device_api_syk_ui_mobile_runtime_devices__device_id__trust_patch for function trust_mobile_device at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_device_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID deactivate_mobile_device_api_syk_ui_mobile_runtime_devices__device_id__delete for function deactivate_mobile_device at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_device_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID resolve_mobile_layout_api_syk_ui_mobile_runtime_layout_post for function resolve_mobile_layout at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_device_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_offline_runtime_api_syk_ui_mobile_offline_get for function get_offline_runtime at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID set_online_state_api_syk_ui_mobile_offline_online_patch for function set_online_state at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID enqueue_offline_item_api_syk_ui_mobile_offline_queue_post for function enqueue_offline_item at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID list_offline_queue_api_syk_ui_mobile_offline_queue_get for function list_offline_queue at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID begin_offline_item_api_syk_ui_mobile_offline_queue__item_id__begin_post for function begin_offline_item at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID complete_offline_item_api_syk_ui_mobile_offline_queue__item_id__complete_post for function complete_offline_item at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID fail_offline_item_api_syk_ui_mobile_offline_queue__item_id__fail_post for function fail_offline_item at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID cancel_offline_item_api_syk_ui_mobile_offline_queue__item_id__delete for function cancel_offline_item at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID remove_completed_items_api_syk_ui_mobile_offline_queue_delete for function remove_completed_items at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID create_pairing_api_syk_ui_mobile_offline_pairings_post for function create_pairing at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID confirm_pairing_api_syk_ui_mobile_offline_pairings_confirm_post for function confirm_pairing at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID verify_pairing_api_syk_ui_mobile_offline_pairings_verify_post for function verify_pairing at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID list_pairings_api_syk_ui_mobile_offline_pairings_get for function list_pairings at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID revoke_pairing_api_syk_ui_mobile_offline_pairings__pairing_id__delete for function revoke_pairing at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID put_cache_api_syk_ui_mobile_offline_cache_put for function put_cache at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_cache_api_syk_ui_mobile_offline_cache__cache_key__get for function get_cache at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID list_cache_api_syk_ui_mobile_offline_cache_get for function list_cache at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID delete_cache_api_syk_ui_mobile_offline_cache__cache_key__delete for function delete_cache at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_offline_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_sensor_runtime_api_syk_ui_mobile_sensors_get for function get_sensor_runtime at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_sensor_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID update_sensor_permission_api_syk_ui_mobile_sensors_permissions_patch for function update_sensor_permission at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_sensor_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID start_camera_api_syk_ui_mobile_sensors_camera_start_post for function start_camera at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_sensor_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID stop_camera_api_syk_ui_mobile_sensors_camera_stop_post for function stop_camera at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_sensor_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID start_microphone_api_syk_ui_mobile_sensors_microphone_start_post for function start_microphone at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_sensor_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID stop_microphone_api_syk_ui_mobile_sensors_microphone_stop_post for function stop_microphone at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_sensor_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID add_location_api_syk_ui_mobile_sensors_location_post for function add_location at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_sensor_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID list_locations_api_syk_ui_mobile_sensors_locations_get for function list_locations at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_sensor_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID capture_frame_api_syk_ui_mobile_sensors_frames_post for function capture_frame at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_sensor_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID list_frames_api_syk_ui_mobile_sensors_frames_get for function list_frames at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_sensor_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_frame_api_syk_ui_mobile_sensors_frames__frame_id__get for function get_frame at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\mobile_sensor_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID list_kasif_icons_api_syk_ui_kasif_icons_get for function list_kasif_icons at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\kasif_icon_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_kasif_icon_manifest_api_syk_ui_kasif_icons_manifest_get for function get_kasif_icon_manifest at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\kasif_icon_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_kasif_icon_groups_api_syk_ui_kasif_icons_groups_get for function get_kasif_icon_groups at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\kasif_icon_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_kasif_assistant_profile_api_syk_ui_kasif_icons_assistant_get for function get_kasif_assistant_profile at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\kasif_icon_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID search_kasif_icons_api_syk_ui_kasif_icons_search_get for function search_kasif_icons at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\kasif_icon_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID reload_kasif_icons_api_syk_ui_kasif_icons_reload_post for function reload_kasif_icons at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\kasif_icon_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_kasif_icon_api_syk_ui_kasif_icons__icon_id__get for function get_kasif_icon at D:\sykasif_repo\sykasif\src\syk_simulasyon\syk_ui_runtime\kasif_icon_routes.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_integration_state_api_syk_ui_jarmin_integration_get for function get_integration_state at D:\sykasif_repo\sykasif\src\syk_jarmin\jarmin_integration_api.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID get_jarmin_settings_api_syk_ui_jarmin_integration_settings_get for function get_jarmin_settings at D:\sykasif_repo\sykasif\src\syk_jarmin\jarmin_integration_api.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID update_jarmin_settings_api_syk_ui_jarmin_integration_settings_patch for function update_jarmin_settings at D:\sykasif_repo\sykasif\src\syk_jarmin\jarmin_integration_api.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID reset_jarmin_settings_api_syk_ui_jarmin_integration_settings_delete for function reset_jarmin_settings at D:\sykasif_repo\sykasif\src\syk_jarmin\jarmin_integration_api.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID ingest_jarmin_event_api_syk_ui_jarmin_integration_events_post for function ingest_jarmin_event at D:\sykasif_repo\sykasif\src\syk_jarmin\jarmin_integration_api.py
+  warnings.warn(message, stacklevel=1)
+D:\sykasif_repo\sykasif\.venv\Lib\site-packages\fastapi\openapi\utils.py:303: UserWarning: Duplicate Operation ID list_jarmin_events_api_syk_ui_jarmin_integration_events_get for function list_jarmin_events at D:\sykasif_repo\sykasif\src\syk_jarmin\jarmin_integration_api.py
+  warnings.warn(message, stacklevel=1)

@@ -1,0 +1,28 @@
+SPR-011 PAKET-006
+UGR BULK ROUTE SIRA ONARIM RAPORU
+
+DOSYA=D:/sykasif_repo/sykasif/src/syk_simulasyon/syk_ui_runtime/ugr_runtime_routes.py
+DEGISIKLIK_YAPILDI=True
+ONCEKI_BULK_ROUTE_INDEX=8
+ONCEKI_DYNAMIC_ROUTE_INDEX=5
+YENI_BULK_ROUTE_INDEX=5
+YENI_DYNAMIC_ROUTE_INDEX=6
+SABIT_ROUTE=/icons/bulk/state
+DINAMIK_ROUTE=/icons/{ikon_kimligi}/state
+SABIT_ROUTE_ONDE=EVET
+FASTAPI_ROUTE_GOLGELEMESI=GIDERILDI
+
+ROUTE_SIRASI:
+00 YOL=/health FONKSIYON=ugr_saglik SATIR=216
+01 YOL=/snapshot FONKSIYON=ugr_snapshot SATIR=266
+02 YOL=/icons FONKSIYON=ugr_ikonlari SATIR=292
+03 YOL=/icons/{ikon_kimligi} FONKSIYON=ugr_ikon SATIR=375
+04 YOL=/icons/{ikon_kimligi}/html FONKSIYON=ugr_ikon_html SATIR=415
+05 YOL=/icons/bulk/state FONKSIYON=ugr_toplu_ikon_durumu SATIR=453
+06 YOL=/icons/{ikon_kimligi}/state FONKSIYON=ugr_ikon_durumu_degistir SATIR=551
+07 YOL=/icons/{ikon_kimligi}/view FONKSIYON=ugr_ikon_gorunumu_degistir SATIR=662
+08 YOL=/icons/{ikon_kimligi}/active FONKSIYON=ugr_ikon_aktifligi_degistir SATIR=740
+09 YOL=/events/history FONKSIYON=ugr_olay_gecmisi SATIR=795
+10 YOL=/events FONKSIYON=ugr_canli_olaylar SATIR=898
+11 YOL=/preview FONKSIYON=ugr_onizleme SATIR=937
+12 YOL=/assets/{goreli_yol:path} FONKSIYON=ugr_statik_dosya SATIR=1062

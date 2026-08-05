@@ -1,0 +1,75 @@
+========================================================================
+TEMIZ_FASTAPI_KONTROLU
+========================================================================
+TEMIZ_APP_ID 2439312095760
+TEMIZ_ROUTER_ID 2439312907776
+TEMIZ_BASLANGIC 4
+
+FASTAPI_INCLUDE_BASLADI
+APP_ID 2439312095760
+APP_ROUTER_ID 2439312907776
+APP_ROUTES_ID 2439313281792
+APP_ONCE 4
+KAYNAK_ROUTER_ID 2439310256720
+KAYNAK_ROUTE_SAYISI 1
+KAYNAK_YOLLAR ('/api/syk-ui/terminal/state',)
+
+APIROUTER_INCLUDE_BASLADI
+HEDEF_ROUTER_ID 2439312907776
+HEDEF_ROUTES_ID 2439313281792
+HEDEF_ONCE 4
+KAYNAK_ROUTER_ID 2439310256720
+KAYNAK_ROUTE_SAYISI 1
+KAYNAK_YOLLAR ('/api/syk-ui/terminal/state',)
+HEDEF_SONRA 5
+HEDEF_SONRA_YOLLAR ('/openapi.json', '/docs', '/docs/oauth2-redirect', '/redoc', '')
+APIROUTER_INCLUDE_BITTI
+APP_SONRA 5
+APP_SONRA_YOLLAR ('/openapi.json', '/docs', '/docs/oauth2-redirect', '/redoc', '')
+FASTAPI_INCLUDE_BITTI
+
+FASTAPI_INCLUDE_BASLADI
+APP_ID 2439312095760
+APP_ROUTER_ID 2439312907776
+APP_ROUTES_ID 2439313281792
+APP_ONCE 5
+KAYNAK_ROUTER_ID 2439312568272
+KAYNAK_ROUTE_SAYISI 6
+KAYNAK_YOLLAR ('/syfinans/runtime', '/syfinans/kaynaklar', '/syfinans/sekmeler/{sekme}', '/syfinans/cihaz-profilleri', '/syfinans/alarmlar', '/syfinans/alarmlar')
+
+APIROUTER_INCLUDE_BASLADI
+HEDEF_ROUTER_ID 2439312907776
+HEDEF_ROUTES_ID 2439313281792
+HEDEF_ONCE 5
+KAYNAK_ROUTER_ID 2439312568272
+KAYNAK_ROUTE_SAYISI 6
+KAYNAK_YOLLAR ('/syfinans/runtime', '/syfinans/kaynaklar', '/syfinans/sekmeler/{sekme}', '/syfinans/cihaz-profilleri', '/syfinans/alarmlar', '/syfinans/alarmlar')
+HEDEF_SONRA 6
+HEDEF_SONRA_YOLLAR ('/openapi.json', '/docs', '/docs/oauth2-redirect', '/redoc', '', '')
+APIROUTER_INCLUDE_BITTI
+APP_SONRA 6
+APP_SONRA_YOLLAR ('/openapi.json', '/docs', '/docs/oauth2-redirect', '/redoc', '', '')
+FASTAPI_INCLUDE_BITTI
+TEMIZ_SON_ROUTE_SAYISI 6
+TEMIZ_TERMINAL_SAYI 0
+TEMIZ_FINANS_SAYI 0
+
+========================================================================
+GERCEK_UYGULAMA_KONTROLU
+========================================================================
+GERCEK_APP_ID 2439313414464
+GERCEK_ROUTER_ID 2439313424464
+GERCEK_ROUTES_ID 2439313308800
+GERCEK_ROUTE_SAYISI 24
+GERCEK_TERMINAL_SAYI 1
+GERCEK_FINANS_SAYI 1
+
+========================================================================
+DOGRUDAN_APPEND_KONTROLU
+========================================================================
+APPEND_ONCE 24
+APPEND_SONRA 25
+APPEND_AYNI_LISTE True
+APPEND_TERMINAL_SAYI 2
+
+SYK_DSP_0012_ROUTE_MUTASYON_TESHISI_OK
