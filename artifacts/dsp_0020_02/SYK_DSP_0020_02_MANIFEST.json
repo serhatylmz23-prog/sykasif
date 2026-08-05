@@ -1,0 +1,15 @@
+﻿{
+    "paket":  "SYK_DSP_0020_02",
+    "durum":  "dijital-dogrulama-adayi",
+    "coklu_sensor_oturumu":  true,
+    "zaman_esleme":  true,
+    "gps_merkezli_birlestirme":  true,
+    "arastirma_baglantisi":  true,
+    "harita_baglantisi":  true,
+    "sensor_saglik_ozeti":  true,
+    "capraz_kanit_adayi":  true,
+    "gercek_donanim_saha_dogrulamasi":  false,
+    "hedef_test":  "4/4",
+    "canli_http":  true,
+    "olusturulma":  "2026-08-05T07:42:44.3196012Z"
+}
