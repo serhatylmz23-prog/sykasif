@@ -1,0 +1,30 @@
+{
+  "devices": [
+    {
+      "client_host": "testclient",
+      "connection_count": 1,
+      "created_at": "2026-08-05T23:14:47.030917+00:00",
+      "device_id": "3V2QSGgtBi_0bPmDv7g9qO0Z",
+      "device_name": "SyKaşif Tablet",
+      "device_type": "tablet",
+      "last_seen_at": "2026-08-05T23:14:47.030917+00:00",
+      "trust_token_hash": "541e2080fa3ffb599fd7bdee214e0268198c1dc51ff28acfa0cf13c5d53bdfe5",
+      "trusted": true,
+      "user_agent": "testclient"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 2,
+      "created_at": "2026-08-05T23:14:47.022701+00:00",
+      "device_id": "aUGQvXcbZnSHOdW_VTjaxhY1",
+      "device_name": "SyKaşif Telefon",
+      "device_type": "phone",
+      "last_seen_at": "2026-08-05T23:14:47.026275+00:00",
+      "trust_token_hash": "9e29bc0460546b77fff52f57ad71e248e8fed131f4c8731a4b5d8a0c6b1a20be",
+      "trusted": true,
+      "user_agent": "Android Mobile"
+    }
+  ],
+  "updated_at": "2026-08-05T23:14:47.030949+00:00",
+  "version": 1
+}

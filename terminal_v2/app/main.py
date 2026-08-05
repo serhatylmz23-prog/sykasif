@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 from datetime import UTC, datetime
 from pathlib import Path
@@ -11,6 +11,7 @@ from pydantic import BaseModel, Field
 from terminal_v2.core.api import router as api_router
 from terminal_v2.core.connection_registry import registry
 from terminal_v2.core.sse import router as sse_router
+from terminal_v2.core.device_routes import router as device_router
 from terminal_v2.core.tablet_validation import (
     tablet_validation_registry,
 )
@@ -41,6 +42,7 @@ def create_app() -> FastAPI:
 
     app.include_router(api_router)
     app.include_router(sse_router)
+    app.include_router(device_router)
 
     app.mount(
         "/static",
