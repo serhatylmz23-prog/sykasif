@@ -1,0 +1,13 @@
+﻿{
+    "paket":  "SYK_DSP_0020_01",
+    "durum":  "dijital-dogrulama-adayi",
+    "sensor_gateway":  true,
+    "garmin_sonar":  true,
+    "gps":  true,
+    "bilimsel_sensor_genisleme":  true,
+    "gercek_simulasyon_izolasyonu":  true,
+    "gercek_donanim_saha_dogrulamasi":  false,
+    "hedef_test":  "4/4",
+    "canli_http":  true,
+    "olusturulma":  "2026-08-05T07:26:20.2720729Z"
+}
