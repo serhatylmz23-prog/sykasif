@@ -94,3 +94,65 @@ if not _syk_uygulama_yolu_var(
 
 if not _ui_kurulu_mu(app):
     install_ui(app)
+
+# SYK_TERMINAL_ROUTER_RUNTIME_BAGLANTISI
+from syk_simulasyon.syk_ui_runtime.terminal_routes import (
+    terminal_router as syk_terminal_router,
+)
+
+if not any(
+    getattr(route, "path", None)
+    == "/api/syk-ui/terminal/state"
+    for route in app.routes
+):
+    app.include_router(
+        syk_terminal_router
+    )
+
+# SYK_PROJECT_RUNTIME_ROUTER_BAGLANTISI
+from syk_simulasyon.syk_ui_runtime.project_routes import (
+    project_router as syk_project_router,
+)
+
+_syk_project_route_paths = {
+    getattr(route, "path", None)
+    for route in syk_project_router.routes
+}
+
+app.router.routes[:] = [
+    route
+    for route in app.router.routes
+    if getattr(route, "path", None)
+    not in _syk_project_route_paths
+]
+
+_syk_project_insert_index = len(
+    app.router.routes
+)
+
+for _syk_index, _syk_route in enumerate(
+    app.router.routes
+):
+    _syk_path = getattr(
+        _syk_route,
+        "path",
+        "",
+    )
+
+    if (
+        "{" in _syk_path
+        and (
+            _syk_path.startswith("/api/syk-ui/")
+            or _syk_path.startswith("/{")
+        )
+    ):
+        _syk_project_insert_index = _syk_index
+        break
+
+for _syk_project_route in reversed(
+    syk_project_router.routes
+):
+    app.router.routes.insert(
+        _syk_project_insert_index,
+        _syk_project_route,
+    )
