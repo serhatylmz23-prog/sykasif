@@ -1,0 +1,16 @@
+﻿{
+    "paket":  "SYK_DSP_0019_06",
+    "durum":  "dijital-dogrulama-adayi",
+    "gercek_donanim_saha_dogrulamasi":  false,
+    "kaynaklar":  [
+                      "src\\syk_simulasyon\\syk_ui_runtime\\real_device_connection_runtime.py",
+                      "src\\syk_simulasyon\\syk_ui_runtime\\real_device_connection_routes.py",
+                      "tests\\test_real_device_connection_runtime.py"
+                  ],
+    "gercek_simulasyon_izolasyonu":  true,
+    "nmea_kabul_noktasi":  true,
+    "heartbeat":  true,
+    "reconnect":  true,
+    "canli_http":  true,
+    "olusturulma":  "2026-08-05T07:15:51.6285645Z"
+}
