@@ -1,0 +1,36 @@
+{
+  "latest_release_id": "SYK_TERMINAL_V2_20260805T215129Z",
+  "release_count": 2,
+  "releases": [
+    {
+      "generated_file_count": 50,
+      "manifest": "SYK_TERMINAL_V2_GENERATED.manifest.json",
+      "manifest_path": "terminal_v2/release/SYK_TERMINAL_V2_GENERATED.manifest.json",
+      "package": "SYK_TERMINAL_V2_GENERATED.zip",
+      "package_path": "terminal_v2/release/SYK_TERMINAL_V2_GENERATED.zip",
+      "package_sha256": "e166ef09d7037945cddd91c6d23697a2771295a5d50f90edb6d311c21f2689a3",
+      "package_size": 12779,
+      "release_id": "SYK_TERMINAL_V2_20260805T213453Z",
+      "sha256_file": "SYK_TERMINAL_V2_GENERATED.zip.sha256",
+      "sha256_path": "terminal_v2/release/SYK_TERMINAL_V2_GENERATED.zip.sha256",
+      "status": "VALIDATED",
+      "validated_utc": "2026-08-05T21:34:53.021448+00:00"
+    },
+    {
+      "generated_file_count": 50,
+      "manifest": "SYK_TERMINAL_V2_GENERATED.manifest.json",
+      "manifest_path": "terminal_v2/release/SYK_TERMINAL_V2_GENERATED.manifest.json",
+      "package": "SYK_TERMINAL_V2_GENERATED.zip",
+      "package_path": "terminal_v2/release/SYK_TERMINAL_V2_GENERATED.zip",
+      "package_sha256": "18561500a901bf2e4433a3f18baaf6a0d9fc9ae35d96351b9eb32584c50c023d",
+      "package_size": 12779,
+      "release_id": "SYK_TERMINAL_V2_20260805T215129Z",
+      "sha256_file": "SYK_TERMINAL_V2_GENERATED.zip.sha256",
+      "sha256_path": "terminal_v2/release/SYK_TERMINAL_V2_GENERATED.zip.sha256",
+      "status": "VALIDATED",
+      "validated_utc": "2026-08-05T21:51:29.523270+00:00"
+    }
+  ],
+  "schema": "syk-terminal-v2-release-index-v1",
+  "updated_utc": "2026-08-05T21:51:29.530600+00:00"
+}

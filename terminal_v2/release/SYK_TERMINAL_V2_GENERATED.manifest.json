@@ -1,0 +1,258 @@
+{
+  "created_utc": "2026-08-05T21:51:29.483487+00:00",
+  "file_count": 50,
+  "files": [
+    {
+      "path": "generated/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "generated/ai/__init__.py",
+      "sha256": "f62790be2f3c405042ec314876660e65114f0f523b9644fd015b3603b26ff260",
+      "size": 40
+    },
+    {
+      "path": "generated/ai/ai.css",
+      "sha256": "601587131baa7c8c4d916730cc0e2c7d725857c33cbc2e35ce9bef5c512a639d",
+      "size": 255
+    },
+    {
+      "path": "generated/ai/ai.html",
+      "sha256": "ac0cec9702b03d9d763f11c066c08e140358b5e69b75af1447216f40ab2d17e6",
+      "size": 357
+    },
+    {
+      "path": "generated/ai/ai.js",
+      "sha256": "f0dbcb533dbae6c0f2c22bd24a90f98e671398681838ac526488ab9e9c1ac353",
+      "size": 431
+    },
+    {
+      "path": "generated/ai/ai.py",
+      "sha256": "551824306960ce63d8fdb1dfe5ad60fef9f0ab25ef3662ca7dbc2378ab2cc0cb",
+      "size": 166
+    },
+    {
+      "path": "generated/ai.txt",
+      "sha256": "6601e53a3bc8b06e66ab9f5817635b1b2da0eed81974654dec9b6e01e3e3d984",
+      "size": 11
+    },
+    {
+      "path": "generated/analysis/__init__.py",
+      "sha256": "4a947e10e6b7d3e5f1168fc2d3b5c96296727e785f1d3022875ce50b9ea8e265",
+      "size": 58
+    },
+    {
+      "path": "generated/analysis/analysis.css",
+      "sha256": "9585e65f9c82c2c437d666208c6f72681055bce69712f9a772dc8a6ef27b3d67",
+      "size": 273
+    },
+    {
+      "path": "generated/analysis/analysis.html",
+      "sha256": "10ff91e067134e6e52aafaf2d47d5ac58ea1cf5a85077b2a47f7149e45f628d3",
+      "size": 381
+    },
+    {
+      "path": "generated/analysis/analysis.js",
+      "sha256": "7f6e19e2d7426f5507749d6e55f78469db74ca62ae2620e12bc6ce41437d8976",
+      "size": 437
+    },
+    {
+      "path": "generated/analysis/analysis.py",
+      "sha256": "a7fab086b74544acc14a5bc0cc42d0fd77f19a66657bfb28d1728f0c7fae003f",
+      "size": 178
+    },
+    {
+      "path": "generated/analysis.txt",
+      "sha256": "ba82838caa4aedfa45b5e3cb8dd0bede3e7e96518b1120556612112d10808e4a",
+      "size": 17
+    },
+    {
+      "path": "generated/dashboard/__init__.py",
+      "sha256": "f14ec05453a719947d8a61d86d3a7091c834f98e83c8e22cad3a4d5b9aad823e",
+      "size": 61
+    },
+    {
+      "path": "generated/dashboard/dashboard.css",
+      "sha256": "ea87c2caa93182a154cd8b03633fbafe6271ab1ec44d38939ef3e88b18c24876",
+      "size": 276
+    },
+    {
+      "path": "generated/dashboard/dashboard.html",
+      "sha256": "54e153a9016856503e00060779a14902bb67e465d8ef0a3e04eb1ffeed7d6c9a",
+      "size": 385
+    },
+    {
+      "path": "generated/dashboard/dashboard.js",
+      "sha256": "8f42c0e6c4a2db6eb553306f08e1e36902c248b4ca892161ebb73235388aac87",
+      "size": 438
+    },
+    {
+      "path": "generated/dashboard/dashboard.py",
+      "sha256": "f9acdf50ba4474661ca8e1b7981a0c57949ba47a1168bca31048e89d249b6dfa",
+      "size": 180
+    },
+    {
+      "path": "generated/dashboard.txt",
+      "sha256": "e2cb82dcf6faab0f204439ef37774d8f34ea98e8aea8248d3081e43d36890cb8",
+      "size": 18
+    },
+    {
+      "path": "generated/evidence/__init__.py",
+      "sha256": "0688490f40403c8902fa69f0f7edc80d7508815c59e0b8b25b7415a95f8eb2f8",
+      "size": 58
+    },
+    {
+      "path": "generated/evidence/evidence.css",
+      "sha256": "a4ee018b778b58c61c93628a47fd099e021862d08f16d454b0dc444adb265efa",
+      "size": 273
+    },
+    {
+      "path": "generated/evidence/evidence.html",
+      "sha256": "b76033c6f3c51f5216416acb78e374cb621fe0f29570d41306153fb49e5b1b90",
+      "size": 381
+    },
+    {
+      "path": "generated/evidence/evidence.js",
+      "sha256": "89e9545ffb49efdbbed3b7ec9b49afd213a1e8bf9d75638a3e9329e3cf6631c9",
+      "size": 437
+    },
+    {
+      "path": "generated/evidence/evidence.py",
+      "sha256": "7b02b51e7f8de0e7b5be600f867ad6a97e8a2f5d5c1007e7cdb19efaa8c5d2ab",
+      "size": 178
+    },
+    {
+      "path": "generated/evidence.txt",
+      "sha256": "c641d8d350841fb1569522691f9c4b18e91c06a3979376effd4f636fe412c1f5",
+      "size": 17
+    },
+    {
+      "path": "generated/map/__init__.py",
+      "sha256": "a10432b6c1f296a1a5453567db8787c5ca67dc2c623974fd2b4303eb374f063b",
+      "size": 43
+    },
+    {
+      "path": "generated/map/map.css",
+      "sha256": "b082a00a7ca71816427bbcb2a29e2292dc1613d090e8bd1318e6ab10c2d3ac16",
+      "size": 258
+    },
+    {
+      "path": "generated/map/map.html",
+      "sha256": "8b226e7114e62531ba313f708e763917314caa697a2c4ccdd9bb7e6c378db7ca",
+      "size": 361
+    },
+    {
+      "path": "generated/map/map.js",
+      "sha256": "9677298b4c695ea39c95c71e7e9ca2f566e05fe4fad2715a1b9de2db32eb4167",
+      "size": 432
+    },
+    {
+      "path": "generated/map/map.py",
+      "sha256": "ccbb9aaec8a521955522e4f4fd541448b204d8f91f670379b5ad24d0cd9d8099",
+      "size": 168
+    },
+    {
+      "path": "generated/map.txt",
+      "sha256": "ace4d4f6442398b2a821b66257a9466552fc54eeba951e7cfb1ad1b2d8e3f0a9",
+      "size": 12
+    },
+    {
+      "path": "generated/notifications/__init__.py",
+      "sha256": "4a60162db9b939a6bc28c55675146bcfd75ec4fabb4a938eb40f22d8c55e0d0e",
+      "size": 73
+    },
+    {
+      "path": "generated/notifications/notifications.css",
+      "sha256": "4ce767a7e29bb5cef4ef79fc22582083a8249d1683a0e21157ec067df62bf4a8",
+      "size": 288
+    },
+    {
+      "path": "generated/notifications/notifications.html",
+      "sha256": "1a63f9edf80b54d8419ca44d3948766645e9ca31e311e68a7203f631ccae81bc",
+      "size": 401
+    },
+    {
+      "path": "generated/notifications/notifications.js",
+      "sha256": "15b91f4d816deb0c373bfe0b582c07a8586c25115b276586776d1e68432a77e9",
+      "size": 442
+    },
+    {
+      "path": "generated/notifications/notifications.py",
+      "sha256": "993568343c587774990c3f9d979b7507a6725d386305801e8813023a0f8aeaf1",
+      "size": 188
+    },
+    {
+      "path": "generated/notifications.txt",
+      "sha256": "9c8aa76a47314f73398969fb2b130eea3982b1df7e2fe530b7c4c86c28828ba3",
+      "size": 22
+    },
+    {
+      "path": "generated/reports/__init__.py",
+      "sha256": "e0f17d6128571be56defc7cc0f9b6f3e0ddb8d99899dd43f64cc96b5af87b1e0",
+      "size": 55
+    },
+    {
+      "path": "generated/reports/reports.css",
+      "sha256": "187299e96a24a05ba8c0dcd554837b564cf46eac398259c88c4643996febf481",
+      "size": 270
+    },
+    {
+      "path": "generated/reports/reports.html",
+      "sha256": "3005b7cd6fad533b327cecfb6d922e4c65cd7a79b6f5c5061c1249eb98571925",
+      "size": 377
+    },
+    {
+      "path": "generated/reports/reports.js",
+      "sha256": "2b5061eabf586b93ba62fe6b9396b94865c640828bfb7ce0c46b450faec71706",
+      "size": 436
+    },
+    {
+      "path": "generated/reports/reports.py",
+      "sha256": "55404833ed11b49ba9f991a7f731cdfa0b008b22ea87769c1a033955d71c2101",
+      "size": 176
+    },
+    {
+      "path": "generated/reports.txt",
+      "sha256": "9dad9154e7a7d24878df8a7660176b219b63d3210a00ac4ee2cf4c736ccb5742",
+      "size": 16
+    },
+    {
+      "path": "generated/settings/__init__.py",
+      "sha256": "600669febcef2b4e1f02ad97626108f2bf3fe3e75f71c7c280f354beeaf0411c",
+      "size": 58
+    },
+    {
+      "path": "generated/settings/settings.css",
+      "sha256": "6372e889b18fe976c83308c7bee8fdf7ba56256b150e6ad3d8da0fe7bb62d581",
+      "size": 273
+    },
+    {
+      "path": "generated/settings/settings.html",
+      "sha256": "ec7e6bf56d17dc6a6815fa0a0c8eb1413fec9a31c9e1d3c5c2d3eb26562d0e21",
+      "size": 381
+    },
+    {
+      "path": "generated/settings/settings.js",
+      "sha256": "4d73a6fbcd88213d97cb271aabd7b3b88c9ffa116acd9c0b7a2453d029167622",
+      "size": 437
+    },
+    {
+      "path": "generated/settings/settings.py",
+      "sha256": "ae417c951209b474fcf953de826e828ccb19fab586a0f5399130b0e04de79b3d",
+      "size": 178
+    },
+    {
+      "path": "generated/settings.txt",
+      "sha256": "f00b5ecff18d660633f7071a6f379e58f02980aa2ea4c761e2680c9d1aece71c",
+      "size": 17
+    },
+    {
+      "path": "generated/test.txt",
+      "sha256": "6a6ca12d004c041cf6a5c32861bf9513765e0d29e5145548cbcbb9cf4ff9e259",
+      "size": 3
+    }
+  ],
+  "package": "SYK_TERMINAL_V2_GENERATED.zip",
+  "source": "generated"
+}

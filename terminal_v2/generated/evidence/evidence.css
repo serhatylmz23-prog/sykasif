@@ -1,0 +1,15 @@
+#module-evidence {
+    display: grid;
+    gap: 1rem;
+    min-width: 0;
+}
+
+#module-evidence .syk-module__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#module-evidence .syk-module__content {
+    overflow: auto;
+}

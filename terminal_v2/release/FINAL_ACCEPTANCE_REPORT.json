@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "CONNECTION_REGISTRY": true,
+    "HEALTH": true,
+    "INDEX_SHELL": true,
+    "LIVE_RUNTIME_JS": true,
+    "MAIN_JS": true,
+    "RESPONSIVE_UI": true,
+    "SSE_METRICS": true,
+    "SSE_SNAPSHOT": true,
+    "STATUS": true
+  },
+  "physical_tablet_test": "PENDING",
+  "status": "DIGITAL_ACCEPTANCE_PASS",
+  "terminal": "SYK Terminal V2",
+  "version": "2.0.0"
+}
