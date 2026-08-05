@@ -246,3 +246,52 @@ for _syk_map_route in reversed(
         _syk_map_insert_index,
         _syk_map_route,
     )
+
+# SYK_EXTERNAL_DEVICE_ROUTER_BAGLANTISI
+from syk_simulasyon.syk_ui_runtime.external_device_routes import (
+    external_device_router as syk_external_device_router,
+)
+
+_syk_external_device_paths = {
+    getattr(route, "path", None)
+    for route in syk_external_device_router.routes
+}
+
+app.router.routes[:] = [
+    route
+    for route in app.router.routes
+    if getattr(route, "path", None)
+    not in _syk_external_device_paths
+]
+
+_syk_external_device_insert_index = len(
+    app.router.routes
+)
+
+for _syk_index, _syk_route in enumerate(
+    app.router.routes
+):
+    _syk_path = getattr(
+        _syk_route,
+        "path",
+        "",
+    )
+
+    if (
+        "{" in _syk_path
+        and _syk_path.startswith(
+            "/api/syk-ui/"
+        )
+    ):
+        _syk_external_device_insert_index = (
+            _syk_index
+        )
+        break
+
+for _syk_external_device_route in reversed(
+    syk_external_device_router.routes
+):
+    app.router.routes.insert(
+        _syk_external_device_insert_index,
+        _syk_external_device_route,
+    )
