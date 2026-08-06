@@ -81,6 +81,47 @@ async def modul_kartlari() -> dict[str, Any]:
     }
 
 
+async def aktif_modulu_degistir(
+    *,
+    modul_kodu: str,
+    kaynak: str,
+) -> dict[str, Any]:
+    yeni_modul = modul_kodu.strip().lower()
+
+    if not yeni_modul:
+        raise ValueError("Modül kodu boş olamaz.")
+
+    snapshot = await runtime_state.snapshot()
+    onceki_modul = str(
+        snapshot["durum"].get(
+            "aktif_modul",
+            "dashboard",
+        )
+    ).lower()
+
+    modul_yamasi: dict[str, dict[str, str]] = {
+        yeni_modul: {
+            "durum": "CALISIYOR",
+        }
+    }
+
+    if onceki_modul != yeni_modul:
+        modul_yamasi[onceki_modul] = {
+            "durum": "BEKLIYOR",
+        }
+
+    await runtime_state.update(
+        {
+            "aktif_modul": yeni_modul,
+            "moduller": modul_yamasi,
+        },
+        olay_turu="AKTIF_MODUL_DEGISTI",
+        kaynak=kaynak,
+    )
+
+    return await modul_kartlari()
+
+
 async def modul_durumunu_degistir(
     *,
     modul_kodu: str,

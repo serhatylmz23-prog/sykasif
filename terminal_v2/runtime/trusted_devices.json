@@ -2,6 +2,42 @@
   "devices": [
     {
       "client_host": "testclient",
+      "connection_count": 1,
+      "created_at": "2026-08-06T06:50:50.492677+00:00",
+      "device_id": "-0v8W609AcNJlyWLHPflBerg",
+      "device_name": "SyKaşif Tablet",
+      "device_type": "tablet",
+      "last_seen_at": "2026-08-06T06:50:50.492677+00:00",
+      "trust_token_hash": "ec2c4de5403ea917527d4bc3894b9abd245cd28048f8fe9ef42af08fbe3a34d9",
+      "trusted": true,
+      "user_agent": "testclient"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 1,
+      "created_at": "2026-08-06T07:05:35.869599+00:00",
+      "device_id": "-50xN4FfNVS5VYltrGR99MiO",
+      "device_name": "SyKaşif Tablet",
+      "device_type": "tablet",
+      "last_seen_at": "2026-08-06T07:05:35.869599+00:00",
+      "trust_token_hash": "59d24de266fabc1be2647327687d900b982d4fa33f65ea7750eb33740ef42b14",
+      "trusted": true,
+      "user_agent": "testclient"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 2,
+      "created_at": "2026-08-06T06:50:50.482314+00:00",
+      "device_id": "-xfL0AmAYEpuHxxOTokEFAw0",
+      "device_name": "SyKaşif Telefon",
+      "device_type": "phone",
+      "last_seen_at": "2026-08-06T06:50:50.486417+00:00",
+      "trust_token_hash": "0034c3109b8f6034ce2a2c16471e737b95bde14d16218491ceb9a0d08f2162cb",
+      "trusted": true,
+      "user_agent": "Android Mobile"
+    },
+    {
+      "client_host": "testclient",
       "connection_count": 2,
       "created_at": "2026-08-05T23:36:49.116106+00:00",
       "device_id": "0Qi8KruUzbzsz-mcRHoiXLAf",
@@ -99,6 +135,30 @@
     {
       "client_host": "testclient",
       "connection_count": 1,
+      "created_at": "2026-08-06T06:33:27.066458+00:00",
+      "device_id": "882wpedw2vlG4M6BVbD4xQjQ",
+      "device_name": "SyKaşif Tablet",
+      "device_type": "tablet",
+      "last_seen_at": "2026-08-06T06:33:27.066458+00:00",
+      "trust_token_hash": "889a9e09f48f850e958b16c966725cf0deadee90ab9dd509c5a6d451a345fd3a",
+      "trusted": true,
+      "user_agent": "testclient"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 2,
+      "created_at": "2026-08-06T06:53:25.648914+00:00",
+      "device_id": "91wHWHxYDYu4JLX9M0z_9BjY",
+      "device_name": "SyKaşif Telefon",
+      "device_type": "phone",
+      "last_seen_at": "2026-08-06T06:53:25.652654+00:00",
+      "trust_token_hash": "59fcbf61e41182d1231cc639af0e167c433e34d9c2d02234f17b65888ae1f5ec",
+      "trusted": true,
+      "user_agent": "Android Mobile"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 1,
       "created_at": "2026-08-05T23:41:57.727901+00:00",
       "device_id": "9kBNfyjqvVMcVE-hC9aBCG0X",
       "device_name": "SyKaşif Tablet",
@@ -158,6 +218,18 @@
     },
     {
       "client_host": "testclient",
+      "connection_count": 2,
+      "created_at": "2026-08-06T06:28:42.742236+00:00",
+      "device_id": "E1j5G0o7TqsJJWN0EhfRtsb9",
+      "device_name": "SyKaşif Telefon",
+      "device_type": "phone",
+      "last_seen_at": "2026-08-06T06:28:42.746721+00:00",
+      "trust_token_hash": "664ceda3b561f8d837723b05751579086374aad908bb09b640b3ffc0a93e4118",
+      "trusted": true,
+      "user_agent": "Android Mobile"
+    },
+    {
+      "client_host": "testclient",
       "connection_count": 1,
       "created_at": "2026-08-05T23:20:53.238758+00:00",
       "device_id": "E7SKVXTlD73f-elSFMFZtUdH",
@@ -179,6 +251,18 @@
       "trust_token_hash": "0d2ecb7d47b7d02b42eafb3b13700e55f1fe27017545bfa9d9818fb52696419c",
       "trusted": true,
       "user_agent": "testclient"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 2,
+      "created_at": "2026-08-06T07:10:18.098912+00:00",
+      "device_id": "F2LLeCeY7qjH-nXdtIWXk_jq",
+      "device_name": "SyKaşif Telefon",
+      "device_type": "phone",
+      "last_seen_at": "2026-08-06T07:10:18.103195+00:00",
+      "trust_token_hash": "acae8fa831d1ec875c78d00cdc2e43057157eeccba647b80e4132d4a616be5df",
+      "trusted": true,
+      "user_agent": "Android Mobile"
     },
     {
       "client_host": "testclient",
@@ -242,6 +326,30 @@
     },
     {
       "client_host": "testclient",
+      "connection_count": 1,
+      "created_at": "2026-08-06T07:10:18.108454+00:00",
+      "device_id": "KZ9knpxmNTl203GXQcqRNhVJ",
+      "device_name": "SyKaşif Tablet",
+      "device_type": "tablet",
+      "last_seen_at": "2026-08-06T07:10:18.108454+00:00",
+      "trust_token_hash": "22df483e2363015ff80e97615025de1dffba7bb3f2c5927bac0f9ad86f9a5d58",
+      "trusted": true,
+      "user_agent": "testclient"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 1,
+      "created_at": "2026-08-06T06:46:40.373960+00:00",
+      "device_id": "L7_BFQm3nv0lDjdsF9mY7HBy",
+      "device_name": "SyKaşif Tablet",
+      "device_type": "tablet",
+      "last_seen_at": "2026-08-06T06:46:40.373960+00:00",
+      "trust_token_hash": "98b2d2f6f10ae236762ce3d7371f683f97bf80b50b4a4ad786a04aef53863ee8",
+      "trusted": true,
+      "user_agent": "testclient"
+    },
+    {
+      "client_host": "testclient",
       "connection_count": 2,
       "created_at": "2026-08-05T23:41:02.164759+00:00",
       "device_id": "NcGuxkLN8deqgmBaHMcnRSS3",
@@ -251,6 +359,30 @@
       "trust_token_hash": "83415531ddb4bc4d84d7c99913e94452afc8bc00a79b68fbfa83361a2f92717c",
       "trusted": true,
       "user_agent": "Android Mobile"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 2,
+      "created_at": "2026-08-06T07:05:35.859896+00:00",
+      "device_id": "NglXrvq8hbIUzNXVp2pgHI4m",
+      "device_name": "SyKaşif Telefon",
+      "device_type": "phone",
+      "last_seen_at": "2026-08-06T07:05:35.864171+00:00",
+      "trust_token_hash": "0d2323c6b39df6152fa7499eaa0b4abc5e50ad5b2a475e767c56beab21cea36e",
+      "trusted": true,
+      "user_agent": "Android Mobile"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 1,
+      "created_at": "2026-08-05T23:56:27.622092+00:00",
+      "device_id": "PFlRMAPzs2ke3Q8jQhNh1CRD",
+      "device_name": "SyKaşif Tablet",
+      "device_type": "tablet",
+      "last_seen_at": "2026-08-05T23:56:27.622092+00:00",
+      "trust_token_hash": "824011a6bf2646da3fff22de35d081ea73db0292cdc16a605d622944f8a1fa98",
+      "trusted": true,
+      "user_agent": "testclient"
     },
     {
       "client_host": "testclient",
@@ -302,6 +434,30 @@
     },
     {
       "client_host": "testclient",
+      "connection_count": 2,
+      "created_at": "2026-08-06T07:14:29.447946+00:00",
+      "device_id": "VGZJZKG1U6f1X1h1B_8QAGff",
+      "device_name": "SyKaşif Telefon",
+      "device_type": "phone",
+      "last_seen_at": "2026-08-06T07:14:29.453116+00:00",
+      "trust_token_hash": "2f6e0cb88253c715f6e14ca5c262e4cc0cc392b9412304f3902fcb3231b5ff5e",
+      "trusted": true,
+      "user_agent": "Android Mobile"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 2,
+      "created_at": "2026-08-05T23:56:27.611827+00:00",
+      "device_id": "WGuxolz2KTp-_EAoy58wwq6r",
+      "device_name": "SyKaşif Telefon",
+      "device_type": "phone",
+      "last_seen_at": "2026-08-05T23:56:27.616844+00:00",
+      "trust_token_hash": "6c315880d5c0aff614c10af6a3ca07318c7dfcb5f5c69227ac857a73d9ea60d9",
+      "trusted": true,
+      "user_agent": "Android Mobile"
+    },
+    {
+      "client_host": "testclient",
       "connection_count": 1,
       "created_at": "2026-08-05T23:41:28.086869+00:00",
       "device_id": "WnmGqTarp5JXaj745Hr3Noub",
@@ -309,6 +465,18 @@
       "device_type": "tablet",
       "last_seen_at": "2026-08-05T23:41:28.086869+00:00",
       "trust_token_hash": "802d256d9621c28ac203860c69e20cf68dd6efb7849035945c6d527ec2dc0986",
+      "trusted": true,
+      "user_agent": "testclient"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 1,
+      "created_at": "2026-08-06T06:53:25.657669+00:00",
+      "device_id": "Xk6sXNkNjBhHjz8c4YQB41RZ",
+      "device_name": "SyKaşif Tablet",
+      "device_type": "tablet",
+      "last_seen_at": "2026-08-06T06:53:25.657669+00:00",
+      "trust_token_hash": "6a59bf7ecad67e99a9594321ec022b423050e31e5f2031d61f4c44f99667d578",
       "trusted": true,
       "user_agent": "testclient"
     },
@@ -339,6 +507,18 @@
     {
       "client_host": "testclient",
       "connection_count": 2,
+      "created_at": "2026-08-06T06:46:40.364938+00:00",
+      "device_id": "ZLA5Yf-cs7h8tCUA2UjLBps1",
+      "device_name": "SyKaşif Telefon",
+      "device_type": "phone",
+      "last_seen_at": "2026-08-06T06:46:40.368651+00:00",
+      "trust_token_hash": "ca4691fce6d25f151ae1396cf1fff833bfe32b4a188ca5eef2d1b9226875568d",
+      "trusted": true,
+      "user_agent": "Android Mobile"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 2,
       "created_at": "2026-08-05T23:14:47.022701+00:00",
       "device_id": "aUGQvXcbZnSHOdW_VTjaxhY1",
       "device_name": "SyKaşif Telefon",
@@ -347,6 +527,30 @@
       "trust_token_hash": "9e29bc0460546b77fff52f57ad71e248e8fed131f4c8731a4b5d8a0c6b1a20be",
       "trusted": true,
       "user_agent": "Android Mobile"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 1,
+      "created_at": "2026-08-06T07:14:29.458478+00:00",
+      "device_id": "anjS2eOmdUu1-3dsFlaNg14G",
+      "device_name": "SyKaşif Tablet",
+      "device_type": "tablet",
+      "last_seen_at": "2026-08-06T07:14:29.458478+00:00",
+      "trust_token_hash": "356da218e355ef47417dd6388f82202b88629d8db37f36b3498ee64014b974fe",
+      "trusted": true,
+      "user_agent": "testclient"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 1,
+      "created_at": "2026-08-06T07:18:27.403253+00:00",
+      "device_id": "doGMvtR4ALCscKf5GaDfYG4E",
+      "device_name": "SyKaşif Tablet",
+      "device_type": "tablet",
+      "last_seen_at": "2026-08-06T07:18:27.403253+00:00",
+      "trust_token_hash": "43e4231c515472c3b6af1b5ec647062646e5fd2752b18a4b083d367f0ffc5948",
+      "trusted": true,
+      "user_agent": "testclient"
     },
     {
       "client_host": "testclient",
@@ -399,6 +603,18 @@
     {
       "client_host": "testclient",
       "connection_count": 2,
+      "created_at": "2026-08-06T07:18:27.392827+00:00",
+      "device_id": "kO9NPNYBM_1ZAB3p7Sy1Czc8",
+      "device_name": "SyKaşif Telefon",
+      "device_type": "phone",
+      "last_seen_at": "2026-08-06T07:18:27.397582+00:00",
+      "trust_token_hash": "2cf8ea9c4f55405e5fe8d1d0e68cf0ad7722eaaa85fb8ac15eab10270134d093",
+      "trusted": true,
+      "user_agent": "Android Mobile"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 2,
       "created_at": "2026-08-05T23:38:38.992250+00:00",
       "device_id": "klZ2TseWyec6__rCQflDF-OT",
       "device_name": "SyKaşif Telefon",
@@ -417,6 +633,30 @@
       "device_type": "tablet",
       "last_seen_at": "2026-08-05T23:38:39.001759+00:00",
       "trust_token_hash": "c230e0732c2784a64054d26f2f3d92ea2257cabc435b3c0110c2d3ce38a3b3d3",
+      "trusted": true,
+      "user_agent": "testclient"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 2,
+      "created_at": "2026-08-06T06:33:27.056351+00:00",
+      "device_id": "nl5RQl6vMn-k5K19PMyyLrRS",
+      "device_name": "SyKaşif Telefon",
+      "device_type": "phone",
+      "last_seen_at": "2026-08-06T06:33:27.061035+00:00",
+      "trust_token_hash": "35e5411f98929d993c0917d23596b25ced8d373270e7422f5cf13eb1e5d03407",
+      "trusted": true,
+      "user_agent": "Android Mobile"
+    },
+    {
+      "client_host": "testclient",
+      "connection_count": 1,
+      "created_at": "2026-08-06T06:28:42.752621+00:00",
+      "device_id": "oyKEIb4a8t1MLSgVePTszInd",
+      "device_name": "SyKaşif Tablet",
+      "device_type": "tablet",
+      "last_seen_at": "2026-08-06T06:28:42.752621+00:00",
+      "trust_token_hash": "d6a6bd3e56eefe8f8e2c90c81e1bb556d0eb4924cf1d8e65be3ad727dc972d21",
       "trusted": true,
       "user_agent": "testclient"
     },
@@ -481,6 +721,6 @@
       "user_agent": "testclient"
     }
   ],
-  "updated_at": "2026-08-05T23:55:22.490267+00:00",
+  "updated_at": "2026-08-06T07:18:27.403285+00:00",
   "version": 1
 }
