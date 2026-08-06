@@ -243,3 +243,11 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
+
+# === SYKASIF_PWA_RUNTIME_BAGLANTISI_BASLANGIC ===
+from terminal_v2.app.pwa_routes import (
+    pwa_rotalarini_bagla as _pwa_rotalarini_bagla,
+)
+
+_pwa_rotalarini_bagla(app)
+# === SYKASIF_PWA_RUNTIME_BAGLANTISI_BITIS ===

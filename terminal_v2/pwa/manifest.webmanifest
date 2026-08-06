@@ -1,0 +1,32 @@
+{
+  "name": "SyKa\u015fif Terminal V2",
+  "short_name": "SyKa\u015fif",
+  "description": "SyKa\u015fif masa\u00fcst\u00fc ve mobil canl\u0131 \u00e7al\u0131\u015fma alan\u0131",
+  "lang": "tr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#08111d",
+  "theme_color": "#08111d",
+  "icons": [
+    {
+      "src": "./icons/sykasif-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/sykasif-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/sykasif-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

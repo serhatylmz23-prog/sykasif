@@ -96,6 +96,14 @@ class SyKasifDesktopApp:
                 "bu ?al??ma alan?nda g?sterilecek."
             )
         )
+        self.module_view_details = tk.StringVar(
+            value=(
+                "? Runtime ba?lant? durumunu izle\n"
+                "? Ba?l? cihazlar? g?r?nt?le\n"
+                "? Aktif g?revleri takip et\n"
+                "? Son bildirimleri incele"
+            )
+        )
 
         self.cards_frame: ttk.Frame
         self.card_widgets: dict[str, dict[str, tk.Widget]] = {}
@@ -212,9 +220,19 @@ class SyKasifDesktopApp:
             ),
         )
 
-        self.scroll_canvas.bind_all(
-            "<MouseWheel>",
-            self._on_mousewheel,
+        self.scroll_canvas.bind(
+            "<Enter>",
+            lambda _event: self.scroll_canvas.bind_all(
+                "<MouseWheel>",
+                self._on_mousewheel,
+            ),
+        )
+
+        self.scroll_canvas.bind(
+            "<Leave>",
+            lambda _event: self.scroll_canvas.unbind_all(
+                "<MouseWheel>"
+            ),
         )
 
         header = ttk.Frame(
@@ -326,6 +344,30 @@ class SyKasifDesktopApp:
             pady=(8, 0),
         )
 
+        tk.Label(
+            workspace,
+            textvariable=self.module_view_details,
+            bg="#101d2c",
+            fg="#c8d2df",
+            font=("Segoe UI", 10),
+            anchor="w",
+            justify="left",
+            wraplength=1000,
+        ).pack(
+            fill="x",
+            pady=(14, 0),
+        )
+
+        self.module_action_frame = tk.Frame(
+            workspace,
+            bg="#101d2c",
+        )
+        self.module_action_frame.pack(
+            fill="x",
+            pady=(16, 0),
+        )
+
+
         self.cards_frame = ttk.Frame(
             root_frame,
             style="Root.TFrame",
@@ -333,6 +375,19 @@ class SyKasifDesktopApp:
         self.cards_frame.pack(
             fill="both",
             expand=True,
+        )
+
+        self.bottom_safe_area = tk.Frame(
+            root_frame,
+            bg="#08111d",
+            height=120,
+        )
+        self.bottom_safe_area.pack(
+            fill="x",
+            side="bottom",
+        )
+        self.bottom_safe_area.pack_propagate(
+            False
         )
 
     def _on_mousewheel(
@@ -374,6 +429,76 @@ class SyKasifDesktopApp:
 
         self.scroll_canvas.yview_moveto(
             max(0.0, min(1.0, konum))
+        )
+
+    def _render_module_actions(
+        self,
+        islemler,
+    ) -> None:
+        if not hasattr(
+            self,
+            "module_action_frame",
+        ):
+            return
+
+        for widget in (
+            self.module_action_frame.winfo_children()
+        ):
+            widget.destroy()
+
+        for index, islem in enumerate(
+            islemler,
+            start=1,
+        ):
+            button = tk.Button(
+                self.module_action_frame,
+                text=islem,
+                command=lambda secilen=islem: (
+                    self._module_action_selected(
+                        secilen
+                    )
+                ),
+                bg="#17283a",
+                fg="#f5f7fa",
+                activebackground="#1d354b",
+                activeforeground="#55e6c1",
+                relief="flat",
+                borderwidth=0,
+                cursor="hand2",
+                font=("Segoe UI Semibold", 10),
+                anchor="w",
+                padx=14,
+                pady=10,
+            )
+
+            button.grid(
+                row=(index - 1) // 2,
+                column=(index - 1) % 2,
+                sticky="ew",
+                padx=(
+                    0
+                    if index % 2 == 1
+                    else 6
+                ),
+                pady=4,
+            )
+
+        self.module_action_frame.grid_columnconfigure(
+            0,
+            weight=1,
+        )
+        self.module_action_frame.grid_columnconfigure(
+            1,
+            weight=1,
+        )
+
+    def _module_action_selected(
+        self,
+        islem: str,
+    ) -> None:
+        mesaj = "\u0130\u015flem se\u00e7ildi: "
+        self.status_text.set(
+            mesaj + islem
         )
 
     def _render_cards(
@@ -647,6 +772,12 @@ class SyKasifDesktopApp:
         self.module_view_description.set(
             gorunum.aciklama
         )
+        self.module_view_details.set(
+            gorunum.islem_metni
+        )
+        self._render_module_actions(
+            gorunum.islemler
+        )
         self.status_text.set(
             gorunum.durum
         )
@@ -693,6 +824,11 @@ class SyKasifDesktopApp:
 
     def _close(self) -> None:
         self.closed = True
+
+        if hasattr(self, "scroll_canvas"):
+            self.scroll_canvas.unbind_all(
+                "<MouseWheel>"
+            )
 
         if self.runtime_started_here:
             self.runtime_process.stop()

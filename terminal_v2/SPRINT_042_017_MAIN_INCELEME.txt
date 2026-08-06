@@ -1,0 +1,287 @@
+============================================
+MEVCUT MAIN.PY - ILK 140 SATIR
+============================================
+0001: from __future__ import annotations
+0002: 
+0003: from datetime import UTC, datetime
+0004: from pathlib import Path
+0005: 
+0006: from fastapi import FastAPI, HTTPException, Request
+0007: from fastapi.responses import HTMLResponse
+0008: from fastapi.staticfiles import StaticFiles
+0009: from pydantic import BaseModel, Field
+0010: 
+0011: from terminal_v2.core.api import router as api_router
+0012: from terminal_v2.core.connection_registry import registry
+0013: from terminal_v2.core.sse import router as sse_router
+0014: from terminal_v2.core.device_routes import router as device_router
+0015: from terminal_v2.core.panel_routes import router as panel_router
+0016: from terminal_v2.core.panel_broadcast_routes import router as panel_broadcast_router
+0017: from terminal_v2.core.runtime_state_routes import router as runtime_state_router
+0018: from terminal_v2.core.module_card_routes import router as module_card_router
+0019: from terminal_v2.core.tablet_validation import (
+0020:     tablet_validation_registry,
+0021: )
+0022: from terminal_v2.core.tablet_validation_routes import (
+0023:     validation_page,
+0024: )
+0025: 
+0026: 
+0027: ROOT = Path(__file__).resolve().parents[1]
+0028: TEMPLATE_PATH = ROOT / "templates" / "index.html"
+0029: STATIC_PATH = ROOT / "static"
+0030: 
+0031: 
+0032: class TabletAckRequest(BaseModel):
+0033:     token: str = Field(min_length=16, max_length=128)
+0034:     viewport_width: int = Field(ge=240, le=10000)
+0035:     viewport_height: int = Field(ge=240, le=10000)
+0036:     touch_supported: bool
+0037:     event_source_supported: bool
+0038:     sse_connected: bool
+0039: 
+0040: 
+0041: def create_app() -> FastAPI:
+0042:     app = FastAPI(
+0043:         title="SYK Terminal V2",
+0044:         version="2.0.0",
+0045:     )
+0046: 
+0047:     app.include_router(api_router)
+0048:     app.include_router(sse_router)
+0049:     app.include_router(device_router)
+0050:     app.include_router(panel_router)
+0051:     app.include_router(panel_broadcast_router)
+0052:     app.include_router(runtime_state_router)
+0053:     app.include_router(module_card_router)
+0054: 
+0055:     app.mount(
+0056:         "/static",
+0057:         StaticFiles(directory=str(STATIC_PATH)),
+0058:         name="static",
+0059:     )
+0060: 
+0061:     @app.get("/", response_class=HTMLResponse)
+0062:     def index() -> HTMLResponse:
+0063:         return HTMLResponse(
+0064:             content=TEMPLATE_PATH.read_text(
+0065:                 encoding="utf-8",
+0066:             ),
+0067:             status_code=200,
+0068:         )
+0069: 
+0070:     @app.get(
+0071:         "/tablet-validation/{token}",
+0072:         response_class=HTMLResponse,
+0073:     )
+0074:     async def tablet_validation_page(
+0075:         token: str,
+0076:     ) -> HTMLResponse:
+0077:         return await validation_page(token)
+0078: 
+0079:     @app.post("/api/v2/tablet-validation/session")
+0080:     async def create_tablet_validation_session(
+0081:         request: Request,
+0082:     ) -> dict[str, object]:
+0083:         session = await tablet_validation_registry.create()
+0084: 
+0085:         return {
+0086:             "token": session.token,
+0087:             "validation_path": (
+0088:                 f"/tablet-validation/{session.token}"
+0089:             ),
+0090:             "status_path": (
+0091:                 "/api/v2/tablet-validation/session/"
+0092:                 f"{session.token}"
+0093:             ),
+0094:             "status": "WAITING",
+0095:         }
+0096: 
+0097:     @app.get(
+0098:         "/api/v2/tablet-validation/session/{token}"
+0099:     )
+0100:     async def tablet_validation_status(
+0101:         token: str,
+0102:     ) -> dict[str, object]:
+0103:         session = await tablet_validation_registry.get(token)
+0104: 
+0105:         if session is None:
+0106:             raise HTTPException(
+0107:                 status_code=404,
+0108:                 detail=(
+0109:                     "Tablet doğrulama oturumu bulunamadı."
+0110:                 ),
+0111:             )
+0112: 
+0113:         return session.export()
+0114: 
+0115:     @app.post("/api/v2/tablet-validation/ack")
+0116:     async def acknowledge_tablet_validation(
+0117:         payload: TabletAckRequest,
+0118:         request: Request,
+0119:     ) -> dict[str, object]:
+0120:         client_host = (
+0121:             request.client.host
+0122:             if request.client is not None
+0123:             else "unknown"
+0124:         )
+0125: 
+0126:         session = await tablet_validation_registry.acknowledge(
+0127:             token=payload.token,
+0128:             client_host=client_host,
+0129:             user_agent=request.headers.get(
+0130:                 "user-agent",
+0131:                 "unknown",
+0132:             ),
+0133:             viewport_width=payload.viewport_width,
+0134:             viewport_height=payload.viewport_height,
+0135:             touch_supported=payload.touch_supported,
+0136:             event_source_supported=(
+0137:                 payload.event_source_supported
+0138:             ),
+0139:             sse_connected=payload.sse_connected,
+0140:         )
+
+============================================
+GIT HEAD MAIN.PY - ILK 140 SATIR
+============================================
+0001: from __future__ import annotations
+0002: 
+0003: from datetime import UTC, datetime
+0004: from pathlib import Path
+0005: 
+0006: from fastapi import FastAPI, HTTPException, Request
+0007: from fastapi.responses import HTMLResponse
+0008: from fastapi.staticfiles import StaticFiles
+0009: from pydantic import BaseModel, Field
+0010: 
+0011: from terminal_v2.core.api import router as api_router
+0012: from terminal_v2.core.connection_registry import registry
+0013: from terminal_v2.core.sse import router as sse_router
+0014: from terminal_v2.core.device_routes import router as device_router
+0015: from terminal_v2.core.panel_routes import router as panel_router
+0016: from terminal_v2.core.panel_broadcast_routes import router as panel_broadcast_router
+0017: from terminal_v2.core.runtime_state_routes import router as runtime_state_router
+0018: from terminal_v2.core.module_card_routes import router as module_card_router
+0019: from terminal_v2.core.tablet_validation import (
+0020:     tablet_validation_registry,
+0021: )
+0022: from terminal_v2.core.tablet_validation_routes import (
+0023:     validation_page,
+0024: )
+0025: 
+0026: 
+0027: ROOT = Path(__file__).resolve().parents[1]
+0028: TEMPLATE_PATH = ROOT / "templates" / "index.html"
+0029: STATIC_PATH = ROOT / "static"
+0030: 
+0031: 
+0032: class TabletAckRequest(BaseModel):
+0033:     token: str = Field(min_length=16, max_length=128)
+0034:     viewport_width: int = Field(ge=240, le=10000)
+0035:     viewport_height: int = Field(ge=240, le=10000)
+0036:     touch_supported: bool
+0037:     event_source_supported: bool
+0038:     sse_connected: bool
+0039: 
+0040: 
+0041: def create_app() -> FastAPI:
+0042:     app = FastAPI(
+0043:         title="SYK Terminal V2",
+0044:         version="2.0.0",
+0045:     )
+0046: 
+0047:     app.include_router(api_router)
+0048:     app.include_router(sse_router)
+0049:     app.include_router(device_router)
+0050:     app.include_router(panel_router)
+0051:     app.include_router(panel_broadcast_router)
+0052:     app.include_router(runtime_state_router)
+0053:     app.include_router(module_card_router)
+0054: 
+0055:     app.mount(
+0056:         "/static",
+0057:         StaticFiles(directory=str(STATIC_PATH)),
+0058:         name="static",
+0059:     )
+0060: 
+0061:     @app.get("/", response_class=HTMLResponse)
+0062:     def index() -> HTMLResponse:
+0063:         return HTMLResponse(
+0064:             content=TEMPLATE_PATH.read_text(
+0065:                 encoding="utf-8",
+0066:             ),
+0067:             status_code=200,
+0068:         )
+0069: 
+0070:     @app.get(
+0071:         "/tablet-validation/{token}",
+0072:         response_class=HTMLResponse,
+0073:     )
+0074:     async def tablet_validation_page(
+0075:         token: str,
+0076:     ) -> HTMLResponse:
+0077:         return await validation_page(token)
+0078: 
+0079:     @app.post("/api/v2/tablet-validation/session")
+0080:     async def create_tablet_validation_session(
+0081:         request: Request,
+0082:     ) -> dict[str, object]:
+0083:         session = await tablet_validation_registry.create()
+0084: 
+0085:         return {
+0086:             "token": session.token,
+0087:             "validation_path": (
+0088:                 f"/tablet-validation/{session.token}"
+0089:             ),
+0090:             "status_path": (
+0091:                 "/api/v2/tablet-validation/session/"
+0092:                 f"{session.token}"
+0093:             ),
+0094:             "status": "WAITING",
+0095:         }
+0096: 
+0097:     @app.get(
+0098:         "/api/v2/tablet-validation/session/{token}"
+0099:     )
+0100:     async def tablet_validation_status(
+0101:         token: str,
+0102:     ) -> dict[str, object]:
+0103:         session = await tablet_validation_registry.get(token)
+0104: 
+0105:         if session is None:
+0106:             raise HTTPException(
+0107:                 status_code=404,
+0108:                 detail=(
+0109:                     "Tablet doğrulama oturumu bulunamadı."
+0110:                 ),
+0111:             )
+0112: 
+0113:         return session.export()
+0114: 
+0115:     @app.post("/api/v2/tablet-validation/ack")
+0116:     async def acknowledge_tablet_validation(
+0117:         payload: TabletAckRequest,
+0118:         request: Request,
+0119:     ) -> dict[str, object]:
+0120:         client_host = (
+0121:             request.client.host
+0122:             if request.client is not None
+0123:             else "unknown"
+0124:         )
+0125: 
+0126:         session = await tablet_validation_registry.acknowledge(
+0127:             token=payload.token,
+0128:             client_host=client_host,
+0129:             user_agent=request.headers.get(
+0130:                 "user-agent",
+0131:                 "unknown",
+0132:             ),
+0133:             viewport_width=payload.viewport_width,
+0134:             viewport_height=payload.viewport_height,
+0135:             touch_supported=payload.touch_supported,
+0136:             event_source_supported=(
+0137:                 payload.event_source_supported
+0138:             ),
+0139:             sse_connected=payload.sse_connected,
+0140:         )
