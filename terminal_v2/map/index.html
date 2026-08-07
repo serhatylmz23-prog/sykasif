@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    >
+
+    <title>SyKaşif Harita</title>
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/static/css/harita_real_basemap.css"
+    >
+</head>
+
+<body>
+
+<main
+    id="syk-real-map-shell"
+    data-syk-module="harita"
+    data-syk-map-engine="leaflet-real-basemap"
+>
+
+    <header id="syk-map-topbar">
+
+        <div>
+            <div class="syk-kicker">
+                SyKaşif
+            </div>
+
+            <div class="syk-title">
+                Harita
+            </div>
+        </div>
+
+        <div id="syk-map-view-buttons">
+
+            <button
+                type="button"
+                data-syk-basemap="street"
+                class="active"
+            >
+                Harita
+            </button>
+
+            <button
+                type="button"
+                data-syk-basemap="satellite"
+            >
+                Uydu
+            </button>
+
+            <button
+                type="button"
+                data-syk-basemap="terrain"
+            >
+                Arazi
+            </button>
+
+        </div>
+
+    </header>
+
+    <section id="syk-map-main">
+
+        <aside id="syk-layer-panel">
+
+            <div class="syk-panel-title">
+                KATMANLAR
+            </div>
+
+            <label>
+                <input
+                    type="checkbox"
+                    data-syk-layer="arastirma_noktasi"
+                    checked
+                >
+                Araştırma Noktası
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    data-syk-layer="fotograf"
+                    checked
+                >
+                Fotoğraf
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    data-syk-layer="video"
+                    checked
+                >
+                Video
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    data-syk-layer="ses"
+                    checked
+                >
+                Ses
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    data-syk-layer="olcum"
+                    checked
+                >
+                Ölçüm
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    data-syk-layer="rota"
+                    checked
+                >
+                Rota
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    data-syk-layer="iz"
+                    checked
+                >
+                İz
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    data-syk-layer="kamp" checked
+                >
+                Kamp
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    data-syk-layer="kazi" checked
+                >
+                Kazı
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    data-syk-layer="numune"
+                    checked
+                >
+                Numune
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    data-syk-layer="risk"
+                    checked
+                >
+                Risk
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    data-syk-layer="kanit"
+                    checked
+                >
+                Kanıt
+            </label>
+
+            <div class="syk-panel-divider"></div>
+
+            <button
+                type="button"
+                id="syk-go-turkiye"
+            >
+                Türkiye'ye Dön
+            </button>
+
+        </aside>
+
+        <section id="syk-map-container">
+
+            <div id="syk-real-map"></div>
+
+            <div id="syk-coordinate-box">
+                Enlem: --<br>
+                Boylam: --
+            </div>
+
+            <div id="syk-basemap-state">
+                Gerçek harita yükleniyor...
+            </div>
+
+        </section>
+
+        <aside
+            id="syk-object-panel"
+            data-open="false"
+        >
+
+            <div id="syk-object-header">
+
+                <strong id="syk-object-title">
+                    Nesne
+                </strong>
+
+                <button
+                    type="button"
+                    id="syk-object-close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div id="syk-object-content"></div>
+
+        </aside>
+
+    </section>
+
+    <footer id="syk-map-footer">
+
+        <span>
+            2B · Web Mercator
+        </span>
+
+        <span id="syk-center-state">
+            Merkez hazırlanıyor
+        </span>
+
+        <span id="syk-zoom-state">
+            Zoom --
+        </span>
+
+    </footer>
+
+</main>
+
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+></script>
+
+<script
+    type="module"
+    src="/static/js/harita_real_basemap.js"
+></script>
+
+<script
+    type="module"
+    src="/static/js/harita_terminal_koprusu.js"
+></script>
+
+</body>
+</html>
