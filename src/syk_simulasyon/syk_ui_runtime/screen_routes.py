@@ -3,11 +3,11 @@ from fastapi.responses import HTMLResponse
 
 router = APIRouter()
 
-@router.get("/syk-ui-screen", response_class=HTMLResponse, include_in_schema=False)
+
+@router.get("/syk-ui-screen", response_class=HTMLResponse)
 def syk_ui_screen() -> HTMLResponse:
     return HTMLResponse(
-        """
-<!doctype html>
+        content="""<!doctype html>
 <html lang="tr">
 <head>
     <meta charset="utf-8">
@@ -17,9 +17,8 @@ def syk_ui_screen() -> HTMLResponse:
 <body>
     <main id="syk-terminal-v2">
         <h1>SyKaşif Terminal V2</h1>
-        <p>UI Runtime aktif.</p>
     </main>
 </body>
-</html>
-        """.strip()
+</html>""",
+        status_code=200,
     )
