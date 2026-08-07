@@ -76,3 +76,19 @@
         animation: none;
     }
 }
+
+[data-syk-modul-durum="taraniyor"] {
+    --syk-modul-hareket-hizi: 1.15s;
+}
+
+[data-syk-modul-durum="dogrulaniyor"] {
+    --syk-modul-hareket-hizi: 1.65s;
+}
+
+[data-syk-modul-durum="tamamlandi"] {
+    --syk-modul-hareket-hizi: 0s;
+}
+
+[data-syk-modul-durum="hata"] {
+    --syk-modul-hareket-hizi: 0.8s;
+}
