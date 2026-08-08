@@ -1,0 +1,40 @@
+{
+  "contract": "SYK_TERMINAL_V2_CANONICAL_UI",
+  "sprint": "SPRINT_053_011",
+  "status": "LOCKED",
+  "developmentRoot": "terminal_v2_canonical",
+  "policy": "Kabuk yeniden tasarlanmaz. Yeni geliştirme mevcut kanonik yapı üzerine eklenir.",
+  "nextChain": [
+    "REAL_MAP_ENGINE",
+    "REAL_LAYER_MATRIX_BINDING",
+    "GPS_PROVINCE_NEIGHBOR_SCOPE",
+    "DYNAMIC_PANEL_RESOURCE_MANAGER"
+  ],
+  "files": [
+    {
+      "path": "terminal_v2_canonical/ui/index.html",
+      "bytes": 16812,
+      "sha256": "b73b0284bc49f29aaabc6c78997c23f13a8c6a5d1bf217be0db5f6865ccb0111"
+    },
+    {
+      "path": "terminal_v2_canonical/ui/css/terminal.css",
+      "bytes": 63013,
+      "sha256": "b873b91f1c67ed897311615286af8da2865d1fb50b3ca56223ab653363ae4607"
+    },
+    {
+      "path": "terminal_v2_canonical/ui/js/workspace_shell_053009.js",
+      "bytes": 36749,
+      "sha256": "4bb30378c64dc05731c57f182d81011d901613424308cb57ad1447a1ed3ec6e2"
+    },
+    {
+      "path": "terminal_v2_canonical/ui/js/workspace_shell_053010.js",
+      "bytes": 15428,
+      "sha256": "c567aee77016d8a914d31883bba3d26b266762df6c47198970af3cd1f78b3947"
+    },
+    {
+      "path": "terminal_v2_canonical/ui/js/workspace_shell_053011.js",
+      "bytes": 15424,
+      "sha256": "b2dfd47a37029eb5d5d5864fec120fb464b674ef3dae2304bf05a0572b6984fe"
+    }
+  ]
+}
