@@ -1,0 +1,14 @@
+{
+  "name": "SyKaşif Terminal V2",
+  "short_name": "SyKaşif",
+  "description": "SyKaşif saha ve analiz terminali",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#001014",
+  "theme_color": "#001014",
+  "lang": "tr",
+  "categories": ["utilities", "productivity"],
+  "prefer_related_applications": false
+}
