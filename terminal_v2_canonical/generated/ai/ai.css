@@ -1,0 +1,15 @@
+#module-ai {
+    display: grid;
+    gap: 1rem;
+    min-width: 0;
+}
+
+#module-ai .syk-module__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#module-ai .syk-module__content {
+    overflow: auto;
+}

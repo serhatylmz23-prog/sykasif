@@ -1,0 +1,44 @@
+{
+  "duration_seconds": 2.639639,
+  "finished_utc": "2026-08-05T21:51:29.531175+00:00",
+  "release": {
+    "generated_file_count": 50,
+    "manifest": "SYK_TERMINAL_V2_GENERATED.manifest.json",
+    "manifest_path": "terminal_v2/release/SYK_TERMINAL_V2_GENERATED.manifest.json",
+    "package": "SYK_TERMINAL_V2_GENERATED.zip",
+    "package_path": "terminal_v2/release/SYK_TERMINAL_V2_GENERATED.zip",
+    "package_sha256": "18561500a901bf2e4433a3f18baaf6a0d9fc9ae35d96351b9eb32584c50c023d",
+    "package_size": 12779,
+    "release_id": "SYK_TERMINAL_V2_20260805T215129Z",
+    "sha256_file": "SYK_TERMINAL_V2_GENERATED.zip.sha256",
+    "sha256_path": "terminal_v2/release/SYK_TERMINAL_V2_GENERATED.zip.sha256",
+    "status": "VALIDATED",
+    "validated_utc": "2026-08-05T21:51:29.523270+00:00"
+  },
+  "release_index": {
+    "latest_release_id": "SYK_TERMINAL_V2_20260805T215129Z",
+    "path": "terminal_v2/release/release-index.json",
+    "release_count": 2
+  },
+  "schema": "syk-terminal-v2-release-automation-v1",
+  "started_utc": "2026-08-05T21:51:26.891536+00:00",
+  "status": "PASS",
+  "steps": [
+    {
+      "duration_seconds": 2.398657,
+      "finished_utc": "2026-08-05T21:51:29.290806+00:00",
+      "name": "PRODUCTION_PIPELINE",
+      "return_code": 0,
+      "script": "terminal_v2/builder/production_pipeline.py",
+      "started_utc": "2026-08-05T21:51:26.892149+00:00"
+    },
+    {
+      "duration_seconds": 0.213913,
+      "finished_utc": "2026-08-05T21:51:29.505046+00:00",
+      "name": "PACKAGE_ENGINE",
+      "return_code": 0,
+      "script": "terminal_v2/builder/package_engine.py",
+      "started_utc": "2026-08-05T21:51:29.291133+00:00"
+    }
+  ]
+}

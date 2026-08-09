@@ -1,0 +1,4946 @@
+:root {
+    --zemin: #041015;
+    --zemin-2: #06161b;
+
+    --panel: #091b21;
+    --panel-2: #0b2027;
+    --panel-3: #0d252c;
+
+    --metin: #edf7f8;
+    --soluk: #8ca8af;
+
+    --enerji: #59dce8;
+    --canli: #58dfce;
+
+    --cizgi: rgba(89, 220, 232, .17);
+    --cizgi-guclu: rgba(89, 220, 232, .34);
+
+    --golge:
+        0 18px 55px rgba(0, 0, 0, .22);
+
+    --radius: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--zemin);
+    color: var(--metin);
+    font-family:
+        "Segoe UI",
+        system-ui,
+        sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    color: inherit;
+}
+
+.terminal {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        205px
+        minmax(0, 1fr)
+        220px;
+
+    grid-template-rows:
+        68px
+        minmax(0, 1fr);
+
+    background:
+        radial-gradient(
+            circle at 58% 10%,
+            rgba(44, 140, 154, .07),
+            transparent 34%
+        ),
+        var(--zemin);
+}
+
+
+/* ======================================================== */
+/* ÜST BAR */
+/* ======================================================== */
+
+.ust-bar {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    border-bottom:
+        1px solid var(--cizgi);
+
+    background:
+        rgba(3, 12, 16, .97);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 50;
+}
+
+.kimlik {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+.logo-alani {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid var(--cizgi-guclu);
+
+    display: grid;
+
+    place-items: center;
+
+    position: relative;
+}
+
+.logo-alani::before,
+.logo-alani::after {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(89, 220, 232, .25);
+}
+
+.logo-alani::before {
+    inset: 6px;
+}
+
+.logo-alani::after {
+    inset: 11px;
+}
+
+.logo-cekirdek {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--enerji);
+
+    box-shadow:
+        0 0 13px var(--enerji);
+}
+
+.kimlik-yazi strong,
+.kimlik-yazi small {
+    display: block;
+}
+
+.kimlik-yazi strong {
+    font-size: 14px;
+}
+
+.kimlik-yazi small {
+    margin-top: 2px;
+
+    color: var(--soluk);
+
+    letter-spacing: .16em;
+
+    font-size: 9px;
+}
+
+.ust-durum {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+.canli-durum {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    text-align: right;
+}
+
+.canli-durum strong,
+.canli-durum small {
+    display: block;
+}
+
+.canli-durum strong {
+    font-size: 11px;
+}
+
+.canli-durum small {
+    margin-top: 2px;
+
+    color: var(--soluk);
+
+    font-size: 9px;
+}
+
+.durum-noktasi {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--canli);
+
+    box-shadow:
+        0 0 12px var(--canli);
+}
+
+.ust-buton {
+    border:
+        1px solid var(--cizgi-guclu);
+
+    border-radius: 9px;
+
+    background:
+        rgba(89, 220, 232, .07);
+
+    padding:
+        8px 12px;
+
+    cursor: pointer;
+}
+
+
+/* ======================================================== */
+/* ANA MENÜ */
+/* ======================================================== */
+
+.ana-menu {
+    grid-column: 1;
+    grid-row: 2;
+
+    min-height: 0;
+
+    border-right:
+        1px solid var(--cizgi);
+
+    padding:
+        14px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.ana-menu-listesi {
+    display: grid;
+
+    gap: 6px;
+}
+
+.ana-menu-buton {
+    width: 100%;
+
+    min-height: 44px;
+
+    border:
+        1px solid transparent;
+
+    border-radius: 11px;
+
+    background: transparent;
+
+    color: var(--soluk);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding:
+        0 12px;
+
+    cursor: pointer;
+}
+
+.ana-menu-buton span {
+    width: 18px;
+
+    text-align: center;
+
+    color: var(--enerji);
+}
+
+.ana-menu-buton b {
+    font-weight: 500;
+}
+
+.ana-menu-buton:hover,
+.ana-menu-buton.aktif {
+    color: var(--metin);
+
+    border-color:
+        var(--cizgi-guclu);
+
+    background:
+        rgba(89, 220, 232, .09);
+}
+
+.ana-menu-alt {
+    border:
+        1px solid var(--cizgi);
+
+    border-radius: 11px;
+
+    padding: 12px;
+}
+
+.ana-menu-alt small,
+.ana-menu-alt strong {
+    display: block;
+}
+
+.ana-menu-alt small {
+    color: var(--soluk);
+
+    font-size: 8px;
+
+    letter-spacing: .15em;
+}
+
+.ana-menu-alt strong {
+    margin-top: 6px;
+
+    color: var(--canli);
+
+    font-size: 10px;
+}
+
+
+/* ======================================================== */
+/* ÇALIŞMA ALANI */
+/* ======================================================== */
+
+.calisma-alani {
+    grid-column: 2;
+    grid-row: 2;
+
+    min-width: 0;
+
+    padding: 16px;
+
+    overflow: auto;
+}
+
+.calisma-ust {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 12px;
+}
+
+.etiket {
+    color: var(--enerji);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+}
+
+.calisma-ust h1 {
+    margin:
+        5px 0 0;
+
+    font-size: 26px;
+}
+
+.gorunum-secici {
+    display: flex;
+
+    gap: 5px;
+}
+
+.gorunum-buton {
+    min-width: 45px;
+
+    border:
+        1px solid var(--cizgi);
+
+    border-radius: 9px;
+
+    background:
+        var(--panel);
+
+    color: var(--soluk);
+
+    padding:
+        8px 10px;
+
+    cursor: pointer;
+}
+
+.gorunum-buton.aktif {
+    color: var(--metin);
+
+    border-color:
+        var(--cizgi-guclu);
+
+    background:
+        rgba(89, 220, 232, .10);
+}
+
+
+/* ======================================================== */
+/* KATMAN MENÜSÜ */
+/* ======================================================== */
+
+.katman-paneli {
+    border:
+        1px solid var(--cizgi);
+
+    border-radius:
+        var(--radius);
+
+    background:
+        var(--panel);
+
+    padding: 14px;
+
+    margin-bottom: 12px;
+
+    box-shadow:
+        var(--golge);
+}
+
+.katman-baslik {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 12px;
+}
+
+.katman-baslik h2 {
+    margin:
+        4px 0 0;
+
+    font-size: 16px;
+}
+
+.hepsini-sec {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    cursor: pointer;
+
+    color: var(--metin);
+
+    font-size: 11px;
+}
+
+.hepsini-sec input,
+.katman-secim input {
+    accent-color:
+        var(--enerji);
+}
+
+.katman-listesi {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.katman-secim {
+    border:
+        1px solid var(--cizgi);
+
+    border-radius:
+        999px;
+
+    padding:
+        7px 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    color: var(--soluk);
+
+    font-size: 10px;
+}
+
+.katman-secim:has(input:checked) {
+    color: var(--metin);
+
+    border-color:
+        var(--cizgi-guclu);
+
+    background:
+        rgba(89, 220, 232, .08);
+}
+
+
+/* ======================================================== */
+/* DİNAMİK PANEL GRID */
+/* ======================================================== */
+
+.dinamik-ekran {
+    display: grid;
+
+    gap: 12px;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    align-items: stretch;
+}
+
+.dinamik-ekran[data-panel-sayisi="1"] {
+    grid-template-columns:
+        minmax(0, 1fr);
+}
+
+.dinamik-ekran[data-panel-sayisi="2"] {
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+}
+
+.dinamik-ekran[data-panel-sayisi="3"] {
+    grid-template-columns:
+        minmax(0, 1.65fr)
+        minmax(260px, .75fr);
+}
+
+.dinamik-ekran[data-panel-sayisi="3"]
+.calismа-paneli:first-child {
+    grid-row:
+        span 2;
+}
+
+.calisma-paneli {
+    min-height: 240px;
+
+    border:
+        1px solid var(--cizgi);
+
+    border-radius:
+        var(--radius);
+
+    background:
+        var(--panel);
+
+    overflow: hidden;
+
+    box-shadow:
+        var(--golge);
+}
+
+.panel-harita {
+    min-height: 520px;
+}
+
+.calisma-paneli.gizli {
+    display: none;
+}
+
+.calisma-paneli > header {
+    height: 58px;
+
+    border-bottom:
+        1px solid var(--cizgi);
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding:
+        0 14px;
+}
+
+.calisma-paneli h3 {
+    margin:
+        4px 0 0;
+
+    font-size: 14px;
+}
+
+.panel-kapat {
+    width: 30px;
+    height: 30px;
+
+    border:
+        1px solid var(--cizgi);
+
+    border-radius: 8px;
+
+    background:
+        transparent;
+
+    color: var(--soluk);
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* ======================================================== */
+/* HARİTA */
+/* ======================================================== */
+
+.harita-yuzeyi {
+    min-height: 462px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(32, 112, 123, .13),
+            transparent 38%
+        ),
+        #06161a;
+}
+
+.koordinat-izgarasi {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(89, 220, 232, .045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(89, 220, 232, .045) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        42px 42px;
+}
+
+.harita-merkez {
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    place-content: center;
+
+    text-align: center;
+
+    pointer-events: none;
+}
+
+.harita-merkez span,
+.harita-merkez small {
+    color: var(--soluk);
+}
+
+.harita-merkez span {
+    font-size: 9px;
+
+    letter-spacing: .18em;
+}
+
+.harita-merkez strong {
+    margin:
+        7px 0;
+
+    font-size: 20px;
+}
+
+.harita-merkez small {
+    max-width: 300px;
+
+    line-height: 1.5;
+}
+
+.rota-iz-cizimi {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.rota-cizgi,
+.iz-cizgi {
+    fill: none;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.rota-cizgi {
+    stroke:
+        var(--enerji);
+
+    stroke-width: 3;
+
+    filter:
+        drop-shadow(
+            0 0 6px
+            rgba(89, 220, 232, .35)
+        );
+}
+
+.iz-cizgi {
+    stroke:
+        rgba(88, 223, 206, .65);
+
+    stroke-width: 2;
+
+    stroke-dasharray:
+        5 7;
+}
+
+
+/* ======================================================== */
+/* ETKİN KATMANLAR */
+/* ======================================================== */
+
+.etkin-katmanlar {
+    padding: 14px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.etkin-katman {
+    padding:
+        7px 10px;
+
+    border:
+        1px solid var(--cizgi-guclu);
+
+    border-radius:
+        999px;
+
+    font-size: 9px;
+
+    color: var(--metin);
+
+    background:
+        rgba(89, 220, 232, .07);
+}
+
+
+/* ======================================================== */
+/* KAŞİF */
+/* ======================================================== */
+
+.kasif-alani {
+    padding: 20px;
+
+    text-align: center;
+}
+
+.kasif-siluet {
+    min-height: 135px;
+
+    display: grid;
+
+    place-items: center;
+
+    position: relative;
+}
+
+.kasif-kapuson {
+    width: 78px;
+    height: 100px;
+
+    border-radius:
+        48% 48% 40% 40%;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(112, 139, 145, .28),
+            rgba(11, 18, 20, .96)
+        );
+
+    display: grid;
+
+    place-items: center;
+
+    box-shadow:
+        inset 0 0 25px rgba(0,0,0,.55);
+}
+
+.kasif-yuz {
+    width: 40px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background:
+        #010304;
+}
+
+.ses-dalgasi {
+    position: absolute;
+
+    bottom: 6px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+.ses-dalgasi i {
+    display: block;
+
+    width: 2px;
+    height: 7px;
+
+    border-radius: 3px;
+
+    background:
+        rgba(89, 220, 232, .58);
+
+    animation:
+        ses 1.1s ease-in-out
+        infinite alternate;
+}
+
+.ses-dalgasi i:nth-child(2),
+.ses-dalgasi i:nth-child(6) {
+    height: 12px;
+}
+
+.ses-dalgasi i:nth-child(3),
+.ses-dalgasi i:nth-child(5) {
+    height: 17px;
+}
+
+.ses-dalgasi i:nth-child(4) {
+    height: 22px;
+}
+
+@keyframes ses {
+    to {
+        transform:
+            scaleY(.45);
+
+        opacity:
+            .45;
+    }
+}
+
+.kasif-alani p {
+    color: var(--soluk);
+
+    font-size: 10px;
+
+    line-height: 1.55;
+}
+
+
+/* ======================================================== */
+/* SAĞ PANEL */
+/* ======================================================== */
+
+.durum-paneli {
+    grid-column: 3;
+    grid-row: 2;
+
+    min-height: 0;
+
+    border-left:
+        1px solid var(--cizgi);
+
+    padding: 14px 11px;
+
+    display: grid;
+
+    align-content: start;
+
+    gap: 10px;
+}
+
+.durum-karti {
+    border:
+        1px solid var(--cizgi);
+
+    border-radius:
+        13px;
+
+    background:
+        var(--panel);
+
+    padding: 14px;
+}
+
+.durum-karti strong,
+.durum-karti small {
+    display: block;
+}
+
+.durum-karti strong {
+    margin-top: 11px;
+
+    font-size: 13px;
+}
+
+.durum-karti small {
+    margin-top: 6px;
+
+    color: var(--soluk);
+
+    font-size: 9px;
+}
+
+.bos-panel {
+    padding: 24px;
+
+    color: var(--soluk);
+
+    font-size: 11px;
+}
+
+
+/* ======================================================== */
+/* MOBİL */
+/* ======================================================== */
+
+.mobil-alt-menu {
+    display: none;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1150px) {
+
+    .terminal {
+        grid-template-columns:
+            180px
+            minmax(0,1fr);
+    }
+
+    .durum-paneli {
+        display: none;
+    }
+}
+
+
+/* DAR TABLET */
+
+@media (max-width: 850px) {
+
+    .dinamik-ekran,
+    .dinamik-ekran[data-panel-sayisi="2"],
+    .dinamik-ekran[data-panel-sayisi="3"] {
+        grid-template-columns:
+            1fr;
+    }
+
+    .panel-harita {
+        min-height: 460px;
+    }
+}
+
+
+/* TELEFON */
+
+@media (max-width: 650px) {
+
+    .terminal {
+        display: block;
+
+        padding-bottom:
+            66px;
+    }
+
+    .ust-bar {
+        height: 60px;
+
+        position: sticky;
+    }
+
+    .ana-menu {
+        display: none;
+    }
+
+    .calisma-alani {
+        padding: 10px;
+    }
+
+    .calisma-ust {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .katman-baslik {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .katman-listesi {
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        padding-bottom: 4px;
+    }
+
+    .katman-secim {
+        flex:
+            0 0 auto;
+    }
+
+    .panel-harita {
+        min-height: 420px;
+    }
+
+    .harita-yuzeyi {
+        min-height: 360px;
+    }
+
+    .canli-durum small,
+    .ust-buton {
+        display: none;
+    }
+
+    .mobil-alt-menu {
+        display: grid;
+
+        grid-template-columns:
+            repeat(5,1fr);
+
+        position: fixed;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        height: 62px;
+
+        background:
+            rgba(3, 12, 16, .98);
+
+        border-top:
+            1px solid var(--cizgi-guclu);
+
+        z-index: 80;
+    }
+
+    .mobil-alt-menu button {
+        border: 0;
+
+        background: transparent;
+
+        color: var(--soluk);
+
+        display: grid;
+
+        place-content: center;
+
+        gap: 3px;
+
+        font-size: 8px;
+    }
+
+    .mobil-alt-menu button span {
+        color: var(--enerji);
+
+        font-size: 14px;
+    }
+
+    .mobil-alt-menu button.aktif {
+        color: var(--metin);
+
+        background:
+            rgba(89, 220, 232, .08);
+    }
+}
+
+/* ========================================================
+   SPRINT_053_006_DYNAMIC_LAYER_UI
+   ======================================================== */
+
+.taban-harita-satiri {
+    display: grid;
+    gap: 7px;
+    margin-bottom: 12px;
+}
+
+.alt-baslik {
+    color: var(--soluk);
+    font-size: 8px;
+    letter-spacing: .15em;
+}
+
+.katman-alt-baslik {
+    margin-bottom: 7px;
+}
+
+.taban-harita-listesi,
+.katman-listesi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.taban-harita-secim,
+.katman-secim {
+    min-height: 31px;
+    border: 1px solid var(--cizgi);
+    border-radius: 999px;
+    background: rgba(255,255,255,.012);
+    color: var(--soluk);
+    padding: 6px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.taban-harita-secim:hover,
+.katman-secim:hover {
+    border-color: var(--cizgi-guclu);
+}
+
+.taban-harita-secim:has(input:checked),
+.katman-secim:has(input:checked) {
+    color: var(--metin);
+    border-color: var(--cizgi-guclu);
+    background: rgba(89,220,232,.09);
+}
+
+.taban-harita-secim input,
+.katman-secim input {
+    accent-color: var(--enerji);
+    margin: 0;
+}
+
+.katman-ikon {
+    color: var(--enerji);
+    min-width: 12px;
+    text-align: center;
+}
+
+.harita-yuzeyi[data-taban="harita"] {
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(32,112,123,.13),
+            transparent 38%
+        ),
+        #06161a;
+}
+
+.harita-yuzeyi[data-taban="uydu"] {
+    background:
+        radial-gradient(
+            circle at 58% 42%,
+            rgba(78,115,113,.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #061113,
+            #0c1919
+        );
+}
+
+.harita-yuzeyi[data-taban="arazi"] {
+    background:
+        radial-gradient(
+            ellipse at 42% 55%,
+            rgba(104,123,91,.14),
+            transparent 36%
+        ),
+        #071517;
+}
+
+.harita-yuzeyi[data-taban="topografya"] {
+    background:
+        repeating-radial-gradient(
+            ellipse at 50% 50%,
+            rgba(89,220,232,.055) 0 1px,
+            transparent 1px 22px
+        ),
+        #06161a;
+}
+
+.dinamik-katman-paneli {
+    min-height: 170px;
+}
+
+.dinamik-katman-icerik {
+    padding: 15px;
+    color: var(--soluk);
+    font-size: 10px;
+}
+
+@media (max-width:650px) {
+    .taban-harita-listesi,
+    .katman-listesi {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+
+    .taban-harita-secim,
+    .katman-secim {
+        flex: 0 0 auto;
+    }
+}
+
+/* ========================================================
+   SPRINT_053_007_BOTTOM_MENU
+   ======================================================== */
+
+.legacy-katman-paneli {
+    display: none !important;
+}
+
+.calisma-alani {
+    padding-bottom: 190px;
+}
+
+.dinamik-alt-menu {
+    position: fixed;
+    left: 205px;
+    right: 220px;
+    bottom: 0;
+    z-index: 70;
+
+    min-height: 150px;
+    max-height: 240px;
+
+    border-top: 1px solid var(--cizgi-guclu);
+
+    background:
+        rgba(4, 16, 21, .98);
+
+    backdrop-filter:
+        blur(18px);
+
+    box-shadow:
+        0 -18px 45px rgba(0,0,0,.26);
+
+    padding:
+        11px 14px 14px;
+
+    overflow: auto;
+}
+
+.dinamik-alt-menu-ust {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-bottom: 9px;
+}
+
+.dinamik-alt-menu-ust strong {
+    display: block;
+    margin-top: 3px;
+    font-size: 13px;
+}
+
+.alt-hepsini-sec {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 10px;
+    color: var(--metin);
+
+    cursor: pointer;
+}
+
+.alt-hepsini-sec input {
+    accent-color: var(--enerji);
+}
+
+.alt-basliklar,
+.alt-katmanlar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.alt-basliklar {
+    margin-bottom: 8px;
+}
+
+.alt-baslik-buton,
+.alt-katman-secim {
+    flex: 0 0 auto;
+
+    min-height: 31px;
+
+    border:
+        1px solid var(--cizgi);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(255,255,255,.015);
+
+    color:
+        var(--soluk);
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        6px 10px;
+
+    cursor:
+        pointer;
+
+    transition:
+        opacity .15s ease,
+        transform .15s ease,
+        border-color .15s ease,
+        background .15s ease;
+}
+
+.alt-baslik-buton.aktif,
+.alt-katman-secim.secili {
+    color:
+        var(--metin);
+
+    border-color:
+        var(--cizgi-guclu);
+
+    background:
+        rgba(89,220,232,.10);
+
+    order:
+        -10;
+
+    opacity:
+        1;
+}
+
+.alt-katman-secim.secili {
+    transform:
+        translateY(-1px);
+}
+
+.alt-katman-secim.secili-yuksek {
+    order:
+        -30;
+}
+
+.alt-katman-secim.secili-orta {
+    order:
+        -20;
+}
+
+.alt-katman-secim.secili-dusuk {
+    order:
+        -10;
+}
+
+.alt-katman-secim.secili-degil {
+    order:
+        20;
+
+    opacity:
+        .48;
+}
+
+.alt-katman-secim:hover {
+    opacity:
+        1;
+}
+
+.alt-katman-secim input {
+    accent-color:
+        var(--enerji);
+
+    margin:
+        0;
+}
+
+.alt-katman-ikon {
+    color:
+        var(--enerji);
+}
+
+.kasif-mini {
+    position:
+        fixed;
+
+    right:
+        18px;
+
+    bottom:
+        168px;
+
+    z-index:
+        90;
+
+    border:
+        1px solid var(--cizgi-guclu);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(6,22,27,.96);
+
+    color:
+        var(--metin);
+
+    min-width:
+        84px;
+
+    height:
+        36px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        7px;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,.25);
+}
+
+.kasif-mini-simge {
+    color:
+        var(--enerji);
+
+    font-size:
+        16px;
+}
+
+.harita-kapsam-etiketi {
+    position:
+        absolute;
+
+    left:
+        12px;
+
+    bottom:
+        12px;
+
+    z-index:
+        8;
+
+    border:
+        1px solid var(--cizgi);
+
+    border-radius:
+        8px;
+
+    background:
+        rgba(4,16,21,.86);
+
+    padding:
+        7px 9px;
+
+    font-size:
+        9px;
+
+    color:
+        var(--soluk);
+}
+
+.harita-kapsam-etiketi strong {
+    color:
+        var(--metin);
+}
+
+@media (max-width:1150px) {
+    .dinamik-alt-menu {
+        left: 180px;
+        right: 0;
+    }
+
+    .kasif-mini {
+        right: 14px;
+    }
+}
+
+@media (max-width:650px) {
+    .calisma-alani {
+        padding-bottom: 220px;
+    }
+
+    .dinamik-alt-menu {
+        left: 0;
+        right: 0;
+        bottom: 62px;
+        max-height: 190px;
+    }
+
+    .kasif-mini {
+        right: 12px;
+        bottom: 260px;
+    }
+}
+
+
+/* ==========================================================
+   SPRINT_053_008_VIDEO_DRAWER
+   Video referanslı SyKaşif alt katman navigasyonu
+   ========================================================== */
+
+.legacy-katman-paneli,
+.dinamik-alt-menu {
+    display: none !important;
+}
+
+.calisma-alani {
+    padding-bottom: 82px !important;
+}
+
+.syk-drawer-kabuk {
+    position: fixed;
+    left: 205px;
+    right: 220px;
+    bottom: 0;
+    z-index: 150;
+
+    pointer-events: none;
+}
+
+.syk-alt-ikon-cubugu {
+    height: 66px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 7px 12px;
+
+    border-top: 1px solid var(--cizgi-guclu);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(4,16,21,.94),
+            rgba(3,12,16,.99)
+        );
+
+    backdrop-filter: blur(18px);
+
+    pointer-events: auto;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.syk-ana-ikon {
+    flex: 0 0 auto;
+
+    min-width: 66px;
+    height: 48px;
+
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    background: transparent;
+    color: var(--soluk);
+
+    display: grid;
+    place-items: center;
+
+    gap: 2px;
+
+    cursor: pointer;
+
+    transition:
+        border-color .16s ease,
+        background .16s ease,
+        color .16s ease,
+        transform .16s ease;
+}
+
+.syk-ana-ikon:hover,
+.syk-ana-ikon.aktif {
+    color: var(--metin);
+
+    border-color: var(--cizgi-guclu);
+
+    background:
+        rgba(89,220,232,.09);
+
+    transform:
+        translateY(-2px);
+}
+
+.syk-ana-ikon .ikon {
+    color: var(--enerji);
+    font-size: 17px;
+}
+
+.syk-ana-ikon .ad {
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+
+.syk-drawer {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 66px;
+
+    min-height: 0;
+    max-height: 0;
+
+    overflow: hidden;
+
+    border-top:
+        1px solid transparent;
+
+    background:
+        rgba(4,16,21,.975);
+
+    backdrop-filter:
+        blur(22px);
+
+    transform:
+        translateY(18px);
+
+    opacity: 0;
+
+    transition:
+        max-height .24s ease,
+        min-height .24s ease,
+        transform .24s ease,
+        opacity .18s ease,
+        border-color .18s ease;
+
+    pointer-events: none;
+}
+
+.syk-drawer.acik {
+    min-height: 124px;
+    max-height: 280px;
+
+    transform:
+        translateY(0);
+
+    opacity: 1;
+
+    border-color:
+        var(--cizgi-guclu);
+
+    box-shadow:
+        0 -22px 50px rgba(0,0,0,.28);
+
+    pointer-events: auto;
+}
+
+.syk-drawer-tutamac {
+    width: 42px;
+    height: 3px;
+
+    border-radius: 999px;
+
+    margin: 7px auto 3px;
+
+    background:
+        rgba(140,190,198,.25);
+}
+
+.syk-drawer-ust {
+    min-height: 47px;
+
+    display: grid;
+    grid-template-columns: 38px 1fr auto;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 4px 14px 7px;
+}
+
+.syk-drawer-baslik span,
+.syk-drawer-baslik strong {
+    display: block;
+}
+
+.syk-drawer-baslik span {
+    color: var(--enerji);
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: .17em;
+}
+
+.syk-drawer-baslik strong {
+    margin-top: 3px;
+    font-size: 13px;
+}
+
+.syk-geri,
+.syk-hepsini-sec {
+    border:
+        1px solid var(--cizgi);
+
+    background:
+        rgba(255,255,255,.018);
+
+    color:
+        var(--soluk);
+
+    cursor:
+        pointer;
+}
+
+.syk-geri {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+    line-height: 1;
+}
+
+.syk-geri.gizli {
+    visibility: hidden;
+}
+
+.syk-hepsini-sec {
+    min-height: 31px;
+
+    border-radius: 999px;
+
+    padding:
+        6px 11px;
+
+    font-size: 9px;
+}
+
+.syk-hepsini-sec.tumu-secili {
+    color: var(--metin);
+
+    border-color:
+        var(--cizgi-guclu);
+
+    background:
+        rgba(89,220,232,.10);
+}
+
+
+.syk-drawer-secimler {
+    min-height: 62px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        5px 14px 14px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.syk-secim {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    min-width: 88px;
+    height: 47px;
+
+    border:
+        1px solid var(--cizgi);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255,255,255,.012);
+
+    color:
+        var(--soluk);
+
+    display:
+        grid;
+
+    grid-template-columns:
+        22px 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        0 11px;
+
+    cursor:
+        pointer;
+
+    transition:
+        order .18s ease,
+        opacity .18s ease,
+        transform .18s ease,
+        background .18s ease,
+        border-color .18s ease;
+}
+
+.syk-secim .ikon {
+    color:
+        var(--enerji);
+
+    text-align:
+        center;
+}
+
+.syk-secim .metin {
+    text-align:
+        left;
+
+    font-size:
+        9px;
+
+    white-space:
+        nowrap;
+}
+
+.syk-secim .cocuk-isareti {
+    position:
+        absolute;
+
+    right:
+        7px;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%);
+
+    color:
+        var(--enerji);
+
+    font-size:
+        12px;
+
+    opacity:
+        .65;
+}
+
+.syk-secim.secili {
+    order: -100;
+
+    color:
+        var(--metin);
+
+    border-color:
+        var(--cizgi-guclu);
+
+    background:
+        rgba(89,220,232,.10);
+
+    opacity:
+        1;
+
+    transform:
+        translateY(-2px);
+}
+
+.syk-secim.secili.oncelik-yuksek {
+    order: -300;
+}
+
+.syk-secim.secili.oncelik-orta {
+    order: -200;
+}
+
+.syk-secim.secili.oncelik-dusuk {
+    order: -100;
+}
+
+.syk-secim.secili-degil {
+    order: 100;
+    opacity: .50;
+}
+
+.syk-secim.secili-degil:hover {
+    opacity: 1;
+}
+
+.syk-secim.alt-baslik {
+    min-width: 112px;
+}
+
+
+/* Kaşif çalışma alanını işgal etmez */
+
+.kasif-mini {
+    right: 18px !important;
+    bottom: 78px !important;
+}
+
+
+/* Drawer açıkken haritanın üzerine gelir;
+   layout ölçülerini yeniden hesaplamaz. */
+
+.syk-drawer.acik ~ .syk-alt-ikon-cubugu {
+    border-top-color:
+        var(--cizgi-guclu);
+}
+
+
+/* Tablet */
+
+@media (max-width:1150px) {
+
+    .syk-drawer-kabuk {
+        left: 180px;
+        right: 0;
+    }
+}
+
+
+/* Telefon */
+
+@media (max-width:650px) {
+
+    .syk-drawer-kabuk {
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .syk-alt-ikon-cubugu {
+        height: 61px;
+
+        justify-content:
+            flex-start;
+    }
+
+    .syk-drawer {
+        bottom: 61px;
+    }
+
+    .syk-drawer.acik {
+        max-height: 235px;
+    }
+
+    .syk-ana-ikon {
+        min-width: 58px;
+        height: 43px;
+    }
+
+    .syk-secim {
+        min-width: 82px;
+    }
+
+    .kasif-mini {
+        bottom: 70px !important;
+    }
+
+    .mobil-alt-menu {
+        display: none !important;
+    }
+}
+
+
+/* ==========================================================
+   SPRINT_053_008A_VISIBILITY_LOCK
+   ========================================================== */
+
+#sykDrawer {
+    display: block !important;
+    visibility: visible !important;
+}
+
+#sykAltIkonCubugu {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#sykDrawerPanel {
+    visibility: visible;
+}
+
+#sykDrawerPanel:not(.acik) {
+    pointer-events: none;
+}
+
+#sykDrawerPanel.acik {
+    pointer-events: auto;
+}
+
+
+/* ==========================================================
+   SPRINT_053_008C_STATIC_DOM_PROBE
+   ========================================================== */
+
+#syk008cKanıt {
+    position: fixed !important;
+
+    left: 184px !important;
+    right: 198px !important;
+    bottom: 0 !important;
+
+    z-index: 2147483000 !important;
+
+    height: 72px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 10px !important;
+
+    padding: 8px 14px !important;
+
+    border-top:
+        1px solid rgba(72,205,220,.42) !important;
+
+    background:
+        rgba(3,15,20,.985) !important;
+
+    box-shadow:
+        0 -14px 36px rgba(0,0,0,.38) !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#syk008cKanıt .syk008cAna {
+    min-width: 78px !important;
+    height: 51px !important;
+
+    border:
+        1px solid rgba(70,145,155,.28) !important;
+
+    border-radius:
+        12px !important;
+
+    background:
+        rgba(255,255,255,.015) !important;
+
+    color:
+        rgba(210,231,234,.70) !important;
+
+    display: grid !important;
+    place-items: center !important;
+
+    padding: 4px 9px !important;
+
+    cursor: pointer !important;
+}
+
+#syk008cKanıt .syk008cAna span {
+    color:
+        rgb(80,215,229) !important;
+
+    font-size:
+        16px !important;
+}
+
+#syk008cKanıt .syk008cAna strong {
+    font-size:
+        9px !important;
+
+    font-weight:
+        500 !important;
+}
+
+#syk008cKanıt .syk008cAna.aktif {
+    border-color:
+        rgba(80,215,229,.68) !important;
+
+    background:
+        rgba(80,215,229,.10) !important;
+
+    color:
+        white !important;
+}
+
+@media(max-width:700px){
+
+    #syk008cKanıt {
+        left: 0 !important;
+        right: 0 !important;
+
+        justify-content:
+            flex-start !important;
+
+        overflow-x:
+            auto !important;
+    }
+}
+
+
+/* ==========================================================
+   SPRINT_053_009_MAX_WORKSPACE
+   ========================================================== */
+
+.syk009-kolon-gizli {
+    display: none !important;
+}
+
+.syk009-eski-kasif-gizli,
+.syk009-global-gorunum-gizli {
+    display: none !important;
+}
+
+.syk009-shell-tek-kolon {
+    grid-template-columns:
+        minmax(0,1fr) !important;
+}
+
+
+/* ==========================================================
+   KANITLANMIŞ ALT MENÜ = TEK ANA MENÜ
+   ========================================================== */
+
+#syk008cKanıt.syk009-ana-menu {
+    left: 0 !important;
+    right: 0 !important;
+
+    height: 66px !important;
+
+    z-index: 5000 !important;
+
+    justify-content:
+        center !important;
+
+    padding:
+        7px 14px !important;
+
+    background:
+        rgba(3,15,20,.985) !important;
+}
+
+#syk008cKanıt.syk009-ana-menu
+.syk008cAna {
+    min-width:
+        82px !important;
+
+    height:
+        49px !important;
+}
+
+
+/* ==========================================================
+   ALT DURUM ŞERİDİ
+   ========================================================== */
+
+#syk009DurumCubugu {
+    position:
+        fixed;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        66px;
+
+    z-index:
+        4990;
+
+    min-height:
+        29px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        18px;
+
+    padding:
+        4px 14px;
+
+    border-top:
+        1px solid
+        rgba(61,121,131,.18);
+
+    background:
+        rgba(3,15,20,.93);
+
+    backdrop-filter:
+        blur(16px);
+
+    color:
+        rgba(185,211,215,.60);
+
+    font-size:
+        8px;
+}
+
+#syk009DurumCubugu span {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        5px;
+
+    white-space:
+        nowrap;
+}
+
+.syk009-nokta {
+    width:
+        6px;
+
+    height:
+        6px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgb(77,220,205);
+
+    box-shadow:
+        0 0 9px
+        rgba(77,220,205,.65);
+}
+
+
+/* ==========================================================
+   GERÇEK BOTTOM DRAWER
+   ========================================================== */
+
+#syk009Drawer {
+    position:
+        fixed;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        95px;
+
+    z-index:
+        4980;
+
+    max-height:
+        0;
+
+    overflow:
+        hidden;
+
+    opacity:
+        0;
+
+    transform:
+        translateY(24px);
+
+    pointer-events:
+        none;
+
+    border-top:
+        1px solid
+        transparent;
+
+    background:
+        rgba(4,18,23,.985);
+
+    backdrop-filter:
+        blur(22px);
+
+    transition:
+        max-height .24s ease,
+        opacity .18s ease,
+        transform .24s ease,
+        border-color .18s ease;
+}
+
+#syk009Drawer.acik {
+    max-height:
+        260px;
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+    pointer-events:
+        auto;
+
+    border-top-color:
+        rgba(74,199,213,.30);
+
+    box-shadow:
+        0 -18px 40px
+        rgba(0,0,0,.30);
+}
+
+.syk009-tutamac {
+    width:
+        44px;
+
+    height:
+        3px;
+
+    margin:
+        7px auto 2px;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(111,186,195,.28);
+}
+
+.syk009-drawer-header {
+    display:
+        grid;
+
+    grid-template-columns:
+        36px 1fr auto;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    min-height:
+        48px;
+
+    padding:
+        4px 18px 6px;
+}
+
+.syk009-drawer-header strong {
+    display:
+        block;
+
+    margin-top:
+        2px;
+
+    color:
+        var(--metin);
+
+    font-size:
+        13px;
+}
+
+.syk009-etiket {
+    display:
+        block;
+
+    color:
+        var(--enerji);
+
+    font-size:
+        7px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .16em;
+}
+
+.syk009-geri,
+.syk009-hepsini-sec {
+    border:
+        1px solid
+        var(--cizgi);
+
+    background:
+        rgba(255,255,255,.015);
+
+    color:
+        var(--soluk);
+
+    cursor:
+        pointer;
+}
+
+.syk009-geri {
+    width:
+        31px;
+
+    height:
+        31px;
+
+    border-radius:
+        50%;
+
+    font-size:
+        20px;
+}
+
+.syk009-hepsini-sec {
+    min-height:
+        30px;
+
+    border-radius:
+        999px;
+
+    padding:
+        5px 11px;
+
+    font-size:
+        9px;
+}
+
+.syk009-secimler {
+    min-height:
+        67px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    overflow-x:
+        auto;
+
+    overflow-y:
+        hidden;
+
+    padding:
+        5px 18px 16px;
+}
+
+.syk009-secim {
+    position:
+        relative;
+
+    flex:
+        0 0 auto;
+
+    min-width:
+        100px;
+
+    height:
+        47px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        21px 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        0 12px;
+
+    border:
+        1px solid
+        var(--cizgi);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255,255,255,.012);
+
+    color:
+        var(--soluk);
+
+    font-size:
+        9px;
+
+    cursor:
+        pointer;
+
+    transition:
+        order .18s ease,
+        opacity .18s ease,
+        transform .18s ease,
+        border-color .18s ease,
+        background .18s ease;
+}
+
+.syk009-secim-ikon {
+    color:
+        var(--enerji);
+
+    text-align:
+        center;
+
+    font-size:
+        14px;
+}
+
+.syk009-secim i {
+    position:
+        absolute;
+
+    right:
+        8px;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%);
+
+    color:
+        var(--enerji);
+
+    font-style:
+        normal;
+}
+
+.syk009-secim.secili {
+    order:
+        -1000;
+
+    opacity:
+        1;
+
+    transform:
+        translateY(-2px);
+
+    color:
+        var(--metin);
+
+    border-color:
+        var(--cizgi-guclu);
+
+    background:
+        rgba(79,210,224,.10);
+}
+
+.syk009-secim.secili-degil {
+    order:
+        100;
+
+    opacity:
+        .50;
+}
+
+.syk009-secim.secili-degil:hover {
+    opacity:
+        1;
+}
+
+
+/* ==========================================================
+   ÇALIŞMA ALANI
+   ========================================================== */
+
+main,
+.calisma-alani,
+.ana-calisma-alani {
+    max-width:
+        none !important;
+}
+
+.calisma-alani {
+    padding-bottom:
+        110px !important;
+}
+
+
+/* ==========================================================
+   PANEL BAĞLAMSAL ARAÇLARI
+   Varsayılan görünmez.
+   Mouse / dokunma paneline gelince görünür.
+   ========================================================== */
+
+.calisma-paneli {
+    position:
+        relative;
+}
+
+.syk009-panel-araclari {
+    position:
+        absolute;
+
+    top:
+        12px;
+
+    right:
+        12px;
+
+    z-index:
+        60;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        6px;
+
+    padding:
+        5px;
+
+    border:
+        1px solid
+        rgba(76,158,168,.18);
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(3,17,22,.88);
+
+    backdrop-filter:
+        blur(12px);
+
+    opacity:
+        0;
+
+    transform:
+        translateY(-5px);
+
+    pointer-events:
+        none;
+
+    transition:
+        opacity .16s ease,
+        transform .16s ease;
+}
+
+.calisma-paneli:hover
+.syk009-panel-araclari,
+.calisma-paneli:focus-within
+.syk009-panel-araclari,
+.syk009-panel-fullscreen
+.syk009-panel-araclari {
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+    pointer-events:
+        auto;
+}
+
+.syk009-panel-araclari button {
+    min-height:
+        28px;
+
+    border:
+        1px solid
+        var(--cizgi);
+
+    border-radius:
+        8px;
+
+    padding:
+        4px 8px;
+
+    background:
+        rgba(255,255,255,.018);
+
+    color:
+        var(--soluk);
+
+    font-size:
+        8px;
+
+    cursor:
+        pointer;
+}
+
+.syk009-panel-araclari
+button.aktif {
+    color:
+        var(--metin);
+
+    border-color:
+        var(--cizgi-guclu);
+
+    background:
+        rgba(79,210,224,.10);
+}
+
+
+/* ==========================================================
+   BAĞIMSIZ TAM EKRAN PANEL
+   ========================================================== */
+
+.calisma-paneli.syk009-panel-fullscreen {
+    position:
+        fixed !important;
+
+    inset:
+        0 !important;
+
+    z-index:
+        10000 !important;
+
+    width:
+        100vw !important;
+
+    height:
+        100vh !important;
+
+    max-width:
+        none !important;
+
+    max-height:
+        none !important;
+
+    margin:
+        0 !important;
+
+    border-radius:
+        0 !important;
+
+    background:
+        rgb(3,17,22) !important;
+}
+
+
+/* Tam ekranda ana menü rahatsız etmesin */
+
+body:has(
+    .syk009-panel-fullscreen
+)
+#syk008cKanıt,
+
+body:has(
+    .syk009-panel-fullscreen
+)
+#syk009DurumCubugu,
+
+body:has(
+    .syk009-panel-fullscreen
+)
+#syk009Drawer {
+    opacity:
+        0 !important;
+
+    pointer-events:
+        none !important;
+}
+
+
+/* ==========================================================
+   TABLET / TELEFON
+   ========================================================== */
+
+@media(max-width:900px){
+
+    #syk009DurumCubugu {
+        justify-content:
+            flex-start;
+
+        overflow-x:
+            auto;
+    }
+
+    #syk008cKanıt.syk009-ana-menu {
+        justify-content:
+            flex-start !important;
+
+        overflow-x:
+            auto !important;
+    }
+}
+
+@media(max-width:650px){
+
+    #syk009DurumCubugu {
+        bottom:
+            62px;
+    }
+
+    #syk009Drawer {
+        bottom:
+            91px;
+    }
+
+    #syk008cKanıt.syk009-ana-menu {
+        height:
+            62px !important;
+    }
+
+    .syk009-panel-araclari {
+        opacity:
+            .12;
+    }
+
+    .calisma-paneli:active
+    .syk009-panel-araclari {
+        opacity:
+            1;
+
+        pointer-events:
+            auto;
+    }
+}
+
+
+/* ==========================================================
+   SPRINT_053_009A_FULLWIDTH_GRID
+   ========================================================== */
+
+/*
+ * Sol/sağ kolonlar gizlendikten sonra eski grid boşluğu
+ * kesinlikle alan tutmayacak.
+ */
+
+body {
+    overflow-x: hidden;
+}
+
+.syk009-shell-tek-kolon {
+    display: block !important;
+    grid-template-columns: none !important;
+    grid-template-areas: none !important;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/*
+ * Ana çalışma kabuğu ve olası eski wrapper'lar.
+ */
+
+main,
+.calisma-alani,
+.ana-calisma-alani,
+.workspace,
+.workspace-main,
+.terminal-main,
+.terminal-content,
+.content,
+.main-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    left: auto !important;
+    right: auto !important;
+}
+
+/*
+ * Sol/sağ kolon gizlendikten sonra kardeş merkez alan
+ * kalan genişliği değil, doğrudan %100'ü kullanır.
+ */
+
+.syk009-kolon-gizli + main,
+.syk009-kolon-gizli + .calisma-alani,
+.syk009-kolon-gizli ~ main,
+.syk009-kolon-gizli ~ .calisma-alani {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/*
+ * Çalışma panel matrisi.
+ * Tek panel varsa tam genişlik.
+ * İki panel varsa oranlı paylaşım.
+ * Boş/gizli panel alan tutmaz.
+ */
+
+.calisma-panel-grid,
+.calisma-panelleri,
+.panel-grid,
+.workspace-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0,1fr) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.calisma-paneli.gizli,
+.calisma-paneli[hidden],
+.calisma-paneli.syk009-panel-gizli {
+    display: none !important;
+}
+
+/*
+ * Harita paneli yalnız kaldığında tam genişlik.
+ */
+
+.calisma-paneli[data-panel="harita"] {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/*
+ * Etkin Katmanlar boşsa ekranı işgal etmesin.
+ */
+
+.calisma-paneli[data-panel="katman"].syk009-bos-panel {
+    display: none !important;
+}
+
+/*
+ * Harita iç yüzeyi daha geniş ve daha yüksek.
+ */
+
+.calisma-paneli[data-panel="harita"] .harita-yuzeyi,
+.harita-yuzeyi {
+    width: 100% !important;
+    min-height: calc(100vh - 250px) !important;
+}
+
+/*
+ * Ana başlık + çalışma alanı alt menü hariç tam genişlik.
+ */
+
+.aktif-modul,
+.aktif-modul-alani,
+.workspace-header {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/*
+ * Sağ/sol eski offset ve padding kalıntılarını sıfırla.
+ */
+
+@media (min-width: 901px) {
+
+    .calisma-alani,
+    .ana-calisma-alani,
+    main {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .calisma-alani,
+    .ana-calisma-alani,
+    main {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+}
+
+
+/* ==========================================================
+   SPRINT_053_010_COMMAND_LAYER
+   ========================================================== */
+
+.syk010-eski-bilgi-gizli {
+    display: none !important;
+}
+
+/* ----------------------------------------------------------
+   ÜST KOMUTA ALANI
+   ---------------------------------------------------------- */
+
+#syk010Komuta {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 9000;
+
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    border-bottom:
+        1px solid rgba(61,135,145,.22);
+
+    background:
+        rgba(2,13,17,.97);
+
+    backdrop-filter:
+        blur(18px);
+}
+
+.syk010-komuta-sol,
+.syk010-komuta-sag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.syk010-marka {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-right: 10px;
+}
+
+.syk010-marka strong {
+    display: block;
+
+    font-size: 13px;
+
+    color: rgba(240,249,250,.96);
+}
+
+.syk010-marka small {
+    display: block;
+
+    margin-top: 1px;
+
+    font-size: 7px;
+
+    letter-spacing: .13em;
+
+    color: rgba(144,189,196,.60);
+}
+
+.syk010-aktif-sembol {
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+        1px solid rgba(73,190,205,.28);
+
+    border-radius: 50%;
+
+    color:
+        rgb(77,215,228);
+
+    box-shadow:
+        inset 0 0 18px rgba(77,215,228,.08);
+}
+
+.syk010-komuta-buton {
+    height: 32px;
+
+    border:
+        1px solid rgba(76,154,164,.22);
+
+    border-radius: 9px;
+
+    background:
+        rgba(255,255,255,.012);
+
+    color:
+        rgba(183,217,221,.74);
+
+    padding:
+        0 10px;
+
+    cursor: pointer;
+}
+
+.syk010-komuta-buton:hover,
+.syk010-komuta-buton.aktif {
+    border-color:
+        rgba(74,210,224,.55);
+
+    color:
+        white;
+
+    background:
+        rgba(74,210,224,.08);
+}
+
+.syk010-ses {
+    width: 34px;
+    padding: 0;
+}
+
+.syk010-canli-durum {
+    width: 14px;
+    height: 14px;
+
+    padding: 0;
+
+    border:
+        2px solid rgba(255,255,255,.12);
+
+    border-radius:
+        50%;
+
+    cursor: default;
+}
+
+.syk010-canli-durum.aktif {
+    background:
+        rgb(64,220,192);
+
+    box-shadow:
+        0 0 13px rgba(64,220,192,.80);
+}
+
+/* eski header yazılarını arkaya al */
+body > header:not(#syk010Komuta) {
+    padding-top: 60px;
+}
+
+/* ----------------------------------------------------------
+   ANA ÇALIŞMA YÜZEYİ
+   ---------------------------------------------------------- */
+
+#syk010Workspace {
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(0, 1.72fr)
+        minmax(300px, .72fr) !important;
+
+    gap: 10px;
+
+    width: 100% !important;
+
+    min-height:
+        calc(100vh - 165px);
+
+    padding:
+        6px 12px 108px;
+}
+
+#syk010HaritaBolumu,
+#syk010SagBolum {
+    min-width: 0;
+    min-height: 0;
+}
+
+#syk010HaritaBolumu
+.calisma-paneli[data-panel="harita"] {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#syk010HaritaBolumu
+.harita-yuzeyi {
+    min-height:
+        calc(100vh - 210px) !important;
+
+    height:
+        100% !important;
+}
+
+/* ----------------------------------------------------------
+   SAĞ TARAF = GÜVENLİK KAMERASI MANTIĞI
+   ---------------------------------------------------------- */
+
+#syk010SideGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            var(--syk-grid-cols, 2),
+            minmax(0,1fr)
+        );
+
+    grid-auto-rows:
+        minmax(150px, 1fr);
+
+    gap: 8px;
+
+    height:
+        calc(100vh - 210px);
+
+    overflow: auto;
+}
+
+.syk010-kamera-karti {
+    position: relative;
+
+    min-height: 150px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(68,152,163,.24);
+
+    border-radius: 12px;
+
+    background:
+        rgba(7,28,34,.80);
+
+    color:
+        white;
+
+    text-align: left;
+
+    padding:
+        12px;
+
+    cursor: pointer;
+
+    transition:
+        transform .16s ease,
+        border-color .16s ease,
+        opacity .16s ease;
+}
+
+.syk010-kamera-karti:hover {
+    border-color:
+        rgba(77,215,228,.50);
+
+    transform:
+        translateY(-1px);
+}
+
+.syk010-kart-etiket {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 6px;
+
+    letter-spacing: .18em;
+
+    color:
+        rgb(76,213,225);
+}
+
+.syk010-kamera-karti strong {
+    font-size: 11px;
+}
+
+.syk010-kart-gorsel {
+    position: absolute;
+
+    inset:
+        48px 10px 10px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+        1px solid rgba(65,144,154,.14);
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(13,52,60,.50),
+            rgba(5,23,28,.75)
+        );
+}
+
+.syk010-kart-gorsel span {
+    font-size: 34px;
+
+    font-weight: 200;
+
+    color:
+        rgba(73,212,225,.16);
+}
+
+/*
+ * Tek kutuya dokun:
+ * Sağ tarafın tamamını o katman kullanır.
+ */
+
+#syk010SideGrid.tek-odak {
+    display: block;
+}
+
+#syk010SideGrid.tek-odak
+.syk010-kamera-karti.odak-disi {
+    display: none;
+}
+
+#syk010SideGrid.tek-odak
+.syk010-kamera-karti.odak {
+    width: 100%;
+    height: 100%;
+
+    min-height:
+        calc(100vh - 210px);
+}
+
+/* ----------------------------------------------------------
+   2B / 3B / AR / TAM EKRAN
+   SADECE DOKUNUNCA GÖRÜNÜR
+   ---------------------------------------------------------- */
+
+.syk009-panel-araclari {
+    opacity: 0 !important;
+
+    pointer-events:
+        none !important;
+
+    transform:
+        translateY(-6px) !important;
+
+    transition:
+        opacity .18s ease,
+        transform .18s ease !important;
+}
+
+/*
+ * Hover artık açmaz.
+ */
+.calisma-paneli:hover
+.syk009-panel-araclari {
+    opacity: 0 !important;
+
+    pointer-events:
+        none !important;
+}
+
+.calisma-paneli.syk010-kontroller-gorunur
+.syk009-panel-araclari,
+.calisma-paneli.syk009-panel-fullscreen
+.syk009-panel-araclari {
+    opacity: 1 !important;
+
+    pointer-events:
+        auto !important;
+
+    transform:
+        translateY(0) !important;
+}
+
+/* ----------------------------------------------------------
+   DRAWER KAPAT
+   ---------------------------------------------------------- */
+
+#syk009Drawer {
+    position: fixed;
+}
+
+.syk010-drawer-kapat {
+    position: absolute;
+
+    top: 7px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 20;
+
+    width: 44px;
+    height: 22px;
+
+    border:
+        1px solid rgba(69,163,174,.28);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(5,24,29,.96);
+
+    color:
+        rgb(84,211,224);
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.syk010-drawer-kapat:hover {
+    border-color:
+        rgba(84,211,224,.65);
+}
+
+/* ----------------------------------------------------------
+   ALT DURUM ÇUBUĞU
+   ---------------------------------------------------------- */
+
+#syk009DurumCubugu.syk010-minimal-durum {
+    height: 24px;
+
+    min-height: 24px;
+
+    font-size: 7px;
+
+    opacity: .76;
+}
+
+/* ----------------------------------------------------------
+   MEVCUT BAŞLIKLARIN BOŞLUKLARINI DARALT
+   ---------------------------------------------------------- */
+
+main,
+.calisma-alani,
+.ana-calisma-alani {
+    padding-top: 66px !important;
+}
+
+/* ----------------------------------------------------------
+   TABLET
+   ---------------------------------------------------------- */
+
+@media(max-width:1100px) {
+
+    #syk010Workspace {
+        grid-template-columns:
+            minmax(0,1.45fr)
+            minmax(250px,.75fr) !important;
+    }
+}
+
+/* ----------------------------------------------------------
+   TELEFON
+   ---------------------------------------------------------- */
+
+@media(max-width:760px) {
+
+    #syk010Komuta {
+        padding:
+            0 9px;
+    }
+
+    .syk010-marka small {
+        display: none;
+    }
+
+    #syk010Kasif {
+        font-size: 0;
+        width: 34px;
+        padding: 0;
+    }
+
+    #syk010Kasif::first-letter {
+        font-size: 14px;
+    }
+
+    #syk010Workspace {
+        grid-template-columns:
+            minmax(0,1fr) !important;
+
+        grid-template-rows:
+            minmax(50vh,1fr)
+            auto;
+    }
+
+    #syk010SideGrid {
+        height: auto;
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    #syk010SideGrid.tek-odak
+    .syk010-kamera-karti.odak {
+        min-height: 48vh;
+    }
+}
+
+
+/* ==========================================================
+   SPRINT_053_011_BORDERLESS_DYNAMIC_MATRIX
+   ========================================================== */
+
+
+/* ==========================================================
+   ÜST BAR
+   ========================================================== */
+
+#syk010Komuta {
+    height:
+        58px !important;
+
+    padding:
+        0 18px !important;
+}
+
+.syk010-marka {
+    margin-right:
+        2px !important;
+}
+
+.syk010-marka strong {
+    font-size:
+        14px !important;
+
+    letter-spacing:
+        .01em;
+}
+
+
+/*
+ * Kırmızı X ile kaldırılan Kaşif.
+ */
+
+#syk010Kasif {
+    display:
+        none !important;
+}
+
+
+/*
+ * Canlı sistem = yalnız ışık.
+ */
+
+#syk010CanliDurum {
+    width:
+        16px !important;
+
+    height:
+        16px !important;
+
+    border:
+        0 !important;
+
+    background:
+        rgb(66,222,202) !important;
+
+    box-shadow:
+        0 0 8px rgba(66,222,202,.65),
+        0 0 18px rgba(66,222,202,.38) !important;
+}
+
+
+/* ==========================================================
+   ANA WORKSPACE
+   ÜST BAR İLE ALT BAR ARASINI TAM DOLDUR
+   ========================================================== */
+
+#syk010Workspace {
+    position:
+        fixed !important;
+
+    top:
+        58px !important;
+
+    left:
+        0 !important;
+
+    right:
+        0 !important;
+
+    bottom:
+        90px !important;
+
+    z-index:
+        80 !important;
+
+    width:
+        auto !important;
+
+    height:
+        auto !important;
+
+    min-height:
+        0 !important;
+
+    margin:
+        0 !important;
+
+    padding:
+        0 !important;
+
+    gap:
+        4px !important;
+
+    background:
+        rgb(2,16,20);
+
+    overflow:
+        hidden;
+}
+
+
+/*
+ * Seçim yok:
+ * bütün yüzey harita.
+ */
+
+#syk010Workspace.syk011-sadece-harita {
+    display:
+        grid !important;
+
+    grid-template-columns:
+        minmax(0,1fr) !important;
+}
+
+
+/*
+ * Katman var:
+ * solda ana harita,
+ * sağda dinamik katman matrisi.
+ */
+
+#syk010Workspace.syk011-sag-aktif {
+    display:
+        grid !important;
+
+    grid-template-columns:
+        minmax(0, 2.08fr)
+        minmax(300px, .92fr) !important;
+}
+
+
+/* ==========================================================
+   HARİTA = KART DEĞİL, DOĞRUDAN ÇALIŞMA YÜZEYİ
+   ========================================================== */
+
+#syk010HaritaBolumu {
+    position:
+        relative;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    min-width:
+        0;
+
+    min-height:
+        0;
+
+    overflow:
+        hidden;
+}
+
+
+#syk010HaritaBolumu
+.calisma-paneli[data-panel="harita"],
+.calisma-paneli[data-panel="harita"].syk011-ana-yuzey {
+
+    position:
+        absolute !important;
+
+    inset:
+        0 !important;
+
+    width:
+        100% !important;
+
+    height:
+        100% !important;
+
+    min-width:
+        0 !important;
+
+    min-height:
+        0 !important;
+
+    margin:
+        0 !important;
+
+    padding:
+        0 !important;
+
+    border:
+        0 !important;
+
+    border-radius:
+        0 !important;
+
+    box-shadow:
+        none !important;
+
+    background:
+        transparent !important;
+
+    overflow:
+        hidden !important;
+}
+
+
+/*
+ * Panel iç başlığı ve X yok.
+ */
+
+.syk011-panel-baslik-gizli {
+    display:
+        none !important;
+}
+
+
+/*
+ * Harita yüzeyi tam alan.
+ */
+
+#syk010HaritaBolumu
+.harita-yuzeyi {
+
+    position:
+        absolute !important;
+
+    inset:
+        0 !important;
+
+    width:
+        100% !important;
+
+    height:
+        100% !important;
+
+    min-height:
+        0 !important;
+
+    max-height:
+        none !important;
+
+    margin:
+        0 !important;
+
+    border:
+        0 !important;
+
+    border-radius:
+        0 !important;
+
+    box-shadow:
+        none !important;
+}
+
+
+/* ==========================================================
+   SAĞ = DİNAMİK N KATMAN MATRİSİ
+   ========================================================== */
+
+#syk010SagBolum {
+    position:
+        relative;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    min-width:
+        0;
+
+    min-height:
+        0;
+
+    border:
+        0 !important;
+
+    background:
+        transparent;
+
+    overflow:
+        hidden;
+}
+
+
+#syk010SagBolum.syk011-sag-gizli {
+    display:
+        none !important;
+}
+
+
+/*
+ * Artık 2 sabit sütun yok.
+ *
+ * auto-fit:
+ * ekran ve eleman sayısına göre
+ * 1,2,3,4,5... sütun.
+ *
+ * 20+ katmanda da aynı motor.
+ */
+
+#syk010SideGrid {
+
+    width:
+        100% !important;
+
+    height:
+        100% !important;
+
+    display:
+        grid !important;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(118px, 1fr)
+        ) !important;
+
+    grid-auto-rows:
+        minmax(92px, 1fr) !important;
+
+    align-content:
+        stretch;
+
+    gap:
+        3px !important;
+
+    padding:
+        0 !important;
+
+    margin:
+        0 !important;
+
+    overflow:
+        auto !important;
+
+    background:
+        rgb(2,16,20);
+}
+
+
+/*
+ * Yeni matris hücresi.
+ */
+
+.syk011-matris-karti {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-width:
+        0;
+
+    min-height:
+        0;
+
+    margin:
+        0;
+
+    padding:
+        0;
+
+    overflow:
+        hidden;
+
+    border:
+        0;
+
+    border-radius:
+        0;
+
+    outline:
+        1px solid
+        rgba(62,127,136,.12);
+
+    background:
+        rgba(5,27,33,.76);
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    transition:
+        background .15s ease,
+        outline-color .15s ease;
+}
+
+
+.syk011-matris-karti:hover {
+    outline-color:
+        rgba(73,205,219,.48);
+
+    background:
+        rgba(8,34,41,.92);
+}
+
+
+.syk011-kart-icerik {
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    overflow:
+        hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(45,117,128,.09),
+            transparent 54%
+        );
+}
+
+
+.syk011-kart-numara {
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    font-size:
+        clamp(18px, 3vw, 48px);
+
+    font-weight:
+        200;
+
+    color:
+        rgba(67,192,205,.09);
+
+    pointer-events:
+        none;
+}
+
+
+.syk011-kart-alt {
+    position:
+        absolute;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        0;
+
+    padding:
+        8px 9px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(2,13,17,.88)
+        );
+
+    text-align:
+        left;
+}
+
+
+.syk011-kart-alt strong {
+    font-size:
+        9px;
+
+    font-weight:
+        500;
+
+    color:
+        rgba(213,235,238,.80);
+}
+
+
+/* ==========================================================
+   SAĞDA TEK KATMAN ODAK
+   ========================================================== */
+
+#syk010SideGrid.syk011-tek-odak {
+    display:
+        block !important;
+
+    overflow:
+        hidden !important;
+}
+
+
+#syk010SideGrid.syk011-tek-odak
+.syk011-matris-karti.syk011-odak-disi {
+    display:
+        none !important;
+}
+
+
+#syk010SideGrid.syk011-tek-odak
+.syk011-matris-karti.syk011-odak {
+
+    width:
+        100% !important;
+
+    height:
+        100% !important;
+
+    min-height:
+        100% !important;
+
+    outline:
+        0 !important;
+}
+
+
+/* ==========================================================
+   2B / 3B / AR / TAM EKRAN
+   SADECE DOKUNUNCA 6 SANİYE
+   ========================================================== */
+
+.calisma-paneli[data-panel="harita"]
+.syk009-panel-araclari {
+
+    position:
+        absolute !important;
+
+    top:
+        12px !important;
+
+    right:
+        12px !important;
+
+    z-index:
+        200 !important;
+
+    opacity:
+        0 !important;
+
+    transform:
+        translateY(-7px) !important;
+
+    pointer-events:
+        none !important;
+
+    border:
+        0 !important;
+
+    background:
+        rgba(2,17,21,.74) !important;
+
+    backdrop-filter:
+        blur(12px);
+
+    transition:
+        opacity .18s ease,
+        transform .18s ease !important;
+}
+
+
+/*
+ * Hover ile açılmayacak.
+ */
+
+.calisma-paneli[data-panel="harita"]:hover
+.syk009-panel-araclari {
+    opacity:
+        0 !important;
+
+    pointer-events:
+        none !important;
+}
+
+
+/*
+ * Dokununca JS bu sınıfı verir.
+ */
+
+.calisma-paneli[data-panel="harita"]
+&.syk011-kontroller-acik {
+    opacity: 1;
+}
+
+
+/*
+ * Üstteki selector tarayıcı CSS nesting desteğine
+ * bırakılmasın; klasik biçim kesin tanım.
+ */
+
+.calisma-paneli[data-panel="harita"].syk011-kontroller-acik
+.syk009-panel-araclari,
+
+.calisma-paneli[data-panel="harita"].syk009-panel-fullscreen
+.syk009-panel-araclari {
+
+    opacity:
+        1 !important;
+
+    transform:
+        translateY(0) !important;
+
+    pointer-events:
+        auto !important;
+}
+
+
+/* ==========================================================
+   ALT DURUM / MENÜ
+   ========================================================== */
+
+#syk009DurumCubugu {
+    bottom:
+        66px !important;
+
+    z-index:
+        5000 !important;
+}
+
+
+#syk008cKanıt.syk009-ana-menu {
+    bottom:
+        0 !important;
+
+    z-index:
+        5010 !important;
+}
+
+
+/*
+ * Drawer ana çalışma yüzeyinin üzerine çıkar.
+ */
+
+#syk009Drawer {
+    z-index:
+        5020 !important;
+}
+
+
+/* ==========================================================
+   MASAÜSTÜ - ÇOK KATMANDA DAHA SIKI MATRİS
+   ========================================================== */
+
+#syk010SideGrid[data-adet="1"] {
+    grid-template-columns:
+        1fr !important;
+}
+
+
+#syk010SideGrid[data-adet="2"] {
+    grid-template-columns:
+        repeat(1,1fr) !important;
+}
+
+
+#syk010SideGrid[data-adet="3"],
+#syk010SideGrid[data-adet="4"] {
+    grid-template-columns:
+        repeat(2,1fr) !important;
+}
+
+
+#syk010SideGrid[data-adet="5"],
+#syk010SideGrid[data-adet="6"] {
+    grid-template-columns:
+        repeat(2,1fr) !important;
+}
+
+
+/*
+ * 7+ sonrası auto-fit devralır.
+ * Sabit limit yok.
+ */
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media(max-width:1100px) {
+
+    #syk010Workspace.syk011-sag-aktif {
+        grid-template-columns:
+            minmax(0,1.65fr)
+            minmax(260px,.85fr) !important;
+    }
+
+    #syk010SideGrid {
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(105px,1fr)
+            ) !important;
+    }
+}
+
+
+/* ==========================================================
+   TELEFON
+   ========================================================== */
+
+@media(max-width:700px) {
+
+    #syk010Workspace {
+        top:
+            54px !important;
+
+        bottom:
+            86px !important;
+    }
+
+    #syk010Workspace.syk011-sag-aktif {
+
+        grid-template-columns:
+            1fr !important;
+
+        grid-template-rows:
+            minmax(55%,1fr)
+            minmax(180px,45%) !important;
+    }
+
+    #syk010SideGrid {
+
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(92px,1fr)
+            ) !important;
+
+        grid-auto-rows:
+            minmax(80px,1fr) !important;
+    }
+}
+
+
+/* ==========================================================
+   SPRINT_053_013_REAL_MATRIX
+   ========================================================== */
+
+#syk010SideGrid[data-source="real-map-engine"] {
+    background:
+        rgb(2,16,20);
+}
+
+.syk013-real-card {
+    min-height:
+        0 !important;
+
+    padding:
+        0 !important;
+}
+
+.syk013-render {
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        flex-end;
+
+    overflow:
+        hidden;
+
+    padding:
+        10px;
+
+    text-align:
+        left;
+
+    background:
+        rgba(5,27,33,.72);
+}
+
+.syk013-render strong {
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    font-size:
+        10px;
+
+    color:
+        rgba(225,242,244,.92);
+}
+
+.syk013-render small {
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    margin-top:
+        3px;
+
+    font-size:
+        7px;
+
+    color:
+        rgba(128,186,193,.64);
+}
+
+.syk013-watermark {
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    font-size:
+        clamp(24px,3vw,58px);
+
+    font-weight:
+        200;
+
+    color:
+        rgba(73,210,222,.08);
+}
+
+.syk013-map-render {
+    background:
+        linear-gradient(
+            rgba(4,24,29,.40),
+            rgba(4,24,29,.40)
+        );
+}
+
+.syk013-grid-lines {
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    opacity:
+        .34;
+
+    background-image:
+        linear-gradient(
+            rgba(66,176,188,.11) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(66,176,188,.11) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        38px 38px;
+}
+
+.syk013-media-render {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(52,185,196,.10),
+            rgba(3,19,24,.88) 60%
+        );
+}
+
+.syk013-pulse {
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    border:
+        1px solid rgba(76,213,224,.35);
+
+    border-radius:
+        50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    box-shadow:
+        0 0 22px rgba(76,213,224,.08);
+}
+
+.syk013-analysis-render svg {
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    opacity:
+        .68;
+}
+
+.syk013-analysis-render polyline {
+    fill:
+        none;
+
+    stroke:
+        rgb(73,211,224);
+
+    stroke-width:
+        1.5;
+
+    vector-effect:
+        non-scaling-stroke;
+}
+
+#syk010SideGrid.syk013-tek-odak {
+    display:
+        block !important;
+}
+
+#syk010SideGrid.syk013-tek-odak
+.syk013-real-card.syk013-odak-disi {
+    display:
+        none !important;
+}
+
+#syk010SideGrid.syk013-tek-odak
+.syk013-real-card.syk013-odak {
+    display:
+        block !important;
+
+    width:
+        100% !important;
+
+    height:
+        100% !important;
+
+    min-height:
+        100% !important;
+}
+
+
+/* ==========================================================
+   SPRINT_053_013A_REAL_MAP_RENDERER
+   ========================================================== */
+
+.syk013a-placeholder-gizli {
+    display: none !important;
+}
+
+#syk013aRealMap {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 20;
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    border-radius: 0;
+
+    background:
+        rgb(3,17,21);
+}
+
+/*
+ * Leaflet bütün çalışma yüzeyini kullanır.
+ */
+
+#syk013aRealMap.leaflet-container {
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    background:
+        rgb(3,17,21) !important;
+
+    font-family:
+        inherit !important;
+}
+
+/*
+ * Tile'ların üzerinde SyKaşif paneli gibi
+ * gereksiz kart görünümü yok.
+ */
+
+#syk013aRealMap
+.leaflet-pane,
+#syk013aRealMap
+.leaflet-map-pane {
+    border: 0 !important;
+}
+
+/*
+ * Attribution minimal.
+ */
+
+#syk013aRealMap
+.leaflet-control-attribution {
+    border: 0 !important;
+
+    background:
+        rgba(2,13,17,.66) !important;
+
+    color:
+        rgba(200,223,226,.55) !important;
+
+    font-size:
+        7px !important;
+}
+
+#syk013aRealMap
+.leaflet-control-attribution a {
+    color:
+        rgba(84,210,220,.72) !important;
+}
+
+/*
+ * Zoom kontrolleri sade.
+ */
+
+#syk013aRealMap
+.leaflet-control-zoom {
+    border:
+        1px solid rgba(72,158,168,.24) !important;
+
+    box-shadow:
+        none !important;
+}
+
+#syk013aRealMap
+.leaflet-control-zoom a {
+    border:
+        0 !important;
+
+    background:
+        rgba(3,19,24,.88) !important;
+
+    color:
+        rgba(208,234,237,.80) !important;
+}
+
+/* ==========================================================
+   HARİTA / UYDU / ARAZİ / TOPOGRAFYA
+   6 SANİYE GÖRÜNÜR
+   ========================================================== */
+
+#syk013aBasemapSelector {
+    position: absolute;
+
+    top: 12px;
+    left: 50%;
+
+    z-index: 450;
+
+    display: flex;
+
+    gap: 5px;
+
+    padding: 5px;
+
+    transform:
+        translate(-50%,-8px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    border:
+        1px solid rgba(65,148,158,.22);
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(2,16,20,.80);
+
+    backdrop-filter:
+        blur(12px);
+
+    transition:
+        opacity .18s ease,
+        transform .18s ease;
+}
+
+#syk013aBasemapSelector.gorunur {
+    opacity: 1;
+
+    transform:
+        translate(-50%,0);
+
+    pointer-events: auto;
+}
+
+#syk013aBasemapSelector button {
+    min-height: 29px;
+
+    padding:
+        4px 9px;
+
+    border:
+        1px solid rgba(69,147,158,.18);
+
+    border-radius:
+        7px;
+
+    background:
+        rgba(255,255,255,.015);
+
+    color:
+        rgba(185,216,220,.67);
+
+    font-size:
+        8px;
+
+    cursor:
+        pointer;
+}
+
+#syk013aBasemapSelector button:hover,
+#syk013aBasemapSelector button.aktif {
+    border-color:
+        rgba(74,211,223,.52);
+
+    background:
+        rgba(74,211,223,.09);
+
+    color:
+        white;
+}
+
+/*
+ * Harita panelinin eski placeholder pseudo
+ * elementleri varsa arkada kalır.
+ */
+
+.calisma-paneli[data-panel="harita"]::before,
+.calisma-paneli[data-panel="harita"]::after {
+    pointer-events: none;
+}
+
+/*
+ * Gerçek harita araçların altında kalır.
+ */
+
+.calisma-paneli[data-panel="harita"]
+.syk009-panel-araclari {
+    z-index:
+        500 !important;
+}
+
+@media(max-width:700px){
+
+    #syk013aBasemapSelector {
+        top: 8px;
+
+        max-width:
+            calc(100vw - 24px);
+
+        overflow-x:
+            auto;
+    }
+}
+
+
+/* ==========================================================
+   SPRINT_053_014B_DINAMIK_MIMARI
+   ========================================================== */
+
+#syk053014bHaritaKontrol{
+    position:absolute;
+    z-index:900;
+    top:12px;
+    left:50%;
+    display:flex;
+    gap:5px;
+    padding:5px;
+    opacity:0;
+    pointer-events:none;
+    transform:translate(-50%,-8px);
+    border:1px solid rgba(72,210,220,.24);
+    border-radius:10px;
+    background:rgba(0,18,22,.82);
+    backdrop-filter:blur(12px);
+    transition:.18s ease;
+}
+
+#syk053014bHaritaKontrol.goster{
+    opacity:1;
+    pointer-events:auto;
+    transform:translate(-50%,0);
+}
+
+#syk053014bHaritaKontrol button{
+    border:1px solid rgba(72,210,220,.22);
+    border-radius:8px;
+    background:rgba(0,23,28,.88);
+    color:rgba(220,245,247,.86);
+    padding:7px 10px;
+    font-size:8px;
+    cursor:pointer;
+}
+
+#syk053014bKatmanSecici{
+    position:fixed;
+    z-index:22000;
+    left:50%;
+    bottom:118px;
+    width:min(920px,94vw);
+    transform:translate(-50%,28px);
+    opacity:0;
+    pointer-events:none;
+    padding:8px;
+    border:1px solid rgba(72,210,220,.25);
+    border-radius:14px;
+    background:rgba(0,18,22,.96);
+    backdrop-filter:blur(14px);
+    transition:.18s ease;
+}
+
+#syk053014bKatmanSecici.acik{
+    opacity:1;
+    pointer-events:auto;
+    transform:translate(-50%,0);
+}
+
+.syk053014b-katman-ust{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:4px;
+}
+
+.syk053014b-katman-ust strong{
+    flex:1;
+    color:#fff;
+}
+
+.syk053014b-katman-ust button,
+.syk053014b-ana-satir button,
+.syk053014b-alt-satir button,
+#syk053014bKatmanAc{
+    border:1px solid rgba(72,210,220,.22);
+    border-radius:9px;
+    background:rgba(0,27,32,.94);
+    color:#cceff2;
+    padding:8px 11px;
+    cursor:pointer;
+}
+
+.syk053014b-ana-satir,
+.syk053014b-alt-satir{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+    padding:5px 4px;
+}
+
+.syk053014b-ana-satir button.aktif,
+.syk053014b-alt-satir button.secili{
+    border-color:#52e5ed;
+    color:#fff;
+    background:rgba(82,229,237,.09);
+}
+
+#syk053014bSagMatris{
+    position:fixed;
+    z-index:8500;
+    top:94px;
+    right:0;
+    bottom:120px;
+    width:31vw;
+    min-width:270px;
+    display:grid;
+    grid-template-columns:repeat(var(--sutun,1),1fr);
+    gap:5px;
+    padding:5px;
+    pointer-events:none;
+}
+
+#syk053014bSagMatris.bos{
+    display:none;
+}
+
+.syk053014b-matris-kart,
+.syk053014b-odak-kart{
+    pointer-events:auto;
+    border:1px solid rgba(72,210,220,.22);
+    border-radius:9px;
+    background:rgba(0,22,27,.86);
+    color:#fff;
+    padding:11px;
+    text-align:left;
+    cursor:pointer;
+    min-height:86px;
+}
+
+.syk053014b-matris-kart small,
+.syk053014b-odak-kart small{
+    display:block;
+    color:#4fd2dc;
+    font-size:8px;
+    letter-spacing:1px;
+    margin-bottom:6px;
+}
+
+.syk053014b-matris-kart strong,
+.syk053014b-odak-kart strong{
+    display:block;
+    font-size:13px;
+}
+
+.syk053014b-matris-kart .icerik,
+.syk053014b-odak-kart span{
+    display:block;
+    margin-top:8px;
+    opacity:.42;
+    font-size:9px;
+}
+
+#syk053014bSagMatris.odak{
+    grid-template-columns:1fr;
+}
+
+.syk053014b-odak-kart{
+    width:100%;
+    height:100%;
+}
+
+@media(max-width:900px){
+
+    #syk053014bSagMatris{
+        width:40vw;
+        min-width:220px;
+    }
+
+    #syk053014bHaritaKontrol{
+        max-width:92vw;
+        overflow-x:auto;
+    }
+}
+
+@media(max-width:650px){
+
+    #syk053014bSagMatris{
+        width:44vw;
+        min-width:165px;
+    }
+
+    #syk053014bKatmanSecici{
+        bottom:104px;
+    }
+}
+

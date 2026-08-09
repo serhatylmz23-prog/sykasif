@@ -1,0 +1,4 @@
+Gecici prototip ikonlari buraya yerlestirilecek:
+sykasif-180.png
+sykasif-192.png
+sykasif-512.png

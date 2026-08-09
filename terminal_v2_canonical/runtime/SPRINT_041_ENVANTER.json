@@ -1,0 +1,161 @@
+{
+  "branch": "spr-041-runtime-canli-panel",
+  "inventory": {
+    "devices": [
+      {
+        "exists": true,
+        "path": "terminal_v2\\core\\trusted_devices.py",
+        "type": "file"
+      },
+      {
+        "exists": true,
+        "path": "terminal_v2\\core\\device_routes.py",
+        "type": "file"
+      }
+    ],
+    "event_bus": [
+      {
+        "exists": true,
+        "path": "terminal_v2\\core\\event_bus.py",
+        "type": "file"
+      },
+      {
+        "exists": true,
+        "path": "terminal_v2\\core\\sse.py",
+        "type": "file"
+      }
+    ],
+    "runtime": [
+      {
+        "exists": false,
+        "path": "terminal_v2\\core\\runtime_engine.py",
+        "type": "missing"
+      },
+      {
+        "exists": true,
+        "path": "terminal_v2\\runtime",
+        "type": "directory"
+      }
+    ],
+    "tests": [
+      {
+        "exists": true,
+        "path": "terminal_v2\\tests",
+        "type": "directory"
+      }
+    ],
+    "ui": [
+      {
+        "exists": true,
+        "path": "terminal_v2\\templates\\index.html",
+        "type": "file"
+      },
+      {
+        "exists": true,
+        "path": "terminal_v2\\static\\js",
+        "type": "directory"
+      },
+      {
+        "exists": true,
+        "path": "terminal_v2\\static\\css",
+        "type": "directory"
+      }
+    ]
+  },
+  "route_count": 13,
+  "routes": [
+    {
+      "methods": [
+        "GET"
+      ],
+      "name": "index",
+      "path": "/"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "name": "terminal_status",
+      "path": "/api/v2/status"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "name": "acknowledge_tablet_validation",
+      "path": "/api/v2/tablet-validation/ack"
+    },
+    {
+      "methods": [
+        "POST"
+      ],
+      "name": "create_tablet_validation_session",
+      "path": "/api/v2/tablet-validation/session"
+    },
+    {
+      "methods": [
+        "DELETE"
+      ],
+      "name": "delete_tablet_validation_session",
+      "path": "/api/v2/tablet-validation/session/{token}"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "name": "tablet_validation_status",
+      "path": "/api/v2/tablet-validation/session/{token}"
+    },
+    {
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "name": "swagger_ui_html",
+      "path": "/docs"
+    },
+    {
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "name": "swagger_ui_redirect",
+      "path": "/docs/oauth2-redirect"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "name": "health",
+      "path": "/health"
+    },
+    {
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "name": "openapi",
+      "path": "/openapi.json"
+    },
+    {
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "name": "redoc_html",
+      "path": "/redoc"
+    },
+    {
+      "methods": [],
+      "name": "static",
+      "path": "/static"
+    },
+    {
+      "methods": [
+        "GET"
+      ],
+      "name": "tablet_validation_page",
+      "path": "/tablet-validation/{token}"
+    }
+  ]
+}

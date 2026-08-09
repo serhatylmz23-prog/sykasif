@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1,viewport-fit=cover"
+    >
+
+    <title>SyKaşif Terminal V2</title>
+
+    <link rel="stylesheet" href="/ui/css/terminal.css?v=053013a">
+
+<link rel="stylesheet" href="/ui/css/syk_responsive_canonical_053015.css?v=053015">
+</head>
+
+<body>
+
+<div class="terminal">
+
+    <!-- ================================================== -->
+    <!-- ÜST BAR -->
+    <!-- ================================================== -->
+
+    <header class="ust-bar">
+
+        <div class="kimlik">
+            <div class="logo-alani" aria-label="SyKaşif logo alanı">
+                <span class="logo-cekirdek"></span>
+            </div>
+
+            <div class="kimlik-yazi">
+                <strong>SyKaşif</strong>
+                <small>TERMINAL V2</small>
+            </div>
+        </div>
+
+        <div class="ust-durum">
+
+            <div class="canli-durum">
+                <span class="durum-noktasi"></span>
+
+                <div>
+                    <strong>Çevrim içi</strong>
+                    <small>Canlı sistem</small>
+                </div>
+            </div>
+
+            <button
+                type="button"
+                class="ust-buton"
+                id="panelDuzeniButon"
+            >
+                Ekran Düzeni
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================================================== -->
+    <!-- SOL ANA MENÜ -->
+    <!-- ================================================== -->
+
+    <aside class="ana-menu">
+
+        <nav class="ana-menu-listesi">
+
+            <button
+                class="ana-menu-buton aktif"
+                data-ana-modul="harita"
+            >
+                <span>⌖</span>
+                <b>Harita</b>
+            </button>
+
+            <button
+                class="ana-menu-buton"
+                data-ana-modul="gorev"
+            >
+                <span>◎</span>
+                <b>Görev</b>
+            </button>
+
+            <button
+                class="ana-menu-buton"
+                data-ana-modul="analiz"
+            >
+                <span>◇</span>
+                <b>Analiz</b>
+            </button>
+
+            <button
+                class="ana-menu-buton"
+                data-ana-modul="kanit"
+            >
+                <span>◆</span>
+                <b>Kanıt</b>
+            </button>
+
+            <button
+                class="ana-menu-buton"
+                data-ana-modul="rapor"
+            >
+                <span>▤</span>
+                <b>Rapor</b>
+            </button>
+
+            <button
+                class="ana-menu-buton"
+                data-ana-modul="cihaz"
+            >
+                <span>◉</span>
+                <b>Cihaz</b>
+            </button>
+
+            <button
+                class="ana-menu-buton"
+                data-ana-modul="kasif"
+            >
+                <span>◌</span>
+                <b>Kaşif</b>
+            </button>
+
+        </nav>
+
+        <div class="ana-menu-alt">
+            <small>SİSTEM</small>
+            <strong>HAZIR</strong>
+        </div>
+
+    </aside>
+
+
+    <!-- ================================================== -->
+    <!-- ÇALIŞMA ALANI -->
+    <!-- ================================================== -->
+
+    <main class="calisma-alani">
+
+        <!-- ============================================== -->
+        <!-- ÜST ÇALIŞMA MENÜSÜ -->
+        <!-- ============================================== -->
+
+        <section class="calisma-ust">
+
+            <div>
+                <span class="etiket">AKTİF MODÜL</span>
+                <h1 id="aktifModulBaslik">Harita</h1>
+            </div>
+
+            <div class="gorunum-secici">
+
+                <button
+                    type="button"
+                    class="gorunum-buton aktif"
+                    data-gorunum="2b"
+                >
+                    2B
+                </button>
+
+                <button
+                    type="button"
+                    class="gorunum-buton"
+                    data-gorunum="3b"
+                >
+                    3B
+                </button>
+
+                <button
+                    type="button"
+                    class="gorunum-buton"
+                    data-gorunum="ar"
+                >
+                    AR
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================================== -->
+        <!-- ALT MENÜ / KATMAN SEÇİMİ -->
+        <!-- ============================================== -->
+
+        <section class="katman-paneli legacy-katman-paneli">
+
+            <div class="katman-baslik">
+
+                <div>
+                    <span class="etiket">ALT MENÜ</span>
+                    <h2>Katmanlar</h2>
+                </div>
+
+                <label class="hepsini-sec">
+                    <input
+                        id="hepsiniSec"
+                        type="checkbox"
+                    >
+                    <span>Hepsini Seç</span>
+                </label>
+
+            </div>
+
+
+            <div class="taban-harita-satiri">
+    <div class="alt-baslik">
+        <span>TABAN HARİTASI</span>
+    </div>
+
+    <div
+        class="taban-harita-listesi"
+        id="tabanHaritaListesi"
+    ></div>
+</div>
+
+<div class="alt-baslik katman-alt-baslik">
+    <span>DİNAMİK KATMANLAR</span>
+</div>
+<div
+                class="katman-listesi"
+                id="katmanListesi"
+            ></div>
+
+        </section>
+
+
+        <!-- ============================================== -->
+        <!-- DİNAMİK EKRAN -->
+        <!-- ============================================== -->
+
+        <section
+            class="dinamik-ekran"
+            id="dinamikEkran"
+            data-panel-sayisi="3"
+        >
+
+            <!-- HARİTA -->
+
+            <article
+                class="calisma-paneli panel-harita"
+                data-panel="harita"
+            >
+
+                <header>
+                    <div>
+                        <span class="etiket">ÇALIŞMA ALANI</span>
+                        <h3>Canlı Harita</h3>
+                    </div>
+
+                    <button
+                        class="panel-kapat"
+                        type="button"
+                        data-panel-kapat="harita"
+                    >
+                        ×
+                    </button>
+                </header>
+
+                <div class="harita-yuzeyi">
+
+                    <div class="koordinat-izgarasi"></div>
+
+                    <svg
+                        class="rota-iz-cizimi"
+                        viewBox="0 0 1000 600"
+                        preserveAspectRatio="none"
+                    >
+                        <polyline
+                            class="rota-cizgi"
+                            points="
+                            75,470
+                            170,410
+                            265,425
+                            355,340
+                            455,365
+                            560,255
+                            670,285
+                            775,180
+                            915,220
+                            "
+                        />
+
+                        <polyline
+                            class="iz-cizgi"
+                            points="
+                            90,500
+                            190,445
+                            300,465
+                            390,390
+                            500,405
+                            610,320
+                            725,350
+                            840,275
+                            "
+                        />
+                    </svg>
+
+                    <div class="harita-merkez">
+                        <span>CANLI HARİTA</span>
+                        <strong>Rota + İz hazır</strong>
+                        <small>
+                            Katman seçimine göre çalışma
+                            alanı yeniden düzenlenir.
+                        </small>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SEÇİLİ KATMANLAR -->
+
+            <article
+                class="calisma-paneli"
+                data-panel="katman"
+            >
+
+                <header>
+                    <div>
+                        <span class="etiket">SEÇİM</span>
+                        <h3>Etkin Katmanlar</h3>
+                    </div>
+
+                    <button
+                        class="panel-kapat"
+                        type="button"
+                        data-panel-kapat="katman"
+                    >
+                        ×
+                    </button>
+                </header>
+
+                <div
+                    class="etkin-katmanlar"
+                    id="etkinKatmanlar"
+                ></div>
+
+            </article>
+
+
+            <!-- KAŞİF -->
+
+            <article
+                class="calisma-paneli gizli" data-panel="kasif"
+            >
+
+                <header>
+                    <div>
+                        <span class="etiket">
+                            YAPAY ZEKÂ ASİSTANI
+                        </span>
+                        <h3>Kaşif</h3>
+                    </div>
+
+                    <button
+                        class="panel-kapat"
+                        type="button"
+                        data-panel-kapat="kasif"
+                    >
+                        ×
+                    </button>
+                </header>
+
+                <div class="kasif-alani">
+
+                    <div class="kasif-siluet">
+                        <div class="kasif-kapuson">
+                            <div class="kasif-yuz"></div>
+                        </div>
+
+                        <div class="ses-dalgasi">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                    </div>
+
+                    <p>
+                        Seçilen katmanları ve açık çalışma
+                        panellerini izliyor.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- KANIT -->
+
+            <article
+                class="calisma-paneli gizli"
+                data-panel="kanit"
+            >
+
+                <header>
+                    <div>
+                        <span class="etiket">KANIT</span>
+                        <h3>Dijital Kanıt</h3>
+                    </div>
+
+                    <button
+                        class="panel-kapat"
+                        type="button"
+                        data-panel-kapat="kanit"
+                    >
+                        ×
+                    </button>
+                </header>
+
+                <div class="bos-panel">
+                    Kanıt çalışma alanı
+                </div>
+
+            </article>
+
+
+            <!-- ANALİZ -->
+
+            <article
+                class="calisma-paneli gizli"
+                data-panel="analiz"
+            >
+
+                <header>
+                    <div>
+                        <span class="etiket">ANALİZ</span>
+                        <h3>Bilimsel Analiz</h3>
+                    </div>
+
+                    <button
+                        class="panel-kapat"
+                        type="button"
+                        data-panel-kapat="analiz"
+                    >
+                        ×
+                    </button>
+                </header>
+
+                <div class="bos-panel">
+                    Bilimsel analiz çalışma alanı
+                </div>
+
+            </article>
+
+
+            <!-- RAPOR -->
+
+            <article
+                class="calisma-paneli gizli"
+                data-panel="rapor"
+            >
+
+                <header>
+                    <div>
+                        <span class="etiket">RAPOR</span>
+                        <h3>Dijital Rapor</h3>
+                    </div>
+
+                    <button
+                        class="panel-kapat"
+                        type="button"
+                        data-panel-kapat="rapor"
+                    >
+                        ×
+                    </button>
+                </header>
+
+                <div class="bos-panel">
+                    Mühürlü rapor çalışma alanı
+                </div>
+
+            </article>
+
+        </section>
+
+    
+
+</main>
+
+
+    <!-- ================================================== -->
+    <!-- SAĞ DURUM ALANI -->
+    <!-- ================================================== -->
+
+    <aside class="durum-paneli">
+
+        <section class="durum-karti">
+
+            <span class="etiket">
+                ÇALIŞMA DURUMU
+            </span>
+
+            <strong id="acikPanelSayisi">
+                3 panel açık
+            </strong>
+
+            <small id="seciliKatmanSayisi">
+                3 katman seçili
+            </small>
+
+        </section>
+
+
+        <section class="durum-karti">
+
+            <span class="etiket">
+                SON İŞLEM
+            </span>
+
+            <strong id="sonIslem">
+                Arayüz hazır
+            </strong>
+
+            <small id="saat">
+                --:--:--
+            </small>
+
+        </section>
+
+    </aside>
+
+
+    <!-- ================================================== -->
+    <!-- MOBİL ALT MENÜ -->
+    <!-- ================================================== -->
+
+    <nav class="mobil-alt-menu">
+
+        <button
+            data-ana-modul="harita"
+            class="aktif"
+        >
+            <span>⌖</span>
+            Harita
+        </button>
+
+        <button data-ana-modul="analiz">
+            <span>◇</span>
+            Analiz
+        </button>
+
+        <button data-ana-modul="kanit">
+            <span>◆</span>
+            Kanıt
+        </button>
+
+        <button data-ana-modul="rapor">
+            <span>▤</span>
+            Rapor
+        </button>
+
+        <button data-ana-modul="kasif">
+            <span>◌</span>
+            Kaşif
+        </button>
+
+    </nav>
+
+</div>
+
+
+<button
+    type="button"
+    class="kasif-mini"
+    id="kasifMini"
+    aria-label="Kaşif"
+>
+    <span class="kasif-mini-simge">◌</span>
+    <span>Kaşif</span>
+</button>
+
+
+
+<div class="syk-drawer-kabuk" id="sykDrawer">
+
+    <section
+        class="syk-drawer"
+        id="sykDrawerPanel"
+        data-seviye="0"
+        aria-label="Dinamik katman menüsü"
+    >
+
+        <div class="syk-drawer-tutamac"></div>
+
+        <header class="syk-drawer-ust">
+
+            <button
+                type="button"
+                class="syk-geri gizli"
+                id="sykDrawerGeri"
+                aria-label="Önceki menü"
+            >
+                ‹
+            </button>
+
+            <div class="syk-drawer-baslik">
+                <span id="sykDrawerUstEtiket">ANA KATMANLAR</span>
+                <strong id="sykDrawerBaslik">Harita</strong>
+            </div>
+
+            <button
+                type="button"
+                class="syk-hepsini-sec"
+                id="sykHepsiniSec"
+            >
+                Hepsini Seç
+            </button>
+
+        </header>
+
+        <div
+            class="syk-drawer-secimler"
+            id="sykDrawerSecimler"
+        ></div>
+
+    </section>
+
+
+    <nav
+        class="syk-alt-ikon-cubugu"
+        id="sykAltIkonCubugu"
+        aria-label="Ana modüller"
+    ></nav>
+
+</div>
+
+<script defer src="/ui/js/terminal.js?v=053008a"></script>
+
+<!-- SYK_053008C_START -->
+
+<div id="syk008cKanıt">
+
+    <button class="syk008cAna aktif" type="button">
+        <span>⌖</span>
+        <strong>Harita</strong>
+    </button>
+
+    <button class="syk008cAna" type="button">
+        <span>◎</span>
+        <strong>Görev</strong>
+    </button>
+
+    <button class="syk008cAna" type="button">
+        <span>◇</span>
+        <strong>Analiz</strong>
+    </button>
+
+    <button class="syk008cAna" type="button">
+        <span>◆</span>
+        <strong>Kanıt</strong>
+    </button>
+
+    <button class="syk008cAna" type="button">
+        <span>▤</span>
+        <strong>Rapor</strong>
+    </button>
+
+    <button class="syk008cAna" type="button">
+        <span>◉</span>
+        <strong>Cihaz</strong>
+    </button>
+
+    <button class="syk008cAna" type="button">
+        <span>◌</span>
+        <strong>Kaşif</strong>
+    </button>
+
+</div>
+
+<!-- SYK_053008C_END -->
+
+<script
+    defer
+    src="/ui/js/workspace_shell_053009.js?v=053009a"
+></script>
+<script
+    defer
+    src="/ui/js/workspace_shell_053010.js?v=053010"
+></script>
+<script
+    defer
+    src="/ui/js/workspace_shell_053011.js?v=053011"
+></script>
+<script
+    defer
+    src="/ui/js/real_map_matrix_bridge_053013.js?v=053013"
+></script>
+
+<script defer src="/ui/js/real_map_renderer_053013b.js?v=053013e"></script>
+
+<script defer src="/ui/js/syk_map_architecture_053014b.js?v=053014b"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

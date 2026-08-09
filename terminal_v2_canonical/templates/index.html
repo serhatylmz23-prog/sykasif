@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
+    <meta name="theme-color" content="#101315">
+    <title>SyKaşif Terminal V2</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/canli_modul_gorsel_durum.css">
+</head>
+
+<body>
+    <div class="terminal-shell" id="terminal-shell">
+        <header class="topbar">
+            <button
+                class="icon-button"
+                id="menu-button"
+                type="button"
+                aria-label="Menüyü aç veya kapat"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="brand">
+                <div class="brand-mark" aria-hidden="true">
+                    <span class="brand-mark__core"></span>
+                </div>
+
+                <div class="brand-copy">
+                    <strong>SyKaşif</strong>
+                    <small>Terminal V2</small>
+                </div>
+            </div>
+
+            <div class="topbar-status">
+                <span
+                    class="status-dot status-dot--waiting"
+                    id="top-status-dot"
+                ></span>
+
+                <div>
+                    <strong id="top-status-text">BAĞLANIYOR</strong>
+                    <small id="top-status-time">--:--:--</small>
+                </div>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="sidebar">
+            <nav class="navigation" aria-label="Ana modüller">
+                <button
+                    class="navigation-item is-active"
+                    type="button"
+                    data-view="dashboard"
+                >
+                    <span class="navigation-item__icon">⌂</span>
+                    <span>Kontrol Merkezi</span>
+                </button>
+
+                <button
+                    class="navigation-item"
+                    type="button"
+                    data-view="map"
+                >
+                    <span class="navigation-item__icon">⌖</span>
+                    <span>Harita</span>
+                </button>
+
+                <button
+                    class="navigation-item"
+                    type="button"
+                    data-view="analysis"
+                >
+                    <span class="navigation-item__icon">◈</span>
+                    <span>Analiz</span>
+                </button>
+
+                <button
+                    class="navigation-item"
+                    type="button"
+                    data-view="evidence"
+                >
+                    <span class="navigation-item__icon">◇</span>
+                    <span>Kanıtlar</span>
+                </button>
+
+                <button
+                    class="navigation-item"
+                    type="button"
+                    data-view="reports"
+                >
+                    <span class="navigation-item__icon">▤</span>
+                    <span>Raporlar</span>
+                </button>
+
+                <button
+                    class="navigation-item"
+                    type="button"
+                    data-view="ai"
+                >
+                    <span class="navigation-item__icon">◉</span>
+                    <span>Kaşif</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>Runtime</span>
+                <strong id="sidebar-runtime-status">KONTROL EDİLİYOR</strong>
+            </div>
+        </aside>
+
+        <main class="workspace">
+            <section class="hero-panel">
+                <div>
+                    <p class="eyebrow">CANLI SİSTEM DURUMU</p>
+                    <h1>Terminal V2</h1>
+                    <p class="hero-copy">
+                        Tablet ve bilgisayar için ortak, responsive SyKaşif çalışma alanı.
+                    </p>
+                </div>
+
+                <div class="connection-orbit" aria-hidden="true">
+                    <div class="connection-orbit__ring"></div>
+                    <div class="connection-orbit__core"></div>
+                </div>
+            </section>
+
+            <section
+                class="status-grid"
+                aria-label="Bağlantı ve runtime durumu"
+            >
+                <article class="status-card">
+                    <span class="status-card__label">RUNTIME</span>
+                    <strong id="runtime-status">BEKLENİYOR</strong>
+                    <small>Uvicorn :8013</small>
+                </article>
+
+                <article class="status-card">
+                    <span class="status-card__label">TABLET</span>
+                    <strong id="tablet-status">BAĞLI DEĞİL</strong>
+                    <small>Wi-Fi / LAN</small>
+                </article>
+
+                <article class="status-card">
+                    <span class="status-card__label">CANLI AKIŞ</span>
+                    <strong id="stream-status">HAZIRLANIYOR</strong>
+                    <small>SSE V2 katmanı</small>
+                </article>
+
+                <article class="status-card">
+                    <span class="status-card__label">SON KONTROL</span>
+                    <strong id="last-check">--:--:--</strong>
+                    <small id="latency-status">Gecikme ölçülüyor</small>
+                </article>
+            </section>
+
+            <section class="module-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">MODÜLLER</p>
+                        <h2>Çalışma Alanları</h2>
+                    </div>
+
+                    <span
+                        class="module-count"
+                        id="module-count"
+                    >
+                        0 MODÜL
+                    </span>
+                </div>
+
+                <div class="module-grid" id="module-grid"></div>
+            </section>
+
+            <section
+                class="view-panel"
+                id="view-panel"
+                aria-live="polite"
+            >
+                <div>
+                    <p class="eyebrow">AKTİF GÖRÜNÜM</p>
+                    <h2 id="active-view-title">Kontrol Merkezi</h2>
+                </div>
+
+                <p id="active-view-description">
+                    Runtime, bağlantı ve modül durumları izleniyor.
+                </p>
+            </section>
+        </main>
+
+        <aside class="right-panel">
+            <section class="kaşif-panel">
+                <div class="kaşif-figure" aria-hidden="true">
+                    <div class="kaşif-hood"></div>
+                    <div class="kaşif-face"></div>
+                    <div class="kaşif-wave">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <p class="eyebrow">YAPAY ZEKÂ ASİSTANI</p>
+                <h2>Kaşif</h2>
+                <p id="kaşif-message">
+                    Terminal bağlantısı kontrol ediliyor.
+                </p>
+            </section>
+
+            <section class="event-panel">
+                <div class="section-heading section-heading--small">
+                    <h3>Canlı Olaylar</h3>
+                    <span id="event-count">0</span>
+                </div>
+
+                <div class="event-list" id="event-list"></div>
+            </section>
+        </aside>
+
+        <div
+            class="sidebar-backdrop"
+            id="sidebar-backdrop"
+            hidden
+        ></div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/live_runtime.js"></script>
+    <script src="/static/js/device_client.js"></script>
+    <script type="module" src="/static/js/rota_iz_terminal_boot.js"></script>
+    <script type="module" src="/static/js/canli_modul_gorsel_boot.js"></script>
+</body>
+</html>
+
+

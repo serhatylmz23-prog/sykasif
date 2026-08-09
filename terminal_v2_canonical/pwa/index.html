@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08111d"
+    >
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+    >
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="SyKa&#351;if"
+    >
+
+    <title>SyKa&#351;if Terminal V2</title>
+
+    <link
+        rel="manifest"
+        href="./manifest.webmanifest"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="./icons/sykasif-180.png"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="192x192"
+        href="./icons/sykasif-192.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./pwa.css"
+    >
+</head>
+
+<body>
+    <main class="uygulama-kabugu">
+        <header class="ust-alan">
+            <div>
+                <p class="marka">
+                    SYKA&#350;&#304;F TERMINAL V2
+                </p>
+
+                <h1>
+                    Canl&#305; &#199;al&#305;&#351;ma Alan&#305;
+                </h1>
+
+                <p class="aciklama">
+                    Masa&#252;st&#252;, Samsung tablet,
+                    Android telefon, iPhone ve iPad ayn&#305;
+                    canl&#305; durumu kullan&#305;r.
+                </p>
+            </div>
+
+            <div
+                id="baglantiDurumu"
+                class="durum bekliyor"
+            >
+                Ba&#287;lan&#305;yor
+            </div>
+        </header>
+
+        <section class="bilgi-seridi">
+            <strong id="durumMetni">
+                SyKa&#351;if &#231;al&#305;&#351;ma alan&#305;
+                haz&#305;rlan&#305;yor.
+            </strong>
+
+            <span id="aktifModul">
+                Aktif mod&#252;l: dashboard
+            </span>
+
+            <span id="surum">
+                S&#252;r&#252;m: -
+            </span>
+        </section>
+
+        <section class="modul-alani">
+            <h2 id="modulBasligi">
+                Ana &#199;al&#305;&#351;ma Alan&#305;
+            </h2>
+
+            <p id="modulAciklamasi">
+                Ortak runtime ba&#287;lant&#305;s&#305;
+                bekleniyor.
+            </p>
+
+            <div
+                id="islemAlani"
+                class="islem-alani"
+            ></div>
+        </section>
+
+        <section>
+            <h2>Canl&#305; Mod&#252;ller</h2>
+
+            <div
+                id="modulKartlari"
+                class="kart-izgarasi"
+            ></div>
+        </section>
+    </main>
+
+    <script src="./pwa.js"></script>
+</body>
+</html>

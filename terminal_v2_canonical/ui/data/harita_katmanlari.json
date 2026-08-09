@@ -1,0 +1,144 @@
+{
+  "surum": "1.0.0",
+  "varsayilan_taban": "harita",
+  "taban_haritalari": [
+    {
+      "id": "harita",
+      "ad": "Harita",
+      "ikon": "⌖",
+      "aktif": true,
+      "sira": 10
+    },
+    {
+      "id": "uydu",
+      "ad": "Uydu",
+      "ikon": "◉",
+      "aktif": true,
+      "sira": 20
+    },
+    {
+      "id": "arazi",
+      "ad": "Arazi",
+      "ikon": "△",
+      "aktif": true,
+      "sira": 30
+    },
+    {
+      "id": "topografya",
+      "ad": "Topografya",
+      "ikon": "≋",
+      "aktif": true,
+      "sira": 40
+    }
+  ],
+  "katmanlar": [
+    {
+      "id": "arastirma",
+      "ad": "Araştırma Noktaları",
+      "grup": "Saha",
+      "ikon": "⌖",
+      "varsayilan": true,
+      "panel": false,
+      "sira": 10
+    },
+    {
+      "id": "fotograf",
+      "ad": "Fotoğraf",
+      "grup": "Medya",
+      "ikon": "▧",
+      "varsayilan": false,
+      "panel": true,
+      "sira": 20
+    },
+    {
+      "id": "video",
+      "ad": "Video",
+      "grup": "Medya",
+      "ikon": "▶",
+      "varsayilan": false,
+      "panel": true,
+      "sira": 30
+    },
+    {
+      "id": "ses",
+      "ad": "Ses",
+      "grup": "Medya",
+      "ikon": "∿",
+      "varsayilan": false,
+      "panel": true,
+      "sira": 40
+    },
+    {
+      "id": "olcum",
+      "ad": "Ölçüm",
+      "grup": "Bilimsel",
+      "ikon": "⊙",
+      "varsayilan": false,
+      "panel": true,
+      "sira": 50
+    },
+    {
+      "id": "rota",
+      "ad": "Rota",
+      "grup": "Hareket",
+      "ikon": "⌁",
+      "varsayilan": true,
+      "panel": false,
+      "sira": 60
+    },
+    {
+      "id": "iz",
+      "ad": "İz",
+      "grup": "Hareket",
+      "ikon": "···",
+      "varsayilan": true,
+      "panel": false,
+      "sira": 70
+    },
+    {
+      "id": "kamp",
+      "ad": "Kamp",
+      "grup": "Saha",
+      "ikon": "△",
+      "varsayilan": false,
+      "panel": true,
+      "sira": 80
+    },
+    {
+      "id": "kazi",
+      "ad": "Kazı",
+      "grup": "Saha",
+      "ikon": "◇",
+      "varsayilan": false,
+      "panel": true,
+      "sira": 90
+    },
+    {
+      "id": "numune",
+      "ad": "Numune",
+      "grup": "Bilimsel",
+      "ikon": "◈",
+      "varsayilan": false,
+      "panel": true,
+      "sira": 100
+    },
+    {
+      "id": "risk",
+      "ad": "Risk",
+      "grup": "Doğrulama",
+      "ikon": "!",
+      "varsayilan": false,
+      "panel": true,
+      "sira": 110
+    },
+    {
+      "id": "kanit",
+      "ad": "Kanıt",
+      "grup": "Doğrulama",
+      "ikon": "◆",
+      "varsayilan": false,
+      "panel": true,
+      "sira": 120
+    }
+  ]
+}

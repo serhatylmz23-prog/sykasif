@@ -1,0 +1,291 @@
+{
+  "surum": "2.0.0",
+  "ana_moduller": [
+    {
+      "id": "harita",
+      "ad": "Harita",
+      "ikon": "⌖",
+      "oncelik": 100,
+      "varsayilan": true,
+      "alt_basliklar": [
+        {
+          "id": "taban",
+          "ad": "Taban Haritaları",
+          "oncelik": 100,
+          "secilebilir": true,
+          "cocuklar": [
+            {
+              "id": "harita",
+              "ad": "Harita",
+              "tip": "taban",
+              "ikon": "⌖",
+              "oncelik": 100,
+              "varsayilan": true,
+              "agir": false
+            },
+            {
+              "id": "uydu",
+              "ad": "Uydu",
+              "tip": "taban",
+              "ikon": "◉",
+              "oncelik": 90,
+              "varsayilan": false,
+              "agir": true
+            },
+            {
+              "id": "arazi",
+              "ad": "Arazi",
+              "tip": "taban",
+              "ikon": "△",
+              "oncelik": 80,
+              "varsayilan": false,
+              "agir": true
+            },
+            {
+              "id": "topografya",
+              "ad": "Topografya",
+              "tip": "taban",
+              "ikon": "≋",
+              "oncelik": 70,
+              "varsayilan": false,
+              "agir": true
+            }
+          ]
+        },
+        {
+          "id": "saha",
+          "ad": "Saha",
+          "oncelik": 90,
+          "secilebilir": true,
+          "cocuklar": [
+            {
+              "id": "arastirma",
+              "ad": "Araştırma Noktaları",
+              "tip": "katman",
+              "ikon": "⌖",
+              "oncelik": 100,
+              "varsayilan": true,
+              "agir": false
+            },
+            {
+              "id": "kamp",
+              "ad": "Kamp",
+              "tip": "katman",
+              "ikon": "△",
+              "oncelik": 60,
+              "varsayilan": false,
+              "agir": false
+            },
+            {
+              "id": "kazi",
+              "ad": "Kazı",
+              "tip": "katman",
+              "ikon": "◇",
+              "oncelik": 50,
+              "varsayilan": false,
+              "agir": true
+            }
+          ]
+        },
+        {
+          "id": "medya",
+          "ad": "Medya",
+          "oncelik": 80,
+          "secilebilir": true,
+          "cocuklar": [
+            {
+              "id": "fotograf",
+              "ad": "Fotoğraf",
+              "tip": "katman",
+              "ikon": "▧",
+              "oncelik": 100,
+              "varsayilan": false,
+              "agir": true
+            },
+            {
+              "id": "video",
+              "ad": "Video",
+              "tip": "katman",
+              "ikon": "▶",
+              "oncelik": 90,
+              "varsayilan": false,
+              "agir": true
+            },
+            {
+              "id": "ses",
+              "ad": "Ses",
+              "tip": "katman",
+              "ikon": "∿",
+              "oncelik": 80,
+              "varsayilan": false,
+              "agir": true
+            }
+          ]
+        },
+        {
+          "id": "olcum",
+          "ad": "Ölçüm ve İz",
+          "oncelik": 95,
+          "secilebilir": true,
+          "cocuklar": [
+            {
+              "id": "olcum",
+              "ad": "Ölçüm",
+              "tip": "katman",
+              "ikon": "⊙",
+              "oncelik": 80,
+              "varsayilan": false,
+              "agir": true
+            },
+            {
+              "id": "rota",
+              "ad": "Rota",
+              "tip": "katman",
+              "ikon": "⌁",
+              "oncelik": 100,
+              "varsayilan": true,
+              "agir": false
+            },
+            {
+              "id": "iz",
+              "ad": "İz",
+              "tip": "katman",
+              "ikon": "···",
+              "oncelik": 95,
+              "varsayilan": true,
+              "agir": false
+            }
+          ]
+        },
+        {
+          "id": "dogrulama",
+          "ad": "Doğrulama",
+          "oncelik": 70,
+          "secilebilir": true,
+          "cocuklar": [
+            {
+              "id": "numune",
+              "ad": "Numune",
+              "tip": "katman",
+              "ikon": "◈",
+              "oncelik": 80,
+              "varsayilan": false,
+              "agir": true
+            },
+            {
+              "id": "risk",
+              "ad": "Risk",
+              "tip": "katman",
+              "ikon": "!",
+              "oncelik": 70,
+              "varsayilan": false,
+              "agir": true
+            },
+            {
+              "id": "kanit",
+              "ad": "Kanıt",
+              "tip": "katman",
+              "ikon": "◆",
+              "oncelik": 90,
+              "varsayilan": false,
+              "agir": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gorev",
+      "ad": "Görev",
+      "ikon": "◎",
+      "oncelik": 90,
+      "varsayilan": false,
+      "alt_basliklar": [
+        {
+          "id": "aktif_gorevler",
+          "ad": "Aktif Görevler",
+          "oncelik": 100,
+          "secilebilir": true,
+          "cocuklar": [
+            {
+              "id": "saha_gorevleri",
+              "ad": "Saha Görevleri",
+              "tip": "modul",
+              "ikon": "◎",
+              "oncelik": 100,
+              "varsayilan": true,
+              "agir": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "analiz",
+      "ad": "Analiz",
+      "ikon": "◇",
+      "oncelik": 80,
+      "varsayilan": false,
+      "alt_basliklar": [
+        {
+          "id": "bilimsel",
+          "ad": "Bilimsel Analiz",
+          "oncelik": 100,
+          "secilebilir": true,
+          "cocuklar": [
+            {
+              "id": "genel_analiz",
+              "ad": "Genel Analiz",
+              "tip": "modul",
+              "ikon": "◇",
+              "oncelik": 100,
+              "varsayilan": true,
+              "agir": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kanit",
+      "ad": "Kanıt",
+      "ikon": "◆",
+      "oncelik": 70,
+      "varsayilan": false,
+      "alt_basliklar": []
+    },
+    {
+      "id": "rapor",
+      "ad": "Rapor",
+      "ikon": "▤",
+      "oncelik": 60,
+      "varsayilan": false,
+      "alt_basliklar": []
+    },
+    {
+      "id": "cihaz",
+      "ad": "Cihaz",
+      "ikon": "◉",
+      "oncelik": 50,
+      "varsayilan": false,
+      "alt_basliklar": []
+    },
+    {
+      "id": "kasif",
+      "ad": "Kaşif",
+      "ikon": "◌",
+      "oncelik": 40,
+      "varsayilan": false,
+      "alt_basliklar": []
+    }
+  ],
+  "harita_kapsam": {
+    "varsayilan_seviye": "il",
+    "gps_gerekli": true,
+    "sinir_yaklasma_esigi_km": 20,
+    "komsu_il_on_yukleme": true,
+    "ulke_geneli_otomatik_yukleme": false,
+    "agir_katmanlar_lazy_load": true,
+    "secili_olmayan_agir_katmanlar_unload": true
+  }
+}

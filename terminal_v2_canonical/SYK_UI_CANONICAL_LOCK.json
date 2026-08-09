@@ -1,0 +1,14 @@
+{
+  "schema": "SYK_UI_CANONICAL_LOCK_V1",
+  "canonical_root": "terminal_v2_canonical",
+  "active_ui": "terminal_v2_canonical",
+  "responsive_strategy": "single_ui_pc_tablet_phone",
+  "visual_approval_required": true,
+  "legacy_development_allowed": false,
+  "fixed_gis_sidebar_allowed": false,
+  "dynamic_right_matrix_required": true,
+  "bottom_layer_menu_required": true,
+  "gps_province_scope_required": true,
+  "world_horizontal_repeat_allowed": false,
+  "generated_at": "2026-08-09T03:25:49.9951120+03:00"
+}

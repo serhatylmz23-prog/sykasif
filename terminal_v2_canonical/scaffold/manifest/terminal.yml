@@ -1,0 +1,55 @@
+runtime: true
+
+tablet: true
+
+desktop: true
+
+layout: true
+
+theme: true
+
+icons: true
+
+widgets: true
+
+panels: true
+
+notifications: true
+
+runtime_monitor: true
+
+runtime_engine: true
+
+event_bus: true
+
+state_manager: true
+
+connection_manager: true
+
+api: true
+
+fastapi: true
+
+tests: true
+
+compile: true
+
+pytest: true
+
+modules:
+
+  - dashboard
+
+  - analysis
+
+  - evidence
+
+  - reports
+
+  - map
+
+  - ai
+
+  - settings
+
+  - notifications

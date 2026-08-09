@@ -1,0 +1,383 @@
+/* ==========================================================
+   SYKAŞİF TERMINAL V2
+   KANONİK RESPONSIVE SÖZLEŞME
+   MASAÜSTÜ + TABLET + TELEFON
+   ========================================================== */
+
+html,
+body {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------
+   ORTAK KURALLAR
+   ---------------------------------------------------------- */
+
+:root {
+    --syk-alt-menu-yukseklik: 88px;
+    --syk-ust-bar-yukseklik: 74px;
+    --syk-safe-bottom: env(safe-area-inset-bottom, 0px);
+    --syk-safe-top: env(safe-area-inset-top, 0px);
+}
+
+/*
+ * Harita / video / fotoğraf / analiz gibi çalışma yüzeyleri
+ * mümkün olduğunca üst ve alt sabit alan arasında büyür.
+ */
+
+.calisma-paneli,
+[data-panel],
+.syk-map-runtime,
+.leaflet-container {
+    min-width: 0;
+    min-height: 0;
+}
+
+/*
+ * Alt ana menü telefon ve tablette de sürekli erişilebilir.
+ */
+
+.syk010-komuta,
+#syk010Komuta,
+.bottom-nav,
+.alt-menu {
+    padding-bottom: var(--syk-safe-bottom);
+}
+
+/* ----------------------------------------------------------
+   MASAÜSTÜ
+   ---------------------------------------------------------- */
+
+@media (min-width: 1101px) {
+
+    :root {
+        --syk-alt-menu-yukseklik: 88px;
+    }
+
+    #syk053014bSagMatris {
+        width: 31vw;
+        min-width: 270px;
+        max-width: 620px;
+    }
+
+    #syk053014bKatmanSecici {
+        width: min(920px, 94vw);
+    }
+}
+
+/* ----------------------------------------------------------
+   TABLET YATAY / BÜYÜK TABLET
+   ---------------------------------------------------------- */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+
+    :root {
+        --syk-alt-menu-yukseklik: 82px;
+    }
+
+    #syk053014bSagMatris {
+        width: 38vw;
+        min-width: 230px;
+        max-width: 440px;
+    }
+
+    #syk053014bKatmanSecici {
+        width: calc(100vw - 28px);
+        bottom: calc(
+            var(--syk-alt-menu-yukseklik)
+            + var(--syk-safe-bottom)
+            + 12px
+        );
+    }
+
+    #syk053014bHaritaKontrol {
+        max-width: calc(100vw - 30px);
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    #syk053014bHaritaKontrol::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* ----------------------------------------------------------
+   TABLET DIKEY / BÜYÜK TELEFON
+   ---------------------------------------------------------- */
+
+@media (min-width: 601px) and (max-width: 768px) {
+
+    :root {
+        --syk-alt-menu-yukseklik: 78px;
+    }
+
+    #syk053014bSagMatris {
+        width: 42vw;
+        min-width: 200px;
+    }
+
+    #syk053014bKatmanSecici {
+        left: 8px;
+        right: 8px;
+        width: auto;
+        bottom: calc(
+            var(--syk-alt-menu-yukseklik)
+            + var(--syk-safe-bottom)
+            + 10px
+        );
+        transform: translateY(24px);
+    }
+
+    #syk053014bKatmanSecici.acik {
+        transform: translateY(0);
+    }
+
+    .syk053014b-ana-satir,
+    .syk053014b-alt-satir {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .syk053014b-ana-satir::-webkit-scrollbar,
+    .syk053014b-alt-satir::-webkit-scrollbar {
+        display: none;
+    }
+
+    #syk053014bHaritaKontrol {
+        left: 8px;
+        right: 8px;
+        max-width: none;
+        transform: translateY(-8px);
+        overflow-x: auto;
+    }
+
+    #syk053014bHaritaKontrol.goster {
+        transform: translateY(0);
+    }
+}
+
+/* ----------------------------------------------------------
+   TELEFON
+   ---------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    :root {
+        --syk-alt-menu-yukseklik: 72px;
+        --syk-ust-bar-yukseklik: 60px;
+    }
+
+    /*
+     * Telefon ekranında çalışma alanı maksimum büyüklükte.
+     */
+
+    #syk053014bSagMatris {
+        top: calc(
+            var(--syk-ust-bar-yukseklik)
+            + var(--syk-safe-top)
+        );
+
+        bottom: calc(
+            var(--syk-alt-menu-yukseklik)
+            + var(--syk-safe-bottom)
+        );
+
+        width: 46vw;
+        min-width: 145px;
+        padding: 3px;
+        gap: 3px;
+    }
+
+    .syk053014b-matris-kart,
+    .syk053014b-odak-kart {
+        min-height: 66px;
+        padding: 7px;
+        border-radius: 7px;
+    }
+
+    .syk053014b-matris-kart strong,
+    .syk053014b-odak-kart strong {
+        font-size: 11px;
+    }
+
+    .syk053014b-matris-kart small,
+    .syk053014b-odak-kart small {
+        font-size: 6px;
+    }
+
+    /*
+     * Katman seçimi ekranın altından yukarı açılır.
+     */
+
+    #syk053014bKatmanSecici {
+        left: 6px;
+        right: 6px;
+        width: auto;
+
+        bottom: calc(
+            var(--syk-alt-menu-yukseklik)
+            + var(--syk-safe-bottom)
+            + 6px
+        );
+
+        max-height: 52vh;
+        overflow-y: auto;
+
+        transform: translateY(24px);
+    }
+
+    #syk053014bKatmanSecici.acik {
+        transform: translateY(0);
+    }
+
+    .syk053014b-katman-ust {
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        background: rgba(0,18,22,.98);
+    }
+
+    .syk053014b-ana-satir,
+    .syk053014b-alt-satir {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .syk053014b-ana-satir::-webkit-scrollbar,
+    .syk053014b-alt-satir::-webkit-scrollbar {
+        display: none;
+    }
+
+    .syk053014b-ana-satir button,
+    .syk053014b-alt-satir button {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        min-height: 40px;
+    }
+
+    /*
+     * Harita üzerindeki geçici kontroller
+     * kompakt ve yatay kaydırılabilir.
+     */
+
+    #syk053014bHaritaKontrol {
+        top: 7px;
+        left: 6px;
+        right: 6px;
+        max-width: none;
+        padding: 4px;
+
+        overflow-x: auto;
+
+        transform: translateY(-8px);
+
+        scrollbar-width: none;
+    }
+
+    #syk053014bHaritaKontrol.goster {
+        transform: translateY(0);
+    }
+
+    #syk053014bHaritaKontrol::-webkit-scrollbar {
+        display: none;
+    }
+
+    #syk053014bHaritaKontrol button {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        min-height: 38px;
+        padding: 7px 9px;
+    }
+
+    /*
+     * Alt ana menü:
+     * küçük ekranda yatay kaydırılabilir,
+     * fakat erişilebilir kalır.
+     */
+
+    .syk010-komuta,
+    #syk010Komuta,
+    .bottom-nav,
+    .alt-menu {
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+    }
+
+    .syk010-komuta::-webkit-scrollbar,
+    #syk010Komuta::-webkit-scrollbar,
+    .bottom-nav::-webkit-scrollbar,
+    .alt-menu::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* ----------------------------------------------------------
+   ÇOK KÜÇÜK TELEFON
+   ---------------------------------------------------------- */
+
+@media (max-width: 390px) {
+
+    #syk053014bSagMatris {
+        width: 44vw;
+        min-width: 130px;
+    }
+
+    #syk053014bKatmanSecici {
+        max-height: 48vh;
+    }
+}
+
+/* ----------------------------------------------------------
+   DİKEY / YATAY EKRAN DEĞİŞİMİ
+   ---------------------------------------------------------- */
+
+@media (orientation: landscape) and (max-height: 540px) {
+
+    :root {
+        --syk-alt-menu-yukseklik: 62px;
+        --syk-ust-bar-yukseklik: 54px;
+    }
+
+    #syk053014bKatmanSecici {
+        max-height: 55vh;
+    }
+
+    #syk053014bSagMatris {
+        bottom: calc(
+            var(--syk-alt-menu-yukseklik)
+            + var(--syk-safe-bottom)
+        );
+    }
+}
+
+/* ----------------------------------------------------------
+   DOKUNMATİK CİHAZ
+   ---------------------------------------------------------- */
+
+@media (pointer: coarse) {
+
+    button,
+    [role="button"] {
+        touch-action: manipulation;
+    }
+
+    #syk053014bHaritaKontrol button,
+    .syk053014b-katman-ust button,
+    .syk053014b-ana-satir button,
+    .syk053014b-alt-satir button {
+        min-height: 40px;
+    }
+}

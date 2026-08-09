@@ -1,0 +1,94 @@
+[data-modul-kodu] {
+    position: relative;
+    isolation: isolate;
+    transition:
+        transform 180ms ease,
+        opacity 180ms ease,
+        filter 180ms ease;
+}
+
+[data-modul-kodu][data-syk-modul-secim="pasif"] {
+    opacity: 0.74;
+}
+
+[data-modul-kodu][data-syk-modul-secim="aktif"] {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+[data-modul-kodu][data-syk-modul-durum="bekliyor"] {
+    filter: saturate(0.82);
+}
+
+[data-modul-kodu][data-syk-modul-durum="calisiyor"] {
+    filter: saturate(1);
+}
+
+[data-modul-kodu][data-syk-modul-durum="durdu"] {
+    filter: saturate(0.52);
+}
+
+[data-modul-kodu][data-syk-modul-durum="cevrimdisi"] {
+    opacity: 0.46;
+    filter: grayscale(0.72);
+}
+
+[data-modul-kodu][data-syk-modul-hareket="aktif"]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: inherit;
+    box-shadow:
+        0 0 0 1px currentColor,
+        0 0 14px color-mix(
+            in srgb,
+            currentColor 22%,
+            transparent
+        );
+    animation:
+        syk-modul-canli-nabiz
+        1800ms
+        ease-in-out
+        infinite;
+}
+
+@keyframes syk-modul-canli-nabiz {
+    0%,
+    100% {
+        opacity: 0.18;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.40;
+        transform: scale(1.004);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-modul-kodu] {
+        transition: none;
+    }
+
+    [data-modul-kodu][data-syk-modul-hareket="aktif"]::after {
+        animation: none;
+    }
+}
+
+[data-syk-modul-durum="taraniyor"] {
+    --syk-modul-hareket-hizi: 1.15s;
+}
+
+[data-syk-modul-durum="dogrulaniyor"] {
+    --syk-modul-hareket-hizi: 1.65s;
+}
+
+[data-syk-modul-durum="tamamlandi"] {
+    --syk-modul-hareket-hizi: 0s;
+}
+
+[data-syk-modul-durum="hata"] {
+    --syk-modul-hareket-hizi: 0.8s;
+}
